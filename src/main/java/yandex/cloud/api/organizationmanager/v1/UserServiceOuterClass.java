@@ -941,7 +941,7 @@ public final class UserServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListMembersResponse.page_size], use the [next_page_token] as the value
+     * is larger than [ListMembersRequest.page_size], use the [next_page_token] as the value
      * for the [ListMembersRequest.page_token] query parameter in the next list request.
      * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
      * </pre>
@@ -952,7 +952,7 @@ public final class UserServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListMembersResponse.page_size], use the [next_page_token] as the value
+     * is larger than [ListMembersRequest.page_size], use the [next_page_token] as the value
      * for the [ListMembersRequest.page_token] query parameter in the next list request.
      * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
      * </pre>
@@ -1781,7 +1781,7 @@ public final class UserServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListMembersResponse.page_size], use the [next_page_token] as the value
+     * is larger than [ListMembersRequest.page_size], use the [next_page_token] as the value
      * for the [ListMembersRequest.page_token] query parameter in the next list request.
      * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
      * </pre>
@@ -1803,7 +1803,7 @@ public final class UserServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListMembersResponse.page_size], use the [next_page_token] as the value
+     * is larger than [ListMembersRequest.page_size], use the [next_page_token] as the value
      * for the [ListMembersRequest.page_token] query parameter in the next list request.
      * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
      * </pre>
@@ -2502,7 +2502,7 @@ public final class UserServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListMembersResponse.page_size], use the [next_page_token] as the value
+       * is larger than [ListMembersRequest.page_size], use the [next_page_token] as the value
        * for the [ListMembersRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
@@ -2524,7 +2524,7 @@ public final class UserServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListMembersResponse.page_size], use the [next_page_token] as the value
+       * is larger than [ListMembersRequest.page_size], use the [next_page_token] as the value
        * for the [ListMembersRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
@@ -2547,7 +2547,7 @@ public final class UserServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListMembersResponse.page_size], use the [next_page_token] as the value
+       * is larger than [ListMembersRequest.page_size], use the [next_page_token] as the value
        * for the [ListMembersRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
@@ -2567,7 +2567,7 @@ public final class UserServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListMembersResponse.page_size], use the [next_page_token] as the value
+       * is larger than [ListMembersRequest.page_size], use the [next_page_token] as the value
        * for the [ListMembersRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
@@ -2583,7 +2583,7 @@ public final class UserServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListMembersResponse.page_size], use the [next_page_token] as the value
+       * is larger than [ListMembersRequest.page_size], use the [next_page_token] as the value
        * for the [ListMembersRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>

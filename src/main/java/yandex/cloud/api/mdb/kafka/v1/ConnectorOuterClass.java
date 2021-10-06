@@ -1687,6 +1687,31 @@ public final class ConnectorOuterClass {
      */
     com.google.protobuf.ByteString
         getTopicsBytes();
+
+    /**
+     * <pre>
+     * Replication factor for automatically created topics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     */
+    boolean hasReplicationFactor();
+    /**
+     * <pre>
+     * Replication factor for automatically created topics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     */
+    com.google.protobuf.Int64Value getReplicationFactor();
+    /**
+     * <pre>
+     * Replication factor for automatically created topics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getReplicationFactorOrBuilder();
   }
   /**
    * <pre>
@@ -1763,6 +1788,19 @@ public final class ConnectorOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               topics_ = s;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (replicationFactor_ != null) {
+                subBuilder = replicationFactor_.toBuilder();
+              }
+              replicationFactor_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(replicationFactor_);
+                replicationFactor_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1905,6 +1943,39 @@ public final class ConnectorOuterClass {
       }
     }
 
+    public static final int REPLICATION_FACTOR_FIELD_NUMBER = 4;
+    private com.google.protobuf.Int64Value replicationFactor_;
+    /**
+     * <pre>
+     * Replication factor for automatically created topics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     */
+    public boolean hasReplicationFactor() {
+      return replicationFactor_ != null;
+    }
+    /**
+     * <pre>
+     * Replication factor for automatically created topics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     */
+    public com.google.protobuf.Int64Value getReplicationFactor() {
+      return replicationFactor_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicationFactor_;
+    }
+    /**
+     * <pre>
+     * Replication factor for automatically created topics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getReplicationFactorOrBuilder() {
+      return getReplicationFactor();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1928,6 +1999,9 @@ public final class ConnectorOuterClass {
       if (!getTopicsBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, topics_);
       }
+      if (replicationFactor_ != null) {
+        output.writeMessage(4, getReplicationFactor());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1947,6 +2021,10 @@ public final class ConnectorOuterClass {
       }
       if (!getTopicsBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, topics_);
+      }
+      if (replicationFactor_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getReplicationFactor());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1976,6 +2054,11 @@ public final class ConnectorOuterClass {
       }
       result = result && getTopics()
           .equals(other.getTopics());
+      result = result && (hasReplicationFactor() == other.hasReplicationFactor());
+      if (hasReplicationFactor()) {
+        result = result && getReplicationFactor()
+            .equals(other.getReplicationFactor());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1997,6 +2080,10 @@ public final class ConnectorOuterClass {
       }
       hash = (37 * hash) + TOPICS_FIELD_NUMBER;
       hash = (53 * hash) + getTopics().hashCode();
+      if (hasReplicationFactor()) {
+        hash = (37 * hash) + REPLICATION_FACTOR_FIELD_NUMBER;
+        hash = (53 * hash) + getReplicationFactor().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2149,6 +2236,12 @@ public final class ConnectorOuterClass {
         }
         topics_ = "";
 
+        if (replicationFactorBuilder_ == null) {
+          replicationFactor_ = null;
+        } else {
+          replicationFactor_ = null;
+          replicationFactorBuilder_ = null;
+        }
         return this;
       }
 
@@ -2186,6 +2279,11 @@ public final class ConnectorOuterClass {
           result.targetCluster_ = targetClusterBuilder_.build();
         }
         result.topics_ = topics_;
+        if (replicationFactorBuilder_ == null) {
+          result.replicationFactor_ = replicationFactor_;
+        } else {
+          result.replicationFactor_ = replicationFactorBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -2243,6 +2341,9 @@ public final class ConnectorOuterClass {
         if (!other.getTopics().isEmpty()) {
           topics_ = other.topics_;
           onChanged();
+        }
+        if (other.hasReplicationFactor()) {
+          mergeReplicationFactor(other.getReplicationFactor());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2666,6 +2767,159 @@ public final class ConnectorOuterClass {
         topics_ = value;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.Int64Value replicationFactor_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replicationFactorBuilder_;
+      /**
+       * <pre>
+       * Replication factor for automatically created topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       */
+      public boolean hasReplicationFactor() {
+        return replicationFactorBuilder_ != null || replicationFactor_ != null;
+      }
+      /**
+       * <pre>
+       * Replication factor for automatically created topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       */
+      public com.google.protobuf.Int64Value getReplicationFactor() {
+        if (replicationFactorBuilder_ == null) {
+          return replicationFactor_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicationFactor_;
+        } else {
+          return replicationFactorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Replication factor for automatically created topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       */
+      public Builder setReplicationFactor(com.google.protobuf.Int64Value value) {
+        if (replicationFactorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          replicationFactor_ = value;
+          onChanged();
+        } else {
+          replicationFactorBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication factor for automatically created topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       */
+      public Builder setReplicationFactor(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (replicationFactorBuilder_ == null) {
+          replicationFactor_ = builderForValue.build();
+          onChanged();
+        } else {
+          replicationFactorBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication factor for automatically created topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       */
+      public Builder mergeReplicationFactor(com.google.protobuf.Int64Value value) {
+        if (replicationFactorBuilder_ == null) {
+          if (replicationFactor_ != null) {
+            replicationFactor_ =
+              com.google.protobuf.Int64Value.newBuilder(replicationFactor_).mergeFrom(value).buildPartial();
+          } else {
+            replicationFactor_ = value;
+          }
+          onChanged();
+        } else {
+          replicationFactorBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication factor for automatically created topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       */
+      public Builder clearReplicationFactor() {
+        if (replicationFactorBuilder_ == null) {
+          replicationFactor_ = null;
+          onChanged();
+        } else {
+          replicationFactor_ = null;
+          replicationFactorBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication factor for automatically created topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getReplicationFactorBuilder() {
+        
+        onChanged();
+        return getReplicationFactorFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Replication factor for automatically created topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getReplicationFactorOrBuilder() {
+        if (replicationFactorBuilder_ != null) {
+          return replicationFactorBuilder_.getMessageOrBuilder();
+        } else {
+          return replicationFactor_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : replicationFactor_;
+        }
+      }
+      /**
+       * <pre>
+       * Replication factor for automatically created topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getReplicationFactorFieldBuilder() {
+        if (replicationFactorBuilder_ == null) {
+          replicationFactorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getReplicationFactor(),
+                  getParentForChildren(),
+                  isClean());
+          replicationFactor_ = null;
+        }
+        return replicationFactorBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -8101,6 +8355,31 @@ public final class ConnectorOuterClass {
      */
     com.google.protobuf.ByteString
         getTopicsBytes();
+
+    /**
+     * <pre>
+     * Replication factor for automatically created topics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     */
+    boolean hasReplicationFactor();
+    /**
+     * <pre>
+     * Replication factor for automatically created topics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     */
+    com.google.protobuf.Int64Value getReplicationFactor();
+    /**
+     * <pre>
+     * Replication factor for automatically created topics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getReplicationFactorOrBuilder();
   }
   /**
    * <pre>
@@ -8177,6 +8456,19 @@ public final class ConnectorOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               topics_ = s;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (replicationFactor_ != null) {
+                subBuilder = replicationFactor_.toBuilder();
+              }
+              replicationFactor_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(replicationFactor_);
+                replicationFactor_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -8325,6 +8617,39 @@ public final class ConnectorOuterClass {
       }
     }
 
+    public static final int REPLICATION_FACTOR_FIELD_NUMBER = 4;
+    private com.google.protobuf.Int64Value replicationFactor_;
+    /**
+     * <pre>
+     * Replication factor for automatically created topics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     */
+    public boolean hasReplicationFactor() {
+      return replicationFactor_ != null;
+    }
+    /**
+     * <pre>
+     * Replication factor for automatically created topics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     */
+    public com.google.protobuf.Int64Value getReplicationFactor() {
+      return replicationFactor_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicationFactor_;
+    }
+    /**
+     * <pre>
+     * Replication factor for automatically created topics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getReplicationFactorOrBuilder() {
+      return getReplicationFactor();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8348,6 +8673,9 @@ public final class ConnectorOuterClass {
       if (!getTopicsBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, topics_);
       }
+      if (replicationFactor_ != null) {
+        output.writeMessage(4, getReplicationFactor());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8367,6 +8695,10 @@ public final class ConnectorOuterClass {
       }
       if (!getTopicsBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, topics_);
+      }
+      if (replicationFactor_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getReplicationFactor());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8396,6 +8728,11 @@ public final class ConnectorOuterClass {
       }
       result = result && getTopics()
           .equals(other.getTopics());
+      result = result && (hasReplicationFactor() == other.hasReplicationFactor());
+      if (hasReplicationFactor()) {
+        result = result && getReplicationFactor()
+            .equals(other.getReplicationFactor());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -8417,6 +8754,10 @@ public final class ConnectorOuterClass {
       }
       hash = (37 * hash) + TOPICS_FIELD_NUMBER;
       hash = (53 * hash) + getTopics().hashCode();
+      if (hasReplicationFactor()) {
+        hash = (37 * hash) + REPLICATION_FACTOR_FIELD_NUMBER;
+        hash = (53 * hash) + getReplicationFactor().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8569,6 +8910,12 @@ public final class ConnectorOuterClass {
         }
         topics_ = "";
 
+        if (replicationFactorBuilder_ == null) {
+          replicationFactor_ = null;
+        } else {
+          replicationFactor_ = null;
+          replicationFactorBuilder_ = null;
+        }
         return this;
       }
 
@@ -8606,6 +8953,11 @@ public final class ConnectorOuterClass {
           result.targetCluster_ = targetClusterBuilder_.build();
         }
         result.topics_ = topics_;
+        if (replicationFactorBuilder_ == null) {
+          result.replicationFactor_ = replicationFactor_;
+        } else {
+          result.replicationFactor_ = replicationFactorBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -8663,6 +9015,9 @@ public final class ConnectorOuterClass {
         if (!other.getTopics().isEmpty()) {
           topics_ = other.topics_;
           onChanged();
+        }
+        if (other.hasReplicationFactor()) {
+          mergeReplicationFactor(other.getReplicationFactor());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9104,6 +9459,159 @@ public final class ConnectorOuterClass {
         topics_ = value;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.Int64Value replicationFactor_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replicationFactorBuilder_;
+      /**
+       * <pre>
+       * Replication factor for automatically created topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       */
+      public boolean hasReplicationFactor() {
+        return replicationFactorBuilder_ != null || replicationFactor_ != null;
+      }
+      /**
+       * <pre>
+       * Replication factor for automatically created topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       */
+      public com.google.protobuf.Int64Value getReplicationFactor() {
+        if (replicationFactorBuilder_ == null) {
+          return replicationFactor_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicationFactor_;
+        } else {
+          return replicationFactorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Replication factor for automatically created topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       */
+      public Builder setReplicationFactor(com.google.protobuf.Int64Value value) {
+        if (replicationFactorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          replicationFactor_ = value;
+          onChanged();
+        } else {
+          replicationFactorBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication factor for automatically created topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       */
+      public Builder setReplicationFactor(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (replicationFactorBuilder_ == null) {
+          replicationFactor_ = builderForValue.build();
+          onChanged();
+        } else {
+          replicationFactorBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication factor for automatically created topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       */
+      public Builder mergeReplicationFactor(com.google.protobuf.Int64Value value) {
+        if (replicationFactorBuilder_ == null) {
+          if (replicationFactor_ != null) {
+            replicationFactor_ =
+              com.google.protobuf.Int64Value.newBuilder(replicationFactor_).mergeFrom(value).buildPartial();
+          } else {
+            replicationFactor_ = value;
+          }
+          onChanged();
+        } else {
+          replicationFactorBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication factor for automatically created topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       */
+      public Builder clearReplicationFactor() {
+        if (replicationFactorBuilder_ == null) {
+          replicationFactor_ = null;
+          onChanged();
+        } else {
+          replicationFactor_ = null;
+          replicationFactorBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication factor for automatically created topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getReplicationFactorBuilder() {
+        
+        onChanged();
+        return getReplicationFactorFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Replication factor for automatically created topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getReplicationFactorOrBuilder() {
+        if (replicationFactorBuilder_ != null) {
+          return replicationFactorBuilder_.getMessageOrBuilder();
+        } else {
+          return replicationFactor_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : replicationFactor_;
+        }
+      }
+      /**
+       * <pre>
+       * Replication factor for automatically created topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_factor = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getReplicationFactorFieldBuilder() {
+        if (replicationFactorBuilder_ == null) {
+          replicationFactorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getReplicationFactor(),
+                  getParentForChildren(),
+                  isClean());
+          replicationFactor_ = null;
+        }
+        return replicationFactorBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12118,53 +12626,55 @@ public final class ConnectorOuterClass {
       "_mirrormaker\030\n \001(\01329.yandex.cloud.mdb.ka" +
       "fka.v1.ConnectorConfigMirrorMakerSpecH\000\032" +
       "1\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001B\022\n\020connector_config\"\304\001\n\036Conne" +
+      "\030\002 \001(\t:\0028\001B\022\n\020connector_config\"\375\001\n\036Conne" +
       "ctorConfigMirrorMakerSpec\022H\n\016source_clus" +
       "ter\030\001 \001(\01320.yandex.cloud.mdb.kafka.v1.Cl" +
       "usterConnectionSpec\022H\n\016target_cluster\030\002 " +
       "\001(\01320.yandex.cloud.mdb.kafka.v1.ClusterC" +
-      "onnectionSpec\022\016\n\006topics\030\003 \001(\t\"\326\001\n\025Cluste" +
-      "rConnectionSpec\022\r\n\005alias\030\001 \001(\t\022B\n\014this_c" +
-      "luster\030\002 \001(\0132*.yandex.cloud.mdb.kafka.v1" +
-      ".ThisClusterSpecH\000\022T\n\020external_cluster\030\003" +
-      " \001(\01328.yandex.cloud.mdb.kafka.v1.Externa" +
-      "lClusterConnectionSpecH\000B\024\n\022cluster_conn" +
-      "ection\"\021\n\017ThisClusterSpec\"\233\001\n\035ExternalCl" +
-      "usterConnectionSpec\022\031\n\021bootstrap_servers" +
-      "\030\001 \001(\t\022\025\n\rsasl_username\030\002 \001(\t\022\025\n\rsasl_pa" +
-      "ssword\030\003 \001(\t\022\026\n\016sasl_mechanism\030\004 \001(\t\022\031\n\021" +
-      "security_protocol\030\005 \001(\t\"\274\004\n\tConnector\022\014\n" +
-      "\004name\030\001 \001(\t\022.\n\ttasks_max\030\002 \001(\0132\033.google." +
-      "protobuf.Int64Value\022H\n\nproperties\030\003 \003(\0132" +
-      "4.yandex.cloud.mdb.kafka.v1.Connector.Pr" +
-      "opertiesEntry\022;\n\006health\030\004 \001(\0162+.yandex.c" +
-      "loud.mdb.kafka.v1.Connector.Health\022;\n\006st" +
-      "atus\030\005 \001(\0162+.yandex.cloud.mdb.kafka.v1.C" +
-      "onnector.Status\022\022\n\ncluster_id\030\006 \001(\t\022]\n\034c" +
-      "onnector_config_mirrormaker\030\n \001(\01325.yand" +
-      "ex.cloud.mdb.kafka.v1.ConnectorConfigMir" +
-      "rorMakerH\000\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"1\n\006Health\022\022\n\016HEALT" +
-      "H_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"@\n\006Stat" +
-      "us\022\022\n\016STATUS_UNKNOWN\020\000\022\013\n\007RUNNING\020\001\022\t\n\005E" +
-      "RROR\020\002\022\n\n\006PAUSED\020\003B\022\n\020connector_config\"\270" +
-      "\001\n\032ConnectorConfigMirrorMaker\022D\n\016source_" +
-      "cluster\030\001 \001(\0132,.yandex.cloud.mdb.kafka.v" +
-      "1.ClusterConnection\022D\n\016target_cluster\030\002 " +
-      "\001(\0132,.yandex.cloud.mdb.kafka.v1.ClusterC" +
-      "onnection\022\016\n\006topics\030\003 \001(\t\"\312\001\n\021ClusterCon" +
-      "nection\022\r\n\005alias\030\001 \001(\t\022>\n\014this_cluster\030\002" +
-      " \001(\0132&.yandex.cloud.mdb.kafka.v1.ThisClu" +
-      "sterH\000\022P\n\020external_cluster\030\003 \001(\01324.yande" +
-      "x.cloud.mdb.kafka.v1.ExternalClusterConn" +
-      "ectionH\000B\024\n\022cluster_connection\"\r\n\013ThisCl" +
-      "uster\"\200\001\n\031ExternalClusterConnection\022\031\n\021b" +
-      "ootstrap_servers\030\001 \001(\t\022\025\n\rsasl_username\030" +
-      "\002 \001(\t\022\026\n\016sasl_mechanism\030\004 \001(\t\022\031\n\021securit" +
-      "y_protocol\030\005 \001(\tBd\n\035yandex.cloud.api.mdb" +
-      ".kafka.v1ZCgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/mdb/kafka/v1;kafkab\006" +
-      "proto3"
+      "onnectionSpec\022\016\n\006topics\030\003 \001(\t\0227\n\022replica" +
+      "tion_factor\030\004 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\"\326\001\n\025ClusterConnectionSpec\022\r\n\005alia" +
+      "s\030\001 \001(\t\022B\n\014this_cluster\030\002 \001(\0132*.yandex.c" +
+      "loud.mdb.kafka.v1.ThisClusterSpecH\000\022T\n\020e" +
+      "xternal_cluster\030\003 \001(\01328.yandex.cloud.mdb" +
+      ".kafka.v1.ExternalClusterConnectionSpecH" +
+      "\000B\024\n\022cluster_connection\"\021\n\017ThisClusterSp" +
+      "ec\"\233\001\n\035ExternalClusterConnectionSpec\022\031\n\021" +
+      "bootstrap_servers\030\001 \001(\t\022\025\n\rsasl_username" +
+      "\030\002 \001(\t\022\025\n\rsasl_password\030\003 \001(\t\022\026\n\016sasl_me" +
+      "chanism\030\004 \001(\t\022\031\n\021security_protocol\030\005 \001(\t" +
+      "\"\274\004\n\tConnector\022\014\n\004name\030\001 \001(\t\022.\n\ttasks_ma" +
+      "x\030\002 \001(\0132\033.google.protobuf.Int64Value\022H\n\n" +
+      "properties\030\003 \003(\01324.yandex.cloud.mdb.kafk" +
+      "a.v1.Connector.PropertiesEntry\022;\n\006health" +
+      "\030\004 \001(\0162+.yandex.cloud.mdb.kafka.v1.Conne" +
+      "ctor.Health\022;\n\006status\030\005 \001(\0162+.yandex.clo" +
+      "ud.mdb.kafka.v1.Connector.Status\022\022\n\nclus" +
+      "ter_id\030\006 \001(\t\022]\n\034connector_config_mirrorm" +
+      "aker\030\n \001(\01325.yandex.cloud.mdb.kafka.v1.C" +
+      "onnectorConfigMirrorMakerH\000\0321\n\017Propertie" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"1" +
+      "\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022" +
+      "\010\n\004DEAD\020\002\"@\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022" +
+      "\013\n\007RUNNING\020\001\022\t\n\005ERROR\020\002\022\n\n\006PAUSED\020\003B\022\n\020c" +
+      "onnector_config\"\361\001\n\032ConnectorConfigMirro" +
+      "rMaker\022D\n\016source_cluster\030\001 \001(\0132,.yandex." +
+      "cloud.mdb.kafka.v1.ClusterConnection\022D\n\016" +
+      "target_cluster\030\002 \001(\0132,.yandex.cloud.mdb." +
+      "kafka.v1.ClusterConnection\022\016\n\006topics\030\003 \001" +
+      "(\t\0227\n\022replication_factor\030\004 \001(\0132\033.google." +
+      "protobuf.Int64Value\"\312\001\n\021ClusterConnectio" +
+      "n\022\r\n\005alias\030\001 \001(\t\022>\n\014this_cluster\030\002 \001(\0132&" +
+      ".yandex.cloud.mdb.kafka.v1.ThisClusterH\000" +
+      "\022P\n\020external_cluster\030\003 \001(\01324.yandex.clou" +
+      "d.mdb.kafka.v1.ExternalClusterConnection" +
+      "H\000B\024\n\022cluster_connection\"\r\n\013ThisCluster\"" +
+      "\200\001\n\031ExternalClusterConnection\022\031\n\021bootstr" +
+      "ap_servers\030\001 \001(\t\022\025\n\rsasl_username\030\002 \001(\t\022" +
+      "\026\n\016sasl_mechanism\030\004 \001(\t\022\031\n\021security_prot" +
+      "ocol\030\005 \001(\tBd\n\035yandex.cloud.api.mdb.kafka" +
+      ".v1ZCgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/mdb/kafka/v1;kafkab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12196,7 +12706,7 @@ public final class ConnectorOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigMirrorMakerSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigMirrorMakerSpec_descriptor,
-        new java.lang.String[] { "SourceCluster", "TargetCluster", "Topics", });
+        new java.lang.String[] { "SourceCluster", "TargetCluster", "Topics", "ReplicationFactor", });
     internal_static_yandex_cloud_mdb_kafka_v1_ClusterConnectionSpec_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_mdb_kafka_v1_ClusterConnectionSpec_fieldAccessorTable = new
@@ -12232,7 +12742,7 @@ public final class ConnectorOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigMirrorMaker_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigMirrorMaker_descriptor,
-        new java.lang.String[] { "SourceCluster", "TargetCluster", "Topics", });
+        new java.lang.String[] { "SourceCluster", "TargetCluster", "Topics", "ReplicationFactor", });
     internal_static_yandex_cloud_mdb_kafka_v1_ClusterConnection_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_mdb_kafka_v1_ClusterConnection_fieldAccessorTable = new

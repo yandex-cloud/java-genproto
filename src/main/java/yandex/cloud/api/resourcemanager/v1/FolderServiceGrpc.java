@@ -392,7 +392,6 @@ public final class FolderServiceGrpc {
     /**
      * <pre>
      * Deletes the specified folder.
-     * The method is temporarily unavailable.
      * </pre>
      */
     public void delete(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.DeleteFolderRequest request,
@@ -578,7 +577,6 @@ public final class FolderServiceGrpc {
     /**
      * <pre>
      * Deletes the specified folder.
-     * The method is temporarily unavailable.
      * </pre>
      */
     public void delete(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.DeleteFolderRequest request,
@@ -697,7 +695,6 @@ public final class FolderServiceGrpc {
     /**
      * <pre>
      * Deletes the specified folder.
-     * The method is temporarily unavailable.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.DeleteFolderRequest request) {
@@ -815,7 +812,6 @@ public final class FolderServiceGrpc {
     /**
      * <pre>
      * Deletes the specified folder.
-     * The method is temporarily unavailable.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(

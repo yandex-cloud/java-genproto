@@ -114,6 +114,60 @@ public final class CloudOuterClass {
      */
     com.google.protobuf.ByteString
         getOrganizationIdBytes();
+
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
   }
   /**
    * <pre>
@@ -199,6 +253,19 @@ public final class CloudOuterClass {
               organizationId_ = s;
               break;
             }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000020;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -223,6 +290,18 @@ public final class CloudOuterClass {
       return yandex.cloud.api.resourcemanager.v1.CloudOuterClass.internal_static_yandex_cloud_resourcemanager_v1_Cloud_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 7:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -231,6 +310,7 @@ public final class CloudOuterClass {
               yandex.cloud.api.resourcemanager.v1.CloudOuterClass.Cloud.class, yandex.cloud.api.resourcemanager.v1.CloudOuterClass.Cloud.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -432,6 +512,98 @@ public final class CloudOuterClass {
       }
     }
 
+    public static final int LABELS_FIELD_NUMBER = 7;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.resourcemanager.v1.CloudOuterClass.internal_static_yandex_cloud_resourcemanager_v1_Cloud_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7;</code>
+     */
+
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7;</code>
+     */
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7;</code>
+     */
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -461,6 +633,12 @@ public final class CloudOuterClass {
       if (!getOrganizationIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, organizationId_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          7);
       unknownFields.writeTo(output);
     }
 
@@ -485,6 +663,16 @@ public final class CloudOuterClass {
       }
       if (!getOrganizationIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, organizationId_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(7, labels__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -515,6 +703,8 @@ public final class CloudOuterClass {
           .equals(other.getDescription());
       result = result && getOrganizationId()
           .equals(other.getOrganizationId());
+      result = result && internalGetLabels().equals(
+          other.internalGetLabels());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -538,6 +728,10 @@ public final class CloudOuterClass {
       hash = (53 * hash) + getDescription().hashCode();
       hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
       hash = (53 * hash) + getOrganizationId().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -649,6 +843,28 @@ public final class CloudOuterClass {
         return yandex.cloud.api.resourcemanager.v1.CloudOuterClass.internal_static_yandex_cloud_resourcemanager_v1_Cloud_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 7:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 7:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -689,6 +905,7 @@ public final class CloudOuterClass {
 
         organizationId_ = "";
 
+        internalGetMutableLabels().clear();
         return this;
       }
 
@@ -715,6 +932,8 @@ public final class CloudOuterClass {
       @java.lang.Override
       public yandex.cloud.api.resourcemanager.v1.CloudOuterClass.Cloud buildPartial() {
         yandex.cloud.api.resourcemanager.v1.CloudOuterClass.Cloud result = new yandex.cloud.api.resourcemanager.v1.CloudOuterClass.Cloud(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.id_ = id_;
         if (createdAtBuilder_ == null) {
           result.createdAt_ = createdAt_;
@@ -724,6 +943,9 @@ public final class CloudOuterClass {
         result.name_ = name_;
         result.description_ = description_;
         result.organizationId_ = organizationId_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -791,6 +1013,8 @@ public final class CloudOuterClass {
           organizationId_ = other.organizationId_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -819,6 +1043,7 @@ public final class CloudOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -1328,6 +1553,157 @@ public final class CloudOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7;</code>
+       */
+
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7;</code>
+       */
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7;</code>
+       */
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1386,6 +1762,11 @@ public final class CloudOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_resourcemanager_v1_Cloud_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_resourcemanager_v1_Cloud_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_resourcemanager_v1_Cloud_LabelsEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1397,14 +1778,17 @@ public final class CloudOuterClass {
     java.lang.String[] descriptorData = {
       "\n+yandex/cloud/resourcemanager/v1/cloud." +
       "proto\022\037yandex.cloud.resourcemanager.v1\032\037" +
-      "google/protobuf/timestamp.proto\"\177\n\005Cloud" +
-      "\022\n\n\002id\030\001 \001(\t\022.\n\ncreated_at\030\002 \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\022\014\n\004name\030\003 \001(\t\022\023\n\013de" +
-      "scription\030\004 \001(\t\022\027\n\017organization_id\030\006 \001(\t" +
-      "Bz\n#yandex.cloud.api.resourcemanager.v1Z" +
-      "Sgithub.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/resourcemanager/v1;resourceman" +
-      "agerb\006proto3"
+      "google/protobuf/timestamp.proto\"\362\001\n\005Clou" +
+      "d\022\n\n\002id\030\001 \001(\t\022.\n\ncreated_at\030\002 \001(\0132\032.goog" +
+      "le.protobuf.Timestamp\022\014\n\004name\030\003 \001(\t\022\023\n\013d" +
+      "escription\030\004 \001(\t\022\027\n\017organization_id\030\006 \001(" +
+      "\t\022B\n\006labels\030\007 \003(\01322.yandex.cloud.resourc" +
+      "emanager.v1.Cloud.LabelsEntry\032-\n\013LabelsE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001Bz\n#" +
+      "yandex.cloud.api.resourcemanager.v1ZSgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/resourcemanager/v1;resourcemanager" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1424,7 +1808,13 @@ public final class CloudOuterClass {
     internal_static_yandex_cloud_resourcemanager_v1_Cloud_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_resourcemanager_v1_Cloud_descriptor,
-        new java.lang.String[] { "Id", "CreatedAt", "Name", "Description", "OrganizationId", });
+        new java.lang.String[] { "Id", "CreatedAt", "Name", "Description", "OrganizationId", "Labels", });
+    internal_static_yandex_cloud_resourcemanager_v1_Cloud_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_resourcemanager_v1_Cloud_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_resourcemanager_v1_Cloud_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_resourcemanager_v1_Cloud_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

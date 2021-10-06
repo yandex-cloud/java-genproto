@@ -4215,11 +4215,6 @@ public final class HttpRouterServiceOuterClass {
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder getVirtualHostsOrBuilder(
         int index);
-
-    /**
-     * <code>bool https_redirect = 7;</code>
-     */
-    boolean getHttpsRedirect();
   }
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.UpdateHttpRouterRequest}
@@ -4238,7 +4233,6 @@ public final class HttpRouterServiceOuterClass {
       name_ = "";
       description_ = "";
       virtualHosts_ = java.util.Collections.emptyList();
-      httpsRedirect_ = false;
     }
 
     @java.lang.Override
@@ -4316,11 +4310,6 @@ public final class HttpRouterServiceOuterClass {
               }
               virtualHosts_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.parser(), extensionRegistry));
-              break;
-            }
-            case 56: {
-
-              httpsRedirect_ = input.readBool();
               break;
             }
             default: {
@@ -4725,15 +4714,6 @@ public final class HttpRouterServiceOuterClass {
       return virtualHosts_.get(index);
     }
 
-    public static final int HTTPS_REDIRECT_FIELD_NUMBER = 7;
-    private boolean httpsRedirect_;
-    /**
-     * <code>bool https_redirect = 7;</code>
-     */
-    public boolean getHttpsRedirect() {
-      return httpsRedirect_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4768,9 +4748,6 @@ public final class HttpRouterServiceOuterClass {
           5);
       for (int i = 0; i < virtualHosts_.size(); i++) {
         output.writeMessage(6, virtualHosts_.get(i));
-      }
-      if (httpsRedirect_ != false) {
-        output.writeBool(7, httpsRedirect_);
       }
       unknownFields.writeTo(output);
     }
@@ -4808,10 +4785,6 @@ public final class HttpRouterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, virtualHosts_.get(i));
       }
-      if (httpsRedirect_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, httpsRedirect_);
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4843,8 +4816,6 @@ public final class HttpRouterServiceOuterClass {
           other.internalGetLabels());
       result = result && getVirtualHostsList()
           .equals(other.getVirtualHostsList());
-      result = result && (getHttpsRedirect()
-          == other.getHttpsRedirect());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -4874,9 +4845,6 @@ public final class HttpRouterServiceOuterClass {
         hash = (37 * hash) + VIRTUAL_HOSTS_FIELD_NUMBER;
         hash = (53 * hash) + getVirtualHostsList().hashCode();
       }
-      hash = (37 * hash) + HTTPS_REDIRECT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getHttpsRedirect());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5052,8 +5020,6 @@ public final class HttpRouterServiceOuterClass {
         } else {
           virtualHostsBuilder_.clear();
         }
-        httpsRedirect_ = false;
-
         return this;
       }
 
@@ -5101,7 +5067,6 @@ public final class HttpRouterServiceOuterClass {
         } else {
           result.virtualHosts_ = virtualHostsBuilder_.build();
         }
-        result.httpsRedirect_ = httpsRedirect_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -5193,9 +5158,6 @@ public final class HttpRouterServiceOuterClass {
               virtualHostsBuilder_.addAllMessages(other.virtualHosts_);
             }
           }
-        }
-        if (other.getHttpsRedirect() != false) {
-          setHttpsRedirect(other.getHttpsRedirect());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6233,32 +6195,6 @@ public final class HttpRouterServiceOuterClass {
         }
         return virtualHostsBuilder_;
       }
-
-      private boolean httpsRedirect_ ;
-      /**
-       * <code>bool https_redirect = 7;</code>
-       */
-      public boolean getHttpsRedirect() {
-        return httpsRedirect_;
-      }
-      /**
-       * <code>bool https_redirect = 7;</code>
-       */
-      public Builder setHttpsRedirect(boolean value) {
-        
-        httpsRedirect_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool https_redirect = 7;</code>
-       */
-      public Builder clearHttpsRedirect() {
-        
-        httpsRedirect_ = false;
-        onChanged();
-        return this;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7072,11 +7008,6 @@ public final class HttpRouterServiceOuterClass {
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder getVirtualHostsOrBuilder(
         int index);
-
-    /**
-     * <code>bool https_redirect = 6;</code>
-     */
-    boolean getHttpsRedirect();
   }
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.CreateHttpRouterRequest}
@@ -7095,7 +7026,6 @@ public final class HttpRouterServiceOuterClass {
       name_ = "";
       description_ = "";
       virtualHosts_ = java.util.Collections.emptyList();
-      httpsRedirect_ = false;
     }
 
     @java.lang.Override
@@ -7160,11 +7090,6 @@ public final class HttpRouterServiceOuterClass {
               }
               virtualHosts_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.parser(), extensionRegistry));
-              break;
-            }
-            case 48: {
-
-              httpsRedirect_ = input.readBool();
               break;
             }
             default: {
@@ -7506,15 +7431,6 @@ public final class HttpRouterServiceOuterClass {
       return virtualHosts_.get(index);
     }
 
-    public static final int HTTPS_REDIRECT_FIELD_NUMBER = 6;
-    private boolean httpsRedirect_;
-    /**
-     * <code>bool https_redirect = 6;</code>
-     */
-    public boolean getHttpsRedirect() {
-      return httpsRedirect_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7546,9 +7462,6 @@ public final class HttpRouterServiceOuterClass {
           4);
       for (int i = 0; i < virtualHosts_.size(); i++) {
         output.writeMessage(5, virtualHosts_.get(i));
-      }
-      if (httpsRedirect_ != false) {
-        output.writeBool(6, httpsRedirect_);
       }
       unknownFields.writeTo(output);
     }
@@ -7582,10 +7495,6 @@ public final class HttpRouterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, virtualHosts_.get(i));
       }
-      if (httpsRedirect_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, httpsRedirect_);
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7612,8 +7521,6 @@ public final class HttpRouterServiceOuterClass {
           other.internalGetLabels());
       result = result && getVirtualHostsList()
           .equals(other.getVirtualHostsList());
-      result = result && (getHttpsRedirect()
-          == other.getHttpsRedirect());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -7639,9 +7546,6 @@ public final class HttpRouterServiceOuterClass {
         hash = (37 * hash) + VIRTUAL_HOSTS_FIELD_NUMBER;
         hash = (53 * hash) + getVirtualHostsList().hashCode();
       }
-      hash = (37 * hash) + HTTPS_REDIRECT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getHttpsRedirect());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7811,8 +7715,6 @@ public final class HttpRouterServiceOuterClass {
         } else {
           virtualHostsBuilder_.clear();
         }
-        httpsRedirect_ = false;
-
         return this;
       }
 
@@ -7855,7 +7757,6 @@ public final class HttpRouterServiceOuterClass {
         } else {
           result.virtualHosts_ = virtualHostsBuilder_.build();
         }
-        result.httpsRedirect_ = httpsRedirect_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -7944,9 +7845,6 @@ public final class HttpRouterServiceOuterClass {
               virtualHostsBuilder_.addAllMessages(other.virtualHosts_);
             }
           }
-        }
-        if (other.getHttpsRedirect() != false) {
-          setHttpsRedirect(other.getHttpsRedirect());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8759,32 +8657,6 @@ public final class HttpRouterServiceOuterClass {
           virtualHosts_ = null;
         }
         return virtualHostsBuilder_;
-      }
-
-      private boolean httpsRedirect_ ;
-      /**
-       * <code>bool https_redirect = 6;</code>
-       */
-      public boolean getHttpsRedirect() {
-        return httpsRedirect_;
-      }
-      /**
-       * <code>bool https_redirect = 6;</code>
-       */
-      public Builder setHttpsRedirect(boolean value) {
-        
-        httpsRedirect_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool https_redirect = 6;</code>
-       */
-      public Builder clearHttpsRedirect() {
-        
-        httpsRedirect_ = false;
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11491,7 +11363,7 @@ public final class HttpRouterServiceOuterClass {
       ".v1.HttpRouter\022\027\n\017next_page_token\030\002 \001(\t\"" +
       "7\n\027DeleteHttpRouterRequest\022\034\n\016http_route" +
       "r_id\030\001 \001(\tB\004\350\3071\001\"2\n\030DeleteHttpRouterMeta" +
-      "data\022\026\n\016http_router_id\030\001 \001(\t\"\352\003\n\027UpdateH" +
+      "data\022\026\n\016http_router_id\030\001 \001(\t\"\330\003\n\027UpdateH" +
       "ttpRouterRequest\022\034\n\016http_router_id\030\001 \001(\t" +
       "B\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.google.pro" +
       "tobuf.FieldMask\0224\n\004name\030\003 \001(\tB&\362\3071\"([a-z" +
@@ -11502,61 +11374,60 @@ public final class HttpRouterServiceOuterClass {
       "1\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022" +
       "\024[a-z][-_./\\@0-9a-z]*\022C\n\rvirtual_hosts\030\006" +
       " \003(\0132,.yandex.cloud.apploadbalancer.v1.V" +
-      "irtualHost\022\026\n\016https_redirect\030\007 \001(\010\032-\n\013La" +
-      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\"2\n\030UpdateHttpRouterMetadata\022\026\n\016http_ro" +
-      "uter_id\030\001 \001(\t\"\264\003\n\027CreateHttpRouterReques" +
-      "t\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\0224\n\004name\030\002 \001(\t" +
-      "B&\362\3071\"([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?" +
-      "\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\235\001\n\006lab" +
-      "els\030\004 \003(\0132D.yandex.cloud.apploadbalancer" +
-      ".v1.CreateHttpRouterRequest.LabelsEntryB" +
-      "G\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006" +
-      "\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022C\n\rvirt" +
-      "ual_hosts\030\005 \003(\0132,.yandex.cloud.apploadba" +
-      "lancer.v1.VirtualHost\022\026\n\016https_redirect\030" +
-      "\006 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\"2\n\030CreateHttpRouterMetadata" +
-      "\022\026\n\016http_router_id\030\001 \001(\t\"\205\001\n\037ListHttpRou" +
-      "terOperationsRequest\022$\n\016http_router_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
-      "\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
-      "\"r\n ListHttpRouterOperationsResponse\0225\n\n" +
-      "operations\030\001 \003(\0132!.yandex.cloud.operatio" +
-      "n.Operation\022\027\n\017next_page_token\030\002 \001(\t2\237\t\n" +
-      "\021HttpRouterService\022\243\001\n\003Get\0225.yandex.clou" +
-      "d.apploadbalancer.v1.GetHttpRouterReques" +
-      "t\032+.yandex.cloud.apploadbalancer.v1.Http" +
-      "Router\"8\202\323\344\223\0022\0220/apploadbalancer/v1/http" +
-      "Routers/{http_router_id}\022\242\001\n\004List\0227.yand" +
-      "ex.cloud.apploadbalancer.v1.ListHttpRout" +
-      "ersRequest\0328.yandex.cloud.apploadbalance" +
-      "r.v1.ListHttpRoutersResponse\"\'\202\323\344\223\002!\022\037/a" +
-      "pploadbalancer/v1/httpRouters\022\273\001\n\006Create" +
-      "\0228.yandex.cloud.apploadbalancer.v1.Creat" +
-      "eHttpRouterRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"T\202\323\344\223\002$\"\037/apploadbalancer/" +
-      "v1/httpRouters:\001*\262\322*&\n\030CreateHttpRouterM" +
-      "etadata\022\nHttpRouter\022\314\001\n\006Update\0228.yandex." +
-      "cloud.apploadbalancer.v1.UpdateHttpRoute" +
-      "rRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"e\202\323\344\223\002520/apploadbalancer/v1/httpRou" +
-      "ters/{http_router_id}:\001*\262\322*&\n\030UpdateHttp" +
-      "RouterMetadata\022\nHttpRouter\022\324\001\n\006Delete\0228." +
-      "yandex.cloud.apploadbalancer.v1.DeleteHt" +
-      "tpRouterRequest\032!.yandex.cloud.operation" +
-      ".Operation\"m\202\323\344\223\0022*0/apploadbalancer/v1/" +
-      "httpRouters/{http_router_id}\262\322*1\n\030Delete" +
-      "HttpRouterMetadata\022\025google.protobuf.Empt" +
-      "y\022\332\001\n\016ListOperations\022@.yandex.cloud.appl" +
-      "oadbalancer.v1.ListHttpRouterOperationsR" +
-      "equest\032A.yandex.cloud.apploadbalancer.v1" +
-      ".ListHttpRouterOperationsResponse\"C\202\323\344\223\002" +
-      "=\022;/apploadbalancer/v1/httpRouters/{http" +
-      "_router_id}/operationsBz\n#yandex.cloud.a" +
-      "pi.apploadbalancer.v1ZSgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/apploadb" +
-      "alancer/v1;apploadbalancerb\006proto3"
+      "irtualHost\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001J\004\010\007\020\010\"2\n\030UpdateHttpRou" +
+      "terMetadata\022\026\n\016http_router_id\030\001 \001(\t\"\242\003\n\027" +
+      "CreateHttpRouterRequest\022\027\n\tfolder_id\030\001 \001" +
+      "(\tB\004\350\3071\001\0224\n\004name\030\002 \001(\tB&\362\3071\"([a-z]([-a-z" +
+      "0-9]{0,61}[a-z0-9])?)?\022\036\n\013description\030\003 " +
+      "\001(\tB\t\212\3101\005<=256\022\235\001\n\006labels\030\004 \003(\0132D.yandex" +
+      ".cloud.apploadbalancer.v1.CreateHttpRout" +
+      "erRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362" +
+      "\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][" +
+      "-_./\\@0-9a-z]*\022C\n\rvirtual_hosts\030\005 \003(\0132,." +
+      "yandex.cloud.apploadbalancer.v1.VirtualH" +
+      "ost\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001J\004\010\006\020\007\"2\n\030CreateHttpRouterMeta" +
+      "data\022\026\n\016http_router_id\030\001 \001(\t\"\205\001\n\037ListHtt" +
+      "pRouterOperationsRequest\022$\n\016http_router_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(" +
+      "\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<" +
+      "=100\"r\n ListHttpRouterOperationsResponse" +
+      "\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.oper" +
+      "ation.Operation\022\027\n\017next_page_token\030\002 \001(\t" +
+      "2\237\t\n\021HttpRouterService\022\243\001\n\003Get\0225.yandex." +
+      "cloud.apploadbalancer.v1.GetHttpRouterRe" +
+      "quest\032+.yandex.cloud.apploadbalancer.v1." +
+      "HttpRouter\"8\202\323\344\223\0022\0220/apploadbalancer/v1/" +
+      "httpRouters/{http_router_id}\022\242\001\n\004List\0227." +
+      "yandex.cloud.apploadbalancer.v1.ListHttp" +
+      "RoutersRequest\0328.yandex.cloud.apploadbal" +
+      "ancer.v1.ListHttpRoutersResponse\"\'\202\323\344\223\002!" +
+      "\022\037/apploadbalancer/v1/httpRouters\022\273\001\n\006Cr" +
+      "eate\0228.yandex.cloud.apploadbalancer.v1.C" +
+      "reateHttpRouterRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"T\202\323\344\223\002$\"\037/apploadbalan" +
+      "cer/v1/httpRouters:\001*\262\322*&\n\030CreateHttpRou" +
+      "terMetadata\022\nHttpRouter\022\314\001\n\006Update\0228.yan" +
+      "dex.cloud.apploadbalancer.v1.UpdateHttpR" +
+      "outerRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"e\202\323\344\223\002520/apploadbalancer/v1/htt" +
+      "pRouters/{http_router_id}:\001*\262\322*&\n\030Update" +
+      "HttpRouterMetadata\022\nHttpRouter\022\324\001\n\006Delet" +
+      "e\0228.yandex.cloud.apploadbalancer.v1.Dele" +
+      "teHttpRouterRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"m\202\323\344\223\0022*0/apploadbalancer" +
+      "/v1/httpRouters/{http_router_id}\262\322*1\n\030De" +
+      "leteHttpRouterMetadata\022\025google.protobuf." +
+      "Empty\022\332\001\n\016ListOperations\022@.yandex.cloud." +
+      "apploadbalancer.v1.ListHttpRouterOperati" +
+      "onsRequest\032A.yandex.cloud.apploadbalance" +
+      "r.v1.ListHttpRouterOperationsResponse\"C\202" +
+      "\323\344\223\002=\022;/apploadbalancer/v1/httpRouters/{" +
+      "http_router_id}/operationsBz\n#yandex.clo" +
+      "ud.api.apploadbalancer.v1ZSgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/appl" +
+      "oadbalancer/v1;apploadbalancerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11612,7 +11483,7 @@ public final class HttpRouterServiceOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateHttpRouterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_UpdateHttpRouterRequest_descriptor,
-        new java.lang.String[] { "HttpRouterId", "UpdateMask", "Name", "Description", "Labels", "VirtualHosts", "HttpsRedirect", });
+        new java.lang.String[] { "HttpRouterId", "UpdateMask", "Name", "Description", "Labels", "VirtualHosts", });
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateHttpRouterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_apploadbalancer_v1_UpdateHttpRouterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateHttpRouterRequest_LabelsEntry_fieldAccessorTable = new
@@ -11630,7 +11501,7 @@ public final class HttpRouterServiceOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_CreateHttpRouterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_CreateHttpRouterRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "VirtualHosts", "HttpsRedirect", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "VirtualHosts", });
     internal_static_yandex_cloud_apploadbalancer_v1_CreateHttpRouterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_apploadbalancer_v1_CreateHttpRouterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_apploadbalancer_v1_CreateHttpRouterRequest_LabelsEntry_fieldAccessorTable = new

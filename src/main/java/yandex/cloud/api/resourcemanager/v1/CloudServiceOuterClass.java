@@ -633,7 +633,7 @@ public final class CloudServiceOuterClass {
      * returned by a previous list request to get the next page of results.
      * </pre>
      *
-     * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getPageToken();
     /**
@@ -643,7 +643,7 @@ public final class CloudServiceOuterClass {
      * returned by a previous list request to get the next page of results.
      * </pre>
      *
-     * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -791,7 +791,7 @@ public final class CloudServiceOuterClass {
      * returned by a previous list request to get the next page of results.
      * </pre>
      *
-     * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
@@ -812,7 +812,7 @@ public final class CloudServiceOuterClass {
      * returned by a previous list request to get the next page of results.
      * </pre>
      *
-     * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
@@ -1274,7 +1274,7 @@ public final class CloudServiceOuterClass {
        * returned by a previous list request to get the next page of results.
        * </pre>
        *
-       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1295,7 +1295,7 @@ public final class CloudServiceOuterClass {
        * returned by a previous list request to get the next page of results.
        * </pre>
        *
-       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1317,7 +1317,7 @@ public final class CloudServiceOuterClass {
        * returned by a previous list request to get the next page of results.
        * </pre>
        *
-       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1336,7 +1336,7 @@ public final class CloudServiceOuterClass {
        * returned by a previous list request to get the next page of results.
        * </pre>
        *
-       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearPageToken() {
         
@@ -1351,7 +1351,7 @@ public final class CloudServiceOuterClass {
        * returned by a previous list request to get the next page of results.
        * </pre>
        *
-       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2636,6 +2636,1909 @@ public final class CloudServiceOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.ListCloudsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CreateCloudRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.resourcemanager.v1.CreateCloudRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the organization to create a cloud in.
+     * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <pre>
+     * ID of the organization to create a cloud in.
+     * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <pre>
+     * Name of the cloud.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the cloud.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Description of the cloud.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description of the cloud.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.resourcemanager.v1.CreateCloudRequest}
+   */
+  public  static final class CreateCloudRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.resourcemanager.v1.CreateCloudRequest)
+      CreateCloudRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateCloudRequest.newBuilder() to construct.
+    private CreateCloudRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateCloudRequest() {
+      organizationId_ = "";
+      name_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateCloudRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              organizationId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000008;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_CreateCloudRequest_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 4:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_CreateCloudRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest.class, yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object organizationId_;
+    /**
+     * <pre>
+     * ID of the organization to create a cloud in.
+     * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getOrganizationId() {
+      java.lang.Object ref = organizationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        organizationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the organization to create a cloud in.
+     * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      java.lang.Object ref = organizationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        organizationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the cloud.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the cloud.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Description of the cloud.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description of the cloud.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 4;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_CreateCloudRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getOrganizationIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, organizationId_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          4);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getOrganizationIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, organizationId_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, labels__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest other = (yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest) obj;
+
+      boolean result = true;
+      result = result && getOrganizationId()
+          .equals(other.getOrganizationId());
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getDescription()
+          .equals(other.getDescription());
+      result = result && internalGetLabels().equals(
+          other.internalGetLabels());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOrganizationId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.resourcemanager.v1.CreateCloudRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.resourcemanager.v1.CreateCloudRequest)
+        yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_CreateCloudRequest_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_CreateCloudRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest.class, yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        organizationId_ = "";
+
+        name_ = "";
+
+        description_ = "";
+
+        internalGetMutableLabels().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_CreateCloudRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest build() {
+        yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest buildPartial() {
+        yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest result = new yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.organizationId_ = organizationId_;
+        result.name_ = name_;
+        result.description_ = description_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest) {
+          return mergeFrom((yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest other) {
+        if (other == yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest.getDefaultInstance()) return this;
+        if (!other.getOrganizationId().isEmpty()) {
+          organizationId_ = other.organizationId_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object organizationId_ = "";
+      /**
+       * <pre>
+       * ID of the organization to create a cloud in.
+       * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getOrganizationId() {
+        java.lang.Object ref = organizationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          organizationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the organization to create a cloud in.
+       * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        java.lang.Object ref = organizationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          organizationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the organization to create a cloud in.
+       * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        organizationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the organization to create a cloud in.
+       * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearOrganizationId() {
+        
+        organizationId_ = getDefaultInstance().getOrganizationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the organization to create a cloud in.
+       * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        organizationId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the cloud.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the cloud.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the cloud.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the cloud.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the cloud.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description of the cloud.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the cloud.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the cloud.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the cloud.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the cloud.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.resourcemanager.v1.CreateCloudRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.resourcemanager.v1.CreateCloudRequest)
+    private static final yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest();
+    }
+
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateCloudRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CreateCloudRequest>() {
+      @java.lang.Override
+      public CreateCloudRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateCloudRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateCloudRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateCloudRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CreateCloudMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.resourcemanager.v1.CreateCloudMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the cloud that is being created.
+     * </pre>
+     *
+     * <code>string cloud_id = 1;</code>
+     */
+    java.lang.String getCloudId();
+    /**
+     * <pre>
+     * ID of the cloud that is being created.
+     * </pre>
+     *
+     * <code>string cloud_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getCloudIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.resourcemanager.v1.CreateCloudMetadata}
+   */
+  public  static final class CreateCloudMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.resourcemanager.v1.CreateCloudMetadata)
+      CreateCloudMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateCloudMetadata.newBuilder() to construct.
+    private CreateCloudMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateCloudMetadata() {
+      cloudId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateCloudMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              cloudId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_CreateCloudMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_CreateCloudMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata.class, yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata.Builder.class);
+    }
+
+    public static final int CLOUD_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object cloudId_;
+    /**
+     * <pre>
+     * ID of the cloud that is being created.
+     * </pre>
+     *
+     * <code>string cloud_id = 1;</code>
+     */
+    public java.lang.String getCloudId() {
+      java.lang.Object ref = cloudId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cloudId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the cloud that is being created.
+     * </pre>
+     *
+     * <code>string cloud_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCloudIdBytes() {
+      java.lang.Object ref = cloudId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cloudId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getCloudIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cloudId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getCloudIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cloudId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata other = (yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata) obj;
+
+      boolean result = true;
+      result = result && getCloudId()
+          .equals(other.getCloudId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLOUD_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCloudId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.resourcemanager.v1.CreateCloudMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.resourcemanager.v1.CreateCloudMetadata)
+        yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_CreateCloudMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_CreateCloudMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata.class, yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        cloudId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_CreateCloudMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata build() {
+        yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata buildPartial() {
+        yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata result = new yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata(this);
+        result.cloudId_ = cloudId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata) {
+          return mergeFrom((yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata other) {
+        if (other == yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata.getDefaultInstance()) return this;
+        if (!other.getCloudId().isEmpty()) {
+          cloudId_ = other.cloudId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object cloudId_ = "";
+      /**
+       * <pre>
+       * ID of the cloud that is being created.
+       * </pre>
+       *
+       * <code>string cloud_id = 1;</code>
+       */
+      public java.lang.String getCloudId() {
+        java.lang.Object ref = cloudId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cloudId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cloud that is being created.
+       * </pre>
+       *
+       * <code>string cloud_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCloudIdBytes() {
+        java.lang.Object ref = cloudId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cloudId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cloud that is being created.
+       * </pre>
+       *
+       * <code>string cloud_id = 1;</code>
+       */
+      public Builder setCloudId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cloudId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cloud that is being created.
+       * </pre>
+       *
+       * <code>string cloud_id = 1;</code>
+       */
+      public Builder clearCloudId() {
+        
+        cloudId_ = getDefaultInstance().getCloudId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cloud that is being created.
+       * </pre>
+       *
+       * <code>string cloud_id = 1;</code>
+       */
+      public Builder setCloudIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cloudId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.resourcemanager.v1.CreateCloudMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.resourcemanager.v1.CreateCloudMetadata)
+    private static final yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata();
+    }
+
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateCloudMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<CreateCloudMetadata>() {
+      @java.lang.Override
+      public CreateCloudMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateCloudMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateCloudMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateCloudMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.CreateCloudMetadata getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4698,6 +6601,60 @@ public final class CloudServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code yandex.cloud.resourcemanager.v1.UpdateCloudRequest}
@@ -4772,6 +6729,19 @@ public final class CloudServiceOuterClass {
               description_ = s;
               break;
             }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000010;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4796,6 +6766,18 @@ public final class CloudServiceOuterClass {
       return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_UpdateCloudRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 5:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -4804,6 +6786,7 @@ public final class CloudServiceOuterClass {
               yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.UpdateCloudRequest.class, yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.UpdateCloudRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CLOUD_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object cloudId_;
     /**
@@ -4965,6 +6948,98 @@ public final class CloudServiceOuterClass {
       }
     }
 
+    public static final int LABELS_FIELD_NUMBER = 5;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_UpdateCloudRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4991,6 +7066,12 @@ public final class CloudServiceOuterClass {
       if (!getDescriptionBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          5);
       unknownFields.writeTo(output);
     }
 
@@ -5012,6 +7093,16 @@ public final class CloudServiceOuterClass {
       }
       if (!getDescriptionBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, labels__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5040,6 +7131,8 @@ public final class CloudServiceOuterClass {
           .equals(other.getName());
       result = result && getDescription()
           .equals(other.getDescription());
+      result = result && internalGetLabels().equals(
+          other.internalGetLabels());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5061,6 +7154,10 @@ public final class CloudServiceOuterClass {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5168,6 +7265,28 @@ public final class CloudServiceOuterClass {
         return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_UpdateCloudRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 5:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 5:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -5206,6 +7325,7 @@ public final class CloudServiceOuterClass {
 
         description_ = "";
 
+        internalGetMutableLabels().clear();
         return this;
       }
 
@@ -5232,6 +7352,8 @@ public final class CloudServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.UpdateCloudRequest buildPartial() {
         yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.UpdateCloudRequest result = new yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.UpdateCloudRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.cloudId_ = cloudId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -5240,6 +7362,9 @@ public final class CloudServiceOuterClass {
         }
         result.name_ = name_;
         result.description_ = description_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -5303,6 +7428,8 @@ public final class CloudServiceOuterClass {
           description_ = other.description_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -5331,6 +7458,7 @@ public final class CloudServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object cloudId_ = "";
       /**
@@ -5754,6 +7882,157 @@ public final class CloudServiceOuterClass {
         
         description_ = value;
         onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
         return this;
       }
       @java.lang.Override
@@ -8175,6 +10454,21 @@ public final class CloudServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_resourcemanager_v1_ListCloudsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_resourcemanager_v1_CreateCloudRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_resourcemanager_v1_CreateCloudRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_resourcemanager_v1_CreateCloudRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_resourcemanager_v1_CreateCloudRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_resourcemanager_v1_CreateCloudMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_resourcemanager_v1_CreateCloudMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_resourcemanager_v1_ListCloudOperationsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8189,6 +10483,11 @@ public final class CloudServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_resourcemanager_v1_UpdateCloudRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_resourcemanager_v1_UpdateCloudRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_resourcemanager_v1_UpdateCloudRequest_LabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_resourcemanager_v1_UpdateCloudMetadata_descriptor;
   private static final 
@@ -8223,70 +10522,89 @@ public final class CloudServiceOuterClass {
       "ess/access.proto\032&yandex/cloud/operation" +
       "/operation.proto\032\035yandex/cloud/validatio" +
       "n.proto\"1\n\017GetCloudRequest\022\036\n\010cloud_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\"m\n\021ListCloudsRequest\022" +
-      "\035\n\tpage_size\030\001 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_t" +
-      "oken\030\002 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\003 \001(\tB\n\212" +
-      "\3101\006<=1000\"e\n\022ListCloudsResponse\0226\n\006cloud" +
-      "s\030\001 \003(\0132&.yandex.cloud.resourcemanager.v" +
-      "1.Cloud\022\027\n\017next_page_token\030\002 \001(\t\"z\n\032List" +
-      "CloudOperationsRequest\022\036\n\010cloud_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<" +
-      "=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"m\n\033" +
-      "ListCloudOperationsResponse\0225\n\noperation" +
-      "s\030\001 \003(\0132!.yandex.cloud.operation.Operati" +
-      "on\022\027\n\017next_page_token\030\002 \001(\t\"\270\001\n\022UpdateCl" +
-      "oudRequest\022\036\n\010cloud_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022/\n\013update_mask\030\002 \001(\0132\032.google.protobu" +
-      "f.FieldMask\0221\n\004name\030\003 \001(\tB#\362\3071\037[a-z]([-a" +
-      "-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\004 " +
-      "\001(\tB\t\212\3101\005<=256\"\'\n\023UpdateCloudMetadata\022\020\n" +
-      "\010cloud_id\030\001 \001(\t\"f\n\022DeleteCloudRequest\022\036\n" +
-      "\010cloud_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0220\n\014delete_" +
-      "after\030\002 \001(\0132\032.google.protobuf.Timestamp\"" +
-      "Y\n\023DeleteCloudMetadata\022\020\n\010cloud_id\030\001 \001(\t" +
-      "\0220\n\014delete_after\030\002 \001(\0132\032.google.protobuf" +
-      ".Timestamp2\361\013\n\014CloudService\022\217\001\n\003Get\0220.ya" +
-      "ndex.cloud.resourcemanager.v1.GetCloudRe" +
-      "quest\032&.yandex.cloud.resourcemanager.v1." +
-      "Cloud\".\202\323\344\223\002(\022&/resource-manager/v1/clou" +
-      "ds/{cloud_id}\022\224\001\n\004List\0222.yandex.cloud.re" +
-      "sourcemanager.v1.ListCloudsRequest\0323.yan" +
-      "dex.cloud.resourcemanager.v1.ListCloudsR" +
-      "esponse\"#\202\323\344\223\002\035\022\033/resource-manager/v1/cl" +
-      "ouds\022\263\001\n\006Update\0223.yandex.cloud.resourcem" +
-      "anager.v1.UpdateCloudRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"Q\202\323\344\223\002+2&/resour" +
-      "ce-manager/v1/clouds/{cloud_id}:\001*\262\322*\034\n\023" +
-      "UpdateCloudMetadata\022\005Cloud\022\222\001\n\006Delete\0223." +
-      "yandex.cloud.resourcemanager.v1.DeleteCl" +
-      "oudRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"0\262\322*,\n\023DeleteCloudMetadata\022\025google" +
-      ".protobuf.Empty\022\306\001\n\016ListOperations\022;.yan" +
-      "dex.cloud.resourcemanager.v1.ListCloudOp" +
-      "erationsRequest\032<.yandex.cloud.resourcem" +
-      "anager.v1.ListCloudOperationsResponse\"9\202" +
-      "\323\344\223\0023\0221/resource-manager/v1/clouds/{clou" +
-      "d_id}/operations\022\273\001\n\022ListAccessBindings\022" +
-      "..yandex.cloud.access.ListAccessBindings" +
-      "Request\032/.yandex.cloud.access.ListAccess" +
-      "BindingsResponse\"D\202\323\344\223\002>\022</resource-mana" +
-      "ger/v1/clouds/{resource_id}:listAccessBi" +
-      "ndings\022\353\001\n\021SetAccessBindings\022-.yandex.cl" +
-      "oud.access.SetAccessBindingsRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"\203\001\202\323\344\223\002@\"" +
-      ";/resource-manager/v1/clouds/{resource_i" +
-      "d}:setAccessBindings:\001*\262\322*9\n access.SetA" +
-      "ccessBindingsMetadata\022\025google.protobuf.E" +
-      "mpty\022\367\001\n\024UpdateAccessBindings\0220.yandex.c" +
-      "loud.access.UpdateAccessBindingsRequest\032" +
-      "!.yandex.cloud.operation.Operation\"\211\001\202\323\344" +
-      "\223\002C\">/resource-manager/v1/clouds/{resour" +
-      "ce_id}:updateAccessBindings:\001*\262\322*<\n#acce" +
-      "ss.UpdateAccessBindingsMetadata\022\025google." +
-      "protobuf.EmptyBz\n#yandex.cloud.api.resou" +
-      "rcemanager.v1ZSgithub.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/resourcemanager/" +
-      "v1;resourcemanagerb\006proto3"
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\"n\n\021ListCloudsRequest\022" +
+      "\035\n\tpage_size\030\001 \001(\003B\n\372\3071\006<=1000\022\036\n\npage_t" +
+      "oken\030\002 \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\003 \001(\tB\n" +
+      "\212\3101\006<=1000\"e\n\022ListCloudsResponse\0226\n\006clou" +
+      "ds\030\001 \003(\0132&.yandex.cloud.resourcemanager." +
+      "v1.Cloud\022\027\n\017next_page_token\030\002 \001(\t\"\322\002\n\022Cr" +
+      "eateCloudRequest\022%\n\017organization_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\0223\n\004name\030\002 \001(\tB%\350\3071\001\362\3071\035|" +
+      "[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013descript" +
+      "ion\030\003 \001(\tB\t\212\3101\005<=256\022\220\001\n\006labels\030\004 \003(\0132?." +
+      "yandex.cloud.resourcemanager.v1.CreateCl" +
+      "oudRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63" +
+      "\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0" +
+      "-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\"\'\n\023CreateCloudMetadata\022\020\n" +
+      "\010cloud_id\030\001 \001(\t\"z\n\032ListCloudOperationsRe" +
+      "quest\022\036\n\010cloud_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n" +
+      "\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
+      "en\030\003 \001(\tB\t\212\3101\005<=100\"m\n\033ListCloudOperatio" +
+      "nsResponse\0225\n\noperations\030\001 \003(\0132!.yandex." +
+      "cloud.operation.Operation\022\027\n\017next_page_t" +
+      "oken\030\002 \001(\t\"\372\002\n\022UpdateCloudRequest\022\036\n\010clo" +
+      "ud_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask" +
+      "\030\002 \001(\0132\032.google.protobuf.FieldMask\0221\n\004na" +
+      "me\030\003 \001(\tB#\362\3071\037[a-z]([-a-z0-9]{0,61}[a-z0" +
+      "-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\220\001" +
+      "\n\006labels\030\005 \003(\0132?.yandex.cloud.resourcema" +
+      "nager.v1.UpdateCloudRequest.LabelsEntryB" +
+      "?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-" +
+      "63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\'\n\023Updat" +
+      "eCloudMetadata\022\020\n\010cloud_id\030\001 \001(\t\"f\n\022Dele" +
+      "teCloudRequest\022\036\n\010cloud_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\0220\n\014delete_after\030\002 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\"Y\n\023DeleteCloudMetadata\022" +
+      "\020\n\010cloud_id\030\001 \001(\t\0220\n\014delete_after\030\002 \001(\0132" +
+      "\032.google.protobuf.Timestamp2\234\r\n\014CloudSer" +
+      "vice\022\217\001\n\003Get\0220.yandex.cloud.resourcemana" +
+      "ger.v1.GetCloudRequest\032&.yandex.cloud.re" +
+      "sourcemanager.v1.Cloud\".\202\323\344\223\002(\022&/resourc" +
+      "e-manager/v1/clouds/{cloud_id}\022\224\001\n\004List\022" +
+      "2.yandex.cloud.resourcemanager.v1.ListCl" +
+      "oudsRequest\0323.yandex.cloud.resourcemanag" +
+      "er.v1.ListCloudsResponse\"#\202\323\344\223\002\035\022\033/resou" +
+      "rce-manager/v1/clouds\022\250\001\n\006Create\0223.yande" +
+      "x.cloud.resourcemanager.v1.CreateCloudRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"F\202\323\344\223\002 \"\033/resource-manager/v1/clouds:\001*" +
+      "\262\322*\034\n\023CreateCloudMetadata\022\005Cloud\022\263\001\n\006Upd" +
+      "ate\0223.yandex.cloud.resourcemanager.v1.Up" +
+      "dateCloudRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"Q\202\323\344\223\002+2&/resource-manager/v" +
+      "1/clouds/{cloud_id}:\001*\262\322*\034\n\023UpdateCloudM" +
+      "etadata\022\005Cloud\022\222\001\n\006Delete\0223.yandex.cloud" +
+      ".resourcemanager.v1.DeleteCloudRequest\032!" +
+      ".yandex.cloud.operation.Operation\"0\262\322*,\n" +
+      "\023DeleteCloudMetadata\022\025google.protobuf.Em" +
+      "pty\022\306\001\n\016ListOperations\022;.yandex.cloud.re" +
+      "sourcemanager.v1.ListCloudOperationsRequ" +
+      "est\032<.yandex.cloud.resourcemanager.v1.Li" +
+      "stCloudOperationsResponse\"9\202\323\344\223\0023\0221/reso" +
+      "urce-manager/v1/clouds/{cloud_id}/operat" +
+      "ions\022\273\001\n\022ListAccessBindings\022..yandex.clo" +
+      "ud.access.ListAccessBindingsRequest\032/.ya" +
+      "ndex.cloud.access.ListAccessBindingsResp" +
+      "onse\"D\202\323\344\223\002>\022</resource-manager/v1/cloud" +
+      "s/{resource_id}:listAccessBindings\022\353\001\n\021S" +
+      "etAccessBindings\022-.yandex.cloud.access.S" +
+      "etAccessBindingsRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"\203\001\202\323\344\223\002@\";/resource-m" +
+      "anager/v1/clouds/{resource_id}:setAccess" +
+      "Bindings:\001*\262\322*9\n access.SetAccessBinding" +
+      "sMetadata\022\025google.protobuf.Empty\022\367\001\n\024Upd" +
+      "ateAccessBindings\0220.yandex.cloud.access." +
+      "UpdateAccessBindingsRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"\211\001\202\323\344\223\002C\">/resour" +
+      "ce-manager/v1/clouds/{resource_id}:updat" +
+      "eAccessBindings:\001*\262\322*<\n#access.UpdateAcc" +
+      "essBindingsMetadata\022\025google.protobuf.Emp" +
+      "tyBz\n#yandex.cloud.api.resourcemanager.v" +
+      "1ZSgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/resourcemanager/v1;resourcem" +
+      "anagerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8326,38 +10644,62 @@ public final class CloudServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_resourcemanager_v1_ListCloudsResponse_descriptor,
         new java.lang.String[] { "Clouds", "NextPageToken", });
-    internal_static_yandex_cloud_resourcemanager_v1_ListCloudOperationsRequest_descriptor =
+    internal_static_yandex_cloud_resourcemanager_v1_CreateCloudRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_resourcemanager_v1_CreateCloudRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_resourcemanager_v1_CreateCloudRequest_descriptor,
+        new java.lang.String[] { "OrganizationId", "Name", "Description", "Labels", });
+    internal_static_yandex_cloud_resourcemanager_v1_CreateCloudRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_resourcemanager_v1_CreateCloudRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_resourcemanager_v1_CreateCloudRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_resourcemanager_v1_CreateCloudRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_resourcemanager_v1_CreateCloudMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_resourcemanager_v1_CreateCloudMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_resourcemanager_v1_CreateCloudMetadata_descriptor,
+        new java.lang.String[] { "CloudId", });
+    internal_static_yandex_cloud_resourcemanager_v1_ListCloudOperationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_resourcemanager_v1_ListCloudOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_resourcemanager_v1_ListCloudOperationsRequest_descriptor,
         new java.lang.String[] { "CloudId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_resourcemanager_v1_ListCloudOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_resourcemanager_v1_ListCloudOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_resourcemanager_v1_ListCloudOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
     internal_static_yandex_cloud_resourcemanager_v1_UpdateCloudRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_resourcemanager_v1_UpdateCloudRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_resourcemanager_v1_UpdateCloudRequest_descriptor,
-        new java.lang.String[] { "CloudId", "UpdateMask", "Name", "Description", });
+        new java.lang.String[] { "CloudId", "UpdateMask", "Name", "Description", "Labels", });
+    internal_static_yandex_cloud_resourcemanager_v1_UpdateCloudRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_resourcemanager_v1_UpdateCloudRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_resourcemanager_v1_UpdateCloudRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_resourcemanager_v1_UpdateCloudRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_resourcemanager_v1_UpdateCloudMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_resourcemanager_v1_UpdateCloudMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_resourcemanager_v1_UpdateCloudMetadata_descriptor,
         new java.lang.String[] { "CloudId", });
     internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudRequest_descriptor,
         new java.lang.String[] { "CloudId", "DeleteAfter", });
     internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudMetadata_descriptor,
@@ -8367,8 +10709,10 @@ public final class CloudServiceOuterClass {
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.mapKey);
     registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

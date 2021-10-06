@@ -15,21 +15,40 @@ public final class BackendGroupOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
+   * <pre>
+   * A load balancing mode resource.
+   * For details about the concept, see
+   * [documentation](/docs/application-load-balancer/concepts/backend-group#balancing-mode).
+   * </pre>
+   *
    * Protobuf enum {@code yandex.cloud.apploadbalancer.v1.LoadBalancingMode}
    */
   public enum LoadBalancingMode
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     * <pre>
+     * Round robin load balancing mode.
+     * All endpoints of the backend take their turns to receive requests attributed to the backend.
+     * </pre>
+     *
      * <code>ROUND_ROBIN = 0;</code>
      */
     ROUND_ROBIN(0),
     /**
+     * <pre>
+     * Random load balancing mode. Default value.
+     * For a request attributed to the backend, an endpoint that receives it is picked at random.
+     * </pre>
+     *
      * <code>RANDOM = 1;</code>
      */
     RANDOM(1),
     /**
      * <pre>
-     * Using power of two choices.
+     * Least request load balancing mode.
+     * To pick an endpoint that receives a request attributed to the backend, the power of two choices algorithm is used;
+     * that is, two endpoints are picked at random, and the request is sent to the one which has the fewest active
+     * requests.
      * </pre>
      *
      * <code>LEAST_REQUEST = 2;</code>
@@ -37,7 +56,14 @@ public final class BackendGroupOuterClass {
     LEAST_REQUEST(2),
     /**
      * <pre>
-     * MAGLEV_HASH allows session affinity for that backend.
+     * Maglev hashing load balancing mode, used only if session affinity is working for the backend group.
+     * Each endpoint is hashed, and a hash table with 65537 rows is filled accordingly, so that every endpoint occupies
+     * the same amount of rows. An attribute of each request, specified in session affinity configuration of the backend
+     * group, is also hashed by the same function. The row with the same number as the resulting value is looked up in the
+     * table to determine the endpoint that receives the request.
+     * If session affinity is not working for the backend group (i.e. it is not configured or the group contains more
+     * than one backend with positive weight), endpoints for backends with `MAGLEV_HASH` load balancing mode are picked at
+     * `RANDOM` instead.
      * </pre>
      *
      * <code>MAGLEV_HASH = 3;</code>
@@ -47,16 +73,29 @@ public final class BackendGroupOuterClass {
     ;
 
     /**
+     * <pre>
+     * Round robin load balancing mode.
+     * All endpoints of the backend take their turns to receive requests attributed to the backend.
+     * </pre>
+     *
      * <code>ROUND_ROBIN = 0;</code>
      */
     public static final int ROUND_ROBIN_VALUE = 0;
     /**
+     * <pre>
+     * Random load balancing mode. Default value.
+     * For a request attributed to the backend, an endpoint that receives it is picked at random.
+     * </pre>
+     *
      * <code>RANDOM = 1;</code>
      */
     public static final int RANDOM_VALUE = 1;
     /**
      * <pre>
-     * Using power of two choices.
+     * Least request load balancing mode.
+     * To pick an endpoint that receives a request attributed to the backend, the power of two choices algorithm is used;
+     * that is, two endpoints are picked at random, and the request is sent to the one which has the fewest active
+     * requests.
      * </pre>
      *
      * <code>LEAST_REQUEST = 2;</code>
@@ -64,7 +103,14 @@ public final class BackendGroupOuterClass {
     public static final int LEAST_REQUEST_VALUE = 2;
     /**
      * <pre>
-     * MAGLEV_HASH allows session affinity for that backend.
+     * Maglev hashing load balancing mode, used only if session affinity is working for the backend group.
+     * Each endpoint is hashed, and a hash table with 65537 rows is filled accordingly, so that every endpoint occupies
+     * the same amount of rows. An attribute of each request, specified in session affinity configuration of the backend
+     * group, is also hashed by the same function. The row with the same number as the resulting value is looked up in the
+     * table to determine the endpoint that receives the request.
+     * If session affinity is not working for the backend group (i.e. it is not configured or the group contains more
+     * than one backend with positive weight), endpoints for backends with `MAGLEV_HASH` load balancing mode are picked at
+     * `RANDOM` instead.
      * </pre>
      *
      * <code>MAGLEV_HASH = 3;</code>
@@ -2596,40 +2642,79 @@ public final class BackendGroupOuterClass {
         int index);
 
     /**
+     * <pre>
+     * Connection-based session affinity configuration.
+     * For now, a connection is defined only by an IP address of the client.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
     boolean hasConnection();
     /**
+     * <pre>
+     * Connection-based session affinity configuration.
+     * For now, a connection is defined only by an IP address of the client.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection();
     /**
+     * <pre>
+     * Connection-based session affinity configuration.
+     * For now, a connection is defined only by an IP address of the client.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder();
 
     /**
+     * <pre>
+     * HTTP-header-field-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
      */
     boolean hasHeader();
     /**
+     * <pre>
+     * HTTP-header-field-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity getHeader();
     /**
+     * <pre>
+     * HTTP-header-field-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder getHeaderOrBuilder();
 
     /**
+     * <pre>
+     * Cookie-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
      */
     boolean hasCookie();
     /**
+     * <pre>
+     * Cookie-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity getCookie();
     /**
+     * <pre>
+     * Cookie-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder getCookieOrBuilder();
@@ -2864,12 +2949,22 @@ public final class BackendGroupOuterClass {
 
     public static final int CONNECTION_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Connection-based session affinity configuration.
+     * For now, a connection is defined only by an IP address of the client.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
     public boolean hasConnection() {
       return sessionAffinityCase_ == 2;
     }
     /**
+     * <pre>
+     * Connection-based session affinity configuration.
+     * For now, a connection is defined only by an IP address of the client.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection() {
@@ -2879,6 +2974,11 @@ public final class BackendGroupOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Connection-based session affinity configuration.
+     * For now, a connection is defined only by an IP address of the client.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder() {
@@ -2890,12 +2990,20 @@ public final class BackendGroupOuterClass {
 
     public static final int HEADER_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * HTTP-header-field-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
      */
     public boolean hasHeader() {
       return sessionAffinityCase_ == 3;
     }
     /**
+     * <pre>
+     * HTTP-header-field-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity getHeader() {
@@ -2905,6 +3013,10 @@ public final class BackendGroupOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.getDefaultInstance();
     }
     /**
+     * <pre>
+     * HTTP-header-field-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder getHeaderOrBuilder() {
@@ -2916,12 +3028,20 @@ public final class BackendGroupOuterClass {
 
     public static final int COOKIE_FIELD_NUMBER = 4;
     /**
+     * <pre>
+     * Cookie-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
      */
     public boolean hasCookie() {
       return sessionAffinityCase_ == 4;
     }
     /**
+     * <pre>
+     * Cookie-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity getCookie() {
@@ -2931,6 +3051,10 @@ public final class BackendGroupOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Cookie-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder getCookieOrBuilder() {
@@ -3716,12 +3840,22 @@ public final class BackendGroupOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder> connectionBuilder_;
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public boolean hasConnection() {
         return sessionAffinityCase_ == 2;
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection() {
@@ -3738,6 +3872,11 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public Builder setConnection(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity value) {
@@ -3754,6 +3893,11 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public Builder setConnection(
@@ -3768,6 +3912,11 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public Builder mergeConnection(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity value) {
@@ -3790,6 +3939,11 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public Builder clearConnection() {
@@ -3809,12 +3963,22 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.Builder getConnectionBuilder() {
         return getConnectionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder() {
@@ -3828,6 +3992,11 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3852,12 +4021,20 @@ public final class BackendGroupOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder> headerBuilder_;
       /**
+       * <pre>
+       * HTTP-header-field-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
        */
       public boolean hasHeader() {
         return sessionAffinityCase_ == 3;
       }
       /**
+       * <pre>
+       * HTTP-header-field-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity getHeader() {
@@ -3874,6 +4051,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * HTTP-header-field-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
        */
       public Builder setHeader(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity value) {
@@ -3890,6 +4071,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP-header-field-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
        */
       public Builder setHeader(
@@ -3904,6 +4089,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP-header-field-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
        */
       public Builder mergeHeader(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity value) {
@@ -3926,6 +4115,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP-header-field-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
        */
       public Builder clearHeader() {
@@ -3945,12 +4138,20 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP-header-field-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.Builder getHeaderBuilder() {
         return getHeaderFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * HTTP-header-field-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder getHeaderOrBuilder() {
@@ -3964,6 +4165,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * HTTP-header-field-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3988,12 +4193,20 @@ public final class BackendGroupOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder> cookieBuilder_;
       /**
+       * <pre>
+       * Cookie-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
        */
       public boolean hasCookie() {
         return sessionAffinityCase_ == 4;
       }
       /**
+       * <pre>
+       * Cookie-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity getCookie() {
@@ -4010,6 +4223,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Cookie-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
        */
       public Builder setCookie(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity value) {
@@ -4026,6 +4243,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Cookie-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
        */
       public Builder setCookie(
@@ -4040,6 +4261,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Cookie-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
        */
       public Builder mergeCookie(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity value) {
@@ -4062,6 +4287,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Cookie-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
        */
       public Builder clearCookie() {
@@ -4081,12 +4310,20 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Cookie-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.Builder getCookieBuilder() {
         return getCookieFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Cookie-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder getCookieOrBuilder() {
@@ -4100,6 +4337,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Cookie-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4222,40 +4463,79 @@ public final class BackendGroupOuterClass {
         int index);
 
     /**
+     * <pre>
+     * Connection-based session affinity configuration.
+     * For now, a connection is defined only by an IP address of the client.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
     boolean hasConnection();
     /**
+     * <pre>
+     * Connection-based session affinity configuration.
+     * For now, a connection is defined only by an IP address of the client.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection();
     /**
+     * <pre>
+     * Connection-based session affinity configuration.
+     * For now, a connection is defined only by an IP address of the client.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder();
 
     /**
+     * <pre>
+     * HTTP-header-field-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
      */
     boolean hasHeader();
     /**
+     * <pre>
+     * HTTP-header-field-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity getHeader();
     /**
+     * <pre>
+     * HTTP-header-field-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder getHeaderOrBuilder();
 
     /**
+     * <pre>
+     * Cookie-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
      */
     boolean hasCookie();
     /**
+     * <pre>
+     * Cookie-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity getCookie();
     /**
+     * <pre>
+     * Cookie-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder getCookieOrBuilder();
@@ -4490,12 +4770,22 @@ public final class BackendGroupOuterClass {
 
     public static final int CONNECTION_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Connection-based session affinity configuration.
+     * For now, a connection is defined only by an IP address of the client.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
     public boolean hasConnection() {
       return sessionAffinityCase_ == 2;
     }
     /**
+     * <pre>
+     * Connection-based session affinity configuration.
+     * For now, a connection is defined only by an IP address of the client.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection() {
@@ -4505,6 +4795,11 @@ public final class BackendGroupOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Connection-based session affinity configuration.
+     * For now, a connection is defined only by an IP address of the client.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder() {
@@ -4516,12 +4811,20 @@ public final class BackendGroupOuterClass {
 
     public static final int HEADER_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * HTTP-header-field-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
      */
     public boolean hasHeader() {
       return sessionAffinityCase_ == 3;
     }
     /**
+     * <pre>
+     * HTTP-header-field-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity getHeader() {
@@ -4531,6 +4834,10 @@ public final class BackendGroupOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.getDefaultInstance();
     }
     /**
+     * <pre>
+     * HTTP-header-field-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder getHeaderOrBuilder() {
@@ -4542,12 +4849,20 @@ public final class BackendGroupOuterClass {
 
     public static final int COOKIE_FIELD_NUMBER = 4;
     /**
+     * <pre>
+     * Cookie-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
      */
     public boolean hasCookie() {
       return sessionAffinityCase_ == 4;
     }
     /**
+     * <pre>
+     * Cookie-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity getCookie() {
@@ -4557,6 +4872,10 @@ public final class BackendGroupOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Cookie-based session affinity configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder getCookieOrBuilder() {
@@ -5342,12 +5661,22 @@ public final class BackendGroupOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder> connectionBuilder_;
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public boolean hasConnection() {
         return sessionAffinityCase_ == 2;
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection() {
@@ -5364,6 +5693,11 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public Builder setConnection(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity value) {
@@ -5380,6 +5714,11 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public Builder setConnection(
@@ -5394,6 +5733,11 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public Builder mergeConnection(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity value) {
@@ -5416,6 +5760,11 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public Builder clearConnection() {
@@ -5435,12 +5784,22 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.Builder getConnectionBuilder() {
         return getConnectionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder() {
@@ -5454,6 +5813,11 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5478,12 +5842,20 @@ public final class BackendGroupOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder> headerBuilder_;
       /**
+       * <pre>
+       * HTTP-header-field-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
        */
       public boolean hasHeader() {
         return sessionAffinityCase_ == 3;
       }
       /**
+       * <pre>
+       * HTTP-header-field-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity getHeader() {
@@ -5500,6 +5872,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * HTTP-header-field-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
        */
       public Builder setHeader(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity value) {
@@ -5516,6 +5892,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP-header-field-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
        */
       public Builder setHeader(
@@ -5530,6 +5910,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP-header-field-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
        */
       public Builder mergeHeader(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity value) {
@@ -5552,6 +5936,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP-header-field-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
        */
       public Builder clearHeader() {
@@ -5571,12 +5959,20 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP-header-field-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.Builder getHeaderBuilder() {
         return getHeaderFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * HTTP-header-field-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder getHeaderOrBuilder() {
@@ -5590,6 +5986,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * HTTP-header-field-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5614,12 +6014,20 @@ public final class BackendGroupOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder> cookieBuilder_;
       /**
+       * <pre>
+       * Cookie-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
        */
       public boolean hasCookie() {
         return sessionAffinityCase_ == 4;
       }
       /**
+       * <pre>
+       * Cookie-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity getCookie() {
@@ -5636,6 +6044,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Cookie-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
        */
       public Builder setCookie(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity value) {
@@ -5652,6 +6064,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Cookie-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
        */
       public Builder setCookie(
@@ -5666,6 +6082,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Cookie-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
        */
       public Builder mergeCookie(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity value) {
@@ -5688,6 +6108,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Cookie-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
        */
       public Builder clearCookie() {
@@ -5707,12 +6131,20 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Cookie-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.Builder getCookieBuilder() {
         return getCookieFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Cookie-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder getCookieOrBuilder() {
@@ -5726,6 +6158,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Cookie-based session affinity configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5804,16 +6240,28 @@ public final class BackendGroupOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Name of the HTTP header field that is used for session affinity.
+     * </pre>
+     *
      * <code>string header_name = 1 [(.yandex.cloud.length) = "1-256"];</code>
      */
     java.lang.String getHeaderName();
     /**
+     * <pre>
+     * Name of the HTTP header field that is used for session affinity.
+     * </pre>
+     *
      * <code>string header_name = 1 [(.yandex.cloud.length) = "1-256"];</code>
      */
     com.google.protobuf.ByteString
         getHeaderNameBytes();
   }
   /**
+   * <pre>
+   * A resource for HTTP-header-field-based session affinity configuration.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity}
    */
   public  static final class HeaderSessionAffinity extends
@@ -5894,6 +6342,10 @@ public final class BackendGroupOuterClass {
     public static final int HEADER_NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object headerName_;
     /**
+     * <pre>
+     * Name of the HTTP header field that is used for session affinity.
+     * </pre>
+     *
      * <code>string header_name = 1 [(.yandex.cloud.length) = "1-256"];</code>
      */
     public java.lang.String getHeaderName() {
@@ -5909,6 +6361,10 @@ public final class BackendGroupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the HTTP header field that is used for session affinity.
+     * </pre>
+     *
      * <code>string header_name = 1 [(.yandex.cloud.length) = "1-256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -6081,6 +6537,10 @@ public final class BackendGroupOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A resource for HTTP-header-field-based session affinity configuration.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity}
      */
     public static final class Builder extends
@@ -6230,6 +6690,10 @@ public final class BackendGroupOuterClass {
 
       private java.lang.Object headerName_ = "";
       /**
+       * <pre>
+       * Name of the HTTP header field that is used for session affinity.
+       * </pre>
+       *
        * <code>string header_name = 1 [(.yandex.cloud.length) = "1-256"];</code>
        */
       public java.lang.String getHeaderName() {
@@ -6245,6 +6709,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the HTTP header field that is used for session affinity.
+       * </pre>
+       *
        * <code>string header_name = 1 [(.yandex.cloud.length) = "1-256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -6261,6 +6729,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the HTTP header field that is used for session affinity.
+       * </pre>
+       *
        * <code>string header_name = 1 [(.yandex.cloud.length) = "1-256"];</code>
        */
       public Builder setHeaderName(
@@ -6274,6 +6746,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the HTTP header field that is used for session affinity.
+       * </pre>
+       *
        * <code>string header_name = 1 [(.yandex.cloud.length) = "1-256"];</code>
        */
       public Builder clearHeaderName() {
@@ -6283,6 +6759,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the HTTP header field that is used for session affinity.
+       * </pre>
+       *
        * <code>string header_name = 1 [(.yandex.cloud.length) = "1-256"];</code>
        */
       public Builder setHeaderNameBytes(
@@ -6354,10 +6834,18 @@ public final class BackendGroupOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Name of the cookie that is used for session affinity.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.length) = "1-256"];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the cookie that is used for session affinity.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.length) = "1-256"];</code>
      */
     com.google.protobuf.ByteString
@@ -6365,7 +6853,9 @@ public final class BackendGroupOuterClass {
 
     /**
      * <pre>
-     * If not set, session cookie will be used (not persisted between browser restarts).
+     * Maximum age of cookies that are generated for sessions (persistent cookies).
+     * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+     * on client restarts.
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -6373,7 +6863,9 @@ public final class BackendGroupOuterClass {
     boolean hasTtl();
     /**
      * <pre>
-     * If not set, session cookie will be used (not persisted between browser restarts).
+     * Maximum age of cookies that are generated for sessions (persistent cookies).
+     * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+     * on client restarts.
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -6381,7 +6873,9 @@ public final class BackendGroupOuterClass {
     com.google.protobuf.Duration getTtl();
     /**
      * <pre>
-     * If not set, session cookie will be used (not persisted between browser restarts).
+     * Maximum age of cookies that are generated for sessions (persistent cookies).
+     * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+     * on client restarts.
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -6389,6 +6883,10 @@ public final class BackendGroupOuterClass {
     com.google.protobuf.DurationOrBuilder getTtlOrBuilder();
   }
   /**
+   * <pre>
+   * A resource for cookie-based session affinity configuration.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.CookieSessionAffinity}
    */
   public  static final class CookieSessionAffinity extends
@@ -6482,6 +6980,10 @@ public final class BackendGroupOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the cookie that is used for session affinity.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.length) = "1-256"];</code>
      */
     public java.lang.String getName() {
@@ -6497,6 +6999,10 @@ public final class BackendGroupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the cookie that is used for session affinity.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.length) = "1-256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -6517,7 +7023,9 @@ public final class BackendGroupOuterClass {
     private com.google.protobuf.Duration ttl_;
     /**
      * <pre>
-     * If not set, session cookie will be used (not persisted between browser restarts).
+     * Maximum age of cookies that are generated for sessions (persistent cookies).
+     * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+     * on client restarts.
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -6527,7 +7035,9 @@ public final class BackendGroupOuterClass {
     }
     /**
      * <pre>
-     * If not set, session cookie will be used (not persisted between browser restarts).
+     * Maximum age of cookies that are generated for sessions (persistent cookies).
+     * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+     * on client restarts.
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -6537,7 +7047,9 @@ public final class BackendGroupOuterClass {
     }
     /**
      * <pre>
-     * If not set, session cookie will be used (not persisted between browser restarts).
+     * Maximum age of cookies that are generated for sessions (persistent cookies).
+     * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+     * on client restarts.
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -6718,6 +7230,10 @@ public final class BackendGroupOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A resource for cookie-based session affinity configuration.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.CookieSessionAffinity}
      */
     public static final class Builder extends
@@ -6881,6 +7397,10 @@ public final class BackendGroupOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the cookie that is used for session affinity.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.length) = "1-256"];</code>
        */
       public java.lang.String getName() {
@@ -6896,6 +7416,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the cookie that is used for session affinity.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.length) = "1-256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -6912,6 +7436,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the cookie that is used for session affinity.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.length) = "1-256"];</code>
        */
       public Builder setName(
@@ -6925,6 +7453,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the cookie that is used for session affinity.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.length) = "1-256"];</code>
        */
       public Builder clearName() {
@@ -6934,6 +7466,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the cookie that is used for session affinity.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.length) = "1-256"];</code>
        */
       public Builder setNameBytes(
@@ -6953,7 +7489,9 @@ public final class BackendGroupOuterClass {
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> ttlBuilder_;
       /**
        * <pre>
-       * If not set, session cookie will be used (not persisted between browser restarts).
+       * Maximum age of cookies that are generated for sessions (persistent cookies).
+       * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+       * on client restarts.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -6963,7 +7501,9 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * If not set, session cookie will be used (not persisted between browser restarts).
+       * Maximum age of cookies that are generated for sessions (persistent cookies).
+       * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+       * on client restarts.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -6977,7 +7517,9 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * If not set, session cookie will be used (not persisted between browser restarts).
+       * Maximum age of cookies that are generated for sessions (persistent cookies).
+       * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+       * on client restarts.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -6997,7 +7539,9 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * If not set, session cookie will be used (not persisted between browser restarts).
+       * Maximum age of cookies that are generated for sessions (persistent cookies).
+       * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+       * on client restarts.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -7015,7 +7559,9 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * If not set, session cookie will be used (not persisted between browser restarts).
+       * Maximum age of cookies that are generated for sessions (persistent cookies).
+       * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+       * on client restarts.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -7037,7 +7583,9 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * If not set, session cookie will be used (not persisted between browser restarts).
+       * Maximum age of cookies that are generated for sessions (persistent cookies).
+       * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+       * on client restarts.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -7055,7 +7603,9 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * If not set, session cookie will be used (not persisted between browser restarts).
+       * Maximum age of cookies that are generated for sessions (persistent cookies).
+       * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+       * on client restarts.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -7067,7 +7617,9 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * If not set, session cookie will be used (not persisted between browser restarts).
+       * Maximum age of cookies that are generated for sessions (persistent cookies).
+       * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+       * on client restarts.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -7082,7 +7634,9 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * If not set, session cookie will be used (not persisted between browser restarts).
+       * Maximum age of cookies that are generated for sessions (persistent cookies).
+       * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+       * on client restarts.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -7158,11 +7712,19 @@ public final class BackendGroupOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Specifies whether an IP address of the client is used to define a connection for session affinity.
+     * </pre>
+     *
      * <code>bool source_ip = 1;</code>
      */
     boolean getSourceIp();
   }
   /**
+   * <pre>
+   * A resource for connection-based session affinity configuration.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity}
    */
   public  static final class ConnectionSessionAffinity extends
@@ -7242,6 +7804,10 @@ public final class BackendGroupOuterClass {
     public static final int SOURCE_IP_FIELD_NUMBER = 1;
     private boolean sourceIp_;
     /**
+     * <pre>
+     * Specifies whether an IP address of the client is used to define a connection for session affinity.
+     * </pre>
+     *
      * <code>bool source_ip = 1;</code>
      */
     public boolean getSourceIp() {
@@ -7406,6 +7972,10 @@ public final class BackendGroupOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A resource for connection-based session affinity configuration.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity}
      */
     public static final class Builder extends
@@ -7554,12 +8124,20 @@ public final class BackendGroupOuterClass {
 
       private boolean sourceIp_ ;
       /**
+       * <pre>
+       * Specifies whether an IP address of the client is used to define a connection for session affinity.
+       * </pre>
+       *
        * <code>bool source_ip = 1;</code>
        */
       public boolean getSourceIp() {
         return sourceIp_;
       }
       /**
+       * <pre>
+       * Specifies whether an IP address of the client is used to define a connection for session affinity.
+       * </pre>
+       *
        * <code>bool source_ip = 1;</code>
        */
       public Builder setSourceIp(boolean value) {
@@ -7569,6 +8147,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specifies whether an IP address of the client is used to define a connection for session affinity.
+       * </pre>
+       *
        * <code>bool source_ip = 1;</code>
        */
       public Builder clearSourceIp() {
@@ -7680,7 +8262,9 @@ public final class BackendGroupOuterClass {
 
     /**
      * <pre>
-     * Specifies algorithm the load balancer uses for target selection in particular backend.
+     * Load balancing mode for the backend.
+     * For detals about load balancing modes, see
+     * [documentation](/docs/application-load-balancer/concepts/backend-group#balancing-mode).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
@@ -7688,7 +8272,9 @@ public final class BackendGroupOuterClass {
     int getModeValue();
     /**
      * <pre>
-     * Specifies algorithm the load balancer uses for target selection in particular backend.
+     * Load balancing mode for the backend.
+     * For detals about load balancing modes, see
+     * [documentation](/docs/application-load-balancer/concepts/backend-group#balancing-mode).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
@@ -7855,7 +8441,9 @@ public final class BackendGroupOuterClass {
     private int mode_;
     /**
      * <pre>
-     * Specifies algorithm the load balancer uses for target selection in particular backend.
+     * Load balancing mode for the backend.
+     * For detals about load balancing modes, see
+     * [documentation](/docs/application-load-balancer/concepts/backend-group#balancing-mode).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
@@ -7865,7 +8453,9 @@ public final class BackendGroupOuterClass {
     }
     /**
      * <pre>
-     * Specifies algorithm the load balancer uses for target selection in particular backend.
+     * Load balancing mode for the backend.
+     * For detals about load balancing modes, see
+     * [documentation](/docs/application-load-balancer/concepts/backend-group#balancing-mode).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
@@ -8404,7 +8994,9 @@ public final class BackendGroupOuterClass {
       private int mode_ = 0;
       /**
        * <pre>
-       * Specifies algorithm the load balancer uses for target selection in particular backend.
+       * Load balancing mode for the backend.
+       * For detals about load balancing modes, see
+       * [documentation](/docs/application-load-balancer/concepts/backend-group#balancing-mode).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
@@ -8414,7 +9006,9 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Specifies algorithm the load balancer uses for target selection in particular backend.
+       * Load balancing mode for the backend.
+       * For detals about load balancing modes, see
+       * [documentation](/docs/application-load-balancer/concepts/backend-group#balancing-mode).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
@@ -8426,7 +9020,9 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Specifies algorithm the load balancer uses for target selection in particular backend.
+       * Load balancing mode for the backend.
+       * For detals about load balancing modes, see
+       * [documentation](/docs/application-load-balancer/concepts/backend-group#balancing-mode).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
@@ -8438,7 +9034,9 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Specifies algorithm the load balancer uses for target selection in particular backend.
+       * Load balancing mode for the backend.
+       * For detals about load balancing modes, see
+       * [documentation](/docs/application-load-balancer/concepts/backend-group#balancing-mode).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
@@ -8454,7 +9052,9 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Specifies algorithm the load balancer uses for target selection in particular backend.
+       * Load balancing mode for the backend.
+       * For detals about load balancing modes, see
+       * [documentation](/docs/application-load-balancer/concepts/backend-group#balancing-mode).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>

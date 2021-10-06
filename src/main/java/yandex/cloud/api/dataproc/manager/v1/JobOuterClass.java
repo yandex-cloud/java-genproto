@@ -236,6 +236,31 @@ public final class JobOuterClass {
      */
     yandex.cloud.api.dataproc.manager.v1.JobOuterClass.HiveJobOrBuilder getHiveJobOrBuilder();
 
+    /**
+     * <pre>
+     * Attributes of YARN application.
+     * </pre>
+     *
+     * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 13;</code>
+     */
+    boolean hasApplicationInfo();
+    /**
+     * <pre>
+     * Attributes of YARN application.
+     * </pre>
+     *
+     * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 13;</code>
+     */
+    yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo getApplicationInfo();
+    /**
+     * <pre>
+     * Attributes of YARN application.
+     * </pre>
+     *
+     * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 13;</code>
+     */
+    yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfoOrBuilder getApplicationInfoOrBuilder();
+
     public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job.JobSpecCase getJobSpecCase();
   }
   /**
@@ -409,6 +434,19 @@ public final class JobOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               createdBy_ = s;
+              break;
+            }
+            case 106: {
+              yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo.Builder subBuilder = null;
+              if (applicationInfo_ != null) {
+                subBuilder = applicationInfo_.toBuilder();
+              }
+              applicationInfo_ = input.readMessage(yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(applicationInfo_);
+                applicationInfo_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1057,6 +1095,39 @@ public final class JobOuterClass {
       return yandex.cloud.api.dataproc.manager.v1.JobOuterClass.HiveJob.getDefaultInstance();
     }
 
+    public static final int APPLICATION_INFO_FIELD_NUMBER = 13;
+    private yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo applicationInfo_;
+    /**
+     * <pre>
+     * Attributes of YARN application.
+     * </pre>
+     *
+     * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 13;</code>
+     */
+    public boolean hasApplicationInfo() {
+      return applicationInfo_ != null;
+    }
+    /**
+     * <pre>
+     * Attributes of YARN application.
+     * </pre>
+     *
+     * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 13;</code>
+     */
+    public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo getApplicationInfo() {
+      return applicationInfo_ == null ? yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo.getDefaultInstance() : applicationInfo_;
+    }
+    /**
+     * <pre>
+     * Attributes of YARN application.
+     * </pre>
+     *
+     * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 13;</code>
+     */
+    public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfoOrBuilder getApplicationInfoOrBuilder() {
+      return getApplicationInfo();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1106,6 +1177,9 @@ public final class JobOuterClass {
       }
       if (!getCreatedByBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, createdBy_);
+      }
+      if (applicationInfo_ != null) {
+        output.writeMessage(13, getApplicationInfo());
       }
       unknownFields.writeTo(output);
     }
@@ -1160,6 +1234,10 @@ public final class JobOuterClass {
       if (!getCreatedByBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, createdBy_);
       }
+      if (applicationInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getApplicationInfo());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1200,6 +1278,11 @@ public final class JobOuterClass {
       result = result && getCreatedBy()
           .equals(other.getCreatedBy());
       result = result && status_ == other.status_;
+      result = result && (hasApplicationInfo() == other.hasApplicationInfo());
+      if (hasApplicationInfo()) {
+        result = result && getApplicationInfo()
+            .equals(other.getApplicationInfo());
+      }
       result = result && getJobSpecCase().equals(
           other.getJobSpecCase());
       if (!result) return false;
@@ -1256,6 +1339,10 @@ public final class JobOuterClass {
       hash = (53 * hash) + getCreatedBy().hashCode();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      if (hasApplicationInfo()) {
+        hash = (37 * hash) + APPLICATION_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getApplicationInfo().hashCode();
+      }
       switch (jobSpecCase_) {
         case 8:
           hash = (37 * hash) + MAPREDUCE_JOB_FIELD_NUMBER;
@@ -1441,6 +1528,12 @@ public final class JobOuterClass {
 
         status_ = 0;
 
+        if (applicationInfoBuilder_ == null) {
+          applicationInfo_ = null;
+        } else {
+          applicationInfo_ = null;
+          applicationInfoBuilder_ = null;
+        }
         jobSpecCase_ = 0;
         jobSpec_ = null;
         return this;
@@ -1516,6 +1609,11 @@ public final class JobOuterClass {
           } else {
             result.jobSpec_ = hiveJobBuilder_.build();
           }
+        }
+        if (applicationInfoBuilder_ == null) {
+          result.applicationInfo_ = applicationInfo_;
+        } else {
+          result.applicationInfo_ = applicationInfoBuilder_.build();
         }
         result.jobSpecCase_ = jobSpecCase_;
         onBuilt();
@@ -1593,6 +1691,9 @@ public final class JobOuterClass {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (other.hasApplicationInfo()) {
+          mergeApplicationInfo(other.getApplicationInfo());
         }
         switch (other.getJobSpecCase()) {
           case MAPREDUCE_JOB: {
@@ -3087,6 +3188,159 @@ public final class JobOuterClass {
         onChanged();;
         return hiveJobBuilder_;
       }
+
+      private yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo applicationInfo_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo.Builder, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfoOrBuilder> applicationInfoBuilder_;
+      /**
+       * <pre>
+       * Attributes of YARN application.
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 13;</code>
+       */
+      public boolean hasApplicationInfo() {
+        return applicationInfoBuilder_ != null || applicationInfo_ != null;
+      }
+      /**
+       * <pre>
+       * Attributes of YARN application.
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 13;</code>
+       */
+      public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo getApplicationInfo() {
+        if (applicationInfoBuilder_ == null) {
+          return applicationInfo_ == null ? yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo.getDefaultInstance() : applicationInfo_;
+        } else {
+          return applicationInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Attributes of YARN application.
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 13;</code>
+       */
+      public Builder setApplicationInfo(yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo value) {
+        if (applicationInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          applicationInfo_ = value;
+          onChanged();
+        } else {
+          applicationInfoBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Attributes of YARN application.
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 13;</code>
+       */
+      public Builder setApplicationInfo(
+          yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo.Builder builderForValue) {
+        if (applicationInfoBuilder_ == null) {
+          applicationInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          applicationInfoBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Attributes of YARN application.
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 13;</code>
+       */
+      public Builder mergeApplicationInfo(yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo value) {
+        if (applicationInfoBuilder_ == null) {
+          if (applicationInfo_ != null) {
+            applicationInfo_ =
+              yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo.newBuilder(applicationInfo_).mergeFrom(value).buildPartial();
+          } else {
+            applicationInfo_ = value;
+          }
+          onChanged();
+        } else {
+          applicationInfoBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Attributes of YARN application.
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 13;</code>
+       */
+      public Builder clearApplicationInfo() {
+        if (applicationInfoBuilder_ == null) {
+          applicationInfo_ = null;
+          onChanged();
+        } else {
+          applicationInfo_ = null;
+          applicationInfoBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Attributes of YARN application.
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 13;</code>
+       */
+      public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo.Builder getApplicationInfoBuilder() {
+        
+        onChanged();
+        return getApplicationInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Attributes of YARN application.
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 13;</code>
+       */
+      public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfoOrBuilder getApplicationInfoOrBuilder() {
+        if (applicationInfoBuilder_ != null) {
+          return applicationInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return applicationInfo_ == null ?
+              yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo.getDefaultInstance() : applicationInfo_;
+        }
+      }
+      /**
+       * <pre>
+       * Attributes of YARN application.
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.manager.v1.ApplicationInfo application_info = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo.Builder, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfoOrBuilder> 
+          getApplicationInfoFieldBuilder() {
+        if (applicationInfoBuilder_ == null) {
+          applicationInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo.Builder, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfoOrBuilder>(
+                  getApplicationInfo(),
+                  getParentForChildren(),
+                  isClean());
+          applicationInfo_ = null;
+        }
+        return applicationInfoBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3135,6 +3389,1835 @@ public final class JobOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ApplicationAttemptOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.dataproc.manager.v1.ApplicationAttempt)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of YARN application attempt
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * ID of YARN application attempt
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * ID of YARN Application Master container
+     * </pre>
+     *
+     * <code>string am_container_id = 2;</code>
+     */
+    java.lang.String getAmContainerId();
+    /**
+     * <pre>
+     * ID of YARN Application Master container
+     * </pre>
+     *
+     * <code>string am_container_id = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getAmContainerIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.dataproc.manager.v1.ApplicationAttempt}
+   */
+  public  static final class ApplicationAttempt extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.ApplicationAttempt)
+      ApplicationAttemptOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ApplicationAttempt.newBuilder() to construct.
+    private ApplicationAttempt(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ApplicationAttempt() {
+      id_ = "";
+      amContainerId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ApplicationAttempt(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              amContainerId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.dataproc.manager.v1.JobOuterClass.internal_static_yandex_cloud_dataproc_manager_v1_ApplicationAttempt_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.dataproc.manager.v1.JobOuterClass.internal_static_yandex_cloud_dataproc_manager_v1_ApplicationAttempt_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt.class, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * ID of YARN application attempt
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of YARN application attempt
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AM_CONTAINER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object amContainerId_;
+    /**
+     * <pre>
+     * ID of YARN Application Master container
+     * </pre>
+     *
+     * <code>string am_container_id = 2;</code>
+     */
+    public java.lang.String getAmContainerId() {
+      java.lang.Object ref = amContainerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amContainerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of YARN Application Master container
+     * </pre>
+     *
+     * <code>string am_container_id = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAmContainerIdBytes() {
+      java.lang.Object ref = amContainerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amContainerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!getAmContainerIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, amContainerId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!getAmContainerIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, amContainerId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt other = (yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt) obj;
+
+      boolean result = true;
+      result = result && getId()
+          .equals(other.getId());
+      result = result && getAmContainerId()
+          .equals(other.getAmContainerId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + AM_CONTAINER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAmContainerId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.dataproc.manager.v1.ApplicationAttempt}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.dataproc.manager.v1.ApplicationAttempt)
+        yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttemptOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.dataproc.manager.v1.JobOuterClass.internal_static_yandex_cloud_dataproc_manager_v1_ApplicationAttempt_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.dataproc.manager.v1.JobOuterClass.internal_static_yandex_cloud_dataproc_manager_v1_ApplicationAttempt_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt.class, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        amContainerId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.dataproc.manager.v1.JobOuterClass.internal_static_yandex_cloud_dataproc_manager_v1_ApplicationAttempt_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt getDefaultInstanceForType() {
+        return yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt build() {
+        yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt buildPartial() {
+        yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt result = new yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt(this);
+        result.id_ = id_;
+        result.amContainerId_ = amContainerId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt) {
+          return mergeFrom((yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt other) {
+        if (other == yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getAmContainerId().isEmpty()) {
+          amContainerId_ = other.amContainerId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * ID of YARN application attempt
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of YARN application attempt
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of YARN application attempt
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of YARN application attempt
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of YARN application attempt
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amContainerId_ = "";
+      /**
+       * <pre>
+       * ID of YARN Application Master container
+       * </pre>
+       *
+       * <code>string am_container_id = 2;</code>
+       */
+      public java.lang.String getAmContainerId() {
+        java.lang.Object ref = amContainerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amContainerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of YARN Application Master container
+       * </pre>
+       *
+       * <code>string am_container_id = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAmContainerIdBytes() {
+        java.lang.Object ref = amContainerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amContainerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of YARN Application Master container
+       * </pre>
+       *
+       * <code>string am_container_id = 2;</code>
+       */
+      public Builder setAmContainerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        amContainerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of YARN Application Master container
+       * </pre>
+       *
+       * <code>string am_container_id = 2;</code>
+       */
+      public Builder clearAmContainerId() {
+        
+        amContainerId_ = getDefaultInstance().getAmContainerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of YARN Application Master container
+       * </pre>
+       *
+       * <code>string am_container_id = 2;</code>
+       */
+      public Builder setAmContainerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        amContainerId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.dataproc.manager.v1.ApplicationAttempt)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.dataproc.manager.v1.ApplicationAttempt)
+    private static final yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt();
+    }
+
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ApplicationAttempt>
+        PARSER = new com.google.protobuf.AbstractParser<ApplicationAttempt>() {
+      @java.lang.Override
+      public ApplicationAttempt parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ApplicationAttempt(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ApplicationAttempt> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ApplicationAttempt> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ApplicationInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.dataproc.manager.v1.ApplicationInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of YARN application
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * ID of YARN application
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * YARN application attempts
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt> 
+        getApplicationAttemptsList();
+    /**
+     * <pre>
+     * YARN application attempts
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+     */
+    yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt getApplicationAttempts(int index);
+    /**
+     * <pre>
+     * YARN application attempts
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+     */
+    int getApplicationAttemptsCount();
+    /**
+     * <pre>
+     * YARN application attempts
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttemptOrBuilder> 
+        getApplicationAttemptsOrBuilderList();
+    /**
+     * <pre>
+     * YARN application attempts
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+     */
+    yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttemptOrBuilder getApplicationAttemptsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.dataproc.manager.v1.ApplicationInfo}
+   */
+  public  static final class ApplicationInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.ApplicationInfo)
+      ApplicationInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ApplicationInfo.newBuilder() to construct.
+    private ApplicationInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ApplicationInfo() {
+      id_ = "";
+      applicationAttempts_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ApplicationInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                applicationAttempts_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              applicationAttempts_.add(
+                  input.readMessage(yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          applicationAttempts_ = java.util.Collections.unmodifiableList(applicationAttempts_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.dataproc.manager.v1.JobOuterClass.internal_static_yandex_cloud_dataproc_manager_v1_ApplicationInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.dataproc.manager.v1.JobOuterClass.internal_static_yandex_cloud_dataproc_manager_v1_ApplicationInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo.class, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * ID of YARN application
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of YARN application
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APPLICATION_ATTEMPTS_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt> applicationAttempts_;
+    /**
+     * <pre>
+     * YARN application attempts
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+     */
+    public java.util.List<yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt> getApplicationAttemptsList() {
+      return applicationAttempts_;
+    }
+    /**
+     * <pre>
+     * YARN application attempts
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttemptOrBuilder> 
+        getApplicationAttemptsOrBuilderList() {
+      return applicationAttempts_;
+    }
+    /**
+     * <pre>
+     * YARN application attempts
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+     */
+    public int getApplicationAttemptsCount() {
+      return applicationAttempts_.size();
+    }
+    /**
+     * <pre>
+     * YARN application attempts
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+     */
+    public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt getApplicationAttempts(int index) {
+      return applicationAttempts_.get(index);
+    }
+    /**
+     * <pre>
+     * YARN application attempts
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+     */
+    public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttemptOrBuilder getApplicationAttemptsOrBuilder(
+        int index) {
+      return applicationAttempts_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      for (int i = 0; i < applicationAttempts_.size(); i++) {
+        output.writeMessage(2, applicationAttempts_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      for (int i = 0; i < applicationAttempts_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, applicationAttempts_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo other = (yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo) obj;
+
+      boolean result = true;
+      result = result && getId()
+          .equals(other.getId());
+      result = result && getApplicationAttemptsList()
+          .equals(other.getApplicationAttemptsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      if (getApplicationAttemptsCount() > 0) {
+        hash = (37 * hash) + APPLICATION_ATTEMPTS_FIELD_NUMBER;
+        hash = (53 * hash) + getApplicationAttemptsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.dataproc.manager.v1.ApplicationInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.dataproc.manager.v1.ApplicationInfo)
+        yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.dataproc.manager.v1.JobOuterClass.internal_static_yandex_cloud_dataproc_manager_v1_ApplicationInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.dataproc.manager.v1.JobOuterClass.internal_static_yandex_cloud_dataproc_manager_v1_ApplicationInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo.class, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getApplicationAttemptsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        if (applicationAttemptsBuilder_ == null) {
+          applicationAttempts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          applicationAttemptsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.dataproc.manager.v1.JobOuterClass.internal_static_yandex_cloud_dataproc_manager_v1_ApplicationInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo getDefaultInstanceForType() {
+        return yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo build() {
+        yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo buildPartial() {
+        yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo result = new yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.id_ = id_;
+        if (applicationAttemptsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            applicationAttempts_ = java.util.Collections.unmodifiableList(applicationAttempts_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.applicationAttempts_ = applicationAttempts_;
+        } else {
+          result.applicationAttempts_ = applicationAttemptsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo) {
+          return mergeFrom((yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo other) {
+        if (other == yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (applicationAttemptsBuilder_ == null) {
+          if (!other.applicationAttempts_.isEmpty()) {
+            if (applicationAttempts_.isEmpty()) {
+              applicationAttempts_ = other.applicationAttempts_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureApplicationAttemptsIsMutable();
+              applicationAttempts_.addAll(other.applicationAttempts_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.applicationAttempts_.isEmpty()) {
+            if (applicationAttemptsBuilder_.isEmpty()) {
+              applicationAttemptsBuilder_.dispose();
+              applicationAttemptsBuilder_ = null;
+              applicationAttempts_ = other.applicationAttempts_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              applicationAttemptsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getApplicationAttemptsFieldBuilder() : null;
+            } else {
+              applicationAttemptsBuilder_.addAllMessages(other.applicationAttempts_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * ID of YARN application
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of YARN application
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of YARN application
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of YARN application
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of YARN application
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt> applicationAttempts_ =
+        java.util.Collections.emptyList();
+      private void ensureApplicationAttemptsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          applicationAttempts_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt>(applicationAttempts_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt.Builder, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttemptOrBuilder> applicationAttemptsBuilder_;
+
+      /**
+       * <pre>
+       * YARN application attempts
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt> getApplicationAttemptsList() {
+        if (applicationAttemptsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(applicationAttempts_);
+        } else {
+          return applicationAttemptsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * YARN application attempts
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+       */
+      public int getApplicationAttemptsCount() {
+        if (applicationAttemptsBuilder_ == null) {
+          return applicationAttempts_.size();
+        } else {
+          return applicationAttemptsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * YARN application attempts
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+       */
+      public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt getApplicationAttempts(int index) {
+        if (applicationAttemptsBuilder_ == null) {
+          return applicationAttempts_.get(index);
+        } else {
+          return applicationAttemptsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * YARN application attempts
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+       */
+      public Builder setApplicationAttempts(
+          int index, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt value) {
+        if (applicationAttemptsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureApplicationAttemptsIsMutable();
+          applicationAttempts_.set(index, value);
+          onChanged();
+        } else {
+          applicationAttemptsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * YARN application attempts
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+       */
+      public Builder setApplicationAttempts(
+          int index, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt.Builder builderForValue) {
+        if (applicationAttemptsBuilder_ == null) {
+          ensureApplicationAttemptsIsMutable();
+          applicationAttempts_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          applicationAttemptsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * YARN application attempts
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+       */
+      public Builder addApplicationAttempts(yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt value) {
+        if (applicationAttemptsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureApplicationAttemptsIsMutable();
+          applicationAttempts_.add(value);
+          onChanged();
+        } else {
+          applicationAttemptsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * YARN application attempts
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+       */
+      public Builder addApplicationAttempts(
+          int index, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt value) {
+        if (applicationAttemptsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureApplicationAttemptsIsMutable();
+          applicationAttempts_.add(index, value);
+          onChanged();
+        } else {
+          applicationAttemptsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * YARN application attempts
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+       */
+      public Builder addApplicationAttempts(
+          yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt.Builder builderForValue) {
+        if (applicationAttemptsBuilder_ == null) {
+          ensureApplicationAttemptsIsMutable();
+          applicationAttempts_.add(builderForValue.build());
+          onChanged();
+        } else {
+          applicationAttemptsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * YARN application attempts
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+       */
+      public Builder addApplicationAttempts(
+          int index, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt.Builder builderForValue) {
+        if (applicationAttemptsBuilder_ == null) {
+          ensureApplicationAttemptsIsMutable();
+          applicationAttempts_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          applicationAttemptsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * YARN application attempts
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+       */
+      public Builder addAllApplicationAttempts(
+          java.lang.Iterable<? extends yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt> values) {
+        if (applicationAttemptsBuilder_ == null) {
+          ensureApplicationAttemptsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, applicationAttempts_);
+          onChanged();
+        } else {
+          applicationAttemptsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * YARN application attempts
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+       */
+      public Builder clearApplicationAttempts() {
+        if (applicationAttemptsBuilder_ == null) {
+          applicationAttempts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          applicationAttemptsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * YARN application attempts
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+       */
+      public Builder removeApplicationAttempts(int index) {
+        if (applicationAttemptsBuilder_ == null) {
+          ensureApplicationAttemptsIsMutable();
+          applicationAttempts_.remove(index);
+          onChanged();
+        } else {
+          applicationAttemptsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * YARN application attempts
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+       */
+      public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt.Builder getApplicationAttemptsBuilder(
+          int index) {
+        return getApplicationAttemptsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * YARN application attempts
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+       */
+      public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttemptOrBuilder getApplicationAttemptsOrBuilder(
+          int index) {
+        if (applicationAttemptsBuilder_ == null) {
+          return applicationAttempts_.get(index);  } else {
+          return applicationAttemptsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * YARN application attempts
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttemptOrBuilder> 
+           getApplicationAttemptsOrBuilderList() {
+        if (applicationAttemptsBuilder_ != null) {
+          return applicationAttemptsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(applicationAttempts_);
+        }
+      }
+      /**
+       * <pre>
+       * YARN application attempts
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+       */
+      public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt.Builder addApplicationAttemptsBuilder() {
+        return getApplicationAttemptsFieldBuilder().addBuilder(
+            yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * YARN application attempts
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+       */
+      public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt.Builder addApplicationAttemptsBuilder(
+          int index) {
+        return getApplicationAttemptsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * YARN application attempts
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.ApplicationAttempt application_attempts = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt.Builder> 
+           getApplicationAttemptsBuilderList() {
+        return getApplicationAttemptsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt.Builder, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttemptOrBuilder> 
+          getApplicationAttemptsFieldBuilder() {
+        if (applicationAttemptsBuilder_ == null) {
+          applicationAttemptsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttempt.Builder, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationAttemptOrBuilder>(
+                  applicationAttempts_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          applicationAttempts_ = null;
+        }
+        return applicationAttemptsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.dataproc.manager.v1.ApplicationInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.dataproc.manager.v1.ApplicationInfo)
+    private static final yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo();
+    }
+
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ApplicationInfo>
+        PARSER = new com.google.protobuf.AbstractParser<ApplicationInfo>() {
+      @java.lang.Override
+      public ApplicationInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ApplicationInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ApplicationInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ApplicationInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.ApplicationInfo getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12407,6 +14490,16 @@ public final class JobOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_dataproc_manager_v1_Job_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_dataproc_manager_v1_ApplicationAttempt_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_dataproc_manager_v1_ApplicationAttempt_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_dataproc_manager_v1_ApplicationInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_dataproc_manager_v1_ApplicationInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_dataproc_manager_v1_MapreduceJob_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -12467,7 +14560,7 @@ public final class JobOuterClass {
     java.lang.String[] descriptorData = {
       "\n*yandex/cloud/dataproc/manager/v1/job.p" +
       "roto\022 yandex.cloud.dataproc.manager.v1\032\037" +
-      "google/protobuf/timestamp.proto\"\223\005\n\003Job\022" +
+      "google/protobuf/timestamp.proto\"\340\005\n\003Job\022" +
       "\n\n\002id\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022.\n\ncreat" +
       "ed_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022" +
       ".\n\nstarted_at\030\004 \001(\0132\032.google.protobuf.Ti" +
@@ -12481,46 +14574,52 @@ public final class JobOuterClass {
       "SparkJobH\000\022C\n\013pyspark_job\030\n \001(\0132,.yandex" +
       ".cloud.dataproc.manager.v1.PysparkJobH\000\022" +
       "=\n\010hive_job\030\013 \001(\0132).yandex.cloud.datapro" +
-      "c.manager.v1.HiveJobH\000\"a\n\006Status\022\026\n\022STAT" +
-      "US_UNSPECIFIED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007PE" +
-      "NDING\020\002\022\013\n\007RUNNING\020\003\022\t\n\005ERROR\020\004\022\010\n\004DONE\020" +
-      "\005B\n\n\010job_spec\"\240\002\n\014MapreduceJob\022\014\n\004args\030\001" +
-      " \003(\t\022\025\n\rjar_file_uris\030\002 \003(\t\022\021\n\tfile_uris" +
-      "\030\003 \003(\t\022\024\n\014archive_uris\030\004 \003(\t\022R\n\nproperti" +
-      "es\030\005 \003(\0132>.yandex.cloud.dataproc.manager" +
-      ".v1.MapreduceJob.PropertiesEntry\022\033\n\021main" +
-      "_jar_file_uri\030\006 \001(\tH\000\022\024\n\nmain_class\030\007 \001(" +
-      "\tH\000\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001B\010\n\006driver\"\212\002\n\010SparkJob\022\014\n" +
-      "\004args\030\001 \003(\t\022\025\n\rjar_file_uris\030\002 \003(\t\022\021\n\tfi" +
-      "le_uris\030\003 \003(\t\022\024\n\014archive_uris\030\004 \003(\t\022N\n\np" +
-      "roperties\030\005 \003(\0132:.yandex.cloud.dataproc." +
-      "manager.v1.SparkJob.PropertiesEntry\022\031\n\021m" +
-      "ain_jar_file_uri\030\006 \001(\t\022\022\n\nmain_class\030\007 \001" +
-      "(\t\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001\"\227\002\n\nPysparkJob\022\014\n\004args\030\001 \003" +
-      "(\t\022\025\n\rjar_file_uris\030\002 \003(\t\022\021\n\tfile_uris\030\003" +
-      " \003(\t\022\024\n\014archive_uris\030\004 \003(\t\022P\n\nproperties" +
-      "\030\005 \003(\0132<.yandex.cloud.dataproc.manager.v" +
-      "1.PysparkJob.PropertiesEntry\022\034\n\024main_pyt" +
-      "hon_file_uri\030\006 \001(\t\022\030\n\020python_file_uris\030\007" +
-      " \003(\t\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\"\034\n\tQueryList\022\017\n\007queries\030" +
-      "\001 \003(\t\"\274\003\n\007HiveJob\022M\n\nproperties\030\001 \003(\01329." +
-      "yandex.cloud.dataproc.manager.v1.HiveJob" +
-      ".PropertiesEntry\022\033\n\023continue_on_failure\030" +
-      "\002 \001(\010\022X\n\020script_variables\030\003 \003(\0132>.yandex" +
-      ".cloud.dataproc.manager.v1.HiveJob.Scrip" +
-      "tVariablesEntry\022\025\n\rjar_file_uris\030\004 \003(\t\022\030" +
-      "\n\016query_file_uri\030\005 \001(\tH\000\022A\n\nquery_list\030\006" +
-      " \001(\0132+.yandex.cloud.dataproc.manager.v1." +
-      "QueryListH\000\0321\n\017PropertiesEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0326\n\024ScriptVariable" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014" +
-      "\n\nquery_typeB}\n$yandex.cloud.api.datapro" +
-      "c.manager.v1ZUgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/dataproc/manager/" +
-      "v1;dataproc_managerb\006proto3"
+      "c.manager.v1.HiveJobH\000\022K\n\020application_in" +
+      "fo\030\r \001(\01321.yandex.cloud.dataproc.manager" +
+      ".v1.ApplicationInfo\"a\n\006Status\022\026\n\022STATUS_" +
+      "UNSPECIFIED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007PENDI" +
+      "NG\020\002\022\013\n\007RUNNING\020\003\022\t\n\005ERROR\020\004\022\010\n\004DONE\020\005B\n" +
+      "\n\010job_spec\"9\n\022ApplicationAttempt\022\n\n\002id\030\001" +
+      " \001(\t\022\027\n\017am_container_id\030\002 \001(\t\"q\n\017Applica" +
+      "tionInfo\022\n\n\002id\030\001 \001(\t\022R\n\024application_atte" +
+      "mpts\030\002 \003(\01324.yandex.cloud.dataproc.manag" +
+      "er.v1.ApplicationAttempt\"\240\002\n\014MapreduceJo" +
+      "b\022\014\n\004args\030\001 \003(\t\022\025\n\rjar_file_uris\030\002 \003(\t\022\021" +
+      "\n\tfile_uris\030\003 \003(\t\022\024\n\014archive_uris\030\004 \003(\t\022" +
+      "R\n\nproperties\030\005 \003(\0132>.yandex.cloud.datap" +
+      "roc.manager.v1.MapreduceJob.PropertiesEn" +
+      "try\022\033\n\021main_jar_file_uri\030\006 \001(\tH\000\022\024\n\nmain" +
+      "_class\030\007 \001(\tH\000\0321\n\017PropertiesEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\010\n\006driver\"\212\002\n\010" +
+      "SparkJob\022\014\n\004args\030\001 \003(\t\022\025\n\rjar_file_uris\030" +
+      "\002 \003(\t\022\021\n\tfile_uris\030\003 \003(\t\022\024\n\014archive_uris" +
+      "\030\004 \003(\t\022N\n\nproperties\030\005 \003(\0132:.yandex.clou" +
+      "d.dataproc.manager.v1.SparkJob.Propertie" +
+      "sEntry\022\031\n\021main_jar_file_uri\030\006 \001(\t\022\022\n\nmai" +
+      "n_class\030\007 \001(\t\0321\n\017PropertiesEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\227\002\n\nPysparkJob\022" +
+      "\014\n\004args\030\001 \003(\t\022\025\n\rjar_file_uris\030\002 \003(\t\022\021\n\t" +
+      "file_uris\030\003 \003(\t\022\024\n\014archive_uris\030\004 \003(\t\022P\n" +
+      "\nproperties\030\005 \003(\0132<.yandex.cloud.datapro" +
+      "c.manager.v1.PysparkJob.PropertiesEntry\022" +
+      "\034\n\024main_python_file_uri\030\006 \001(\t\022\030\n\020python_" +
+      "file_uris\030\007 \003(\t\0321\n\017PropertiesEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\034\n\tQueryList\022" +
+      "\017\n\007queries\030\001 \003(\t\"\274\003\n\007HiveJob\022M\n\nproperti" +
+      "es\030\001 \003(\01329.yandex.cloud.dataproc.manager" +
+      ".v1.HiveJob.PropertiesEntry\022\033\n\023continue_" +
+      "on_failure\030\002 \001(\010\022X\n\020script_variables\030\003 \003" +
+      "(\0132>.yandex.cloud.dataproc.manager.v1.Hi" +
+      "veJob.ScriptVariablesEntry\022\025\n\rjar_file_u" +
+      "ris\030\004 \003(\t\022\030\n\016query_file_uri\030\005 \001(\tH\000\022A\n\nq" +
+      "uery_list\030\006 \001(\0132+.yandex.cloud.dataproc." +
+      "manager.v1.QueryListH\000\0321\n\017PropertiesEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0326\n\024Scr" +
+      "iptVariablesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001B\014\n\nquery_typeB}\n$yandex.cloud." +
+      "api.dataproc.manager.v1ZUgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/datapr" +
+      "oc/manager/v1;dataproc_managerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12540,9 +14639,21 @@ public final class JobOuterClass {
     internal_static_yandex_cloud_dataproc_manager_v1_Job_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_Job_descriptor,
-        new java.lang.String[] { "Id", "ClusterId", "CreatedAt", "StartedAt", "FinishedAt", "Name", "CreatedBy", "Status", "MapreduceJob", "SparkJob", "PysparkJob", "HiveJob", "JobSpec", });
-    internal_static_yandex_cloud_dataproc_manager_v1_MapreduceJob_descriptor =
+        new java.lang.String[] { "Id", "ClusterId", "CreatedAt", "StartedAt", "FinishedAt", "Name", "CreatedBy", "Status", "MapreduceJob", "SparkJob", "PysparkJob", "HiveJob", "ApplicationInfo", "JobSpec", });
+    internal_static_yandex_cloud_dataproc_manager_v1_ApplicationAttempt_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_dataproc_manager_v1_ApplicationAttempt_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_dataproc_manager_v1_ApplicationAttempt_descriptor,
+        new java.lang.String[] { "Id", "AmContainerId", });
+    internal_static_yandex_cloud_dataproc_manager_v1_ApplicationInfo_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_dataproc_manager_v1_ApplicationInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_dataproc_manager_v1_ApplicationInfo_descriptor,
+        new java.lang.String[] { "Id", "ApplicationAttempts", });
+    internal_static_yandex_cloud_dataproc_manager_v1_MapreduceJob_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_dataproc_manager_v1_MapreduceJob_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_MapreduceJob_descriptor,
@@ -12554,7 +14665,7 @@ public final class JobOuterClass {
         internal_static_yandex_cloud_dataproc_manager_v1_MapreduceJob_PropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_dataproc_manager_v1_SparkJob_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_dataproc_manager_v1_SparkJob_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_SparkJob_descriptor,
@@ -12566,7 +14677,7 @@ public final class JobOuterClass {
         internal_static_yandex_cloud_dataproc_manager_v1_SparkJob_PropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_dataproc_manager_v1_PysparkJob_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_dataproc_manager_v1_PysparkJob_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_PysparkJob_descriptor,
@@ -12578,13 +14689,13 @@ public final class JobOuterClass {
         internal_static_yandex_cloud_dataproc_manager_v1_PysparkJob_PropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_dataproc_manager_v1_QueryList_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_dataproc_manager_v1_QueryList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_QueryList_descriptor,
         new java.lang.String[] { "Queries", });
     internal_static_yandex_cloud_dataproc_manager_v1_HiveJob_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_dataproc_manager_v1_HiveJob_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_HiveJob_descriptor,

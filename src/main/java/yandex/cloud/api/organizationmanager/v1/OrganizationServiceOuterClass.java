@@ -2743,6 +2743,60 @@ public final class OrganizationServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getTitleBytes();
+
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code yandex.cloud.organizationmanager.v1.UpdateOrganizationRequest}
@@ -2824,6 +2878,19 @@ public final class OrganizationServiceOuterClass {
               title_ = s;
               break;
             }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000020;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2848,6 +2915,18 @@ public final class OrganizationServiceOuterClass {
       return yandex.cloud.api.organizationmanager.v1.OrganizationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateOrganizationRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 6:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -2856,6 +2935,7 @@ public final class OrganizationServiceOuterClass {
               yandex.cloud.api.organizationmanager.v1.OrganizationServiceOuterClass.UpdateOrganizationRequest.class, yandex.cloud.api.organizationmanager.v1.OrganizationServiceOuterClass.UpdateOrganizationRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object organizationId_;
     /**
@@ -3059,6 +3139,98 @@ public final class OrganizationServiceOuterClass {
       }
     }
 
+    public static final int LABELS_FIELD_NUMBER = 6;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.organizationmanager.v1.OrganizationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateOrganizationRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3088,6 +3260,12 @@ public final class OrganizationServiceOuterClass {
       if (!getTitleBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, title_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          6);
       unknownFields.writeTo(output);
     }
 
@@ -3112,6 +3290,16 @@ public final class OrganizationServiceOuterClass {
       }
       if (!getTitleBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, title_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(6, labels__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3142,6 +3330,8 @@ public final class OrganizationServiceOuterClass {
           .equals(other.getDescription());
       result = result && getTitle()
           .equals(other.getTitle());
+      result = result && internalGetLabels().equals(
+          other.internalGetLabels());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3165,6 +3355,10 @@ public final class OrganizationServiceOuterClass {
       hash = (53 * hash) + getDescription().hashCode();
       hash = (37 * hash) + TITLE_FIELD_NUMBER;
       hash = (53 * hash) + getTitle().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3272,6 +3466,28 @@ public final class OrganizationServiceOuterClass {
         return yandex.cloud.api.organizationmanager.v1.OrganizationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_UpdateOrganizationRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 6:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 6:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -3312,6 +3528,7 @@ public final class OrganizationServiceOuterClass {
 
         title_ = "";
 
+        internalGetMutableLabels().clear();
         return this;
       }
 
@@ -3338,6 +3555,8 @@ public final class OrganizationServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.organizationmanager.v1.OrganizationServiceOuterClass.UpdateOrganizationRequest buildPartial() {
         yandex.cloud.api.organizationmanager.v1.OrganizationServiceOuterClass.UpdateOrganizationRequest result = new yandex.cloud.api.organizationmanager.v1.OrganizationServiceOuterClass.UpdateOrganizationRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.organizationId_ = organizationId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -3347,6 +3566,9 @@ public final class OrganizationServiceOuterClass {
         result.name_ = name_;
         result.description_ = description_;
         result.title_ = title_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -3414,6 +3636,8 @@ public final class OrganizationServiceOuterClass {
           title_ = other.title_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3442,6 +3666,7 @@ public final class OrganizationServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object organizationId_ = "";
       /**
@@ -3954,6 +4179,157 @@ public final class OrganizationServiceOuterClass {
         
         title_ = value;
         onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
         return this;
       }
       @java.lang.Override
@@ -5522,7 +5898,7 @@ public final class OrganizationServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListOrganizationOperationsResponse.page_size], use the [next_page_token] as the value
+     * is larger than [ListOrganizationOperationsRequest.page_size], use the [next_page_token] as the value
      * for the [ListOrganizationOperationsRequest.page_token] query parameter in the next list request.
      * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
      * </pre>
@@ -5533,7 +5909,7 @@ public final class OrganizationServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListOrganizationOperationsResponse.page_size], use the [next_page_token] as the value
+     * is larger than [ListOrganizationOperationsRequest.page_size], use the [next_page_token] as the value
      * for the [ListOrganizationOperationsRequest.page_token] query parameter in the next list request.
      * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
      * </pre>
@@ -5695,7 +6071,7 @@ public final class OrganizationServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListOrganizationOperationsResponse.page_size], use the [next_page_token] as the value
+     * is larger than [ListOrganizationOperationsRequest.page_size], use the [next_page_token] as the value
      * for the [ListOrganizationOperationsRequest.page_token] query parameter in the next list request.
      * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
      * </pre>
@@ -5717,7 +6093,7 @@ public final class OrganizationServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListOrganizationOperationsResponse.page_size], use the [next_page_token] as the value
+     * is larger than [ListOrganizationOperationsRequest.page_size], use the [next_page_token] as the value
      * for the [ListOrganizationOperationsRequest.page_token] query parameter in the next list request.
      * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
      * </pre>
@@ -6416,7 +6792,7 @@ public final class OrganizationServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListOrganizationOperationsResponse.page_size], use the [next_page_token] as the value
+       * is larger than [ListOrganizationOperationsRequest.page_size], use the [next_page_token] as the value
        * for the [ListOrganizationOperationsRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
@@ -6438,7 +6814,7 @@ public final class OrganizationServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListOrganizationOperationsResponse.page_size], use the [next_page_token] as the value
+       * is larger than [ListOrganizationOperationsRequest.page_size], use the [next_page_token] as the value
        * for the [ListOrganizationOperationsRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
@@ -6461,7 +6837,7 @@ public final class OrganizationServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListOrganizationOperationsResponse.page_size], use the [next_page_token] as the value
+       * is larger than [ListOrganizationOperationsRequest.page_size], use the [next_page_token] as the value
        * for the [ListOrganizationOperationsRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
@@ -6481,7 +6857,7 @@ public final class OrganizationServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListOrganizationOperationsResponse.page_size], use the [next_page_token] as the value
+       * is larger than [ListOrganizationOperationsRequest.page_size], use the [next_page_token] as the value
        * for the [ListOrganizationOperationsRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
@@ -6497,7 +6873,7 @@ public final class OrganizationServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListOrganizationOperationsResponse.page_size], use the [next_page_token] as the value
+       * is larger than [ListOrganizationOperationsRequest.page_size], use the [next_page_token] as the value
        * for the [ListOrganizationOperationsRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
@@ -6589,6 +6965,11 @@ public final class OrganizationServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_organizationmanager_v1_UpdateOrganizationRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_UpdateOrganizationRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_UpdateOrganizationRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_organizationmanager_v1_UpdateOrganizationMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -6628,64 +7009,69 @@ public final class OrganizationServiceOuterClass {
       "ilter\030\003 \001(\tB\n\212\3101\006<=1000\"~\n\031ListOrganizat" +
       "ionsResponse\022H\n\rorganizations\030\001 \003(\01321.ya" +
       "ndex.cloud.organizationmanager.v1.Organi" +
-      "zation\022\027\n\017next_page_token\030\002 \001(\t\"\341\001\n\031Upda" +
+      "zation\022\027\n\017next_page_token\030\002 \001(\t\"\256\003\n\031Upda" +
       "teOrganizationRequest\022%\n\017organization_id" +
       "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(" +
       "\0132\032.google.protobuf.FieldMask\0222\n\004name\030\003 " +
       "\001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])" +
       "?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\030\n\005tit" +
-      "le\030\005 \001(\tB\t\212\3101\005<=256\"5\n\032UpdateOrganizatio" +
-      "nMetadata\022\027\n\017organization_id\030\001 \001(\t\"\210\001\n!L" +
-      "istOrganizationOperationsRequest\022%\n\017orga" +
-      "nization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_" +
-      "size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001" +
-      "(\tB\t\212\3101\005<=100\"t\n\"ListOrganizationOperati" +
-      "onsResponse\0225\n\noperations\030\001 \003(\0132!.yandex" +
-      ".cloud.operation.Operation\022\027\n\017next_page_" +
-      "token\030\002 \001(\t2\240\014\n\023OrganizationService\022\267\001\n\003" +
-      "Get\022;.yandex.cloud.organizationmanager.v" +
-      "1.GetOrganizationRequest\0321.yandex.cloud." +
-      "organizationmanager.v1.Organization\"@\202\323\344" +
-      "\223\002:\0228/organization-manager/v1/organizati" +
-      "ons/{organization_id}\022\265\001\n\004List\022=.yandex." +
-      "cloud.organizationmanager.v1.ListOrganiz" +
-      "ationsRequest\032>.yandex.cloud.organizatio" +
-      "nmanager.v1.ListOrganizationsResponse\".\202" +
-      "\323\344\223\002(\022&/organization-manager/v1/organiza" +
-      "tions\022\336\001\n\006Update\022>.yandex.cloud.organiza" +
-      "tionmanager.v1.UpdateOrganizationRequest" +
-      "\032!.yandex.cloud.operation.Operation\"q\202\323\344" +
-      "\223\002=28/organization-manager/v1/organizati" +
-      "ons/{organization_id}:\001*\262\322**\n\032UpdateOrga" +
-      "nizationMetadata\022\014Organization\022\356\001\n\016ListO" +
-      "perations\022F.yandex.cloud.organizationman" +
-      "ager.v1.ListOrganizationOperationsReques" +
-      "t\032G.yandex.cloud.organizationmanager.v1." +
-      "ListOrganizationOperationsResponse\"K\202\323\344\223" +
-      "\002E\022C/organization-manager/v1/organizatio" +
-      "ns/{organization_id}/operations\022\306\001\n\022List" +
-      "AccessBindings\022..yandex.cloud.access.Lis" +
-      "tAccessBindingsRequest\032/.yandex.cloud.ac" +
-      "cess.ListAccessBindingsResponse\"O\202\323\344\223\002I\022" +
-      "G/organization-manager/v1/organizations/" +
-      "{resource_id}:listAccessBindings\022\366\001\n\021Set" +
-      "AccessBindings\022-.yandex.cloud.access.Set" +
-      "AccessBindingsRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"\216\001\202\323\344\223\002K\"F/organization" +
-      "-manager/v1/organizations/{resource_id}:" +
-      "setAccessBindings:\001*\262\322*9\n access.SetAcce" +
-      "ssBindingsMetadata\022\025google.protobuf.Empt" +
-      "y\022\202\002\n\024UpdateAccessBindings\0220.yandex.clou" +
-      "d.access.UpdateAccessBindingsRequest\032!.y" +
-      "andex.cloud.operation.Operation\"\224\001\202\323\344\223\002N" +
-      "\"I/organization-manager/v1/organizations" +
-      "/{resource_id}:updateAccessBindings:\001*\262\322" +
-      "*<\n#access.UpdateAccessBindingsMetadata\022" +
-      "\025google.protobuf.EmptyB\206\001\n\'yandex.cloud." +
-      "api.organizationmanager.v1Z[github.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/org" +
-      "anizationmanager/v1;organizationmanagerb" +
-      "\006proto3"
+      "le\030\005 \001(\tB\t\212\3101\005<=256\022\233\001\n\006labels\030\006 \003(\0132J.y" +
+      "andex.cloud.organizationmanager.v1.Updat" +
+      "eOrganizationRequest.LabelsEntryB?\202\3101\004<=" +
+      "64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022" +
+      "\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"5\n\032UpdateOrgani" +
+      "zationMetadata\022\027\n\017organization_id\030\001 \001(\t\"" +
+      "\210\001\n!ListOrganizationOperationsRequest\022%\n" +
+      "\017organization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\t" +
+      "page_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_toke" +
+      "n\030\003 \001(\tB\t\212\3101\005<=100\"t\n\"ListOrganizationOp" +
+      "erationsResponse\0225\n\noperations\030\001 \003(\0132!.y" +
+      "andex.cloud.operation.Operation\022\027\n\017next_" +
+      "page_token\030\002 \001(\t2\240\014\n\023OrganizationService" +
+      "\022\267\001\n\003Get\022;.yandex.cloud.organizationmana" +
+      "ger.v1.GetOrganizationRequest\0321.yandex.c" +
+      "loud.organizationmanager.v1.Organization" +
+      "\"@\202\323\344\223\002:\0228/organization-manager/v1/organ" +
+      "izations/{organization_id}\022\265\001\n\004List\022=.ya" +
+      "ndex.cloud.organizationmanager.v1.ListOr" +
+      "ganizationsRequest\032>.yandex.cloud.organi" +
+      "zationmanager.v1.ListOrganizationsRespon" +
+      "se\".\202\323\344\223\002(\022&/organization-manager/v1/org" +
+      "anizations\022\336\001\n\006Update\022>.yandex.cloud.org" +
+      "anizationmanager.v1.UpdateOrganizationRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"q\202\323\344\223\002=28/organization-manager/v1/organ" +
+      "izations/{organization_id}:\001*\262\322**\n\032Updat" +
+      "eOrganizationMetadata\022\014Organization\022\356\001\n\016" +
+      "ListOperations\022F.yandex.cloud.organizati" +
+      "onmanager.v1.ListOrganizationOperationsR" +
+      "equest\032G.yandex.cloud.organizationmanage" +
+      "r.v1.ListOrganizationOperationsResponse\"" +
+      "K\202\323\344\223\002E\022C/organization-manager/v1/organi" +
+      "zations/{organization_id}/operations\022\306\001\n" +
+      "\022ListAccessBindings\022..yandex.cloud.acces" +
+      "s.ListAccessBindingsRequest\032/.yandex.clo" +
+      "ud.access.ListAccessBindingsResponse\"O\202\323" +
+      "\344\223\002I\022G/organization-manager/v1/organizat" +
+      "ions/{resource_id}:listAccessBindings\022\366\001" +
+      "\n\021SetAccessBindings\022-.yandex.cloud.acces" +
+      "s.SetAccessBindingsRequest\032!.yandex.clou" +
+      "d.operation.Operation\"\216\001\202\323\344\223\002K\"F/organiz" +
+      "ation-manager/v1/organizations/{resource" +
+      "_id}:setAccessBindings:\001*\262\322*9\n access.Se" +
+      "tAccessBindingsMetadata\022\025google.protobuf" +
+      ".Empty\022\202\002\n\024UpdateAccessBindings\0220.yandex" +
+      ".cloud.access.UpdateAccessBindingsReques" +
+      "t\032!.yandex.cloud.operation.Operation\"\224\001\202" +
+      "\323\344\223\002N\"I/organization-manager/v1/organiza" +
+      "tions/{resource_id}:updateAccessBindings" +
+      ":\001*\262\322*<\n#access.UpdateAccessBindingsMeta" +
+      "data\022\025google.protobuf.EmptyB\206\001\n\'yandex.c" +
+      "loud.api.organizationmanager.v1Z[github." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/organizationmanager/v1;organizationman" +
+      "agerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6729,7 +7115,13 @@ public final class OrganizationServiceOuterClass {
     internal_static_yandex_cloud_organizationmanager_v1_UpdateOrganizationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_UpdateOrganizationRequest_descriptor,
-        new java.lang.String[] { "OrganizationId", "UpdateMask", "Name", "Description", "Title", });
+        new java.lang.String[] { "OrganizationId", "UpdateMask", "Name", "Description", "Title", "Labels", });
+    internal_static_yandex_cloud_organizationmanager_v1_UpdateOrganizationRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_organizationmanager_v1_UpdateOrganizationRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_organizationmanager_v1_UpdateOrganizationRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_UpdateOrganizationRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_organizationmanager_v1_UpdateOrganizationMetadata_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_organizationmanager_v1_UpdateOrganizationMetadata_fieldAccessorTable = new
@@ -6753,8 +7145,10 @@ public final class OrganizationServiceOuterClass {
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.mapKey);
     registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

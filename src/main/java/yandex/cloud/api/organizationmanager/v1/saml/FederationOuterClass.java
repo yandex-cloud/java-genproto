@@ -393,6 +393,60 @@ public final class FederationOuterClass {
      * <code>bool case_insensitive_name_ids = 12;</code>
      */
     boolean getCaseInsensitiveNameIds();
+
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 13;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 13;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 13;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 13;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 13;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
   }
   /**
    * <pre>
@@ -538,6 +592,19 @@ public final class FederationOuterClass {
               caseInsensitiveNameIds_ = input.readBool();
               break;
             }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00001000;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -562,6 +629,18 @@ public final class FederationOuterClass {
       return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_Federation_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 13:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -570,6 +649,7 @@ public final class FederationOuterClass {
               yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Federation.class, yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Federation.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -990,6 +1070,98 @@ public final class FederationOuterClass {
       return caseInsensitiveNameIds_;
     }
 
+    public static final int LABELS_FIELD_NUMBER = 13;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_Federation_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 13;</code>
+     */
+
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 13;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 13;</code>
+     */
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 13;</code>
+     */
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1040,6 +1212,12 @@ public final class FederationOuterClass {
       if (caseInsensitiveNameIds_ != false) {
         output.writeBool(12, caseInsensitiveNameIds_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          13);
       unknownFields.writeTo(output);
     }
 
@@ -1091,6 +1269,16 @@ public final class FederationOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, caseInsensitiveNameIds_);
       }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(13, labels__);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1139,6 +1327,8 @@ public final class FederationOuterClass {
       }
       result = result && (getCaseInsensitiveNameIds()
           == other.getCaseInsensitiveNameIds());
+      result = result && internalGetLabels().equals(
+          other.internalGetLabels());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1182,6 +1372,10 @@ public final class FederationOuterClass {
       hash = (37 * hash) + CASE_INSENSITIVE_NAME_IDS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getCaseInsensitiveNameIds());
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1294,6 +1488,28 @@ public final class FederationOuterClass {
         return yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_Federation_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 13:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 13:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -1356,6 +1572,7 @@ public final class FederationOuterClass {
         }
         caseInsensitiveNameIds_ = false;
 
+        internalGetMutableLabels().clear();
         return this;
       }
 
@@ -1382,6 +1599,8 @@ public final class FederationOuterClass {
       @java.lang.Override
       public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Federation buildPartial() {
         yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Federation result = new yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.Federation(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.id_ = id_;
         result.organizationId_ = organizationId_;
         result.name_ = name_;
@@ -1406,6 +1625,9 @@ public final class FederationOuterClass {
           result.securitySettings_ = securitySettingsBuilder_.build();
         }
         result.caseInsensitiveNameIds_ = caseInsensitiveNameIds_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -1496,6 +1718,8 @@ public final class FederationOuterClass {
         if (other.getCaseInsensitiveNameIds() != false) {
           setCaseInsensitiveNameIds(other.getCaseInsensitiveNameIds());
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1524,6 +1748,7 @@ public final class FederationOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -2708,6 +2933,157 @@ public final class FederationOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 13;</code>
+       */
+
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 13;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 13;</code>
+       */
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 13;</code>
+       */
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 13;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 13;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 13;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3272,6 +3648,11 @@ public final class FederationOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_organizationmanager_v1_saml_Federation_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_saml_Federation_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_saml_Federation_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_organizationmanager_v1_saml_FederationSecuritySettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -3289,7 +3670,7 @@ public final class FederationOuterClass {
       "ml/federation.proto\022(yandex.cloud.organi" +
       "zationmanager.v1.saml\032\036google/protobuf/d" +
       "uration.proto\032\037google/protobuf/timestamp" +
-      ".proto\032\035yandex/cloud/validation.proto\"\273\004" +
+      ".proto\032\035yandex/cloud/validation.proto\"\274\005" +
       "\n\nFederation\022\030\n\002id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\027" +
       "\n\017organization_id\030\002 \001(\t\0223\n\004name\030\003 \001(\tB%\350" +
       "\3071\001\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013" +
@@ -3304,14 +3685,17 @@ public final class FederationOuterClass {
       "_\n\021security_settings\030\013 \001(\0132D.yandex.clou" +
       "d.organizationmanager.v1.saml.Federation" +
       "SecuritySettings\022!\n\031case_insensitive_nam" +
-      "e_ids\030\014 \001(\010\":\n\032FederationSecuritySetting" +
-      "s\022\034\n\024encrypted_assertions\030\001 \001(\010*Q\n\013Bindi" +
-      "ngType\022\034\n\030BINDING_TYPE_UNSPECIFIED\020\000\022\010\n\004" +
-      "POST\020\001\022\014\n\010REDIRECT\020\002\022\014\n\010ARTIFACT\020\003B\201\001\n,y" +
-      "andex.cloud.api.organizationmanager.v1.s" +
-      "amlZQgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/organizationmanager/v1/sam" +
-      "l;samlb\006proto3"
+      "e_ids\030\014 \001(\010\022P\n\006labels\030\r \003(\0132@.yandex.clo" +
+      "ud.organizationmanager.v1.saml.Federatio" +
+      "n.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\":\n\032FederationSecuri" +
+      "tySettings\022\034\n\024encrypted_assertions\030\001 \001(\010" +
+      "*Q\n\013BindingType\022\034\n\030BINDING_TYPE_UNSPECIF" +
+      "IED\020\000\022\010\n\004POST\020\001\022\014\n\010REDIRECT\020\002\022\014\n\010ARTIFAC" +
+      "T\020\003B\201\001\n,yandex.cloud.api.organizationman" +
+      "ager.v1.samlZQgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/organizationmanag" +
+      "er/v1/saml;samlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3333,7 +3717,13 @@ public final class FederationOuterClass {
     internal_static_yandex_cloud_organizationmanager_v1_saml_Federation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_saml_Federation_descriptor,
-        new java.lang.String[] { "Id", "OrganizationId", "Name", "Description", "CreatedAt", "CookieMaxAge", "AutoCreateAccountOnLogin", "Issuer", "SsoBinding", "SsoUrl", "SecuritySettings", "CaseInsensitiveNameIds", });
+        new java.lang.String[] { "Id", "OrganizationId", "Name", "Description", "CreatedAt", "CookieMaxAge", "AutoCreateAccountOnLogin", "Issuer", "SsoBinding", "SsoUrl", "SecuritySettings", "CaseInsensitiveNameIds", "Labels", });
+    internal_static_yandex_cloud_organizationmanager_v1_saml_Federation_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_organizationmanager_v1_saml_Federation_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_organizationmanager_v1_saml_Federation_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_saml_Federation_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_organizationmanager_v1_saml_FederationSecuritySettings_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_organizationmanager_v1_saml_FederationSecuritySettings_fieldAccessorTable = new

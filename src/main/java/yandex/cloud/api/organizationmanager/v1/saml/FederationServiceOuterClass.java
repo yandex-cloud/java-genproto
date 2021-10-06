@@ -3026,6 +3026,60 @@ public final class FederationServiceOuterClass {
      * <code>bool case_insensitive_name_ids = 10;</code>
      */
     boolean getCaseInsensitiveNameIds();
+
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 11 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 11 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 11 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 11 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 11 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.CreateFederationRequest}
@@ -3146,6 +3200,19 @@ public final class FederationServiceOuterClass {
               caseInsensitiveNameIds_ = input.readBool();
               break;
             }
+            case 90: {
+              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000400;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3170,6 +3237,18 @@ public final class FederationServiceOuterClass {
       return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_CreateFederationRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 11:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -3178,6 +3257,7 @@ public final class FederationServiceOuterClass {
               yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.CreateFederationRequest.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.CreateFederationRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object organizationId_;
     /**
@@ -3530,6 +3610,98 @@ public final class FederationServiceOuterClass {
       return caseInsensitiveNameIds_;
     }
 
+    public static final int LABELS_FIELD_NUMBER = 11;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_CreateFederationRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 11 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 11 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 11 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 11 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3574,6 +3746,12 @@ public final class FederationServiceOuterClass {
       if (caseInsensitiveNameIds_ != false) {
         output.writeBool(10, caseInsensitiveNameIds_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          11);
       unknownFields.writeTo(output);
     }
 
@@ -3618,6 +3796,16 @@ public final class FederationServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(10, caseInsensitiveNameIds_);
       }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(11, labels__);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3659,6 +3847,8 @@ public final class FederationServiceOuterClass {
       }
       result = result && (getCaseInsensitiveNameIds()
           == other.getCaseInsensitiveNameIds());
+      result = result && internalGetLabels().equals(
+          other.internalGetLabels());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3696,6 +3886,10 @@ public final class FederationServiceOuterClass {
       hash = (37 * hash) + CASE_INSENSITIVE_NAME_IDS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getCaseInsensitiveNameIds());
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3803,6 +3997,28 @@ public final class FederationServiceOuterClass {
         return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_CreateFederationRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 11:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 11:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -3857,6 +4073,7 @@ public final class FederationServiceOuterClass {
         }
         caseInsensitiveNameIds_ = false;
 
+        internalGetMutableLabels().clear();
         return this;
       }
 
@@ -3883,6 +4100,8 @@ public final class FederationServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.CreateFederationRequest buildPartial() {
         yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.CreateFederationRequest result = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.CreateFederationRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.organizationId_ = organizationId_;
         result.name_ = name_;
         result.description_ = description_;
@@ -3901,6 +4120,9 @@ public final class FederationServiceOuterClass {
           result.securitySettings_ = securitySettingsBuilder_.build();
         }
         result.caseInsensitiveNameIds_ = caseInsensitiveNameIds_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -3984,6 +4206,8 @@ public final class FederationServiceOuterClass {
         if (other.getCaseInsensitiveNameIds() != false) {
           setCaseInsensitiveNameIds(other.getCaseInsensitiveNameIds());
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4012,6 +4236,7 @@ public final class FederationServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object organizationId_ = "";
       /**
@@ -4973,6 +5198,157 @@ public final class FederationServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 11 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 11 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 11 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 11 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 11 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 11 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 11 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5840,6 +6216,60 @@ public final class FederationServiceOuterClass {
      * <code>bool case_insensitive_name_ids = 12;</code>
      */
     boolean getCaseInsensitiveNameIds();
+
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 13 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 13 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 13 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 13 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 13 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.UpdateFederationRequest}
@@ -5973,6 +6403,19 @@ public final class FederationServiceOuterClass {
               caseInsensitiveNameIds_ = input.readBool();
               break;
             }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000800;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5997,6 +6440,18 @@ public final class FederationServiceOuterClass {
       return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_UpdateFederationRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 13:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -6005,6 +6460,7 @@ public final class FederationServiceOuterClass {
               yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.UpdateFederationRequest.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.UpdateFederationRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FEDERATION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object federationId_;
     /**
@@ -6390,6 +6846,98 @@ public final class FederationServiceOuterClass {
       return caseInsensitiveNameIds_;
     }
 
+    public static final int LABELS_FIELD_NUMBER = 13;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_UpdateFederationRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 13 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 13 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 13 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 13 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6437,6 +6985,12 @@ public final class FederationServiceOuterClass {
       if (caseInsensitiveNameIds_ != false) {
         output.writeBool(12, caseInsensitiveNameIds_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          13);
       unknownFields.writeTo(output);
     }
 
@@ -6485,6 +7039,16 @@ public final class FederationServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, caseInsensitiveNameIds_);
       }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(13, labels__);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6531,6 +7095,8 @@ public final class FederationServiceOuterClass {
       }
       result = result && (getCaseInsensitiveNameIds()
           == other.getCaseInsensitiveNameIds());
+      result = result && internalGetLabels().equals(
+          other.internalGetLabels());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -6572,6 +7138,10 @@ public final class FederationServiceOuterClass {
       hash = (37 * hash) + CASE_INSENSITIVE_NAME_IDS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getCaseInsensitiveNameIds());
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6679,6 +7249,28 @@ public final class FederationServiceOuterClass {
         return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_UpdateFederationRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 13:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 13:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -6739,6 +7331,7 @@ public final class FederationServiceOuterClass {
         }
         caseInsensitiveNameIds_ = false;
 
+        internalGetMutableLabels().clear();
         return this;
       }
 
@@ -6765,6 +7358,8 @@ public final class FederationServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.UpdateFederationRequest buildPartial() {
         yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.UpdateFederationRequest result = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.UpdateFederationRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.federationId_ = federationId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
@@ -6788,6 +7383,9 @@ public final class FederationServiceOuterClass {
           result.securitySettings_ = securitySettingsBuilder_.build();
         }
         result.caseInsensitiveNameIds_ = caseInsensitiveNameIds_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -6874,6 +7472,8 @@ public final class FederationServiceOuterClass {
         if (other.getCaseInsensitiveNameIds() != false) {
           setCaseInsensitiveNameIds(other.getCaseInsensitiveNameIds());
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -6902,6 +7502,7 @@ public final class FederationServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object federationId_ = "";
       /**
@@ -8014,6 +8615,157 @@ public final class FederationServiceOuterClass {
         
         caseInsensitiveNameIds_ = false;
         onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 13 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 13 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 13 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 13 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 13 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 13 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 13 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
         return this;
       }
       @java.lang.Override
@@ -16148,6 +16900,11 @@ public final class FederationServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_organizationmanager_v1_saml_CreateFederationRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_saml_CreateFederationRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_saml_CreateFederationRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_organizationmanager_v1_saml_CreateFederationMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -16157,6 +16914,11 @@ public final class FederationServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_organizationmanager_v1_saml_UpdateFederationRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_saml_UpdateFederationRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_saml_UpdateFederationRequest_LabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_organizationmanager_v1_saml_UpdateFederationMetadata_descriptor;
   private static final 
@@ -16235,7 +16997,7 @@ public final class FederationServiceOuterClass {
       "\027ListFederationsResponse\022I\n\013federations\030" +
       "\001 \003(\01324.yandex.cloud.organizationmanager" +
       ".v1.saml.Federation\022\027\n\017next_page_token\030\002" +
-      " \001(\t\"\206\004\n\027CreateFederationRequest\022!\n\017orga" +
+      " \001(\t\"\326\005\n\027CreateFederationRequest\022!\n\017orga" +
       "nization_id\030\001 \001(\tB\010\212\3101\004<=50\0221\n\004name\030\002 \001(" +
       "\tB#\362\3071\037[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036" +
       "\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022>\n\016cookie" +
@@ -16248,96 +17010,106 @@ public final class FederationServiceOuterClass {
       "urity_settings\030\t \001(\0132D.yandex.cloud.orga" +
       "nizationmanager.v1.saml.FederationSecuri" +
       "tySettings\022!\n\031case_insensitive_name_ids\030" +
-      "\n \001(\010\"1\n\030CreateFederationMetadata\022\025\n\rfed" +
-      "eration_id\030\001 \001(\t\"\266\004\n\027UpdateFederationReq" +
-      "uest\022\037\n\rfederation_id\030\001 \001(\tB\010\212\3101\004<=50\022/\n" +
-      "\013update_mask\030\002 \001(\0132\032.google.protobuf.Fie" +
-      "ldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-" +
-      "9]{0,61}[a-z0-9])?\022\036\n\013description\030\004 \001(\tB" +
-      "\t\212\3101\005<=256\022>\n\016cookie_max_age\030\005 \001(\0132\031.goo" +
-      "gle.protobuf.DurationB\013\372\3071\00710m-12h\022$\n\034au" +
-      "to_create_account_on_login\030\006 \001(\010\022\036\n\006issu" +
-      "er\030\007 \001(\tB\016\350\3071\001\212\3101\006<=8000\022J\n\013sso_binding\030" +
-      "\010 \001(\01625.yandex.cloud.organizationmanager" +
-      ".v1.saml.BindingType\022\037\n\007sso_url\030\t \001(\tB\016\350" +
-      "\3071\001\212\3101\006<=8000\022_\n\021security_settings\030\n \001(\013" +
-      "2D.yandex.cloud.organizationmanager.v1.s" +
-      "aml.FederationSecuritySettings\022!\n\031case_i" +
-      "nsensitive_name_ids\030\014 \001(\010\"1\n\030UpdateFeder" +
-      "ationMetadata\022\025\n\rfederation_id\030\001 \001(\t\":\n\027" +
-      "DeleteFederationRequest\022\037\n\rfederation_id" +
-      "\030\001 \001(\tB\010\212\3101\004<=50\"1\n\030DeleteFederationMeta" +
-      "data\022\025\n\rfederation_id\030\001 \001(\t\"`\n\037AddFedera" +
-      "tedUserAccountsRequest\022\037\n\rfederation_id\030" +
-      "\001 \001(\tB\010\212\3101\004<=50\022\034\n\010name_ids\030\002 \003(\tB\n\212\3101\006<" +
-      "=1000\"9\n AddFederatedUserAccountsMetadat" +
-      "a\022\025\n\rfederation_id\030\001 \001(\t\"k\n AddFederated" +
-      "UserAccountsResponse\022G\n\ruser_accounts\030\001 " +
-      "\003(\01320.yandex.cloud.organizationmanager.v" +
-      "1.UserAccount\"\205\001\n ListFederatedUserAccou" +
-      "ntsRequest\022#\n\rfederation_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035" +
-      "\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"\205\001\n!ListFe" +
-      "deratedUserAccountsResponse\022G\n\ruser_acco" +
-      "unts\030\001 \003(\01320.yandex.cloud.organizationma" +
-      "nager.v1.UserAccount\022\027\n\017next_page_token\030" +
-      "\002 \001(\t\"\200\001\n\037ListFederationOperationsReques" +
-      "t\022\037\n\rfederation_id\030\001 \001(\tB\010\212\3101\004<=50\022\035\n\tpa" +
-      "ge_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030" +
-      "\003 \001(\tB\t\212\3101\005<=100\"r\n ListFederationOperat" +
-      "ionsResponse\0225\n\noperations\030\001 \003(\0132!.yande" +
-      "x.cloud.operation.Operation\022\027\n\017next_page" +
-      "_token\030\002 \001(\t2\313\016\n\021FederationService\022\276\001\n\003G" +
-      "et\022>.yandex.cloud.organizationmanager.v1" +
-      ".saml.GetFederationRequest\0324.yandex.clou" +
-      "d.organizationmanager.v1.saml.Federation" +
-      "\"A\202\323\344\223\002;\0229/organization-manager/v1/saml/" +
-      "federations/{federation_id}\022\276\001\n\004List\022@.y" +
-      "andex.cloud.organizationmanager.v1.saml." +
-      "ListFederationsRequest\032A.yandex.cloud.or" +
-      "ganizationmanager.v1.saml.ListFederation" +
-      "sResponse\"1\202\323\344\223\002+\022)/organization-manager" +
-      "/v1/saml/federations\022\316\001\n\006Create\022A.yandex" +
-      ".cloud.organizationmanager.v1.saml.Creat" +
-      "eFederationRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"^\202\323\344\223\002.\")/organization-man" +
-      "ager/v1/saml/federations:\001*\262\322*&\n\030CreateF" +
-      "ederationMetadata\022\nFederation\022\336\001\n\006Update" +
-      "\022A.yandex.cloud.organizationmanager.v1.s" +
-      "aml.UpdateFederationRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"n\202\323\344\223\002>29/organiz" +
-      "ation-manager/v1/saml/federations/{feder" +
-      "ation_id}:\001*\262\322*&\n\030UpdateFederationMetada" +
-      "ta\022\nFederation\022\346\001\n\006Delete\022A.yandex.cloud" +
-      ".organizationmanager.v1.saml.DeleteFeder" +
-      "ationRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"v\202\323\344\223\002;*9/organization-manager/v" +
-      "1/saml/federations/{federation_id}\262\322*1\n\030" +
-      "DeleteFederationMetadata\022\025google.protobu" +
-      "f.Empty\022\236\002\n\017AddUserAccounts\022I.yandex.clo" +
-      "ud.organizationmanager.v1.saml.AddFedera" +
-      "tedUserAccountsRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"\234\001\202\323\344\223\002N\"I/organizatio" +
-      "n-manager/v1/saml/federations/{federatio" +
-      "n_id}:addUserAccounts:\001*\262\322*D\n AddFederat" +
-      "edUserAccountsMetadata\022 AddFederatedUser" +
-      "AccountsResponse\022\377\001\n\020ListUserAccounts\022J." +
-      "yandex.cloud.organizationmanager.v1.saml" +
-      ".ListFederatedUserAccountsRequest\032K.yand" +
-      "ex.cloud.organizationmanager.v1.saml.Lis" +
-      "tFederatedUserAccountsResponse\"R\202\323\344\223\002L\022J" +
-      "/organization-manager/v1/saml/federation" +
-      "s/{federation_id}:listUserAccounts\022\365\001\n\016L" +
-      "istOperations\022I.yandex.cloud.organizatio" +
-      "nmanager.v1.saml.ListFederationOperation" +
-      "sRequest\032J.yandex.cloud.organizationmana" +
-      "ger.v1.saml.ListFederationOperationsResp" +
-      "onse\"L\202\323\344\223\002F\022D/organization-manager/v1/s" +
-      "aml/federations/{federation_id}/operatio" +
-      "nsB\201\001\n,yandex.cloud.api.organizationmana" +
-      "ger.v1.samlZQgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/organizationmanage" +
-      "r/v1/saml;samlb\006proto3"
+      "\n \001(\010\022\236\001\n\006labels\030\013 \003(\0132M.yandex.cloud.or" +
+      "ganizationmanager.v1.saml.CreateFederati" +
+      "onRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362" +
+      "\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-" +
+      "9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\"1\n\030CreateFederationMetadat" +
+      "a\022\025\n\rfederation_id\030\001 \001(\t\"\206\006\n\027UpdateFeder" +
+      "ationRequest\022\037\n\rfederation_id\030\001 \001(\tB\010\212\3101" +
+      "\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.prot" +
+      "obuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]" +
+      "([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descriptio" +
+      "n\030\004 \001(\tB\t\212\3101\005<=256\022>\n\016cookie_max_age\030\005 \001" +
+      "(\0132\031.google.protobuf.DurationB\013\372\3071\00710m-1" +
+      "2h\022$\n\034auto_create_account_on_login\030\006 \001(\010" +
+      "\022\036\n\006issuer\030\007 \001(\tB\016\350\3071\001\212\3101\006<=8000\022J\n\013sso_" +
+      "binding\030\010 \001(\01625.yandex.cloud.organizatio" +
+      "nmanager.v1.saml.BindingType\022\037\n\007sso_url\030" +
+      "\t \001(\tB\016\350\3071\001\212\3101\006<=8000\022_\n\021security_settin" +
+      "gs\030\n \001(\0132D.yandex.cloud.organizationmana" +
+      "ger.v1.saml.FederationSecuritySettings\022!" +
+      "\n\031case_insensitive_name_ids\030\014 \001(\010\022\236\001\n\006la" +
+      "bels\030\r \003(\0132M.yandex.cloud.organizationma" +
+      "nager.v1.saml.UpdateFederationRequest.La" +
+      "belsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z" +
+      "]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\"1\n\030UpdateFederationMetadata\022\025\n\rfederat" +
+      "ion_id\030\001 \001(\t\":\n\027DeleteFederationRequest\022" +
+      "\037\n\rfederation_id\030\001 \001(\tB\010\212\3101\004<=50\"1\n\030Dele" +
+      "teFederationMetadata\022\025\n\rfederation_id\030\001 " +
+      "\001(\t\"`\n\037AddFederatedUserAccountsRequest\022\037" +
+      "\n\rfederation_id\030\001 \001(\tB\010\212\3101\004<=50\022\034\n\010name_" +
+      "ids\030\002 \003(\tB\n\212\3101\006<=1000\"9\n AddFederatedUse" +
+      "rAccountsMetadata\022\025\n\rfederation_id\030\001 \001(\t" +
+      "\"k\n AddFederatedUserAccountsResponse\022G\n\r" +
+      "user_accounts\030\001 \003(\01320.yandex.cloud.organ" +
+      "izationmanager.v1.UserAccount\"\205\001\n ListFe" +
+      "deratedUserAccountsRequest\022#\n\rfederation" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
+      "(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
+      "<=100\"\205\001\n!ListFederatedUserAccountsRespo" +
+      "nse\022G\n\ruser_accounts\030\001 \003(\01320.yandex.clou" +
+      "d.organizationmanager.v1.UserAccount\022\027\n\017" +
+      "next_page_token\030\002 \001(\t\"\200\001\n\037ListFederation" +
+      "OperationsRequest\022\037\n\rfederation_id\030\001 \001(\t" +
+      "B\010\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-100" +
+      "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"r\n List" +
+      "FederationOperationsResponse\0225\n\noperatio" +
+      "ns\030\001 \003(\0132!.yandex.cloud.operation.Operat" +
+      "ion\022\027\n\017next_page_token\030\002 \001(\t2\313\016\n\021Federat" +
+      "ionService\022\276\001\n\003Get\022>.yandex.cloud.organi" +
+      "zationmanager.v1.saml.GetFederationReque" +
+      "st\0324.yandex.cloud.organizationmanager.v1" +
+      ".saml.Federation\"A\202\323\344\223\002;\0229/organization-" +
+      "manager/v1/saml/federations/{federation_" +
+      "id}\022\276\001\n\004List\022@.yandex.cloud.organization" +
+      "manager.v1.saml.ListFederationsRequest\032A" +
+      ".yandex.cloud.organizationmanager.v1.sam" +
+      "l.ListFederationsResponse\"1\202\323\344\223\002+\022)/orga" +
+      "nization-manager/v1/saml/federations\022\316\001\n" +
+      "\006Create\022A.yandex.cloud.organizationmanag" +
+      "er.v1.saml.CreateFederationRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"^\202\323\344\223\002.\")/" +
+      "organization-manager/v1/saml/federations" +
+      ":\001*\262\322*&\n\030CreateFederationMetadata\022\nFeder" +
+      "ation\022\336\001\n\006Update\022A.yandex.cloud.organiza" +
+      "tionmanager.v1.saml.UpdateFederationRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"n" +
+      "\202\323\344\223\002>29/organization-manager/v1/saml/fe" +
+      "derations/{federation_id}:\001*\262\322*&\n\030Update" +
+      "FederationMetadata\022\nFederation\022\346\001\n\006Delet" +
+      "e\022A.yandex.cloud.organizationmanager.v1." +
+      "saml.DeleteFederationRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"v\202\323\344\223\002;*9/organi" +
+      "zation-manager/v1/saml/federations/{fede" +
+      "ration_id}\262\322*1\n\030DeleteFederationMetadata" +
+      "\022\025google.protobuf.Empty\022\236\002\n\017AddUserAccou" +
+      "nts\022I.yandex.cloud.organizationmanager.v" +
+      "1.saml.AddFederatedUserAccountsRequest\032!" +
+      ".yandex.cloud.operation.Operation\"\234\001\202\323\344\223" +
+      "\002N\"I/organization-manager/v1/saml/federa" +
+      "tions/{federation_id}:addUserAccounts:\001*" +
+      "\262\322*D\n AddFederatedUserAccountsMetadata\022 " +
+      "AddFederatedUserAccountsResponse\022\377\001\n\020Lis" +
+      "tUserAccounts\022J.yandex.cloud.organizatio" +
+      "nmanager.v1.saml.ListFederatedUserAccoun" +
+      "tsRequest\032K.yandex.cloud.organizationman" +
+      "ager.v1.saml.ListFederatedUserAccountsRe" +
+      "sponse\"R\202\323\344\223\002L\022J/organization-manager/v1" +
+      "/saml/federations/{federation_id}:listUs" +
+      "erAccounts\022\365\001\n\016ListOperations\022I.yandex.c" +
+      "loud.organizationmanager.v1.saml.ListFed" +
+      "erationOperationsRequest\032J.yandex.cloud." +
+      "organizationmanager.v1.saml.ListFederati" +
+      "onOperationsResponse\"L\202\323\344\223\002F\022D/organizat" +
+      "ion-manager/v1/saml/federations/{federat" +
+      "ion_id}/operationsB\201\001\n,yandex.cloud.api." +
+      "organizationmanager.v1.samlZQgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/or" +
+      "ganizationmanager/v1/saml;samlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16382,7 +17154,13 @@ public final class FederationServiceOuterClass {
     internal_static_yandex_cloud_organizationmanager_v1_saml_CreateFederationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_saml_CreateFederationRequest_descriptor,
-        new java.lang.String[] { "OrganizationId", "Name", "Description", "CookieMaxAge", "AutoCreateAccountOnLogin", "Issuer", "SsoBinding", "SsoUrl", "SecuritySettings", "CaseInsensitiveNameIds", });
+        new java.lang.String[] { "OrganizationId", "Name", "Description", "CookieMaxAge", "AutoCreateAccountOnLogin", "Issuer", "SsoBinding", "SsoUrl", "SecuritySettings", "CaseInsensitiveNameIds", "Labels", });
+    internal_static_yandex_cloud_organizationmanager_v1_saml_CreateFederationRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_organizationmanager_v1_saml_CreateFederationRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_organizationmanager_v1_saml_CreateFederationRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_saml_CreateFederationRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_organizationmanager_v1_saml_CreateFederationMetadata_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_organizationmanager_v1_saml_CreateFederationMetadata_fieldAccessorTable = new
@@ -16394,7 +17172,13 @@ public final class FederationServiceOuterClass {
     internal_static_yandex_cloud_organizationmanager_v1_saml_UpdateFederationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_saml_UpdateFederationRequest_descriptor,
-        new java.lang.String[] { "FederationId", "UpdateMask", "Name", "Description", "CookieMaxAge", "AutoCreateAccountOnLogin", "Issuer", "SsoBinding", "SsoUrl", "SecuritySettings", "CaseInsensitiveNameIds", });
+        new java.lang.String[] { "FederationId", "UpdateMask", "Name", "Description", "CookieMaxAge", "AutoCreateAccountOnLogin", "Issuer", "SsoBinding", "SsoUrl", "SecuritySettings", "CaseInsensitiveNameIds", "Labels", });
+    internal_static_yandex_cloud_organizationmanager_v1_saml_UpdateFederationRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_organizationmanager_v1_saml_UpdateFederationRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_organizationmanager_v1_saml_UpdateFederationRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_saml_UpdateFederationRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_organizationmanager_v1_saml_UpdateFederationMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_organizationmanager_v1_saml_UpdateFederationMetadata_fieldAccessorTable = new
@@ -16460,8 +17244,10 @@ public final class FederationServiceOuterClass {
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.mapKey);
     registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

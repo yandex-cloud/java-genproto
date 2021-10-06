@@ -24,25 +24,25 @@ public final class DatabaseOuterClass {
      */
     ALERT_EVALUATION_STATUS_UNSPECIFIED(0),
     /**
-     * <code>OK = 1;</code>
+     * <code>ALERT_EVALUATION_STATUS_OK = 1;</code>
      */
-    OK(1),
+    ALERT_EVALUATION_STATUS_OK(1),
     /**
-     * <code>NO_DATA = 2;</code>
+     * <code>ALERT_EVALUATION_STATUS_NO_DATA = 2;</code>
      */
-    NO_DATA(2),
+    ALERT_EVALUATION_STATUS_NO_DATA(2),
     /**
-     * <code>ERROR = 3;</code>
+     * <code>ALERT_EVALUATION_STATUS_ERROR = 3;</code>
      */
-    ERROR(3),
+    ALERT_EVALUATION_STATUS_ERROR(3),
     /**
-     * <code>ALARM = 4;</code>
+     * <code>ALERT_EVALUATION_STATUS_ALARM = 4;</code>
      */
-    ALARM(4),
+    ALERT_EVALUATION_STATUS_ALARM(4),
     /**
-     * <code>WARN = 5;</code>
+     * <code>ALERT_EVALUATION_STATUS_WARN = 5;</code>
      */
-    WARN(5),
+    ALERT_EVALUATION_STATUS_WARN(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -51,25 +51,25 @@ public final class DatabaseOuterClass {
      */
     public static final int ALERT_EVALUATION_STATUS_UNSPECIFIED_VALUE = 0;
     /**
-     * <code>OK = 1;</code>
+     * <code>ALERT_EVALUATION_STATUS_OK = 1;</code>
      */
-    public static final int OK_VALUE = 1;
+    public static final int ALERT_EVALUATION_STATUS_OK_VALUE = 1;
     /**
-     * <code>NO_DATA = 2;</code>
+     * <code>ALERT_EVALUATION_STATUS_NO_DATA = 2;</code>
      */
-    public static final int NO_DATA_VALUE = 2;
+    public static final int ALERT_EVALUATION_STATUS_NO_DATA_VALUE = 2;
     /**
-     * <code>ERROR = 3;</code>
+     * <code>ALERT_EVALUATION_STATUS_ERROR = 3;</code>
      */
-    public static final int ERROR_VALUE = 3;
+    public static final int ALERT_EVALUATION_STATUS_ERROR_VALUE = 3;
     /**
-     * <code>ALARM = 4;</code>
+     * <code>ALERT_EVALUATION_STATUS_ALARM = 4;</code>
      */
-    public static final int ALARM_VALUE = 4;
+    public static final int ALERT_EVALUATION_STATUS_ALARM_VALUE = 4;
     /**
-     * <code>WARN = 5;</code>
+     * <code>ALERT_EVALUATION_STATUS_WARN = 5;</code>
      */
-    public static final int WARN_VALUE = 5;
+    public static final int ALERT_EVALUATION_STATUS_WARN_VALUE = 5;
 
 
     public final int getNumber() {
@@ -91,11 +91,11 @@ public final class DatabaseOuterClass {
     public static AlertEvaluationStatus forNumber(int value) {
       switch (value) {
         case 0: return ALERT_EVALUATION_STATUS_UNSPECIFIED;
-        case 1: return OK;
-        case 2: return NO_DATA;
-        case 3: return ERROR;
-        case 4: return ALARM;
-        case 5: return WARN;
+        case 1: return ALERT_EVALUATION_STATUS_OK;
+        case 2: return ALERT_EVALUATION_STATUS_NO_DATA;
+        case 3: return ALERT_EVALUATION_STATUS_ERROR;
+        case 4: return ALERT_EVALUATION_STATUS_ALARM;
+        case 5: return ALERT_EVALUATION_STATUS_WARN;
         default: return null;
       }
     }
@@ -20406,12 +20406,15 @@ public final class DatabaseOuterClass {
       "\".yandex.cloud.ydb.v1.StorageOptionB\007\202\3101" +
       "\003>=1\022\032\n\022storage_size_limit\030\002 \001(\003\"=\n\rStor" +
       "ageOption\022\027\n\017storage_type_id\030\001 \001(\t\022\023\n\013gr" +
-      "oup_count\030\002 \001(\003*u\n\025AlertEvaluationStatus" +
-      "\022\'\n#ALERT_EVALUATION_STATUS_UNSPECIFIED\020" +
-      "\000\022\006\n\002OK\020\001\022\013\n\007NO_DATA\020\002\022\t\n\005ERROR\020\003\022\t\n\005ALA" +
-      "RM\020\004\022\010\n\004WARN\020\005BV\n\027yandex.cloud.api.ydb.v" +
-      "1Z;github.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/ydb/v1;ydbb\006proto3"
+      "oup_count\030\002 \001(\003*\355\001\n\025AlertEvaluationStatu" +
+      "s\022\'\n#ALERT_EVALUATION_STATUS_UNSPECIFIED" +
+      "\020\000\022\036\n\032ALERT_EVALUATION_STATUS_OK\020\001\022#\n\037AL" +
+      "ERT_EVALUATION_STATUS_NO_DATA\020\002\022!\n\035ALERT" +
+      "_EVALUATION_STATUS_ERROR\020\003\022!\n\035ALERT_EVAL" +
+      "UATION_STATUS_ALARM\020\004\022 \n\034ALERT_EVALUATIO" +
+      "N_STATUS_WARN\020\005BV\n\027yandex.cloud.api.ydb." +
+      "v1Z;github.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/ydb/v1;ydbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
