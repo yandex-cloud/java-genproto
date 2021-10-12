@@ -7743,6 +7743,111 @@ public final class JobOuterClass {
      */
     com.google.protobuf.ByteString
         getMainClassBytes();
+
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 8;</code>
+     */
+    java.util.List<java.lang.String>
+        getPackagesList();
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 8;</code>
+     */
+    int getPackagesCount();
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 8;</code>
+     */
+    java.lang.String getPackages(int index);
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 8;</code>
+     */
+    com.google.protobuf.ByteString
+        getPackagesBytes(int index);
+
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 9;</code>
+     */
+    java.util.List<java.lang.String>
+        getRepositoriesList();
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 9;</code>
+     */
+    int getRepositoriesCount();
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 9;</code>
+     */
+    java.lang.String getRepositories(int index);
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 9;</code>
+     */
+    com.google.protobuf.ByteString
+        getRepositoriesBytes(int index);
+
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 10;</code>
+     */
+    java.util.List<java.lang.String>
+        getExcludePackagesList();
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 10;</code>
+     */
+    int getExcludePackagesCount();
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 10;</code>
+     */
+    java.lang.String getExcludePackages(int index);
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 10;</code>
+     */
+    com.google.protobuf.ByteString
+        getExcludePackagesBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.SparkJob}
@@ -7763,6 +7868,9 @@ public final class JobOuterClass {
       archiveUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       mainJarFileUri_ = "";
       mainClass_ = "";
+      packages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      repositories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      excludePackages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -7850,6 +7958,33 @@ public final class JobOuterClass {
               mainClass_ = s;
               break;
             }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+                packages_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000080;
+              }
+              packages_.add(s);
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+                repositories_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000100;
+              }
+              repositories_.add(s);
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+                excludePackages_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000200;
+              }
+              excludePackages_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -7876,6 +8011,15 @@ public final class JobOuterClass {
         }
         if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           archiveUris_ = archiveUris_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+          packages_ = packages_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+          repositories_ = repositories_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+          excludePackages_ = excludePackages_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -8263,6 +8407,141 @@ public final class JobOuterClass {
       }
     }
 
+    public static final int PACKAGES_FIELD_NUMBER = 8;
+    private com.google.protobuf.LazyStringList packages_;
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 8;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPackagesList() {
+      return packages_;
+    }
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 8;</code>
+     */
+    public int getPackagesCount() {
+      return packages_.size();
+    }
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 8;</code>
+     */
+    public java.lang.String getPackages(int index) {
+      return packages_.get(index);
+    }
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 8;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPackagesBytes(int index) {
+      return packages_.getByteString(index);
+    }
+
+    public static final int REPOSITORIES_FIELD_NUMBER = 9;
+    private com.google.protobuf.LazyStringList repositories_;
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 9;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getRepositoriesList() {
+      return repositories_;
+    }
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 9;</code>
+     */
+    public int getRepositoriesCount() {
+      return repositories_.size();
+    }
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 9;</code>
+     */
+    public java.lang.String getRepositories(int index) {
+      return repositories_.get(index);
+    }
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 9;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRepositoriesBytes(int index) {
+      return repositories_.getByteString(index);
+    }
+
+    public static final int EXCLUDE_PACKAGES_FIELD_NUMBER = 10;
+    private com.google.protobuf.LazyStringList excludePackages_;
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 10;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getExcludePackagesList() {
+      return excludePackages_;
+    }
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 10;</code>
+     */
+    public int getExcludePackagesCount() {
+      return excludePackages_.size();
+    }
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 10;</code>
+     */
+    public java.lang.String getExcludePackages(int index) {
+      return excludePackages_.get(index);
+    }
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 10;</code>
+     */
+    public com.google.protobuf.ByteString
+        getExcludePackagesBytes(int index) {
+      return excludePackages_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8300,6 +8579,15 @@ public final class JobOuterClass {
       }
       if (!getMainClassBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, mainClass_);
+      }
+      for (int i = 0; i < packages_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, packages_.getRaw(i));
+      }
+      for (int i = 0; i < repositories_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, repositories_.getRaw(i));
+      }
+      for (int i = 0; i < excludePackages_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, excludePackages_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -8358,6 +8646,30 @@ public final class JobOuterClass {
       if (!getMainClassBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, mainClass_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < packages_.size(); i++) {
+          dataSize += computeStringSizeNoTag(packages_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPackagesList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < repositories_.size(); i++) {
+          dataSize += computeStringSizeNoTag(repositories_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getRepositoriesList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < excludePackages_.size(); i++) {
+          dataSize += computeStringSizeNoTag(excludePackages_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getExcludePackagesList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -8388,6 +8700,12 @@ public final class JobOuterClass {
           .equals(other.getMainJarFileUri());
       result = result && getMainClass()
           .equals(other.getMainClass());
+      result = result && getPackagesList()
+          .equals(other.getPackagesList());
+      result = result && getRepositoriesList()
+          .equals(other.getRepositoriesList());
+      result = result && getExcludePackagesList()
+          .equals(other.getExcludePackagesList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -8423,6 +8741,18 @@ public final class JobOuterClass {
       hash = (53 * hash) + getMainJarFileUri().hashCode();
       hash = (37 * hash) + MAIN_CLASS_FIELD_NUMBER;
       hash = (53 * hash) + getMainClass().hashCode();
+      if (getPackagesCount() > 0) {
+        hash = (37 * hash) + PACKAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getPackagesList().hashCode();
+      }
+      if (getRepositoriesCount() > 0) {
+        hash = (37 * hash) + REPOSITORIES_FIELD_NUMBER;
+        hash = (53 * hash) + getRepositoriesList().hashCode();
+      }
+      if (getExcludePackagesCount() > 0) {
+        hash = (37 * hash) + EXCLUDE_PACKAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getExcludePackagesList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8591,6 +8921,12 @@ public final class JobOuterClass {
 
         mainClass_ = "";
 
+        packages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        repositories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        excludePackages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
 
@@ -8643,6 +8979,21 @@ public final class JobOuterClass {
         result.properties_.makeImmutable();
         result.mainJarFileUri_ = mainJarFileUri_;
         result.mainClass_ = mainClass_;
+        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          packages_ = packages_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000080);
+        }
+        result.packages_ = packages_;
+        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          repositories_ = repositories_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000100);
+        }
+        result.repositories_ = repositories_;
+        if (((bitField0_ & 0x00000200) == 0x00000200)) {
+          excludePackages_ = excludePackages_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000200);
+        }
+        result.excludePackages_ = excludePackages_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -8740,6 +9091,36 @@ public final class JobOuterClass {
         }
         if (!other.getMainClass().isEmpty()) {
           mainClass_ = other.mainClass_;
+          onChanged();
+        }
+        if (!other.packages_.isEmpty()) {
+          if (packages_.isEmpty()) {
+            packages_ = other.packages_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+          } else {
+            ensurePackagesIsMutable();
+            packages_.addAll(other.packages_);
+          }
+          onChanged();
+        }
+        if (!other.repositories_.isEmpty()) {
+          if (repositories_.isEmpty()) {
+            repositories_ = other.repositories_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+          } else {
+            ensureRepositoriesIsMutable();
+            repositories_.addAll(other.repositories_);
+          }
+          onChanged();
+        }
+        if (!other.excludePackages_.isEmpty()) {
+          if (excludePackages_.isEmpty()) {
+            excludePackages_ = other.excludePackages_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+          } else {
+            ensureExcludePackagesIsMutable();
+            excludePackages_.addAll(other.excludePackages_);
+          }
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -9620,6 +10001,396 @@ public final class JobOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.LazyStringList packages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensurePackagesIsMutable() {
+        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+          packages_ = new com.google.protobuf.LazyStringArrayList(packages_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 8;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPackagesList() {
+        return packages_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 8;</code>
+       */
+      public int getPackagesCount() {
+        return packages_.size();
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 8;</code>
+       */
+      public java.lang.String getPackages(int index) {
+        return packages_.get(index);
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 8;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPackagesBytes(int index) {
+        return packages_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 8;</code>
+       */
+      public Builder setPackages(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePackagesIsMutable();
+        packages_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 8;</code>
+       */
+      public Builder addPackages(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePackagesIsMutable();
+        packages_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 8;</code>
+       */
+      public Builder addAllPackages(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePackagesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, packages_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 8;</code>
+       */
+      public Builder clearPackages() {
+        packages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 8;</code>
+       */
+      public Builder addPackagesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensurePackagesIsMutable();
+        packages_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList repositories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureRepositoriesIsMutable() {
+        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+          repositories_ = new com.google.protobuf.LazyStringArrayList(repositories_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 9;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getRepositoriesList() {
+        return repositories_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 9;</code>
+       */
+      public int getRepositoriesCount() {
+        return repositories_.size();
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 9;</code>
+       */
+      public java.lang.String getRepositories(int index) {
+        return repositories_.get(index);
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 9;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRepositoriesBytes(int index) {
+        return repositories_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 9;</code>
+       */
+      public Builder setRepositories(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRepositoriesIsMutable();
+        repositories_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 9;</code>
+       */
+      public Builder addRepositories(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRepositoriesIsMutable();
+        repositories_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 9;</code>
+       */
+      public Builder addAllRepositories(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureRepositoriesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, repositories_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 9;</code>
+       */
+      public Builder clearRepositories() {
+        repositories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 9;</code>
+       */
+      public Builder addRepositoriesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureRepositoriesIsMutable();
+        repositories_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList excludePackages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureExcludePackagesIsMutable() {
+        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+          excludePackages_ = new com.google.protobuf.LazyStringArrayList(excludePackages_);
+          bitField0_ |= 0x00000200;
+         }
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 10;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getExcludePackagesList() {
+        return excludePackages_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 10;</code>
+       */
+      public int getExcludePackagesCount() {
+        return excludePackages_.size();
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 10;</code>
+       */
+      public java.lang.String getExcludePackages(int index) {
+        return excludePackages_.get(index);
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 10;</code>
+       */
+      public com.google.protobuf.ByteString
+          getExcludePackagesBytes(int index) {
+        return excludePackages_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 10;</code>
+       */
+      public Builder setExcludePackages(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureExcludePackagesIsMutable();
+        excludePackages_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 10;</code>
+       */
+      public Builder addExcludePackages(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureExcludePackagesIsMutable();
+        excludePackages_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 10;</code>
+       */
+      public Builder addAllExcludePackages(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureExcludePackagesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, excludePackages_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 10;</code>
+       */
+      public Builder clearExcludePackages() {
+        excludePackages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 10;</code>
+       */
+      public Builder addExcludePackagesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureExcludePackagesIsMutable();
+        excludePackages_.add(value);
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9923,6 +10694,111 @@ public final class JobOuterClass {
      */
     com.google.protobuf.ByteString
         getPythonFileUrisBytes(int index);
+
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 8;</code>
+     */
+    java.util.List<java.lang.String>
+        getPackagesList();
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 8;</code>
+     */
+    int getPackagesCount();
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 8;</code>
+     */
+    java.lang.String getPackages(int index);
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 8;</code>
+     */
+    com.google.protobuf.ByteString
+        getPackagesBytes(int index);
+
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 9;</code>
+     */
+    java.util.List<java.lang.String>
+        getRepositoriesList();
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 9;</code>
+     */
+    int getRepositoriesCount();
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 9;</code>
+     */
+    java.lang.String getRepositories(int index);
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 9;</code>
+     */
+    com.google.protobuf.ByteString
+        getRepositoriesBytes(int index);
+
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 10;</code>
+     */
+    java.util.List<java.lang.String>
+        getExcludePackagesList();
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 10;</code>
+     */
+    int getExcludePackagesCount();
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 10;</code>
+     */
+    java.lang.String getExcludePackages(int index);
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 10;</code>
+     */
+    com.google.protobuf.ByteString
+        getExcludePackagesBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.PysparkJob}
@@ -9943,6 +10819,9 @@ public final class JobOuterClass {
       archiveUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       mainPythonFileUri_ = "";
       pythonFileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      packages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      repositories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      excludePackages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -10033,6 +10912,33 @@ public final class JobOuterClass {
               pythonFileUris_.add(s);
               break;
             }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+                packages_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000080;
+              }
+              packages_.add(s);
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+                repositories_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000100;
+              }
+              repositories_.add(s);
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+                excludePackages_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000200;
+              }
+              excludePackages_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -10062,6 +10968,15 @@ public final class JobOuterClass {
         }
         if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
           pythonFileUris_ = pythonFileUris_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+          packages_ = packages_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+          repositories_ = repositories_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+          excludePackages_ = excludePackages_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -10452,6 +11367,141 @@ public final class JobOuterClass {
       return pythonFileUris_.getByteString(index);
     }
 
+    public static final int PACKAGES_FIELD_NUMBER = 8;
+    private com.google.protobuf.LazyStringList packages_;
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 8;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPackagesList() {
+      return packages_;
+    }
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 8;</code>
+     */
+    public int getPackagesCount() {
+      return packages_.size();
+    }
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 8;</code>
+     */
+    public java.lang.String getPackages(int index) {
+      return packages_.get(index);
+    }
+    /**
+     * <pre>
+     * List of maven coordinates of jars to include on the driver and executor classpaths.
+     * </pre>
+     *
+     * <code>repeated string packages = 8;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPackagesBytes(int index) {
+      return packages_.getByteString(index);
+    }
+
+    public static final int REPOSITORIES_FIELD_NUMBER = 9;
+    private com.google.protobuf.LazyStringList repositories_;
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 9;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getRepositoriesList() {
+      return repositories_;
+    }
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 9;</code>
+     */
+    public int getRepositoriesCount() {
+      return repositories_.size();
+    }
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 9;</code>
+     */
+    public java.lang.String getRepositories(int index) {
+      return repositories_.get(index);
+    }
+    /**
+     * <pre>
+     * List of additional remote repositories to search for the maven coordinates given with --packages.
+     * </pre>
+     *
+     * <code>repeated string repositories = 9;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRepositoriesBytes(int index) {
+      return repositories_.getByteString(index);
+    }
+
+    public static final int EXCLUDE_PACKAGES_FIELD_NUMBER = 10;
+    private com.google.protobuf.LazyStringList excludePackages_;
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 10;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getExcludePackagesList() {
+      return excludePackages_;
+    }
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 10;</code>
+     */
+    public int getExcludePackagesCount() {
+      return excludePackages_.size();
+    }
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 10;</code>
+     */
+    public java.lang.String getExcludePackages(int index) {
+      return excludePackages_.get(index);
+    }
+    /**
+     * <pre>
+     * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+     * </pre>
+     *
+     * <code>repeated string exclude_packages = 10;</code>
+     */
+    public com.google.protobuf.ByteString
+        getExcludePackagesBytes(int index) {
+      return excludePackages_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10489,6 +11539,15 @@ public final class JobOuterClass {
       }
       for (int i = 0; i < pythonFileUris_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, pythonFileUris_.getRaw(i));
+      }
+      for (int i = 0; i < packages_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, packages_.getRaw(i));
+      }
+      for (int i = 0; i < repositories_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, repositories_.getRaw(i));
+      }
+      for (int i = 0; i < excludePackages_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, excludePackages_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -10552,6 +11611,30 @@ public final class JobOuterClass {
         size += dataSize;
         size += 1 * getPythonFileUrisList().size();
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < packages_.size(); i++) {
+          dataSize += computeStringSizeNoTag(packages_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPackagesList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < repositories_.size(); i++) {
+          dataSize += computeStringSizeNoTag(repositories_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getRepositoriesList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < excludePackages_.size(); i++) {
+          dataSize += computeStringSizeNoTag(excludePackages_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getExcludePackagesList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -10582,6 +11665,12 @@ public final class JobOuterClass {
           .equals(other.getMainPythonFileUri());
       result = result && getPythonFileUrisList()
           .equals(other.getPythonFileUrisList());
+      result = result && getPackagesList()
+          .equals(other.getPackagesList());
+      result = result && getRepositoriesList()
+          .equals(other.getRepositoriesList());
+      result = result && getExcludePackagesList()
+          .equals(other.getExcludePackagesList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -10618,6 +11707,18 @@ public final class JobOuterClass {
       if (getPythonFileUrisCount() > 0) {
         hash = (37 * hash) + PYTHON_FILE_URIS_FIELD_NUMBER;
         hash = (53 * hash) + getPythonFileUrisList().hashCode();
+      }
+      if (getPackagesCount() > 0) {
+        hash = (37 * hash) + PACKAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getPackagesList().hashCode();
+      }
+      if (getRepositoriesCount() > 0) {
+        hash = (37 * hash) + REPOSITORIES_FIELD_NUMBER;
+        hash = (53 * hash) + getRepositoriesList().hashCode();
+      }
+      if (getExcludePackagesCount() > 0) {
+        hash = (37 * hash) + EXCLUDE_PACKAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getExcludePackagesList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10787,6 +11888,12 @@ public final class JobOuterClass {
 
         pythonFileUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000040);
+        packages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        repositories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        excludePackages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
 
@@ -10843,6 +11950,21 @@ public final class JobOuterClass {
           bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.pythonFileUris_ = pythonFileUris_;
+        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          packages_ = packages_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000080);
+        }
+        result.packages_ = packages_;
+        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          repositories_ = repositories_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000100);
+        }
+        result.repositories_ = repositories_;
+        if (((bitField0_ & 0x00000200) == 0x00000200)) {
+          excludePackages_ = excludePackages_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000200);
+        }
+        result.excludePackages_ = excludePackages_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -10945,6 +12067,36 @@ public final class JobOuterClass {
           } else {
             ensurePythonFileUrisIsMutable();
             pythonFileUris_.addAll(other.pythonFileUris_);
+          }
+          onChanged();
+        }
+        if (!other.packages_.isEmpty()) {
+          if (packages_.isEmpty()) {
+            packages_ = other.packages_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+          } else {
+            ensurePackagesIsMutable();
+            packages_.addAll(other.packages_);
+          }
+          onChanged();
+        }
+        if (!other.repositories_.isEmpty()) {
+          if (repositories_.isEmpty()) {
+            repositories_ = other.repositories_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+          } else {
+            ensureRepositoriesIsMutable();
+            repositories_.addAll(other.repositories_);
+          }
+          onChanged();
+        }
+        if (!other.excludePackages_.isEmpty()) {
+          if (excludePackages_.isEmpty()) {
+            excludePackages_ = other.excludePackages_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+          } else {
+            ensureExcludePackagesIsMutable();
+            excludePackages_.addAll(other.excludePackages_);
           }
           onChanged();
         }
@@ -11864,6 +13016,396 @@ public final class JobOuterClass {
   checkByteStringIsUtf8(value);
         ensurePythonFileUrisIsMutable();
         pythonFileUris_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList packages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensurePackagesIsMutable() {
+        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+          packages_ = new com.google.protobuf.LazyStringArrayList(packages_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 8;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPackagesList() {
+        return packages_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 8;</code>
+       */
+      public int getPackagesCount() {
+        return packages_.size();
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 8;</code>
+       */
+      public java.lang.String getPackages(int index) {
+        return packages_.get(index);
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 8;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPackagesBytes(int index) {
+        return packages_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 8;</code>
+       */
+      public Builder setPackages(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePackagesIsMutable();
+        packages_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 8;</code>
+       */
+      public Builder addPackages(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePackagesIsMutable();
+        packages_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 8;</code>
+       */
+      public Builder addAllPackages(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePackagesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, packages_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 8;</code>
+       */
+      public Builder clearPackages() {
+        packages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of maven coordinates of jars to include on the driver and executor classpaths.
+       * </pre>
+       *
+       * <code>repeated string packages = 8;</code>
+       */
+      public Builder addPackagesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensurePackagesIsMutable();
+        packages_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList repositories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureRepositoriesIsMutable() {
+        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+          repositories_ = new com.google.protobuf.LazyStringArrayList(repositories_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 9;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getRepositoriesList() {
+        return repositories_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 9;</code>
+       */
+      public int getRepositoriesCount() {
+        return repositories_.size();
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 9;</code>
+       */
+      public java.lang.String getRepositories(int index) {
+        return repositories_.get(index);
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 9;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRepositoriesBytes(int index) {
+        return repositories_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 9;</code>
+       */
+      public Builder setRepositories(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRepositoriesIsMutable();
+        repositories_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 9;</code>
+       */
+      public Builder addRepositories(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRepositoriesIsMutable();
+        repositories_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 9;</code>
+       */
+      public Builder addAllRepositories(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureRepositoriesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, repositories_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 9;</code>
+       */
+      public Builder clearRepositories() {
+        repositories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of additional remote repositories to search for the maven coordinates given with --packages.
+       * </pre>
+       *
+       * <code>repeated string repositories = 9;</code>
+       */
+      public Builder addRepositoriesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureRepositoriesIsMutable();
+        repositories_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList excludePackages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureExcludePackagesIsMutable() {
+        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+          excludePackages_ = new com.google.protobuf.LazyStringArrayList(excludePackages_);
+          bitField0_ |= 0x00000200;
+         }
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 10;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getExcludePackagesList() {
+        return excludePackages_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 10;</code>
+       */
+      public int getExcludePackagesCount() {
+        return excludePackages_.size();
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 10;</code>
+       */
+      public java.lang.String getExcludePackages(int index) {
+        return excludePackages_.get(index);
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 10;</code>
+       */
+      public com.google.protobuf.ByteString
+          getExcludePackagesBytes(int index) {
+        return excludePackages_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 10;</code>
+       */
+      public Builder setExcludePackages(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureExcludePackagesIsMutable();
+        excludePackages_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 10;</code>
+       */
+      public Builder addExcludePackages(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureExcludePackagesIsMutable();
+        excludePackages_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 10;</code>
+       */
+      public Builder addAllExcludePackages(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureExcludePackagesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, excludePackages_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 10;</code>
+       */
+      public Builder clearExcludePackages() {
+        excludePackages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
+       * </pre>
+       *
+       * <code>repeated string exclude_packages = 10;</code>
+       */
+      public Builder addExcludePackagesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureExcludePackagesIsMutable();
+        excludePackages_.add(value);
         onChanged();
         return this;
       }
@@ -14590,36 +16132,40 @@ public final class JobOuterClass {
       "roc.manager.v1.MapreduceJob.PropertiesEn" +
       "try\022\033\n\021main_jar_file_uri\030\006 \001(\tH\000\022\024\n\nmain" +
       "_class\030\007 \001(\tH\000\0321\n\017PropertiesEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\010\n\006driver\"\212\002\n\010" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\010\n\006driver\"\314\002\n\010" +
       "SparkJob\022\014\n\004args\030\001 \003(\t\022\025\n\rjar_file_uris\030" +
       "\002 \003(\t\022\021\n\tfile_uris\030\003 \003(\t\022\024\n\014archive_uris" +
       "\030\004 \003(\t\022N\n\nproperties\030\005 \003(\0132:.yandex.clou" +
       "d.dataproc.manager.v1.SparkJob.Propertie" +
       "sEntry\022\031\n\021main_jar_file_uri\030\006 \001(\t\022\022\n\nmai" +
-      "n_class\030\007 \001(\t\0321\n\017PropertiesEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\227\002\n\nPysparkJob\022" +
-      "\014\n\004args\030\001 \003(\t\022\025\n\rjar_file_uris\030\002 \003(\t\022\021\n\t" +
-      "file_uris\030\003 \003(\t\022\024\n\014archive_uris\030\004 \003(\t\022P\n" +
-      "\nproperties\030\005 \003(\0132<.yandex.cloud.datapro" +
-      "c.manager.v1.PysparkJob.PropertiesEntry\022" +
-      "\034\n\024main_python_file_uri\030\006 \001(\t\022\030\n\020python_" +
-      "file_uris\030\007 \003(\t\0321\n\017PropertiesEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\034\n\tQueryList\022" +
-      "\017\n\007queries\030\001 \003(\t\"\274\003\n\007HiveJob\022M\n\nproperti" +
-      "es\030\001 \003(\01329.yandex.cloud.dataproc.manager" +
-      ".v1.HiveJob.PropertiesEntry\022\033\n\023continue_" +
-      "on_failure\030\002 \001(\010\022X\n\020script_variables\030\003 \003" +
-      "(\0132>.yandex.cloud.dataproc.manager.v1.Hi" +
-      "veJob.ScriptVariablesEntry\022\025\n\rjar_file_u" +
-      "ris\030\004 \003(\t\022\030\n\016query_file_uri\030\005 \001(\tH\000\022A\n\nq" +
-      "uery_list\030\006 \001(\0132+.yandex.cloud.dataproc." +
-      "manager.v1.QueryListH\000\0321\n\017PropertiesEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0326\n\024Scr" +
-      "iptVariablesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001B\014\n\nquery_typeB}\n$yandex.cloud." +
-      "api.dataproc.manager.v1ZUgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/datapr" +
-      "oc/manager/v1;dataproc_managerb\006proto3"
+      "n_class\030\007 \001(\t\022\020\n\010packages\030\010 \003(\t\022\024\n\014repos" +
+      "itories\030\t \003(\t\022\030\n\020exclude_packages\030\n \003(\t\032" +
+      "1\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"\331\002\n\nPysparkJob\022\014\n\004args\030\001 \003(\t\022" +
+      "\025\n\rjar_file_uris\030\002 \003(\t\022\021\n\tfile_uris\030\003 \003(" +
+      "\t\022\024\n\014archive_uris\030\004 \003(\t\022P\n\nproperties\030\005 " +
+      "\003(\0132<.yandex.cloud.dataproc.manager.v1.P" +
+      "ysparkJob.PropertiesEntry\022\034\n\024main_python" +
+      "_file_uri\030\006 \001(\t\022\030\n\020python_file_uris\030\007 \003(" +
+      "\t\022\020\n\010packages\030\010 \003(\t\022\024\n\014repositories\030\t \003(" +
+      "\t\022\030\n\020exclude_packages\030\n \003(\t\0321\n\017Propertie" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\034" +
+      "\n\tQueryList\022\017\n\007queries\030\001 \003(\t\"\274\003\n\007HiveJob" +
+      "\022M\n\nproperties\030\001 \003(\01329.yandex.cloud.data" +
+      "proc.manager.v1.HiveJob.PropertiesEntry\022" +
+      "\033\n\023continue_on_failure\030\002 \001(\010\022X\n\020script_v" +
+      "ariables\030\003 \003(\0132>.yandex.cloud.dataproc.m" +
+      "anager.v1.HiveJob.ScriptVariablesEntry\022\025" +
+      "\n\rjar_file_uris\030\004 \003(\t\022\030\n\016query_file_uri\030" +
+      "\005 \001(\tH\000\022A\n\nquery_list\030\006 \001(\0132+.yandex.clo" +
+      "ud.dataproc.manager.v1.QueryListH\000\0321\n\017Pr" +
+      "opertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001\0326\n\024ScriptVariablesEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\nquery_typeB}\n$y" +
+      "andex.cloud.api.dataproc.manager.v1ZUgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/dataproc/manager/v1;dataproc_manag" +
+      "erb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -14669,7 +16215,7 @@ public final class JobOuterClass {
     internal_static_yandex_cloud_dataproc_manager_v1_SparkJob_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_SparkJob_descriptor,
-        new java.lang.String[] { "Args", "JarFileUris", "FileUris", "ArchiveUris", "Properties", "MainJarFileUri", "MainClass", });
+        new java.lang.String[] { "Args", "JarFileUris", "FileUris", "ArchiveUris", "Properties", "MainJarFileUri", "MainClass", "Packages", "Repositories", "ExcludePackages", });
     internal_static_yandex_cloud_dataproc_manager_v1_SparkJob_PropertiesEntry_descriptor =
       internal_static_yandex_cloud_dataproc_manager_v1_SparkJob_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_dataproc_manager_v1_SparkJob_PropertiesEntry_fieldAccessorTable = new
@@ -14681,7 +16227,7 @@ public final class JobOuterClass {
     internal_static_yandex_cloud_dataproc_manager_v1_PysparkJob_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_PysparkJob_descriptor,
-        new java.lang.String[] { "Args", "JarFileUris", "FileUris", "ArchiveUris", "Properties", "MainPythonFileUri", "PythonFileUris", });
+        new java.lang.String[] { "Args", "JarFileUris", "FileUris", "ArchiveUris", "Properties", "MainPythonFileUri", "PythonFileUris", "Packages", "Repositories", "ExcludePackages", });
     internal_static_yandex_cloud_dataproc_manager_v1_PysparkJob_PropertiesEntry_descriptor =
       internal_static_yandex_cloud_dataproc_manager_v1_PysparkJob_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_dataproc_manager_v1_PysparkJob_PropertiesEntry_fieldAccessorTable = new

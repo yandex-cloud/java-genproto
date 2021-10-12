@@ -4035,7 +4035,7 @@ public final class Tts {
 
     /**
      * <pre>
-     * Lenght of the variable in milliseconds.
+     * Length of the variable in milliseconds.
      * </pre>
      *
      * <code>int64 variable_length_ms = 3;</code>
@@ -4191,7 +4191,7 @@ public final class Tts {
     private long variableLengthMs_;
     /**
      * <pre>
-     * Lenght of the variable in milliseconds.
+     * Length of the variable in milliseconds.
      * </pre>
      *
      * <code>int64 variable_length_ms = 3;</code>
@@ -4669,7 +4669,7 @@ public final class Tts {
       private long variableLengthMs_ ;
       /**
        * <pre>
-       * Lenght of the variable in milliseconds.
+       * Length of the variable in milliseconds.
        * </pre>
        *
        * <code>int64 variable_length_ms = 3;</code>
@@ -4679,7 +4679,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Lenght of the variable in milliseconds.
+       * Length of the variable in milliseconds.
        * </pre>
        *
        * <code>int64 variable_length_ms = 3;</code>
@@ -4692,7 +4692,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Lenght of the variable in milliseconds.
+       * Length of the variable in milliseconds.
        * </pre>
        *
        * <code>int64 variable_length_ms = 3;</code>
@@ -8492,7 +8492,7 @@ public final class Tts {
 
     /**
      * <pre>
-     * hint to regulate volume
+     * hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
      * </pre>
      *
      * <code>double volume = 4;</code>
@@ -8751,7 +8751,7 @@ public final class Tts {
     public static final int VOLUME_FIELD_NUMBER = 4;
     /**
      * <pre>
-     * hint to regulate volume
+     * hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
      * </pre>
      *
      * <code>double volume = 4;</code>
@@ -9502,7 +9502,7 @@ public final class Tts {
 
       /**
        * <pre>
-       * hint to regulate volume
+       * hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
        * </pre>
        *
        * <code>double volume = 4;</code>
@@ -9515,7 +9515,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * hint to regulate volume
+       * hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
        * </pre>
        *
        * <code>double volume = 4;</code>
@@ -9528,7 +9528,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * hint to regulate volume
+       * hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
        * </pre>
        *
        * <code>double volume = 4;</code>
@@ -9601,7 +9601,7 @@ public final class Tts {
     /**
      * <pre>
      * The name of the model.
-     * Currently avalible only `general`.
+     * Specifies basic synthesis functionality. Currently should be empty.
      * </pre>
      *
      * <code>string model = 1;</code>
@@ -9610,7 +9610,7 @@ public final class Tts {
     /**
      * <pre>
      * The name of the model.
-     * Currently avalible only `general`.
+     * Specifies basic synthesis functionality. Currently should be empty.
      * </pre>
      *
      * <code>string model = 1;</code>
@@ -9638,7 +9638,7 @@ public final class Tts {
 
     /**
      * <pre>
-     * Text template instalce, e.g. `{"Hello, {username}" with username="Alice"}`.
+     * Text template instance, e.g. `{"Hello, {username}" with username="Alice"}`.
      * </pre>
      *
      * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
@@ -9646,7 +9646,7 @@ public final class Tts {
     boolean hasTextTemplate();
     /**
      * <pre>
-     * Text template instalce, e.g. `{"Hello, {username}" with username="Alice"}`.
+     * Text template instance, e.g. `{"Hello, {username}" with username="Alice"}`.
      * </pre>
      *
      * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
@@ -9654,7 +9654,7 @@ public final class Tts {
     yandex.cloud.api.ai.tts.v3.Tts.TextTemplate getTextTemplate();
     /**
      * <pre>
-     * Text template instalce, e.g. `{"Hello, {username}" with username="Alice"}`.
+     * Text template instance, e.g. `{"Hello, {username}" with username="Alice"}`.
      * </pre>
      *
      * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
@@ -9732,7 +9732,7 @@ public final class Tts {
 
     /**
      * <pre>
-     * Optional. Default: MAX_PEAK, type of loudness normalization.
+     * Optional. Default: LUFS, type of loudness normalization, default value -19.
      * </pre>
      *
      * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -9740,7 +9740,7 @@ public final class Tts {
     int getLoudnessNormalizationTypeValue();
     /**
      * <pre>
-     * Optional. Default: MAX_PEAK, type of loudness normalization.
+     * Optional. Default: LUFS, type of loudness normalization, default value -19.
      * </pre>
      *
      * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -10035,7 +10035,7 @@ public final class Tts {
     /**
      * <pre>
      * The name of the model.
-     * Currently avalible only `general`.
+     * Specifies basic synthesis functionality. Currently should be empty.
      * </pre>
      *
      * <code>string model = 1;</code>
@@ -10055,7 +10055,7 @@ public final class Tts {
     /**
      * <pre>
      * The name of the model.
-     * Currently avalible only `general`.
+     * Specifies basic synthesis functionality. Currently should be empty.
      * </pre>
      *
      * <code>string model = 1;</code>
@@ -10128,7 +10128,7 @@ public final class Tts {
     public static final int TEXT_TEMPLATE_FIELD_NUMBER = 3;
     /**
      * <pre>
-     * Text template instalce, e.g. `{"Hello, {username}" with username="Alice"}`.
+     * Text template instance, e.g. `{"Hello, {username}" with username="Alice"}`.
      * </pre>
      *
      * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
@@ -10138,7 +10138,7 @@ public final class Tts {
     }
     /**
      * <pre>
-     * Text template instalce, e.g. `{"Hello, {username}" with username="Alice"}`.
+     * Text template instance, e.g. `{"Hello, {username}" with username="Alice"}`.
      * </pre>
      *
      * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
@@ -10151,7 +10151,7 @@ public final class Tts {
     }
     /**
      * <pre>
-     * Text template instalce, e.g. `{"Hello, {username}" with username="Alice"}`.
+     * Text template instance, e.g. `{"Hello, {username}" with username="Alice"}`.
      * </pre>
      *
      * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
@@ -10255,7 +10255,7 @@ public final class Tts {
     private int loudnessNormalizationType_;
     /**
      * <pre>
-     * Optional. Default: MAX_PEAK, type of loudness normalization.
+     * Optional. Default: LUFS, type of loudness normalization, default value -19.
      * </pre>
      *
      * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -10265,7 +10265,7 @@ public final class Tts {
     }
     /**
      * <pre>
-     * Optional. Default: MAX_PEAK, type of loudness normalization.
+     * Optional. Default: LUFS, type of loudness normalization, default value -19.
      * </pre>
      *
      * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -10771,7 +10771,7 @@ public final class Tts {
       /**
        * <pre>
        * The name of the model.
-       * Currently avalible only `general`.
+       * Specifies basic synthesis functionality. Currently should be empty.
        * </pre>
        *
        * <code>string model = 1;</code>
@@ -10791,7 +10791,7 @@ public final class Tts {
       /**
        * <pre>
        * The name of the model.
-       * Currently avalible only `general`.
+       * Specifies basic synthesis functionality. Currently should be empty.
        * </pre>
        *
        * <code>string model = 1;</code>
@@ -10812,7 +10812,7 @@ public final class Tts {
       /**
        * <pre>
        * The name of the model.
-       * Currently avalible only `general`.
+       * Specifies basic synthesis functionality. Currently should be empty.
        * </pre>
        *
        * <code>string model = 1;</code>
@@ -10830,7 +10830,7 @@ public final class Tts {
       /**
        * <pre>
        * The name of the model.
-       * Currently avalible only `general`.
+       * Specifies basic synthesis functionality. Currently should be empty.
        * </pre>
        *
        * <code>string model = 1;</code>
@@ -10844,7 +10844,7 @@ public final class Tts {
       /**
        * <pre>
        * The name of the model.
-       * Currently avalible only `general`.
+       * Specifies basic synthesis functionality. Currently should be empty.
        * </pre>
        *
        * <code>string model = 1;</code>
@@ -10965,7 +10965,7 @@ public final class Tts {
           yandex.cloud.api.ai.tts.v3.Tts.TextTemplate, yandex.cloud.api.ai.tts.v3.Tts.TextTemplate.Builder, yandex.cloud.api.ai.tts.v3.Tts.TextTemplateOrBuilder> textTemplateBuilder_;
       /**
        * <pre>
-       * Text template instalce, e.g. `{"Hello, {username}" with username="Alice"}`.
+       * Text template instance, e.g. `{"Hello, {username}" with username="Alice"}`.
        * </pre>
        *
        * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
@@ -10975,7 +10975,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Text template instalce, e.g. `{"Hello, {username}" with username="Alice"}`.
+       * Text template instance, e.g. `{"Hello, {username}" with username="Alice"}`.
        * </pre>
        *
        * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
@@ -10995,7 +10995,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Text template instalce, e.g. `{"Hello, {username}" with username="Alice"}`.
+       * Text template instance, e.g. `{"Hello, {username}" with username="Alice"}`.
        * </pre>
        *
        * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
@@ -11015,7 +11015,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Text template instalce, e.g. `{"Hello, {username}" with username="Alice"}`.
+       * Text template instance, e.g. `{"Hello, {username}" with username="Alice"}`.
        * </pre>
        *
        * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
@@ -11033,7 +11033,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Text template instalce, e.g. `{"Hello, {username}" with username="Alice"}`.
+       * Text template instance, e.g. `{"Hello, {username}" with username="Alice"}`.
        * </pre>
        *
        * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
@@ -11059,7 +11059,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Text template instalce, e.g. `{"Hello, {username}" with username="Alice"}`.
+       * Text template instance, e.g. `{"Hello, {username}" with username="Alice"}`.
        * </pre>
        *
        * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
@@ -11082,7 +11082,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Text template instalce, e.g. `{"Hello, {username}" with username="Alice"}`.
+       * Text template instance, e.g. `{"Hello, {username}" with username="Alice"}`.
        * </pre>
        *
        * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
@@ -11092,7 +11092,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Text template instalce, e.g. `{"Hello, {username}" with username="Alice"}`.
+       * Text template instance, e.g. `{"Hello, {username}" with username="Alice"}`.
        * </pre>
        *
        * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
@@ -11109,7 +11109,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Text template instalce, e.g. `{"Hello, {username}" with username="Alice"}`.
+       * Text template instance, e.g. `{"Hello, {username}" with username="Alice"}`.
        * </pre>
        *
        * <code>.speechkit.tts.v3.TextTemplate text_template = 3;</code>
@@ -11601,7 +11601,7 @@ public final class Tts {
       private int loudnessNormalizationType_ = 0;
       /**
        * <pre>
-       * Optional. Default: MAX_PEAK, type of loudness normalization.
+       * Optional. Default: LUFS, type of loudness normalization, default value -19.
        * </pre>
        *
        * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -11611,7 +11611,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Optional. Default: MAX_PEAK, type of loudness normalization.
+       * Optional. Default: LUFS, type of loudness normalization, default value -19.
        * </pre>
        *
        * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -11623,7 +11623,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Optional. Default: MAX_PEAK, type of loudness normalization.
+       * Optional. Default: LUFS, type of loudness normalization, default value -19.
        * </pre>
        *
        * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -11635,7 +11635,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Optional. Default: MAX_PEAK, type of loudness normalization.
+       * Optional. Default: LUFS, type of loudness normalization, default value -19.
        * </pre>
        *
        * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -11651,7 +11651,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Optional. Default: MAX_PEAK, type of loudness normalization.
+       * Optional. Default: LUFS, type of loudness normalization, default value -19.
        * </pre>
        *
        * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>

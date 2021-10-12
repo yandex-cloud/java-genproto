@@ -158,6 +158,70 @@ public final class SubnetServiceGrpc {
      return getUpdateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getAddCidrBlocksMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddCidrBlocks",
+      requestType = yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getAddCidrBlocksMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getAddCidrBlocksMethod;
+    if ((getAddCidrBlocksMethod = SubnetServiceGrpc.getAddCidrBlocksMethod) == null) {
+      synchronized (SubnetServiceGrpc.class) {
+        if ((getAddCidrBlocksMethod = SubnetServiceGrpc.getAddCidrBlocksMethod) == null) {
+          SubnetServiceGrpc.getAddCidrBlocksMethod = getAddCidrBlocksMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.vpc.v1.SubnetService", "AddCidrBlocks"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("AddCidrBlocks"))
+                  .build();
+          }
+        }
+     }
+     return getAddCidrBlocksMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRemoveCidrBlocksMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveCidrBlocks",
+      requestType = yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRemoveCidrBlocksMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getRemoveCidrBlocksMethod;
+    if ((getRemoveCidrBlocksMethod = SubnetServiceGrpc.getRemoveCidrBlocksMethod) == null) {
+      synchronized (SubnetServiceGrpc.class) {
+        if ((getRemoveCidrBlocksMethod = SubnetServiceGrpc.getRemoveCidrBlocksMethod) == null) {
+          SubnetServiceGrpc.getRemoveCidrBlocksMethod = getRemoveCidrBlocksMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.vpc.v1.SubnetService", "RemoveCidrBlocks"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("RemoveCidrBlocks"))
+                  .build();
+          }
+        }
+     }
+     return getRemoveCidrBlocksMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.DeleteSubnetRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
 
@@ -361,6 +425,28 @@ public final class SubnetServiceGrpc {
 
     /**
      * <pre>
+     * Adds CIDR blocks to the specified subnet.
+     * Method starts an asynchronous operation that can be cancelled while it is in progress.
+     * </pre>
+     */
+    public void addCidrBlocks(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getAddCidrBlocksMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Removes CIDR blocks from the specified subnet.
+     * Method starts an asynchronous operation that can be cancelled while it is in progress.
+     * </pre>
+     */
+    public void removeCidrBlocks(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getRemoveCidrBlocksMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified subnet.
      * </pre>
      */
@@ -429,6 +515,20 @@ public final class SubnetServiceGrpc {
                 yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UpdateSubnetRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
+          .addMethod(
+            getAddCidrBlocksMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_ADD_CIDR_BLOCKS)))
+          .addMethod(
+            getRemoveCidrBlocksMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_REMOVE_CIDR_BLOCKS)))
           .addMethod(
             getDeleteMethod(),
             asyncUnaryCall(
@@ -527,6 +627,30 @@ public final class SubnetServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Adds CIDR blocks to the specified subnet.
+     * Method starts an asynchronous operation that can be cancelled while it is in progress.
+     * </pre>
+     */
+    public void addCidrBlocks(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getAddCidrBlocksMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Removes CIDR blocks from the specified subnet.
+     * Method starts an asynchronous operation that can be cancelled while it is in progress.
+     * </pre>
+     */
+    public void removeCidrBlocks(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getRemoveCidrBlocksMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -640,6 +764,28 @@ public final class SubnetServiceGrpc {
 
     /**
      * <pre>
+     * Adds CIDR blocks to the specified subnet.
+     * Method starts an asynchronous operation that can be cancelled while it is in progress.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation addCidrBlocks(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getAddCidrBlocksMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Removes CIDR blocks from the specified subnet.
+     * Method starts an asynchronous operation that can be cancelled while it is in progress.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation removeCidrBlocks(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getRemoveCidrBlocksMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified subnet.
      * </pre>
      */
@@ -749,6 +895,30 @@ public final class SubnetServiceGrpc {
 
     /**
      * <pre>
+     * Adds CIDR blocks to the specified subnet.
+     * Method starts an asynchronous operation that can be cancelled while it is in progress.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addCidrBlocks(
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getAddCidrBlocksMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Removes CIDR blocks from the specified subnet.
+     * Method starts an asynchronous operation that can be cancelled while it is in progress.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeCidrBlocks(
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getRemoveCidrBlocksMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified subnet.
      * </pre>
      */
@@ -796,10 +966,12 @@ public final class SubnetServiceGrpc {
   private static final int METHODID_LIST = 1;
   private static final int METHODID_CREATE = 2;
   private static final int METHODID_UPDATE = 3;
-  private static final int METHODID_DELETE = 4;
-  private static final int METHODID_LIST_OPERATIONS = 5;
-  private static final int METHODID_MOVE = 6;
-  private static final int METHODID_LIST_USED_ADDRESSES = 7;
+  private static final int METHODID_ADD_CIDR_BLOCKS = 4;
+  private static final int METHODID_REMOVE_CIDR_BLOCKS = 5;
+  private static final int METHODID_DELETE = 6;
+  private static final int METHODID_LIST_OPERATIONS = 7;
+  private static final int METHODID_MOVE = 8;
+  private static final int METHODID_LIST_USED_ADDRESSES = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -832,6 +1004,14 @@ public final class SubnetServiceGrpc {
           break;
         case METHODID_UPDATE:
           serviceImpl.update((yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UpdateSubnetRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_ADD_CIDR_BLOCKS:
+          serviceImpl.addCidrBlocks((yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_REMOVE_CIDR_BLOCKS:
+          serviceImpl.removeCidrBlocks((yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_DELETE:
@@ -915,6 +1095,8 @@ public final class SubnetServiceGrpc {
               .addMethod(getListMethod())
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
+              .addMethod(getAddCidrBlocksMethod())
+              .addMethod(getRemoveCidrBlocksMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getListOperationsMethod())
               .addMethod(getMoveMethod())

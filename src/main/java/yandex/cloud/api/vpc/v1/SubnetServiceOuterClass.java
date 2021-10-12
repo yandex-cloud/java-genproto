@@ -8292,6 +8292,2942 @@ public final class SubnetServiceOuterClass {
 
   }
 
+  public interface AddSubnetCidrBlocksRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.vpc.v1.AddSubnetCidrBlocksRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Subnet resource that is being updated.
+     * </pre>
+     *
+     * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getSubnetId();
+    /**
+     * <pre>
+     * ID of the Subnet resource that is being updated.
+     * </pre>
+     *
+     * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdBytes();
+
+    /**
+     * <pre>
+     * CIDR block.
+     * The range of internal addresses that should be added to this subnet.
+     * For example, 10.0.0.0/22 or 192.168.0.0/24.
+     * Minimum subnet size is /28, maximum subnet size is /16.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 2;</code>
+     */
+    java.util.List<java.lang.String>
+        getV4CidrBlocksList();
+    /**
+     * <pre>
+     * CIDR block.
+     * The range of internal addresses that should be added to this subnet.
+     * For example, 10.0.0.0/22 or 192.168.0.0/24.
+     * Minimum subnet size is /28, maximum subnet size is /16.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 2;</code>
+     */
+    int getV4CidrBlocksCount();
+    /**
+     * <pre>
+     * CIDR block.
+     * The range of internal addresses that should be added to this subnet.
+     * For example, 10.0.0.0/22 or 192.168.0.0/24.
+     * Minimum subnet size is /28, maximum subnet size is /16.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 2;</code>
+     */
+    java.lang.String getV4CidrBlocks(int index);
+    /**
+     * <pre>
+     * CIDR block.
+     * The range of internal addresses that should be added to this subnet.
+     * For example, 10.0.0.0/22 or 192.168.0.0/24.
+     * Minimum subnet size is /28, maximum subnet size is /16.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getV4CidrBlocksBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.vpc.v1.AddSubnetCidrBlocksRequest}
+   */
+  public  static final class AddSubnetCidrBlocksRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.AddSubnetCidrBlocksRequest)
+      AddSubnetCidrBlocksRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddSubnetCidrBlocksRequest.newBuilder() to construct.
+    private AddSubnetCidrBlocksRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddSubnetCidrBlocksRequest() {
+      subnetId_ = "";
+      v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AddSubnetCidrBlocksRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subnetId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                v4CidrBlocks_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              v4CidrBlocks_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          v4CidrBlocks_ = v4CidrBlocks_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_AddSubnetCidrBlocksRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_AddSubnetCidrBlocksRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SUBNET_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object subnetId_;
+    /**
+     * <pre>
+     * ID of the Subnet resource that is being updated.
+     * </pre>
+     *
+     * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getSubnetId() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subnetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Subnet resource that is being updated.
+     * </pre>
+     *
+     * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getSubnetIdBytes() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subnetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int V4_CIDR_BLOCKS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList v4CidrBlocks_;
+    /**
+     * <pre>
+     * CIDR block.
+     * The range of internal addresses that should be added to this subnet.
+     * For example, 10.0.0.0/22 or 192.168.0.0/24.
+     * Minimum subnet size is /28, maximum subnet size is /16.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 2;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getV4CidrBlocksList() {
+      return v4CidrBlocks_;
+    }
+    /**
+     * <pre>
+     * CIDR block.
+     * The range of internal addresses that should be added to this subnet.
+     * For example, 10.0.0.0/22 or 192.168.0.0/24.
+     * Minimum subnet size is /28, maximum subnet size is /16.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 2;</code>
+     */
+    public int getV4CidrBlocksCount() {
+      return v4CidrBlocks_.size();
+    }
+    /**
+     * <pre>
+     * CIDR block.
+     * The range of internal addresses that should be added to this subnet.
+     * For example, 10.0.0.0/22 or 192.168.0.0/24.
+     * Minimum subnet size is /28, maximum subnet size is /16.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 2;</code>
+     */
+    public java.lang.String getV4CidrBlocks(int index) {
+      return v4CidrBlocks_.get(index);
+    }
+    /**
+     * <pre>
+     * CIDR block.
+     * The range of internal addresses that should be added to this subnet.
+     * For example, 10.0.0.0/22 or 192.168.0.0/24.
+     * Minimum subnet size is /28, maximum subnet size is /16.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getV4CidrBlocksBytes(int index) {
+      return v4CidrBlocks_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getSubnetIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
+      }
+      for (int i = 0; i < v4CidrBlocks_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, v4CidrBlocks_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getSubnetIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < v4CidrBlocks_.size(); i++) {
+          dataSize += computeStringSizeNoTag(v4CidrBlocks_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getV4CidrBlocksList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest) obj;
+
+      boolean result = true;
+      result = result && getSubnetId()
+          .equals(other.getSubnetId());
+      result = result && getV4CidrBlocksList()
+          .equals(other.getV4CidrBlocksList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubnetId().hashCode();
+      if (getV4CidrBlocksCount() > 0) {
+        hash = (37 * hash) + V4_CIDR_BLOCKS_FIELD_NUMBER;
+        hash = (53 * hash) + getV4CidrBlocksList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.vpc.v1.AddSubnetCidrBlocksRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.vpc.v1.AddSubnetCidrBlocksRequest)
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_AddSubnetCidrBlocksRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_AddSubnetCidrBlocksRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        subnetId_ = "";
+
+        v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_AddSubnetCidrBlocksRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest build() {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest buildPartial() {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest result = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.subnetId_ = subnetId_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          v4CidrBlocks_ = v4CidrBlocks_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.v4CidrBlocks_ = v4CidrBlocks_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest) {
+          return mergeFrom((yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest other) {
+        if (other == yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest.getDefaultInstance()) return this;
+        if (!other.getSubnetId().isEmpty()) {
+          subnetId_ = other.subnetId_;
+          onChanged();
+        }
+        if (!other.v4CidrBlocks_.isEmpty()) {
+          if (v4CidrBlocks_.isEmpty()) {
+            v4CidrBlocks_ = other.v4CidrBlocks_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureV4CidrBlocksIsMutable();
+            v4CidrBlocks_.addAll(other.v4CidrBlocks_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object subnetId_ = "";
+      /**
+       * <pre>
+       * ID of the Subnet resource that is being updated.
+       * </pre>
+       *
+       * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getSubnetId() {
+        java.lang.Object ref = subnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Subnet resource that is being updated.
+       * </pre>
+       *
+       * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdBytes() {
+        java.lang.Object ref = subnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Subnet resource that is being updated.
+       * </pre>
+       *
+       * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Subnet resource that is being updated.
+       * </pre>
+       *
+       * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearSubnetId() {
+        
+        subnetId_ = getDefaultInstance().getSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Subnet resource that is being updated.
+       * </pre>
+       *
+       * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureV4CidrBlocksIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          v4CidrBlocks_ = new com.google.protobuf.LazyStringArrayList(v4CidrBlocks_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * CIDR block.
+       * The range of internal addresses that should be added to this subnet.
+       * For example, 10.0.0.0/22 or 192.168.0.0/24.
+       * Minimum subnet size is /28, maximum subnet size is /16.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 2;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getV4CidrBlocksList() {
+        return v4CidrBlocks_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * CIDR block.
+       * The range of internal addresses that should be added to this subnet.
+       * For example, 10.0.0.0/22 or 192.168.0.0/24.
+       * Minimum subnet size is /28, maximum subnet size is /16.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 2;</code>
+       */
+      public int getV4CidrBlocksCount() {
+        return v4CidrBlocks_.size();
+      }
+      /**
+       * <pre>
+       * CIDR block.
+       * The range of internal addresses that should be added to this subnet.
+       * For example, 10.0.0.0/22 or 192.168.0.0/24.
+       * Minimum subnet size is /28, maximum subnet size is /16.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 2;</code>
+       */
+      public java.lang.String getV4CidrBlocks(int index) {
+        return v4CidrBlocks_.get(index);
+      }
+      /**
+       * <pre>
+       * CIDR block.
+       * The range of internal addresses that should be added to this subnet.
+       * For example, 10.0.0.0/22 or 192.168.0.0/24.
+       * Minimum subnet size is /28, maximum subnet size is /16.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getV4CidrBlocksBytes(int index) {
+        return v4CidrBlocks_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * CIDR block.
+       * The range of internal addresses that should be added to this subnet.
+       * For example, 10.0.0.0/22 or 192.168.0.0/24.
+       * Minimum subnet size is /28, maximum subnet size is /16.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 2;</code>
+       */
+      public Builder setV4CidrBlocks(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureV4CidrBlocksIsMutable();
+        v4CidrBlocks_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CIDR block.
+       * The range of internal addresses that should be added to this subnet.
+       * For example, 10.0.0.0/22 or 192.168.0.0/24.
+       * Minimum subnet size is /28, maximum subnet size is /16.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 2;</code>
+       */
+      public Builder addV4CidrBlocks(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureV4CidrBlocksIsMutable();
+        v4CidrBlocks_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CIDR block.
+       * The range of internal addresses that should be added to this subnet.
+       * For example, 10.0.0.0/22 or 192.168.0.0/24.
+       * Minimum subnet size is /28, maximum subnet size is /16.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 2;</code>
+       */
+      public Builder addAllV4CidrBlocks(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureV4CidrBlocksIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, v4CidrBlocks_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CIDR block.
+       * The range of internal addresses that should be added to this subnet.
+       * For example, 10.0.0.0/22 or 192.168.0.0/24.
+       * Minimum subnet size is /28, maximum subnet size is /16.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 2;</code>
+       */
+      public Builder clearV4CidrBlocks() {
+        v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CIDR block.
+       * The range of internal addresses that should be added to this subnet.
+       * For example, 10.0.0.0/22 or 192.168.0.0/24.
+       * Minimum subnet size is /28, maximum subnet size is /16.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 2;</code>
+       */
+      public Builder addV4CidrBlocksBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureV4CidrBlocksIsMutable();
+        v4CidrBlocks_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.vpc.v1.AddSubnetCidrBlocksRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.vpc.v1.AddSubnetCidrBlocksRequest)
+    private static final yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest();
+    }
+
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddSubnetCidrBlocksRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AddSubnetCidrBlocksRequest>() {
+      @java.lang.Override
+      public AddSubnetCidrBlocksRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AddSubnetCidrBlocksRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddSubnetCidrBlocksRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddSubnetCidrBlocksRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddSubnetCidrBlocksMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.vpc.v1.AddSubnetCidrBlocksMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Subnet resource that is being updated.
+     * </pre>
+     *
+     * <code>string subnet_id = 1;</code>
+     */
+    java.lang.String getSubnetId();
+    /**
+     * <pre>
+     * ID of the Subnet resource that is being updated.
+     * </pre>
+     *
+     * <code>string subnet_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.vpc.v1.AddSubnetCidrBlocksMetadata}
+   */
+  public  static final class AddSubnetCidrBlocksMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.AddSubnetCidrBlocksMetadata)
+      AddSubnetCidrBlocksMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddSubnetCidrBlocksMetadata.newBuilder() to construct.
+    private AddSubnetCidrBlocksMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddSubnetCidrBlocksMetadata() {
+      subnetId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AddSubnetCidrBlocksMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subnetId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_AddSubnetCidrBlocksMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_AddSubnetCidrBlocksMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata.Builder.class);
+    }
+
+    public static final int SUBNET_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object subnetId_;
+    /**
+     * <pre>
+     * ID of the Subnet resource that is being updated.
+     * </pre>
+     *
+     * <code>string subnet_id = 1;</code>
+     */
+    public java.lang.String getSubnetId() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subnetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Subnet resource that is being updated.
+     * </pre>
+     *
+     * <code>string subnet_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSubnetIdBytes() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subnetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getSubnetIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getSubnetIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata) obj;
+
+      boolean result = true;
+      result = result && getSubnetId()
+          .equals(other.getSubnetId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubnetId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.vpc.v1.AddSubnetCidrBlocksMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.vpc.v1.AddSubnetCidrBlocksMetadata)
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_AddSubnetCidrBlocksMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_AddSubnetCidrBlocksMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        subnetId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_AddSubnetCidrBlocksMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata build() {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata buildPartial() {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata result = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata(this);
+        result.subnetId_ = subnetId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata) {
+          return mergeFrom((yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata other) {
+        if (other == yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata.getDefaultInstance()) return this;
+        if (!other.getSubnetId().isEmpty()) {
+          subnetId_ = other.subnetId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object subnetId_ = "";
+      /**
+       * <pre>
+       * ID of the Subnet resource that is being updated.
+       * </pre>
+       *
+       * <code>string subnet_id = 1;</code>
+       */
+      public java.lang.String getSubnetId() {
+        java.lang.Object ref = subnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Subnet resource that is being updated.
+       * </pre>
+       *
+       * <code>string subnet_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdBytes() {
+        java.lang.Object ref = subnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Subnet resource that is being updated.
+       * </pre>
+       *
+       * <code>string subnet_id = 1;</code>
+       */
+      public Builder setSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Subnet resource that is being updated.
+       * </pre>
+       *
+       * <code>string subnet_id = 1;</code>
+       */
+      public Builder clearSubnetId() {
+        
+        subnetId_ = getDefaultInstance().getSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Subnet resource that is being updated.
+       * </pre>
+       *
+       * <code>string subnet_id = 1;</code>
+       */
+      public Builder setSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.vpc.v1.AddSubnetCidrBlocksMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.vpc.v1.AddSubnetCidrBlocksMetadata)
+    private static final yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata();
+    }
+
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddSubnetCidrBlocksMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<AddSubnetCidrBlocksMetadata>() {
+      @java.lang.Override
+      public AddSubnetCidrBlocksMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AddSubnetCidrBlocksMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddSubnetCidrBlocksMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddSubnetCidrBlocksMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.AddSubnetCidrBlocksMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RemoveSubnetCidrBlocksRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.vpc.v1.RemoveSubnetCidrBlocksRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Subnet resource that is being updated.
+     * </pre>
+     *
+     * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getSubnetId();
+    /**
+     * <pre>
+     * ID of the Subnet resource that is being updated.
+     * </pre>
+     *
+     * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdBytes();
+
+    /**
+     * <pre>
+     * CIDR block.
+     * The range of internal addresses that are removed from this subnet.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 2;</code>
+     */
+    java.util.List<java.lang.String>
+        getV4CidrBlocksList();
+    /**
+     * <pre>
+     * CIDR block.
+     * The range of internal addresses that are removed from this subnet.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 2;</code>
+     */
+    int getV4CidrBlocksCount();
+    /**
+     * <pre>
+     * CIDR block.
+     * The range of internal addresses that are removed from this subnet.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 2;</code>
+     */
+    java.lang.String getV4CidrBlocks(int index);
+    /**
+     * <pre>
+     * CIDR block.
+     * The range of internal addresses that are removed from this subnet.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getV4CidrBlocksBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.vpc.v1.RemoveSubnetCidrBlocksRequest}
+   */
+  public  static final class RemoveSubnetCidrBlocksRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.RemoveSubnetCidrBlocksRequest)
+      RemoveSubnetCidrBlocksRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RemoveSubnetCidrBlocksRequest.newBuilder() to construct.
+    private RemoveSubnetCidrBlocksRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RemoveSubnetCidrBlocksRequest() {
+      subnetId_ = "";
+      v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RemoveSubnetCidrBlocksRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subnetId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                v4CidrBlocks_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              v4CidrBlocks_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          v4CidrBlocks_ = v4CidrBlocks_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_RemoveSubnetCidrBlocksRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_RemoveSubnetCidrBlocksRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SUBNET_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object subnetId_;
+    /**
+     * <pre>
+     * ID of the Subnet resource that is being updated.
+     * </pre>
+     *
+     * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getSubnetId() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subnetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Subnet resource that is being updated.
+     * </pre>
+     *
+     * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getSubnetIdBytes() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subnetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int V4_CIDR_BLOCKS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList v4CidrBlocks_;
+    /**
+     * <pre>
+     * CIDR block.
+     * The range of internal addresses that are removed from this subnet.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 2;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getV4CidrBlocksList() {
+      return v4CidrBlocks_;
+    }
+    /**
+     * <pre>
+     * CIDR block.
+     * The range of internal addresses that are removed from this subnet.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 2;</code>
+     */
+    public int getV4CidrBlocksCount() {
+      return v4CidrBlocks_.size();
+    }
+    /**
+     * <pre>
+     * CIDR block.
+     * The range of internal addresses that are removed from this subnet.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 2;</code>
+     */
+    public java.lang.String getV4CidrBlocks(int index) {
+      return v4CidrBlocks_.get(index);
+    }
+    /**
+     * <pre>
+     * CIDR block.
+     * The range of internal addresses that are removed from this subnet.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getV4CidrBlocksBytes(int index) {
+      return v4CidrBlocks_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getSubnetIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
+      }
+      for (int i = 0; i < v4CidrBlocks_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, v4CidrBlocks_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getSubnetIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < v4CidrBlocks_.size(); i++) {
+          dataSize += computeStringSizeNoTag(v4CidrBlocks_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getV4CidrBlocksList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest) obj;
+
+      boolean result = true;
+      result = result && getSubnetId()
+          .equals(other.getSubnetId());
+      result = result && getV4CidrBlocksList()
+          .equals(other.getV4CidrBlocksList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubnetId().hashCode();
+      if (getV4CidrBlocksCount() > 0) {
+        hash = (37 * hash) + V4_CIDR_BLOCKS_FIELD_NUMBER;
+        hash = (53 * hash) + getV4CidrBlocksList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.vpc.v1.RemoveSubnetCidrBlocksRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.vpc.v1.RemoveSubnetCidrBlocksRequest)
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_RemoveSubnetCidrBlocksRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_RemoveSubnetCidrBlocksRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        subnetId_ = "";
+
+        v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_RemoveSubnetCidrBlocksRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest build() {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest buildPartial() {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest result = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.subnetId_ = subnetId_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          v4CidrBlocks_ = v4CidrBlocks_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.v4CidrBlocks_ = v4CidrBlocks_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest) {
+          return mergeFrom((yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest other) {
+        if (other == yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest.getDefaultInstance()) return this;
+        if (!other.getSubnetId().isEmpty()) {
+          subnetId_ = other.subnetId_;
+          onChanged();
+        }
+        if (!other.v4CidrBlocks_.isEmpty()) {
+          if (v4CidrBlocks_.isEmpty()) {
+            v4CidrBlocks_ = other.v4CidrBlocks_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureV4CidrBlocksIsMutable();
+            v4CidrBlocks_.addAll(other.v4CidrBlocks_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object subnetId_ = "";
+      /**
+       * <pre>
+       * ID of the Subnet resource that is being updated.
+       * </pre>
+       *
+       * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getSubnetId() {
+        java.lang.Object ref = subnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Subnet resource that is being updated.
+       * </pre>
+       *
+       * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdBytes() {
+        java.lang.Object ref = subnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Subnet resource that is being updated.
+       * </pre>
+       *
+       * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Subnet resource that is being updated.
+       * </pre>
+       *
+       * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearSubnetId() {
+        
+        subnetId_ = getDefaultInstance().getSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Subnet resource that is being updated.
+       * </pre>
+       *
+       * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureV4CidrBlocksIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          v4CidrBlocks_ = new com.google.protobuf.LazyStringArrayList(v4CidrBlocks_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * CIDR block.
+       * The range of internal addresses that are removed from this subnet.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 2;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getV4CidrBlocksList() {
+        return v4CidrBlocks_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * CIDR block.
+       * The range of internal addresses that are removed from this subnet.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 2;</code>
+       */
+      public int getV4CidrBlocksCount() {
+        return v4CidrBlocks_.size();
+      }
+      /**
+       * <pre>
+       * CIDR block.
+       * The range of internal addresses that are removed from this subnet.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 2;</code>
+       */
+      public java.lang.String getV4CidrBlocks(int index) {
+        return v4CidrBlocks_.get(index);
+      }
+      /**
+       * <pre>
+       * CIDR block.
+       * The range of internal addresses that are removed from this subnet.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getV4CidrBlocksBytes(int index) {
+        return v4CidrBlocks_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * CIDR block.
+       * The range of internal addresses that are removed from this subnet.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 2;</code>
+       */
+      public Builder setV4CidrBlocks(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureV4CidrBlocksIsMutable();
+        v4CidrBlocks_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CIDR block.
+       * The range of internal addresses that are removed from this subnet.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 2;</code>
+       */
+      public Builder addV4CidrBlocks(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureV4CidrBlocksIsMutable();
+        v4CidrBlocks_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CIDR block.
+       * The range of internal addresses that are removed from this subnet.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 2;</code>
+       */
+      public Builder addAllV4CidrBlocks(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureV4CidrBlocksIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, v4CidrBlocks_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CIDR block.
+       * The range of internal addresses that are removed from this subnet.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 2;</code>
+       */
+      public Builder clearV4CidrBlocks() {
+        v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CIDR block.
+       * The range of internal addresses that are removed from this subnet.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 2;</code>
+       */
+      public Builder addV4CidrBlocksBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureV4CidrBlocksIsMutable();
+        v4CidrBlocks_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.vpc.v1.RemoveSubnetCidrBlocksRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.vpc.v1.RemoveSubnetCidrBlocksRequest)
+    private static final yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest();
+    }
+
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RemoveSubnetCidrBlocksRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RemoveSubnetCidrBlocksRequest>() {
+      @java.lang.Override
+      public RemoveSubnetCidrBlocksRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RemoveSubnetCidrBlocksRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RemoveSubnetCidrBlocksRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RemoveSubnetCidrBlocksRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RemoveSubnetCidrBlocksMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.vpc.v1.RemoveSubnetCidrBlocksMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Subnet resource that is being updated.
+     * </pre>
+     *
+     * <code>string subnet_id = 1;</code>
+     */
+    java.lang.String getSubnetId();
+    /**
+     * <pre>
+     * ID of the Subnet resource that is being updated.
+     * </pre>
+     *
+     * <code>string subnet_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.vpc.v1.RemoveSubnetCidrBlocksMetadata}
+   */
+  public  static final class RemoveSubnetCidrBlocksMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.RemoveSubnetCidrBlocksMetadata)
+      RemoveSubnetCidrBlocksMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RemoveSubnetCidrBlocksMetadata.newBuilder() to construct.
+    private RemoveSubnetCidrBlocksMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RemoveSubnetCidrBlocksMetadata() {
+      subnetId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RemoveSubnetCidrBlocksMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subnetId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_RemoveSubnetCidrBlocksMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_RemoveSubnetCidrBlocksMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata.Builder.class);
+    }
+
+    public static final int SUBNET_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object subnetId_;
+    /**
+     * <pre>
+     * ID of the Subnet resource that is being updated.
+     * </pre>
+     *
+     * <code>string subnet_id = 1;</code>
+     */
+    public java.lang.String getSubnetId() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subnetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Subnet resource that is being updated.
+     * </pre>
+     *
+     * <code>string subnet_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSubnetIdBytes() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subnetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getSubnetIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getSubnetIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata) obj;
+
+      boolean result = true;
+      result = result && getSubnetId()
+          .equals(other.getSubnetId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubnetId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.vpc.v1.RemoveSubnetCidrBlocksMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.vpc.v1.RemoveSubnetCidrBlocksMetadata)
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_RemoveSubnetCidrBlocksMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_RemoveSubnetCidrBlocksMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        subnetId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_RemoveSubnetCidrBlocksMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata build() {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata buildPartial() {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata result = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata(this);
+        result.subnetId_ = subnetId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata) {
+          return mergeFrom((yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata other) {
+        if (other == yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata.getDefaultInstance()) return this;
+        if (!other.getSubnetId().isEmpty()) {
+          subnetId_ = other.subnetId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object subnetId_ = "";
+      /**
+       * <pre>
+       * ID of the Subnet resource that is being updated.
+       * </pre>
+       *
+       * <code>string subnet_id = 1;</code>
+       */
+      public java.lang.String getSubnetId() {
+        java.lang.Object ref = subnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Subnet resource that is being updated.
+       * </pre>
+       *
+       * <code>string subnet_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdBytes() {
+        java.lang.Object ref = subnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Subnet resource that is being updated.
+       * </pre>
+       *
+       * <code>string subnet_id = 1;</code>
+       */
+      public Builder setSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Subnet resource that is being updated.
+       * </pre>
+       *
+       * <code>string subnet_id = 1;</code>
+       */
+      public Builder clearSubnetId() {
+        
+        subnetId_ = getDefaultInstance().getSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Subnet resource that is being updated.
+       * </pre>
+       *
+       * <code>string subnet_id = 1;</code>
+       */
+      public Builder setSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.vpc.v1.RemoveSubnetCidrBlocksMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.vpc.v1.RemoveSubnetCidrBlocksMetadata)
+    private static final yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata();
+    }
+
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RemoveSubnetCidrBlocksMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<RemoveSubnetCidrBlocksMetadata>() {
+      @java.lang.Override
+      public RemoveSubnetCidrBlocksMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RemoveSubnetCidrBlocksMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RemoveSubnetCidrBlocksMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RemoveSubnetCidrBlocksMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RemoveSubnetCidrBlocksMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface DeleteSubnetRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.vpc.v1.DeleteSubnetRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -15649,6 +18585,26 @@ public final class SubnetServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_vpc_v1_UpdateSubnetMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_vpc_v1_AddSubnetCidrBlocksRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_vpc_v1_AddSubnetCidrBlocksRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_vpc_v1_AddSubnetCidrBlocksMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_vpc_v1_AddSubnetCidrBlocksMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_vpc_v1_RemoveSubnetCidrBlocksRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_vpc_v1_RemoveSubnetCidrBlocksRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_vpc_v1_RemoveSubnetCidrBlocksMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_vpc_v1_RemoveSubnetCidrBlocksMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_vpc_v1_DeleteSubnetRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -15743,6 +18699,13 @@ public final class SubnetServiceOuterClass {
       "s\030\007 \001(\0132 .yandex.cloud.vpc.v1.DhcpOption" +
       "s\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
       " \001(\t:\0028\001\")\n\024UpdateSubnetMetadata\022\021\n\tsubn" +
+      "et_id\030\001 \001(\t\"U\n\032AddSubnetCidrBlocksReques" +
+      "t\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\026\n\016v4" +
+      "_cidr_blocks\030\002 \003(\t\"0\n\033AddSubnetCidrBlock" +
+      "sMetadata\022\021\n\tsubnet_id\030\001 \001(\t\"X\n\035RemoveSu" +
+      "bnetCidrBlocksRequest\022\037\n\tsubnet_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022\026\n\016v4_cidr_blocks\030\002 \003(\t\"3" +
+      "\n\036RemoveSubnetCidrBlocksMetadata\022\021\n\tsubn" +
       "et_id\030\001 \001(\t\"6\n\023DeleteSubnetRequest\022\037\n\tsu" +
       "bnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\024DeleteSub" +
       "netMetadata\022\021\n\tsubnet_id\030\001 \001(\t\"|\n\033ListSu" +
@@ -15764,7 +18727,7 @@ public final class SubnetServiceOuterClass {
       "\017\n\007address\030\001 \001(\t\0222\n\nip_version\030\002 \001(\0162\036.y" +
       "andex.cloud.vpc.v1.IpVersion\0225\n\nreferenc" +
       "es\030\003 \003(\0132!.yandex.cloud.reference.Refere" +
-      "nce2\226\t\n\rSubnetService\022n\n\003Get\022%.yandex.cl" +
+      "nce2\260\014\n\rSubnetService\022n\n\003Get\022%.yandex.cl" +
       "oud.vpc.v1.GetSubnetRequest\032\033.yandex.clo" +
       "ud.vpc.v1.Subnet\"#\202\323\344\223\002\035\022\033/vpc/v1/subnet" +
       "s/{subnet_id}\022r\n\004List\022\'.yandex.cloud.vpc" +
@@ -15778,24 +18741,35 @@ public final class SubnetServiceOuterClass {
       "ubnetRequest\032!.yandex.cloud.operation.Op" +
       "eration\"H\202\323\344\223\002 2\033/vpc/v1/subnets/{subnet" +
       "_id}:\001*\262\322*\036\n\024UpdateSubnetMetadata\022\006Subne" +
-      "t\022\253\001\n\006Delete\022(.yandex.cloud.vpc.v1.Delet" +
-      "eSubnetRequest\032!.yandex.cloud.operation." +
-      "Operation\"T\202\323\344\223\002\035*\033/vpc/v1/subnets/{subn" +
-      "et_id}\262\322*-\n\024DeleteSubnetMetadata\022\025google" +
-      ".protobuf.Empty\022\245\001\n\016ListOperations\0220.yan" +
-      "dex.cloud.vpc.v1.ListSubnetOperationsReq" +
-      "uest\0321.yandex.cloud.vpc.v1.ListSubnetOpe" +
-      "rationsResponse\".\202\323\344\223\002(\022&/vpc/v1/subnets" +
-      "/{subnet_id}/operations\022\236\001\n\004Move\022&.yande" +
-      "x.cloud.vpc.v1.MoveSubnetRequest\032!.yande" +
-      "x.cloud.operation.Operation\"K\202\323\344\223\002%\" /vp" +
-      "c/v1/subnets/{subnet_id}:move:\001*\262\322*\034\n\022Mo" +
-      "veSubnetMetadata\022\006Subnet\022r\n\021ListUsedAddr" +
-      "esses\022-.yandex.cloud.vpc.v1.ListUsedAddr" +
-      "essesRequest\032..yandex.cloud.vpc.v1.ListU" +
-      "sedAddressesResponseBV\n\027yandex.cloud.api" +
-      ".vpc.v1Z;github.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/vpc/v1;vpcb\006proto3"
+      "t\022\304\001\n\rAddCidrBlocks\022/.yandex.cloud.vpc.v" +
+      "1.AddSubnetCidrBlocksRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"_\202\323\344\223\0020\"+/vpc/v1" +
+      "/subnets/{subnet_id}:add-cidr-blocks:\001*\262" +
+      "\322*%\n\033AddSubnetCidrBlocksMetadata\022\006Subnet" +
+      "\022\320\001\n\020RemoveCidrBlocks\0222.yandex.cloud.vpc" +
+      ".v1.RemoveSubnetCidrBlocksRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"e\202\323\344\223\0023\"./v" +
+      "pc/v1/subnets/{subnet_id}:remove-cidr-bl" +
+      "ocks:\001*\262\322*(\n\036RemoveSubnetCidrBlocksMetad" +
+      "ata\022\006Subnet\022\253\001\n\006Delete\022(.yandex.cloud.vp" +
+      "c.v1.DeleteSubnetRequest\032!.yandex.cloud." +
+      "operation.Operation\"T\202\323\344\223\002\035*\033/vpc/v1/sub" +
+      "nets/{subnet_id}\262\322*-\n\024DeleteSubnetMetada" +
+      "ta\022\025google.protobuf.Empty\022\245\001\n\016ListOperat" +
+      "ions\0220.yandex.cloud.vpc.v1.ListSubnetOpe" +
+      "rationsRequest\0321.yandex.cloud.vpc.v1.Lis" +
+      "tSubnetOperationsResponse\".\202\323\344\223\002(\022&/vpc/" +
+      "v1/subnets/{subnet_id}/operations\022\236\001\n\004Mo" +
+      "ve\022&.yandex.cloud.vpc.v1.MoveSubnetReque" +
+      "st\032!.yandex.cloud.operation.Operation\"K\202" +
+      "\323\344\223\002%\" /vpc/v1/subnets/{subnet_id}:move:" +
+      "\001*\262\322*\034\n\022MoveSubnetMetadata\022\006Subnet\022r\n\021Li" +
+      "stUsedAddresses\022-.yandex.cloud.vpc.v1.Li" +
+      "stUsedAddressesRequest\032..yandex.cloud.vp" +
+      "c.v1.ListUsedAddressesResponseBV\n\027yandex" +
+      ".cloud.api.vpc.v1Z;github.com/yandex-clo" +
+      "ud/go-genproto/yandex/cloud/vpc/v1;vpcb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15870,56 +18844,80 @@ public final class SubnetServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_UpdateSubnetMetadata_descriptor,
         new java.lang.String[] { "SubnetId", });
-    internal_static_yandex_cloud_vpc_v1_DeleteSubnetRequest_descriptor =
+    internal_static_yandex_cloud_vpc_v1_AddSubnetCidrBlocksRequest_descriptor =
       getDescriptor().getMessageTypes().get(7);
+    internal_static_yandex_cloud_vpc_v1_AddSubnetCidrBlocksRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_vpc_v1_AddSubnetCidrBlocksRequest_descriptor,
+        new java.lang.String[] { "SubnetId", "V4CidrBlocks", });
+    internal_static_yandex_cloud_vpc_v1_AddSubnetCidrBlocksMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_vpc_v1_AddSubnetCidrBlocksMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_vpc_v1_AddSubnetCidrBlocksMetadata_descriptor,
+        new java.lang.String[] { "SubnetId", });
+    internal_static_yandex_cloud_vpc_v1_RemoveSubnetCidrBlocksRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_vpc_v1_RemoveSubnetCidrBlocksRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_vpc_v1_RemoveSubnetCidrBlocksRequest_descriptor,
+        new java.lang.String[] { "SubnetId", "V4CidrBlocks", });
+    internal_static_yandex_cloud_vpc_v1_RemoveSubnetCidrBlocksMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_vpc_v1_RemoveSubnetCidrBlocksMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_vpc_v1_RemoveSubnetCidrBlocksMetadata_descriptor,
+        new java.lang.String[] { "SubnetId", });
+    internal_static_yandex_cloud_vpc_v1_DeleteSubnetRequest_descriptor =
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_vpc_v1_DeleteSubnetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_DeleteSubnetRequest_descriptor,
         new java.lang.String[] { "SubnetId", });
     internal_static_yandex_cloud_vpc_v1_DeleteSubnetMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_vpc_v1_DeleteSubnetMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_DeleteSubnetMetadata_descriptor,
         new java.lang.String[] { "SubnetId", });
     internal_static_yandex_cloud_vpc_v1_ListSubnetOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_vpc_v1_ListSubnetOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_ListSubnetOperationsRequest_descriptor,
         new java.lang.String[] { "SubnetId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_vpc_v1_ListSubnetOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_vpc_v1_ListSubnetOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_ListSubnetOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
     internal_static_yandex_cloud_vpc_v1_MoveSubnetRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_vpc_v1_MoveSubnetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_MoveSubnetRequest_descriptor,
         new java.lang.String[] { "SubnetId", "DestinationFolderId", });
     internal_static_yandex_cloud_vpc_v1_MoveSubnetMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_vpc_v1_MoveSubnetMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_MoveSubnetMetadata_descriptor,
         new java.lang.String[] { "SubnetId", });
     internal_static_yandex_cloud_vpc_v1_ListUsedAddressesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_vpc_v1_ListUsedAddressesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_ListUsedAddressesRequest_descriptor,
         new java.lang.String[] { "SubnetId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_vpc_v1_ListUsedAddressesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_vpc_v1_ListUsedAddressesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_ListUsedAddressesResponse_descriptor,
         new java.lang.String[] { "Addresses", "NextPageToken", });
     internal_static_yandex_cloud_vpc_v1_UsedAddress_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_vpc_v1_UsedAddress_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_UsedAddress_descriptor,
