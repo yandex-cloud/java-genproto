@@ -15201,11 +15201,11 @@ public final class LoadBalancerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string backend_group_id = 1;</code>
+     * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getBackendGroupId();
     /**
-     * <code>string backend_group_id = 1;</code>
+     * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getBackendGroupIdBytes();
@@ -15295,7 +15295,7 @@ public final class LoadBalancerOuterClass {
     public static final int BACKEND_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object backendGroupId_;
     /**
-     * <code>string backend_group_id = 1;</code>
+     * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getBackendGroupId() {
       java.lang.Object ref = backendGroupId_;
@@ -15310,7 +15310,7 @@ public final class LoadBalancerOuterClass {
       }
     }
     /**
-     * <code>string backend_group_id = 1;</code>
+     * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
         getBackendGroupIdBytes() {
@@ -15635,7 +15635,7 @@ public final class LoadBalancerOuterClass {
 
       private java.lang.Object backendGroupId_ = "";
       /**
-       * <code>string backend_group_id = 1;</code>
+       * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getBackendGroupId() {
         java.lang.Object ref = backendGroupId_;
@@ -15650,7 +15650,7 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
-       * <code>string backend_group_id = 1;</code>
+       * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
           getBackendGroupIdBytes() {
@@ -15666,7 +15666,7 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
-       * <code>string backend_group_id = 1;</code>
+       * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setBackendGroupId(
           java.lang.String value) {
@@ -15679,7 +15679,7 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
-       * <code>string backend_group_id = 1;</code>
+       * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearBackendGroupId() {
         
@@ -15688,7 +15688,7 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
-       * <code>string backend_group_id = 1;</code>
+       * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setBackendGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -22781,38 +22781,38 @@ public final class LoadBalancerOuterClass {
       "ploadbalancer.v1.SniMatch\"N\n\013TcpListener" +
       "\022?\n\007handler\030\001 \001(\0132..yandex.cloud.appload" +
       "balancer.v1.StreamHandler\".\n\014Http2Option" +
-      "s\022\036\n\026max_concurrent_streams\030\001 \001(\003\")\n\rStr" +
-      "eamHandler\022\030\n\020backend_group_id\030\001 \001(\t\"\232\001\n" +
-      "\013HttpHandler\022\026\n\016http_router_id\030\001 \001(\t\022F\n\r" +
-      "http2_options\030\002 \001(\0132-.yandex.cloud.applo" +
-      "adbalancer.v1.Http2OptionsH\000\022\026\n\014allow_ht" +
-      "tp10\030\003 \001(\010H\000B\023\n\021protocol_settings\"\"\n\tRed" +
-      "irects\022\025\n\rhttp_to_https\030\001 \001(\010\"\200\001\n\010SniMat" +
-      "ch\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\034\n\014server_names\030\002" +
-      " \003(\tB\006\202\3101\002>0\022B\n\007handler\030\003 \001(\0132+.yandex.c" +
-      "loud.apploadbalancer.v1.TlsHandlerB\004\350\3071\001" +
-      "\"\316\001\n\nTlsHandler\022D\n\014http_handler\030\002 \001(\0132,." +
-      "yandex.cloud.apploadbalancer.v1.HttpHand" +
-      "lerH\000\022H\n\016stream_handler\030\004 \001(\0132..yandex.c" +
-      "loud.apploadbalancer.v1.StreamHandlerH\000\022" +
-      "\037\n\017certificate_ids\030\003 \003(\tB\006\202\3101\002>0B\017\n\007hand" +
-      "ler\022\004\300\3011\001\"\214\004\n\013TargetState\022N\n\006status\030\001 \001(" +
-      "\0132>.yandex.cloud.apploadbalancer.v1.Targ" +
-      "etState.HealthcheckStatus\022=\n\006target\030\002 \001(" +
-      "\0132\'.yandex.cloud.apploadbalancer.v1.Targ" +
-      "etB\004\350\3071\001\032n\n\021HealthcheckStatus\022Y\n\rzone_st" +
-      "atuses\030\001 \003(\0132B.yandex.cloud.apploadbalan" +
-      "cer.v1.TargetState.ZoneHealthcheckStatus" +
-      "\032\215\001\n\025ZoneHealthcheckStatus\022\025\n\007zone_id\030\001 " +
-      "\001(\tB\004\350\3071\001\022C\n\006status\030\002 \001(\01623.yandex.cloud" +
-      ".apploadbalancer.v1.TargetState.Status\022\030" +
-      "\n\020failed_active_hc\030\003 \001(\010\"n\n\006Status\022\026\n\022ST" +
-      "ATUS_UNSPECIFIED\020\000\022\013\n\007HEALTHY\020\001\022\025\n\021PARTI" +
-      "ALLY_HEALTHY\020\002\022\r\n\tUNHEALTHY\020\003\022\014\n\010DRAININ" +
-      "G\020\004\022\013\n\007TIMEOUT\020\005Bz\n#yandex.cloud.api.app" +
-      "loadbalancer.v1ZSgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/apploadbalance" +
-      "r/v1;apploadbalancerb\006proto3"
+      "s\022\036\n\026max_concurrent_streams\030\001 \001(\003\"/\n\rStr" +
+      "eamHandler\022\036\n\020backend_group_id\030\001 \001(\tB\004\350\307" +
+      "1\001\"\232\001\n\013HttpHandler\022\026\n\016http_router_id\030\001 \001" +
+      "(\t\022F\n\rhttp2_options\030\002 \001(\0132-.yandex.cloud" +
+      ".apploadbalancer.v1.Http2OptionsH\000\022\026\n\014al" +
+      "low_http10\030\003 \001(\010H\000B\023\n\021protocol_settings\"" +
+      "\"\n\tRedirects\022\025\n\rhttp_to_https\030\001 \001(\010\"\200\001\n\010" +
+      "SniMatch\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\034\n\014server_n" +
+      "ames\030\002 \003(\tB\006\202\3101\002>0\022B\n\007handler\030\003 \001(\0132+.ya" +
+      "ndex.cloud.apploadbalancer.v1.TlsHandler" +
+      "B\004\350\3071\001\"\316\001\n\nTlsHandler\022D\n\014http_handler\030\002 " +
+      "\001(\0132,.yandex.cloud.apploadbalancer.v1.Ht" +
+      "tpHandlerH\000\022H\n\016stream_handler\030\004 \001(\0132..ya" +
+      "ndex.cloud.apploadbalancer.v1.StreamHand" +
+      "lerH\000\022\037\n\017certificate_ids\030\003 \003(\tB\006\202\3101\002>0B\017" +
+      "\n\007handler\022\004\300\3011\001\"\214\004\n\013TargetState\022N\n\006statu" +
+      "s\030\001 \001(\0132>.yandex.cloud.apploadbalancer.v" +
+      "1.TargetState.HealthcheckStatus\022=\n\006targe" +
+      "t\030\002 \001(\0132\'.yandex.cloud.apploadbalancer.v" +
+      "1.TargetB\004\350\3071\001\032n\n\021HealthcheckStatus\022Y\n\rz" +
+      "one_statuses\030\001 \003(\0132B.yandex.cloud.apploa" +
+      "dbalancer.v1.TargetState.ZoneHealthcheck" +
+      "Status\032\215\001\n\025ZoneHealthcheckStatus\022\025\n\007zone" +
+      "_id\030\001 \001(\tB\004\350\3071\001\022C\n\006status\030\002 \001(\01623.yandex" +
+      ".cloud.apploadbalancer.v1.TargetState.St" +
+      "atus\022\030\n\020failed_active_hc\030\003 \001(\010\"n\n\006Status" +
+      "\022\026\n\022STATUS_UNSPECIFIED\020\000\022\013\n\007HEALTHY\020\001\022\025\n" +
+      "\021PARTIALLY_HEALTHY\020\002\022\r\n\tUNHEALTHY\020\003\022\014\n\010D" +
+      "RAINING\020\004\022\013\n\007TIMEOUT\020\005Bz\n#yandex.cloud.a" +
+      "pi.apploadbalancer.v1ZSgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/apploadb" +
+      "alancer/v1;apploadbalancerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

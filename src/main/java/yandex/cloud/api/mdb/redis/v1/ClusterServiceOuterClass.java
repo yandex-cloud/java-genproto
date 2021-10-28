@@ -19723,6 +19723,41 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
+
+    /**
+     * <pre>
+     * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+     */
+    java.util.List<java.lang.String>
+        getHostNamesList();
+    /**
+     * <pre>
+     * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+     */
+    int getHostNamesCount();
+    /**
+     * <pre>
+     * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+     */
+    java.lang.String getHostNames(int index);
+    /**
+     * <pre>
+     * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+     */
+    com.google.protobuf.ByteString
+        getHostNamesBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.redis.v1.StartClusterFailoverRequest}
@@ -19738,6 +19773,7 @@ public final class ClusterServiceOuterClass {
     }
     private StartClusterFailoverRequest() {
       clusterId_ = "";
+      hostNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -19770,6 +19806,15 @@ public final class ClusterServiceOuterClass {
               clusterId_ = s;
               break;
             }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                hostNames_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              hostNames_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -19785,6 +19830,9 @@ public final class ClusterServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          hostNames_ = hostNames_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -19802,6 +19850,7 @@ public final class ClusterServiceOuterClass {
               yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.StartClusterFailoverRequest.class, yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.StartClusterFailoverRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
@@ -19844,6 +19893,51 @@ public final class ClusterServiceOuterClass {
       }
     }
 
+    public static final int HOST_NAMES_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList hostNames_;
+    /**
+     * <pre>
+     * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getHostNamesList() {
+      return hostNames_;
+    }
+    /**
+     * <pre>
+     * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+     */
+    public int getHostNamesCount() {
+      return hostNames_.size();
+    }
+    /**
+     * <pre>
+     * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+     */
+    public java.lang.String getHostNames(int index) {
+      return hostNames_.get(index);
+    }
+    /**
+     * <pre>
+     * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getHostNamesBytes(int index) {
+      return hostNames_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -19861,6 +19955,9 @@ public final class ClusterServiceOuterClass {
       if (!getClusterIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
+      for (int i = 0; i < hostNames_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, hostNames_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -19872,6 +19969,14 @@ public final class ClusterServiceOuterClass {
       size = 0;
       if (!getClusterIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < hostNames_.size(); i++) {
+          dataSize += computeStringSizeNoTag(hostNames_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getHostNamesList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -19891,6 +19996,8 @@ public final class ClusterServiceOuterClass {
       boolean result = true;
       result = result && getClusterId()
           .equals(other.getClusterId());
+      result = result && getHostNamesList()
+          .equals(other.getHostNamesList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -19904,6 +20011,10 @@ public final class ClusterServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getClusterId().hashCode();
+      if (getHostNamesCount() > 0) {
+        hash = (37 * hash) + HOST_NAMES_FIELD_NUMBER;
+        hash = (53 * hash) + getHostNamesList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -20039,6 +20150,8 @@ public final class ClusterServiceOuterClass {
         super.clear();
         clusterId_ = "";
 
+        hostNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -20065,7 +20178,15 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.StartClusterFailoverRequest buildPartial() {
         yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.StartClusterFailoverRequest result = new yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.StartClusterFailoverRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.clusterId_ = clusterId_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          hostNames_ = hostNames_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.hostNames_ = hostNames_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -20118,6 +20239,16 @@ public final class ClusterServiceOuterClass {
           clusterId_ = other.clusterId_;
           onChanged();
         }
+        if (!other.hostNames_.isEmpty()) {
+          if (hostNames_.isEmpty()) {
+            hostNames_ = other.hostNames_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureHostNamesIsMutable();
+            hostNames_.addAll(other.hostNames_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -20146,6 +20277,7 @@ public final class ClusterServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object clusterId_ = "";
       /**
@@ -20235,6 +20367,136 @@ public final class ClusterServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.LazyStringList hostNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureHostNamesIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          hostNames_ = new com.google.protobuf.LazyStringArrayList(hostNames_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getHostNamesList() {
+        return hostNames_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public int getHostNamesCount() {
+        return hostNames_.size();
+      }
+      /**
+       * <pre>
+       * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public java.lang.String getHostNames(int index) {
+        return hostNames_.get(index);
+      }
+      /**
+       * <pre>
+       * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getHostNamesBytes(int index) {
+        return hostNames_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public Builder setHostNames(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostNamesIsMutable();
+        hostNames_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public Builder addHostNames(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostNamesIsMutable();
+        hostNames_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public Builder addAllHostNames(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureHostNamesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, hostNames_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public Builder clearHostNames() {
+        hostNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public Builder addHostNamesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureHostNamesIsMutable();
+        hostNames_.add(value);
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -20309,6 +20571,41 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
+
+    /**
+     * <pre>
+     * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    java.util.List<java.lang.String>
+        getHostNamesList();
+    /**
+     * <pre>
+     * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    int getHostNamesCount();
+    /**
+     * <pre>
+     * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    java.lang.String getHostNames(int index);
+    /**
+     * <pre>
+     * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getHostNamesBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.redis.v1.StartClusterFailoverMetadata}
@@ -20324,6 +20621,7 @@ public final class ClusterServiceOuterClass {
     }
     private StartClusterFailoverMetadata() {
       clusterId_ = "";
+      hostNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -20356,6 +20654,15 @@ public final class ClusterServiceOuterClass {
               clusterId_ = s;
               break;
             }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                hostNames_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              hostNames_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -20371,6 +20678,9 @@ public final class ClusterServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          hostNames_ = hostNames_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -20388,6 +20698,7 @@ public final class ClusterServiceOuterClass {
               yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.StartClusterFailoverMetadata.class, yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.StartClusterFailoverMetadata.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
@@ -20430,6 +20741,51 @@ public final class ClusterServiceOuterClass {
       }
     }
 
+    public static final int HOST_NAMES_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList hostNames_;
+    /**
+     * <pre>
+     * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getHostNamesList() {
+      return hostNames_;
+    }
+    /**
+     * <pre>
+     * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    public int getHostNamesCount() {
+      return hostNames_.size();
+    }
+    /**
+     * <pre>
+     * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    public java.lang.String getHostNames(int index) {
+      return hostNames_.get(index);
+    }
+    /**
+     * <pre>
+     * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getHostNamesBytes(int index) {
+      return hostNames_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -20447,6 +20803,9 @@ public final class ClusterServiceOuterClass {
       if (!getClusterIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
+      for (int i = 0; i < hostNames_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, hostNames_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -20458,6 +20817,14 @@ public final class ClusterServiceOuterClass {
       size = 0;
       if (!getClusterIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < hostNames_.size(); i++) {
+          dataSize += computeStringSizeNoTag(hostNames_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getHostNamesList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -20477,6 +20844,8 @@ public final class ClusterServiceOuterClass {
       boolean result = true;
       result = result && getClusterId()
           .equals(other.getClusterId());
+      result = result && getHostNamesList()
+          .equals(other.getHostNamesList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -20490,6 +20859,10 @@ public final class ClusterServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getClusterId().hashCode();
+      if (getHostNamesCount() > 0) {
+        hash = (37 * hash) + HOST_NAMES_FIELD_NUMBER;
+        hash = (53 * hash) + getHostNamesList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -20625,6 +20998,8 @@ public final class ClusterServiceOuterClass {
         super.clear();
         clusterId_ = "";
 
+        hostNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -20651,7 +21026,15 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.StartClusterFailoverMetadata buildPartial() {
         yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.StartClusterFailoverMetadata result = new yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.StartClusterFailoverMetadata(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.clusterId_ = clusterId_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          hostNames_ = hostNames_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.hostNames_ = hostNames_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -20704,6 +21087,16 @@ public final class ClusterServiceOuterClass {
           clusterId_ = other.clusterId_;
           onChanged();
         }
+        if (!other.hostNames_.isEmpty()) {
+          if (hostNames_.isEmpty()) {
+            hostNames_ = other.hostNames_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureHostNamesIsMutable();
+            hostNames_.addAll(other.hostNames_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -20732,6 +21125,7 @@ public final class ClusterServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object clusterId_ = "";
       /**
@@ -20818,6 +21212,136 @@ public final class ClusterServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList hostNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureHostNamesIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          hostNames_ = new com.google.protobuf.LazyStringArrayList(hostNames_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getHostNamesList() {
+        return hostNames_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public int getHostNamesCount() {
+        return hostNames_.size();
+      }
+      /**
+       * <pre>
+       * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public java.lang.String getHostNames(int index) {
+        return hostNames_.get(index);
+      }
+      /**
+       * <pre>
+       * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getHostNamesBytes(int index) {
+        return hostNames_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public Builder setHostNames(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostNamesIsMutable();
+        hostNames_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public Builder addHostNames(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostNamesIsMutable();
+        hostNames_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public Builder addAllHostNames(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureHostNamesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, hostNames_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public Builder clearHostNames() {
+        hostNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of hostnames which should not be masters. Can be empty for sentinel clusters or can contain multiple hosts for sharded clusters.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public Builder addHostNamesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureHostNamesIsMutable();
+        hostNames_.add(value);
         onChanged();
         return this;
       }
@@ -50149,229 +50673,230 @@ public final class ClusterServiceOuterClass {
       "tls_enabled\030\013 \001(\0132\032.google.protobuf.Bool" +
       "Value\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
       "ue\030\002 \001(\t:\0028\001\"?\n\026RestoreClusterMetadata\022\022" +
-      "\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"?\n" +
+      "\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"^\n" +
       "\033StartClusterFailoverRequest\022 \n\ncluster_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"2\n\034StartClusterFa" +
-      "iloverMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\312\002\n\034R" +
-      "escheduleMaintenanceRequest\022 \n\ncluster_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022e\n\017reschedule_type" +
-      "\030\002 \001(\0162F.yandex.cloud.mdb.redis.v1.Resch" +
-      "eduleMaintenanceRequest.RescheduleTypeB\004" +
-      "\350\3071\001\0221\n\rdelayed_until\030\003 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\"n\n\016RescheduleType\022\037\n\033RES" +
-      "CHEDULE_TYPE_UNSPECIFIED\020\000\022\r\n\tIMMEDIATE\020" +
-      "\001\022\031\n\025NEXT_AVAILABLE_WINDOW\020\002\022\021\n\rSPECIFIC" +
-      "_TIME\020\003\"f\n\035RescheduleMaintenanceMetadata" +
-      "\022\022\n\ncluster_id\030\001 \001(\t\0221\n\rdelayed_until\030\004 " +
-      "\001(\0132\032.google.protobuf.Timestamp\"\256\001\n\tLogR" +
-      "ecord\022-\n\ttimestamp\030\001 \001(\0132\032.google.protob" +
-      "uf.Timestamp\022B\n\007message\030\002 \003(\01321.yandex.c" +
-      "loud.mdb.redis.v1.LogRecord.MessageEntry" +
-      "\032.\n\014MessageEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\"\370\002\n\026ListClusterLogsRequest\022 \n\nc" +
-      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_" +
-      "filter\030\002 \003(\t\022S\n\014service_type\030\003 \001(\0162=.yan" +
-      "dex.cloud.mdb.redis.v1.ListClusterLogsRe" +
-      "quest.ServiceType\022-\n\tfrom_time\030\004 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022+\n\007to_time\030\005 \001(" +
-      "\0132\032.google.protobuf.Timestamp\022\035\n\tpage_si" +
-      "ze\030\006 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\007 \001(\t" +
-      "B\t\212\3101\005<=100\"6\n\013ServiceType\022\034\n\030SERVICE_TY" +
-      "PE_UNSPECIFIED\020\000\022\t\n\005REDIS\020\001\"f\n\027ListClust" +
-      "erLogsResponse\0222\n\004logs\030\001 \003(\0132$.yandex.cl" +
-      "oud.mdb.redis.v1.LogRecord\022\027\n\017next_page_" +
-      "token\030\002 \001(\t\"b\n\017StreamLogRecord\0224\n\006record" +
-      "\030\001 \001(\0132$.yandex.cloud.mdb.redis.v1.LogRe" +
-      "cord\022\031\n\021next_record_token\030\002 \001(\t\"\373\002\n\030Stre" +
-      "amClusterLogsRequest\022 \n\ncluster_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022U\n" +
-      "\014service_type\030\003 \001(\0162?.yandex.cloud.mdb.r" +
-      "edis.v1.StreamClusterLogsRequest.Service" +
-      "Type\022-\n\tfrom_time\030\004 \001(\0132\032.google.protobu" +
-      "f.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\022\037\n\014record_token\030\006 \001(\tB\t" +
-      "\212\3101\005<=100\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=1000\"6\n" +
-      "\013ServiceType\022\034\n\030SERVICE_TYPE_UNSPECIFIED" +
-      "\020\000\022\t\n\005REDIS\020\001\"~\n\034ListClusterOperationsRe" +
-      "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_t" +
-      "oken\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOper" +
-      "ationsResponse\0225\n\noperations\030\001 \003(\0132!.yan" +
-      "dex.cloud.operation.Operation\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t\"{\n\031ListClusterBackupsRequ" +
-      "est\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n" +
-      "\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_tok" +
-      "en\030\003 \001(\tB\t\212\3101\005<=100\"i\n\032ListClusterBackup" +
-      "sResponse\0222\n\007backups\030\001 \003(\0132!.yandex.clou" +
-      "d.mdb.redis.v1.Backup\022\027\n\017next_page_token" +
-      "\030\002 \001(\t\"y\n\027ListClusterHostsRequest\022 \n\nclu" +
-      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size" +
-      "\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t" +
-      "\212\3101\005<=100\"c\n\030ListClusterHostsResponse\022.\n" +
-      "\005hosts\030\001 \003(\0132\037.yandex.cloud.mdb.redis.v1" +
-      ".Host\022\027\n\017next_page_token\030\002 \001(\t\"{\n\026AddClu" +
-      "sterHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022?\n\nhost_specs\030\002 \003(\0132#.yandex." +
-      "cloud.mdb.redis.v1.HostSpecB\006\202\3101\002>0\"A\n\027A" +
-      "ddClusterHostsMetadata\022\022\n\ncluster_id\030\001 \001" +
-      "(\t\022\022\n\nhost_names\030\002 \003(\t\"b\n\031DeleteClusterH" +
-      "ostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022#\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=2" +
-      "53\"D\n\032DeleteClusterHostsMetadata\022\022\n\nclus" +
-      "ter_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"n\n\026GetC" +
-      "lusterShardRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\0222\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\310" +
-      "1\004<=63\362\3071\016[a-zA-Z0-9_-]*\"z\n\030ListClusterS" +
-      "hardsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n" +
-      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"f\n\031ListClus" +
-      "terShardsResponse\0220\n\006shards\030\001 \003(\0132 .yand" +
-      "ex.cloud.mdb.redis.v1.Shard\022\027\n\017next_page" +
-      "_token\030\002 \001(\t\"\257\001\n\026AddClusterShardRequest\022" +
-      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\nsha" +
-      "rd_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-" +
-      "9_-]*\022?\n\nhost_specs\030\004 \003(\0132#.yandex.cloud" +
-      ".mdb.redis.v1.HostSpecB\006\202\3101\002>0\"A\n\027AddClu" +
-      "sterShardMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n" +
-      "\nshard_name\030\002 \001(\t\"q\n\031DeleteClusterShardR" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\nhost_names\030\002 \003" +
+      "(\tB\t\212\3101\005<=253\"F\n\034StartClusterFailoverMet" +
+      "adata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030" +
+      "\002 \003(\t\"\312\002\n\034RescheduleMaintenanceRequest\022 " +
+      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022e\n\017resc" +
+      "hedule_type\030\002 \001(\0162F.yandex.cloud.mdb.red" +
+      "is.v1.RescheduleMaintenanceRequest.Resch" +
+      "eduleTypeB\004\350\3071\001\0221\n\rdelayed_until\030\003 \001(\0132\032" +
+      ".google.protobuf.Timestamp\"n\n\016Reschedule" +
+      "Type\022\037\n\033RESCHEDULE_TYPE_UNSPECIFIED\020\000\022\r\n" +
+      "\tIMMEDIATE\020\001\022\031\n\025NEXT_AVAILABLE_WINDOW\020\002\022" +
+      "\021\n\rSPECIFIC_TIME\020\003\"f\n\035RescheduleMaintena" +
+      "nceMetadata\022\022\n\ncluster_id\030\001 \001(\t\0221\n\rdelay" +
+      "ed_until\030\004 \001(\0132\032.google.protobuf.Timesta" +
+      "mp\"\256\001\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\022B\n\007message\030\002 \003(\013" +
+      "21.yandex.cloud.mdb.redis.v1.LogRecord.M" +
+      "essageEntry\032.\n\014MessageEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\"\370\002\n\026ListClusterLogsR" +
       "equest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\0222\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a" +
-      "-zA-Z0-9_-]*\"D\n\032DeleteClusterShardMetada" +
-      "ta\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nshard_name\030\002 \001" +
-      "(\t\";\n\027RebalanceClusterRequest\022 \n\ncluster" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\".\n\030RebalanceClus" +
-      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\"^\n\010HostS" +
-      "pec\022\017\n\007zone_id\030\001 \001(\t\022\021\n\tsubnet_id\030\002 \001(\t\022" +
-      ".\n\nshard_name\030\003 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z" +
-      "0-9_-]*\"\351\003\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022" +
-      "]\n\020redis_config_5_0\030\002 \001(\01320.yandex.cloud" +
-      ".mdb.redis.v1.config.RedisConfig5_0H\000R\017r" +
-      "edisConfig_5_0\022]\n\020redis_config_6_0\030\006 \001(\013" +
-      "20.yandex.cloud.mdb.redis.v1.config.Redi" +
-      "sConfig6_0H\000R\017redisConfig_6_0\022]\n\020redis_c" +
-      "onfig_6_2\030\007 \001(\01320.yandex.cloud.mdb.redis" +
-      ".v1.config.RedisConfig6_2H\000R\017redisConfig" +
-      "_6_2\0227\n\tresources\030\003 \001(\0132$.yandex.cloud.m" +
-      "db.redis.v1.Resources\0223\n\023backup_window_s" +
-      "tart\030\004 \001(\0132\026.google.type.TimeOfDay\0221\n\006ac" +
-      "cess\030\005 \001(\0132!.yandex.cloud.mdb.redis.v1.A" +
-      "ccessB\014\n\nredis_spec2\250#\n\016ClusterService\022\210" +
-      "\001\n\003Get\022,.yandex.cloud.mdb.redis.v1.GetCl" +
-      "usterRequest\032\".yandex.cloud.mdb.redis.v1" +
-      ".Cluster\"/\202\323\344\223\002)\022\'/managed-redis/v1/clus" +
-      "ters/{cluster_id}\022\213\001\n\004List\022..yandex.clou" +
-      "d.mdb.redis.v1.ListClustersRequest\032/.yan" +
-      "dex.cloud.mdb.redis.v1.ListClustersRespo" +
-      "nse\"\"\202\323\344\223\002\034\022\032/managed-redis/v1/clusters\022" +
-      "\247\001\n\006Create\022/.yandex.cloud.mdb.redis.v1.C" +
-      "reateClusterRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"I\202\323\344\223\002\037\"\032/managed-redis/v" +
-      "1/clusters:\001*\262\322* \n\025CreateClusterMetadata" +
-      "\022\007Cluster\022\264\001\n\006Update\022/.yandex.cloud.mdb." +
-      "redis.v1.UpdateClusterRequest\032!.yandex.c" +
-      "loud.operation.Operation\"V\202\323\344\223\002,2\'/manag" +
-      "ed-redis/v1/clusters/{cluster_id}:\001*\262\322* " +
-      "\n\025UpdateClusterMetadata\022\007Cluster\022\277\001\n\006Del" +
-      "ete\022/.yandex.cloud.mdb.redis.v1.DeleteCl" +
-      "usterRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"a\202\323\344\223\002)*\'/managed-redis/v1/clust" +
-      "ers/{cluster_id}\262\322*.\n\025DeleteClusterMetad" +
-      "ata\022\025google.protobuf.Empty\022\264\001\n\005Start\022..y" +
-      "andex.cloud.mdb.redis.v1.StartClusterReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "X\202\323\344\223\002/\"-/managed-redis/v1/clusters/{clu" +
-      "ster_id}:start\262\322*\037\n\024StartClusterMetadata" +
-      "\022\007Cluster\022\260\001\n\004Stop\022-.yandex.cloud.mdb.re" +
-      "dis.v1.StopClusterRequest\032!.yandex.cloud" +
-      ".operation.Operation\"V\202\323\344\223\002.\",/managed-r" +
-      "edis/v1/clusters/{cluster_id}:stop\262\322*\036\n\023" +
-      "StopClusterMetadata\022\007Cluster\022\263\001\n\004Move\022-." +
-      "yandex.cloud.mdb.redis.v1.MoveClusterReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "Y\202\323\344\223\0021\",/managed-redis/v1/clusters/{clu" +
-      "ster_id}:move:\001*\262\322*\036\n\023MoveClusterMetadat" +
-      "a\022\007Cluster\022\270\001\n\006Backup\022/.yandex.cloud.mdb" +
-      ".redis.v1.BackupClusterRequest\032!.yandex." +
-      "cloud.operation.Operation\"Z\202\323\344\223\0020\"./mana" +
-      "ged-redis/v1/clusters/{cluster_id}:backu" +
-      "p\262\322* \n\025BackupClusterMetadata\022\007Cluster\022\262\001" +
-      "\n\007Restore\0220.yandex.cloud.mdb.redis.v1.Re" +
-      "storeClusterRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"R\202\323\344\223\002\'\"\"/managed-redis/v" +
-      "1/clusters:restore:\001*\262\322*!\n\026RestoreCluste" +
-      "rMetadata\022\007Cluster\022\351\001\n\025RescheduleMainten" +
-      "ance\0227.yandex.cloud.mdb.redis.v1.Resched" +
-      "uleMaintenanceRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"t\202\323\344\223\002B\"=/managed-redis" +
-      "/v1/clusters/{cluster_id}:rescheduleMain" +
-      "tenance:\001*\262\322*(\n\035RescheduleMaintenanceMet" +
-      "adata\022\007Cluster\022\324\001\n\rStartFailover\0226.yande" +
-      "x.cloud.mdb.redis.v1.StartClusterFailove" +
-      "rRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"h\202\323\344\223\0027\"5/managed-redis/v1/clusters/" +
-      "{cluster_id}:startFailover\262\322*\'\n\034StartClu" +
-      "sterFailoverMetadata\022\007Cluster\022\247\001\n\010ListLo" +
-      "gs\0221.yandex.cloud.mdb.redis.v1.ListClust" +
-      "erLogsRequest\0322.yandex.cloud.mdb.redis.v" +
-      "1.ListClusterLogsResponse\"4\202\323\344\223\002.\022,/mana" +
-      "ged-redis/v1/clusters/{cluster_id}:logs\022" +
-      "\254\001\n\nStreamLogs\0223.yandex.cloud.mdb.redis." +
-      "v1.StreamClusterLogsRequest\032*.yandex.clo" +
-      "ud.mdb.redis.v1.StreamLogRecord\";\202\323\344\223\0025\022" +
-      "3/managed-redis/v1/clusters/{cluster_id}" +
-      ":stream_logs0\001\022\277\001\n\016ListOperations\0227.yand" +
-      "ex.cloud.mdb.redis.v1.ListClusterOperati" +
-      "onsRequest\0328.yandex.cloud.mdb.redis.v1.L" +
-      "istClusterOperationsResponse\":\202\323\344\223\0024\0222/m" +
-      "anaged-redis/v1/clusters/{cluster_id}/op" +
-      "erations\022\263\001\n\013ListBackups\0224.yandex.cloud." +
-      "mdb.redis.v1.ListClusterBackupsRequest\0325" +
+      "\022\025\n\rcolumn_filter\030\002 \003(\t\022S\n\014service_type\030" +
+      "\003 \001(\0162=.yandex.cloud.mdb.redis.v1.ListCl" +
+      "usterLogsRequest.ServiceType\022-\n\tfrom_tim" +
+      "e\030\004 \001(\0132\032.google.protobuf.Timestamp\022+\n\007t" +
+      "o_time\030\005 \001(\0132\032.google.protobuf.Timestamp" +
+      "\022\035\n\tpage_size\030\006 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_" +
+      "token\030\007 \001(\tB\t\212\3101\005<=100\"6\n\013ServiceType\022\034\n" +
+      "\030SERVICE_TYPE_UNSPECIFIED\020\000\022\t\n\005REDIS\020\001\"f" +
+      "\n\027ListClusterLogsResponse\0222\n\004logs\030\001 \003(\0132" +
+      "$.yandex.cloud.mdb.redis.v1.LogRecord\022\027\n" +
+      "\017next_page_token\030\002 \001(\t\"b\n\017StreamLogRecor" +
+      "d\0224\n\006record\030\001 \001(\0132$.yandex.cloud.mdb.red" +
+      "is.v1.LogRecord\022\031\n\021next_record_token\030\002 \001" +
+      "(\t\"\373\002\n\030StreamClusterLogsRequest\022 \n\nclust" +
+      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filt" +
+      "er\030\002 \003(\t\022U\n\014service_type\030\003 \001(\0162?.yandex." +
+      "cloud.mdb.redis.v1.StreamClusterLogsRequ" +
+      "est.ServiceType\022-\n\tfrom_time\030\004 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\022+\n\007to_time\030\005 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022\037\n\014record_to" +
+      "ken\030\006 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\007 \001(\tB\n\212\310" +
+      "1\006<=1000\"6\n\013ServiceType\022\034\n\030SERVICE_TYPE_" +
+      "UNSPECIFIED\020\000\022\t\n\005REDIS\020\001\"~\n\034ListClusterO" +
+      "perationsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-100" +
+      "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035List" +
+      "ClusterOperationsResponse\0225\n\noperations\030" +
+      "\001 \003(\0132!.yandex.cloud.operation.Operation" +
+      "\022\027\n\017next_page_token\030\002 \001(\t\"{\n\031ListCluster" +
+      "BackupsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022" +
+      "\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"i\n\032ListCl" +
+      "usterBackupsResponse\0222\n\007backups\030\001 \003(\0132!." +
+      "yandex.cloud.mdb.redis.v1.Backup\022\027\n\017next" +
+      "_page_token\030\002 \001(\t\"y\n\027ListClusterHostsReq" +
+      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
+      "\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_to" +
+      "ken\030\003 \001(\tB\t\212\3101\005<=100\"c\n\030ListClusterHosts" +
+      "Response\022.\n\005hosts\030\001 \003(\0132\037.yandex.cloud.m" +
+      "db.redis.v1.Host\022\027\n\017next_page_token\030\002 \001(" +
+      "\t\"{\n\026AddClusterHostsRequest\022 \n\ncluster_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022?\n\nhost_specs\030\002 \003(" +
+      "\0132#.yandex.cloud.mdb.redis.v1.HostSpecB\006" +
+      "\202\3101\002>0\"A\n\027AddClusterHostsMetadata\022\022\n\nclu" +
+      "ster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"b\n\031Del" +
+      "eteClusterHostsRequest\022 \n\ncluster_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost_names\030\002 \003(\tB\017\202\310" +
+      "1\002>0\212\3101\005<=253\"D\n\032DeleteClusterHostsMetad" +
+      "ata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 " +
+      "\003(\t\"n\n\026GetClusterShardRequest\022 \n\ncluster" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\nshard_name\030\002 " +
+      "\001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"z\n\030L" +
+      "istClusterShardsRequest\022 \n\ncluster_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\307" +
+      "1\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"" +
+      "f\n\031ListClusterShardsResponse\0220\n\006shards\030\001" +
+      " \003(\0132 .yandex.cloud.mdb.redis.v1.Shard\022\027" +
+      "\n\017next_page_token\030\002 \001(\t\"\257\001\n\026AddClusterSh" +
+      "ardRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\0222\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\307" +
+      "1\016[a-zA-Z0-9_-]*\022?\n\nhost_specs\030\004 \003(\0132#.y" +
+      "andex.cloud.mdb.redis.v1.HostSpecB\006\202\3101\002>" +
+      "0\"A\n\027AddClusterShardMetadata\022\022\n\ncluster_" +
+      "id\030\001 \001(\t\022\022\n\nshard_name\030\002 \001(\t\"q\n\031DeleteCl" +
+      "usterShardRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\0222\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101" +
+      "\004<=63\362\3071\016[a-zA-Z0-9_-]*\"D\n\032DeleteCluster" +
+      "ShardMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nsha" +
+      "rd_name\030\002 \001(\t\";\n\027RebalanceClusterRequest" +
+      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\".\n\030Re" +
+      "balanceClusterMetadata\022\022\n\ncluster_id\030\001 \001" +
+      "(\t\"^\n\010HostSpec\022\017\n\007zone_id\030\001 \001(\t\022\021\n\tsubne" +
+      "t_id\030\002 \001(\t\022.\n\nshard_name\030\003 \001(\tB\032\212\3101\004<=63" +
+      "\362\3071\016[a-zA-Z0-9_-]*\"\351\003\n\nConfigSpec\022\017\n\007ver" +
+      "sion\030\001 \001(\t\022]\n\020redis_config_5_0\030\002 \001(\01320.y" +
+      "andex.cloud.mdb.redis.v1.config.RedisCon" +
+      "fig5_0H\000R\017redisConfig_5_0\022]\n\020redis_confi" +
+      "g_6_0\030\006 \001(\01320.yandex.cloud.mdb.redis.v1." +
+      "config.RedisConfig6_0H\000R\017redisConfig_6_0" +
+      "\022]\n\020redis_config_6_2\030\007 \001(\01320.yandex.clou" +
+      "d.mdb.redis.v1.config.RedisConfig6_2H\000R\017" +
+      "redisConfig_6_2\0227\n\tresources\030\003 \001(\0132$.yan" +
+      "dex.cloud.mdb.redis.v1.Resources\0223\n\023back" +
+      "up_window_start\030\004 \001(\0132\026.google.type.Time" +
+      "OfDay\0221\n\006access\030\005 \001(\0132!.yandex.cloud.mdb" +
+      ".redis.v1.AccessB\014\n\nredis_spec2\253#\n\016Clust" +
+      "erService\022\210\001\n\003Get\022,.yandex.cloud.mdb.red" +
+      "is.v1.GetClusterRequest\032\".yandex.cloud.m" +
+      "db.redis.v1.Cluster\"/\202\323\344\223\002)\022\'/managed-re" +
+      "dis/v1/clusters/{cluster_id}\022\213\001\n\004List\022.." +
+      "yandex.cloud.mdb.redis.v1.ListClustersRe" +
+      "quest\032/.yandex.cloud.mdb.redis.v1.ListCl" +
+      "ustersResponse\"\"\202\323\344\223\002\034\022\032/managed-redis/v" +
+      "1/clusters\022\247\001\n\006Create\022/.yandex.cloud.mdb" +
+      ".redis.v1.CreateClusterRequest\032!.yandex." +
+      "cloud.operation.Operation\"I\202\323\344\223\002\037\"\032/mana" +
+      "ged-redis/v1/clusters:\001*\262\322* \n\025CreateClus" +
+      "terMetadata\022\007Cluster\022\264\001\n\006Update\022/.yandex" +
+      ".cloud.mdb.redis.v1.UpdateClusterRequest" +
+      "\032!.yandex.cloud.operation.Operation\"V\202\323\344" +
+      "\223\002,2\'/managed-redis/v1/clusters/{cluster" +
+      "_id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Clus" +
+      "ter\022\277\001\n\006Delete\022/.yandex.cloud.mdb.redis." +
+      "v1.DeleteClusterRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"a\202\323\344\223\002)*\'/managed-red" +
+      "is/v1/clusters/{cluster_id}\262\322*.\n\025DeleteC" +
+      "lusterMetadata\022\025google.protobuf.Empty\022\264\001" +
+      "\n\005Start\022..yandex.cloud.mdb.redis.v1.Star" +
+      "tClusterRequest\032!.yandex.cloud.operation" +
+      ".Operation\"X\202\323\344\223\002/\"-/managed-redis/v1/cl" +
+      "usters/{cluster_id}:start\262\322*\037\n\024StartClus" +
+      "terMetadata\022\007Cluster\022\260\001\n\004Stop\022-.yandex.c" +
+      "loud.mdb.redis.v1.StopClusterRequest\032!.y" +
+      "andex.cloud.operation.Operation\"V\202\323\344\223\002.\"" +
+      ",/managed-redis/v1/clusters/{cluster_id}" +
+      ":stop\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022" +
+      "\263\001\n\004Move\022-.yandex.cloud.mdb.redis.v1.Mov" +
+      "eClusterRequest\032!.yandex.cloud.operation" +
+      ".Operation\"Y\202\323\344\223\0021\",/managed-redis/v1/cl" +
+      "usters/{cluster_id}:move:\001*\262\322*\036\n\023MoveClu" +
+      "sterMetadata\022\007Cluster\022\270\001\n\006Backup\022/.yande" +
+      "x.cloud.mdb.redis.v1.BackupClusterReques" +
+      "t\032!.yandex.cloud.operation.Operation\"Z\202\323" +
+      "\344\223\0020\"./managed-redis/v1/clusters/{cluste" +
+      "r_id}:backup\262\322* \n\025BackupClusterMetadata\022" +
+      "\007Cluster\022\262\001\n\007Restore\0220.yandex.cloud.mdb." +
+      "redis.v1.RestoreClusterRequest\032!.yandex." +
+      "cloud.operation.Operation\"R\202\323\344\223\002\'\"\"/mana" +
+      "ged-redis/v1/clusters:restore:\001*\262\322*!\n\026Re" +
+      "storeClusterMetadata\022\007Cluster\022\351\001\n\025Resche" +
+      "duleMaintenance\0227.yandex.cloud.mdb.redis" +
+      ".v1.RescheduleMaintenanceRequest\032!.yande" +
+      "x.cloud.operation.Operation\"t\202\323\344\223\002B\"=/ma" +
+      "naged-redis/v1/clusters/{cluster_id}:res" +
+      "cheduleMaintenance:\001*\262\322*(\n\035RescheduleMai" +
+      "ntenanceMetadata\022\007Cluster\022\327\001\n\rStartFailo" +
+      "ver\0226.yandex.cloud.mdb.redis.v1.StartClu" +
+      "sterFailoverRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"k\202\323\344\223\002:\"5/managed-redis/v" +
+      "1/clusters/{cluster_id}:startFailover:\001*" +
+      "\262\322*\'\n\034StartClusterFailoverMetadata\022\007Clus" +
+      "ter\022\247\001\n\010ListLogs\0221.yandex.cloud.mdb.redi" +
+      "s.v1.ListClusterLogsRequest\0322.yandex.clo" +
+      "ud.mdb.redis.v1.ListClusterLogsResponse\"" +
+      "4\202\323\344\223\002.\022,/managed-redis/v1/clusters/{clu" +
+      "ster_id}:logs\022\254\001\n\nStreamLogs\0223.yandex.cl" +
+      "oud.mdb.redis.v1.StreamClusterLogsReques" +
+      "t\032*.yandex.cloud.mdb.redis.v1.StreamLogR" +
+      "ecord\";\202\323\344\223\0025\0223/managed-redis/v1/cluster" +
+      "s/{cluster_id}:stream_logs0\001\022\277\001\n\016ListOpe" +
+      "rations\0227.yandex.cloud.mdb.redis.v1.List" +
+      "ClusterOperationsRequest\0328.yandex.cloud." +
+      "mdb.redis.v1.ListClusterOperationsRespon" +
+      "se\":\202\323\344\223\0024\0222/managed-redis/v1/clusters/{" +
+      "cluster_id}/operations\022\263\001\n\013ListBackups\0224" +
       ".yandex.cloud.mdb.redis.v1.ListClusterBa" +
-      "ckupsResponse\"7\202\323\344\223\0021\022//managed-redis/v1" +
-      "/clusters/{cluster_id}/backups\022\253\001\n\tListH" +
-      "osts\0222.yandex.cloud.mdb.redis.v1.ListClu" +
-      "sterHostsRequest\0323.yandex.cloud.mdb.redi" +
-      "s.v1.ListClusterHostsResponse\"5\202\323\344\223\002/\022-/" +
-      "managed-redis/v1/clusters/{cluster_id}/h" +
-      "osts\022\332\001\n\010AddHosts\0221.yandex.cloud.mdb.red" +
-      "is.v1.AddClusterHostsRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"x\202\323\344\223\002>\"9/manage" +
-      "d-redis/v1/clusters/{cluster_id}/hosts:b" +
-      "atchCreate:\001*\262\322*0\n\027AddClusterHostsMetada" +
-      "ta\022\025google.protobuf.Empty\022\343\001\n\013DeleteHost" +
-      "s\0224.yandex.cloud.mdb.redis.v1.DeleteClus" +
-      "terHostsRequest\032!.yandex.cloud.operation" +
-      ".Operation\"{\202\323\344\223\002>\"9/managed-redis/v1/cl" +
-      "usters/{cluster_id}/hosts:batchDelete:\001*" +
-      "\262\322*3\n\032DeleteClusterHostsMetadata\022\025google" +
-      ".protobuf.Empty\022\244\001\n\010GetShard\0221.yandex.cl" +
-      "oud.mdb.redis.v1.GetClusterShardRequest\032" +
-      " .yandex.cloud.mdb.redis.v1.Shard\"C\202\323\344\223\002" +
-      "=\022;/managed-redis/v1/clusters/{cluster_i" +
-      "d}/shards/{shard_name}\022\257\001\n\nListShards\0223." +
-      "yandex.cloud.mdb.redis.v1.ListClusterSha" +
-      "rdsRequest\0324.yandex.cloud.mdb.redis.v1.L" +
-      "istClusterShardsResponse\"6\202\323\344\223\0020\022./manag" +
-      "ed-redis/v1/clusters/{cluster_id}/shards" +
-      "\022\277\001\n\010AddShard\0221.yandex.cloud.mdb.redis.v" +
-      "1.AddClusterShardRequest\032!.yandex.cloud." +
-      "operation.Operation\"]\202\323\344\223\0023\"./managed-re" +
-      "dis/v1/clusters/{cluster_id}/shards:\001*\262\322" +
-      "* \n\027AddClusterShardMetadata\022\005Shard\022\342\001\n\013D" +
-      "eleteShard\0224.yandex.cloud.mdb.redis.v1.D" +
-      "eleteClusterShardRequest\032!.yandex.cloud." +
-      "operation.Operation\"z\202\323\344\223\002=*;/managed-re" +
-      "dis/v1/clusters/{cluster_id}/shards/{sha" +
-      "rd_name}\262\322*3\n\032DeleteClusterShardMetadata" +
-      "\022\025google.protobuf.Empty\022\304\001\n\tRebalance\0222." +
-      "yandex.cloud.mdb.redis.v1.RebalanceClust" +
-      "erRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"`\202\323\344\223\0023\"1/managed-redis/v1/clusters" +
-      "/{cluster_id}:rebalance\262\322*#\n\030RebalanceCl" +
-      "usterMetadata\022\007ClusterBd\n\035yandex.cloud.a" +
-      "pi.mdb.redis.v1ZCgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/mdb/redis/v1;r" +
-      "edisb\006proto3"
+      "ckupsRequest\0325.yandex.cloud.mdb.redis.v1" +
+      ".ListClusterBackupsResponse\"7\202\323\344\223\0021\022//ma" +
+      "naged-redis/v1/clusters/{cluster_id}/bac" +
+      "kups\022\253\001\n\tListHosts\0222.yandex.cloud.mdb.re" +
+      "dis.v1.ListClusterHostsRequest\0323.yandex." +
+      "cloud.mdb.redis.v1.ListClusterHostsRespo" +
+      "nse\"5\202\323\344\223\002/\022-/managed-redis/v1/clusters/" +
+      "{cluster_id}/hosts\022\332\001\n\010AddHosts\0221.yandex" +
+      ".cloud.mdb.redis.v1.AddClusterHostsReque" +
+      "st\032!.yandex.cloud.operation.Operation\"x\202" +
+      "\323\344\223\002>\"9/managed-redis/v1/clusters/{clust" +
+      "er_id}/hosts:batchCreate:\001*\262\322*0\n\027AddClus" +
+      "terHostsMetadata\022\025google.protobuf.Empty\022" +
+      "\343\001\n\013DeleteHosts\0224.yandex.cloud.mdb.redis" +
+      ".v1.DeleteClusterHostsRequest\032!.yandex.c" +
+      "loud.operation.Operation\"{\202\323\344\223\002>\"9/manag" +
+      "ed-redis/v1/clusters/{cluster_id}/hosts:" +
+      "batchDelete:\001*\262\322*3\n\032DeleteClusterHostsMe" +
+      "tadata\022\025google.protobuf.Empty\022\244\001\n\010GetSha" +
+      "rd\0221.yandex.cloud.mdb.redis.v1.GetCluste" +
+      "rShardRequest\032 .yandex.cloud.mdb.redis.v" +
+      "1.Shard\"C\202\323\344\223\002=\022;/managed-redis/v1/clust" +
+      "ers/{cluster_id}/shards/{shard_name}\022\257\001\n" +
+      "\nListShards\0223.yandex.cloud.mdb.redis.v1." +
+      "ListClusterShardsRequest\0324.yandex.cloud." +
+      "mdb.redis.v1.ListClusterShardsResponse\"6" +
+      "\202\323\344\223\0020\022./managed-redis/v1/clusters/{clus" +
+      "ter_id}/shards\022\277\001\n\010AddShard\0221.yandex.clo" +
+      "ud.mdb.redis.v1.AddClusterShardRequest\032!" +
+      ".yandex.cloud.operation.Operation\"]\202\323\344\223\002" +
+      "3\"./managed-redis/v1/clusters/{cluster_i" +
+      "d}/shards:\001*\262\322* \n\027AddClusterShardMetadat" +
+      "a\022\005Shard\022\342\001\n\013DeleteShard\0224.yandex.cloud." +
+      "mdb.redis.v1.DeleteClusterShardRequest\032!" +
+      ".yandex.cloud.operation.Operation\"z\202\323\344\223\002" +
+      "=*;/managed-redis/v1/clusters/{cluster_i" +
+      "d}/shards/{shard_name}\262\322*3\n\032DeleteCluste" +
+      "rShardMetadata\022\025google.protobuf.Empty\022\304\001" +
+      "\n\tRebalance\0222.yandex.cloud.mdb.redis.v1." +
+      "RebalanceClusterRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"`\202\323\344\223\0023\"1/managed-red" +
+      "is/v1/clusters/{cluster_id}:rebalance\262\322*" +
+      "#\n\030RebalanceClusterMetadata\022\007ClusterBd\n\035" +
+      "yandex.cloud.api.mdb.redis.v1ZCgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "mdb/redis/v1;redisb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -50536,13 +51061,13 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_redis_v1_StartClusterFailoverRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_StartClusterFailoverRequest_descriptor,
-        new java.lang.String[] { "ClusterId", });
+        new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_redis_v1_StartClusterFailoverMetadata_descriptor =
       getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_mdb_redis_v1_StartClusterFailoverMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_StartClusterFailoverMetadata_descriptor,
-        new java.lang.String[] { "ClusterId", });
+        new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_redis_v1_RescheduleMaintenanceRequest_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_mdb_redis_v1_RescheduleMaintenanceRequest_fieldAccessorTable = new

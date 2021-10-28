@@ -19352,6 +19352,2205 @@ public final class ProjectServiceOuterClass {
 
   }
 
+  public interface GetNotebookMetadataRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v1.GetNotebookMetadataRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the project, for which to return notebook metadata.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    java.lang.String getProjectId();
+    /**
+     * <pre>
+     * ID of the project, for which to return notebook metadata.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+
+    /**
+     * <pre>
+     * Path of the notebook to get metadata.
+     * </pre>
+     *
+     * <code>string notebook_path = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getNotebookPath();
+    /**
+     * <pre>
+     * Path of the notebook to get metadata.
+     * </pre>
+     *
+     * <code>string notebook_path = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getNotebookPathBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v1.GetNotebookMetadataRequest}
+   */
+  public  static final class GetNotebookMetadataRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v1.GetNotebookMetadataRequest)
+      GetNotebookMetadataRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetNotebookMetadataRequest.newBuilder() to construct.
+    private GetNotebookMetadataRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetNotebookMetadataRequest() {
+      projectId_ = "";
+      notebookPath_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetNotebookMetadataRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              projectId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              notebookPath_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetNotebookMetadataRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetNotebookMetadataRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest.Builder.class);
+    }
+
+    public static final int PROJECT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object projectId_;
+    /**
+     * <pre>
+     * ID of the project, for which to return notebook metadata.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the project, for which to return notebook metadata.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NOTEBOOK_PATH_FIELD_NUMBER = 2;
+    private volatile java.lang.Object notebookPath_;
+    /**
+     * <pre>
+     * Path of the notebook to get metadata.
+     * </pre>
+     *
+     * <code>string notebook_path = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getNotebookPath() {
+      java.lang.Object ref = notebookPath_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        notebookPath_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Path of the notebook to get metadata.
+     * </pre>
+     *
+     * <code>string notebook_path = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getNotebookPathBytes() {
+      java.lang.Object ref = notebookPath_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        notebookPath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getProjectIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, projectId_);
+      }
+      if (!getNotebookPathBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, notebookPath_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getProjectIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, projectId_);
+      }
+      if (!getNotebookPathBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, notebookPath_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest other = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest) obj;
+
+      boolean result = true;
+      result = result && getProjectId()
+          .equals(other.getProjectId());
+      result = result && getNotebookPath()
+          .equals(other.getNotebookPath());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
+      hash = (37 * hash) + NOTEBOOK_PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getNotebookPath().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v1.GetNotebookMetadataRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v1.GetNotebookMetadataRequest)
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetNotebookMetadataRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetNotebookMetadataRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        projectId_ = "";
+
+        notebookPath_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetNotebookMetadataRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest build() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest buildPartial() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest result = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest(this);
+        result.projectId_ = projectId_;
+        result.notebookPath_ = notebookPath_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest) {
+          return mergeFrom((yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest other) {
+        if (other == yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest.getDefaultInstance()) return this;
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          onChanged();
+        }
+        if (!other.getNotebookPath().isEmpty()) {
+          notebookPath_ = other.notebookPath_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object projectId_ = "";
+      /**
+       * <pre>
+       * ID of the project, for which to return notebook metadata.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project, for which to return notebook metadata.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project, for which to return notebook metadata.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project, for which to return notebook metadata.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder clearProjectId() {
+        
+        projectId_ = getDefaultInstance().getProjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project, for which to return notebook metadata.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object notebookPath_ = "";
+      /**
+       * <pre>
+       * Path of the notebook to get metadata.
+       * </pre>
+       *
+       * <code>string notebook_path = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getNotebookPath() {
+        java.lang.Object ref = notebookPath_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          notebookPath_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Path of the notebook to get metadata.
+       * </pre>
+       *
+       * <code>string notebook_path = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getNotebookPathBytes() {
+        java.lang.Object ref = notebookPath_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          notebookPath_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Path of the notebook to get metadata.
+       * </pre>
+       *
+       * <code>string notebook_path = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setNotebookPath(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        notebookPath_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Path of the notebook to get metadata.
+       * </pre>
+       *
+       * <code>string notebook_path = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearNotebookPath() {
+        
+        notebookPath_ = getDefaultInstance().getNotebookPath();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Path of the notebook to get metadata.
+       * </pre>
+       *
+       * <code>string notebook_path = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setNotebookPathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        notebookPath_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v1.GetNotebookMetadataRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v1.GetNotebookMetadataRequest)
+    private static final yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest();
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetNotebookMetadataRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetNotebookMetadataRequest>() {
+      @java.lang.Override
+      public GetNotebookMetadataRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetNotebookMetadataRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetNotebookMetadataRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetNotebookMetadataRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetNotebookMetadataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v1.GetNotebookMetadataResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the specified notebook.
+     * </pre>
+     *
+     * <code>string notebook_id = 1;</code>
+     */
+    java.lang.String getNotebookId();
+    /**
+     * <pre>
+     * ID of the specified notebook.
+     * </pre>
+     *
+     * <code>string notebook_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNotebookIdBytes();
+
+    /**
+     * <pre>
+     * The time the notebook was created.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 2;</code>
+     */
+    boolean hasCreatedAt();
+    /**
+     * <pre>
+     * The time the notebook was created.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 2;</code>
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <pre>
+     * The time the notebook was created.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 2;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+    /**
+     * <pre>
+     * The time the notebook was modified last time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 3;</code>
+     */
+    boolean hasModifiedAt();
+    /**
+     * <pre>
+     * The time the notebook was modified last time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 3;</code>
+     */
+    com.google.protobuf.Timestamp getModifiedAt();
+    /**
+     * <pre>
+     * The time the notebook was modified last time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 3;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getModifiedAtOrBuilder();
+
+    /**
+     * <pre>
+     * Content length of the specified notebook.
+     * </pre>
+     *
+     * <code>int64 content_length = 4;</code>
+     */
+    long getContentLength();
+
+    /**
+     * <pre>
+     * Cell ids of the specified notebook.
+     * </pre>
+     *
+     * <code>repeated string cell_ids = 5;</code>
+     */
+    java.util.List<java.lang.String>
+        getCellIdsList();
+    /**
+     * <pre>
+     * Cell ids of the specified notebook.
+     * </pre>
+     *
+     * <code>repeated string cell_ids = 5;</code>
+     */
+    int getCellIdsCount();
+    /**
+     * <pre>
+     * Cell ids of the specified notebook.
+     * </pre>
+     *
+     * <code>repeated string cell_ids = 5;</code>
+     */
+    java.lang.String getCellIds(int index);
+    /**
+     * <pre>
+     * Cell ids of the specified notebook.
+     * </pre>
+     *
+     * <code>repeated string cell_ids = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getCellIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v1.GetNotebookMetadataResponse}
+   */
+  public  static final class GetNotebookMetadataResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v1.GetNotebookMetadataResponse)
+      GetNotebookMetadataResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetNotebookMetadataResponse.newBuilder() to construct.
+    private GetNotebookMetadataResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetNotebookMetadataResponse() {
+      notebookId_ = "";
+      contentLength_ = 0L;
+      cellIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetNotebookMetadataResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              notebookId_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createdAt_ != null) {
+                subBuilder = createdAt_.toBuilder();
+              }
+              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createdAt_);
+                createdAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (modifiedAt_ != null) {
+                subBuilder = modifiedAt_.toBuilder();
+              }
+              modifiedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(modifiedAt_);
+                modifiedAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 32: {
+
+              contentLength_ = input.readInt64();
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                cellIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              cellIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          cellIds_ = cellIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetNotebookMetadataResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetNotebookMetadataResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NOTEBOOK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object notebookId_;
+    /**
+     * <pre>
+     * ID of the specified notebook.
+     * </pre>
+     *
+     * <code>string notebook_id = 1;</code>
+     */
+    public java.lang.String getNotebookId() {
+      java.lang.Object ref = notebookId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        notebookId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the specified notebook.
+     * </pre>
+     *
+     * <code>string notebook_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNotebookIdBytes() {
+      java.lang.Object ref = notebookId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        notebookId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <pre>
+     * The time the notebook was created.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 2;</code>
+     */
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <pre>
+     * The time the notebook was created.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 2;</code>
+     */
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <pre>
+     * The time the notebook was created.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 2;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return getCreatedAt();
+    }
+
+    public static final int MODIFIED_AT_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp modifiedAt_;
+    /**
+     * <pre>
+     * The time the notebook was modified last time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 3;</code>
+     */
+    public boolean hasModifiedAt() {
+      return modifiedAt_ != null;
+    }
+    /**
+     * <pre>
+     * The time the notebook was modified last time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 3;</code>
+     */
+    public com.google.protobuf.Timestamp getModifiedAt() {
+      return modifiedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : modifiedAt_;
+    }
+    /**
+     * <pre>
+     * The time the notebook was modified last time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 3;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getModifiedAtOrBuilder() {
+      return getModifiedAt();
+    }
+
+    public static final int CONTENT_LENGTH_FIELD_NUMBER = 4;
+    private long contentLength_;
+    /**
+     * <pre>
+     * Content length of the specified notebook.
+     * </pre>
+     *
+     * <code>int64 content_length = 4;</code>
+     */
+    public long getContentLength() {
+      return contentLength_;
+    }
+
+    public static final int CELL_IDS_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList cellIds_;
+    /**
+     * <pre>
+     * Cell ids of the specified notebook.
+     * </pre>
+     *
+     * <code>repeated string cell_ids = 5;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getCellIdsList() {
+      return cellIds_;
+    }
+    /**
+     * <pre>
+     * Cell ids of the specified notebook.
+     * </pre>
+     *
+     * <code>repeated string cell_ids = 5;</code>
+     */
+    public int getCellIdsCount() {
+      return cellIds_.size();
+    }
+    /**
+     * <pre>
+     * Cell ids of the specified notebook.
+     * </pre>
+     *
+     * <code>repeated string cell_ids = 5;</code>
+     */
+    public java.lang.String getCellIds(int index) {
+      return cellIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Cell ids of the specified notebook.
+     * </pre>
+     *
+     * <code>repeated string cell_ids = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCellIdsBytes(int index) {
+      return cellIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getNotebookIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, notebookId_);
+      }
+      if (createdAt_ != null) {
+        output.writeMessage(2, getCreatedAt());
+      }
+      if (modifiedAt_ != null) {
+        output.writeMessage(3, getModifiedAt());
+      }
+      if (contentLength_ != 0L) {
+        output.writeInt64(4, contentLength_);
+      }
+      for (int i = 0; i < cellIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, cellIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getNotebookIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, notebookId_);
+      }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCreatedAt());
+      }
+      if (modifiedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getModifiedAt());
+      }
+      if (contentLength_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, contentLength_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < cellIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(cellIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getCellIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse other = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse) obj;
+
+      boolean result = true;
+      result = result && getNotebookId()
+          .equals(other.getNotebookId());
+      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (hasCreatedAt()) {
+        result = result && getCreatedAt()
+            .equals(other.getCreatedAt());
+      }
+      result = result && (hasModifiedAt() == other.hasModifiedAt());
+      if (hasModifiedAt()) {
+        result = result && getModifiedAt()
+            .equals(other.getModifiedAt());
+      }
+      result = result && (getContentLength()
+          == other.getContentLength());
+      result = result && getCellIdsList()
+          .equals(other.getCellIdsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NOTEBOOK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNotebookId().hashCode();
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      if (hasModifiedAt()) {
+        hash = (37 * hash) + MODIFIED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getModifiedAt().hashCode();
+      }
+      hash = (37 * hash) + CONTENT_LENGTH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getContentLength());
+      if (getCellIdsCount() > 0) {
+        hash = (37 * hash) + CELL_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getCellIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v1.GetNotebookMetadataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v1.GetNotebookMetadataResponse)
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetNotebookMetadataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetNotebookMetadataResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        notebookId_ = "";
+
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+        if (modifiedAtBuilder_ == null) {
+          modifiedAt_ = null;
+        } else {
+          modifiedAt_ = null;
+          modifiedAtBuilder_ = null;
+        }
+        contentLength_ = 0L;
+
+        cellIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetNotebookMetadataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse build() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse buildPartial() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse result = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.notebookId_ = notebookId_;
+        if (createdAtBuilder_ == null) {
+          result.createdAt_ = createdAt_;
+        } else {
+          result.createdAt_ = createdAtBuilder_.build();
+        }
+        if (modifiedAtBuilder_ == null) {
+          result.modifiedAt_ = modifiedAt_;
+        } else {
+          result.modifiedAt_ = modifiedAtBuilder_.build();
+        }
+        result.contentLength_ = contentLength_;
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          cellIds_ = cellIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.cellIds_ = cellIds_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse) {
+          return mergeFrom((yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse other) {
+        if (other == yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse.getDefaultInstance()) return this;
+        if (!other.getNotebookId().isEmpty()) {
+          notebookId_ = other.notebookId_;
+          onChanged();
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
+        }
+        if (other.hasModifiedAt()) {
+          mergeModifiedAt(other.getModifiedAt());
+        }
+        if (other.getContentLength() != 0L) {
+          setContentLength(other.getContentLength());
+        }
+        if (!other.cellIds_.isEmpty()) {
+          if (cellIds_.isEmpty()) {
+            cellIds_ = other.cellIds_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureCellIdsIsMutable();
+            cellIds_.addAll(other.cellIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object notebookId_ = "";
+      /**
+       * <pre>
+       * ID of the specified notebook.
+       * </pre>
+       *
+       * <code>string notebook_id = 1;</code>
+       */
+      public java.lang.String getNotebookId() {
+        java.lang.Object ref = notebookId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          notebookId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the specified notebook.
+       * </pre>
+       *
+       * <code>string notebook_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNotebookIdBytes() {
+        java.lang.Object ref = notebookId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          notebookId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the specified notebook.
+       * </pre>
+       *
+       * <code>string notebook_id = 1;</code>
+       */
+      public Builder setNotebookId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        notebookId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the specified notebook.
+       * </pre>
+       *
+       * <code>string notebook_id = 1;</code>
+       */
+      public Builder clearNotebookId() {
+        
+        notebookId_ = getDefaultInstance().getNotebookId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the specified notebook.
+       * </pre>
+       *
+       * <code>string notebook_id = 1;</code>
+       */
+      public Builder setNotebookIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        notebookId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <pre>
+       * The time the notebook was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       */
+      public boolean hasCreatedAt() {
+        return createdAtBuilder_ != null || createdAt_ != null;
+      }
+      /**
+       * <pre>
+       * The time the notebook was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The time the notebook was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the notebook was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the notebook was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (createdAt_ != null) {
+            createdAt_ =
+              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          } else {
+            createdAt_ = value;
+          }
+          onChanged();
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the notebook was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       */
+      public Builder clearCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+          onChanged();
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the notebook was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The time the notebook was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <pre>
+       * The time the notebook was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp modifiedAt_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> modifiedAtBuilder_;
+      /**
+       * <pre>
+       * The time the notebook was modified last time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp modified_at = 3;</code>
+       */
+      public boolean hasModifiedAt() {
+        return modifiedAtBuilder_ != null || modifiedAt_ != null;
+      }
+      /**
+       * <pre>
+       * The time the notebook was modified last time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp modified_at = 3;</code>
+       */
+      public com.google.protobuf.Timestamp getModifiedAt() {
+        if (modifiedAtBuilder_ == null) {
+          return modifiedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : modifiedAt_;
+        } else {
+          return modifiedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The time the notebook was modified last time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp modified_at = 3;</code>
+       */
+      public Builder setModifiedAt(com.google.protobuf.Timestamp value) {
+        if (modifiedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          modifiedAt_ = value;
+          onChanged();
+        } else {
+          modifiedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the notebook was modified last time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp modified_at = 3;</code>
+       */
+      public Builder setModifiedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (modifiedAtBuilder_ == null) {
+          modifiedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          modifiedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the notebook was modified last time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp modified_at = 3;</code>
+       */
+      public Builder mergeModifiedAt(com.google.protobuf.Timestamp value) {
+        if (modifiedAtBuilder_ == null) {
+          if (modifiedAt_ != null) {
+            modifiedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(modifiedAt_).mergeFrom(value).buildPartial();
+          } else {
+            modifiedAt_ = value;
+          }
+          onChanged();
+        } else {
+          modifiedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the notebook was modified last time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp modified_at = 3;</code>
+       */
+      public Builder clearModifiedAt() {
+        if (modifiedAtBuilder_ == null) {
+          modifiedAt_ = null;
+          onChanged();
+        } else {
+          modifiedAt_ = null;
+          modifiedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the notebook was modified last time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp modified_at = 3;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getModifiedAtBuilder() {
+        
+        onChanged();
+        return getModifiedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The time the notebook was modified last time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp modified_at = 3;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getModifiedAtOrBuilder() {
+        if (modifiedAtBuilder_ != null) {
+          return modifiedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return modifiedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : modifiedAt_;
+        }
+      }
+      /**
+       * <pre>
+       * The time the notebook was modified last time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp modified_at = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getModifiedAtFieldBuilder() {
+        if (modifiedAtBuilder_ == null) {
+          modifiedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getModifiedAt(),
+                  getParentForChildren(),
+                  isClean());
+          modifiedAt_ = null;
+        }
+        return modifiedAtBuilder_;
+      }
+
+      private long contentLength_ ;
+      /**
+       * <pre>
+       * Content length of the specified notebook.
+       * </pre>
+       *
+       * <code>int64 content_length = 4;</code>
+       */
+      public long getContentLength() {
+        return contentLength_;
+      }
+      /**
+       * <pre>
+       * Content length of the specified notebook.
+       * </pre>
+       *
+       * <code>int64 content_length = 4;</code>
+       */
+      public Builder setContentLength(long value) {
+        
+        contentLength_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Content length of the specified notebook.
+       * </pre>
+       *
+       * <code>int64 content_length = 4;</code>
+       */
+      public Builder clearContentLength() {
+        
+        contentLength_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList cellIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureCellIdsIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          cellIds_ = new com.google.protobuf.LazyStringArrayList(cellIds_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+      /**
+       * <pre>
+       * Cell ids of the specified notebook.
+       * </pre>
+       *
+       * <code>repeated string cell_ids = 5;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getCellIdsList() {
+        return cellIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Cell ids of the specified notebook.
+       * </pre>
+       *
+       * <code>repeated string cell_ids = 5;</code>
+       */
+      public int getCellIdsCount() {
+        return cellIds_.size();
+      }
+      /**
+       * <pre>
+       * Cell ids of the specified notebook.
+       * </pre>
+       *
+       * <code>repeated string cell_ids = 5;</code>
+       */
+      public java.lang.String getCellIds(int index) {
+        return cellIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Cell ids of the specified notebook.
+       * </pre>
+       *
+       * <code>repeated string cell_ids = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCellIdsBytes(int index) {
+        return cellIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Cell ids of the specified notebook.
+       * </pre>
+       *
+       * <code>repeated string cell_ids = 5;</code>
+       */
+      public Builder setCellIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCellIdsIsMutable();
+        cellIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cell ids of the specified notebook.
+       * </pre>
+       *
+       * <code>repeated string cell_ids = 5;</code>
+       */
+      public Builder addCellIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCellIdsIsMutable();
+        cellIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cell ids of the specified notebook.
+       * </pre>
+       *
+       * <code>repeated string cell_ids = 5;</code>
+       */
+      public Builder addAllCellIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureCellIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, cellIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cell ids of the specified notebook.
+       * </pre>
+       *
+       * <code>repeated string cell_ids = 5;</code>
+       */
+      public Builder clearCellIds() {
+        cellIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cell ids of the specified notebook.
+       * </pre>
+       *
+       * <code>repeated string cell_ids = 5;</code>
+       */
+      public Builder addCellIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureCellIdsIsMutable();
+        cellIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v1.GetNotebookMetadataResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v1.GetNotebookMetadataResponse)
+    private static final yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse();
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetNotebookMetadataResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetNotebookMetadataResponse>() {
+      @java.lang.Override
+      public GetNotebookMetadataResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetNotebookMetadataResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetNotebookMetadataResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetNotebookMetadataResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetNotebookMetadataResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datasphere_v1_CreateProjectRequest_descriptor;
   private static final 
@@ -19462,6 +21661,16 @@ public final class ProjectServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datasphere_v1_GetStateVariablesResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v1_GetNotebookMetadataRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v1_GetNotebookMetadataRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v1_GetNotebookMetadataResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v1_GetNotebookMetadataResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -19540,58 +21749,70 @@ public final class ProjectServiceOuterClass {
       "\001\212\3101\005<=200\022\026\n\016variable_names\030\003 \003(\t\022\025\n\rch" +
       "eckpoint_id\030\004 \001(\t\"G\n\031GetStateVariablesRe" +
       "sponse\022*\n\tvariables\030\001 \001(\0132\027.google.proto" +
-      "buf.Struct2\223\017\n\016ProjectService\022\245\001\n\006Create" +
-      "\0220.yandex.cloud.datasphere.v1.CreateProj" +
-      "ectRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"F\202\323\344\223\002\034\"\027/datasphere/v1/projects:\001" +
-      "*\262\322* \n\025CreateProjectMetadata\022\007Project\022\262\001" +
-      "\n\006Update\0220.yandex.cloud.datasphere.v1.Up" +
-      "dateProjectRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"S\202\323\344\223\002)2$/datasphere/v1/pr" +
-      "ojects/{project_id}:\001*\262\322* \n\025UpdateProjec" +
-      "tMetadata\022\007Project\022\275\001\n\006Delete\0220.yandex.c" +
-      "loud.datasphere.v1.DeleteProjectRequest\032" +
-      "!.yandex.cloud.operation.Operation\"^\202\323\344\223" +
-      "\002&*$/datasphere/v1/projects/{project_id}" +
-      "\262\322*.\n\025DeleteProjectMetadata\022\025google.prot" +
-      "obuf.Empty\022\272\001\n\004Open\022..yandex.cloud.datas" +
-      "phere.v1.OpenProjectRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"_\202\323\344\223\002+\")/datasph" +
-      "ere/v1/projects/{project_id}:open\262\322**\n\023O" +
-      "penProjectMetadata\022\023OpenProjectResponse\022" +
-      "\207\001\n\003Get\022-.yandex.cloud.datasphere.v1.Get" +
-      "ProjectRequest\032#.yandex.cloud.datasphere" +
-      ".v1.Project\",\202\323\344\223\002&\022$/datasphere/v1/proj" +
-      "ects/{project_id}\022\212\001\n\004List\022/.yandex.clou" +
-      "d.datasphere.v1.ListProjectsRequest\0320.ya" +
-      "ndex.cloud.datasphere.v1.ListProjectsRes" +
-      "ponse\"\037\202\323\344\223\002\031\022\027/datasphere/v1/projects\022\261" +
-      "\001\n\016GetUnitBalance\0221.yandex.cloud.datasph" +
-      "ere.v1.GetUnitBalanceRequest\0322.yandex.cl" +
-      "oud.datasphere.v1.GetUnitBalanceResponse" +
-      "\"8\202\323\344\223\0022\0220/datasphere/v1/projects/{proje" +
-      "ct_id}:unitBalance\022\230\001\n\016SetUnitBalance\0221." +
-      "yandex.cloud.datasphere.v1.SetUnitBalanc" +
-      "eRequest\032\026.google.protobuf.Empty\";\202\323\344\223\0025" +
-      "\"0/datasphere/v1/projects/{project_id}:u" +
-      "nitBalance:\001*\022\322\001\n\007Execute\0223.yandex.cloud" +
-      ".datasphere.v1.ProjectExecutionRequest\032!" +
-      ".yandex.cloud.operation.Operation\"o\202\323\344\223\002" +
-      "1\",/datasphere/v1/projects/{project_id}:" +
-      "execute:\001*\262\322*4\n\030ProjectExecutionMetadata" +
-      "\022\030ProjectExecutionResponse\022\253\001\n\016GetCellOu" +
-      "tputs\022..yandex.cloud.datasphere.v1.CellO" +
-      "utputsRequest\032/.yandex.cloud.datasphere." +
-      "v1.CellOutputsResponse\"8\202\323\344\223\0022\0220/datasph" +
-      "ere/v1/projects/{project_id}:cellOutputs" +
-      "\022\275\001\n\021GetStateVariables\0224.yandex.cloud.da" +
-      "tasphere.v1.GetStateVariablesRequest\0325.y" +
-      "andex.cloud.datasphere.v1.GetStateVariab" +
-      "lesResponse\";\202\323\344\223\0025\0223/datasphere/v1/proj" +
-      "ects/{project_id}:stateVariablesBk\n\036yand" +
-      "ex.cloud.api.datasphere.v1ZIgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/dat" +
-      "asphere/v1;datasphereb\006proto3"
+      "buf.Struct\"\\\n\032GetNotebookMetadataRequest" +
+      "\022!\n\nproject_id\030\001 \001(\tB\r\350\3071\001\212\3101\005<=200\022\033\n\rn" +
+      "otebook_path\030\002 \001(\tB\004\350\3071\001\"\275\001\n\033GetNotebook" +
+      "MetadataResponse\022\023\n\013notebook_id\030\001 \001(\t\022.\n" +
+      "\ncreated_at\030\002 \001(\0132\032.google.protobuf.Time" +
+      "stamp\022/\n\013modified_at\030\003 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022\026\n\016content_length\030\004 \001(\003\022\020" +
+      "\n\010cell_ids\030\005 \003(\t2\333\020\n\016ProjectService\022\245\001\n\006" +
+      "Create\0220.yandex.cloud.datasphere.v1.Crea" +
+      "teProjectRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"F\202\323\344\223\002\034\"\027/datasphere/v1/proj" +
+      "ects:\001*\262\322* \n\025CreateProjectMetadata\022\007Proj" +
+      "ect\022\262\001\n\006Update\0220.yandex.cloud.datasphere" +
+      ".v1.UpdateProjectRequest\032!.yandex.cloud." +
+      "operation.Operation\"S\202\323\344\223\002)2$/datasphere" +
+      "/v1/projects/{project_id}:\001*\262\322* \n\025Update" +
+      "ProjectMetadata\022\007Project\022\275\001\n\006Delete\0220.ya" +
+      "ndex.cloud.datasphere.v1.DeleteProjectRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"^\202\323\344\223\002&*$/datasphere/v1/projects/{proje" +
+      "ct_id}\262\322*.\n\025DeleteProjectMetadata\022\025googl" +
+      "e.protobuf.Empty\022\272\001\n\004Open\022..yandex.cloud" +
+      ".datasphere.v1.OpenProjectRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"_\202\323\344\223\002+\")/d" +
+      "atasphere/v1/projects/{project_id}:open\262" +
+      "\322**\n\023OpenProjectMetadata\022\023OpenProjectRes" +
+      "ponse\022\207\001\n\003Get\022-.yandex.cloud.datasphere." +
+      "v1.GetProjectRequest\032#.yandex.cloud.data" +
+      "sphere.v1.Project\",\202\323\344\223\002&\022$/datasphere/v" +
+      "1/projects/{project_id}\022\212\001\n\004List\022/.yande" +
+      "x.cloud.datasphere.v1.ListProjectsReques" +
+      "t\0320.yandex.cloud.datasphere.v1.ListProje" +
+      "ctsResponse\"\037\202\323\344\223\002\031\022\027/datasphere/v1/proj" +
+      "ects\022\261\001\n\016GetUnitBalance\0221.yandex.cloud.d" +
+      "atasphere.v1.GetUnitBalanceRequest\0322.yan" +
+      "dex.cloud.datasphere.v1.GetUnitBalanceRe" +
+      "sponse\"8\202\323\344\223\0022\0220/datasphere/v1/projects/" +
+      "{project_id}:unitBalance\022\230\001\n\016SetUnitBala" +
+      "nce\0221.yandex.cloud.datasphere.v1.SetUnit" +
+      "BalanceRequest\032\026.google.protobuf.Empty\";" +
+      "\202\323\344\223\0025\"0/datasphere/v1/projects/{project" +
+      "_id}:unitBalance:\001*\022\322\001\n\007Execute\0223.yandex" +
+      ".cloud.datasphere.v1.ProjectExecutionReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "o\202\323\344\223\0021\",/datasphere/v1/projects/{projec" +
+      "t_id}:execute:\001*\262\322*4\n\030ProjectExecutionMe" +
+      "tadata\022\030ProjectExecutionResponse\022\253\001\n\016Get" +
+      "CellOutputs\022..yandex.cloud.datasphere.v1" +
+      ".CellOutputsRequest\032/.yandex.cloud.datas" +
+      "phere.v1.CellOutputsResponse\"8\202\323\344\223\0022\0220/d" +
+      "atasphere/v1/projects/{project_id}:cellO" +
+      "utputs\022\275\001\n\021GetStateVariables\0224.yandex.cl" +
+      "oud.datasphere.v1.GetStateVariablesReque" +
+      "st\0325.yandex.cloud.datasphere.v1.GetState" +
+      "VariablesResponse\";\202\323\344\223\0025\0223/datasphere/v" +
+      "1/projects/{project_id}:stateVariables\022\305" +
+      "\001\n\023GetNotebookMetadata\0226.yandex.cloud.da" +
+      "tasphere.v1.GetNotebookMetadataRequest\0327" +
+      ".yandex.cloud.datasphere.v1.GetNotebookM" +
+      "etadataResponse\"=\202\323\344\223\0027\0225/datasphere/v1/" +
+      "projects/{project_id}:notebookMetadataBk" +
+      "\n\036yandex.cloud.api.datasphere.v1ZIgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/datasphere/v1;datasphereb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -19747,6 +21968,18 @@ public final class ProjectServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v1_GetStateVariablesResponse_descriptor,
         new java.lang.String[] { "Variables", });
+    internal_static_yandex_cloud_datasphere_v1_GetNotebookMetadataRequest_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_yandex_cloud_datasphere_v1_GetNotebookMetadataRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v1_GetNotebookMetadataRequest_descriptor,
+        new java.lang.String[] { "ProjectId", "NotebookPath", });
+    internal_static_yandex_cloud_datasphere_v1_GetNotebookMetadataResponse_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_yandex_cloud_datasphere_v1_GetNotebookMetadataResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v1_GetNotebookMetadataResponse_descriptor,
+        new java.lang.String[] { "NotebookId", "CreatedAt", "ModifiedAt", "ContentLength", "CellIds", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

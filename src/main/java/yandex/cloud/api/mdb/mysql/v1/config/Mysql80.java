@@ -1205,7 +1205,7 @@ public final class Mysql80 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+     * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
      */
     boolean hasBinlogGroupCommitSyncDelay();
     /**
@@ -1214,7 +1214,7 @@ public final class Mysql80 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+     * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
      */
     com.google.protobuf.Int64Value getBinlogGroupCommitSyncDelay();
     /**
@@ -1223,7 +1223,7 @@ public final class Mysql80 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+     * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getBinlogGroupCommitSyncDelayOrBuilder();
 
@@ -4671,7 +4671,7 @@ public final class Mysql80 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+     * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
      */
     public boolean hasBinlogGroupCommitSyncDelay() {
       return binlogGroupCommitSyncDelay_ != null;
@@ -4682,7 +4682,7 @@ public final class Mysql80 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+     * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
      */
     public com.google.protobuf.Int64Value getBinlogGroupCommitSyncDelay() {
       return binlogGroupCommitSyncDelay_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : binlogGroupCommitSyncDelay_;
@@ -4693,7 +4693,7 @@ public final class Mysql80 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+     * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getBinlogGroupCommitSyncDelayOrBuilder() {
       return getBinlogGroupCommitSyncDelay();
@@ -13605,7 +13605,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
        */
       public boolean hasBinlogGroupCommitSyncDelay() {
         return binlogGroupCommitSyncDelayBuilder_ != null || binlogGroupCommitSyncDelay_ != null;
@@ -13616,7 +13616,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
        */
       public com.google.protobuf.Int64Value getBinlogGroupCommitSyncDelay() {
         if (binlogGroupCommitSyncDelayBuilder_ == null) {
@@ -13631,7 +13631,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
        */
       public Builder setBinlogGroupCommitSyncDelay(com.google.protobuf.Int64Value value) {
         if (binlogGroupCommitSyncDelayBuilder_ == null) {
@@ -13652,7 +13652,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
        */
       public Builder setBinlogGroupCommitSyncDelay(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -13671,7 +13671,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
        */
       public Builder mergeBinlogGroupCommitSyncDelay(com.google.protobuf.Int64Value value) {
         if (binlogGroupCommitSyncDelayBuilder_ == null) {
@@ -13694,7 +13694,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
        */
       public Builder clearBinlogGroupCommitSyncDelay() {
         if (binlogGroupCommitSyncDelayBuilder_ == null) {
@@ -13713,7 +13713,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getBinlogGroupCommitSyncDelayBuilder() {
         
@@ -13726,7 +13726,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getBinlogGroupCommitSyncDelayOrBuilder() {
         if (binlogGroupCommitSyncDelayBuilder_ != null) {
@@ -13742,7 +13742,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-50000"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -16764,7 +16764,7 @@ public final class Mysql80 {
       "\n/yandex/cloud/mdb/mysql/v1/config/mysql" +
       "8_0.proto\022 yandex.cloud.mdb.mysql.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\226\'\n\016MysqlConf" +
+      "dex/cloud/validation.proto\"\224\'\n\016MysqlConf" +
       "ig8_0\022K\n\027innodb_buffer_pool_size\030\001 \001(\0132\033" +
       ".google.protobuf.Int64ValueB\r\372\3071\t>=52428" +
       "80\022B\n\017max_connections\030\002 \001(\0132\033.google.pro" +
@@ -16840,66 +16840,66 @@ public final class Mysql80 {
       "binlog\030* \001(\0132\033.google.protobuf.Int64Valu" +
       "eB\n\372\3071\0060-4096\022I\n\021binlog_cache_size\030+ \001(\013" +
       "2\033.google.protobuf.Int64ValueB\021\372\3071\r4096-" +
-      "67108864\022R\n\036binlog_group_commit_sync_del" +
-      "ay\030, \001(\0132\033.google.protobuf.Int64ValueB\r\372" +
-      "\3071\t0-1000000\022Y\n\020binlog_row_image\030- \001(\0162?" +
-      ".yandex.cloud.mdb.mysql.v1.config.MysqlC" +
-      "onfig8_0.BinlogRowImage\022@\n\034binlog_rows_q" +
-      "uery_log_events\030. \001(\0132\032.google.protobuf." +
-      "BoolValue\022W\n)rpl_semi_sync_master_wait_f" +
-      "or_slave_count\030/ \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\007\372\3071\0031-2\022_\n\023slave_parallel_typ" +
-      "e\0300 \001(\0162B.yandex.cloud.mdb.mysql.v1.conf" +
-      "ig.MysqlConfig8_0.SlaveParallelType\022E\n\026s" +
-      "lave_parallel_workers\0301 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\010\372\3071\0040-64\022E\n\021regexp_tim" +
-      "e_limit\0302 \001(\0132\033.google.protobuf.Int64Val" +
-      "ueB\r\372\3071\t0-1048576\022[\n\031mdb_preserve_binlog" +
-      "_bytes\0303 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\033\372\3071\0271073741824-107374182400\022G\n\023intera" +
-      "ctive_timeout\0304 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\r\372\3071\t600-86400\022@\n\014wait_timeout\030" +
-      "5 \001(\0132\033.google.protobuf.Int64ValueB\r\372\3071\t" +
-      "600-86400\022P\n\033mdb_offline_mode_enable_lag" +
-      "\0306 \001(\0132\033.google.protobuf.Int64ValueB\016\372\3071" +
-      "\n600-432000\022O\n\034mdb_offline_mode_disable_" +
-      "lag\0307 \001(\0132\033.google.protobuf.Int64ValueB\014" +
-      "\372\3071\01060-86400\022X\n\034range_optimizer_max_mem_" +
-      "size\0308 \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\025\372\3071\0211048576-268435456\"\210\004\n\007SQLMode\022\027\n\023SQ" +
-      "LMODE_UNSPECIFIED\020\000\022\027\n\023ALLOW_INVALID_DAT" +
-      "ES\020\001\022\017\n\013ANSI_QUOTES\020\002\022\036\n\032ERROR_FOR_DIVIS" +
-      "ION_BY_ZERO\020\003\022\027\n\023HIGH_NOT_PRECEDENCE\020\004\022\020" +
-      "\n\014IGNORE_SPACE\020\005\022\031\n\025NO_AUTO_VALUE_ON_ZER" +
-      "O\020\006\022\030\n\024NO_BACKSLASH_ESCAPES\020\007\022\032\n\026NO_ENGI" +
-      "NE_SUBSTITUTION\020\010\022\033\n\027NO_UNSIGNED_SUBTRAC" +
-      "TION\020\t\022\020\n\014NO_ZERO_DATE\020\n\022\023\n\017NO_ZERO_IN_D" +
-      "ATE\020\013\022\026\n\022ONLY_FULL_GROUP_BY\020\017\022\033\n\027PAD_CHA" +
-      "R_TO_FULL_LENGTH\020\020\022\023\n\017PIPES_AS_CONCAT\020\021\022" +
-      "\021\n\rREAL_AS_FLOAT\020\022\022\025\n\021STRICT_ALL_TABLES\020" +
-      "\023\022\027\n\023STRICT_TRANS_TABLES\020\024\022\034\n\030TIME_TRUNC" +
-      "ATE_FRACTIONAL\020\025\022\010\n\004ANSI\020\026\022\017\n\013TRADITIONA" +
-      "L\020\027\022\024\n\020NO_DIR_IN_CREATE\020\030\"t\n\nAuthPlugin\022" +
-      "\033\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NA" +
-      "TIVE_PASSWORD\020\001\022\031\n\025CACHING_SHA2_PASSWORD" +
-      "\020\002\022\023\n\017SHA256_PASSWORD\020\003\"x\n\024TransactionIs" +
-      "olation\022%\n!TRANSACTION_ISOLATION_UNSPECI" +
-      "FIED\020\000\022\022\n\016READ_COMMITTED\020\001\022\023\n\017REPEATABLE" +
-      "_READ\020\002\022\020\n\014SERIALIZABLE\020\003\"U\n\016BinlogRowIm" +
-      "age\022 \n\034BINLOG_ROW_IMAGE_UNSPECIFIED\020\000\022\010\n" +
-      "\004FULL\020\001\022\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021Slav" +
-      "eParallelType\022#\n\037SLAVE_PARALLEL_TYPE_UNS" +
-      "PECIFIED\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLOGICAL_CLOC" +
-      "K\020\002\"\360\001\n\021MysqlConfigSet8_0\022J\n\020effective_c" +
-      "onfig\030\001 \001(\01320.yandex.cloud.mdb.mysql.v1." +
-      "config.MysqlConfig8_0\022E\n\013user_config\030\002 \001" +
-      "(\01320.yandex.cloud.mdb.mysql.v1.config.My" +
-      "sqlConfig8_0\022H\n\016default_config\030\003 \001(\01320.y" +
+      "67108864\022P\n\036binlog_group_commit_sync_del" +
+      "ay\030, \001(\0132\033.google.protobuf.Int64ValueB\013\372" +
+      "\3071\0070-50000\022Y\n\020binlog_row_image\030- \001(\0162?.y" +
       "andex.cloud.mdb.mysql.v1.config.MysqlCon" +
-      "fig8_0Br\n$yandex.cloud.api.mdb.mysql.v1." +
-      "configZJgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/mdb/mysql/v1/config;mys" +
-      "qlb\006proto3"
+      "fig8_0.BinlogRowImage\022@\n\034binlog_rows_que" +
+      "ry_log_events\030. \001(\0132\032.google.protobuf.Bo" +
+      "olValue\022W\n)rpl_semi_sync_master_wait_for" +
+      "_slave_count\030/ \001(\0132\033.google.protobuf.Int" +
+      "64ValueB\007\372\3071\0031-2\022_\n\023slave_parallel_type\030" +
+      "0 \001(\0162B.yandex.cloud.mdb.mysql.v1.config" +
+      ".MysqlConfig8_0.SlaveParallelType\022E\n\026sla" +
+      "ve_parallel_workers\0301 \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\010\372\3071\0040-64\022E\n\021regexp_time_" +
+      "limit\0302 \001(\0132\033.google.protobuf.Int64Value" +
+      "B\r\372\3071\t0-1048576\022[\n\031mdb_preserve_binlog_b" +
+      "ytes\0303 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\033\372\3071\0271073741824-107374182400\022G\n\023interact" +
+      "ive_timeout\0304 \001(\0132\033.google.protobuf.Int6" +
+      "4ValueB\r\372\3071\t600-86400\022@\n\014wait_timeout\0305 " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\r\372\3071\t60" +
+      "0-86400\022P\n\033mdb_offline_mode_enable_lag\0306" +
+      " \001(\0132\033.google.protobuf.Int64ValueB\016\372\3071\n6" +
+      "00-432000\022O\n\034mdb_offline_mode_disable_la" +
+      "g\0307 \001(\0132\033.google.protobuf.Int64ValueB\014\372\307" +
+      "1\01060-86400\022X\n\034range_optimizer_max_mem_si" +
+      "ze\0308 \001(\0132\033.google.protobuf.Int64ValueB\025\372" +
+      "\3071\0211048576-268435456\"\210\004\n\007SQLMode\022\027\n\023SQLM" +
+      "ODE_UNSPECIFIED\020\000\022\027\n\023ALLOW_INVALID_DATES" +
+      "\020\001\022\017\n\013ANSI_QUOTES\020\002\022\036\n\032ERROR_FOR_DIVISIO" +
+      "N_BY_ZERO\020\003\022\027\n\023HIGH_NOT_PRECEDENCE\020\004\022\020\n\014" +
+      "IGNORE_SPACE\020\005\022\031\n\025NO_AUTO_VALUE_ON_ZERO\020" +
+      "\006\022\030\n\024NO_BACKSLASH_ESCAPES\020\007\022\032\n\026NO_ENGINE" +
+      "_SUBSTITUTION\020\010\022\033\n\027NO_UNSIGNED_SUBTRACTI" +
+      "ON\020\t\022\020\n\014NO_ZERO_DATE\020\n\022\023\n\017NO_ZERO_IN_DAT" +
+      "E\020\013\022\026\n\022ONLY_FULL_GROUP_BY\020\017\022\033\n\027PAD_CHAR_" +
+      "TO_FULL_LENGTH\020\020\022\023\n\017PIPES_AS_CONCAT\020\021\022\021\n" +
+      "\rREAL_AS_FLOAT\020\022\022\025\n\021STRICT_ALL_TABLES\020\023\022" +
+      "\027\n\023STRICT_TRANS_TABLES\020\024\022\034\n\030TIME_TRUNCAT" +
+      "E_FRACTIONAL\020\025\022\010\n\004ANSI\020\026\022\017\n\013TRADITIONAL\020" +
+      "\027\022\024\n\020NO_DIR_IN_CREATE\020\030\"t\n\nAuthPlugin\022\033\n" +
+      "\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NATI" +
+      "VE_PASSWORD\020\001\022\031\n\025CACHING_SHA2_PASSWORD\020\002" +
+      "\022\023\n\017SHA256_PASSWORD\020\003\"x\n\024TransactionIsol" +
+      "ation\022%\n!TRANSACTION_ISOLATION_UNSPECIFI" +
+      "ED\020\000\022\022\n\016READ_COMMITTED\020\001\022\023\n\017REPEATABLE_R" +
+      "EAD\020\002\022\020\n\014SERIALIZABLE\020\003\"U\n\016BinlogRowImag" +
+      "e\022 \n\034BINLOG_ROW_IMAGE_UNSPECIFIED\020\000\022\010\n\004F" +
+      "ULL\020\001\022\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021SlaveP" +
+      "arallelType\022#\n\037SLAVE_PARALLEL_TYPE_UNSPE" +
+      "CIFIED\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLOGICAL_CLOCK\020" +
+      "\002\"\360\001\n\021MysqlConfigSet8_0\022J\n\020effective_con" +
+      "fig\030\001 \001(\01320.yandex.cloud.mdb.mysql.v1.co" +
+      "nfig.MysqlConfig8_0\022E\n\013user_config\030\002 \001(\013" +
+      "20.yandex.cloud.mdb.mysql.v1.config.Mysq" +
+      "lConfig8_0\022H\n\016default_config\030\003 \001(\01320.yan" +
+      "dex.cloud.mdb.mysql.v1.config.MysqlConfi" +
+      "g8_0Br\n$yandex.cloud.api.mdb.mysql.v1.co" +
+      "nfigZJgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/mdb/mysql/v1/config;mysql" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
