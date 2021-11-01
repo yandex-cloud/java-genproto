@@ -14081,15 +14081,15 @@ public final class LoadBalancerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1;</code>
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
      */
     boolean hasHandler();
     /**
-     * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1;</code>
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler getHandler();
     /**
-     * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1;</code>
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandlerOrBuilder getHandlerOrBuilder();
   }
@@ -14184,19 +14184,19 @@ public final class LoadBalancerOuterClass {
     public static final int HANDLER_FIELD_NUMBER = 1;
     private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler handler_;
     /**
-     * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1;</code>
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
      */
     public boolean hasHandler() {
       return handler_ != null;
     }
     /**
-     * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1;</code>
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler getHandler() {
       return handler_ == null ? yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler.getDefaultInstance() : handler_;
     }
     /**
-     * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1;</code>
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandlerOrBuilder getHandlerOrBuilder() {
       return getHandler();
@@ -14526,13 +14526,13 @@ public final class LoadBalancerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandlerOrBuilder> handlerBuilder_;
       /**
-       * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public boolean hasHandler() {
         return handlerBuilder_ != null || handler_ != null;
       }
       /**
-       * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler getHandler() {
         if (handlerBuilder_ == null) {
@@ -14542,7 +14542,7 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setHandler(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler value) {
         if (handlerBuilder_ == null) {
@@ -14558,7 +14558,7 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setHandler(
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler.Builder builderForValue) {
@@ -14572,7 +14572,7 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeHandler(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler value) {
         if (handlerBuilder_ == null) {
@@ -14590,7 +14590,7 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearHandler() {
         if (handlerBuilder_ == null) {
@@ -14604,7 +14604,7 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler.Builder getHandlerBuilder() {
         
@@ -14612,7 +14612,7 @@ public final class LoadBalancerOuterClass {
         return getHandlerFieldBuilder().getBuilder();
       }
       /**
-       * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandlerOrBuilder getHandlerOrBuilder() {
         if (handlerBuilder_ != null) {
@@ -14623,7 +14623,7 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandlerOrBuilder> 
@@ -22778,41 +22778,41 @@ public final class LoadBalancerOuterClass {
       "ener\022J\n\017default_handler\030\001 \001(\0132+.yandex.c" +
       "loud.apploadbalancer.v1.TlsHandlerB\004\350\3071\001" +
       "\022?\n\014sni_handlers\030\002 \003(\0132).yandex.cloud.ap" +
-      "ploadbalancer.v1.SniMatch\"N\n\013TcpListener" +
-      "\022?\n\007handler\030\001 \001(\0132..yandex.cloud.appload" +
-      "balancer.v1.StreamHandler\".\n\014Http2Option" +
-      "s\022\036\n\026max_concurrent_streams\030\001 \001(\003\"/\n\rStr" +
-      "eamHandler\022\036\n\020backend_group_id\030\001 \001(\tB\004\350\307" +
-      "1\001\"\232\001\n\013HttpHandler\022\026\n\016http_router_id\030\001 \001" +
-      "(\t\022F\n\rhttp2_options\030\002 \001(\0132-.yandex.cloud" +
-      ".apploadbalancer.v1.Http2OptionsH\000\022\026\n\014al" +
-      "low_http10\030\003 \001(\010H\000B\023\n\021protocol_settings\"" +
-      "\"\n\tRedirects\022\025\n\rhttp_to_https\030\001 \001(\010\"\200\001\n\010" +
-      "SniMatch\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\034\n\014server_n" +
-      "ames\030\002 \003(\tB\006\202\3101\002>0\022B\n\007handler\030\003 \001(\0132+.ya" +
-      "ndex.cloud.apploadbalancer.v1.TlsHandler" +
-      "B\004\350\3071\001\"\316\001\n\nTlsHandler\022D\n\014http_handler\030\002 " +
-      "\001(\0132,.yandex.cloud.apploadbalancer.v1.Ht" +
-      "tpHandlerH\000\022H\n\016stream_handler\030\004 \001(\0132..ya" +
-      "ndex.cloud.apploadbalancer.v1.StreamHand" +
-      "lerH\000\022\037\n\017certificate_ids\030\003 \003(\tB\006\202\3101\002>0B\017" +
-      "\n\007handler\022\004\300\3011\001\"\214\004\n\013TargetState\022N\n\006statu" +
-      "s\030\001 \001(\0132>.yandex.cloud.apploadbalancer.v" +
-      "1.TargetState.HealthcheckStatus\022=\n\006targe" +
-      "t\030\002 \001(\0132\'.yandex.cloud.apploadbalancer.v" +
-      "1.TargetB\004\350\3071\001\032n\n\021HealthcheckStatus\022Y\n\rz" +
-      "one_statuses\030\001 \003(\0132B.yandex.cloud.apploa" +
-      "dbalancer.v1.TargetState.ZoneHealthcheck" +
-      "Status\032\215\001\n\025ZoneHealthcheckStatus\022\025\n\007zone" +
-      "_id\030\001 \001(\tB\004\350\3071\001\022C\n\006status\030\002 \001(\01623.yandex" +
-      ".cloud.apploadbalancer.v1.TargetState.St" +
-      "atus\022\030\n\020failed_active_hc\030\003 \001(\010\"n\n\006Status" +
-      "\022\026\n\022STATUS_UNSPECIFIED\020\000\022\013\n\007HEALTHY\020\001\022\025\n" +
-      "\021PARTIALLY_HEALTHY\020\002\022\r\n\tUNHEALTHY\020\003\022\014\n\010D" +
-      "RAINING\020\004\022\013\n\007TIMEOUT\020\005Bz\n#yandex.cloud.a" +
-      "pi.apploadbalancer.v1ZSgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/apploadb" +
-      "alancer/v1;apploadbalancerb\006proto3"
+      "ploadbalancer.v1.SniMatch\"T\n\013TcpListener" +
+      "\022E\n\007handler\030\001 \001(\0132..yandex.cloud.appload" +
+      "balancer.v1.StreamHandlerB\004\350\3071\001\".\n\014Http2" +
+      "Options\022\036\n\026max_concurrent_streams\030\001 \001(\003\"" +
+      "/\n\rStreamHandler\022\036\n\020backend_group_id\030\001 \001" +
+      "(\tB\004\350\3071\001\"\232\001\n\013HttpHandler\022\026\n\016http_router_" +
+      "id\030\001 \001(\t\022F\n\rhttp2_options\030\002 \001(\0132-.yandex" +
+      ".cloud.apploadbalancer.v1.Http2OptionsH\000" +
+      "\022\026\n\014allow_http10\030\003 \001(\010H\000B\023\n\021protocol_set" +
+      "tings\"\"\n\tRedirects\022\025\n\rhttp_to_https\030\001 \001(" +
+      "\010\"\200\001\n\010SniMatch\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\034\n\014se" +
+      "rver_names\030\002 \003(\tB\006\202\3101\002>0\022B\n\007handler\030\003 \001(" +
+      "\0132+.yandex.cloud.apploadbalancer.v1.TlsH" +
+      "andlerB\004\350\3071\001\"\316\001\n\nTlsHandler\022D\n\014http_hand" +
+      "ler\030\002 \001(\0132,.yandex.cloud.apploadbalancer" +
+      ".v1.HttpHandlerH\000\022H\n\016stream_handler\030\004 \001(" +
+      "\0132..yandex.cloud.apploadbalancer.v1.Stre" +
+      "amHandlerH\000\022\037\n\017certificate_ids\030\003 \003(\tB\006\202\310" +
+      "1\002>0B\017\n\007handler\022\004\300\3011\001\"\214\004\n\013TargetState\022N\n" +
+      "\006status\030\001 \001(\0132>.yandex.cloud.apploadbala" +
+      "ncer.v1.TargetState.HealthcheckStatus\022=\n" +
+      "\006target\030\002 \001(\0132\'.yandex.cloud.apploadbala" +
+      "ncer.v1.TargetB\004\350\3071\001\032n\n\021HealthcheckStatu" +
+      "s\022Y\n\rzone_statuses\030\001 \003(\0132B.yandex.cloud." +
+      "apploadbalancer.v1.TargetState.ZoneHealt" +
+      "hcheckStatus\032\215\001\n\025ZoneHealthcheckStatus\022\025" +
+      "\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022C\n\006status\030\002 \001(\01623." +
+      "yandex.cloud.apploadbalancer.v1.TargetSt" +
+      "ate.Status\022\030\n\020failed_active_hc\030\003 \001(\010\"n\n\006" +
+      "Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\013\n\007HEALTH" +
+      "Y\020\001\022\025\n\021PARTIALLY_HEALTHY\020\002\022\r\n\tUNHEALTHY\020" +
+      "\003\022\014\n\010DRAINING\020\004\022\013\n\007TIMEOUT\020\005Bz\n#yandex.c" +
+      "loud.api.apploadbalancer.v1ZSgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/ap" +
+      "ploadbalancer/v1;apploadbalancerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

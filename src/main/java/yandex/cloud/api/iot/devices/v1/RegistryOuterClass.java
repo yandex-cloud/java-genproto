@@ -5393,29 +5393,28 @@ public final class RegistryOuterClass {
     java.lang.String[] descriptorData = {
       "\n*yandex/cloud/iot/devices/v1/registry.p" +
       "roto\022\033yandex.cloud.iot.devices.v1\032\037googl" +
-      "e/protobuf/timestamp.proto\032\035yandex/cloud" +
-      "/validation.proto\"\214\003\n\010Registry\022\n\n\002id\030\001 \001" +
-      "(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(" +
-      "\0132\032.google.protobuf.Timestamp\022\014\n\004name\030\004 " +
-      "\001(\t\022\023\n\013description\030\005 \001(\t\022A\n\006labels\030\006 \003(\013" +
-      "21.yandex.cloud.iot.devices.v1.Registry." +
-      "LabelsEntry\022<\n\006status\030\007 \001(\0162,.yandex.clo" +
-      "ud.iot.devices.v1.Registry.Status\022\024\n\014log" +
-      "_group_id\030\010 \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"H\n\006Status\022\026\n\022STAT" +
-      "US_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE" +
-      "\020\002\022\014\n\010DELETING\020\003\"\211\001\n\023RegistryCertificate" +
-      "\022\023\n\013registry_id\030\001 \001(\t\022\023\n\013fingerprint\030\002 \001" +
-      "(\t\022\030\n\020certificate_data\030\003 \001(\t\022.\n\ncreated_" +
-      "at\030\004 \001(\0132\032.google.protobuf.Timestamp\"E\n\013" +
-      "DeviceAlias\022\021\n\tdevice_id\030\001 \001(\t\022\024\n\014topic_" +
-      "prefix\030\002 \001(\t\022\r\n\005alias\030\003 \001(\t\"c\n\020RegistryP" +
-      "assword\022\023\n\013registry_id\030\001 \001(\t\022\n\n\002id\030\002 \001(\t" +
-      "\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobuf.T" +
-      "imestampBj\n\037yandex.cloud.api.iot.devices" +
-      ".v1ZGgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/iot/devices/v1;devicesb\006pr" +
-      "oto3"
+      "e/protobuf/timestamp.proto\"\214\003\n\010Registry\022" +
+      "\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreate" +
+      "d_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022\014" +
+      "\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022A\n\006lab" +
+      "els\030\006 \003(\01321.yandex.cloud.iot.devices.v1." +
+      "Registry.LabelsEntry\022<\n\006status\030\007 \001(\0162,.y" +
+      "andex.cloud.iot.devices.v1.Registry.Stat" +
+      "us\022\024\n\014log_group_id\030\010 \001(\t\032-\n\013LabelsEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"H\n\006Statu" +
+      "s\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022" +
+      "\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020\003\"\211\001\n\023RegistryCe" +
+      "rtificate\022\023\n\013registry_id\030\001 \001(\t\022\023\n\013finger" +
+      "print\030\002 \001(\t\022\030\n\020certificate_data\030\003 \001(\t\022.\n" +
+      "\ncreated_at\030\004 \001(\0132\032.google.protobuf.Time" +
+      "stamp\"E\n\013DeviceAlias\022\021\n\tdevice_id\030\001 \001(\t\022" +
+      "\024\n\014topic_prefix\030\002 \001(\t\022\r\n\005alias\030\003 \001(\t\"c\n\020" +
+      "RegistryPassword\022\023\n\013registry_id\030\001 \001(\t\022\n\n" +
+      "\002id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.p" +
+      "rotobuf.TimestampBj\n\037yandex.cloud.api.io" +
+      "t.devices.v1ZGgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/iot/devices/v1;de" +
+      "vicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5429,7 +5428,6 @@ public final class RegistryOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-          yandex.cloud.api.Validation.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_iot_devices_v1_Registry_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -5462,7 +5460,6 @@ public final class RegistryOuterClass {
         internal_static_yandex_cloud_iot_devices_v1_RegistryPassword_descriptor,
         new java.lang.String[] { "RegistryId", "Id", "CreatedAt", });
     com.google.protobuf.TimestampProto.getDescriptor();
-    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

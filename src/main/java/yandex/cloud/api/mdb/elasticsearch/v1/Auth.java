@@ -4068,32 +4068,31 @@ public final class Auth {
     java.lang.String[] descriptorData = {
       "\n,yandex/cloud/mdb/elasticsearch/v1/auth" +
       ".proto\022!yandex.cloud.mdb.elasticsearch.v" +
-      "1\032\034google/api/annotations.proto\032 yandex/" +
-      "cloud/api/operation.proto\032\035yandex/cloud/" +
-      "validation.proto\"S\n\rAuthProviders\022B\n\tpro" +
-      "viders\030\001 \003(\0132/.yandex.cloud.mdb.elastics" +
-      "earch.v1.AuthProvider\"\200\003\n\014AuthProvider\022B" +
-      "\n\004type\030\001 \001(\01624.yandex.cloud.mdb.elastics" +
-      "earch.v1.AuthProvider.Type\022*\n\004name\030\002 \001(\t" +
-      "B\034\212\3101\004<=50\362\3071\020[a-z][a-z0-9_-]*\022\r\n\005order\030" +
-      "\003 \001(\003\022\017\n\007enabled\030\004 \001(\010\022\016\n\006hidden\030\005 \001(\010\022\035" +
-      "\n\013description\030\006 \001(\tB\010\212\3101\004<=50\022\027\n\004hint\030\007 " +
-      "\001(\tB\t\212\3101\005<=250\022\027\n\004icon\030\010 \001(\tB\t\212\3101\005<=250\022" +
-      "?\n\004saml\030\t \001(\0132/.yandex.cloud.mdb.elastic" +
-      "search.v1.SamlSettingsH\000\"2\n\004Type\022\024\n\020TYPE" +
-      "_UNSPECIFIED\020\000\022\n\n\006NATIVE\020\001\022\010\n\004SAML\020\002B\n\n\010" +
-      "settings\"\310\002\n\014SamlSettings\022 \n\ridp_entity_" +
-      "id\030\001 \001(\tB\t\212\3101\005<=250\022&\n\021idp_metadata_file" +
-      "\030\002 \001(\014B\013\212\3101\007<=10000\022\037\n\014sp_entity_id\030\003 \001(" +
-      "\tB\t\212\3101\005<=250\022\035\n\nkibana_url\030\004 \001(\tB\t\212\3101\005<=" +
-      "250\022%\n\023attribute_principal\030\005 \001(\tB\010\212\3101\004<=" +
-      "50\022\"\n\020attribute_groups\030\006 \001(\tB\010\212\3101\004<=50\022 " +
-      "\n\016attribute_name\030\007 \001(\tB\010\212\3101\004<=50\022!\n\017attr" +
-      "ibute_email\030\010 \001(\tB\010\212\3101\004<=50\022\036\n\014attribute" +
-      "_dn\030\t \001(\tB\010\212\3101\004<=50B|\n%yandex.cloud.api." +
-      "mdb.elasticsearch.v1ZSgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/mdb/elast" +
-      "icsearch/v1;elasticsearchb\006proto3"
+      "1\032\035yandex/cloud/validation.proto\"S\n\rAuth" +
+      "Providers\022B\n\tproviders\030\001 \003(\0132/.yandex.cl" +
+      "oud.mdb.elasticsearch.v1.AuthProvider\"\200\003" +
+      "\n\014AuthProvider\022B\n\004type\030\001 \001(\01624.yandex.cl" +
+      "oud.mdb.elasticsearch.v1.AuthProvider.Ty" +
+      "pe\022*\n\004name\030\002 \001(\tB\034\212\3101\004<=50\362\3071\020[a-z][a-z0" +
+      "-9_-]*\022\r\n\005order\030\003 \001(\003\022\017\n\007enabled\030\004 \001(\010\022\016" +
+      "\n\006hidden\030\005 \001(\010\022\035\n\013description\030\006 \001(\tB\010\212\3101" +
+      "\004<=50\022\027\n\004hint\030\007 \001(\tB\t\212\3101\005<=250\022\027\n\004icon\030\010" +
+      " \001(\tB\t\212\3101\005<=250\022?\n\004saml\030\t \001(\0132/.yandex.c" +
+      "loud.mdb.elasticsearch.v1.SamlSettingsH\000" +
+      "\"2\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006NATIVE" +
+      "\020\001\022\010\n\004SAML\020\002B\n\n\010settings\"\310\002\n\014SamlSetting" +
+      "s\022 \n\ridp_entity_id\030\001 \001(\tB\t\212\3101\005<=250\022&\n\021i" +
+      "dp_metadata_file\030\002 \001(\014B\013\212\3101\007<=10000\022\037\n\014s" +
+      "p_entity_id\030\003 \001(\tB\t\212\3101\005<=250\022\035\n\nkibana_u" +
+      "rl\030\004 \001(\tB\t\212\3101\005<=250\022%\n\023attribute_princip" +
+      "al\030\005 \001(\tB\010\212\3101\004<=50\022\"\n\020attribute_groups\030\006" +
+      " \001(\tB\010\212\3101\004<=50\022 \n\016attribute_name\030\007 \001(\tB\010" +
+      "\212\3101\004<=50\022!\n\017attribute_email\030\010 \001(\tB\010\212\3101\004<" +
+      "=50\022\036\n\014attribute_dn\030\t \001(\tB\010\212\3101\004<=50B|\n%y" +
+      "andex.cloud.api.mdb.elasticsearch.v1ZSgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/mdb/elasticsearch/v1;elasticsearc" +
+      "hb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4106,8 +4105,6 @@ public final class Auth {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
-          yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_mdb_elasticsearch_v1_AuthProviders_descriptor =
@@ -4134,8 +4131,6 @@ public final class Auth {
     registry.add(yandex.cloud.api.Validation.pattern);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
-    yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

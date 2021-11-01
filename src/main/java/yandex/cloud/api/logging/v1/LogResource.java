@@ -1668,17 +1668,15 @@ public final class LogResource {
   static {
     java.lang.String[] descriptorData = {
       "\n*yandex/cloud/logging/v1/log_resource.p" +
-      "roto\022\027yandex.cloud.logging.v1\032\036google/pr" +
-      "otobuf/duration.proto\032\037google/protobuf/t" +
-      "imestamp.proto\032\035yandex/cloud/validation." +
-      "proto\"y\n\020LogEntryResource\0221\n\004type\030\001 \001(\tB" +
-      "#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?\0222\n\002" +
-      "id\030\002 \001(\tB&\362\3071\"([a-zA-Z0-9][-a-zA-Z0-9_.]" +
-      "{0,63})?\"-\n\020LogGroupResource\022\014\n\004type\030\001 \001" +
-      "(\t\022\013\n\003ids\030\002 \003(\tBb\n\033yandex.cloud.api.logg" +
-      "ing.v1ZCgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/logging/v1;loggingb\006pro" +
-      "to3"
+      "roto\022\027yandex.cloud.logging.v1\032\035yandex/cl" +
+      "oud/validation.proto\"y\n\020LogEntryResource" +
+      "\0221\n\004type\030\001 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9" +
+      "_.]{0,63})?\0222\n\002id\030\002 \001(\tB&\362\3071\"([a-zA-Z0-9" +
+      "][-a-zA-Z0-9_.]{0,63})?\"-\n\020LogGroupResou" +
+      "rce\022\014\n\004type\030\001 \001(\t\022\013\n\003ids\030\002 \003(\tBb\n\033yandex" +
+      ".cloud.api.logging.v1ZCgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/logging/" +
+      "v1;loggingb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1691,8 +1689,6 @@ public final class LogResource {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.DurationProto.getDescriptor(),
-          com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_logging_v1_LogEntryResource_descriptor =
@@ -1712,8 +1708,6 @@ public final class LogResource {
     registry.add(yandex.cloud.api.Validation.pattern);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.protobuf.DurationProto.getDescriptor();
-    com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

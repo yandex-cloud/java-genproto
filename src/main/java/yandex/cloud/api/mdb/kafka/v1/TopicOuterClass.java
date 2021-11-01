@@ -15122,32 +15122,54 @@ public final class TopicOuterClass {
     java.lang.String[] descriptorData = {
       "\n%yandex/cloud/mdb/kafka/v1/topic.proto\022" +
       "\031yandex.cloud.mdb.kafka.v1\032\036google/proto" +
-      "buf/wrappers.proto\032\035yandex/cloud/validat" +
-      "ion.proto\032&yandex/cloud/mdb/kafka/v1/com" +
-      "mon.proto\"\253\003\n\005Topic\022\014\n\004name\030\001 \001(\t\022\022\n\nclu" +
-      "ster_id\030\002 \001(\t\022/\n\npartitions\030\003 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\0227\n\022replication_fa" +
-      "ctor\030\004 \001(\0132\033.google.protobuf.Int64Value\022" +
-      "V\n\020topic_config_2_1\030\005 \001(\0132).yandex.cloud" +
-      ".mdb.kafka.v1.TopicConfig2_1H\000R\017topicCon" +
-      "fig_2_1\022V\n\020topic_config_2_6\030\006 \001(\0132).yand" +
-      "ex.cloud.mdb.kafka.v1.TopicConfig2_6H\000R\017" +
-      "topicConfig_2_6\022V\n\020topic_config_2_8\030\007 \001(" +
-      "\0132).yandex.cloud.mdb.kafka.v1.TopicConfi" +
-      "g2_8H\000R\017topicConfig_2_8B\016\n\014topic_config\"" +
-      "\233\003\n\tTopicSpec\022\014\n\004name\030\001 \001(\t\022/\n\npartition" +
-      "s\030\002 \001(\0132\033.google.protobuf.Int64Value\0227\n\022" +
-      "replication_factor\030\003 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022V\n\020topic_config_2_1\030\004 \001(\0132" +
-      ").yandex.cloud.mdb.kafka.v1.TopicConfig2" +
-      "_1H\000R\017topicConfig_2_1\022V\n\020topic_config_2_" +
-      "6\030\005 \001(\0132).yandex.cloud.mdb.kafka.v1.Topi" +
-      "cConfig2_6H\000R\017topicConfig_2_6\022V\n\020topic_c" +
-      "onfig_2_8\030\006 \001(\0132).yandex.cloud.mdb.kafka" +
-      ".v1.TopicConfig2_8H\000R\017topicConfig_2_8B\016\n" +
-      "\014topic_config\"\214\007\n\016TopicConfig2_1\022O\n\016clea" +
+      "buf/wrappers.proto\032&yandex/cloud/mdb/kaf" +
+      "ka/v1/common.proto\"\253\003\n\005Topic\022\014\n\004name\030\001 \001" +
+      "(\t\022\022\n\ncluster_id\030\002 \001(\t\022/\n\npartitions\030\003 \001" +
+      "(\0132\033.google.protobuf.Int64Value\0227\n\022repli" +
+      "cation_factor\030\004 \001(\0132\033.google.protobuf.In" +
+      "t64Value\022V\n\020topic_config_2_1\030\005 \001(\0132).yan" +
+      "dex.cloud.mdb.kafka.v1.TopicConfig2_1H\000R" +
+      "\017topicConfig_2_1\022V\n\020topic_config_2_6\030\006 \001" +
+      "(\0132).yandex.cloud.mdb.kafka.v1.TopicConf" +
+      "ig2_6H\000R\017topicConfig_2_6\022V\n\020topic_config" +
+      "_2_8\030\007 \001(\0132).yandex.cloud.mdb.kafka.v1.T" +
+      "opicConfig2_8H\000R\017topicConfig_2_8B\016\n\014topi" +
+      "c_config\"\233\003\n\tTopicSpec\022\014\n\004name\030\001 \001(\t\022/\n\n" +
+      "partitions\030\002 \001(\0132\033.google.protobuf.Int64" +
+      "Value\0227\n\022replication_factor\030\003 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022V\n\020topic_config_2" +
+      "_1\030\004 \001(\0132).yandex.cloud.mdb.kafka.v1.Top" +
+      "icConfig2_1H\000R\017topicConfig_2_1\022V\n\020topic_" +
+      "config_2_6\030\005 \001(\0132).yandex.cloud.mdb.kafk" +
+      "a.v1.TopicConfig2_6H\000R\017topicConfig_2_6\022V" +
+      "\n\020topic_config_2_8\030\006 \001(\0132).yandex.cloud." +
+      "mdb.kafka.v1.TopicConfig2_8H\000R\017topicConf" +
+      "ig_2_8B\016\n\014topic_config\"\214\007\n\016TopicConfig2_" +
+      "1\022O\n\016cleanup_policy\030\001 \001(\01627.yandex.cloud" +
+      ".mdb.kafka.v1.TopicConfig2_1.CleanupPoli" +
+      "cy\022D\n\020compression_type\030\002 \001(\0162*.yandex.cl" +
+      "oud.mdb.kafka.v1.CompressionType\0228\n\023dele" +
+      "te_retention_ms\030\003 \001(\0132\033.google.protobuf." +
+      "Int64Value\0229\n\024file_delete_delay_ms\030\004 \001(\013" +
+      "2\033.google.protobuf.Int64Value\0223\n\016flush_m" +
+      "essages\030\005 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022-\n\010flush_ms\030\006 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\022:\n\025min_compaction_lag_ms\030\007 \001(\013" +
+      "2\033.google.protobuf.Int64Value\0224\n\017retenti" +
+      "on_bytes\030\010 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\0221\n\014retention_ms\030\t \001(\0132\033.google.proto" +
+      "buf.Int64Value\0226\n\021max_message_bytes\030\n \001(" +
+      "\0132\033.google.protobuf.Int64Value\0228\n\023min_in" +
+      "sync_replicas\030\013 \001(\0132\033.google.protobuf.In" +
+      "t64Value\0222\n\rsegment_bytes\030\014 \001(\0132\033.google" +
+      ".protobuf.Int64Value\022/\n\013preallocate\030\r \001(" +
+      "\0132\032.google.protobuf.BoolValue\"\215\001\n\rCleanu" +
+      "pPolicy\022\036\n\032CLEANUP_POLICY_UNSPECIFIED\020\000\022" +
+      "\031\n\025CLEANUP_POLICY_DELETE\020\001\022\032\n\026CLEANUP_PO" +
+      "LICY_COMPACT\020\002\022%\n!CLEANUP_POLICY_COMPACT" +
+      "_AND_DELETE\020\003\"\214\007\n\016TopicConfig2_6\022O\n\016clea" +
       "nup_policy\030\001 \001(\01627.yandex.cloud.mdb.kafk" +
-      "a.v1.TopicConfig2_1.CleanupPolicy\022D\n\020com" +
+      "a.v1.TopicConfig2_6.CleanupPolicy\022D\n\020com" +
       "pression_type\030\002 \001(\0162*.yandex.cloud.mdb.k" +
       "afka.v1.CompressionType\0228\n\023delete_retent" +
       "ion_ms\030\003 \001(\0132\033.google.protobuf.Int64Valu" +
@@ -15168,9 +15190,9 @@ public final class TopicOuterClass {
       "\n\032CLEANUP_POLICY_UNSPECIFIED\020\000\022\031\n\025CLEANU" +
       "P_POLICY_DELETE\020\001\022\032\n\026CLEANUP_POLICY_COMP" +
       "ACT\020\002\022%\n!CLEANUP_POLICY_COMPACT_AND_DELE" +
-      "TE\020\003\"\214\007\n\016TopicConfig2_6\022O\n\016cleanup_polic" +
+      "TE\020\003\"\214\007\n\016TopicConfig2_8\022O\n\016cleanup_polic" +
       "y\030\001 \001(\01627.yandex.cloud.mdb.kafka.v1.Topi" +
-      "cConfig2_6.CleanupPolicy\022D\n\020compression_" +
+      "cConfig2_8.CleanupPolicy\022D\n\020compression_" +
       "type\030\002 \001(\0162*.yandex.cloud.mdb.kafka.v1.C" +
       "ompressionType\0228\n\023delete_retention_ms\030\003 " +
       "\001(\0132\033.google.protobuf.Int64Value\0229\n\024file" +
@@ -15190,33 +15212,10 @@ public final class TopicOuterClass {
       "f.BoolValue\"\215\001\n\rCleanupPolicy\022\036\n\032CLEANUP" +
       "_POLICY_UNSPECIFIED\020\000\022\031\n\025CLEANUP_POLICY_" +
       "DELETE\020\001\022\032\n\026CLEANUP_POLICY_COMPACT\020\002\022%\n!" +
-      "CLEANUP_POLICY_COMPACT_AND_DELETE\020\003\"\214\007\n\016" +
-      "TopicConfig2_8\022O\n\016cleanup_policy\030\001 \001(\01627" +
-      ".yandex.cloud.mdb.kafka.v1.TopicConfig2_" +
-      "8.CleanupPolicy\022D\n\020compression_type\030\002 \001(" +
-      "\0162*.yandex.cloud.mdb.kafka.v1.Compressio" +
-      "nType\0228\n\023delete_retention_ms\030\003 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\0229\n\024file_delete_d" +
-      "elay_ms\030\004 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\0223\n\016flush_messages\030\005 \001(\0132\033.google.prot" +
-      "obuf.Int64Value\022-\n\010flush_ms\030\006 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022:\n\025min_compaction" +
-      "_lag_ms\030\007 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\0224\n\017retention_bytes\030\010 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\0221\n\014retention_ms\030\t \001(\0132\033" +
-      ".google.protobuf.Int64Value\0226\n\021max_messa" +
-      "ge_bytes\030\n \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\0228\n\023min_insync_replicas\030\013 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\0222\n\rsegment_bytes\030\014" +
-      " \001(\0132\033.google.protobuf.Int64Value\022/\n\013pre" +
-      "allocate\030\r \001(\0132\032.google.protobuf.BoolVal" +
-      "ue\"\215\001\n\rCleanupPolicy\022\036\n\032CLEANUP_POLICY_U" +
-      "NSPECIFIED\020\000\022\031\n\025CLEANUP_POLICY_DELETE\020\001\022" +
-      "\032\n\026CLEANUP_POLICY_COMPACT\020\002\022%\n!CLEANUP_P" +
-      "OLICY_COMPACT_AND_DELETE\020\003Bd\n\035yandex.clo" +
-      "ud.api.mdb.kafka.v1ZCgithub.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/mdb/kafka/" +
-      "v1;kafkab\006proto3"
+      "CLEANUP_POLICY_COMPACT_AND_DELETE\020\003Bd\n\035y" +
+      "andex.cloud.api.mdb.kafka.v1ZCgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/m" +
+      "db/kafka/v1;kafkab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15230,7 +15229,6 @@ public final class TopicOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
-          yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.mdb.kafka.v1.Common.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_mdb_kafka_v1_Topic_descriptor =
@@ -15264,7 +15262,6 @@ public final class TopicOuterClass {
         internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig2_8_descriptor,
         new java.lang.String[] { "CleanupPolicy", "CompressionType", "DeleteRetentionMs", "FileDeleteDelayMs", "FlushMessages", "FlushMs", "MinCompactionLagMs", "RetentionBytes", "RetentionMs", "MaxMessageBytes", "MinInsyncReplicas", "SegmentBytes", "Preallocate", });
     com.google.protobuf.WrappersProto.getDescriptor();
-    yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.mdb.kafka.v1.Common.getDescriptor();
   }
 

@@ -4779,32 +4779,32 @@ public final class LogReadingServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n1yandex/cloud/logging/v1/log_reading_se" +
-      "rvice.proto\022\027yandex.cloud.logging.v1\032\034go" +
-      "ogle/api/annotations.proto\032\037google/proto" +
-      "buf/timestamp.proto\032\035yandex/cloud/valida" +
-      "tion.proto\032\'yandex/cloud/logging/v1/log_" +
-      "entry.proto\"f\n\013ReadRequest\022\024\n\npage_token" +
-      "\030\001 \001(\tH\000\0225\n\010criteria\030\002 \001(\0132!.yandex.clou" +
-      "d.logging.v1.CriteriaH\000B\n\n\010selector\"\216\001\n\014" +
-      "ReadResponse\022\024\n\014log_group_id\030\001 \001(\t\0222\n\007en" +
-      "tries\030\002 \003(\0132!.yandex.cloud.logging.v1.Lo" +
-      "gEntry\022\027\n\017next_page_token\030\003 \001(\t\022\033\n\023previ" +
-      "ous_page_token\030\004 \001(\t\"\213\003\n\010Criteria\022\"\n\014log" +
-      "_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022B\n\016resourc" +
-      "e_types\030\002 \003(\tB*\362\3071\035|[a-zA-Z][-a-zA-Z0-9_" +
-      ".]{0,63}\202\3101\005<=100\022C\n\014resource_ids\030\003 \003(\tB" +
-      "-\362\3071 |[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}\202\3101" +
-      "\005<=100\022)\n\005since\030\004 \001(\0132\032.google.protobuf." +
-      "Timestamp\022)\n\005until\030\005 \001(\0132\032.google.protob" +
-      "uf.Timestamp\022A\n\006levels\030\006 \003(\0162\'.yandex.cl" +
-      "oud.logging.v1.LogLevel.LevelB\010\202\3101\004<=10\022" +
-      "\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=1000\022\035\n\tpage_size" +
-      "\030\010 \001(\003B\n\372\3071\0061-10002h\n\021LogReadingService\022" +
-      "S\n\004Read\022$.yandex.cloud.logging.v1.ReadRe" +
-      "quest\032%.yandex.cloud.logging.v1.ReadResp" +
-      "onseBb\n\033yandex.cloud.api.logging.v1ZCgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/logging/v1;loggingb\006proto3"
+      "rvice.proto\022\027yandex.cloud.logging.v1\032\037go" +
+      "ogle/protobuf/timestamp.proto\032\035yandex/cl" +
+      "oud/validation.proto\032\'yandex/cloud/loggi" +
+      "ng/v1/log_entry.proto\"f\n\013ReadRequest\022\024\n\n" +
+      "page_token\030\001 \001(\tH\000\0225\n\010criteria\030\002 \001(\0132!.y" +
+      "andex.cloud.logging.v1.CriteriaH\000B\n\n\010sel" +
+      "ector\"\216\001\n\014ReadResponse\022\024\n\014log_group_id\030\001" +
+      " \001(\t\0222\n\007entries\030\002 \003(\0132!.yandex.cloud.log" +
+      "ging.v1.LogEntry\022\027\n\017next_page_token\030\003 \001(" +
+      "\t\022\033\n\023previous_page_token\030\004 \001(\t\"\213\003\n\010Crite" +
+      "ria\022\"\n\014log_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022" +
+      "B\n\016resource_types\030\002 \003(\tB*\362\3071\035|[a-zA-Z][-" +
+      "a-zA-Z0-9_.]{0,63}\202\3101\005<=100\022C\n\014resource_" +
+      "ids\030\003 \003(\tB-\362\3071 |[a-zA-Z0-9][-a-zA-Z0-9_." +
+      "]{0,63}\202\3101\005<=100\022)\n\005since\030\004 \001(\0132\032.google" +
+      ".protobuf.Timestamp\022)\n\005until\030\005 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\022A\n\006levels\030\006 \003(\0162\'" +
+      ".yandex.cloud.logging.v1.LogLevel.LevelB" +
+      "\010\202\3101\004<=10\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=1000\022\035\n" +
+      "\tpage_size\030\010 \001(\003B\n\372\3071\0061-10002h\n\021LogReadi" +
+      "ngService\022S\n\004Read\022$.yandex.cloud.logging" +
+      ".v1.ReadRequest\032%.yandex.cloud.logging.v" +
+      "1.ReadResponseBb\n\033yandex.cloud.api.loggi" +
+      "ng.v1ZCgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/logging/v1;loggingb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4817,7 +4817,6 @@ public final class LogReadingServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.logging.v1.LogEntryOuterClass.getDescriptor(),
@@ -4849,7 +4848,6 @@ public final class LogReadingServiceOuterClass {
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.logging.v1.LogEntryOuterClass.getDescriptor();

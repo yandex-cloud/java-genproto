@@ -5990,36 +5990,35 @@ public final class DeviceOuterClass {
     java.lang.String[] descriptorData = {
       "\n(yandex/cloud/iot/devices/v1/device.pro" +
       "to\022\033yandex.cloud.iot.devices.v1\032\037google/" +
-      "protobuf/timestamp.proto\032\035yandex/cloud/v" +
-      "alidation.proto\"\321\003\n\006Device\022\n\n\002id\030\001 \001(\t\022\023" +
-      "\n\013registry_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022\014\n\004name\030\004 \001(" +
-      "\t\022\023\n\013description\030\005 \001(\t\022L\n\rtopic_aliases\030" +
-      "\006 \003(\01325.yandex.cloud.iot.devices.v1.Devi" +
-      "ce.TopicAliasesEntry\022:\n\006status\030\007 \001(\0162*.y" +
-      "andex.cloud.iot.devices.v1.Device.Status" +
-      "\022J\n\017monitoring_data\030\010 \001(\01321.yandex.cloud" +
-      ".iot.devices.v1.DeviceMonitoringData\0323\n\021" +
-      "TopicAliasesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\"H\n\006Status\022\026\n\022STATUS_UNSPECIFIE" +
-      "D\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETIN" +
-      "G\020\003\"\205\001\n\021DeviceCertificate\022\021\n\tdevice_id\030\001" +
-      " \001(\t\022\023\n\013fingerprint\030\002 \001(\t\022\030\n\020certificate" +
-      "_data\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google" +
-      ".protobuf.Timestamp\"_\n\016DevicePassword\022\021\n" +
-      "\tdevice_id\030\001 \001(\t\022\n\n\002id\030\002 \001(\t\022.\n\ncreated_" +
-      "at\030\003 \001(\0132\032.google.protobuf.Timestamp\"\216\002\n" +
-      "\024DeviceMonitoringData\022\024\n\014last_auth_ip\030\001 " +
-      "\001(\t\0222\n\016last_auth_time\030\002 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\022:\n\026last_pub_activity_tim" +
-      "e\030\003 \001(\0132\032.google.protobuf.Timestamp\022:\n\026l" +
-      "ast_sub_activity_time\030\004 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\0224\n\020last_online_time\030\005 \001(" +
-      "\0132\032.google.protobuf.Timestamp*!\n\nDeviceV" +
-      "iew\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\001Bj\n\037yandex.cloud" +
-      ".api.iot.devices.v1ZGgithub.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/iot/device" +
-      "s/v1;devicesb\006proto3"
+      "protobuf/timestamp.proto\"\321\003\n\006Device\022\n\n\002i" +
+      "d\030\001 \001(\t\022\023\n\013registry_id\030\002 \001(\t\022.\n\ncreated_" +
+      "at\030\003 \001(\0132\032.google.protobuf.Timestamp\022\014\n\004" +
+      "name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022L\n\rtopic" +
+      "_aliases\030\006 \003(\01325.yandex.cloud.iot.device" +
+      "s.v1.Device.TopicAliasesEntry\022:\n\006status\030" +
+      "\007 \001(\0162*.yandex.cloud.iot.devices.v1.Devi" +
+      "ce.Status\022J\n\017monitoring_data\030\010 \001(\01321.yan" +
+      "dex.cloud.iot.devices.v1.DeviceMonitorin" +
+      "gData\0323\n\021TopicAliasesEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001\"H\n\006Status\022\026\n\022STATUS_U" +
+      "NSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014" +
+      "\n\010DELETING\020\003\"\205\001\n\021DeviceCertificate\022\021\n\tde" +
+      "vice_id\030\001 \001(\t\022\023\n\013fingerprint\030\002 \001(\t\022\030\n\020ce" +
+      "rtificate_data\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\013" +
+      "2\032.google.protobuf.Timestamp\"_\n\016DevicePa" +
+      "ssword\022\021\n\tdevice_id\030\001 \001(\t\022\n\n\002id\030\002 \001(\t\022.\n" +
+      "\ncreated_at\030\003 \001(\0132\032.google.protobuf.Time" +
+      "stamp\"\216\002\n\024DeviceMonitoringData\022\024\n\014last_a" +
+      "uth_ip\030\001 \001(\t\0222\n\016last_auth_time\030\002 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\022:\n\026last_pub_act" +
+      "ivity_time\030\003 \001(\0132\032.google.protobuf.Times" +
+      "tamp\022:\n\026last_sub_activity_time\030\004 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\0224\n\020last_online_" +
+      "time\030\005 \001(\0132\032.google.protobuf.Timestamp*!" +
+      "\n\nDeviceView\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\001Bj\n\037yan" +
+      "dex.cloud.api.iot.devices.v1ZGgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/i" +
+      "ot/devices/v1;devicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6033,7 +6032,6 @@ public final class DeviceOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-          yandex.cloud.api.Validation.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_iot_devices_v1_Device_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -6066,7 +6064,6 @@ public final class DeviceOuterClass {
         internal_static_yandex_cloud_iot_devices_v1_DeviceMonitoringData_descriptor,
         new java.lang.String[] { "LastAuthIp", "LastAuthTime", "LastPubActivityTime", "LastSubActivityTime", "LastOnlineTime", });
     com.google.protobuf.TimestampProto.getDescriptor();
-    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

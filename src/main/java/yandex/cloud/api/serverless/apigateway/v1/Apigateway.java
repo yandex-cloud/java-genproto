@@ -3921,27 +3921,26 @@ public final class Apigateway {
       "\n6yandex/cloud/serverless/apigateway/v1/" +
       "apigateway.proto\022%yandex.cloud.serverles" +
       "s.apigateway.v1\032\037google/protobuf/timesta" +
-      "mp.proto\032\035yandex/cloud/validation.proto\"" +
-      "\240\004\n\nApiGateway\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030" +
-      "\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.proto" +
-      "buf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descripti" +
-      "on\030\005 \001(\t\022M\n\006labels\030\007 \003(\0132=.yandex.cloud." +
-      "serverless.apigateway.v1.ApiGateway.Labe" +
-      "lsEntry\022H\n\006status\030\010 \001(\01628.yandex.cloud.s" +
-      "erverless.apigateway.v1.ApiGateway.Statu" +
-      "s\022\016\n\006domain\030\t \001(\t\022\024\n\014log_group_id\030\n \001(\t\022" +
-      "O\n\020attached_domains\030\013 \003(\01325.yandex.cloud" +
-      ".serverless.apigateway.v1.AttachedDomain" +
-      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\"a\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
-      "\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020" +
-      "\003\022\t\n\005ERROR\020\004\022\014\n\010UPDATING\020\005\"\\\n\016AttachedDo" +
-      "main\022\021\n\tdomain_id\030\001 \001(\t\022\026\n\016certificate_i" +
-      "d\030\002 \001(\t\022\017\n\007enabled\030\003 \001(\010\022\016\n\006domain\030\005 \001(\t" +
-      "B\201\001\n)yandex.cloud.api.serverless.apigate" +
-      "way.v1ZTgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/serverless/apigateway/v" +
-      "1;apigatewayb\006proto3"
+      "mp.proto\"\240\004\n\nApiGateway\022\n\n\002id\030\001 \001(\t\022\021\n\tf" +
+      "older_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013" +
+      "description\030\005 \001(\t\022M\n\006labels\030\007 \003(\0132=.yand" +
+      "ex.cloud.serverless.apigateway.v1.ApiGat" +
+      "eway.LabelsEntry\022H\n\006status\030\010 \001(\01628.yande" +
+      "x.cloud.serverless.apigateway.v1.ApiGate" +
+      "way.Status\022\016\n\006domain\030\t \001(\t\022\024\n\014log_group_" +
+      "id\030\n \001(\t\022O\n\020attached_domains\030\013 \003(\01325.yan" +
+      "dex.cloud.serverless.apigateway.v1.Attac" +
+      "hedDomain\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001\"a\n\006Status\022\026\n\022STATUS_UNS" +
+      "PECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010" +
+      "DELETING\020\003\022\t\n\005ERROR\020\004\022\014\n\010UPDATING\020\005\"\\\n\016A" +
+      "ttachedDomain\022\021\n\tdomain_id\030\001 \001(\t\022\026\n\016cert" +
+      "ificate_id\030\002 \001(\t\022\017\n\007enabled\030\003 \001(\010\022\016\n\006dom" +
+      "ain\030\005 \001(\tB\201\001\n)yandex.cloud.api.serverles" +
+      "s.apigateway.v1ZTgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/serverless/api" +
+      "gateway/v1;apigatewayb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3955,7 +3954,6 @@ public final class Apigateway {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-          yandex.cloud.api.Validation.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3976,7 +3974,6 @@ public final class Apigateway {
         internal_static_yandex_cloud_serverless_apigateway_v1_AttachedDomain_descriptor,
         new java.lang.String[] { "DomainId", "CertificateId", "Enabled", "Domain", });
     com.google.protobuf.TimestampProto.getDescriptor();
-    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

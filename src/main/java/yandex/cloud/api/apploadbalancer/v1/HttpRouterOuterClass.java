@@ -2527,20 +2527,20 @@ public final class HttpRouterOuterClass {
       "outer.proto\022\037yandex.cloud.apploadbalance" +
       "r.v1\032\037google/protobuf/timestamp.proto\0322y" +
       "andex/cloud/apploadbalancer/v1/virtual_h" +
-      "ost.proto\032\035yandex/cloud/validation.proto" +
-      "\"\201\003\n\nHttpRouter\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(" +
-      "\t\022\023\n\013description\030\003 \001(\t\022\021\n\tfolder_id\030\004 \001(" +
-      "\t\022G\n\006labels\030\005 \003(\01327.yandex.cloud.appload" +
-      "balancer.v1.HttpRouter.LabelsEntry\022C\n\rvi" +
-      "rtual_hosts\030\006 \003(\0132,.yandex.cloud.appload" +
-      "balancer.v1.VirtualHost\022.\n\ncreated_at\030\007 " +
-      "\001(\0132\032.google.protobuf.Timestamp\022D\n\rroute" +
-      "_options\030\010 \001(\0132-.yandex.cloud.apploadbal" +
-      "ancer.v1.RouteOptions\032-\n\013LabelsEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001Bz\n#yandex.c" +
-      "loud.api.apploadbalancer.v1ZSgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/ap" +
-      "ploadbalancer/v1;apploadbalancerb\006proto3"
+      "ost.proto\"\201\003\n\nHttpRouter\022\n\n\002id\030\001 \001(\t\022\014\n\004" +
+      "name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\021\n\tfolde" +
+      "r_id\030\004 \001(\t\022G\n\006labels\030\005 \003(\01327.yandex.clou" +
+      "d.apploadbalancer.v1.HttpRouter.LabelsEn" +
+      "try\022C\n\rvirtual_hosts\030\006 \003(\0132,.yandex.clou" +
+      "d.apploadbalancer.v1.VirtualHost\022.\n\ncrea" +
+      "ted_at\030\007 \001(\0132\032.google.protobuf.Timestamp" +
+      "\022D\n\rroute_options\030\010 \001(\0132-.yandex.cloud.a" +
+      "pploadbalancer.v1.RouteOptions\032-\n\013Labels" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001Bz\n" +
+      "#yandex.cloud.api.apploadbalancer.v1ZSgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/apploadbalancer/v1;apploadbalance" +
+      "rb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2555,7 +2555,6 @@ public final class HttpRouterOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.getDescriptor(),
-          yandex.cloud.api.Validation.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouter_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -2571,7 +2570,6 @@ public final class HttpRouterOuterClass {
         new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.getDescriptor();
-    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

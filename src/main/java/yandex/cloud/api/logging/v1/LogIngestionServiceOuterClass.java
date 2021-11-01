@@ -2530,28 +2530,27 @@ public final class LogIngestionServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n3yandex/cloud/logging/v1/log_ingestion_" +
-      "service.proto\022\027yandex.cloud.logging.v1\032\034" +
-      "google/api/annotations.proto\032\027google/rpc" +
-      "/status.proto\032\'yandex/cloud/logging/v1/l" +
-      "og_entry.proto\032*yandex/cloud/logging/v1/" +
-      "log_resource.proto\032\035yandex/cloud/validat" +
-      "ion.proto\"\220\002\n\014WriteRequest\022?\n\013destinatio" +
-      "n\030\001 \001(\0132$.yandex.cloud.logging.v1.Destin" +
-      "ationB\004\350\3071\001\022;\n\010resource\030\002 \001(\0132).yandex.c" +
-      "loud.logging.v1.LogEntryResource\022E\n\007entr" +
-      "ies\030\003 \003(\0132).yandex.cloud.logging.v1.Inco" +
-      "mingLogEntryB\t\202\3101\0051-100\022;\n\010defaults\030\004 \001(" +
-      "\0132).yandex.cloud.logging.v1.LogEntryDefa" +
-      "ults\"\226\001\n\rWriteResponse\022B\n\006errors\030\001 \003(\01322" +
-      ".yandex.cloud.logging.v1.WriteResponse.E" +
-      "rrorsEntry\032A\n\013ErrorsEntry\022\013\n\003key\030\001 \001(\003\022!" +
-      "\n\005value\030\002 \001(\0132\022.google.rpc.Status:\0028\0012m\n" +
-      "\023LogIngestionService\022V\n\005Write\022%.yandex.c" +
-      "loud.logging.v1.WriteRequest\032&.yandex.cl" +
-      "oud.logging.v1.WriteResponseBb\n\033yandex.c" +
-      "loud.api.logging.v1ZCgithub.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/logging/v1" +
-      ";loggingb\006proto3"
+      "service.proto\022\027yandex.cloud.logging.v1\032\027" +
+      "google/rpc/status.proto\032\'yandex/cloud/lo" +
+      "gging/v1/log_entry.proto\032*yandex/cloud/l" +
+      "ogging/v1/log_resource.proto\032\035yandex/clo" +
+      "ud/validation.proto\"\220\002\n\014WriteRequest\022?\n\013" +
+      "destination\030\001 \001(\0132$.yandex.cloud.logging" +
+      ".v1.DestinationB\004\350\3071\001\022;\n\010resource\030\002 \001(\0132" +
+      ").yandex.cloud.logging.v1.LogEntryResour" +
+      "ce\022E\n\007entries\030\003 \003(\0132).yandex.cloud.loggi" +
+      "ng.v1.IncomingLogEntryB\t\202\3101\0051-100\022;\n\010def" +
+      "aults\030\004 \001(\0132).yandex.cloud.logging.v1.Lo" +
+      "gEntryDefaults\"\226\001\n\rWriteResponse\022B\n\006erro" +
+      "rs\030\001 \003(\01322.yandex.cloud.logging.v1.Write" +
+      "Response.ErrorsEntry\032A\n\013ErrorsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\003\022!\n\005value\030\002 \001(\0132\022.google.rpc.Sta" +
+      "tus:\0028\0012m\n\023LogIngestionService\022V\n\005Write\022" +
+      "%.yandex.cloud.logging.v1.WriteRequest\032&" +
+      ".yandex.cloud.logging.v1.WriteResponseBb" +
+      "\n\033yandex.cloud.api.logging.v1ZCgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "logging/v1;loggingb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2564,7 +2563,6 @@ public final class LogIngestionServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
           yandex.cloud.api.logging.v1.LogEntryOuterClass.getDescriptor(),
           yandex.cloud.api.logging.v1.LogResource.getDescriptor(),
@@ -2594,7 +2592,6 @@ public final class LogIngestionServiceOuterClass {
     registry.add(yandex.cloud.api.Validation.size);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
     yandex.cloud.api.logging.v1.LogEntryOuterClass.getDescriptor();
     yandex.cloud.api.logging.v1.LogResource.getDescriptor();

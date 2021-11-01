@@ -1643,21 +1643,21 @@ public final class CertificateContentServiceOuterClass {
       "\nDyandex/cloud/certificatemanager/v1/cer" +
       "tificate_content_service.proto\022\"yandex.c" +
       "loud.certificatemanager.v1\032\034google/api/a" +
-      "nnotations.proto\032\035yandex/cloud/validatio" +
-      "n.proto\"g\n\035GetCertificateContentResponse" +
-      "\022\026\n\016certificate_id\030\001 \001(\t\022\031\n\021certificate_" +
-      "chain\030\003 \003(\t\022\023\n\013private_key\030\004 \001(\t\"6\n\034GetC" +
-      "ertificateContentRequest\022\026\n\016certificate_" +
-      "id\030\001 \001(\t2\362\001\n\031CertificateContentService\022\324" +
-      "\001\n\003Get\022@.yandex.cloud.certificatemanager" +
-      ".v1.GetCertificateContentRequest\032A.yande" +
-      "x.cloud.certificatemanager.v1.GetCertifi" +
-      "cateContentResponse\"H\202\323\344\223\002B\022@/certificat" +
-      "e-manager/v1/certificates/{certificate_i" +
-      "d}:getContentB\203\001\n&yandex.cloud.api.certi" +
-      "ficatemanager.v1ZYgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/certificatema" +
-      "nager/v1;certificatemanagerb\006proto3"
+      "nnotations.proto\"g\n\035GetCertificateConten" +
+      "tResponse\022\026\n\016certificate_id\030\001 \001(\t\022\031\n\021cer" +
+      "tificate_chain\030\003 \003(\t\022\023\n\013private_key\030\004 \001(" +
+      "\t\"6\n\034GetCertificateContentRequest\022\026\n\016cer" +
+      "tificate_id\030\001 \001(\t2\362\001\n\031CertificateContent" +
+      "Service\022\324\001\n\003Get\022@.yandex.cloud.certifica" +
+      "temanager.v1.GetCertificateContentReques" +
+      "t\032A.yandex.cloud.certificatemanager.v1.G" +
+      "etCertificateContentResponse\"H\202\323\344\223\002B\022@/c" +
+      "ertificate-manager/v1/certificates/{cert" +
+      "ificate_id}:getContentB\203\001\n&yandex.cloud." +
+      "api.certificatemanager.v1ZYgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/cert" +
+      "ificatemanager/v1;certificatemanagerb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1671,7 +1671,6 @@ public final class CertificateContentServiceOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
-          yandex.cloud.api.Validation.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_certificatemanager_v1_GetCertificateContentResponse_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1691,7 +1690,6 @@ public final class CertificateContentServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
-    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

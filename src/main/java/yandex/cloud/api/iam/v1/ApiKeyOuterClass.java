@@ -99,7 +99,7 @@ public final class ApiKeyOuterClass {
   }
   /**
    * <pre>
-   * An ApiKey resource.
+   * An ApiKey resource. For more information, see [Api-Key](/docs/iam/concepts/authorization/api-key).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.iam.v1.ApiKey}
@@ -558,7 +558,7 @@ public final class ApiKeyOuterClass {
     }
     /**
      * <pre>
-     * An ApiKey resource.
+     * An ApiKey resource. For more information, see [Api-Key](/docs/iam/concepts/authorization/api-key).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.iam.v1.ApiKey}

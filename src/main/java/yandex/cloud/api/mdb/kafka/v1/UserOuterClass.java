@@ -3409,23 +3409,22 @@ public final class UserOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n$yandex/cloud/mdb/kafka/v1/user.proto\022\031" +
-      "yandex.cloud.mdb.kafka.v1\032\036google/protob" +
-      "uf/wrappers.proto\032\035yandex/cloud/validati" +
-      "on.proto\"d\n\004User\022\014\n\004name\030\001 \001(\t\022\022\n\ncluste" +
-      "r_id\030\002 \001(\t\022:\n\013permissions\030\003 \003(\0132%.yandex" +
-      ".cloud.mdb.kafka.v1.Permission\"\224\001\n\010UserS" +
-      "pec\022+\n\004name\030\001 \001(\tB\035\350\3071\001\212\3101\0041-63\362\3071\r[a-zA" +
-      "-Z0-9_]*\022\037\n\010password\030\002 \001(\tB\r\350\3071\001\212\3101\0058-12" +
-      "8\022:\n\013permissions\030\003 \003(\0132%.yandex.cloud.md" +
-      "b.kafka.v1.Permission\"\326\001\n\nPermission\022\022\n\n" +
-      "topic_name\030\001 \001(\t\022>\n\004role\030\002 \001(\01620.yandex." +
-      "cloud.mdb.kafka.v1.Permission.AccessRole" +
-      "\"t\n\nAccessRole\022\033\n\027ACCESS_ROLE_UNSPECIFIE" +
-      "D\020\000\022\030\n\024ACCESS_ROLE_PRODUCER\020\001\022\030\n\024ACCESS_" +
-      "ROLE_CONSUMER\020\002\022\025\n\021ACCESS_ROLE_ADMIN\020\003Bd" +
-      "\n\035yandex.cloud.api.mdb.kafka.v1ZCgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/mdb/kafka/v1;kafkab\006proto3"
+      "yandex.cloud.mdb.kafka.v1\032\035yandex/cloud/" +
+      "validation.proto\"d\n\004User\022\014\n\004name\030\001 \001(\t\022\022" +
+      "\n\ncluster_id\030\002 \001(\t\022:\n\013permissions\030\003 \003(\0132" +
+      "%.yandex.cloud.mdb.kafka.v1.Permission\"\224" +
+      "\001\n\010UserSpec\022+\n\004name\030\001 \001(\tB\035\350\3071\001\212\3101\0041-63\362" +
+      "\3071\r[a-zA-Z0-9_]*\022\037\n\010password\030\002 \001(\tB\r\350\3071\001" +
+      "\212\3101\0058-128\022:\n\013permissions\030\003 \003(\0132%.yandex." +
+      "cloud.mdb.kafka.v1.Permission\"\326\001\n\nPermis" +
+      "sion\022\022\n\ntopic_name\030\001 \001(\t\022>\n\004role\030\002 \001(\01620" +
+      ".yandex.cloud.mdb.kafka.v1.Permission.Ac" +
+      "cessRole\"t\n\nAccessRole\022\033\n\027ACCESS_ROLE_UN" +
+      "SPECIFIED\020\000\022\030\n\024ACCESS_ROLE_PRODUCER\020\001\022\030\n" +
+      "\024ACCESS_ROLE_CONSUMER\020\002\022\025\n\021ACCESS_ROLE_A" +
+      "DMIN\020\003Bd\n\035yandex.cloud.api.mdb.kafka.v1Z" +
+      "Cgithub.com/yandex-cloud/go-genproto/yan" +
+      "dex/cloud/mdb/kafka/v1;kafkab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3438,7 +3437,6 @@ public final class UserOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_mdb_kafka_v1_User_descriptor =
@@ -3466,7 +3464,6 @@ public final class UserOuterClass {
     registry.add(yandex.cloud.api.Validation.required);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

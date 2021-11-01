@@ -2591,25 +2591,24 @@ public final class UsageRecordOuterClass {
     java.lang.String[] descriptorData = {
       "\n7yandex/cloud/marketplace/v1/metering/u" +
       "sage_record.proto\022$yandex.cloud.marketpl" +
-      "ace.v1.metering\032\034google/api/annotations." +
-      "proto\032\037google/protobuf/timestamp.proto\032\035" +
-      "yandex/cloud/validation.proto\"\226\001\n\013UsageR" +
-      "ecord\022\032\n\004uuid\030\001 \001(\tB\014\350\3071\001\212\3101\004<=36\022\034\n\006sku" +
-      "_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022\030\n\010quantity\030\003 \001(" +
-      "\003B\006\372\3071\002>0\0223\n\ttimestamp\030\004 \001(\0132\032.google.pr" +
-      "otobuf.TimestampB\004\350\3071\001\"#\n\023AcceptedUsageR" +
-      "ecord\022\014\n\004uuid\030\001 \001(\t\"\235\002\n\023RejectedUsageRec" +
-      "ord\022\014\n\004uuid\030\001 \001(\t\022P\n\006reason\030\002 \001(\0162@.yand" +
-      "ex.cloud.marketplace.v1.metering.Rejecte" +
-      "dUsageRecord.Reason\"\245\001\n\006Reason\022\026\n\022REASON" +
-      "_UNSPECIFIED\020\000\022\r\n\tDUPLICATE\020\001\022\013\n\007EXPIRED" +
-      "\020\002\022\025\n\021INVALID_TIMESTAMP\020\003\022\022\n\016INVALID_SKU" +
-      "_ID\020\004\022\026\n\022INVALID_PRODUCT_ID\020\005\022\024\n\020INVALID" +
-      "_QUANTITY\020\006\022\016\n\nINVALID_ID\020\007B}\n(yandex.cl" +
-      "oud.api.marketplace.v1.meteringZQgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/marketplace/v1/metering;meteringb\006prot" +
-      "o3"
+      "ace.v1.metering\032\037google/protobuf/timesta" +
+      "mp.proto\032\035yandex/cloud/validation.proto\"" +
+      "\226\001\n\013UsageRecord\022\032\n\004uuid\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=36\022\034\n\006sku_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022\030\n\010qua" +
+      "ntity\030\003 \001(\003B\006\372\3071\002>0\0223\n\ttimestamp\030\004 \001(\0132\032" +
+      ".google.protobuf.TimestampB\004\350\3071\001\"#\n\023Acce" +
+      "ptedUsageRecord\022\014\n\004uuid\030\001 \001(\t\"\235\002\n\023Reject" +
+      "edUsageRecord\022\014\n\004uuid\030\001 \001(\t\022P\n\006reason\030\002 " +
+      "\001(\0162@.yandex.cloud.marketplace.v1.meteri" +
+      "ng.RejectedUsageRecord.Reason\"\245\001\n\006Reason" +
+      "\022\026\n\022REASON_UNSPECIFIED\020\000\022\r\n\tDUPLICATE\020\001\022" +
+      "\013\n\007EXPIRED\020\002\022\025\n\021INVALID_TIMESTAMP\020\003\022\022\n\016I" +
+      "NVALID_SKU_ID\020\004\022\026\n\022INVALID_PRODUCT_ID\020\005\022" +
+      "\024\n\020INVALID_QUANTITY\020\006\022\016\n\nINVALID_ID\020\007B}\n" +
+      "(yandex.cloud.api.marketplace.v1.meterin" +
+      "gZQgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/marketplace/v1/metering;mete" +
+      "ringb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2622,7 +2621,6 @@ public final class UsageRecordOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         }, assigner);
@@ -2651,7 +2649,6 @@ public final class UsageRecordOuterClass {
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }

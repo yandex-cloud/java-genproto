@@ -3870,29 +3870,28 @@ public final class UserOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n)yandex/cloud/mdb/mysql/v1alpha/user.pr" +
-      "oto\022\036yandex.cloud.mdb.mysql.v1alpha\032\036goo" +
-      "gle/protobuf/wrappers.proto\032\035yandex/clou" +
-      "d/validation.proto\"i\n\004User\022\014\n\004name\030\001 \001(\t" +
-      "\022\022\n\ncluster_id\030\002 \001(\t\022?\n\013permissions\030\003 \003(" +
-      "\0132*.yandex.cloud.mdb.mysql.v1alpha.Permi" +
-      "ssion\"\244\003\n\nPermission\022\025\n\rdatabase_name\030\001 " +
-      "\001(\t\022L\n\005roles\030\002 \003(\01624.yandex.cloud.mdb.my" +
-      "sql.v1alpha.Permission.PrivilegeB\007\202\3101\003>=" +
-      "1\"\260\002\n\tPrivilege\022\031\n\025PRIVILEGE_UNSPECIFIED" +
-      "\020\000\022\022\n\016ALL_PRIVILEGES\020\001\022\t\n\005ALTER\020\002\022\021\n\rALT" +
-      "ER_ROUTINE\020\003\022\n\n\006CREATE\020\004\022\022\n\016CREATE_ROUTI" +
-      "NE\020\005\022\033\n\027CREATE_TEMPORARY_TABLES\020\006\022\017\n\013CRE" +
-      "ATE_VIEW\020\007\022\n\n\006DELETE\020\010\022\010\n\004DROP\020\t\022\t\n\005EVEN" +
-      "T\020\n\022\013\n\007EXECUTE\020\013\022\t\n\005INDEX\020\014\022\n\n\006INSERT\020\r\022" +
-      "\017\n\013LOCK_TABLES\020\016\022\n\n\006SELECT\020\017\022\r\n\tSHOW_VIE" +
-      "W\020\020\022\013\n\007TRIGGER\020\021\022\n\n\006UPDATE\020\022\"\231\001\n\010UserSpe" +
-      "c\022+\n\004name\030\001 \001(\tB\035\350\3071\001\212\3101\004<=32\362\3071\r[a-zA-Z" +
-      "0-9_]*\022\037\n\010password\030\002 \001(\tB\r\350\3071\001\212\3101\0058-128\022" +
-      "?\n\013permissions\030\003 \003(\0132*.yandex.cloud.mdb." +
-      "mysql.v1alpha.PermissionBn\n\"yandex.cloud" +
-      ".api.mdb.mysql.v1alphaZHgithub.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/mdb/mys" +
-      "ql/v1alpha;mysqlb\006proto3"
+      "oto\022\036yandex.cloud.mdb.mysql.v1alpha\032\035yan" +
+      "dex/cloud/validation.proto\"i\n\004User\022\014\n\004na" +
+      "me\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022?\n\013permissi" +
+      "ons\030\003 \003(\0132*.yandex.cloud.mdb.mysql.v1alp" +
+      "ha.Permission\"\244\003\n\nPermission\022\025\n\rdatabase" +
+      "_name\030\001 \001(\t\022L\n\005roles\030\002 \003(\01624.yandex.clou" +
+      "d.mdb.mysql.v1alpha.Permission.Privilege" +
+      "B\007\202\3101\003>=1\"\260\002\n\tPrivilege\022\031\n\025PRIVILEGE_UNS" +
+      "PECIFIED\020\000\022\022\n\016ALL_PRIVILEGES\020\001\022\t\n\005ALTER\020" +
+      "\002\022\021\n\rALTER_ROUTINE\020\003\022\n\n\006CREATE\020\004\022\022\n\016CREA" +
+      "TE_ROUTINE\020\005\022\033\n\027CREATE_TEMPORARY_TABLES\020" +
+      "\006\022\017\n\013CREATE_VIEW\020\007\022\n\n\006DELETE\020\010\022\010\n\004DROP\020\t" +
+      "\022\t\n\005EVENT\020\n\022\013\n\007EXECUTE\020\013\022\t\n\005INDEX\020\014\022\n\n\006I" +
+      "NSERT\020\r\022\017\n\013LOCK_TABLES\020\016\022\n\n\006SELECT\020\017\022\r\n\t" +
+      "SHOW_VIEW\020\020\022\013\n\007TRIGGER\020\021\022\n\n\006UPDATE\020\022\"\231\001\n" +
+      "\010UserSpec\022+\n\004name\030\001 \001(\tB\035\350\3071\001\212\3101\004<=32\362\3071" +
+      "\r[a-zA-Z0-9_]*\022\037\n\010password\030\002 \001(\tB\r\350\3071\001\212\310" +
+      "1\0058-128\022?\n\013permissions\030\003 \003(\0132*.yandex.cl" +
+      "oud.mdb.mysql.v1alpha.PermissionBn\n\"yand" +
+      "ex.cloud.api.mdb.mysql.v1alphaZHgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/mdb/mysql/v1alpha;mysqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3905,7 +3904,6 @@ public final class UserOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_mdb_mysql_v1alpha_User_descriptor =
@@ -3934,7 +3932,6 @@ public final class UserOuterClass {
     registry.add(yandex.cloud.api.Validation.size);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

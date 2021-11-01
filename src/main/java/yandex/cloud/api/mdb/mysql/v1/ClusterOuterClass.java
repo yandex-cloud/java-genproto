@@ -7495,6 +7495,15 @@ public final class ClusterOuterClass {
      */
     com.google.protobuf.ByteString
         getReplicationSourceBytes();
+
+    /**
+     * <pre>
+     * Host backup priority
+     * </pre>
+     *
+     * <code>int64 backup_priority = 11;</code>
+     */
+    long getBackupPriority();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.Host}
@@ -7518,6 +7527,7 @@ public final class ClusterOuterClass {
       subnetId_ = "";
       assignPublicIp_ = false;
       replicationSource_ = "";
+      backupPriority_ = 0L;
     }
 
     @java.lang.Override
@@ -7611,6 +7621,11 @@ public final class ClusterOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               replicationSource_ = s;
+              break;
+            }
+            case 88: {
+
+              backupPriority_ = input.readInt64();
               break;
             }
             default: {
@@ -8297,6 +8312,19 @@ public final class ClusterOuterClass {
       }
     }
 
+    public static final int BACKUP_PRIORITY_FIELD_NUMBER = 11;
+    private long backupPriority_;
+    /**
+     * <pre>
+     * Host backup priority
+     * </pre>
+     *
+     * <code>int64 backup_priority = 11;</code>
+     */
+    public long getBackupPriority() {
+      return backupPriority_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8340,6 +8368,9 @@ public final class ClusterOuterClass {
       }
       if (!getReplicationSourceBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, replicationSource_);
+      }
+      if (backupPriority_ != 0L) {
+        output.writeInt64(11, backupPriority_);
       }
       unknownFields.writeTo(output);
     }
@@ -8385,6 +8416,10 @@ public final class ClusterOuterClass {
       if (!getReplicationSourceBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, replicationSource_);
       }
+      if (backupPriority_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(11, backupPriority_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -8422,6 +8457,8 @@ public final class ClusterOuterClass {
           == other.getAssignPublicIp());
       result = result && getReplicationSource()
           .equals(other.getReplicationSource());
+      result = result && (getBackupPriority()
+          == other.getBackupPriority());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -8458,6 +8495,9 @@ public final class ClusterOuterClass {
           getAssignPublicIp());
       hash = (37 * hash) + REPLICATION_SOURCE_FIELD_NUMBER;
       hash = (53 * hash) + getReplicationSource().hashCode();
+      hash = (37 * hash) + BACKUP_PRIORITY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBackupPriority());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8620,6 +8660,8 @@ public final class ClusterOuterClass {
 
         replicationSource_ = "";
 
+        backupPriority_ = 0L;
+
         return this;
       }
 
@@ -8670,6 +8712,7 @@ public final class ClusterOuterClass {
         result.subnetId_ = subnetId_;
         result.assignPublicIp_ = assignPublicIp_;
         result.replicationSource_ = replicationSource_;
+        result.backupPriority_ = backupPriority_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -8776,6 +8819,9 @@ public final class ClusterOuterClass {
         if (!other.getReplicationSource().isEmpty()) {
           replicationSource_ = other.replicationSource_;
           onChanged();
+        }
+        if (other.getBackupPriority() != 0L) {
+          setBackupPriority(other.getBackupPriority());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9901,6 +9947,44 @@ public final class ClusterOuterClass {
   checkByteStringIsUtf8(value);
         
         replicationSource_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long backupPriority_ ;
+      /**
+       * <pre>
+       * Host backup priority
+       * </pre>
+       *
+       * <code>int64 backup_priority = 11;</code>
+       */
+      public long getBackupPriority() {
+        return backupPriority_;
+      }
+      /**
+       * <pre>
+       * Host backup priority
+       * </pre>
+       *
+       * <code>int64 backup_priority = 11;</code>
+       */
+      public Builder setBackupPriority(long value) {
+        
+        backupPriority_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host backup priority
+       * </pre>
+       *
+       * <code>int64 backup_priority = 11;</code>
+       */
+      public Builder clearBackupPriority() {
+        
+        backupPriority_ = 0L;
         onChanged();
         return this;
       }
@@ -13096,7 +13180,7 @@ public final class ClusterOuterClass {
       "ources\0223\n\023backup_window_start\030\004 \001(\0132\026.go" +
       "ogle.type.TimeOfDay\0221\n\006access\030\005 \001(\0132!.ya" +
       "ndex.cloud.mdb.mysql.v1.AccessB\016\n\014mysql_" +
-      "config\"\321\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster" +
+      "config\"\352\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster" +
       "_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0227\n\tresources\030" +
       "\004 \001(\0132$.yandex.cloud.mdb.mysql.v1.Resour" +
       "ces\0222\n\004role\030\005 \001(\0162$.yandex.cloud.mdb.mys" +
@@ -13104,25 +13188,26 @@ public final class ClusterOuterClass {
       ".cloud.mdb.mysql.v1.Host.Health\0224\n\010servi" +
       "ces\030\007 \003(\0132\".yandex.cloud.mdb.mysql.v1.Se" +
       "rvice\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_publi" +
-      "c_ip\030\t \001(\010\022\032\n\022replication_source\030\n \001(\t\"1" +
-      "\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007" +
-      "REPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022" +
-      "\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\327\001\n\007S" +
-      "ervice\0225\n\004type\030\001 \001(\0162\'.yandex.cloud.mdb." +
-      "mysql.v1.Service.Type\0229\n\006health\030\002 \001(\0162)." +
-      "yandex.cloud.mdb.mysql.v1.Service.Health" +
-      "\"\'\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005MYSQL\020" +
-      "\001\"1\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE" +
-      "\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resource_pr" +
-      "eset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk" +
-      "_type_id\030\003 \001(\t\",\n\006Access\022\021\n\tdata_lens\030\001 " +
-      "\001(\010\022\017\n\007web_sql\030\002 \001(\010\"\215\001\n\026PerformanceDiag" +
-      "nostics\022\017\n\007enabled\030\001 \001(\010\022/\n\032sessions_sam" +
-      "pling_interval\030\002 \001(\003B\013\372\3071\0071-86400\0221\n\034sta" +
-      "tements_sampling_interval\030\003 \001(\003B\013\372\3071\0071-8" +
-      "6400Bd\n\035yandex.cloud.api.mdb.mysql.v1ZCg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/mdb/mysql/v1;mysqlb\006proto3"
+      "c_ip\030\t \001(\010\022\032\n\022replication_source\030\n \001(\t\022\027" +
+      "\n\017backup_priority\030\013 \001(\003\"1\n\004Role\022\020\n\014ROLE_" +
+      "UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"?\n\006He" +
+      "alth\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004D" +
+      "EAD\020\002\022\014\n\010DEGRADED\020\003\"\327\001\n\007Service\0225\n\004type\030" +
+      "\001 \001(\0162\'.yandex.cloud.mdb.mysql.v1.Servic" +
+      "e.Type\0229\n\006health\030\002 \001(\0162).yandex.cloud.md" +
+      "b.mysql.v1.Service.Health\"\'\n\004Type\022\024\n\020TYP" +
+      "E_UNSPECIFIED\020\000\022\t\n\005MYSQL\020\001\"1\n\006Health\022\022\n\016" +
+      "HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n" +
+      "\tResources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021" +
+      "\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"" +
+      ",\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030" +
+      "\002 \001(\010\"\215\001\n\026PerformanceDiagnostics\022\017\n\007enab" +
+      "led\030\001 \001(\010\022/\n\032sessions_sampling_interval\030" +
+      "\002 \001(\003B\013\372\3071\0071-86400\0221\n\034statements_samplin" +
+      "g_interval\030\003 \001(\003B\013\372\3071\0071-86400Bd\n\035yandex." +
+      "cloud.api.mdb.mysql.v1ZCgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/mdb/mys" +
+      "ql/v1;mysqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13171,7 +13256,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mysql_v1_Host_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_Host_descriptor,
-        new java.lang.String[] { "Name", "ClusterId", "ZoneId", "Resources", "Role", "Health", "Services", "SubnetId", "AssignPublicIp", "ReplicationSource", });
+        new java.lang.String[] { "Name", "ClusterId", "ZoneId", "Resources", "Role", "Health", "Services", "SubnetId", "AssignPublicIp", "ReplicationSource", "BackupPriority", });
     internal_static_yandex_cloud_mdb_mysql_v1_Service_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_mdb_mysql_v1_Service_fieldAccessorTable = new

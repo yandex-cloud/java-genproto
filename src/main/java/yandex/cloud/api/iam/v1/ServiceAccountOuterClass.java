@@ -1787,16 +1787,15 @@ public final class ServiceAccountOuterClass {
     java.lang.String[] descriptorData = {
       "\n)yandex/cloud/iam/v1/service_account.pr" +
       "oto\022\023yandex.cloud.iam.v1\032\037google/protobu" +
-      "f/timestamp.proto\032\035yandex/cloud/validati" +
-      "on.proto\"\362\001\n\016ServiceAccount\022\n\n\002id\030\001 \001(\t\022" +
-      "\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t" +
-      "\022\023\n\013description\030\005 \001(\t\022?\n\006labels\030\006 \003(\0132/." +
-      "yandex.cloud.iam.v1.ServiceAccount.Label" +
-      "sEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001BV\n\027yandex.cloud.api.iam.v1" +
-      "Z;github.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/iam/v1;iamb\006proto3"
+      "f/timestamp.proto\"\362\001\n\016ServiceAccount\022\n\n\002" +
+      "id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_a" +
+      "t\030\003 \001(\0132\032.google.protobuf.Timestamp\022\014\n\004n" +
+      "ame\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022?\n\006labels" +
+      "\030\006 \003(\0132/.yandex.cloud.iam.v1.ServiceAcco" +
+      "unt.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001BV\n\027yandex.cloud.a" +
+      "pi.iam.v1Z;github.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/iam/v1;iamb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1810,7 +1809,6 @@ public final class ServiceAccountOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-          yandex.cloud.api.Validation.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_iam_v1_ServiceAccount_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1825,7 +1823,6 @@ public final class ServiceAccountOuterClass {
         internal_static_yandex_cloud_iam_v1_ServiceAccount_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.TimestampProto.getDescriptor();
-    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
