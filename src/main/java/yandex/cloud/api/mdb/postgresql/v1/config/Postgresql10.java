@@ -4696,6 +4696,14 @@ public final class Postgresql10 {
        * <code>SHARED_PRELOAD_LIBRARIES_PG_HINT_PLAN = 2;</code>
        */
       SHARED_PRELOAD_LIBRARIES_PG_HINT_PLAN(2),
+      /**
+       * <code>SHARED_PRELOAD_LIBRARIES_TIMESCALEDB = 3;</code>
+       */
+      SHARED_PRELOAD_LIBRARIES_TIMESCALEDB(3),
+      /**
+       * <code>SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS = 4;</code>
+       */
+      SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS(4),
       UNRECOGNIZED(-1),
       ;
 
@@ -4711,6 +4719,14 @@ public final class Postgresql10 {
        * <code>SHARED_PRELOAD_LIBRARIES_PG_HINT_PLAN = 2;</code>
        */
       public static final int SHARED_PRELOAD_LIBRARIES_PG_HINT_PLAN_VALUE = 2;
+      /**
+       * <code>SHARED_PRELOAD_LIBRARIES_TIMESCALEDB = 3;</code>
+       */
+      public static final int SHARED_PRELOAD_LIBRARIES_TIMESCALEDB_VALUE = 3;
+      /**
+       * <code>SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS = 4;</code>
+       */
+      public static final int SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS_VALUE = 4;
 
 
       public final int getNumber() {
@@ -4734,6 +4750,8 @@ public final class Postgresql10 {
           case 0: return SHARED_PRELOAD_LIBRARIES_UNSPECIFIED;
           case 1: return SHARED_PRELOAD_LIBRARIES_AUTO_EXPLAIN;
           case 2: return SHARED_PRELOAD_LIBRARIES_PG_HINT_PLAN;
+          case 3: return SHARED_PRELOAD_LIBRARIES_TIMESCALEDB;
+          case 4: return SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS;
           default: return null;
         }
       }
@@ -24521,7 +24539,7 @@ public final class Postgresql10 {
       "postgresql10.proto\022%yandex.cloud.mdb.pos" +
       "tgresql.v1.config\032\036google/protobuf/wrapp" +
       "ers.proto\032\035yandex/cloud/validation.proto" +
-      "\"\206L\n\022PostgresqlConfig10\0224\n\017max_connectio" +
+      "\"\333L\n\022PostgresqlConfig10\0224\n\017max_connectio" +
       "ns\030\001 \001(\0132\033.google.protobuf.Int64Value\0223\n" +
       "\016shared_buffers\030\002 \001(\0132\033.google.protobuf." +
       "Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033.googl" +
@@ -24760,21 +24778,24 @@ public final class Postgresql10 {
       "\n\034PG_HINT_PLAN_DEBUG_PRINT_OFF\020\001\022\037\n\033PG_H" +
       "INT_PLAN_DEBUG_PRINT_ON\020\002\022%\n!PG_HINT_PLA" +
       "N_DEBUG_PRINT_DETAILED\020\003\022$\n PG_HINT_PLAN" +
-      "_DEBUG_PRINT_VERBOSE\020\004\"\230\001\n\026SharedPreload" +
+      "_DEBUG_PRINT_VERBOSE\020\004\"\355\001\n\026SharedPreload" +
       "Libraries\022(\n$SHARED_PRELOAD_LIBRARIES_UN" +
       "SPECIFIED\020\000\022)\n%SHARED_PRELOAD_LIBRARIES_" +
       "AUTO_EXPLAIN\020\001\022)\n%SHARED_PRELOAD_LIBRARI" +
-      "ES_PG_HINT_PLAN\020\002\"\225\002\n\025PostgresqlConfigSe" +
-      "t10\022Y\n\020effective_config\030\001 \001(\01329.yandex.c" +
-      "loud.mdb.postgresql.v1.config.Postgresql" +
-      "Config10B\004\350\3071\001\022N\n\013user_config\030\002 \001(\01329.ya" +
-      "ndex.cloud.mdb.postgresql.v1.config.Post" +
-      "gresqlConfig10\022Q\n\016default_config\030\003 \001(\01329" +
-      ".yandex.cloud.mdb.postgresql.v1.config.P" +
-      "ostgresqlConfig10B\201\001\n)yandex.cloud.api.m" +
-      "db.postgresql.v1.configZTgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/mdb/po" +
-      "stgresql/v1/config;postgresqlb\006proto3"
+      "ES_PG_HINT_PLAN\020\002\022(\n$SHARED_PRELOAD_LIBR" +
+      "ARIES_TIMESCALEDB\020\003\022)\n%SHARED_PRELOAD_LI" +
+      "BRARIES_PG_QUALSTATS\020\004\"\225\002\n\025PostgresqlCon" +
+      "figSet10\022Y\n\020effective_config\030\001 \001(\01329.yan" +
+      "dex.cloud.mdb.postgresql.v1.config.Postg" +
+      "resqlConfig10B\004\350\3071\001\022N\n\013user_config\030\002 \001(\013" +
+      "29.yandex.cloud.mdb.postgresql.v1.config" +
+      ".PostgresqlConfig10\022Q\n\016default_config\030\003 " +
+      "\001(\01329.yandex.cloud.mdb.postgresql.v1.con" +
+      "fig.PostgresqlConfig10B\201\001\n)yandex.cloud." +
+      "api.mdb.postgresql.v1.configZTgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/m" +
+      "db/postgresql/v1/config;postgresqlb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

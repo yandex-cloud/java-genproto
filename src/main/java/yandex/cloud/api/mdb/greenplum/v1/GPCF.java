@@ -902,6 +902,1263 @@ public final class GPCF {
 
   }
 
+  public interface ConnectionPoolerConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Odyssey route server pool mode. Default is session mode.
+     * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode mode = 1;</code>
+     */
+    int getModeValue();
+    /**
+     * <pre>
+     * Odyssey route server pool mode. Default is session mode.
+     * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode mode = 1;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.PoolMode getMode();
+
+    /**
+     * <pre>
+     * Odyssey Server pool size.
+     * Keep the number of servers in the pool as much as 'pool_size'. Clients are put in a wait queue, when all servers are busy.
+     * Set to zero to disable the limit.
+     * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_size-integer
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value size = 2;</code>
+     */
+    boolean hasSize();
+    /**
+     * <pre>
+     * Odyssey Server pool size.
+     * Keep the number of servers in the pool as much as 'pool_size'. Clients are put in a wait queue, when all servers are busy.
+     * Set to zero to disable the limit.
+     * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_size-integer
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value size = 2;</code>
+     */
+    com.google.protobuf.Int64Value getSize();
+    /**
+     * <pre>
+     * Odyssey Server pool size.
+     * Keep the number of servers in the pool as much as 'pool_size'. Clients are put in a wait queue, when all servers are busy.
+     * Set to zero to disable the limit.
+     * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_size-integer
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value size = 2;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSizeOrBuilder();
+
+    /**
+     * <pre>
+     * Server pool idle timeout.
+     * Close an server connection when it becomes idle for 'pool_ttl' seconds.
+     * Set to zero to disable.
+     * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_ttl-integer
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+     */
+    boolean hasClientIdleTimeout();
+    /**
+     * <pre>
+     * Server pool idle timeout.
+     * Close an server connection when it becomes idle for 'pool_ttl' seconds.
+     * Set to zero to disable.
+     * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_ttl-integer
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+     */
+    com.google.protobuf.Int64Value getClientIdleTimeout();
+    /**
+     * <pre>
+     * Server pool idle timeout.
+     * Close an server connection when it becomes idle for 'pool_ttl' seconds.
+     * Set to zero to disable.
+     * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_ttl-integer
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getClientIdleTimeoutOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig}
+   */
+  public  static final class ConnectionPoolerConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig)
+      ConnectionPoolerConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ConnectionPoolerConfig.newBuilder() to construct.
+    private ConnectionPoolerConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ConnectionPoolerConfig() {
+      mode_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ConnectionPoolerConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              mode_ = rawValue;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (size_ != null) {
+                subBuilder = size_.toBuilder();
+              }
+              size_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(size_);
+                size_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (clientIdleTimeout_ != null) {
+                subBuilder = clientIdleTimeout_.toBuilder();
+              }
+              clientIdleTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(clientIdleTimeout_);
+                clientIdleTimeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.GPCF.internal_static_yandex_cloud_mdb_greenplum_v1_ConnectionPoolerConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.GPCF.internal_static_yandex_cloud_mdb_greenplum_v1_ConnectionPoolerConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.class, yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode}
+     */
+    public enum PoolMode
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>POOL_MODE_UNSPECIFIED = 0;</code>
+       */
+      POOL_MODE_UNSPECIFIED(0),
+      /**
+       * <code>SESSION = 1;</code>
+       */
+      SESSION(1),
+      /**
+       * <code>TRANSACTION = 2;</code>
+       */
+      TRANSACTION(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>POOL_MODE_UNSPECIFIED = 0;</code>
+       */
+      public static final int POOL_MODE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>SESSION = 1;</code>
+       */
+      public static final int SESSION_VALUE = 1;
+      /**
+       * <code>TRANSACTION = 2;</code>
+       */
+      public static final int TRANSACTION_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PoolMode valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static PoolMode forNumber(int value) {
+        switch (value) {
+          case 0: return POOL_MODE_UNSPECIFIED;
+          case 1: return SESSION;
+          case 2: return TRANSACTION;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<PoolMode>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          PoolMode> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<PoolMode>() {
+              public PoolMode findValueByNumber(int number) {
+                return PoolMode.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final PoolMode[] VALUES = values();
+
+      public static PoolMode valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private PoolMode(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode)
+    }
+
+    public static final int MODE_FIELD_NUMBER = 1;
+    private int mode_;
+    /**
+     * <pre>
+     * Odyssey route server pool mode. Default is session mode.
+     * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode mode = 1;</code>
+     */
+    public int getModeValue() {
+      return mode_;
+    }
+    /**
+     * <pre>
+     * Odyssey route server pool mode. Default is session mode.
+     * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode mode = 1;</code>
+     */
+    public yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.PoolMode getMode() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.PoolMode result = yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.PoolMode.valueOf(mode_);
+      return result == null ? yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.PoolMode.UNRECOGNIZED : result;
+    }
+
+    public static final int SIZE_FIELD_NUMBER = 2;
+    private com.google.protobuf.Int64Value size_;
+    /**
+     * <pre>
+     * Odyssey Server pool size.
+     * Keep the number of servers in the pool as much as 'pool_size'. Clients are put in a wait queue, when all servers are busy.
+     * Set to zero to disable the limit.
+     * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_size-integer
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value size = 2;</code>
+     */
+    public boolean hasSize() {
+      return size_ != null;
+    }
+    /**
+     * <pre>
+     * Odyssey Server pool size.
+     * Keep the number of servers in the pool as much as 'pool_size'. Clients are put in a wait queue, when all servers are busy.
+     * Set to zero to disable the limit.
+     * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_size-integer
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value size = 2;</code>
+     */
+    public com.google.protobuf.Int64Value getSize() {
+      return size_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : size_;
+    }
+    /**
+     * <pre>
+     * Odyssey Server pool size.
+     * Keep the number of servers in the pool as much as 'pool_size'. Clients are put in a wait queue, when all servers are busy.
+     * Set to zero to disable the limit.
+     * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_size-integer
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value size = 2;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getSizeOrBuilder() {
+      return getSize();
+    }
+
+    public static final int CLIENT_IDLE_TIMEOUT_FIELD_NUMBER = 3;
+    private com.google.protobuf.Int64Value clientIdleTimeout_;
+    /**
+     * <pre>
+     * Server pool idle timeout.
+     * Close an server connection when it becomes idle for 'pool_ttl' seconds.
+     * Set to zero to disable.
+     * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_ttl-integer
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+     */
+    public boolean hasClientIdleTimeout() {
+      return clientIdleTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * Server pool idle timeout.
+     * Close an server connection when it becomes idle for 'pool_ttl' seconds.
+     * Set to zero to disable.
+     * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_ttl-integer
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+     */
+    public com.google.protobuf.Int64Value getClientIdleTimeout() {
+      return clientIdleTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : clientIdleTimeout_;
+    }
+    /**
+     * <pre>
+     * Server pool idle timeout.
+     * Close an server connection when it becomes idle for 'pool_ttl' seconds.
+     * Set to zero to disable.
+     * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_ttl-integer
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getClientIdleTimeoutOrBuilder() {
+      return getClientIdleTimeout();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (mode_ != yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.PoolMode.POOL_MODE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, mode_);
+      }
+      if (size_ != null) {
+        output.writeMessage(2, getSize());
+      }
+      if (clientIdleTimeout_ != null) {
+        output.writeMessage(3, getClientIdleTimeout());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (mode_ != yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.PoolMode.POOL_MODE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, mode_);
+      }
+      if (size_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getSize());
+      }
+      if (clientIdleTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getClientIdleTimeout());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig other = (yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig) obj;
+
+      boolean result = true;
+      result = result && mode_ == other.mode_;
+      result = result && (hasSize() == other.hasSize());
+      if (hasSize()) {
+        result = result && getSize()
+            .equals(other.getSize());
+      }
+      result = result && (hasClientIdleTimeout() == other.hasClientIdleTimeout());
+      if (hasClientIdleTimeout()) {
+        result = result && getClientIdleTimeout()
+            .equals(other.getClientIdleTimeout());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODE_FIELD_NUMBER;
+      hash = (53 * hash) + mode_;
+      if (hasSize()) {
+        hash = (37 * hash) + SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getSize().hashCode();
+      }
+      if (hasClientIdleTimeout()) {
+        hash = (37 * hash) + CLIENT_IDLE_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getClientIdleTimeout().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig)
+        yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCF.internal_static_yandex_cloud_mdb_greenplum_v1_ConnectionPoolerConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCF.internal_static_yandex_cloud_mdb_greenplum_v1_ConnectionPoolerConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.class, yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        mode_ = 0;
+
+        if (sizeBuilder_ == null) {
+          size_ = null;
+        } else {
+          size_ = null;
+          sizeBuilder_ = null;
+        }
+        if (clientIdleTimeoutBuilder_ == null) {
+          clientIdleTimeout_ = null;
+        } else {
+          clientIdleTimeout_ = null;
+          clientIdleTimeoutBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCF.internal_static_yandex_cloud_mdb_greenplum_v1_ConnectionPoolerConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig build() {
+        yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig result = new yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig(this);
+        result.mode_ = mode_;
+        if (sizeBuilder_ == null) {
+          result.size_ = size_;
+        } else {
+          result.size_ = sizeBuilder_.build();
+        }
+        if (clientIdleTimeoutBuilder_ == null) {
+          result.clientIdleTimeout_ = clientIdleTimeout_;
+        } else {
+          result.clientIdleTimeout_ = clientIdleTimeoutBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.getDefaultInstance()) return this;
+        if (other.mode_ != 0) {
+          setModeValue(other.getModeValue());
+        }
+        if (other.hasSize()) {
+          mergeSize(other.getSize());
+        }
+        if (other.hasClientIdleTimeout()) {
+          mergeClientIdleTimeout(other.getClientIdleTimeout());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int mode_ = 0;
+      /**
+       * <pre>
+       * Odyssey route server pool mode. Default is session mode.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode mode = 1;</code>
+       */
+      public int getModeValue() {
+        return mode_;
+      }
+      /**
+       * <pre>
+       * Odyssey route server pool mode. Default is session mode.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode mode = 1;</code>
+       */
+      public Builder setModeValue(int value) {
+        mode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Odyssey route server pool mode. Default is session mode.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode mode = 1;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.PoolMode getMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.PoolMode result = yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.PoolMode.valueOf(mode_);
+        return result == null ? yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.PoolMode.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Odyssey route server pool mode. Default is session mode.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode mode = 1;</code>
+       */
+      public Builder setMode(yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.PoolMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        mode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Odyssey route server pool mode. Default is session mode.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode mode = 1;</code>
+       */
+      public Builder clearMode() {
+        
+        mode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value size_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> sizeBuilder_;
+      /**
+       * <pre>
+       * Odyssey Server pool size.
+       * Keep the number of servers in the pool as much as 'pool_size'. Clients are put in a wait queue, when all servers are busy.
+       * Set to zero to disable the limit.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_size-integer
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value size = 2;</code>
+       */
+      public boolean hasSize() {
+        return sizeBuilder_ != null || size_ != null;
+      }
+      /**
+       * <pre>
+       * Odyssey Server pool size.
+       * Keep the number of servers in the pool as much as 'pool_size'. Clients are put in a wait queue, when all servers are busy.
+       * Set to zero to disable the limit.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_size-integer
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value size = 2;</code>
+       */
+      public com.google.protobuf.Int64Value getSize() {
+        if (sizeBuilder_ == null) {
+          return size_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : size_;
+        } else {
+          return sizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Odyssey Server pool size.
+       * Keep the number of servers in the pool as much as 'pool_size'. Clients are put in a wait queue, when all servers are busy.
+       * Set to zero to disable the limit.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_size-integer
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value size = 2;</code>
+       */
+      public Builder setSize(com.google.protobuf.Int64Value value) {
+        if (sizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          size_ = value;
+          onChanged();
+        } else {
+          sizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Odyssey Server pool size.
+       * Keep the number of servers in the pool as much as 'pool_size'. Clients are put in a wait queue, when all servers are busy.
+       * Set to zero to disable the limit.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_size-integer
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value size = 2;</code>
+       */
+      public Builder setSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (sizeBuilder_ == null) {
+          size_ = builderForValue.build();
+          onChanged();
+        } else {
+          sizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Odyssey Server pool size.
+       * Keep the number of servers in the pool as much as 'pool_size'. Clients are put in a wait queue, when all servers are busy.
+       * Set to zero to disable the limit.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_size-integer
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value size = 2;</code>
+       */
+      public Builder mergeSize(com.google.protobuf.Int64Value value) {
+        if (sizeBuilder_ == null) {
+          if (size_ != null) {
+            size_ =
+              com.google.protobuf.Int64Value.newBuilder(size_).mergeFrom(value).buildPartial();
+          } else {
+            size_ = value;
+          }
+          onChanged();
+        } else {
+          sizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Odyssey Server pool size.
+       * Keep the number of servers in the pool as much as 'pool_size'. Clients are put in a wait queue, when all servers are busy.
+       * Set to zero to disable the limit.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_size-integer
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value size = 2;</code>
+       */
+      public Builder clearSize() {
+        if (sizeBuilder_ == null) {
+          size_ = null;
+          onChanged();
+        } else {
+          size_ = null;
+          sizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Odyssey Server pool size.
+       * Keep the number of servers in the pool as much as 'pool_size'. Clients are put in a wait queue, when all servers are busy.
+       * Set to zero to disable the limit.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_size-integer
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value size = 2;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSizeBuilder() {
+        
+        onChanged();
+        return getSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Odyssey Server pool size.
+       * Keep the number of servers in the pool as much as 'pool_size'. Clients are put in a wait queue, when all servers are busy.
+       * Set to zero to disable the limit.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_size-integer
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value size = 2;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSizeOrBuilder() {
+        if (sizeBuilder_ != null) {
+          return sizeBuilder_.getMessageOrBuilder();
+        } else {
+          return size_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : size_;
+        }
+      }
+      /**
+       * <pre>
+       * Odyssey Server pool size.
+       * Keep the number of servers in the pool as much as 'pool_size'. Clients are put in a wait queue, when all servers are busy.
+       * Set to zero to disable the limit.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_size-integer
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value size = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSizeFieldBuilder() {
+        if (sizeBuilder_ == null) {
+          sizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSize(),
+                  getParentForChildren(),
+                  isClean());
+          size_ = null;
+        }
+        return sizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value clientIdleTimeout_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> clientIdleTimeoutBuilder_;
+      /**
+       * <pre>
+       * Server pool idle timeout.
+       * Close an server connection when it becomes idle for 'pool_ttl' seconds.
+       * Set to zero to disable.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_ttl-integer
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+       */
+      public boolean hasClientIdleTimeout() {
+        return clientIdleTimeoutBuilder_ != null || clientIdleTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * Server pool idle timeout.
+       * Close an server connection when it becomes idle for 'pool_ttl' seconds.
+       * Set to zero to disable.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_ttl-integer
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+       */
+      public com.google.protobuf.Int64Value getClientIdleTimeout() {
+        if (clientIdleTimeoutBuilder_ == null) {
+          return clientIdleTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : clientIdleTimeout_;
+        } else {
+          return clientIdleTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Server pool idle timeout.
+       * Close an server connection when it becomes idle for 'pool_ttl' seconds.
+       * Set to zero to disable.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_ttl-integer
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+       */
+      public Builder setClientIdleTimeout(com.google.protobuf.Int64Value value) {
+        if (clientIdleTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          clientIdleTimeout_ = value;
+          onChanged();
+        } else {
+          clientIdleTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Server pool idle timeout.
+       * Close an server connection when it becomes idle for 'pool_ttl' seconds.
+       * Set to zero to disable.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_ttl-integer
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+       */
+      public Builder setClientIdleTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (clientIdleTimeoutBuilder_ == null) {
+          clientIdleTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          clientIdleTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Server pool idle timeout.
+       * Close an server connection when it becomes idle for 'pool_ttl' seconds.
+       * Set to zero to disable.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_ttl-integer
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+       */
+      public Builder mergeClientIdleTimeout(com.google.protobuf.Int64Value value) {
+        if (clientIdleTimeoutBuilder_ == null) {
+          if (clientIdleTimeout_ != null) {
+            clientIdleTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(clientIdleTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            clientIdleTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          clientIdleTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Server pool idle timeout.
+       * Close an server connection when it becomes idle for 'pool_ttl' seconds.
+       * Set to zero to disable.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_ttl-integer
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+       */
+      public Builder clearClientIdleTimeout() {
+        if (clientIdleTimeoutBuilder_ == null) {
+          clientIdleTimeout_ = null;
+          onChanged();
+        } else {
+          clientIdleTimeout_ = null;
+          clientIdleTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Server pool idle timeout.
+       * Close an server connection when it becomes idle for 'pool_ttl' seconds.
+       * Set to zero to disable.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_ttl-integer
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getClientIdleTimeoutBuilder() {
+        
+        onChanged();
+        return getClientIdleTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Server pool idle timeout.
+       * Close an server connection when it becomes idle for 'pool_ttl' seconds.
+       * Set to zero to disable.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_ttl-integer
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getClientIdleTimeoutOrBuilder() {
+        if (clientIdleTimeoutBuilder_ != null) {
+          return clientIdleTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return clientIdleTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : clientIdleTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * Server pool idle timeout.
+       * Close an server connection when it becomes idle for 'pool_ttl' seconds.
+       * Set to zero to disable.
+       * https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool_ttl-integer
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value client_idle_timeout = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getClientIdleTimeoutFieldBuilder() {
+        if (clientIdleTimeoutBuilder_ == null) {
+          clientIdleTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getClientIdleTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          clientIdleTimeout_ = null;
+        }
+        return clientIdleTimeoutBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig)
+    private static final yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ConnectionPoolerConfig>
+        PARSER = new com.google.protobuf.AbstractParser<ConnectionPoolerConfig>() {
+      @java.lang.Override
+      public ConnectionPoolerConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ConnectionPoolerConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ConnectionPoolerConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ConnectionPoolerConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface MasterSubclusterConfigOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfig)
       com.google.protobuf.MessageOrBuilder {
@@ -2830,6 +4087,448 @@ public final class GPCF {
      * <code>.google.protobuf.StringValue timezone = 3;</code>
      */
     com.google.protobuf.StringValueOrBuilder getTimezoneOrBuilder();
+
+    /**
+     * <pre>
+     * Odyssey pool settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+     */
+    boolean hasPool();
+    /**
+     * <pre>
+     * Odyssey pool settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig getPool();
+    /**
+     * <pre>
+     * Odyssey pool settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfigOrBuilder getPoolOrBuilder();
+
+    /**
+     * <pre>
+     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_prepared_transactions = 13;</code>
+     */
+    boolean hasMaxPreparedTransactions();
+    /**
+     * <pre>
+     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_prepared_transactions = 13;</code>
+     */
+    com.google.protobuf.Int64Value getMaxPreparedTransactions();
+    /**
+     * <pre>
+     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_prepared_transactions = 13;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxPreparedTransactionsOrBuilder();
+
+    /**
+     * <pre>
+     * For queries that are managed by resource queues or resource groups,
+     * this parameter determines when Greenplum Database terminates running queries based on the amount of memory the queries are using.
+     * A value of 100 disables the automatic termination of queries based on the percentage of memory that is utilized.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#runaway_detector_activation_percent
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value runaway_detector_activation_percent = 14;</code>
+     */
+    boolean hasRunawayDetectorActivationPercent();
+    /**
+     * <pre>
+     * For queries that are managed by resource queues or resource groups,
+     * this parameter determines when Greenplum Database terminates running queries based on the amount of memory the queries are using.
+     * A value of 100 disables the automatic termination of queries based on the percentage of memory that is utilized.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#runaway_detector_activation_percent
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value runaway_detector_activation_percent = 14;</code>
+     */
+    com.google.protobuf.Int64Value getRunawayDetectorActivationPercent();
+    /**
+     * <pre>
+     * For queries that are managed by resource queues or resource groups,
+     * this parameter determines when Greenplum Database terminates running queries based on the amount of memory the queries are using.
+     * A value of 100 disables the automatic termination of queries based on the percentage of memory that is utilized.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#runaway_detector_activation_percent
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value runaway_detector_activation_percent = 14;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getRunawayDetectorActivationPercentOrBuilder();
+
+    /**
+     * <pre>
+     * How many keepalives may be lost before the connection is considered dead. A value of 0 uses the system default.
+     * If TCP_KEEPCNT is not supported, this parameter must be 0.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_count
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value tcp_keepalives_count = 15;</code>
+     */
+    boolean hasTcpKeepalivesCount();
+    /**
+     * <pre>
+     * How many keepalives may be lost before the connection is considered dead. A value of 0 uses the system default.
+     * If TCP_KEEPCNT is not supported, this parameter must be 0.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_count
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value tcp_keepalives_count = 15;</code>
+     */
+    com.google.protobuf.Int64Value getTcpKeepalivesCount();
+    /**
+     * <pre>
+     * How many keepalives may be lost before the connection is considered dead. A value of 0 uses the system default.
+     * If TCP_KEEPCNT is not supported, this parameter must be 0.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_count
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value tcp_keepalives_count = 15;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getTcpKeepalivesCountOrBuilder();
+
+    /**
+     * <pre>
+     * How many seconds to wait for a response to a keepalive before retransmitting. A value of 0 uses the system default.
+     * If TCP_KEEPINTVL is not supported, this parameter must be 0.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_interval
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value tcp_keepalives_interval = 16;</code>
+     */
+    boolean hasTcpKeepalivesInterval();
+    /**
+     * <pre>
+     * How many seconds to wait for a response to a keepalive before retransmitting. A value of 0 uses the system default.
+     * If TCP_KEEPINTVL is not supported, this parameter must be 0.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_interval
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value tcp_keepalives_interval = 16;</code>
+     */
+    com.google.protobuf.Int64Value getTcpKeepalivesInterval();
+    /**
+     * <pre>
+     * How many seconds to wait for a response to a keepalive before retransmitting. A value of 0 uses the system default.
+     * If TCP_KEEPINTVL is not supported, this parameter must be 0.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_interval
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value tcp_keepalives_interval = 16;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getTcpKeepalivesIntervalOrBuilder();
+
+    /**
+     * <pre>
+     * When an SQL query reads from an external table, the parameter value specifies the amount of time in seconds that
+     * Greenplum Database waits before cancelling the query when data stops being returned from the external table.
+     * The default value of 0, specifies no time out. Greenplum Database does not cancel the query.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#readable_external_table_timeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value readable_external_table_timeout = 19;</code>
+     */
+    boolean hasReadableExternalTableTimeout();
+    /**
+     * <pre>
+     * When an SQL query reads from an external table, the parameter value specifies the amount of time in seconds that
+     * Greenplum Database waits before cancelling the query when data stops being returned from the external table.
+     * The default value of 0, specifies no time out. Greenplum Database does not cancel the query.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#readable_external_table_timeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value readable_external_table_timeout = 19;</code>
+     */
+    com.google.protobuf.Int64Value getReadableExternalTableTimeout();
+    /**
+     * <pre>
+     * When an SQL query reads from an external table, the parameter value specifies the amount of time in seconds that
+     * Greenplum Database waits before cancelling the query when data stops being returned from the external table.
+     * The default value of 0, specifies no time out. Greenplum Database does not cancel the query.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#readable_external_table_timeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value readable_external_table_timeout = 19;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getReadableExternalTableTimeoutOrBuilder();
+
+    /**
+     * <pre>
+     * Sets the amount of data per-peer to be queued by the default UDPIFC interconnect on senders.
+     * Increasing the depth from its default value will cause the system to use more memory, but may increase performance.
+     * Reasonable values for this parameter are between 1 and 4. Increasing the value might radically increase the amount of memory used by the system.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_snd_queue_depth
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_interconnect_snd_queue_depth = 20;</code>
+     */
+    boolean hasGpInterconnectSndQueueDepth();
+    /**
+     * <pre>
+     * Sets the amount of data per-peer to be queued by the default UDPIFC interconnect on senders.
+     * Increasing the depth from its default value will cause the system to use more memory, but may increase performance.
+     * Reasonable values for this parameter are between 1 and 4. Increasing the value might radically increase the amount of memory used by the system.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_snd_queue_depth
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_interconnect_snd_queue_depth = 20;</code>
+     */
+    com.google.protobuf.Int64Value getGpInterconnectSndQueueDepth();
+    /**
+     * <pre>
+     * Sets the amount of data per-peer to be queued by the default UDPIFC interconnect on senders.
+     * Increasing the depth from its default value will cause the system to use more memory, but may increase performance.
+     * Reasonable values for this parameter are between 1 and 4. Increasing the value might radically increase the amount of memory used by the system.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_snd_queue_depth
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_interconnect_snd_queue_depth = 20;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getGpInterconnectSndQueueDepthOrBuilder();
+
+    /**
+     * <pre>
+     * Sets the amount of data per-peer to be queued by the Greenplum Database interconnect on receivers
+     * (when data is received but no space is available to receive it the data will be dropped, and the transmitter will need to resend it)
+     * for the default UDPIFC interconnect.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_queue_depth
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_interconnect_queue_depth = 21;</code>
+     */
+    boolean hasGpInterconnectQueueDepth();
+    /**
+     * <pre>
+     * Sets the amount of data per-peer to be queued by the Greenplum Database interconnect on receivers
+     * (when data is received but no space is available to receive it the data will be dropped, and the transmitter will need to resend it)
+     * for the default UDPIFC interconnect.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_queue_depth
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_interconnect_queue_depth = 21;</code>
+     */
+    com.google.protobuf.Int64Value getGpInterconnectQueueDepth();
+    /**
+     * <pre>
+     * Sets the amount of data per-peer to be queued by the Greenplum Database interconnect on receivers
+     * (when data is received but no space is available to receive it the data will be dropped, and the transmitter will need to resend it)
+     * for the default UDPIFC interconnect.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_queue_depth
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_interconnect_queue_depth = 21;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getGpInterconnectQueueDepthOrBuilder();
+
+    /**
+     * <pre>
+     * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+     * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+     * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+     * Default value is ddl
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.LogStatement log_statement = 22;</code>
+     */
+    int getLogStatementValue();
+    /**
+     * <pre>
+     * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+     * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+     * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+     * Default value is ddl
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.LogStatement log_statement = 22;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.LogStatement getLogStatement();
+
+    /**
+     * <pre>
+     * Causes the duration of every completed statement which satisfies log_statement to be logged.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_duration
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_duration = 23;</code>
+     */
+    boolean hasLogDuration();
+    /**
+     * <pre>
+     * Causes the duration of every completed statement which satisfies log_statement to be logged.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_duration
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_duration = 23;</code>
+     */
+    com.google.protobuf.BoolValue getLogDuration();
+    /**
+     * <pre>
+     * Causes the duration of every completed statement which satisfies log_statement to be logged.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_duration
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_duration = 23;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getLogDurationOrBuilder();
+
+    /**
+     * <pre>
+     * For a partitioned table, controls whether the ROOTPARTITION keyword is required to collect root partition statistics
+     * when the ANALYZE command is run on the table. GPORCA uses the root partition statistics when generating a query plan.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#optimizer_analyze_root_partition
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue optimizer_analyze_root_partition = 24;</code>
+     */
+    boolean hasOptimizerAnalyzeRootPartition();
+    /**
+     * <pre>
+     * For a partitioned table, controls whether the ROOTPARTITION keyword is required to collect root partition statistics
+     * when the ANALYZE command is run on the table. GPORCA uses the root partition statistics when generating a query plan.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#optimizer_analyze_root_partition
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue optimizer_analyze_root_partition = 24;</code>
+     */
+    com.google.protobuf.BoolValue getOptimizerAnalyzeRootPartition();
+    /**
+     * <pre>
+     * For a partitioned table, controls whether the ROOTPARTITION keyword is required to collect root partition statistics
+     * when the ANALYZE command is run on the table. GPORCA uses the root partition statistics when generating a query plan.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#optimizer_analyze_root_partition
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue optimizer_analyze_root_partition = 24;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getOptimizerAnalyzeRootPartitionOrBuilder();
+
+    /**
+     * <pre>
+     * Sets the number of segments that will scan external table data during an external table operation,
+     * the purpose being not to overload the system with scanning data and take away resources from other concurrent operations.
+     * This only applies to external tables that use the gpfdist:// protocol to access external table data.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_external_max_segs
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_external_max_segs = 25;</code>
+     */
+    boolean hasGpExternalMaxSegs();
+    /**
+     * <pre>
+     * Sets the number of segments that will scan external table data during an external table operation,
+     * the purpose being not to overload the system with scanning data and take away resources from other concurrent operations.
+     * This only applies to external tables that use the gpfdist:// protocol to access external table data.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_external_max_segs
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_external_max_segs = 25;</code>
+     */
+    com.google.protobuf.Int64Value getGpExternalMaxSegs();
+    /**
+     * <pre>
+     * Sets the number of segments that will scan external table data during an external table operation,
+     * the purpose being not to overload the system with scanning data and take away resources from other concurrent operations.
+     * This only applies to external tables that use the gpfdist:// protocol to access external table data.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_external_max_segs
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_external_max_segs = 25;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getGpExternalMaxSegsOrBuilder();
+
+    /**
+     * <pre>
+     * Specifies the allowed timeout for the fault detection process (ftsprobe) to establish a connection to a segment before declaring it down.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_fts_probe_timeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_fts_probe_timeout = 26;</code>
+     */
+    boolean hasGpFtsProbeTimeout();
+    /**
+     * <pre>
+     * Specifies the allowed timeout for the fault detection process (ftsprobe) to establish a connection to a segment before declaring it down.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_fts_probe_timeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_fts_probe_timeout = 26;</code>
+     */
+    com.google.protobuf.Int64Value getGpFtsProbeTimeout();
+    /**
+     * <pre>
+     * Specifies the allowed timeout for the fault detection process (ftsprobe) to establish a connection to a segment before declaring it down.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_fts_probe_timeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_fts_probe_timeout = 26;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getGpFtsProbeTimeoutOrBuilder();
+
+    /**
+     * <pre>
+     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_workfile_compression = 27;</code>
+     */
+    boolean hasGpWorkfileCompression();
+    /**
+     * <pre>
+     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_workfile_compression = 27;</code>
+     */
+    com.google.protobuf.BoolValue getGpWorkfileCompression();
+    /**
+     * <pre>
+     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_workfile_compression = 27;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getGpWorkfileCompressionOrBuilder();
+
+    /**
+     * <pre>
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_autostats_mode_in_functions
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.AutostatsModeInFunctions gp_autostats_mode_in_functions = 28;</code>
+     */
+    int getGpAutostatsModeInFunctionsValue();
+    /**
+     * <pre>
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_autostats_mode_in_functions
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.AutostatsModeInFunctions gp_autostats_mode_in_functions = 28;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.AutostatsModeInFunctions getGpAutostatsModeInFunctions();
   }
   /**
    * <pre>
@@ -2850,6 +4549,8 @@ public final class GPCF {
     }
     private GreenplumMasterConfig() {
       logLevel_ = 0;
+      logStatement_ = 0;
+      gpAutostatsModeInFunctions_ = 0;
     }
 
     @java.lang.Override
@@ -2906,6 +4607,187 @@ public final class GPCF {
                 timezone_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.Builder subBuilder = null;
+              if (pool_ != null) {
+                subBuilder = pool_.toBuilder();
+              }
+              pool_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pool_);
+                pool_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxPreparedTransactions_ != null) {
+                subBuilder = maxPreparedTransactions_.toBuilder();
+              }
+              maxPreparedTransactions_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxPreparedTransactions_);
+                maxPreparedTransactions_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 114: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (runawayDetectorActivationPercent_ != null) {
+                subBuilder = runawayDetectorActivationPercent_.toBuilder();
+              }
+              runawayDetectorActivationPercent_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(runawayDetectorActivationPercent_);
+                runawayDetectorActivationPercent_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 122: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (tcpKeepalivesCount_ != null) {
+                subBuilder = tcpKeepalivesCount_.toBuilder();
+              }
+              tcpKeepalivesCount_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tcpKeepalivesCount_);
+                tcpKeepalivesCount_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 130: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (tcpKeepalivesInterval_ != null) {
+                subBuilder = tcpKeepalivesInterval_.toBuilder();
+              }
+              tcpKeepalivesInterval_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tcpKeepalivesInterval_);
+                tcpKeepalivesInterval_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 154: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (readableExternalTableTimeout_ != null) {
+                subBuilder = readableExternalTableTimeout_.toBuilder();
+              }
+              readableExternalTableTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(readableExternalTableTimeout_);
+                readableExternalTableTimeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 162: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (gpInterconnectSndQueueDepth_ != null) {
+                subBuilder = gpInterconnectSndQueueDepth_.toBuilder();
+              }
+              gpInterconnectSndQueueDepth_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gpInterconnectSndQueueDepth_);
+                gpInterconnectSndQueueDepth_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 170: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (gpInterconnectQueueDepth_ != null) {
+                subBuilder = gpInterconnectQueueDepth_.toBuilder();
+              }
+              gpInterconnectQueueDepth_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gpInterconnectQueueDepth_);
+                gpInterconnectQueueDepth_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 176: {
+              int rawValue = input.readEnum();
+
+              logStatement_ = rawValue;
+              break;
+            }
+            case 186: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (logDuration_ != null) {
+                subBuilder = logDuration_.toBuilder();
+              }
+              logDuration_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logDuration_);
+                logDuration_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 194: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (optimizerAnalyzeRootPartition_ != null) {
+                subBuilder = optimizerAnalyzeRootPartition_.toBuilder();
+              }
+              optimizerAnalyzeRootPartition_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(optimizerAnalyzeRootPartition_);
+                optimizerAnalyzeRootPartition_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 202: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (gpExternalMaxSegs_ != null) {
+                subBuilder = gpExternalMaxSegs_.toBuilder();
+              }
+              gpExternalMaxSegs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gpExternalMaxSegs_);
+                gpExternalMaxSegs_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 210: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (gpFtsProbeTimeout_ != null) {
+                subBuilder = gpFtsProbeTimeout_.toBuilder();
+              }
+              gpFtsProbeTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gpFtsProbeTimeout_);
+                gpFtsProbeTimeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 218: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (gpWorkfileCompression_ != null) {
+                subBuilder = gpWorkfileCompression_.toBuilder();
+              }
+              gpWorkfileCompression_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gpWorkfileCompression_);
+                gpWorkfileCompression_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 224: {
+              int rawValue = input.readEnum();
+
+              gpAutostatsModeInFunctions_ = rawValue;
               break;
             }
             default: {
@@ -3074,6 +4956,247 @@ public final class GPCF {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.LogLevel)
     }
 
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.LogStatement}
+     */
+    public enum LogStatement
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>LOG_STATEMENT_UNSPECIFIED = 0;</code>
+       */
+      LOG_STATEMENT_UNSPECIFIED(0),
+      /**
+       * <code>NONE = 1;</code>
+       */
+      NONE(1),
+      /**
+       * <code>DDL = 2;</code>
+       */
+      DDL(2),
+      /**
+       * <code>MOD = 3;</code>
+       */
+      MOD(3),
+      /**
+       * <code>ALL = 4;</code>
+       */
+      ALL(4),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>LOG_STATEMENT_UNSPECIFIED = 0;</code>
+       */
+      public static final int LOG_STATEMENT_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>NONE = 1;</code>
+       */
+      public static final int NONE_VALUE = 1;
+      /**
+       * <code>DDL = 2;</code>
+       */
+      public static final int DDL_VALUE = 2;
+      /**
+       * <code>MOD = 3;</code>
+       */
+      public static final int MOD_VALUE = 3;
+      /**
+       * <code>ALL = 4;</code>
+       */
+      public static final int ALL_VALUE = 4;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static LogStatement valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static LogStatement forNumber(int value) {
+        switch (value) {
+          case 0: return LOG_STATEMENT_UNSPECIFIED;
+          case 1: return NONE;
+          case 2: return DDL;
+          case 3: return MOD;
+          case 4: return ALL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<LogStatement>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          LogStatement> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<LogStatement>() {
+              public LogStatement findValueByNumber(int number) {
+                return LogStatement.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final LogStatement[] VALUES = values();
+
+      public static LogStatement valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private LogStatement(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.LogStatement)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.AutostatsModeInFunctions}
+     */
+    public enum AutostatsModeInFunctions
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>AUTOSTATS_MODE_IN_FUNCTIONS_UNSPECIFIED = 0;</code>
+       */
+      AUTOSTATS_MODE_IN_FUNCTIONS_UNSPECIFIED(0),
+      /**
+       * <code>MODE_NONE = 1;</code>
+       */
+      MODE_NONE(1),
+      /**
+       * <code>ON_CHANGE = 2;</code>
+       */
+      ON_CHANGE(2),
+      /**
+       * <code>ON_NO_STATES = 3;</code>
+       */
+      ON_NO_STATES(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>AUTOSTATS_MODE_IN_FUNCTIONS_UNSPECIFIED = 0;</code>
+       */
+      public static final int AUTOSTATS_MODE_IN_FUNCTIONS_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>MODE_NONE = 1;</code>
+       */
+      public static final int MODE_NONE_VALUE = 1;
+      /**
+       * <code>ON_CHANGE = 2;</code>
+       */
+      public static final int ON_CHANGE_VALUE = 2;
+      /**
+       * <code>ON_NO_STATES = 3;</code>
+       */
+      public static final int ON_NO_STATES_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static AutostatsModeInFunctions valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static AutostatsModeInFunctions forNumber(int value) {
+        switch (value) {
+          case 0: return AUTOSTATS_MODE_IN_FUNCTIONS_UNSPECIFIED;
+          case 1: return MODE_NONE;
+          case 2: return ON_CHANGE;
+          case 3: return ON_NO_STATES;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<AutostatsModeInFunctions>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          AutostatsModeInFunctions> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<AutostatsModeInFunctions>() {
+              public AutostatsModeInFunctions findValueByNumber(int number) {
+                return AutostatsModeInFunctions.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.getDescriptor().getEnumTypes().get(2);
+      }
+
+      private static final AutostatsModeInFunctions[] VALUES = values();
+
+      public static AutostatsModeInFunctions valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private AutostatsModeInFunctions(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.AutostatsModeInFunctions)
+    }
+
     public static final int LOG_LEVEL_FIELD_NUMBER = 1;
     private int logLevel_;
     /**
@@ -3165,6 +5288,568 @@ public final class GPCF {
       return getTimezone();
     }
 
+    public static final int POOL_FIELD_NUMBER = 4;
+    private yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig pool_;
+    /**
+     * <pre>
+     * Odyssey pool settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+     */
+    public boolean hasPool() {
+      return pool_ != null;
+    }
+    /**
+     * <pre>
+     * Odyssey pool settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+     */
+    public yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig getPool() {
+      return pool_ == null ? yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.getDefaultInstance() : pool_;
+    }
+    /**
+     * <pre>
+     * Odyssey pool settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+     */
+    public yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfigOrBuilder getPoolOrBuilder() {
+      return getPool();
+    }
+
+    public static final int MAX_PREPARED_TRANSACTIONS_FIELD_NUMBER = 13;
+    private com.google.protobuf.Int64Value maxPreparedTransactions_;
+    /**
+     * <pre>
+     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_prepared_transactions = 13;</code>
+     */
+    public boolean hasMaxPreparedTransactions() {
+      return maxPreparedTransactions_ != null;
+    }
+    /**
+     * <pre>
+     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_prepared_transactions = 13;</code>
+     */
+    public com.google.protobuf.Int64Value getMaxPreparedTransactions() {
+      return maxPreparedTransactions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxPreparedTransactions_;
+    }
+    /**
+     * <pre>
+     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_prepared_transactions = 13;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMaxPreparedTransactionsOrBuilder() {
+      return getMaxPreparedTransactions();
+    }
+
+    public static final int RUNAWAY_DETECTOR_ACTIVATION_PERCENT_FIELD_NUMBER = 14;
+    private com.google.protobuf.Int64Value runawayDetectorActivationPercent_;
+    /**
+     * <pre>
+     * For queries that are managed by resource queues or resource groups,
+     * this parameter determines when Greenplum Database terminates running queries based on the amount of memory the queries are using.
+     * A value of 100 disables the automatic termination of queries based on the percentage of memory that is utilized.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#runaway_detector_activation_percent
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value runaway_detector_activation_percent = 14;</code>
+     */
+    public boolean hasRunawayDetectorActivationPercent() {
+      return runawayDetectorActivationPercent_ != null;
+    }
+    /**
+     * <pre>
+     * For queries that are managed by resource queues or resource groups,
+     * this parameter determines when Greenplum Database terminates running queries based on the amount of memory the queries are using.
+     * A value of 100 disables the automatic termination of queries based on the percentage of memory that is utilized.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#runaway_detector_activation_percent
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value runaway_detector_activation_percent = 14;</code>
+     */
+    public com.google.protobuf.Int64Value getRunawayDetectorActivationPercent() {
+      return runawayDetectorActivationPercent_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : runawayDetectorActivationPercent_;
+    }
+    /**
+     * <pre>
+     * For queries that are managed by resource queues or resource groups,
+     * this parameter determines when Greenplum Database terminates running queries based on the amount of memory the queries are using.
+     * A value of 100 disables the automatic termination of queries based on the percentage of memory that is utilized.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#runaway_detector_activation_percent
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value runaway_detector_activation_percent = 14;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getRunawayDetectorActivationPercentOrBuilder() {
+      return getRunawayDetectorActivationPercent();
+    }
+
+    public static final int TCP_KEEPALIVES_COUNT_FIELD_NUMBER = 15;
+    private com.google.protobuf.Int64Value tcpKeepalivesCount_;
+    /**
+     * <pre>
+     * How many keepalives may be lost before the connection is considered dead. A value of 0 uses the system default.
+     * If TCP_KEEPCNT is not supported, this parameter must be 0.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_count
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value tcp_keepalives_count = 15;</code>
+     */
+    public boolean hasTcpKeepalivesCount() {
+      return tcpKeepalivesCount_ != null;
+    }
+    /**
+     * <pre>
+     * How many keepalives may be lost before the connection is considered dead. A value of 0 uses the system default.
+     * If TCP_KEEPCNT is not supported, this parameter must be 0.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_count
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value tcp_keepalives_count = 15;</code>
+     */
+    public com.google.protobuf.Int64Value getTcpKeepalivesCount() {
+      return tcpKeepalivesCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tcpKeepalivesCount_;
+    }
+    /**
+     * <pre>
+     * How many keepalives may be lost before the connection is considered dead. A value of 0 uses the system default.
+     * If TCP_KEEPCNT is not supported, this parameter must be 0.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_count
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value tcp_keepalives_count = 15;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getTcpKeepalivesCountOrBuilder() {
+      return getTcpKeepalivesCount();
+    }
+
+    public static final int TCP_KEEPALIVES_INTERVAL_FIELD_NUMBER = 16;
+    private com.google.protobuf.Int64Value tcpKeepalivesInterval_;
+    /**
+     * <pre>
+     * How many seconds to wait for a response to a keepalive before retransmitting. A value of 0 uses the system default.
+     * If TCP_KEEPINTVL is not supported, this parameter must be 0.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_interval
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value tcp_keepalives_interval = 16;</code>
+     */
+    public boolean hasTcpKeepalivesInterval() {
+      return tcpKeepalivesInterval_ != null;
+    }
+    /**
+     * <pre>
+     * How many seconds to wait for a response to a keepalive before retransmitting. A value of 0 uses the system default.
+     * If TCP_KEEPINTVL is not supported, this parameter must be 0.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_interval
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value tcp_keepalives_interval = 16;</code>
+     */
+    public com.google.protobuf.Int64Value getTcpKeepalivesInterval() {
+      return tcpKeepalivesInterval_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tcpKeepalivesInterval_;
+    }
+    /**
+     * <pre>
+     * How many seconds to wait for a response to a keepalive before retransmitting. A value of 0 uses the system default.
+     * If TCP_KEEPINTVL is not supported, this parameter must be 0.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_interval
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value tcp_keepalives_interval = 16;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getTcpKeepalivesIntervalOrBuilder() {
+      return getTcpKeepalivesInterval();
+    }
+
+    public static final int READABLE_EXTERNAL_TABLE_TIMEOUT_FIELD_NUMBER = 19;
+    private com.google.protobuf.Int64Value readableExternalTableTimeout_;
+    /**
+     * <pre>
+     * When an SQL query reads from an external table, the parameter value specifies the amount of time in seconds that
+     * Greenplum Database waits before cancelling the query when data stops being returned from the external table.
+     * The default value of 0, specifies no time out. Greenplum Database does not cancel the query.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#readable_external_table_timeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value readable_external_table_timeout = 19;</code>
+     */
+    public boolean hasReadableExternalTableTimeout() {
+      return readableExternalTableTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * When an SQL query reads from an external table, the parameter value specifies the amount of time in seconds that
+     * Greenplum Database waits before cancelling the query when data stops being returned from the external table.
+     * The default value of 0, specifies no time out. Greenplum Database does not cancel the query.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#readable_external_table_timeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value readable_external_table_timeout = 19;</code>
+     */
+    public com.google.protobuf.Int64Value getReadableExternalTableTimeout() {
+      return readableExternalTableTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : readableExternalTableTimeout_;
+    }
+    /**
+     * <pre>
+     * When an SQL query reads from an external table, the parameter value specifies the amount of time in seconds that
+     * Greenplum Database waits before cancelling the query when data stops being returned from the external table.
+     * The default value of 0, specifies no time out. Greenplum Database does not cancel the query.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#readable_external_table_timeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value readable_external_table_timeout = 19;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getReadableExternalTableTimeoutOrBuilder() {
+      return getReadableExternalTableTimeout();
+    }
+
+    public static final int GP_INTERCONNECT_SND_QUEUE_DEPTH_FIELD_NUMBER = 20;
+    private com.google.protobuf.Int64Value gpInterconnectSndQueueDepth_;
+    /**
+     * <pre>
+     * Sets the amount of data per-peer to be queued by the default UDPIFC interconnect on senders.
+     * Increasing the depth from its default value will cause the system to use more memory, but may increase performance.
+     * Reasonable values for this parameter are between 1 and 4. Increasing the value might radically increase the amount of memory used by the system.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_snd_queue_depth
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_interconnect_snd_queue_depth = 20;</code>
+     */
+    public boolean hasGpInterconnectSndQueueDepth() {
+      return gpInterconnectSndQueueDepth_ != null;
+    }
+    /**
+     * <pre>
+     * Sets the amount of data per-peer to be queued by the default UDPIFC interconnect on senders.
+     * Increasing the depth from its default value will cause the system to use more memory, but may increase performance.
+     * Reasonable values for this parameter are between 1 and 4. Increasing the value might radically increase the amount of memory used by the system.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_snd_queue_depth
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_interconnect_snd_queue_depth = 20;</code>
+     */
+    public com.google.protobuf.Int64Value getGpInterconnectSndQueueDepth() {
+      return gpInterconnectSndQueueDepth_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpInterconnectSndQueueDepth_;
+    }
+    /**
+     * <pre>
+     * Sets the amount of data per-peer to be queued by the default UDPIFC interconnect on senders.
+     * Increasing the depth from its default value will cause the system to use more memory, but may increase performance.
+     * Reasonable values for this parameter are between 1 and 4. Increasing the value might radically increase the amount of memory used by the system.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_snd_queue_depth
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_interconnect_snd_queue_depth = 20;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getGpInterconnectSndQueueDepthOrBuilder() {
+      return getGpInterconnectSndQueueDepth();
+    }
+
+    public static final int GP_INTERCONNECT_QUEUE_DEPTH_FIELD_NUMBER = 21;
+    private com.google.protobuf.Int64Value gpInterconnectQueueDepth_;
+    /**
+     * <pre>
+     * Sets the amount of data per-peer to be queued by the Greenplum Database interconnect on receivers
+     * (when data is received but no space is available to receive it the data will be dropped, and the transmitter will need to resend it)
+     * for the default UDPIFC interconnect.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_queue_depth
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_interconnect_queue_depth = 21;</code>
+     */
+    public boolean hasGpInterconnectQueueDepth() {
+      return gpInterconnectQueueDepth_ != null;
+    }
+    /**
+     * <pre>
+     * Sets the amount of data per-peer to be queued by the Greenplum Database interconnect on receivers
+     * (when data is received but no space is available to receive it the data will be dropped, and the transmitter will need to resend it)
+     * for the default UDPIFC interconnect.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_queue_depth
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_interconnect_queue_depth = 21;</code>
+     */
+    public com.google.protobuf.Int64Value getGpInterconnectQueueDepth() {
+      return gpInterconnectQueueDepth_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpInterconnectQueueDepth_;
+    }
+    /**
+     * <pre>
+     * Sets the amount of data per-peer to be queued by the Greenplum Database interconnect on receivers
+     * (when data is received but no space is available to receive it the data will be dropped, and the transmitter will need to resend it)
+     * for the default UDPIFC interconnect.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_queue_depth
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_interconnect_queue_depth = 21;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getGpInterconnectQueueDepthOrBuilder() {
+      return getGpInterconnectQueueDepth();
+    }
+
+    public static final int LOG_STATEMENT_FIELD_NUMBER = 22;
+    private int logStatement_;
+    /**
+     * <pre>
+     * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+     * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+     * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+     * Default value is ddl
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.LogStatement log_statement = 22;</code>
+     */
+    public int getLogStatementValue() {
+      return logStatement_;
+    }
+    /**
+     * <pre>
+     * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+     * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+     * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+     * Default value is ddl
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.LogStatement log_statement = 22;</code>
+     */
+    public yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.LogStatement getLogStatement() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.LogStatement result = yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.LogStatement.valueOf(logStatement_);
+      return result == null ? yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.LogStatement.UNRECOGNIZED : result;
+    }
+
+    public static final int LOG_DURATION_FIELD_NUMBER = 23;
+    private com.google.protobuf.BoolValue logDuration_;
+    /**
+     * <pre>
+     * Causes the duration of every completed statement which satisfies log_statement to be logged.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_duration
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_duration = 23;</code>
+     */
+    public boolean hasLogDuration() {
+      return logDuration_ != null;
+    }
+    /**
+     * <pre>
+     * Causes the duration of every completed statement which satisfies log_statement to be logged.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_duration
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_duration = 23;</code>
+     */
+    public com.google.protobuf.BoolValue getLogDuration() {
+      return logDuration_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logDuration_;
+    }
+    /**
+     * <pre>
+     * Causes the duration of every completed statement which satisfies log_statement to be logged.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_duration
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_duration = 23;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getLogDurationOrBuilder() {
+      return getLogDuration();
+    }
+
+    public static final int OPTIMIZER_ANALYZE_ROOT_PARTITION_FIELD_NUMBER = 24;
+    private com.google.protobuf.BoolValue optimizerAnalyzeRootPartition_;
+    /**
+     * <pre>
+     * For a partitioned table, controls whether the ROOTPARTITION keyword is required to collect root partition statistics
+     * when the ANALYZE command is run on the table. GPORCA uses the root partition statistics when generating a query plan.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#optimizer_analyze_root_partition
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue optimizer_analyze_root_partition = 24;</code>
+     */
+    public boolean hasOptimizerAnalyzeRootPartition() {
+      return optimizerAnalyzeRootPartition_ != null;
+    }
+    /**
+     * <pre>
+     * For a partitioned table, controls whether the ROOTPARTITION keyword is required to collect root partition statistics
+     * when the ANALYZE command is run on the table. GPORCA uses the root partition statistics when generating a query plan.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#optimizer_analyze_root_partition
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue optimizer_analyze_root_partition = 24;</code>
+     */
+    public com.google.protobuf.BoolValue getOptimizerAnalyzeRootPartition() {
+      return optimizerAnalyzeRootPartition_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : optimizerAnalyzeRootPartition_;
+    }
+    /**
+     * <pre>
+     * For a partitioned table, controls whether the ROOTPARTITION keyword is required to collect root partition statistics
+     * when the ANALYZE command is run on the table. GPORCA uses the root partition statistics when generating a query plan.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#optimizer_analyze_root_partition
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue optimizer_analyze_root_partition = 24;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getOptimizerAnalyzeRootPartitionOrBuilder() {
+      return getOptimizerAnalyzeRootPartition();
+    }
+
+    public static final int GP_EXTERNAL_MAX_SEGS_FIELD_NUMBER = 25;
+    private com.google.protobuf.Int64Value gpExternalMaxSegs_;
+    /**
+     * <pre>
+     * Sets the number of segments that will scan external table data during an external table operation,
+     * the purpose being not to overload the system with scanning data and take away resources from other concurrent operations.
+     * This only applies to external tables that use the gpfdist:// protocol to access external table data.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_external_max_segs
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_external_max_segs = 25;</code>
+     */
+    public boolean hasGpExternalMaxSegs() {
+      return gpExternalMaxSegs_ != null;
+    }
+    /**
+     * <pre>
+     * Sets the number of segments that will scan external table data during an external table operation,
+     * the purpose being not to overload the system with scanning data and take away resources from other concurrent operations.
+     * This only applies to external tables that use the gpfdist:// protocol to access external table data.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_external_max_segs
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_external_max_segs = 25;</code>
+     */
+    public com.google.protobuf.Int64Value getGpExternalMaxSegs() {
+      return gpExternalMaxSegs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpExternalMaxSegs_;
+    }
+    /**
+     * <pre>
+     * Sets the number of segments that will scan external table data during an external table operation,
+     * the purpose being not to overload the system with scanning data and take away resources from other concurrent operations.
+     * This only applies to external tables that use the gpfdist:// protocol to access external table data.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_external_max_segs
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_external_max_segs = 25;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getGpExternalMaxSegsOrBuilder() {
+      return getGpExternalMaxSegs();
+    }
+
+    public static final int GP_FTS_PROBE_TIMEOUT_FIELD_NUMBER = 26;
+    private com.google.protobuf.Int64Value gpFtsProbeTimeout_;
+    /**
+     * <pre>
+     * Specifies the allowed timeout for the fault detection process (ftsprobe) to establish a connection to a segment before declaring it down.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_fts_probe_timeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_fts_probe_timeout = 26;</code>
+     */
+    public boolean hasGpFtsProbeTimeout() {
+      return gpFtsProbeTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies the allowed timeout for the fault detection process (ftsprobe) to establish a connection to a segment before declaring it down.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_fts_probe_timeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_fts_probe_timeout = 26;</code>
+     */
+    public com.google.protobuf.Int64Value getGpFtsProbeTimeout() {
+      return gpFtsProbeTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpFtsProbeTimeout_;
+    }
+    /**
+     * <pre>
+     * Specifies the allowed timeout for the fault detection process (ftsprobe) to establish a connection to a segment before declaring it down.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_fts_probe_timeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_fts_probe_timeout = 26;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getGpFtsProbeTimeoutOrBuilder() {
+      return getGpFtsProbeTimeout();
+    }
+
+    public static final int GP_WORKFILE_COMPRESSION_FIELD_NUMBER = 27;
+    private com.google.protobuf.BoolValue gpWorkfileCompression_;
+    /**
+     * <pre>
+     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_workfile_compression = 27;</code>
+     */
+    public boolean hasGpWorkfileCompression() {
+      return gpWorkfileCompression_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_workfile_compression = 27;</code>
+     */
+    public com.google.protobuf.BoolValue getGpWorkfileCompression() {
+      return gpWorkfileCompression_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : gpWorkfileCompression_;
+    }
+    /**
+     * <pre>
+     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_workfile_compression = 27;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getGpWorkfileCompressionOrBuilder() {
+      return getGpWorkfileCompression();
+    }
+
+    public static final int GP_AUTOSTATS_MODE_IN_FUNCTIONS_FIELD_NUMBER = 28;
+    private int gpAutostatsModeInFunctions_;
+    /**
+     * <pre>
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_autostats_mode_in_functions
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.AutostatsModeInFunctions gp_autostats_mode_in_functions = 28;</code>
+     */
+    public int getGpAutostatsModeInFunctionsValue() {
+      return gpAutostatsModeInFunctions_;
+    }
+    /**
+     * <pre>
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_autostats_mode_in_functions
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.AutostatsModeInFunctions gp_autostats_mode_in_functions = 28;</code>
+     */
+    public yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.AutostatsModeInFunctions getGpAutostatsModeInFunctions() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.AutostatsModeInFunctions result = yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.AutostatsModeInFunctions.valueOf(gpAutostatsModeInFunctions_);
+      return result == null ? yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.AutostatsModeInFunctions.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3188,6 +5873,51 @@ public final class GPCF {
       if (timezone_ != null) {
         output.writeMessage(3, getTimezone());
       }
+      if (pool_ != null) {
+        output.writeMessage(4, getPool());
+      }
+      if (maxPreparedTransactions_ != null) {
+        output.writeMessage(13, getMaxPreparedTransactions());
+      }
+      if (runawayDetectorActivationPercent_ != null) {
+        output.writeMessage(14, getRunawayDetectorActivationPercent());
+      }
+      if (tcpKeepalivesCount_ != null) {
+        output.writeMessage(15, getTcpKeepalivesCount());
+      }
+      if (tcpKeepalivesInterval_ != null) {
+        output.writeMessage(16, getTcpKeepalivesInterval());
+      }
+      if (readableExternalTableTimeout_ != null) {
+        output.writeMessage(19, getReadableExternalTableTimeout());
+      }
+      if (gpInterconnectSndQueueDepth_ != null) {
+        output.writeMessage(20, getGpInterconnectSndQueueDepth());
+      }
+      if (gpInterconnectQueueDepth_ != null) {
+        output.writeMessage(21, getGpInterconnectQueueDepth());
+      }
+      if (logStatement_ != yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.LogStatement.LOG_STATEMENT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(22, logStatement_);
+      }
+      if (logDuration_ != null) {
+        output.writeMessage(23, getLogDuration());
+      }
+      if (optimizerAnalyzeRootPartition_ != null) {
+        output.writeMessage(24, getOptimizerAnalyzeRootPartition());
+      }
+      if (gpExternalMaxSegs_ != null) {
+        output.writeMessage(25, getGpExternalMaxSegs());
+      }
+      if (gpFtsProbeTimeout_ != null) {
+        output.writeMessage(26, getGpFtsProbeTimeout());
+      }
+      if (gpWorkfileCompression_ != null) {
+        output.writeMessage(27, getGpWorkfileCompression());
+      }
+      if (gpAutostatsModeInFunctions_ != yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.AutostatsModeInFunctions.AUTOSTATS_MODE_IN_FUNCTIONS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(28, gpAutostatsModeInFunctions_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3208,6 +5938,66 @@ public final class GPCF {
       if (timezone_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTimezone());
+      }
+      if (pool_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getPool());
+      }
+      if (maxPreparedTransactions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getMaxPreparedTransactions());
+      }
+      if (runawayDetectorActivationPercent_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getRunawayDetectorActivationPercent());
+      }
+      if (tcpKeepalivesCount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getTcpKeepalivesCount());
+      }
+      if (tcpKeepalivesInterval_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getTcpKeepalivesInterval());
+      }
+      if (readableExternalTableTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, getReadableExternalTableTimeout());
+      }
+      if (gpInterconnectSndQueueDepth_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(20, getGpInterconnectSndQueueDepth());
+      }
+      if (gpInterconnectQueueDepth_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(21, getGpInterconnectQueueDepth());
+      }
+      if (logStatement_ != yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.LogStatement.LOG_STATEMENT_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(22, logStatement_);
+      }
+      if (logDuration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(23, getLogDuration());
+      }
+      if (optimizerAnalyzeRootPartition_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(24, getOptimizerAnalyzeRootPartition());
+      }
+      if (gpExternalMaxSegs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(25, getGpExternalMaxSegs());
+      }
+      if (gpFtsProbeTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(26, getGpFtsProbeTimeout());
+      }
+      if (gpWorkfileCompression_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(27, getGpWorkfileCompression());
+      }
+      if (gpAutostatsModeInFunctions_ != yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.AutostatsModeInFunctions.AUTOSTATS_MODE_IN_FUNCTIONS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(28, gpAutostatsModeInFunctions_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3236,6 +6026,73 @@ public final class GPCF {
         result = result && getTimezone()
             .equals(other.getTimezone());
       }
+      result = result && (hasPool() == other.hasPool());
+      if (hasPool()) {
+        result = result && getPool()
+            .equals(other.getPool());
+      }
+      result = result && (hasMaxPreparedTransactions() == other.hasMaxPreparedTransactions());
+      if (hasMaxPreparedTransactions()) {
+        result = result && getMaxPreparedTransactions()
+            .equals(other.getMaxPreparedTransactions());
+      }
+      result = result && (hasRunawayDetectorActivationPercent() == other.hasRunawayDetectorActivationPercent());
+      if (hasRunawayDetectorActivationPercent()) {
+        result = result && getRunawayDetectorActivationPercent()
+            .equals(other.getRunawayDetectorActivationPercent());
+      }
+      result = result && (hasTcpKeepalivesCount() == other.hasTcpKeepalivesCount());
+      if (hasTcpKeepalivesCount()) {
+        result = result && getTcpKeepalivesCount()
+            .equals(other.getTcpKeepalivesCount());
+      }
+      result = result && (hasTcpKeepalivesInterval() == other.hasTcpKeepalivesInterval());
+      if (hasTcpKeepalivesInterval()) {
+        result = result && getTcpKeepalivesInterval()
+            .equals(other.getTcpKeepalivesInterval());
+      }
+      result = result && (hasReadableExternalTableTimeout() == other.hasReadableExternalTableTimeout());
+      if (hasReadableExternalTableTimeout()) {
+        result = result && getReadableExternalTableTimeout()
+            .equals(other.getReadableExternalTableTimeout());
+      }
+      result = result && (hasGpInterconnectSndQueueDepth() == other.hasGpInterconnectSndQueueDepth());
+      if (hasGpInterconnectSndQueueDepth()) {
+        result = result && getGpInterconnectSndQueueDepth()
+            .equals(other.getGpInterconnectSndQueueDepth());
+      }
+      result = result && (hasGpInterconnectQueueDepth() == other.hasGpInterconnectQueueDepth());
+      if (hasGpInterconnectQueueDepth()) {
+        result = result && getGpInterconnectQueueDepth()
+            .equals(other.getGpInterconnectQueueDepth());
+      }
+      result = result && logStatement_ == other.logStatement_;
+      result = result && (hasLogDuration() == other.hasLogDuration());
+      if (hasLogDuration()) {
+        result = result && getLogDuration()
+            .equals(other.getLogDuration());
+      }
+      result = result && (hasOptimizerAnalyzeRootPartition() == other.hasOptimizerAnalyzeRootPartition());
+      if (hasOptimizerAnalyzeRootPartition()) {
+        result = result && getOptimizerAnalyzeRootPartition()
+            .equals(other.getOptimizerAnalyzeRootPartition());
+      }
+      result = result && (hasGpExternalMaxSegs() == other.hasGpExternalMaxSegs());
+      if (hasGpExternalMaxSegs()) {
+        result = result && getGpExternalMaxSegs()
+            .equals(other.getGpExternalMaxSegs());
+      }
+      result = result && (hasGpFtsProbeTimeout() == other.hasGpFtsProbeTimeout());
+      if (hasGpFtsProbeTimeout()) {
+        result = result && getGpFtsProbeTimeout()
+            .equals(other.getGpFtsProbeTimeout());
+      }
+      result = result && (hasGpWorkfileCompression() == other.hasGpWorkfileCompression());
+      if (hasGpWorkfileCompression()) {
+        result = result && getGpWorkfileCompression()
+            .equals(other.getGpWorkfileCompression());
+      }
+      result = result && gpAutostatsModeInFunctions_ == other.gpAutostatsModeInFunctions_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3257,6 +6114,62 @@ public final class GPCF {
         hash = (37 * hash) + TIMEZONE_FIELD_NUMBER;
         hash = (53 * hash) + getTimezone().hashCode();
       }
+      if (hasPool()) {
+        hash = (37 * hash) + POOL_FIELD_NUMBER;
+        hash = (53 * hash) + getPool().hashCode();
+      }
+      if (hasMaxPreparedTransactions()) {
+        hash = (37 * hash) + MAX_PREPARED_TRANSACTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxPreparedTransactions().hashCode();
+      }
+      if (hasRunawayDetectorActivationPercent()) {
+        hash = (37 * hash) + RUNAWAY_DETECTOR_ACTIVATION_PERCENT_FIELD_NUMBER;
+        hash = (53 * hash) + getRunawayDetectorActivationPercent().hashCode();
+      }
+      if (hasTcpKeepalivesCount()) {
+        hash = (37 * hash) + TCP_KEEPALIVES_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getTcpKeepalivesCount().hashCode();
+      }
+      if (hasTcpKeepalivesInterval()) {
+        hash = (37 * hash) + TCP_KEEPALIVES_INTERVAL_FIELD_NUMBER;
+        hash = (53 * hash) + getTcpKeepalivesInterval().hashCode();
+      }
+      if (hasReadableExternalTableTimeout()) {
+        hash = (37 * hash) + READABLE_EXTERNAL_TABLE_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getReadableExternalTableTimeout().hashCode();
+      }
+      if (hasGpInterconnectSndQueueDepth()) {
+        hash = (37 * hash) + GP_INTERCONNECT_SND_QUEUE_DEPTH_FIELD_NUMBER;
+        hash = (53 * hash) + getGpInterconnectSndQueueDepth().hashCode();
+      }
+      if (hasGpInterconnectQueueDepth()) {
+        hash = (37 * hash) + GP_INTERCONNECT_QUEUE_DEPTH_FIELD_NUMBER;
+        hash = (53 * hash) + getGpInterconnectQueueDepth().hashCode();
+      }
+      hash = (37 * hash) + LOG_STATEMENT_FIELD_NUMBER;
+      hash = (53 * hash) + logStatement_;
+      if (hasLogDuration()) {
+        hash = (37 * hash) + LOG_DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getLogDuration().hashCode();
+      }
+      if (hasOptimizerAnalyzeRootPartition()) {
+        hash = (37 * hash) + OPTIMIZER_ANALYZE_ROOT_PARTITION_FIELD_NUMBER;
+        hash = (53 * hash) + getOptimizerAnalyzeRootPartition().hashCode();
+      }
+      if (hasGpExternalMaxSegs()) {
+        hash = (37 * hash) + GP_EXTERNAL_MAX_SEGS_FIELD_NUMBER;
+        hash = (53 * hash) + getGpExternalMaxSegs().hashCode();
+      }
+      if (hasGpFtsProbeTimeout()) {
+        hash = (37 * hash) + GP_FTS_PROBE_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getGpFtsProbeTimeout().hashCode();
+      }
+      if (hasGpWorkfileCompression()) {
+        hash = (37 * hash) + GP_WORKFILE_COMPRESSION_FIELD_NUMBER;
+        hash = (53 * hash) + getGpWorkfileCompression().hashCode();
+      }
+      hash = (37 * hash) + GP_AUTOSTATS_MODE_IN_FUNCTIONS_FIELD_NUMBER;
+      hash = (53 * hash) + gpAutostatsModeInFunctions_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3409,6 +6322,88 @@ public final class GPCF {
           timezone_ = null;
           timezoneBuilder_ = null;
         }
+        if (poolBuilder_ == null) {
+          pool_ = null;
+        } else {
+          pool_ = null;
+          poolBuilder_ = null;
+        }
+        if (maxPreparedTransactionsBuilder_ == null) {
+          maxPreparedTransactions_ = null;
+        } else {
+          maxPreparedTransactions_ = null;
+          maxPreparedTransactionsBuilder_ = null;
+        }
+        if (runawayDetectorActivationPercentBuilder_ == null) {
+          runawayDetectorActivationPercent_ = null;
+        } else {
+          runawayDetectorActivationPercent_ = null;
+          runawayDetectorActivationPercentBuilder_ = null;
+        }
+        if (tcpKeepalivesCountBuilder_ == null) {
+          tcpKeepalivesCount_ = null;
+        } else {
+          tcpKeepalivesCount_ = null;
+          tcpKeepalivesCountBuilder_ = null;
+        }
+        if (tcpKeepalivesIntervalBuilder_ == null) {
+          tcpKeepalivesInterval_ = null;
+        } else {
+          tcpKeepalivesInterval_ = null;
+          tcpKeepalivesIntervalBuilder_ = null;
+        }
+        if (readableExternalTableTimeoutBuilder_ == null) {
+          readableExternalTableTimeout_ = null;
+        } else {
+          readableExternalTableTimeout_ = null;
+          readableExternalTableTimeoutBuilder_ = null;
+        }
+        if (gpInterconnectSndQueueDepthBuilder_ == null) {
+          gpInterconnectSndQueueDepth_ = null;
+        } else {
+          gpInterconnectSndQueueDepth_ = null;
+          gpInterconnectSndQueueDepthBuilder_ = null;
+        }
+        if (gpInterconnectQueueDepthBuilder_ == null) {
+          gpInterconnectQueueDepth_ = null;
+        } else {
+          gpInterconnectQueueDepth_ = null;
+          gpInterconnectQueueDepthBuilder_ = null;
+        }
+        logStatement_ = 0;
+
+        if (logDurationBuilder_ == null) {
+          logDuration_ = null;
+        } else {
+          logDuration_ = null;
+          logDurationBuilder_ = null;
+        }
+        if (optimizerAnalyzeRootPartitionBuilder_ == null) {
+          optimizerAnalyzeRootPartition_ = null;
+        } else {
+          optimizerAnalyzeRootPartition_ = null;
+          optimizerAnalyzeRootPartitionBuilder_ = null;
+        }
+        if (gpExternalMaxSegsBuilder_ == null) {
+          gpExternalMaxSegs_ = null;
+        } else {
+          gpExternalMaxSegs_ = null;
+          gpExternalMaxSegsBuilder_ = null;
+        }
+        if (gpFtsProbeTimeoutBuilder_ == null) {
+          gpFtsProbeTimeout_ = null;
+        } else {
+          gpFtsProbeTimeout_ = null;
+          gpFtsProbeTimeoutBuilder_ = null;
+        }
+        if (gpWorkfileCompressionBuilder_ == null) {
+          gpWorkfileCompression_ = null;
+        } else {
+          gpWorkfileCompression_ = null;
+          gpWorkfileCompressionBuilder_ = null;
+        }
+        gpAutostatsModeInFunctions_ = 0;
+
         return this;
       }
 
@@ -3446,6 +6441,73 @@ public final class GPCF {
         } else {
           result.timezone_ = timezoneBuilder_.build();
         }
+        if (poolBuilder_ == null) {
+          result.pool_ = pool_;
+        } else {
+          result.pool_ = poolBuilder_.build();
+        }
+        if (maxPreparedTransactionsBuilder_ == null) {
+          result.maxPreparedTransactions_ = maxPreparedTransactions_;
+        } else {
+          result.maxPreparedTransactions_ = maxPreparedTransactionsBuilder_.build();
+        }
+        if (runawayDetectorActivationPercentBuilder_ == null) {
+          result.runawayDetectorActivationPercent_ = runawayDetectorActivationPercent_;
+        } else {
+          result.runawayDetectorActivationPercent_ = runawayDetectorActivationPercentBuilder_.build();
+        }
+        if (tcpKeepalivesCountBuilder_ == null) {
+          result.tcpKeepalivesCount_ = tcpKeepalivesCount_;
+        } else {
+          result.tcpKeepalivesCount_ = tcpKeepalivesCountBuilder_.build();
+        }
+        if (tcpKeepalivesIntervalBuilder_ == null) {
+          result.tcpKeepalivesInterval_ = tcpKeepalivesInterval_;
+        } else {
+          result.tcpKeepalivesInterval_ = tcpKeepalivesIntervalBuilder_.build();
+        }
+        if (readableExternalTableTimeoutBuilder_ == null) {
+          result.readableExternalTableTimeout_ = readableExternalTableTimeout_;
+        } else {
+          result.readableExternalTableTimeout_ = readableExternalTableTimeoutBuilder_.build();
+        }
+        if (gpInterconnectSndQueueDepthBuilder_ == null) {
+          result.gpInterconnectSndQueueDepth_ = gpInterconnectSndQueueDepth_;
+        } else {
+          result.gpInterconnectSndQueueDepth_ = gpInterconnectSndQueueDepthBuilder_.build();
+        }
+        if (gpInterconnectQueueDepthBuilder_ == null) {
+          result.gpInterconnectQueueDepth_ = gpInterconnectQueueDepth_;
+        } else {
+          result.gpInterconnectQueueDepth_ = gpInterconnectQueueDepthBuilder_.build();
+        }
+        result.logStatement_ = logStatement_;
+        if (logDurationBuilder_ == null) {
+          result.logDuration_ = logDuration_;
+        } else {
+          result.logDuration_ = logDurationBuilder_.build();
+        }
+        if (optimizerAnalyzeRootPartitionBuilder_ == null) {
+          result.optimizerAnalyzeRootPartition_ = optimizerAnalyzeRootPartition_;
+        } else {
+          result.optimizerAnalyzeRootPartition_ = optimizerAnalyzeRootPartitionBuilder_.build();
+        }
+        if (gpExternalMaxSegsBuilder_ == null) {
+          result.gpExternalMaxSegs_ = gpExternalMaxSegs_;
+        } else {
+          result.gpExternalMaxSegs_ = gpExternalMaxSegsBuilder_.build();
+        }
+        if (gpFtsProbeTimeoutBuilder_ == null) {
+          result.gpFtsProbeTimeout_ = gpFtsProbeTimeout_;
+        } else {
+          result.gpFtsProbeTimeout_ = gpFtsProbeTimeoutBuilder_.build();
+        }
+        if (gpWorkfileCompressionBuilder_ == null) {
+          result.gpWorkfileCompression_ = gpWorkfileCompression_;
+        } else {
+          result.gpWorkfileCompression_ = gpWorkfileCompressionBuilder_.build();
+        }
+        result.gpAutostatsModeInFunctions_ = gpAutostatsModeInFunctions_;
         onBuilt();
         return result;
       }
@@ -3502,6 +6564,51 @@ public final class GPCF {
         }
         if (other.hasTimezone()) {
           mergeTimezone(other.getTimezone());
+        }
+        if (other.hasPool()) {
+          mergePool(other.getPool());
+        }
+        if (other.hasMaxPreparedTransactions()) {
+          mergeMaxPreparedTransactions(other.getMaxPreparedTransactions());
+        }
+        if (other.hasRunawayDetectorActivationPercent()) {
+          mergeRunawayDetectorActivationPercent(other.getRunawayDetectorActivationPercent());
+        }
+        if (other.hasTcpKeepalivesCount()) {
+          mergeTcpKeepalivesCount(other.getTcpKeepalivesCount());
+        }
+        if (other.hasTcpKeepalivesInterval()) {
+          mergeTcpKeepalivesInterval(other.getTcpKeepalivesInterval());
+        }
+        if (other.hasReadableExternalTableTimeout()) {
+          mergeReadableExternalTableTimeout(other.getReadableExternalTableTimeout());
+        }
+        if (other.hasGpInterconnectSndQueueDepth()) {
+          mergeGpInterconnectSndQueueDepth(other.getGpInterconnectSndQueueDepth());
+        }
+        if (other.hasGpInterconnectQueueDepth()) {
+          mergeGpInterconnectQueueDepth(other.getGpInterconnectQueueDepth());
+        }
+        if (other.logStatement_ != 0) {
+          setLogStatementValue(other.getLogStatementValue());
+        }
+        if (other.hasLogDuration()) {
+          mergeLogDuration(other.getLogDuration());
+        }
+        if (other.hasOptimizerAnalyzeRootPartition()) {
+          mergeOptimizerAnalyzeRootPartition(other.getOptimizerAnalyzeRootPartition());
+        }
+        if (other.hasGpExternalMaxSegs()) {
+          mergeGpExternalMaxSegs(other.getGpExternalMaxSegs());
+        }
+        if (other.hasGpFtsProbeTimeout()) {
+          mergeGpFtsProbeTimeout(other.getGpFtsProbeTimeout());
+        }
+        if (other.hasGpWorkfileCompression()) {
+          mergeGpWorkfileCompression(other.getGpWorkfileCompression());
+        }
+        if (other.gpAutostatsModeInFunctions_ != 0) {
+          setGpAutostatsModeInFunctionsValue(other.getGpAutostatsModeInFunctionsValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3902,6 +7009,2370 @@ public final class GPCF {
         }
         return timezoneBuilder_;
       }
+
+      private yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig pool_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig, yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfigOrBuilder> poolBuilder_;
+      /**
+       * <pre>
+       * Odyssey pool settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+       */
+      public boolean hasPool() {
+        return poolBuilder_ != null || pool_ != null;
+      }
+      /**
+       * <pre>
+       * Odyssey pool settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig getPool() {
+        if (poolBuilder_ == null) {
+          return pool_ == null ? yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.getDefaultInstance() : pool_;
+        } else {
+          return poolBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Odyssey pool settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+       */
+      public Builder setPool(yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig value) {
+        if (poolBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pool_ = value;
+          onChanged();
+        } else {
+          poolBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Odyssey pool settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+       */
+      public Builder setPool(
+          yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.Builder builderForValue) {
+        if (poolBuilder_ == null) {
+          pool_ = builderForValue.build();
+          onChanged();
+        } else {
+          poolBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Odyssey pool settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+       */
+      public Builder mergePool(yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig value) {
+        if (poolBuilder_ == null) {
+          if (pool_ != null) {
+            pool_ =
+              yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.newBuilder(pool_).mergeFrom(value).buildPartial();
+          } else {
+            pool_ = value;
+          }
+          onChanged();
+        } else {
+          poolBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Odyssey pool settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+       */
+      public Builder clearPool() {
+        if (poolBuilder_ == null) {
+          pool_ = null;
+          onChanged();
+        } else {
+          pool_ = null;
+          poolBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Odyssey pool settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.Builder getPoolBuilder() {
+        
+        onChanged();
+        return getPoolFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Odyssey pool settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfigOrBuilder getPoolOrBuilder() {
+        if (poolBuilder_ != null) {
+          return poolBuilder_.getMessageOrBuilder();
+        } else {
+          return pool_ == null ?
+              yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.getDefaultInstance() : pool_;
+        }
+      }
+      /**
+       * <pre>
+       * Odyssey pool settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig, yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfigOrBuilder> 
+          getPoolFieldBuilder() {
+        if (poolBuilder_ == null) {
+          poolBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig, yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.GPCF.ConnectionPoolerConfigOrBuilder>(
+                  getPool(),
+                  getParentForChildren(),
+                  isClean());
+          pool_ = null;
+        }
+        return poolBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxPreparedTransactions_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxPreparedTransactionsBuilder_;
+      /**
+       * <pre>
+       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_transactions = 13;</code>
+       */
+      public boolean hasMaxPreparedTransactions() {
+        return maxPreparedTransactionsBuilder_ != null || maxPreparedTransactions_ != null;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_transactions = 13;</code>
+       */
+      public com.google.protobuf.Int64Value getMaxPreparedTransactions() {
+        if (maxPreparedTransactionsBuilder_ == null) {
+          return maxPreparedTransactions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxPreparedTransactions_;
+        } else {
+          return maxPreparedTransactionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_transactions = 13;</code>
+       */
+      public Builder setMaxPreparedTransactions(com.google.protobuf.Int64Value value) {
+        if (maxPreparedTransactionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxPreparedTransactions_ = value;
+          onChanged();
+        } else {
+          maxPreparedTransactionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_transactions = 13;</code>
+       */
+      public Builder setMaxPreparedTransactions(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxPreparedTransactionsBuilder_ == null) {
+          maxPreparedTransactions_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxPreparedTransactionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_transactions = 13;</code>
+       */
+      public Builder mergeMaxPreparedTransactions(com.google.protobuf.Int64Value value) {
+        if (maxPreparedTransactionsBuilder_ == null) {
+          if (maxPreparedTransactions_ != null) {
+            maxPreparedTransactions_ =
+              com.google.protobuf.Int64Value.newBuilder(maxPreparedTransactions_).mergeFrom(value).buildPartial();
+          } else {
+            maxPreparedTransactions_ = value;
+          }
+          onChanged();
+        } else {
+          maxPreparedTransactionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_transactions = 13;</code>
+       */
+      public Builder clearMaxPreparedTransactions() {
+        if (maxPreparedTransactionsBuilder_ == null) {
+          maxPreparedTransactions_ = null;
+          onChanged();
+        } else {
+          maxPreparedTransactions_ = null;
+          maxPreparedTransactionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_transactions = 13;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxPreparedTransactionsBuilder() {
+        
+        onChanged();
+        return getMaxPreparedTransactionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_transactions = 13;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxPreparedTransactionsOrBuilder() {
+        if (maxPreparedTransactionsBuilder_ != null) {
+          return maxPreparedTransactionsBuilder_.getMessageOrBuilder();
+        } else {
+          return maxPreparedTransactions_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxPreparedTransactions_;
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_transactions = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxPreparedTransactionsFieldBuilder() {
+        if (maxPreparedTransactionsBuilder_ == null) {
+          maxPreparedTransactionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxPreparedTransactions(),
+                  getParentForChildren(),
+                  isClean());
+          maxPreparedTransactions_ = null;
+        }
+        return maxPreparedTransactionsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value runawayDetectorActivationPercent_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> runawayDetectorActivationPercentBuilder_;
+      /**
+       * <pre>
+       * For queries that are managed by resource queues or resource groups,
+       * this parameter determines when Greenplum Database terminates running queries based on the amount of memory the queries are using.
+       * A value of 100 disables the automatic termination of queries based on the percentage of memory that is utilized.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#runaway_detector_activation_percent
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value runaway_detector_activation_percent = 14;</code>
+       */
+      public boolean hasRunawayDetectorActivationPercent() {
+        return runawayDetectorActivationPercentBuilder_ != null || runawayDetectorActivationPercent_ != null;
+      }
+      /**
+       * <pre>
+       * For queries that are managed by resource queues or resource groups,
+       * this parameter determines when Greenplum Database terminates running queries based on the amount of memory the queries are using.
+       * A value of 100 disables the automatic termination of queries based on the percentage of memory that is utilized.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#runaway_detector_activation_percent
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value runaway_detector_activation_percent = 14;</code>
+       */
+      public com.google.protobuf.Int64Value getRunawayDetectorActivationPercent() {
+        if (runawayDetectorActivationPercentBuilder_ == null) {
+          return runawayDetectorActivationPercent_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : runawayDetectorActivationPercent_;
+        } else {
+          return runawayDetectorActivationPercentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * For queries that are managed by resource queues or resource groups,
+       * this parameter determines when Greenplum Database terminates running queries based on the amount of memory the queries are using.
+       * A value of 100 disables the automatic termination of queries based on the percentage of memory that is utilized.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#runaway_detector_activation_percent
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value runaway_detector_activation_percent = 14;</code>
+       */
+      public Builder setRunawayDetectorActivationPercent(com.google.protobuf.Int64Value value) {
+        if (runawayDetectorActivationPercentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          runawayDetectorActivationPercent_ = value;
+          onChanged();
+        } else {
+          runawayDetectorActivationPercentBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * For queries that are managed by resource queues or resource groups,
+       * this parameter determines when Greenplum Database terminates running queries based on the amount of memory the queries are using.
+       * A value of 100 disables the automatic termination of queries based on the percentage of memory that is utilized.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#runaway_detector_activation_percent
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value runaway_detector_activation_percent = 14;</code>
+       */
+      public Builder setRunawayDetectorActivationPercent(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (runawayDetectorActivationPercentBuilder_ == null) {
+          runawayDetectorActivationPercent_ = builderForValue.build();
+          onChanged();
+        } else {
+          runawayDetectorActivationPercentBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * For queries that are managed by resource queues or resource groups,
+       * this parameter determines when Greenplum Database terminates running queries based on the amount of memory the queries are using.
+       * A value of 100 disables the automatic termination of queries based on the percentage of memory that is utilized.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#runaway_detector_activation_percent
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value runaway_detector_activation_percent = 14;</code>
+       */
+      public Builder mergeRunawayDetectorActivationPercent(com.google.protobuf.Int64Value value) {
+        if (runawayDetectorActivationPercentBuilder_ == null) {
+          if (runawayDetectorActivationPercent_ != null) {
+            runawayDetectorActivationPercent_ =
+              com.google.protobuf.Int64Value.newBuilder(runawayDetectorActivationPercent_).mergeFrom(value).buildPartial();
+          } else {
+            runawayDetectorActivationPercent_ = value;
+          }
+          onChanged();
+        } else {
+          runawayDetectorActivationPercentBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * For queries that are managed by resource queues or resource groups,
+       * this parameter determines when Greenplum Database terminates running queries based on the amount of memory the queries are using.
+       * A value of 100 disables the automatic termination of queries based on the percentage of memory that is utilized.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#runaway_detector_activation_percent
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value runaway_detector_activation_percent = 14;</code>
+       */
+      public Builder clearRunawayDetectorActivationPercent() {
+        if (runawayDetectorActivationPercentBuilder_ == null) {
+          runawayDetectorActivationPercent_ = null;
+          onChanged();
+        } else {
+          runawayDetectorActivationPercent_ = null;
+          runawayDetectorActivationPercentBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * For queries that are managed by resource queues or resource groups,
+       * this parameter determines when Greenplum Database terminates running queries based on the amount of memory the queries are using.
+       * A value of 100 disables the automatic termination of queries based on the percentage of memory that is utilized.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#runaway_detector_activation_percent
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value runaway_detector_activation_percent = 14;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getRunawayDetectorActivationPercentBuilder() {
+        
+        onChanged();
+        return getRunawayDetectorActivationPercentFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * For queries that are managed by resource queues or resource groups,
+       * this parameter determines when Greenplum Database terminates running queries based on the amount of memory the queries are using.
+       * A value of 100 disables the automatic termination of queries based on the percentage of memory that is utilized.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#runaway_detector_activation_percent
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value runaway_detector_activation_percent = 14;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getRunawayDetectorActivationPercentOrBuilder() {
+        if (runawayDetectorActivationPercentBuilder_ != null) {
+          return runawayDetectorActivationPercentBuilder_.getMessageOrBuilder();
+        } else {
+          return runawayDetectorActivationPercent_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : runawayDetectorActivationPercent_;
+        }
+      }
+      /**
+       * <pre>
+       * For queries that are managed by resource queues or resource groups,
+       * this parameter determines when Greenplum Database terminates running queries based on the amount of memory the queries are using.
+       * A value of 100 disables the automatic termination of queries based on the percentage of memory that is utilized.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#runaway_detector_activation_percent
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value runaway_detector_activation_percent = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getRunawayDetectorActivationPercentFieldBuilder() {
+        if (runawayDetectorActivationPercentBuilder_ == null) {
+          runawayDetectorActivationPercentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getRunawayDetectorActivationPercent(),
+                  getParentForChildren(),
+                  isClean());
+          runawayDetectorActivationPercent_ = null;
+        }
+        return runawayDetectorActivationPercentBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value tcpKeepalivesCount_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> tcpKeepalivesCountBuilder_;
+      /**
+       * <pre>
+       * How many keepalives may be lost before the connection is considered dead. A value of 0 uses the system default.
+       * If TCP_KEEPCNT is not supported, this parameter must be 0.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_count
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tcp_keepalives_count = 15;</code>
+       */
+      public boolean hasTcpKeepalivesCount() {
+        return tcpKeepalivesCountBuilder_ != null || tcpKeepalivesCount_ != null;
+      }
+      /**
+       * <pre>
+       * How many keepalives may be lost before the connection is considered dead. A value of 0 uses the system default.
+       * If TCP_KEEPCNT is not supported, this parameter must be 0.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_count
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tcp_keepalives_count = 15;</code>
+       */
+      public com.google.protobuf.Int64Value getTcpKeepalivesCount() {
+        if (tcpKeepalivesCountBuilder_ == null) {
+          return tcpKeepalivesCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tcpKeepalivesCount_;
+        } else {
+          return tcpKeepalivesCountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * How many keepalives may be lost before the connection is considered dead. A value of 0 uses the system default.
+       * If TCP_KEEPCNT is not supported, this parameter must be 0.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_count
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tcp_keepalives_count = 15;</code>
+       */
+      public Builder setTcpKeepalivesCount(com.google.protobuf.Int64Value value) {
+        if (tcpKeepalivesCountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tcpKeepalivesCount_ = value;
+          onChanged();
+        } else {
+          tcpKeepalivesCountBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * How many keepalives may be lost before the connection is considered dead. A value of 0 uses the system default.
+       * If TCP_KEEPCNT is not supported, this parameter must be 0.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_count
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tcp_keepalives_count = 15;</code>
+       */
+      public Builder setTcpKeepalivesCount(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (tcpKeepalivesCountBuilder_ == null) {
+          tcpKeepalivesCount_ = builderForValue.build();
+          onChanged();
+        } else {
+          tcpKeepalivesCountBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * How many keepalives may be lost before the connection is considered dead. A value of 0 uses the system default.
+       * If TCP_KEEPCNT is not supported, this parameter must be 0.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_count
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tcp_keepalives_count = 15;</code>
+       */
+      public Builder mergeTcpKeepalivesCount(com.google.protobuf.Int64Value value) {
+        if (tcpKeepalivesCountBuilder_ == null) {
+          if (tcpKeepalivesCount_ != null) {
+            tcpKeepalivesCount_ =
+              com.google.protobuf.Int64Value.newBuilder(tcpKeepalivesCount_).mergeFrom(value).buildPartial();
+          } else {
+            tcpKeepalivesCount_ = value;
+          }
+          onChanged();
+        } else {
+          tcpKeepalivesCountBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * How many keepalives may be lost before the connection is considered dead. A value of 0 uses the system default.
+       * If TCP_KEEPCNT is not supported, this parameter must be 0.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_count
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tcp_keepalives_count = 15;</code>
+       */
+      public Builder clearTcpKeepalivesCount() {
+        if (tcpKeepalivesCountBuilder_ == null) {
+          tcpKeepalivesCount_ = null;
+          onChanged();
+        } else {
+          tcpKeepalivesCount_ = null;
+          tcpKeepalivesCountBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * How many keepalives may be lost before the connection is considered dead. A value of 0 uses the system default.
+       * If TCP_KEEPCNT is not supported, this parameter must be 0.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_count
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tcp_keepalives_count = 15;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getTcpKeepalivesCountBuilder() {
+        
+        onChanged();
+        return getTcpKeepalivesCountFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * How many keepalives may be lost before the connection is considered dead. A value of 0 uses the system default.
+       * If TCP_KEEPCNT is not supported, this parameter must be 0.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_count
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tcp_keepalives_count = 15;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getTcpKeepalivesCountOrBuilder() {
+        if (tcpKeepalivesCountBuilder_ != null) {
+          return tcpKeepalivesCountBuilder_.getMessageOrBuilder();
+        } else {
+          return tcpKeepalivesCount_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : tcpKeepalivesCount_;
+        }
+      }
+      /**
+       * <pre>
+       * How many keepalives may be lost before the connection is considered dead. A value of 0 uses the system default.
+       * If TCP_KEEPCNT is not supported, this parameter must be 0.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_count
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tcp_keepalives_count = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getTcpKeepalivesCountFieldBuilder() {
+        if (tcpKeepalivesCountBuilder_ == null) {
+          tcpKeepalivesCountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getTcpKeepalivesCount(),
+                  getParentForChildren(),
+                  isClean());
+          tcpKeepalivesCount_ = null;
+        }
+        return tcpKeepalivesCountBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value tcpKeepalivesInterval_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> tcpKeepalivesIntervalBuilder_;
+      /**
+       * <pre>
+       * How many seconds to wait for a response to a keepalive before retransmitting. A value of 0 uses the system default.
+       * If TCP_KEEPINTVL is not supported, this parameter must be 0.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_interval
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tcp_keepalives_interval = 16;</code>
+       */
+      public boolean hasTcpKeepalivesInterval() {
+        return tcpKeepalivesIntervalBuilder_ != null || tcpKeepalivesInterval_ != null;
+      }
+      /**
+       * <pre>
+       * How many seconds to wait for a response to a keepalive before retransmitting. A value of 0 uses the system default.
+       * If TCP_KEEPINTVL is not supported, this parameter must be 0.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_interval
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tcp_keepalives_interval = 16;</code>
+       */
+      public com.google.protobuf.Int64Value getTcpKeepalivesInterval() {
+        if (tcpKeepalivesIntervalBuilder_ == null) {
+          return tcpKeepalivesInterval_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tcpKeepalivesInterval_;
+        } else {
+          return tcpKeepalivesIntervalBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * How many seconds to wait for a response to a keepalive before retransmitting. A value of 0 uses the system default.
+       * If TCP_KEEPINTVL is not supported, this parameter must be 0.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_interval
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tcp_keepalives_interval = 16;</code>
+       */
+      public Builder setTcpKeepalivesInterval(com.google.protobuf.Int64Value value) {
+        if (tcpKeepalivesIntervalBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tcpKeepalivesInterval_ = value;
+          onChanged();
+        } else {
+          tcpKeepalivesIntervalBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * How many seconds to wait for a response to a keepalive before retransmitting. A value of 0 uses the system default.
+       * If TCP_KEEPINTVL is not supported, this parameter must be 0.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_interval
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tcp_keepalives_interval = 16;</code>
+       */
+      public Builder setTcpKeepalivesInterval(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (tcpKeepalivesIntervalBuilder_ == null) {
+          tcpKeepalivesInterval_ = builderForValue.build();
+          onChanged();
+        } else {
+          tcpKeepalivesIntervalBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * How many seconds to wait for a response to a keepalive before retransmitting. A value of 0 uses the system default.
+       * If TCP_KEEPINTVL is not supported, this parameter must be 0.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_interval
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tcp_keepalives_interval = 16;</code>
+       */
+      public Builder mergeTcpKeepalivesInterval(com.google.protobuf.Int64Value value) {
+        if (tcpKeepalivesIntervalBuilder_ == null) {
+          if (tcpKeepalivesInterval_ != null) {
+            tcpKeepalivesInterval_ =
+              com.google.protobuf.Int64Value.newBuilder(tcpKeepalivesInterval_).mergeFrom(value).buildPartial();
+          } else {
+            tcpKeepalivesInterval_ = value;
+          }
+          onChanged();
+        } else {
+          tcpKeepalivesIntervalBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * How many seconds to wait for a response to a keepalive before retransmitting. A value of 0 uses the system default.
+       * If TCP_KEEPINTVL is not supported, this parameter must be 0.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_interval
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tcp_keepalives_interval = 16;</code>
+       */
+      public Builder clearTcpKeepalivesInterval() {
+        if (tcpKeepalivesIntervalBuilder_ == null) {
+          tcpKeepalivesInterval_ = null;
+          onChanged();
+        } else {
+          tcpKeepalivesInterval_ = null;
+          tcpKeepalivesIntervalBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * How many seconds to wait for a response to a keepalive before retransmitting. A value of 0 uses the system default.
+       * If TCP_KEEPINTVL is not supported, this parameter must be 0.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_interval
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tcp_keepalives_interval = 16;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getTcpKeepalivesIntervalBuilder() {
+        
+        onChanged();
+        return getTcpKeepalivesIntervalFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * How many seconds to wait for a response to a keepalive before retransmitting. A value of 0 uses the system default.
+       * If TCP_KEEPINTVL is not supported, this parameter must be 0.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_interval
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tcp_keepalives_interval = 16;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getTcpKeepalivesIntervalOrBuilder() {
+        if (tcpKeepalivesIntervalBuilder_ != null) {
+          return tcpKeepalivesIntervalBuilder_.getMessageOrBuilder();
+        } else {
+          return tcpKeepalivesInterval_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : tcpKeepalivesInterval_;
+        }
+      }
+      /**
+       * <pre>
+       * How many seconds to wait for a response to a keepalive before retransmitting. A value of 0 uses the system default.
+       * If TCP_KEEPINTVL is not supported, this parameter must be 0.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#tcp_keepalives_interval
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tcp_keepalives_interval = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getTcpKeepalivesIntervalFieldBuilder() {
+        if (tcpKeepalivesIntervalBuilder_ == null) {
+          tcpKeepalivesIntervalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getTcpKeepalivesInterval(),
+                  getParentForChildren(),
+                  isClean());
+          tcpKeepalivesInterval_ = null;
+        }
+        return tcpKeepalivesIntervalBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value readableExternalTableTimeout_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> readableExternalTableTimeoutBuilder_;
+      /**
+       * <pre>
+       * When an SQL query reads from an external table, the parameter value specifies the amount of time in seconds that
+       * Greenplum Database waits before cancelling the query when data stops being returned from the external table.
+       * The default value of 0, specifies no time out. Greenplum Database does not cancel the query.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#readable_external_table_timeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value readable_external_table_timeout = 19;</code>
+       */
+      public boolean hasReadableExternalTableTimeout() {
+        return readableExternalTableTimeoutBuilder_ != null || readableExternalTableTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * When an SQL query reads from an external table, the parameter value specifies the amount of time in seconds that
+       * Greenplum Database waits before cancelling the query when data stops being returned from the external table.
+       * The default value of 0, specifies no time out. Greenplum Database does not cancel the query.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#readable_external_table_timeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value readable_external_table_timeout = 19;</code>
+       */
+      public com.google.protobuf.Int64Value getReadableExternalTableTimeout() {
+        if (readableExternalTableTimeoutBuilder_ == null) {
+          return readableExternalTableTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : readableExternalTableTimeout_;
+        } else {
+          return readableExternalTableTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * When an SQL query reads from an external table, the parameter value specifies the amount of time in seconds that
+       * Greenplum Database waits before cancelling the query when data stops being returned from the external table.
+       * The default value of 0, specifies no time out. Greenplum Database does not cancel the query.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#readable_external_table_timeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value readable_external_table_timeout = 19;</code>
+       */
+      public Builder setReadableExternalTableTimeout(com.google.protobuf.Int64Value value) {
+        if (readableExternalTableTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          readableExternalTableTimeout_ = value;
+          onChanged();
+        } else {
+          readableExternalTableTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When an SQL query reads from an external table, the parameter value specifies the amount of time in seconds that
+       * Greenplum Database waits before cancelling the query when data stops being returned from the external table.
+       * The default value of 0, specifies no time out. Greenplum Database does not cancel the query.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#readable_external_table_timeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value readable_external_table_timeout = 19;</code>
+       */
+      public Builder setReadableExternalTableTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (readableExternalTableTimeoutBuilder_ == null) {
+          readableExternalTableTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          readableExternalTableTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When an SQL query reads from an external table, the parameter value specifies the amount of time in seconds that
+       * Greenplum Database waits before cancelling the query when data stops being returned from the external table.
+       * The default value of 0, specifies no time out. Greenplum Database does not cancel the query.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#readable_external_table_timeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value readable_external_table_timeout = 19;</code>
+       */
+      public Builder mergeReadableExternalTableTimeout(com.google.protobuf.Int64Value value) {
+        if (readableExternalTableTimeoutBuilder_ == null) {
+          if (readableExternalTableTimeout_ != null) {
+            readableExternalTableTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(readableExternalTableTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            readableExternalTableTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          readableExternalTableTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When an SQL query reads from an external table, the parameter value specifies the amount of time in seconds that
+       * Greenplum Database waits before cancelling the query when data stops being returned from the external table.
+       * The default value of 0, specifies no time out. Greenplum Database does not cancel the query.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#readable_external_table_timeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value readable_external_table_timeout = 19;</code>
+       */
+      public Builder clearReadableExternalTableTimeout() {
+        if (readableExternalTableTimeoutBuilder_ == null) {
+          readableExternalTableTimeout_ = null;
+          onChanged();
+        } else {
+          readableExternalTableTimeout_ = null;
+          readableExternalTableTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When an SQL query reads from an external table, the parameter value specifies the amount of time in seconds that
+       * Greenplum Database waits before cancelling the query when data stops being returned from the external table.
+       * The default value of 0, specifies no time out. Greenplum Database does not cancel the query.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#readable_external_table_timeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value readable_external_table_timeout = 19;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getReadableExternalTableTimeoutBuilder() {
+        
+        onChanged();
+        return getReadableExternalTableTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * When an SQL query reads from an external table, the parameter value specifies the amount of time in seconds that
+       * Greenplum Database waits before cancelling the query when data stops being returned from the external table.
+       * The default value of 0, specifies no time out. Greenplum Database does not cancel the query.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#readable_external_table_timeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value readable_external_table_timeout = 19;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getReadableExternalTableTimeoutOrBuilder() {
+        if (readableExternalTableTimeoutBuilder_ != null) {
+          return readableExternalTableTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return readableExternalTableTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : readableExternalTableTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * When an SQL query reads from an external table, the parameter value specifies the amount of time in seconds that
+       * Greenplum Database waits before cancelling the query when data stops being returned from the external table.
+       * The default value of 0, specifies no time out. Greenplum Database does not cancel the query.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#readable_external_table_timeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value readable_external_table_timeout = 19;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getReadableExternalTableTimeoutFieldBuilder() {
+        if (readableExternalTableTimeoutBuilder_ == null) {
+          readableExternalTableTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getReadableExternalTableTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          readableExternalTableTimeout_ = null;
+        }
+        return readableExternalTableTimeoutBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value gpInterconnectSndQueueDepth_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpInterconnectSndQueueDepthBuilder_;
+      /**
+       * <pre>
+       * Sets the amount of data per-peer to be queued by the default UDPIFC interconnect on senders.
+       * Increasing the depth from its default value will cause the system to use more memory, but may increase performance.
+       * Reasonable values for this parameter are between 1 and 4. Increasing the value might radically increase the amount of memory used by the system.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_snd_queue_depth
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_interconnect_snd_queue_depth = 20;</code>
+       */
+      public boolean hasGpInterconnectSndQueueDepth() {
+        return gpInterconnectSndQueueDepthBuilder_ != null || gpInterconnectSndQueueDepth_ != null;
+      }
+      /**
+       * <pre>
+       * Sets the amount of data per-peer to be queued by the default UDPIFC interconnect on senders.
+       * Increasing the depth from its default value will cause the system to use more memory, but may increase performance.
+       * Reasonable values for this parameter are between 1 and 4. Increasing the value might radically increase the amount of memory used by the system.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_snd_queue_depth
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_interconnect_snd_queue_depth = 20;</code>
+       */
+      public com.google.protobuf.Int64Value getGpInterconnectSndQueueDepth() {
+        if (gpInterconnectSndQueueDepthBuilder_ == null) {
+          return gpInterconnectSndQueueDepth_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpInterconnectSndQueueDepth_;
+        } else {
+          return gpInterconnectSndQueueDepthBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sets the amount of data per-peer to be queued by the default UDPIFC interconnect on senders.
+       * Increasing the depth from its default value will cause the system to use more memory, but may increase performance.
+       * Reasonable values for this parameter are between 1 and 4. Increasing the value might radically increase the amount of memory used by the system.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_snd_queue_depth
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_interconnect_snd_queue_depth = 20;</code>
+       */
+      public Builder setGpInterconnectSndQueueDepth(com.google.protobuf.Int64Value value) {
+        if (gpInterconnectSndQueueDepthBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gpInterconnectSndQueueDepth_ = value;
+          onChanged();
+        } else {
+          gpInterconnectSndQueueDepthBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the amount of data per-peer to be queued by the default UDPIFC interconnect on senders.
+       * Increasing the depth from its default value will cause the system to use more memory, but may increase performance.
+       * Reasonable values for this parameter are between 1 and 4. Increasing the value might radically increase the amount of memory used by the system.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_snd_queue_depth
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_interconnect_snd_queue_depth = 20;</code>
+       */
+      public Builder setGpInterconnectSndQueueDepth(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (gpInterconnectSndQueueDepthBuilder_ == null) {
+          gpInterconnectSndQueueDepth_ = builderForValue.build();
+          onChanged();
+        } else {
+          gpInterconnectSndQueueDepthBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the amount of data per-peer to be queued by the default UDPIFC interconnect on senders.
+       * Increasing the depth from its default value will cause the system to use more memory, but may increase performance.
+       * Reasonable values for this parameter are between 1 and 4. Increasing the value might radically increase the amount of memory used by the system.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_snd_queue_depth
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_interconnect_snd_queue_depth = 20;</code>
+       */
+      public Builder mergeGpInterconnectSndQueueDepth(com.google.protobuf.Int64Value value) {
+        if (gpInterconnectSndQueueDepthBuilder_ == null) {
+          if (gpInterconnectSndQueueDepth_ != null) {
+            gpInterconnectSndQueueDepth_ =
+              com.google.protobuf.Int64Value.newBuilder(gpInterconnectSndQueueDepth_).mergeFrom(value).buildPartial();
+          } else {
+            gpInterconnectSndQueueDepth_ = value;
+          }
+          onChanged();
+        } else {
+          gpInterconnectSndQueueDepthBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the amount of data per-peer to be queued by the default UDPIFC interconnect on senders.
+       * Increasing the depth from its default value will cause the system to use more memory, but may increase performance.
+       * Reasonable values for this parameter are between 1 and 4. Increasing the value might radically increase the amount of memory used by the system.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_snd_queue_depth
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_interconnect_snd_queue_depth = 20;</code>
+       */
+      public Builder clearGpInterconnectSndQueueDepth() {
+        if (gpInterconnectSndQueueDepthBuilder_ == null) {
+          gpInterconnectSndQueueDepth_ = null;
+          onChanged();
+        } else {
+          gpInterconnectSndQueueDepth_ = null;
+          gpInterconnectSndQueueDepthBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the amount of data per-peer to be queued by the default UDPIFC interconnect on senders.
+       * Increasing the depth from its default value will cause the system to use more memory, but may increase performance.
+       * Reasonable values for this parameter are between 1 and 4. Increasing the value might radically increase the amount of memory used by the system.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_snd_queue_depth
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_interconnect_snd_queue_depth = 20;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getGpInterconnectSndQueueDepthBuilder() {
+        
+        onChanged();
+        return getGpInterconnectSndQueueDepthFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sets the amount of data per-peer to be queued by the default UDPIFC interconnect on senders.
+       * Increasing the depth from its default value will cause the system to use more memory, but may increase performance.
+       * Reasonable values for this parameter are between 1 and 4. Increasing the value might radically increase the amount of memory used by the system.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_snd_queue_depth
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_interconnect_snd_queue_depth = 20;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getGpInterconnectSndQueueDepthOrBuilder() {
+        if (gpInterconnectSndQueueDepthBuilder_ != null) {
+          return gpInterconnectSndQueueDepthBuilder_.getMessageOrBuilder();
+        } else {
+          return gpInterconnectSndQueueDepth_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : gpInterconnectSndQueueDepth_;
+        }
+      }
+      /**
+       * <pre>
+       * Sets the amount of data per-peer to be queued by the default UDPIFC interconnect on senders.
+       * Increasing the depth from its default value will cause the system to use more memory, but may increase performance.
+       * Reasonable values for this parameter are between 1 and 4. Increasing the value might radically increase the amount of memory used by the system.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_snd_queue_depth
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_interconnect_snd_queue_depth = 20;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getGpInterconnectSndQueueDepthFieldBuilder() {
+        if (gpInterconnectSndQueueDepthBuilder_ == null) {
+          gpInterconnectSndQueueDepthBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getGpInterconnectSndQueueDepth(),
+                  getParentForChildren(),
+                  isClean());
+          gpInterconnectSndQueueDepth_ = null;
+        }
+        return gpInterconnectSndQueueDepthBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value gpInterconnectQueueDepth_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpInterconnectQueueDepthBuilder_;
+      /**
+       * <pre>
+       * Sets the amount of data per-peer to be queued by the Greenplum Database interconnect on receivers
+       * (when data is received but no space is available to receive it the data will be dropped, and the transmitter will need to resend it)
+       * for the default UDPIFC interconnect.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_queue_depth
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_interconnect_queue_depth = 21;</code>
+       */
+      public boolean hasGpInterconnectQueueDepth() {
+        return gpInterconnectQueueDepthBuilder_ != null || gpInterconnectQueueDepth_ != null;
+      }
+      /**
+       * <pre>
+       * Sets the amount of data per-peer to be queued by the Greenplum Database interconnect on receivers
+       * (when data is received but no space is available to receive it the data will be dropped, and the transmitter will need to resend it)
+       * for the default UDPIFC interconnect.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_queue_depth
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_interconnect_queue_depth = 21;</code>
+       */
+      public com.google.protobuf.Int64Value getGpInterconnectQueueDepth() {
+        if (gpInterconnectQueueDepthBuilder_ == null) {
+          return gpInterconnectQueueDepth_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpInterconnectQueueDepth_;
+        } else {
+          return gpInterconnectQueueDepthBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sets the amount of data per-peer to be queued by the Greenplum Database interconnect on receivers
+       * (when data is received but no space is available to receive it the data will be dropped, and the transmitter will need to resend it)
+       * for the default UDPIFC interconnect.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_queue_depth
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_interconnect_queue_depth = 21;</code>
+       */
+      public Builder setGpInterconnectQueueDepth(com.google.protobuf.Int64Value value) {
+        if (gpInterconnectQueueDepthBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gpInterconnectQueueDepth_ = value;
+          onChanged();
+        } else {
+          gpInterconnectQueueDepthBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the amount of data per-peer to be queued by the Greenplum Database interconnect on receivers
+       * (when data is received but no space is available to receive it the data will be dropped, and the transmitter will need to resend it)
+       * for the default UDPIFC interconnect.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_queue_depth
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_interconnect_queue_depth = 21;</code>
+       */
+      public Builder setGpInterconnectQueueDepth(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (gpInterconnectQueueDepthBuilder_ == null) {
+          gpInterconnectQueueDepth_ = builderForValue.build();
+          onChanged();
+        } else {
+          gpInterconnectQueueDepthBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the amount of data per-peer to be queued by the Greenplum Database interconnect on receivers
+       * (when data is received but no space is available to receive it the data will be dropped, and the transmitter will need to resend it)
+       * for the default UDPIFC interconnect.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_queue_depth
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_interconnect_queue_depth = 21;</code>
+       */
+      public Builder mergeGpInterconnectQueueDepth(com.google.protobuf.Int64Value value) {
+        if (gpInterconnectQueueDepthBuilder_ == null) {
+          if (gpInterconnectQueueDepth_ != null) {
+            gpInterconnectQueueDepth_ =
+              com.google.protobuf.Int64Value.newBuilder(gpInterconnectQueueDepth_).mergeFrom(value).buildPartial();
+          } else {
+            gpInterconnectQueueDepth_ = value;
+          }
+          onChanged();
+        } else {
+          gpInterconnectQueueDepthBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the amount of data per-peer to be queued by the Greenplum Database interconnect on receivers
+       * (when data is received but no space is available to receive it the data will be dropped, and the transmitter will need to resend it)
+       * for the default UDPIFC interconnect.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_queue_depth
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_interconnect_queue_depth = 21;</code>
+       */
+      public Builder clearGpInterconnectQueueDepth() {
+        if (gpInterconnectQueueDepthBuilder_ == null) {
+          gpInterconnectQueueDepth_ = null;
+          onChanged();
+        } else {
+          gpInterconnectQueueDepth_ = null;
+          gpInterconnectQueueDepthBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the amount of data per-peer to be queued by the Greenplum Database interconnect on receivers
+       * (when data is received but no space is available to receive it the data will be dropped, and the transmitter will need to resend it)
+       * for the default UDPIFC interconnect.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_queue_depth
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_interconnect_queue_depth = 21;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getGpInterconnectQueueDepthBuilder() {
+        
+        onChanged();
+        return getGpInterconnectQueueDepthFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sets the amount of data per-peer to be queued by the Greenplum Database interconnect on receivers
+       * (when data is received but no space is available to receive it the data will be dropped, and the transmitter will need to resend it)
+       * for the default UDPIFC interconnect.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_queue_depth
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_interconnect_queue_depth = 21;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getGpInterconnectQueueDepthOrBuilder() {
+        if (gpInterconnectQueueDepthBuilder_ != null) {
+          return gpInterconnectQueueDepthBuilder_.getMessageOrBuilder();
+        } else {
+          return gpInterconnectQueueDepth_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : gpInterconnectQueueDepth_;
+        }
+      }
+      /**
+       * <pre>
+       * Sets the amount of data per-peer to be queued by the Greenplum Database interconnect on receivers
+       * (when data is received but no space is available to receive it the data will be dropped, and the transmitter will need to resend it)
+       * for the default UDPIFC interconnect.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_interconnect_queue_depth
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_interconnect_queue_depth = 21;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getGpInterconnectQueueDepthFieldBuilder() {
+        if (gpInterconnectQueueDepthBuilder_ == null) {
+          gpInterconnectQueueDepthBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getGpInterconnectQueueDepth(),
+                  getParentForChildren(),
+                  isClean());
+          gpInterconnectQueueDepth_ = null;
+        }
+        return gpInterconnectQueueDepthBuilder_;
+      }
+
+      private int logStatement_ = 0;
+      /**
+       * <pre>
+       * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+       * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+       * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * Default value is ddl
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.LogStatement log_statement = 22;</code>
+       */
+      public int getLogStatementValue() {
+        return logStatement_;
+      }
+      /**
+       * <pre>
+       * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+       * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+       * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * Default value is ddl
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.LogStatement log_statement = 22;</code>
+       */
+      public Builder setLogStatementValue(int value) {
+        logStatement_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+       * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+       * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * Default value is ddl
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.LogStatement log_statement = 22;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.LogStatement getLogStatement() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.LogStatement result = yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.LogStatement.valueOf(logStatement_);
+        return result == null ? yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.LogStatement.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+       * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+       * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * Default value is ddl
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.LogStatement log_statement = 22;</code>
+       */
+      public Builder setLogStatement(yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.LogStatement value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        logStatement_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+       * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+       * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * Default value is ddl
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.LogStatement log_statement = 22;</code>
+       */
+      public Builder clearLogStatement() {
+        
+        logStatement_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.BoolValue logDuration_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> logDurationBuilder_;
+      /**
+       * <pre>
+       * Causes the duration of every completed statement which satisfies log_statement to be logged.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_duration
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_duration = 23;</code>
+       */
+      public boolean hasLogDuration() {
+        return logDurationBuilder_ != null || logDuration_ != null;
+      }
+      /**
+       * <pre>
+       * Causes the duration of every completed statement which satisfies log_statement to be logged.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_duration
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_duration = 23;</code>
+       */
+      public com.google.protobuf.BoolValue getLogDuration() {
+        if (logDurationBuilder_ == null) {
+          return logDuration_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logDuration_;
+        } else {
+          return logDurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Causes the duration of every completed statement which satisfies log_statement to be logged.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_duration
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_duration = 23;</code>
+       */
+      public Builder setLogDuration(com.google.protobuf.BoolValue value) {
+        if (logDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logDuration_ = value;
+          onChanged();
+        } else {
+          logDurationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Causes the duration of every completed statement which satisfies log_statement to be logged.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_duration
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_duration = 23;</code>
+       */
+      public Builder setLogDuration(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (logDurationBuilder_ == null) {
+          logDuration_ = builderForValue.build();
+          onChanged();
+        } else {
+          logDurationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Causes the duration of every completed statement which satisfies log_statement to be logged.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_duration
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_duration = 23;</code>
+       */
+      public Builder mergeLogDuration(com.google.protobuf.BoolValue value) {
+        if (logDurationBuilder_ == null) {
+          if (logDuration_ != null) {
+            logDuration_ =
+              com.google.protobuf.BoolValue.newBuilder(logDuration_).mergeFrom(value).buildPartial();
+          } else {
+            logDuration_ = value;
+          }
+          onChanged();
+        } else {
+          logDurationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Causes the duration of every completed statement which satisfies log_statement to be logged.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_duration
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_duration = 23;</code>
+       */
+      public Builder clearLogDuration() {
+        if (logDurationBuilder_ == null) {
+          logDuration_ = null;
+          onChanged();
+        } else {
+          logDuration_ = null;
+          logDurationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Causes the duration of every completed statement which satisfies log_statement to be logged.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_duration
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_duration = 23;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getLogDurationBuilder() {
+        
+        onChanged();
+        return getLogDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Causes the duration of every completed statement which satisfies log_statement to be logged.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_duration
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_duration = 23;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getLogDurationOrBuilder() {
+        if (logDurationBuilder_ != null) {
+          return logDurationBuilder_.getMessageOrBuilder();
+        } else {
+          return logDuration_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : logDuration_;
+        }
+      }
+      /**
+       * <pre>
+       * Causes the duration of every completed statement which satisfies log_statement to be logged.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_duration
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_duration = 23;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getLogDurationFieldBuilder() {
+        if (logDurationBuilder_ == null) {
+          logDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getLogDuration(),
+                  getParentForChildren(),
+                  isClean());
+          logDuration_ = null;
+        }
+        return logDurationBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue optimizerAnalyzeRootPartition_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> optimizerAnalyzeRootPartitionBuilder_;
+      /**
+       * <pre>
+       * For a partitioned table, controls whether the ROOTPARTITION keyword is required to collect root partition statistics
+       * when the ANALYZE command is run on the table. GPORCA uses the root partition statistics when generating a query plan.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#optimizer_analyze_root_partition
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue optimizer_analyze_root_partition = 24;</code>
+       */
+      public boolean hasOptimizerAnalyzeRootPartition() {
+        return optimizerAnalyzeRootPartitionBuilder_ != null || optimizerAnalyzeRootPartition_ != null;
+      }
+      /**
+       * <pre>
+       * For a partitioned table, controls whether the ROOTPARTITION keyword is required to collect root partition statistics
+       * when the ANALYZE command is run on the table. GPORCA uses the root partition statistics when generating a query plan.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#optimizer_analyze_root_partition
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue optimizer_analyze_root_partition = 24;</code>
+       */
+      public com.google.protobuf.BoolValue getOptimizerAnalyzeRootPartition() {
+        if (optimizerAnalyzeRootPartitionBuilder_ == null) {
+          return optimizerAnalyzeRootPartition_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : optimizerAnalyzeRootPartition_;
+        } else {
+          return optimizerAnalyzeRootPartitionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * For a partitioned table, controls whether the ROOTPARTITION keyword is required to collect root partition statistics
+       * when the ANALYZE command is run on the table. GPORCA uses the root partition statistics when generating a query plan.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#optimizer_analyze_root_partition
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue optimizer_analyze_root_partition = 24;</code>
+       */
+      public Builder setOptimizerAnalyzeRootPartition(com.google.protobuf.BoolValue value) {
+        if (optimizerAnalyzeRootPartitionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          optimizerAnalyzeRootPartition_ = value;
+          onChanged();
+        } else {
+          optimizerAnalyzeRootPartitionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * For a partitioned table, controls whether the ROOTPARTITION keyword is required to collect root partition statistics
+       * when the ANALYZE command is run on the table. GPORCA uses the root partition statistics when generating a query plan.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#optimizer_analyze_root_partition
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue optimizer_analyze_root_partition = 24;</code>
+       */
+      public Builder setOptimizerAnalyzeRootPartition(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (optimizerAnalyzeRootPartitionBuilder_ == null) {
+          optimizerAnalyzeRootPartition_ = builderForValue.build();
+          onChanged();
+        } else {
+          optimizerAnalyzeRootPartitionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * For a partitioned table, controls whether the ROOTPARTITION keyword is required to collect root partition statistics
+       * when the ANALYZE command is run on the table. GPORCA uses the root partition statistics when generating a query plan.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#optimizer_analyze_root_partition
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue optimizer_analyze_root_partition = 24;</code>
+       */
+      public Builder mergeOptimizerAnalyzeRootPartition(com.google.protobuf.BoolValue value) {
+        if (optimizerAnalyzeRootPartitionBuilder_ == null) {
+          if (optimizerAnalyzeRootPartition_ != null) {
+            optimizerAnalyzeRootPartition_ =
+              com.google.protobuf.BoolValue.newBuilder(optimizerAnalyzeRootPartition_).mergeFrom(value).buildPartial();
+          } else {
+            optimizerAnalyzeRootPartition_ = value;
+          }
+          onChanged();
+        } else {
+          optimizerAnalyzeRootPartitionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * For a partitioned table, controls whether the ROOTPARTITION keyword is required to collect root partition statistics
+       * when the ANALYZE command is run on the table. GPORCA uses the root partition statistics when generating a query plan.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#optimizer_analyze_root_partition
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue optimizer_analyze_root_partition = 24;</code>
+       */
+      public Builder clearOptimizerAnalyzeRootPartition() {
+        if (optimizerAnalyzeRootPartitionBuilder_ == null) {
+          optimizerAnalyzeRootPartition_ = null;
+          onChanged();
+        } else {
+          optimizerAnalyzeRootPartition_ = null;
+          optimizerAnalyzeRootPartitionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * For a partitioned table, controls whether the ROOTPARTITION keyword is required to collect root partition statistics
+       * when the ANALYZE command is run on the table. GPORCA uses the root partition statistics when generating a query plan.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#optimizer_analyze_root_partition
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue optimizer_analyze_root_partition = 24;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getOptimizerAnalyzeRootPartitionBuilder() {
+        
+        onChanged();
+        return getOptimizerAnalyzeRootPartitionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * For a partitioned table, controls whether the ROOTPARTITION keyword is required to collect root partition statistics
+       * when the ANALYZE command is run on the table. GPORCA uses the root partition statistics when generating a query plan.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#optimizer_analyze_root_partition
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue optimizer_analyze_root_partition = 24;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getOptimizerAnalyzeRootPartitionOrBuilder() {
+        if (optimizerAnalyzeRootPartitionBuilder_ != null) {
+          return optimizerAnalyzeRootPartitionBuilder_.getMessageOrBuilder();
+        } else {
+          return optimizerAnalyzeRootPartition_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : optimizerAnalyzeRootPartition_;
+        }
+      }
+      /**
+       * <pre>
+       * For a partitioned table, controls whether the ROOTPARTITION keyword is required to collect root partition statistics
+       * when the ANALYZE command is run on the table. GPORCA uses the root partition statistics when generating a query plan.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#optimizer_analyze_root_partition
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue optimizer_analyze_root_partition = 24;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getOptimizerAnalyzeRootPartitionFieldBuilder() {
+        if (optimizerAnalyzeRootPartitionBuilder_ == null) {
+          optimizerAnalyzeRootPartitionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getOptimizerAnalyzeRootPartition(),
+                  getParentForChildren(),
+                  isClean());
+          optimizerAnalyzeRootPartition_ = null;
+        }
+        return optimizerAnalyzeRootPartitionBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value gpExternalMaxSegs_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpExternalMaxSegsBuilder_;
+      /**
+       * <pre>
+       * Sets the number of segments that will scan external table data during an external table operation,
+       * the purpose being not to overload the system with scanning data and take away resources from other concurrent operations.
+       * This only applies to external tables that use the gpfdist:// protocol to access external table data.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_external_max_segs
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_external_max_segs = 25;</code>
+       */
+      public boolean hasGpExternalMaxSegs() {
+        return gpExternalMaxSegsBuilder_ != null || gpExternalMaxSegs_ != null;
+      }
+      /**
+       * <pre>
+       * Sets the number of segments that will scan external table data during an external table operation,
+       * the purpose being not to overload the system with scanning data and take away resources from other concurrent operations.
+       * This only applies to external tables that use the gpfdist:// protocol to access external table data.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_external_max_segs
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_external_max_segs = 25;</code>
+       */
+      public com.google.protobuf.Int64Value getGpExternalMaxSegs() {
+        if (gpExternalMaxSegsBuilder_ == null) {
+          return gpExternalMaxSegs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpExternalMaxSegs_;
+        } else {
+          return gpExternalMaxSegsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sets the number of segments that will scan external table data during an external table operation,
+       * the purpose being not to overload the system with scanning data and take away resources from other concurrent operations.
+       * This only applies to external tables that use the gpfdist:// protocol to access external table data.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_external_max_segs
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_external_max_segs = 25;</code>
+       */
+      public Builder setGpExternalMaxSegs(com.google.protobuf.Int64Value value) {
+        if (gpExternalMaxSegsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gpExternalMaxSegs_ = value;
+          onChanged();
+        } else {
+          gpExternalMaxSegsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the number of segments that will scan external table data during an external table operation,
+       * the purpose being not to overload the system with scanning data and take away resources from other concurrent operations.
+       * This only applies to external tables that use the gpfdist:// protocol to access external table data.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_external_max_segs
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_external_max_segs = 25;</code>
+       */
+      public Builder setGpExternalMaxSegs(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (gpExternalMaxSegsBuilder_ == null) {
+          gpExternalMaxSegs_ = builderForValue.build();
+          onChanged();
+        } else {
+          gpExternalMaxSegsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the number of segments that will scan external table data during an external table operation,
+       * the purpose being not to overload the system with scanning data and take away resources from other concurrent operations.
+       * This only applies to external tables that use the gpfdist:// protocol to access external table data.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_external_max_segs
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_external_max_segs = 25;</code>
+       */
+      public Builder mergeGpExternalMaxSegs(com.google.protobuf.Int64Value value) {
+        if (gpExternalMaxSegsBuilder_ == null) {
+          if (gpExternalMaxSegs_ != null) {
+            gpExternalMaxSegs_ =
+              com.google.protobuf.Int64Value.newBuilder(gpExternalMaxSegs_).mergeFrom(value).buildPartial();
+          } else {
+            gpExternalMaxSegs_ = value;
+          }
+          onChanged();
+        } else {
+          gpExternalMaxSegsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the number of segments that will scan external table data during an external table operation,
+       * the purpose being not to overload the system with scanning data and take away resources from other concurrent operations.
+       * This only applies to external tables that use the gpfdist:// protocol to access external table data.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_external_max_segs
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_external_max_segs = 25;</code>
+       */
+      public Builder clearGpExternalMaxSegs() {
+        if (gpExternalMaxSegsBuilder_ == null) {
+          gpExternalMaxSegs_ = null;
+          onChanged();
+        } else {
+          gpExternalMaxSegs_ = null;
+          gpExternalMaxSegsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the number of segments that will scan external table data during an external table operation,
+       * the purpose being not to overload the system with scanning data and take away resources from other concurrent operations.
+       * This only applies to external tables that use the gpfdist:// protocol to access external table data.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_external_max_segs
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_external_max_segs = 25;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getGpExternalMaxSegsBuilder() {
+        
+        onChanged();
+        return getGpExternalMaxSegsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sets the number of segments that will scan external table data during an external table operation,
+       * the purpose being not to overload the system with scanning data and take away resources from other concurrent operations.
+       * This only applies to external tables that use the gpfdist:// protocol to access external table data.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_external_max_segs
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_external_max_segs = 25;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getGpExternalMaxSegsOrBuilder() {
+        if (gpExternalMaxSegsBuilder_ != null) {
+          return gpExternalMaxSegsBuilder_.getMessageOrBuilder();
+        } else {
+          return gpExternalMaxSegs_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : gpExternalMaxSegs_;
+        }
+      }
+      /**
+       * <pre>
+       * Sets the number of segments that will scan external table data during an external table operation,
+       * the purpose being not to overload the system with scanning data and take away resources from other concurrent operations.
+       * This only applies to external tables that use the gpfdist:// protocol to access external table data.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_external_max_segs
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_external_max_segs = 25;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getGpExternalMaxSegsFieldBuilder() {
+        if (gpExternalMaxSegsBuilder_ == null) {
+          gpExternalMaxSegsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getGpExternalMaxSegs(),
+                  getParentForChildren(),
+                  isClean());
+          gpExternalMaxSegs_ = null;
+        }
+        return gpExternalMaxSegsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value gpFtsProbeTimeout_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpFtsProbeTimeoutBuilder_;
+      /**
+       * <pre>
+       * Specifies the allowed timeout for the fault detection process (ftsprobe) to establish a connection to a segment before declaring it down.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_fts_probe_timeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_fts_probe_timeout = 26;</code>
+       */
+      public boolean hasGpFtsProbeTimeout() {
+        return gpFtsProbeTimeoutBuilder_ != null || gpFtsProbeTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies the allowed timeout for the fault detection process (ftsprobe) to establish a connection to a segment before declaring it down.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_fts_probe_timeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_fts_probe_timeout = 26;</code>
+       */
+      public com.google.protobuf.Int64Value getGpFtsProbeTimeout() {
+        if (gpFtsProbeTimeoutBuilder_ == null) {
+          return gpFtsProbeTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpFtsProbeTimeout_;
+        } else {
+          return gpFtsProbeTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the allowed timeout for the fault detection process (ftsprobe) to establish a connection to a segment before declaring it down.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_fts_probe_timeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_fts_probe_timeout = 26;</code>
+       */
+      public Builder setGpFtsProbeTimeout(com.google.protobuf.Int64Value value) {
+        if (gpFtsProbeTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gpFtsProbeTimeout_ = value;
+          onChanged();
+        } else {
+          gpFtsProbeTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the allowed timeout for the fault detection process (ftsprobe) to establish a connection to a segment before declaring it down.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_fts_probe_timeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_fts_probe_timeout = 26;</code>
+       */
+      public Builder setGpFtsProbeTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (gpFtsProbeTimeoutBuilder_ == null) {
+          gpFtsProbeTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          gpFtsProbeTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the allowed timeout for the fault detection process (ftsprobe) to establish a connection to a segment before declaring it down.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_fts_probe_timeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_fts_probe_timeout = 26;</code>
+       */
+      public Builder mergeGpFtsProbeTimeout(com.google.protobuf.Int64Value value) {
+        if (gpFtsProbeTimeoutBuilder_ == null) {
+          if (gpFtsProbeTimeout_ != null) {
+            gpFtsProbeTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(gpFtsProbeTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            gpFtsProbeTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          gpFtsProbeTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the allowed timeout for the fault detection process (ftsprobe) to establish a connection to a segment before declaring it down.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_fts_probe_timeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_fts_probe_timeout = 26;</code>
+       */
+      public Builder clearGpFtsProbeTimeout() {
+        if (gpFtsProbeTimeoutBuilder_ == null) {
+          gpFtsProbeTimeout_ = null;
+          onChanged();
+        } else {
+          gpFtsProbeTimeout_ = null;
+          gpFtsProbeTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the allowed timeout for the fault detection process (ftsprobe) to establish a connection to a segment before declaring it down.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_fts_probe_timeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_fts_probe_timeout = 26;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getGpFtsProbeTimeoutBuilder() {
+        
+        onChanged();
+        return getGpFtsProbeTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies the allowed timeout for the fault detection process (ftsprobe) to establish a connection to a segment before declaring it down.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_fts_probe_timeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_fts_probe_timeout = 26;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getGpFtsProbeTimeoutOrBuilder() {
+        if (gpFtsProbeTimeoutBuilder_ != null) {
+          return gpFtsProbeTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return gpFtsProbeTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : gpFtsProbeTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the allowed timeout for the fault detection process (ftsprobe) to establish a connection to a segment before declaring it down.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_fts_probe_timeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_fts_probe_timeout = 26;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getGpFtsProbeTimeoutFieldBuilder() {
+        if (gpFtsProbeTimeoutBuilder_ == null) {
+          gpFtsProbeTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getGpFtsProbeTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          gpFtsProbeTimeout_ = null;
+        }
+        return gpFtsProbeTimeoutBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue gpWorkfileCompression_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> gpWorkfileCompressionBuilder_;
+      /**
+       * <pre>
+       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_workfile_compression = 27;</code>
+       */
+      public boolean hasGpWorkfileCompression() {
+        return gpWorkfileCompressionBuilder_ != null || gpWorkfileCompression_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_workfile_compression = 27;</code>
+       */
+      public com.google.protobuf.BoolValue getGpWorkfileCompression() {
+        if (gpWorkfileCompressionBuilder_ == null) {
+          return gpWorkfileCompression_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : gpWorkfileCompression_;
+        } else {
+          return gpWorkfileCompressionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_workfile_compression = 27;</code>
+       */
+      public Builder setGpWorkfileCompression(com.google.protobuf.BoolValue value) {
+        if (gpWorkfileCompressionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gpWorkfileCompression_ = value;
+          onChanged();
+        } else {
+          gpWorkfileCompressionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_workfile_compression = 27;</code>
+       */
+      public Builder setGpWorkfileCompression(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (gpWorkfileCompressionBuilder_ == null) {
+          gpWorkfileCompression_ = builderForValue.build();
+          onChanged();
+        } else {
+          gpWorkfileCompressionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_workfile_compression = 27;</code>
+       */
+      public Builder mergeGpWorkfileCompression(com.google.protobuf.BoolValue value) {
+        if (gpWorkfileCompressionBuilder_ == null) {
+          if (gpWorkfileCompression_ != null) {
+            gpWorkfileCompression_ =
+              com.google.protobuf.BoolValue.newBuilder(gpWorkfileCompression_).mergeFrom(value).buildPartial();
+          } else {
+            gpWorkfileCompression_ = value;
+          }
+          onChanged();
+        } else {
+          gpWorkfileCompressionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_workfile_compression = 27;</code>
+       */
+      public Builder clearGpWorkfileCompression() {
+        if (gpWorkfileCompressionBuilder_ == null) {
+          gpWorkfileCompression_ = null;
+          onChanged();
+        } else {
+          gpWorkfileCompression_ = null;
+          gpWorkfileCompressionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_workfile_compression = 27;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getGpWorkfileCompressionBuilder() {
+        
+        onChanged();
+        return getGpWorkfileCompressionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_workfile_compression = 27;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getGpWorkfileCompressionOrBuilder() {
+        if (gpWorkfileCompressionBuilder_ != null) {
+          return gpWorkfileCompressionBuilder_.getMessageOrBuilder();
+        } else {
+          return gpWorkfileCompression_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : gpWorkfileCompression_;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_workfile_compression = 27;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getGpWorkfileCompressionFieldBuilder() {
+        if (gpWorkfileCompressionBuilder_ == null) {
+          gpWorkfileCompressionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getGpWorkfileCompression(),
+                  getParentForChildren(),
+                  isClean());
+          gpWorkfileCompression_ = null;
+        }
+        return gpWorkfileCompressionBuilder_;
+      }
+
+      private int gpAutostatsModeInFunctions_ = 0;
+      /**
+       * <pre>
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_autostats_mode_in_functions
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.AutostatsModeInFunctions gp_autostats_mode_in_functions = 28;</code>
+       */
+      public int getGpAutostatsModeInFunctionsValue() {
+        return gpAutostatsModeInFunctions_;
+      }
+      /**
+       * <pre>
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_autostats_mode_in_functions
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.AutostatsModeInFunctions gp_autostats_mode_in_functions = 28;</code>
+       */
+      public Builder setGpAutostatsModeInFunctionsValue(int value) {
+        gpAutostatsModeInFunctions_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_autostats_mode_in_functions
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.AutostatsModeInFunctions gp_autostats_mode_in_functions = 28;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.AutostatsModeInFunctions getGpAutostatsModeInFunctions() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.AutostatsModeInFunctions result = yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.AutostatsModeInFunctions.valueOf(gpAutostatsModeInFunctions_);
+        return result == null ? yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.AutostatsModeInFunctions.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_autostats_mode_in_functions
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.AutostatsModeInFunctions gp_autostats_mode_in_functions = 28;</code>
+       */
+      public Builder setGpAutostatsModeInFunctions(yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumMasterConfig.AutostatsModeInFunctions value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        gpAutostatsModeInFunctions_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_autostats_mode_in_functions
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumMasterConfig.AutostatsModeInFunctions gp_autostats_mode_in_functions = 28;</code>
+       */
+      public Builder clearGpAutostatsModeInFunctions() {
+        
+        gpAutostatsModeInFunctions_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4000,6 +9471,219 @@ public final class GPCF {
      * <code>.google.protobuf.Int64Value max_connections = 2;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder();
+
+    /**
+     * <pre>
+     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 7;</code>
+     */
+    boolean hasMaxSlotWalKeepSize();
+    /**
+     * <pre>
+     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 7;</code>
+     */
+    com.google.protobuf.Int64Value getMaxSlotWalKeepSize();
+    /**
+     * <pre>
+     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 7;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxSlotWalKeepSizeOrBuilder();
+
+    /**
+     * <pre>
+     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 8;</code>
+     */
+    boolean hasGpWorkfileLimitPerSegment();
+    /**
+     * <pre>
+     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 8;</code>
+     */
+    com.google.protobuf.Int64Value getGpWorkfileLimitPerSegment();
+    /**
+     * <pre>
+     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 8;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitPerSegmentOrBuilder();
+
+    /**
+     * <pre>
+     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 9;</code>
+     */
+    boolean hasGpWorkfileLimitPerQuery();
+    /**
+     * <pre>
+     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 9;</code>
+     */
+    com.google.protobuf.Int64Value getGpWorkfileLimitPerQuery();
+    /**
+     * <pre>
+     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 9;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitPerQueryOrBuilder();
+
+    /**
+     * <pre>
+     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+     * Spill files are created when executing a query that requires more memory than it is allocated.
+     * The current query is terminated when the limit is exceeded.
+     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * Default value is 10000
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 10;</code>
+     */
+    boolean hasGpWorkfileLimitFilesPerQuery();
+    /**
+     * <pre>
+     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+     * Spill files are created when executing a query that requires more memory than it is allocated.
+     * The current query is terminated when the limit is exceeded.
+     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * Default value is 10000
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 10;</code>
+     */
+    com.google.protobuf.Int64Value getGpWorkfileLimitFilesPerQuery();
+    /**
+     * <pre>
+     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+     * Spill files are created when executing a query that requires more memory than it is allocated.
+     * The current query is terminated when the limit is exceeded.
+     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * Default value is 10000
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 10;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitFilesPerQueryOrBuilder();
+
+    /**
+     * <pre>
+     * Identifies the resource management scheme currently enabled in the Greenplum Database cluster. The default scheme is to use resource queues.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_manager
+     * "group" is the default value
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumSegmentConfig.GPResourceManager gp_resource_manager = 11;</code>
+     */
+    int getGpResourceManagerValue();
+    /**
+     * <pre>
+     * Identifies the resource management scheme currently enabled in the Greenplum Database cluster. The default scheme is to use resource queues.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_manager
+     * "group" is the default value
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumSegmentConfig.GPResourceManager gp_resource_manager = 11;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumSegmentConfig.GPResourceManager getGpResourceManager();
+
+    /**
+     * <pre>
+     * Identifies the maximum percentage of system CPU resources to allocate to resource groups on each Greenplum Database segment node.
+     * Note: The gp_resource_group_cpu_limit server configuration parameter is enforced only when resource group-based resource management is active.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_cpu_limit
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue gp_resource_group_cpu_limit = 17;</code>
+     */
+    boolean hasGpResourceGroupCpuLimit();
+    /**
+     * <pre>
+     * Identifies the maximum percentage of system CPU resources to allocate to resource groups on each Greenplum Database segment node.
+     * Note: The gp_resource_group_cpu_limit server configuration parameter is enforced only when resource group-based resource management is active.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_cpu_limit
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue gp_resource_group_cpu_limit = 17;</code>
+     */
+    com.google.protobuf.FloatValue getGpResourceGroupCpuLimit();
+    /**
+     * <pre>
+     * Identifies the maximum percentage of system CPU resources to allocate to resource groups on each Greenplum Database segment node.
+     * Note: The gp_resource_group_cpu_limit server configuration parameter is enforced only when resource group-based resource management is active.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_cpu_limit
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue gp_resource_group_cpu_limit = 17;</code>
+     */
+    com.google.protobuf.FloatValueOrBuilder getGpResourceGroupCpuLimitOrBuilder();
+
+    /**
+     * <pre>
+     * Identifies the maximum percentage of system memory resources to allocate to resource groups on each Greenplum Database segment node.
+     * Note: The gp_resource_group_memory_limit server configuration parameter is enforced only when resource group-based resource management is active.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_memory_limit
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue gp_resource_group_memory_limit = 18;</code>
+     */
+    boolean hasGpResourceGroupMemoryLimit();
+    /**
+     * <pre>
+     * Identifies the maximum percentage of system memory resources to allocate to resource groups on each Greenplum Database segment node.
+     * Note: The gp_resource_group_memory_limit server configuration parameter is enforced only when resource group-based resource management is active.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_memory_limit
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue gp_resource_group_memory_limit = 18;</code>
+     */
+    com.google.protobuf.FloatValue getGpResourceGroupMemoryLimit();
+    /**
+     * <pre>
+     * Identifies the maximum percentage of system memory resources to allocate to resource groups on each Greenplum Database segment node.
+     * Note: The gp_resource_group_memory_limit server configuration parameter is enforced only when resource group-based resource management is active.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_memory_limit
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue gp_resource_group_memory_limit = 18;</code>
+     */
+    com.google.protobuf.FloatValueOrBuilder getGpResourceGroupMemoryLimitOrBuilder();
   }
   /**
    * <pre>
@@ -4020,6 +9704,7 @@ public final class GPCF {
     }
     private GreenplumSegmentConfig() {
       logLevel_ = 0;
+      gpResourceManager_ = 0;
     }
 
     @java.lang.Override
@@ -4061,6 +9746,90 @@ public final class GPCF {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(maxConnections_);
                 maxConnections_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxSlotWalKeepSize_ != null) {
+                subBuilder = maxSlotWalKeepSize_.toBuilder();
+              }
+              maxSlotWalKeepSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxSlotWalKeepSize_);
+                maxSlotWalKeepSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (gpWorkfileLimitPerSegment_ != null) {
+                subBuilder = gpWorkfileLimitPerSegment_.toBuilder();
+              }
+              gpWorkfileLimitPerSegment_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gpWorkfileLimitPerSegment_);
+                gpWorkfileLimitPerSegment_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (gpWorkfileLimitPerQuery_ != null) {
+                subBuilder = gpWorkfileLimitPerQuery_.toBuilder();
+              }
+              gpWorkfileLimitPerQuery_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gpWorkfileLimitPerQuery_);
+                gpWorkfileLimitPerQuery_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (gpWorkfileLimitFilesPerQuery_ != null) {
+                subBuilder = gpWorkfileLimitFilesPerQuery_.toBuilder();
+              }
+              gpWorkfileLimitFilesPerQuery_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gpWorkfileLimitFilesPerQuery_);
+                gpWorkfileLimitFilesPerQuery_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 88: {
+              int rawValue = input.readEnum();
+
+              gpResourceManager_ = rawValue;
+              break;
+            }
+            case 138: {
+              com.google.protobuf.FloatValue.Builder subBuilder = null;
+              if (gpResourceGroupCpuLimit_ != null) {
+                subBuilder = gpResourceGroupCpuLimit_.toBuilder();
+              }
+              gpResourceGroupCpuLimit_ = input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gpResourceGroupCpuLimit_);
+                gpResourceGroupCpuLimit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 146: {
+              com.google.protobuf.FloatValue.Builder subBuilder = null;
+              if (gpResourceGroupMemoryLimit_ != null) {
+                subBuilder = gpResourceGroupMemoryLimit_.toBuilder();
+              }
+              gpResourceGroupMemoryLimit_ = input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gpResourceGroupMemoryLimit_);
+                gpResourceGroupMemoryLimit_ = subBuilder.buildPartial();
               }
 
               break;
@@ -4231,6 +10000,113 @@ public final class GPCF {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.greenplum.v1.GreenplumSegmentConfig.LogLevel)
     }
 
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.greenplum.v1.GreenplumSegmentConfig.GPResourceManager}
+     */
+    public enum GPResourceManager
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>GP_RESOURCE_MANAGER_UNSPECIFIED = 0;</code>
+       */
+      GP_RESOURCE_MANAGER_UNSPECIFIED(0),
+      /**
+       * <code>QUEUE = 1;</code>
+       */
+      QUEUE(1),
+      /**
+       * <code>GREOUP = 2;</code>
+       */
+      GREOUP(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>GP_RESOURCE_MANAGER_UNSPECIFIED = 0;</code>
+       */
+      public static final int GP_RESOURCE_MANAGER_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>QUEUE = 1;</code>
+       */
+      public static final int QUEUE_VALUE = 1;
+      /**
+       * <code>GREOUP = 2;</code>
+       */
+      public static final int GREOUP_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static GPResourceManager valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static GPResourceManager forNumber(int value) {
+        switch (value) {
+          case 0: return GP_RESOURCE_MANAGER_UNSPECIFIED;
+          case 1: return QUEUE;
+          case 2: return GREOUP;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<GPResourceManager>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          GPResourceManager> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<GPResourceManager>() {
+              public GPResourceManager findValueByNumber(int number) {
+                return GPResourceManager.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumSegmentConfig.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final GPResourceManager[] VALUES = values();
+
+      public static GPResourceManager valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private GPResourceManager(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.greenplum.v1.GreenplumSegmentConfig.GPResourceManager)
+    }
+
     public static final int LOG_LEVEL_FIELD_NUMBER = 1;
     private int logLevel_;
     /**
@@ -4289,6 +10165,275 @@ public final class GPCF {
       return getMaxConnections();
     }
 
+    public static final int MAX_SLOT_WAL_KEEP_SIZE_FIELD_NUMBER = 7;
+    private com.google.protobuf.Int64Value maxSlotWalKeepSize_;
+    /**
+     * <pre>
+     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 7;</code>
+     */
+    public boolean hasMaxSlotWalKeepSize() {
+      return maxSlotWalKeepSize_ != null;
+    }
+    /**
+     * <pre>
+     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 7;</code>
+     */
+    public com.google.protobuf.Int64Value getMaxSlotWalKeepSize() {
+      return maxSlotWalKeepSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxSlotWalKeepSize_;
+    }
+    /**
+     * <pre>
+     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 7;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMaxSlotWalKeepSizeOrBuilder() {
+      return getMaxSlotWalKeepSize();
+    }
+
+    public static final int GP_WORKFILE_LIMIT_PER_SEGMENT_FIELD_NUMBER = 8;
+    private com.google.protobuf.Int64Value gpWorkfileLimitPerSegment_;
+    /**
+     * <pre>
+     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 8;</code>
+     */
+    public boolean hasGpWorkfileLimitPerSegment() {
+      return gpWorkfileLimitPerSegment_ != null;
+    }
+    /**
+     * <pre>
+     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 8;</code>
+     */
+    public com.google.protobuf.Int64Value getGpWorkfileLimitPerSegment() {
+      return gpWorkfileLimitPerSegment_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitPerSegment_;
+    }
+    /**
+     * <pre>
+     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 8;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitPerSegmentOrBuilder() {
+      return getGpWorkfileLimitPerSegment();
+    }
+
+    public static final int GP_WORKFILE_LIMIT_PER_QUERY_FIELD_NUMBER = 9;
+    private com.google.protobuf.Int64Value gpWorkfileLimitPerQuery_;
+    /**
+     * <pre>
+     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 9;</code>
+     */
+    public boolean hasGpWorkfileLimitPerQuery() {
+      return gpWorkfileLimitPerQuery_ != null;
+    }
+    /**
+     * <pre>
+     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 9;</code>
+     */
+    public com.google.protobuf.Int64Value getGpWorkfileLimitPerQuery() {
+      return gpWorkfileLimitPerQuery_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitPerQuery_;
+    }
+    /**
+     * <pre>
+     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 9;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitPerQueryOrBuilder() {
+      return getGpWorkfileLimitPerQuery();
+    }
+
+    public static final int GP_WORKFILE_LIMIT_FILES_PER_QUERY_FIELD_NUMBER = 10;
+    private com.google.protobuf.Int64Value gpWorkfileLimitFilesPerQuery_;
+    /**
+     * <pre>
+     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+     * Spill files are created when executing a query that requires more memory than it is allocated.
+     * The current query is terminated when the limit is exceeded.
+     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * Default value is 10000
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 10;</code>
+     */
+    public boolean hasGpWorkfileLimitFilesPerQuery() {
+      return gpWorkfileLimitFilesPerQuery_ != null;
+    }
+    /**
+     * <pre>
+     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+     * Spill files are created when executing a query that requires more memory than it is allocated.
+     * The current query is terminated when the limit is exceeded.
+     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * Default value is 10000
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 10;</code>
+     */
+    public com.google.protobuf.Int64Value getGpWorkfileLimitFilesPerQuery() {
+      return gpWorkfileLimitFilesPerQuery_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitFilesPerQuery_;
+    }
+    /**
+     * <pre>
+     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+     * Spill files are created when executing a query that requires more memory than it is allocated.
+     * The current query is terminated when the limit is exceeded.
+     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * Default value is 10000
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 10;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitFilesPerQueryOrBuilder() {
+      return getGpWorkfileLimitFilesPerQuery();
+    }
+
+    public static final int GP_RESOURCE_MANAGER_FIELD_NUMBER = 11;
+    private int gpResourceManager_;
+    /**
+     * <pre>
+     * Identifies the resource management scheme currently enabled in the Greenplum Database cluster. The default scheme is to use resource queues.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_manager
+     * "group" is the default value
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumSegmentConfig.GPResourceManager gp_resource_manager = 11;</code>
+     */
+    public int getGpResourceManagerValue() {
+      return gpResourceManager_;
+    }
+    /**
+     * <pre>
+     * Identifies the resource management scheme currently enabled in the Greenplum Database cluster. The default scheme is to use resource queues.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_manager
+     * "group" is the default value
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumSegmentConfig.GPResourceManager gp_resource_manager = 11;</code>
+     */
+    public yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumSegmentConfig.GPResourceManager getGpResourceManager() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumSegmentConfig.GPResourceManager result = yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumSegmentConfig.GPResourceManager.valueOf(gpResourceManager_);
+      return result == null ? yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumSegmentConfig.GPResourceManager.UNRECOGNIZED : result;
+    }
+
+    public static final int GP_RESOURCE_GROUP_CPU_LIMIT_FIELD_NUMBER = 17;
+    private com.google.protobuf.FloatValue gpResourceGroupCpuLimit_;
+    /**
+     * <pre>
+     * Identifies the maximum percentage of system CPU resources to allocate to resource groups on each Greenplum Database segment node.
+     * Note: The gp_resource_group_cpu_limit server configuration parameter is enforced only when resource group-based resource management is active.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_cpu_limit
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue gp_resource_group_cpu_limit = 17;</code>
+     */
+    public boolean hasGpResourceGroupCpuLimit() {
+      return gpResourceGroupCpuLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Identifies the maximum percentage of system CPU resources to allocate to resource groups on each Greenplum Database segment node.
+     * Note: The gp_resource_group_cpu_limit server configuration parameter is enforced only when resource group-based resource management is active.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_cpu_limit
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue gp_resource_group_cpu_limit = 17;</code>
+     */
+    public com.google.protobuf.FloatValue getGpResourceGroupCpuLimit() {
+      return gpResourceGroupCpuLimit_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : gpResourceGroupCpuLimit_;
+    }
+    /**
+     * <pre>
+     * Identifies the maximum percentage of system CPU resources to allocate to resource groups on each Greenplum Database segment node.
+     * Note: The gp_resource_group_cpu_limit server configuration parameter is enforced only when resource group-based resource management is active.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_cpu_limit
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue gp_resource_group_cpu_limit = 17;</code>
+     */
+    public com.google.protobuf.FloatValueOrBuilder getGpResourceGroupCpuLimitOrBuilder() {
+      return getGpResourceGroupCpuLimit();
+    }
+
+    public static final int GP_RESOURCE_GROUP_MEMORY_LIMIT_FIELD_NUMBER = 18;
+    private com.google.protobuf.FloatValue gpResourceGroupMemoryLimit_;
+    /**
+     * <pre>
+     * Identifies the maximum percentage of system memory resources to allocate to resource groups on each Greenplum Database segment node.
+     * Note: The gp_resource_group_memory_limit server configuration parameter is enforced only when resource group-based resource management is active.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_memory_limit
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue gp_resource_group_memory_limit = 18;</code>
+     */
+    public boolean hasGpResourceGroupMemoryLimit() {
+      return gpResourceGroupMemoryLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Identifies the maximum percentage of system memory resources to allocate to resource groups on each Greenplum Database segment node.
+     * Note: The gp_resource_group_memory_limit server configuration parameter is enforced only when resource group-based resource management is active.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_memory_limit
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue gp_resource_group_memory_limit = 18;</code>
+     */
+    public com.google.protobuf.FloatValue getGpResourceGroupMemoryLimit() {
+      return gpResourceGroupMemoryLimit_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : gpResourceGroupMemoryLimit_;
+    }
+    /**
+     * <pre>
+     * Identifies the maximum percentage of system memory resources to allocate to resource groups on each Greenplum Database segment node.
+     * Note: The gp_resource_group_memory_limit server configuration parameter is enforced only when resource group-based resource management is active.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_memory_limit
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue gp_resource_group_memory_limit = 18;</code>
+     */
+    public com.google.protobuf.FloatValueOrBuilder getGpResourceGroupMemoryLimitOrBuilder() {
+      return getGpResourceGroupMemoryLimit();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4309,6 +10454,27 @@ public final class GPCF {
       if (maxConnections_ != null) {
         output.writeMessage(2, getMaxConnections());
       }
+      if (maxSlotWalKeepSize_ != null) {
+        output.writeMessage(7, getMaxSlotWalKeepSize());
+      }
+      if (gpWorkfileLimitPerSegment_ != null) {
+        output.writeMessage(8, getGpWorkfileLimitPerSegment());
+      }
+      if (gpWorkfileLimitPerQuery_ != null) {
+        output.writeMessage(9, getGpWorkfileLimitPerQuery());
+      }
+      if (gpWorkfileLimitFilesPerQuery_ != null) {
+        output.writeMessage(10, getGpWorkfileLimitFilesPerQuery());
+      }
+      if (gpResourceManager_ != yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumSegmentConfig.GPResourceManager.GP_RESOURCE_MANAGER_UNSPECIFIED.getNumber()) {
+        output.writeEnum(11, gpResourceManager_);
+      }
+      if (gpResourceGroupCpuLimit_ != null) {
+        output.writeMessage(17, getGpResourceGroupCpuLimit());
+      }
+      if (gpResourceGroupMemoryLimit_ != null) {
+        output.writeMessage(18, getGpResourceGroupMemoryLimit());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4325,6 +10491,34 @@ public final class GPCF {
       if (maxConnections_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getMaxConnections());
+      }
+      if (maxSlotWalKeepSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getMaxSlotWalKeepSize());
+      }
+      if (gpWorkfileLimitPerSegment_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getGpWorkfileLimitPerSegment());
+      }
+      if (gpWorkfileLimitPerQuery_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getGpWorkfileLimitPerQuery());
+      }
+      if (gpWorkfileLimitFilesPerQuery_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getGpWorkfileLimitFilesPerQuery());
+      }
+      if (gpResourceManager_ != yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumSegmentConfig.GPResourceManager.GP_RESOURCE_MANAGER_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(11, gpResourceManager_);
+      }
+      if (gpResourceGroupCpuLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, getGpResourceGroupCpuLimit());
+      }
+      if (gpResourceGroupMemoryLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(18, getGpResourceGroupMemoryLimit());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4348,6 +10542,37 @@ public final class GPCF {
         result = result && getMaxConnections()
             .equals(other.getMaxConnections());
       }
+      result = result && (hasMaxSlotWalKeepSize() == other.hasMaxSlotWalKeepSize());
+      if (hasMaxSlotWalKeepSize()) {
+        result = result && getMaxSlotWalKeepSize()
+            .equals(other.getMaxSlotWalKeepSize());
+      }
+      result = result && (hasGpWorkfileLimitPerSegment() == other.hasGpWorkfileLimitPerSegment());
+      if (hasGpWorkfileLimitPerSegment()) {
+        result = result && getGpWorkfileLimitPerSegment()
+            .equals(other.getGpWorkfileLimitPerSegment());
+      }
+      result = result && (hasGpWorkfileLimitPerQuery() == other.hasGpWorkfileLimitPerQuery());
+      if (hasGpWorkfileLimitPerQuery()) {
+        result = result && getGpWorkfileLimitPerQuery()
+            .equals(other.getGpWorkfileLimitPerQuery());
+      }
+      result = result && (hasGpWorkfileLimitFilesPerQuery() == other.hasGpWorkfileLimitFilesPerQuery());
+      if (hasGpWorkfileLimitFilesPerQuery()) {
+        result = result && getGpWorkfileLimitFilesPerQuery()
+            .equals(other.getGpWorkfileLimitFilesPerQuery());
+      }
+      result = result && gpResourceManager_ == other.gpResourceManager_;
+      result = result && (hasGpResourceGroupCpuLimit() == other.hasGpResourceGroupCpuLimit());
+      if (hasGpResourceGroupCpuLimit()) {
+        result = result && getGpResourceGroupCpuLimit()
+            .equals(other.getGpResourceGroupCpuLimit());
+      }
+      result = result && (hasGpResourceGroupMemoryLimit() == other.hasGpResourceGroupMemoryLimit());
+      if (hasGpResourceGroupMemoryLimit()) {
+        result = result && getGpResourceGroupMemoryLimit()
+            .equals(other.getGpResourceGroupMemoryLimit());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -4364,6 +10589,32 @@ public final class GPCF {
       if (hasMaxConnections()) {
         hash = (37 * hash) + MAX_CONNECTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getMaxConnections().hashCode();
+      }
+      if (hasMaxSlotWalKeepSize()) {
+        hash = (37 * hash) + MAX_SLOT_WAL_KEEP_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxSlotWalKeepSize().hashCode();
+      }
+      if (hasGpWorkfileLimitPerSegment()) {
+        hash = (37 * hash) + GP_WORKFILE_LIMIT_PER_SEGMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getGpWorkfileLimitPerSegment().hashCode();
+      }
+      if (hasGpWorkfileLimitPerQuery()) {
+        hash = (37 * hash) + GP_WORKFILE_LIMIT_PER_QUERY_FIELD_NUMBER;
+        hash = (53 * hash) + getGpWorkfileLimitPerQuery().hashCode();
+      }
+      if (hasGpWorkfileLimitFilesPerQuery()) {
+        hash = (37 * hash) + GP_WORKFILE_LIMIT_FILES_PER_QUERY_FIELD_NUMBER;
+        hash = (53 * hash) + getGpWorkfileLimitFilesPerQuery().hashCode();
+      }
+      hash = (37 * hash) + GP_RESOURCE_MANAGER_FIELD_NUMBER;
+      hash = (53 * hash) + gpResourceManager_;
+      if (hasGpResourceGroupCpuLimit()) {
+        hash = (37 * hash) + GP_RESOURCE_GROUP_CPU_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getGpResourceGroupCpuLimit().hashCode();
+      }
+      if (hasGpResourceGroupMemoryLimit()) {
+        hash = (37 * hash) + GP_RESOURCE_GROUP_MEMORY_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getGpResourceGroupMemoryLimit().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4511,6 +10762,44 @@ public final class GPCF {
           maxConnections_ = null;
           maxConnectionsBuilder_ = null;
         }
+        if (maxSlotWalKeepSizeBuilder_ == null) {
+          maxSlotWalKeepSize_ = null;
+        } else {
+          maxSlotWalKeepSize_ = null;
+          maxSlotWalKeepSizeBuilder_ = null;
+        }
+        if (gpWorkfileLimitPerSegmentBuilder_ == null) {
+          gpWorkfileLimitPerSegment_ = null;
+        } else {
+          gpWorkfileLimitPerSegment_ = null;
+          gpWorkfileLimitPerSegmentBuilder_ = null;
+        }
+        if (gpWorkfileLimitPerQueryBuilder_ == null) {
+          gpWorkfileLimitPerQuery_ = null;
+        } else {
+          gpWorkfileLimitPerQuery_ = null;
+          gpWorkfileLimitPerQueryBuilder_ = null;
+        }
+        if (gpWorkfileLimitFilesPerQueryBuilder_ == null) {
+          gpWorkfileLimitFilesPerQuery_ = null;
+        } else {
+          gpWorkfileLimitFilesPerQuery_ = null;
+          gpWorkfileLimitFilesPerQueryBuilder_ = null;
+        }
+        gpResourceManager_ = 0;
+
+        if (gpResourceGroupCpuLimitBuilder_ == null) {
+          gpResourceGroupCpuLimit_ = null;
+        } else {
+          gpResourceGroupCpuLimit_ = null;
+          gpResourceGroupCpuLimitBuilder_ = null;
+        }
+        if (gpResourceGroupMemoryLimitBuilder_ == null) {
+          gpResourceGroupMemoryLimit_ = null;
+        } else {
+          gpResourceGroupMemoryLimit_ = null;
+          gpResourceGroupMemoryLimitBuilder_ = null;
+        }
         return this;
       }
 
@@ -4542,6 +10831,37 @@ public final class GPCF {
           result.maxConnections_ = maxConnections_;
         } else {
           result.maxConnections_ = maxConnectionsBuilder_.build();
+        }
+        if (maxSlotWalKeepSizeBuilder_ == null) {
+          result.maxSlotWalKeepSize_ = maxSlotWalKeepSize_;
+        } else {
+          result.maxSlotWalKeepSize_ = maxSlotWalKeepSizeBuilder_.build();
+        }
+        if (gpWorkfileLimitPerSegmentBuilder_ == null) {
+          result.gpWorkfileLimitPerSegment_ = gpWorkfileLimitPerSegment_;
+        } else {
+          result.gpWorkfileLimitPerSegment_ = gpWorkfileLimitPerSegmentBuilder_.build();
+        }
+        if (gpWorkfileLimitPerQueryBuilder_ == null) {
+          result.gpWorkfileLimitPerQuery_ = gpWorkfileLimitPerQuery_;
+        } else {
+          result.gpWorkfileLimitPerQuery_ = gpWorkfileLimitPerQueryBuilder_.build();
+        }
+        if (gpWorkfileLimitFilesPerQueryBuilder_ == null) {
+          result.gpWorkfileLimitFilesPerQuery_ = gpWorkfileLimitFilesPerQuery_;
+        } else {
+          result.gpWorkfileLimitFilesPerQuery_ = gpWorkfileLimitFilesPerQueryBuilder_.build();
+        }
+        result.gpResourceManager_ = gpResourceManager_;
+        if (gpResourceGroupCpuLimitBuilder_ == null) {
+          result.gpResourceGroupCpuLimit_ = gpResourceGroupCpuLimit_;
+        } else {
+          result.gpResourceGroupCpuLimit_ = gpResourceGroupCpuLimitBuilder_.build();
+        }
+        if (gpResourceGroupMemoryLimitBuilder_ == null) {
+          result.gpResourceGroupMemoryLimit_ = gpResourceGroupMemoryLimit_;
+        } else {
+          result.gpResourceGroupMemoryLimit_ = gpResourceGroupMemoryLimitBuilder_.build();
         }
         onBuilt();
         return result;
@@ -4596,6 +10916,27 @@ public final class GPCF {
         }
         if (other.hasMaxConnections()) {
           mergeMaxConnections(other.getMaxConnections());
+        }
+        if (other.hasMaxSlotWalKeepSize()) {
+          mergeMaxSlotWalKeepSize(other.getMaxSlotWalKeepSize());
+        }
+        if (other.hasGpWorkfileLimitPerSegment()) {
+          mergeGpWorkfileLimitPerSegment(other.getGpWorkfileLimitPerSegment());
+        }
+        if (other.hasGpWorkfileLimitPerQuery()) {
+          mergeGpWorkfileLimitPerQuery(other.getGpWorkfileLimitPerQuery());
+        }
+        if (other.hasGpWorkfileLimitFilesPerQuery()) {
+          mergeGpWorkfileLimitFilesPerQuery(other.getGpWorkfileLimitFilesPerQuery());
+        }
+        if (other.gpResourceManager_ != 0) {
+          setGpResourceManagerValue(other.getGpResourceManagerValue());
+        }
+        if (other.hasGpResourceGroupCpuLimit()) {
+          mergeGpResourceGroupCpuLimit(other.getGpResourceGroupCpuLimit());
+        }
+        if (other.hasGpResourceGroupMemoryLimit()) {
+          mergeGpResourceGroupMemoryLimit(other.getGpResourceGroupMemoryLimit());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4842,6 +11183,1125 @@ public final class GPCF {
           maxConnections_ = null;
         }
         return maxConnectionsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxSlotWalKeepSize_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxSlotWalKeepSizeBuilder_;
+      /**
+       * <pre>
+       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 7;</code>
+       */
+      public boolean hasMaxSlotWalKeepSize() {
+        return maxSlotWalKeepSizeBuilder_ != null || maxSlotWalKeepSize_ != null;
+      }
+      /**
+       * <pre>
+       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 7;</code>
+       */
+      public com.google.protobuf.Int64Value getMaxSlotWalKeepSize() {
+        if (maxSlotWalKeepSizeBuilder_ == null) {
+          return maxSlotWalKeepSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxSlotWalKeepSize_;
+        } else {
+          return maxSlotWalKeepSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 7;</code>
+       */
+      public Builder setMaxSlotWalKeepSize(com.google.protobuf.Int64Value value) {
+        if (maxSlotWalKeepSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxSlotWalKeepSize_ = value;
+          onChanged();
+        } else {
+          maxSlotWalKeepSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 7;</code>
+       */
+      public Builder setMaxSlotWalKeepSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxSlotWalKeepSizeBuilder_ == null) {
+          maxSlotWalKeepSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxSlotWalKeepSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 7;</code>
+       */
+      public Builder mergeMaxSlotWalKeepSize(com.google.protobuf.Int64Value value) {
+        if (maxSlotWalKeepSizeBuilder_ == null) {
+          if (maxSlotWalKeepSize_ != null) {
+            maxSlotWalKeepSize_ =
+              com.google.protobuf.Int64Value.newBuilder(maxSlotWalKeepSize_).mergeFrom(value).buildPartial();
+          } else {
+            maxSlotWalKeepSize_ = value;
+          }
+          onChanged();
+        } else {
+          maxSlotWalKeepSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 7;</code>
+       */
+      public Builder clearMaxSlotWalKeepSize() {
+        if (maxSlotWalKeepSizeBuilder_ == null) {
+          maxSlotWalKeepSize_ = null;
+          onChanged();
+        } else {
+          maxSlotWalKeepSize_ = null;
+          maxSlotWalKeepSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 7;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxSlotWalKeepSizeBuilder() {
+        
+        onChanged();
+        return getMaxSlotWalKeepSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 7;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxSlotWalKeepSizeOrBuilder() {
+        if (maxSlotWalKeepSizeBuilder_ != null) {
+          return maxSlotWalKeepSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return maxSlotWalKeepSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxSlotWalKeepSize_;
+        }
+      }
+      /**
+       * <pre>
+       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxSlotWalKeepSizeFieldBuilder() {
+        if (maxSlotWalKeepSizeBuilder_ == null) {
+          maxSlotWalKeepSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxSlotWalKeepSize(),
+                  getParentForChildren(),
+                  isClean());
+          maxSlotWalKeepSize_ = null;
+        }
+        return maxSlotWalKeepSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value gpWorkfileLimitPerSegment_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpWorkfileLimitPerSegmentBuilder_;
+      /**
+       * <pre>
+       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 8;</code>
+       */
+      public boolean hasGpWorkfileLimitPerSegment() {
+        return gpWorkfileLimitPerSegmentBuilder_ != null || gpWorkfileLimitPerSegment_ != null;
+      }
+      /**
+       * <pre>
+       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 8;</code>
+       */
+      public com.google.protobuf.Int64Value getGpWorkfileLimitPerSegment() {
+        if (gpWorkfileLimitPerSegmentBuilder_ == null) {
+          return gpWorkfileLimitPerSegment_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitPerSegment_;
+        } else {
+          return gpWorkfileLimitPerSegmentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 8;</code>
+       */
+      public Builder setGpWorkfileLimitPerSegment(com.google.protobuf.Int64Value value) {
+        if (gpWorkfileLimitPerSegmentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gpWorkfileLimitPerSegment_ = value;
+          onChanged();
+        } else {
+          gpWorkfileLimitPerSegmentBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 8;</code>
+       */
+      public Builder setGpWorkfileLimitPerSegment(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (gpWorkfileLimitPerSegmentBuilder_ == null) {
+          gpWorkfileLimitPerSegment_ = builderForValue.build();
+          onChanged();
+        } else {
+          gpWorkfileLimitPerSegmentBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 8;</code>
+       */
+      public Builder mergeGpWorkfileLimitPerSegment(com.google.protobuf.Int64Value value) {
+        if (gpWorkfileLimitPerSegmentBuilder_ == null) {
+          if (gpWorkfileLimitPerSegment_ != null) {
+            gpWorkfileLimitPerSegment_ =
+              com.google.protobuf.Int64Value.newBuilder(gpWorkfileLimitPerSegment_).mergeFrom(value).buildPartial();
+          } else {
+            gpWorkfileLimitPerSegment_ = value;
+          }
+          onChanged();
+        } else {
+          gpWorkfileLimitPerSegmentBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 8;</code>
+       */
+      public Builder clearGpWorkfileLimitPerSegment() {
+        if (gpWorkfileLimitPerSegmentBuilder_ == null) {
+          gpWorkfileLimitPerSegment_ = null;
+          onChanged();
+        } else {
+          gpWorkfileLimitPerSegment_ = null;
+          gpWorkfileLimitPerSegmentBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 8;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getGpWorkfileLimitPerSegmentBuilder() {
+        
+        onChanged();
+        return getGpWorkfileLimitPerSegmentFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 8;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitPerSegmentOrBuilder() {
+        if (gpWorkfileLimitPerSegmentBuilder_ != null) {
+          return gpWorkfileLimitPerSegmentBuilder_.getMessageOrBuilder();
+        } else {
+          return gpWorkfileLimitPerSegment_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitPerSegment_;
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getGpWorkfileLimitPerSegmentFieldBuilder() {
+        if (gpWorkfileLimitPerSegmentBuilder_ == null) {
+          gpWorkfileLimitPerSegmentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getGpWorkfileLimitPerSegment(),
+                  getParentForChildren(),
+                  isClean());
+          gpWorkfileLimitPerSegment_ = null;
+        }
+        return gpWorkfileLimitPerSegmentBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value gpWorkfileLimitPerQuery_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpWorkfileLimitPerQueryBuilder_;
+      /**
+       * <pre>
+       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 9;</code>
+       */
+      public boolean hasGpWorkfileLimitPerQuery() {
+        return gpWorkfileLimitPerQueryBuilder_ != null || gpWorkfileLimitPerQuery_ != null;
+      }
+      /**
+       * <pre>
+       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 9;</code>
+       */
+      public com.google.protobuf.Int64Value getGpWorkfileLimitPerQuery() {
+        if (gpWorkfileLimitPerQueryBuilder_ == null) {
+          return gpWorkfileLimitPerQuery_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitPerQuery_;
+        } else {
+          return gpWorkfileLimitPerQueryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 9;</code>
+       */
+      public Builder setGpWorkfileLimitPerQuery(com.google.protobuf.Int64Value value) {
+        if (gpWorkfileLimitPerQueryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gpWorkfileLimitPerQuery_ = value;
+          onChanged();
+        } else {
+          gpWorkfileLimitPerQueryBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 9;</code>
+       */
+      public Builder setGpWorkfileLimitPerQuery(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (gpWorkfileLimitPerQueryBuilder_ == null) {
+          gpWorkfileLimitPerQuery_ = builderForValue.build();
+          onChanged();
+        } else {
+          gpWorkfileLimitPerQueryBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 9;</code>
+       */
+      public Builder mergeGpWorkfileLimitPerQuery(com.google.protobuf.Int64Value value) {
+        if (gpWorkfileLimitPerQueryBuilder_ == null) {
+          if (gpWorkfileLimitPerQuery_ != null) {
+            gpWorkfileLimitPerQuery_ =
+              com.google.protobuf.Int64Value.newBuilder(gpWorkfileLimitPerQuery_).mergeFrom(value).buildPartial();
+          } else {
+            gpWorkfileLimitPerQuery_ = value;
+          }
+          onChanged();
+        } else {
+          gpWorkfileLimitPerQueryBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 9;</code>
+       */
+      public Builder clearGpWorkfileLimitPerQuery() {
+        if (gpWorkfileLimitPerQueryBuilder_ == null) {
+          gpWorkfileLimitPerQuery_ = null;
+          onChanged();
+        } else {
+          gpWorkfileLimitPerQuery_ = null;
+          gpWorkfileLimitPerQueryBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 9;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getGpWorkfileLimitPerQueryBuilder() {
+        
+        onChanged();
+        return getGpWorkfileLimitPerQueryFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 9;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitPerQueryOrBuilder() {
+        if (gpWorkfileLimitPerQueryBuilder_ != null) {
+          return gpWorkfileLimitPerQueryBuilder_.getMessageOrBuilder();
+        } else {
+          return gpWorkfileLimitPerQuery_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitPerQuery_;
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getGpWorkfileLimitPerQueryFieldBuilder() {
+        if (gpWorkfileLimitPerQueryBuilder_ == null) {
+          gpWorkfileLimitPerQueryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getGpWorkfileLimitPerQuery(),
+                  getParentForChildren(),
+                  isClean());
+          gpWorkfileLimitPerQuery_ = null;
+        }
+        return gpWorkfileLimitPerQueryBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value gpWorkfileLimitFilesPerQuery_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpWorkfileLimitFilesPerQueryBuilder_;
+      /**
+       * <pre>
+       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+       * Spill files are created when executing a query that requires more memory than it is allocated.
+       * The current query is terminated when the limit is exceeded.
+       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * Default value is 10000
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 10;</code>
+       */
+      public boolean hasGpWorkfileLimitFilesPerQuery() {
+        return gpWorkfileLimitFilesPerQueryBuilder_ != null || gpWorkfileLimitFilesPerQuery_ != null;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+       * Spill files are created when executing a query that requires more memory than it is allocated.
+       * The current query is terminated when the limit is exceeded.
+       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * Default value is 10000
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 10;</code>
+       */
+      public com.google.protobuf.Int64Value getGpWorkfileLimitFilesPerQuery() {
+        if (gpWorkfileLimitFilesPerQueryBuilder_ == null) {
+          return gpWorkfileLimitFilesPerQuery_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitFilesPerQuery_;
+        } else {
+          return gpWorkfileLimitFilesPerQueryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+       * Spill files are created when executing a query that requires more memory than it is allocated.
+       * The current query is terminated when the limit is exceeded.
+       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * Default value is 10000
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 10;</code>
+       */
+      public Builder setGpWorkfileLimitFilesPerQuery(com.google.protobuf.Int64Value value) {
+        if (gpWorkfileLimitFilesPerQueryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gpWorkfileLimitFilesPerQuery_ = value;
+          onChanged();
+        } else {
+          gpWorkfileLimitFilesPerQueryBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+       * Spill files are created when executing a query that requires more memory than it is allocated.
+       * The current query is terminated when the limit is exceeded.
+       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * Default value is 10000
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 10;</code>
+       */
+      public Builder setGpWorkfileLimitFilesPerQuery(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (gpWorkfileLimitFilesPerQueryBuilder_ == null) {
+          gpWorkfileLimitFilesPerQuery_ = builderForValue.build();
+          onChanged();
+        } else {
+          gpWorkfileLimitFilesPerQueryBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+       * Spill files are created when executing a query that requires more memory than it is allocated.
+       * The current query is terminated when the limit is exceeded.
+       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * Default value is 10000
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 10;</code>
+       */
+      public Builder mergeGpWorkfileLimitFilesPerQuery(com.google.protobuf.Int64Value value) {
+        if (gpWorkfileLimitFilesPerQueryBuilder_ == null) {
+          if (gpWorkfileLimitFilesPerQuery_ != null) {
+            gpWorkfileLimitFilesPerQuery_ =
+              com.google.protobuf.Int64Value.newBuilder(gpWorkfileLimitFilesPerQuery_).mergeFrom(value).buildPartial();
+          } else {
+            gpWorkfileLimitFilesPerQuery_ = value;
+          }
+          onChanged();
+        } else {
+          gpWorkfileLimitFilesPerQueryBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+       * Spill files are created when executing a query that requires more memory than it is allocated.
+       * The current query is terminated when the limit is exceeded.
+       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * Default value is 10000
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 10;</code>
+       */
+      public Builder clearGpWorkfileLimitFilesPerQuery() {
+        if (gpWorkfileLimitFilesPerQueryBuilder_ == null) {
+          gpWorkfileLimitFilesPerQuery_ = null;
+          onChanged();
+        } else {
+          gpWorkfileLimitFilesPerQuery_ = null;
+          gpWorkfileLimitFilesPerQueryBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+       * Spill files are created when executing a query that requires more memory than it is allocated.
+       * The current query is terminated when the limit is exceeded.
+       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * Default value is 10000
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 10;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getGpWorkfileLimitFilesPerQueryBuilder() {
+        
+        onChanged();
+        return getGpWorkfileLimitFilesPerQueryFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+       * Spill files are created when executing a query that requires more memory than it is allocated.
+       * The current query is terminated when the limit is exceeded.
+       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * Default value is 10000
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 10;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitFilesPerQueryOrBuilder() {
+        if (gpWorkfileLimitFilesPerQueryBuilder_ != null) {
+          return gpWorkfileLimitFilesPerQueryBuilder_.getMessageOrBuilder();
+        } else {
+          return gpWorkfileLimitFilesPerQuery_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitFilesPerQuery_;
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+       * Spill files are created when executing a query that requires more memory than it is allocated.
+       * The current query is terminated when the limit is exceeded.
+       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * Default value is 10000
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getGpWorkfileLimitFilesPerQueryFieldBuilder() {
+        if (gpWorkfileLimitFilesPerQueryBuilder_ == null) {
+          gpWorkfileLimitFilesPerQueryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getGpWorkfileLimitFilesPerQuery(),
+                  getParentForChildren(),
+                  isClean());
+          gpWorkfileLimitFilesPerQuery_ = null;
+        }
+        return gpWorkfileLimitFilesPerQueryBuilder_;
+      }
+
+      private int gpResourceManager_ = 0;
+      /**
+       * <pre>
+       * Identifies the resource management scheme currently enabled in the Greenplum Database cluster. The default scheme is to use resource queues.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_manager
+       * "group" is the default value
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumSegmentConfig.GPResourceManager gp_resource_manager = 11;</code>
+       */
+      public int getGpResourceManagerValue() {
+        return gpResourceManager_;
+      }
+      /**
+       * <pre>
+       * Identifies the resource management scheme currently enabled in the Greenplum Database cluster. The default scheme is to use resource queues.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_manager
+       * "group" is the default value
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumSegmentConfig.GPResourceManager gp_resource_manager = 11;</code>
+       */
+      public Builder setGpResourceManagerValue(int value) {
+        gpResourceManager_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifies the resource management scheme currently enabled in the Greenplum Database cluster. The default scheme is to use resource queues.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_manager
+       * "group" is the default value
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumSegmentConfig.GPResourceManager gp_resource_manager = 11;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumSegmentConfig.GPResourceManager getGpResourceManager() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumSegmentConfig.GPResourceManager result = yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumSegmentConfig.GPResourceManager.valueOf(gpResourceManager_);
+        return result == null ? yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumSegmentConfig.GPResourceManager.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Identifies the resource management scheme currently enabled in the Greenplum Database cluster. The default scheme is to use resource queues.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_manager
+       * "group" is the default value
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumSegmentConfig.GPResourceManager gp_resource_manager = 11;</code>
+       */
+      public Builder setGpResourceManager(yandex.cloud.api.mdb.greenplum.v1.GPCF.GreenplumSegmentConfig.GPResourceManager value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        gpResourceManager_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifies the resource management scheme currently enabled in the Greenplum Database cluster. The default scheme is to use resource queues.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_manager
+       * "group" is the default value
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumSegmentConfig.GPResourceManager gp_resource_manager = 11;</code>
+       */
+      public Builder clearGpResourceManager() {
+        
+        gpResourceManager_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.FloatValue gpResourceGroupCpuLimit_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> gpResourceGroupCpuLimitBuilder_;
+      /**
+       * <pre>
+       * Identifies the maximum percentage of system CPU resources to allocate to resource groups on each Greenplum Database segment node.
+       * Note: The gp_resource_group_cpu_limit server configuration parameter is enforced only when resource group-based resource management is active.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_cpu_limit
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue gp_resource_group_cpu_limit = 17;</code>
+       */
+      public boolean hasGpResourceGroupCpuLimit() {
+        return gpResourceGroupCpuLimitBuilder_ != null || gpResourceGroupCpuLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Identifies the maximum percentage of system CPU resources to allocate to resource groups on each Greenplum Database segment node.
+       * Note: The gp_resource_group_cpu_limit server configuration parameter is enforced only when resource group-based resource management is active.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_cpu_limit
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue gp_resource_group_cpu_limit = 17;</code>
+       */
+      public com.google.protobuf.FloatValue getGpResourceGroupCpuLimit() {
+        if (gpResourceGroupCpuLimitBuilder_ == null) {
+          return gpResourceGroupCpuLimit_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : gpResourceGroupCpuLimit_;
+        } else {
+          return gpResourceGroupCpuLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Identifies the maximum percentage of system CPU resources to allocate to resource groups on each Greenplum Database segment node.
+       * Note: The gp_resource_group_cpu_limit server configuration parameter is enforced only when resource group-based resource management is active.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_cpu_limit
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue gp_resource_group_cpu_limit = 17;</code>
+       */
+      public Builder setGpResourceGroupCpuLimit(com.google.protobuf.FloatValue value) {
+        if (gpResourceGroupCpuLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gpResourceGroupCpuLimit_ = value;
+          onChanged();
+        } else {
+          gpResourceGroupCpuLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifies the maximum percentage of system CPU resources to allocate to resource groups on each Greenplum Database segment node.
+       * Note: The gp_resource_group_cpu_limit server configuration parameter is enforced only when resource group-based resource management is active.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_cpu_limit
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue gp_resource_group_cpu_limit = 17;</code>
+       */
+      public Builder setGpResourceGroupCpuLimit(
+          com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (gpResourceGroupCpuLimitBuilder_ == null) {
+          gpResourceGroupCpuLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          gpResourceGroupCpuLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifies the maximum percentage of system CPU resources to allocate to resource groups on each Greenplum Database segment node.
+       * Note: The gp_resource_group_cpu_limit server configuration parameter is enforced only when resource group-based resource management is active.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_cpu_limit
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue gp_resource_group_cpu_limit = 17;</code>
+       */
+      public Builder mergeGpResourceGroupCpuLimit(com.google.protobuf.FloatValue value) {
+        if (gpResourceGroupCpuLimitBuilder_ == null) {
+          if (gpResourceGroupCpuLimit_ != null) {
+            gpResourceGroupCpuLimit_ =
+              com.google.protobuf.FloatValue.newBuilder(gpResourceGroupCpuLimit_).mergeFrom(value).buildPartial();
+          } else {
+            gpResourceGroupCpuLimit_ = value;
+          }
+          onChanged();
+        } else {
+          gpResourceGroupCpuLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifies the maximum percentage of system CPU resources to allocate to resource groups on each Greenplum Database segment node.
+       * Note: The gp_resource_group_cpu_limit server configuration parameter is enforced only when resource group-based resource management is active.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_cpu_limit
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue gp_resource_group_cpu_limit = 17;</code>
+       */
+      public Builder clearGpResourceGroupCpuLimit() {
+        if (gpResourceGroupCpuLimitBuilder_ == null) {
+          gpResourceGroupCpuLimit_ = null;
+          onChanged();
+        } else {
+          gpResourceGroupCpuLimit_ = null;
+          gpResourceGroupCpuLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifies the maximum percentage of system CPU resources to allocate to resource groups on each Greenplum Database segment node.
+       * Note: The gp_resource_group_cpu_limit server configuration parameter is enforced only when resource group-based resource management is active.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_cpu_limit
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue gp_resource_group_cpu_limit = 17;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder getGpResourceGroupCpuLimitBuilder() {
+        
+        onChanged();
+        return getGpResourceGroupCpuLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Identifies the maximum percentage of system CPU resources to allocate to resource groups on each Greenplum Database segment node.
+       * Note: The gp_resource_group_cpu_limit server configuration parameter is enforced only when resource group-based resource management is active.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_cpu_limit
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue gp_resource_group_cpu_limit = 17;</code>
+       */
+      public com.google.protobuf.FloatValueOrBuilder getGpResourceGroupCpuLimitOrBuilder() {
+        if (gpResourceGroupCpuLimitBuilder_ != null) {
+          return gpResourceGroupCpuLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return gpResourceGroupCpuLimit_ == null ?
+              com.google.protobuf.FloatValue.getDefaultInstance() : gpResourceGroupCpuLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Identifies the maximum percentage of system CPU resources to allocate to resource groups on each Greenplum Database segment node.
+       * Note: The gp_resource_group_cpu_limit server configuration parameter is enforced only when resource group-based resource management is active.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_cpu_limit
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue gp_resource_group_cpu_limit = 17;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
+          getGpResourceGroupCpuLimitFieldBuilder() {
+        if (gpResourceGroupCpuLimitBuilder_ == null) {
+          gpResourceGroupCpuLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
+                  getGpResourceGroupCpuLimit(),
+                  getParentForChildren(),
+                  isClean());
+          gpResourceGroupCpuLimit_ = null;
+        }
+        return gpResourceGroupCpuLimitBuilder_;
+      }
+
+      private com.google.protobuf.FloatValue gpResourceGroupMemoryLimit_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> gpResourceGroupMemoryLimitBuilder_;
+      /**
+       * <pre>
+       * Identifies the maximum percentage of system memory resources to allocate to resource groups on each Greenplum Database segment node.
+       * Note: The gp_resource_group_memory_limit server configuration parameter is enforced only when resource group-based resource management is active.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_memory_limit
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue gp_resource_group_memory_limit = 18;</code>
+       */
+      public boolean hasGpResourceGroupMemoryLimit() {
+        return gpResourceGroupMemoryLimitBuilder_ != null || gpResourceGroupMemoryLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Identifies the maximum percentage of system memory resources to allocate to resource groups on each Greenplum Database segment node.
+       * Note: The gp_resource_group_memory_limit server configuration parameter is enforced only when resource group-based resource management is active.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_memory_limit
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue gp_resource_group_memory_limit = 18;</code>
+       */
+      public com.google.protobuf.FloatValue getGpResourceGroupMemoryLimit() {
+        if (gpResourceGroupMemoryLimitBuilder_ == null) {
+          return gpResourceGroupMemoryLimit_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : gpResourceGroupMemoryLimit_;
+        } else {
+          return gpResourceGroupMemoryLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Identifies the maximum percentage of system memory resources to allocate to resource groups on each Greenplum Database segment node.
+       * Note: The gp_resource_group_memory_limit server configuration parameter is enforced only when resource group-based resource management is active.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_memory_limit
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue gp_resource_group_memory_limit = 18;</code>
+       */
+      public Builder setGpResourceGroupMemoryLimit(com.google.protobuf.FloatValue value) {
+        if (gpResourceGroupMemoryLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gpResourceGroupMemoryLimit_ = value;
+          onChanged();
+        } else {
+          gpResourceGroupMemoryLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifies the maximum percentage of system memory resources to allocate to resource groups on each Greenplum Database segment node.
+       * Note: The gp_resource_group_memory_limit server configuration parameter is enforced only when resource group-based resource management is active.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_memory_limit
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue gp_resource_group_memory_limit = 18;</code>
+       */
+      public Builder setGpResourceGroupMemoryLimit(
+          com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (gpResourceGroupMemoryLimitBuilder_ == null) {
+          gpResourceGroupMemoryLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          gpResourceGroupMemoryLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifies the maximum percentage of system memory resources to allocate to resource groups on each Greenplum Database segment node.
+       * Note: The gp_resource_group_memory_limit server configuration parameter is enforced only when resource group-based resource management is active.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_memory_limit
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue gp_resource_group_memory_limit = 18;</code>
+       */
+      public Builder mergeGpResourceGroupMemoryLimit(com.google.protobuf.FloatValue value) {
+        if (gpResourceGroupMemoryLimitBuilder_ == null) {
+          if (gpResourceGroupMemoryLimit_ != null) {
+            gpResourceGroupMemoryLimit_ =
+              com.google.protobuf.FloatValue.newBuilder(gpResourceGroupMemoryLimit_).mergeFrom(value).buildPartial();
+          } else {
+            gpResourceGroupMemoryLimit_ = value;
+          }
+          onChanged();
+        } else {
+          gpResourceGroupMemoryLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifies the maximum percentage of system memory resources to allocate to resource groups on each Greenplum Database segment node.
+       * Note: The gp_resource_group_memory_limit server configuration parameter is enforced only when resource group-based resource management is active.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_memory_limit
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue gp_resource_group_memory_limit = 18;</code>
+       */
+      public Builder clearGpResourceGroupMemoryLimit() {
+        if (gpResourceGroupMemoryLimitBuilder_ == null) {
+          gpResourceGroupMemoryLimit_ = null;
+          onChanged();
+        } else {
+          gpResourceGroupMemoryLimit_ = null;
+          gpResourceGroupMemoryLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifies the maximum percentage of system memory resources to allocate to resource groups on each Greenplum Database segment node.
+       * Note: The gp_resource_group_memory_limit server configuration parameter is enforced only when resource group-based resource management is active.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_memory_limit
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue gp_resource_group_memory_limit = 18;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder getGpResourceGroupMemoryLimitBuilder() {
+        
+        onChanged();
+        return getGpResourceGroupMemoryLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Identifies the maximum percentage of system memory resources to allocate to resource groups on each Greenplum Database segment node.
+       * Note: The gp_resource_group_memory_limit server configuration parameter is enforced only when resource group-based resource management is active.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_memory_limit
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue gp_resource_group_memory_limit = 18;</code>
+       */
+      public com.google.protobuf.FloatValueOrBuilder getGpResourceGroupMemoryLimitOrBuilder() {
+        if (gpResourceGroupMemoryLimitBuilder_ != null) {
+          return gpResourceGroupMemoryLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return gpResourceGroupMemoryLimit_ == null ?
+              com.google.protobuf.FloatValue.getDefaultInstance() : gpResourceGroupMemoryLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Identifies the maximum percentage of system memory resources to allocate to resource groups on each Greenplum Database segment node.
+       * Note: The gp_resource_group_memory_limit server configuration parameter is enforced only when resource group-based resource management is active.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_resource_group_memory_limit
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue gp_resource_group_memory_limit = 18;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
+          getGpResourceGroupMemoryLimitFieldBuilder() {
+        if (gpResourceGroupMemoryLimitBuilder_ == null) {
+          gpResourceGroupMemoryLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
+                  getGpResourceGroupMemoryLimit(),
+                  getParentForChildren(),
+                  isClean());
+          gpResourceGroupMemoryLimit_ = null;
+        }
+        return gpResourceGroupMemoryLimitBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7282,6 +14742,11 @@ public final class GPCF {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_greenplum_v1_Resources_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_ConnectionPoolerConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_ConnectionPoolerConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_greenplum_v1_MasterSubclusterConfig_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -7325,46 +14790,99 @@ public final class GPCF {
       "gle/protobuf/wrappers.proto\032\035yandex/clou" +
       "d/validation.proto\"P\n\tResources\022\032\n\022resou" +
       "rce_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024" +
-      "\n\014disk_type_id\030\003 \001(\t\"\236\001\n\026MasterSubcluste" +
-      "rConfig\022;\n\tresources\030\001 \001(\0132(.yandex.clou" +
-      "d.mdb.greenplum.v1.Resources\022G\n\006config\030\002" +
-      " \001(\01327.yandex.cloud.mdb.greenplum.v1.Gre" +
-      "enplumMasterConfigSet\"\240\001\n\027SegmentSubclus" +
-      "terConfig\022;\n\tresources\030\001 \001(\0132(.yandex.cl" +
-      "oud.mdb.greenplum.v1.Resources\022H\n\006config" +
-      "\030\002 \001(\01328.yandex.cloud.mdb.greenplum.v1.G" +
-      "reenplumSegmentConfigSet\"\265\002\n\025GreenplumMa" +
-      "sterConfig\022P\n\tlog_level\030\001 \001(\0162=.yandex.c" +
-      "loud.mdb.greenplum.v1.GreenplumMasterCon" +
-      "fig.LogLevel\0224\n\017max_connections\030\002 \001(\0132\033." +
-      "google.protobuf.Int64Value\022.\n\010timezone\030\003" +
-      " \001(\0132\034.google.protobuf.StringValue\"d\n\010Lo" +
-      "gLevel\022\031\n\025LOG_LEVEL_UNSPECIFIED\020\000\022\t\n\005TRA" +
-      "CE\020\001\022\t\n\005DEBUG\020\002\022\017\n\013INFORMATION\020\003\022\013\n\007WARN" +
-      "ING\020\004\022\t\n\005ERROR\020\005\"\207\002\n\026GreenplumSegmentCon" +
-      "fig\022Q\n\tlog_level\030\001 \001(\0162>.yandex.cloud.md" +
-      "b.greenplum.v1.GreenplumSegmentConfig.Lo" +
-      "gLevel\0224\n\017max_connections\030\002 \001(\0132\033.google" +
-      ".protobuf.Int64Value\"d\n\010LogLevel\022\031\n\025LOG_" +
-      "LEVEL_UNSPECIFIED\020\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG\020" +
-      "\002\022\017\n\013INFORMATION\020\003\022\013\n\007WARNING\020\004\022\t\n\005ERROR" +
-      "\020\005\"\211\002\n\030GreenplumMasterConfigSet\022T\n\020effec" +
-      "tive_config\030\001 \001(\01324.yandex.cloud.mdb.gre" +
-      "enplum.v1.GreenplumMasterConfigB\004\350\3071\001\022I\n" +
-      "\013user_config\030\002 \001(\01324.yandex.cloud.mdb.gr" +
-      "eenplum.v1.GreenplumMasterConfig\022L\n\016defa" +
-      "ult_config\030\003 \001(\01324.yandex.cloud.mdb.gree" +
-      "nplum.v1.GreenplumMasterConfig\"\215\002\n\031Green" +
-      "plumSegmentConfigSet\022U\n\020effective_config" +
-      "\030\001 \001(\01325.yandex.cloud.mdb.greenplum.v1.G" +
-      "reenplumSegmentConfigB\004\350\3071\001\022J\n\013user_conf" +
-      "ig\030\002 \001(\01325.yandex.cloud.mdb.greenplum.v1" +
-      ".GreenplumSegmentConfig\022M\n\016default_confi" +
-      "g\030\003 \001(\01325.yandex.cloud.mdb.greenplum.v1." +
-      "GreenplumSegmentConfigBv\n!yandex.cloud.a" +
-      "pi.mdb.greenplum.v1B\004GPCFZKgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/mdb/" +
-      "greenplum/v1;greenplumb\006proto3"
+      "\n\014disk_type_id\030\003 \001(\t\"\220\002\n\026ConnectionPoole" +
+      "rConfig\022L\n\004mode\030\001 \001(\0162>.yandex.cloud.mdb" +
+      ".greenplum.v1.ConnectionPoolerConfig.Poo" +
+      "lMode\022)\n\004size\030\002 \001(\0132\033.google.protobuf.In" +
+      "t64Value\0228\n\023client_idle_timeout\030\003 \001(\0132\033." +
+      "google.protobuf.Int64Value\"C\n\010PoolMode\022\031" +
+      "\n\025POOL_MODE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\017" +
+      "\n\013TRANSACTION\020\002\"\236\001\n\026MasterSubclusterConf" +
+      "ig\022;\n\tresources\030\001 \001(\0132(.yandex.cloud.mdb" +
+      ".greenplum.v1.Resources\022G\n\006config\030\002 \001(\0132" +
+      "7.yandex.cloud.mdb.greenplum.v1.Greenplu" +
+      "mMasterConfigSet\"\240\001\n\027SegmentSubclusterCo" +
+      "nfig\022;\n\tresources\030\001 \001(\0132(.yandex.cloud.m" +
+      "db.greenplum.v1.Resources\022H\n\006config\030\002 \001(" +
+      "\01328.yandex.cloud.mdb.greenplum.v1.Greenp" +
+      "lumSegmentConfigSet\"\224\014\n\025GreenplumMasterC" +
+      "onfig\022P\n\tlog_level\030\001 \001(\0162=.yandex.cloud." +
+      "mdb.greenplum.v1.GreenplumMasterConfig.L" +
+      "ogLevel\0224\n\017max_connections\030\002 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\022.\n\010timezone\030\003 \001(\0132" +
+      "\034.google.protobuf.StringValue\022C\n\004pool\030\004 " +
+      "\001(\01325.yandex.cloud.mdb.greenplum.v1.Conn" +
+      "ectionPoolerConfig\022>\n\031max_prepared_trans" +
+      "actions\030\r \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022H\n#runaway_detector_activation_percen" +
+      "t\030\016 \001(\0132\033.google.protobuf.Int64Value\0229\n\024" +
+      "tcp_keepalives_count\030\017 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022<\n\027tcp_keepalives_interv" +
+      "al\030\020 \001(\0132\033.google.protobuf.Int64Value\022D\n" +
+      "\037readable_external_table_timeout\030\023 \001(\0132\033" +
+      ".google.protobuf.Int64Value\022D\n\037gp_interc" +
+      "onnect_snd_queue_depth\030\024 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022@\n\033gp_interconnect_que" +
+      "ue_depth\030\025 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022X\n\rlog_statement\030\026 \001(\0162A.yandex.clou" +
+      "d.mdb.greenplum.v1.GreenplumMasterConfig" +
+      ".LogStatement\0220\n\014log_duration\030\027 \001(\0132\032.go" +
+      "ogle.protobuf.BoolValue\022D\n optimizer_ana" +
+      "lyze_root_partition\030\030 \001(\0132\032.google.proto" +
+      "buf.BoolValue\0229\n\024gp_external_max_segs\030\031 " +
+      "\001(\0132\033.google.protobuf.Int64Value\0229\n\024gp_f" +
+      "ts_probe_timeout\030\032 \001(\0132\033.google.protobuf" +
+      ".Int64Value\022;\n\027gp_workfile_compression\030\033" +
+      " \001(\0132\032.google.protobuf.BoolValue\022u\n\036gp_a" +
+      "utostats_mode_in_functions\030\034 \001(\0162M.yande" +
+      "x.cloud.mdb.greenplum.v1.GreenplumMaster" +
+      "Config.AutostatsModeInFunctions\"d\n\010LogLe" +
+      "vel\022\031\n\025LOG_LEVEL_UNSPECIFIED\020\000\022\t\n\005TRACE\020" +
+      "\001\022\t\n\005DEBUG\020\002\022\017\n\013INFORMATION\020\003\022\013\n\007WARNING" +
+      "\020\004\022\t\n\005ERROR\020\005\"R\n\014LogStatement\022\035\n\031LOG_STA" +
+      "TEMENT_UNSPECIFIED\020\000\022\010\n\004NONE\020\001\022\007\n\003DDL\020\002\022" +
+      "\007\n\003MOD\020\003\022\007\n\003ALL\020\004\"w\n\030AutostatsModeInFunc" +
+      "tions\022+\n\'AUTOSTATS_MODE_IN_FUNCTIONS_UNS" +
+      "PECIFIED\020\000\022\r\n\tMODE_NONE\020\001\022\r\n\tON_CHANGE\020\002" +
+      "\022\020\n\014ON_NO_STATES\020\003\"\320\006\n\026GreenplumSegmentC" +
+      "onfig\022Q\n\tlog_level\030\001 \001(\0162>.yandex.cloud." +
+      "mdb.greenplum.v1.GreenplumSegmentConfig." +
+      "LogLevel\0224\n\017max_connections\030\002 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022;\n\026max_slot_wal_k" +
+      "eep_size\030\007 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022B\n\035gp_workfile_limit_per_segment\030\010 \001" +
+      "(\0132\033.google.protobuf.Int64Value\022@\n\033gp_wo" +
+      "rkfile_limit_per_query\030\t \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022F\n!gp_workfile_limit_f" +
+      "iles_per_query\030\n \001(\0132\033.google.protobuf.I" +
+      "nt64Value\022d\n\023gp_resource_manager\030\013 \001(\0162G" +
+      ".yandex.cloud.mdb.greenplum.v1.Greenplum" +
+      "SegmentConfig.GPResourceManager\022@\n\033gp_re" +
+      "source_group_cpu_limit\030\021 \001(\0132\033.google.pr" +
+      "otobuf.FloatValue\022C\n\036gp_resource_group_m" +
+      "emory_limit\030\022 \001(\0132\033.google.protobuf.Floa" +
+      "tValue\"d\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECIF" +
+      "IED\020\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG\020\002\022\017\n\013INFORMATI" +
+      "ON\020\003\022\013\n\007WARNING\020\004\022\t\n\005ERROR\020\005\"O\n\021GPResour" +
+      "ceManager\022#\n\037GP_RESOURCE_MANAGER_UNSPECI" +
+      "FIED\020\000\022\t\n\005QUEUE\020\001\022\n\n\006GREOUP\020\002\"\211\002\n\030Greenp" +
+      "lumMasterConfigSet\022T\n\020effective_config\030\001" +
+      " \001(\01324.yandex.cloud.mdb.greenplum.v1.Gre" +
+      "enplumMasterConfigB\004\350\3071\001\022I\n\013user_config\030" +
+      "\002 \001(\01324.yandex.cloud.mdb.greenplum.v1.Gr" +
+      "eenplumMasterConfig\022L\n\016default_config\030\003 " +
+      "\001(\01324.yandex.cloud.mdb.greenplum.v1.Gree" +
+      "nplumMasterConfig\"\215\002\n\031GreenplumSegmentCo" +
+      "nfigSet\022U\n\020effective_config\030\001 \001(\01325.yand" +
+      "ex.cloud.mdb.greenplum.v1.GreenplumSegme" +
+      "ntConfigB\004\350\3071\001\022J\n\013user_config\030\002 \001(\01325.ya" +
+      "ndex.cloud.mdb.greenplum.v1.GreenplumSeg" +
+      "mentConfig\022M\n\016default_config\030\003 \001(\01325.yan" +
+      "dex.cloud.mdb.greenplum.v1.GreenplumSegm" +
+      "entConfigBv\n!yandex.cloud.api.mdb.greenp" +
+      "lum.v1B\004GPCFZKgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/mdb/greenplum/v1;" +
+      "greenplumb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7386,38 +14904,44 @@ public final class GPCF {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_Resources_descriptor,
         new java.lang.String[] { "ResourcePresetId", "DiskSize", "DiskTypeId", });
-    internal_static_yandex_cloud_mdb_greenplum_v1_MasterSubclusterConfig_descriptor =
+    internal_static_yandex_cloud_mdb_greenplum_v1_ConnectionPoolerConfig_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_mdb_greenplum_v1_ConnectionPoolerConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_ConnectionPoolerConfig_descriptor,
+        new java.lang.String[] { "Mode", "Size", "ClientIdleTimeout", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_MasterSubclusterConfig_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_mdb_greenplum_v1_MasterSubclusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_MasterSubclusterConfig_descriptor,
         new java.lang.String[] { "Resources", "Config", });
     internal_static_yandex_cloud_mdb_greenplum_v1_SegmentSubclusterConfig_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_greenplum_v1_SegmentSubclusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_SegmentSubclusterConfig_descriptor,
         new java.lang.String[] { "Resources", "Config", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumMasterConfig_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumMasterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumMasterConfig_descriptor,
-        new java.lang.String[] { "LogLevel", "MaxConnections", "Timezone", });
+        new java.lang.String[] { "LogLevel", "MaxConnections", "Timezone", "Pool", "MaxPreparedTransactions", "RunawayDetectorActivationPercent", "TcpKeepalivesCount", "TcpKeepalivesInterval", "ReadableExternalTableTimeout", "GpInterconnectSndQueueDepth", "GpInterconnectQueueDepth", "LogStatement", "LogDuration", "OptimizerAnalyzeRootPartition", "GpExternalMaxSegs", "GpFtsProbeTimeout", "GpWorkfileCompression", "GpAutostatsModeInFunctions", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumSegmentConfig_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumSegmentConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumSegmentConfig_descriptor,
-        new java.lang.String[] { "LogLevel", "MaxConnections", });
+        new java.lang.String[] { "LogLevel", "MaxConnections", "MaxSlotWalKeepSize", "GpWorkfileLimitPerSegment", "GpWorkfileLimitPerQuery", "GpWorkfileLimitFilesPerQuery", "GpResourceManager", "GpResourceGroupCpuLimit", "GpResourceGroupMemoryLimit", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumMasterConfigSet_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumMasterConfigSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumMasterConfigSet_descriptor,
         new java.lang.String[] { "EffectiveConfig", "UserConfig", "DefaultConfig", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumSegmentConfigSet_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumSegmentConfigSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumSegmentConfigSet_descriptor,

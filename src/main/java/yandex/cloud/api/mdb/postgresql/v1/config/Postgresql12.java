@@ -5062,6 +5062,14 @@ public final class Postgresql12 {
        * <code>SHARED_PRELOAD_LIBRARIES_PG_HINT_PLAN = 2;</code>
        */
       SHARED_PRELOAD_LIBRARIES_PG_HINT_PLAN(2),
+      /**
+       * <code>SHARED_PRELOAD_LIBRARIES_TIMESCALEDB = 3;</code>
+       */
+      SHARED_PRELOAD_LIBRARIES_TIMESCALEDB(3),
+      /**
+       * <code>SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS = 4;</code>
+       */
+      SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS(4),
       UNRECOGNIZED(-1),
       ;
 
@@ -5077,6 +5085,14 @@ public final class Postgresql12 {
        * <code>SHARED_PRELOAD_LIBRARIES_PG_HINT_PLAN = 2;</code>
        */
       public static final int SHARED_PRELOAD_LIBRARIES_PG_HINT_PLAN_VALUE = 2;
+      /**
+       * <code>SHARED_PRELOAD_LIBRARIES_TIMESCALEDB = 3;</code>
+       */
+      public static final int SHARED_PRELOAD_LIBRARIES_TIMESCALEDB_VALUE = 3;
+      /**
+       * <code>SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS = 4;</code>
+       */
+      public static final int SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS_VALUE = 4;
 
 
       public final int getNumber() {
@@ -5100,6 +5116,8 @@ public final class Postgresql12 {
           case 0: return SHARED_PRELOAD_LIBRARIES_UNSPECIFIED;
           case 1: return SHARED_PRELOAD_LIBRARIES_AUTO_EXPLAIN;
           case 2: return SHARED_PRELOAD_LIBRARIES_PG_HINT_PLAN;
+          case 3: return SHARED_PRELOAD_LIBRARIES_TIMESCALEDB;
+          case 4: return SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS;
           default: return null;
         }
       }
@@ -26477,7 +26495,7 @@ public final class Postgresql12 {
       "postgresql12.proto\022%yandex.cloud.mdb.pos" +
       "tgresql.v1.config\032\036google/protobuf/wrapp" +
       "ers.proto\032\035yandex/cloud/validation.proto" +
-      "\"\351R\n\022PostgresqlConfig12\0224\n\017max_connectio" +
+      "\"\276S\n\022PostgresqlConfig12\0224\n\017max_connectio" +
       "ns\030\001 \001(\0132\033.google.protobuf.Int64Value\0223\n" +
       "\016shared_buffers\030\002 \001(\0132\033.google.protobuf." +
       "Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033.googl" +
@@ -26738,21 +26756,23 @@ public final class Postgresql12 {
       "N_DEBUG_PRINT_OFF\020\001\022\037\n\033PG_HINT_PLAN_DEBU" +
       "G_PRINT_ON\020\002\022%\n!PG_HINT_PLAN_DEBUG_PRINT" +
       "_DETAILED\020\003\022$\n PG_HINT_PLAN_DEBUG_PRINT_" +
-      "VERBOSE\020\004\"\230\001\n\026SharedPreloadLibraries\022(\n$" +
+      "VERBOSE\020\004\"\355\001\n\026SharedPreloadLibraries\022(\n$" +
       "SHARED_PRELOAD_LIBRARIES_UNSPECIFIED\020\000\022)" +
       "\n%SHARED_PRELOAD_LIBRARIES_AUTO_EXPLAIN\020" +
       "\001\022)\n%SHARED_PRELOAD_LIBRARIES_PG_HINT_PL" +
-      "AN\020\002\"\217\002\n\025PostgresqlConfigSet12\022S\n\020effect" +
-      "ive_config\030\001 \001(\01329.yandex.cloud.mdb.post" +
-      "gresql.v1.config.PostgresqlConfig12\022N\n\013u" +
-      "ser_config\030\002 \001(\01329.yandex.cloud.mdb.post" +
-      "gresql.v1.config.PostgresqlConfig12\022Q\n\016d" +
-      "efault_config\030\003 \001(\01329.yandex.cloud.mdb.p" +
-      "ostgresql.v1.config.PostgresqlConfig12B\201" +
-      "\001\n)yandex.cloud.api.mdb.postgresql.v1.co" +
-      "nfigZTgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/mdb/postgresql/v1/config;" +
-      "postgresqlb\006proto3"
+      "AN\020\002\022(\n$SHARED_PRELOAD_LIBRARIES_TIMESCA" +
+      "LEDB\020\003\022)\n%SHARED_PRELOAD_LIBRARIES_PG_QU" +
+      "ALSTATS\020\004\"\217\002\n\025PostgresqlConfigSet12\022S\n\020e" +
+      "ffective_config\030\001 \001(\01329.yandex.cloud.mdb" +
+      ".postgresql.v1.config.PostgresqlConfig12" +
+      "\022N\n\013user_config\030\002 \001(\01329.yandex.cloud.mdb" +
+      ".postgresql.v1.config.PostgresqlConfig12" +
+      "\022Q\n\016default_config\030\003 \001(\01329.yandex.cloud." +
+      "mdb.postgresql.v1.config.PostgresqlConfi" +
+      "g12B\201\001\n)yandex.cloud.api.mdb.postgresql." +
+      "v1.configZTgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/mdb/postgresql/v1/co" +
+      "nfig;postgresqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

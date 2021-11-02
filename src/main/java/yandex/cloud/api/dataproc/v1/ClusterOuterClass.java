@@ -416,7 +416,8 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * ID of the cloud logging log group to write logs. If not set, logs will not be sent to logging service
+     * ID of the cloud logging log group to write logs. If not set, default log group for the folder will be used.
+     * To prevent logs from being sent to the cloud set cluster property dataproc:disable_cloud_logging = true
      * </pre>
      *
      * <code>string log_group_id = 18;</code>
@@ -424,7 +425,8 @@ public final class ClusterOuterClass {
     java.lang.String getLogGroupId();
     /**
      * <pre>
-     * ID of the cloud logging log group to write logs. If not set, logs will not be sent to logging service
+     * ID of the cloud logging log group to write logs. If not set, default log group for the folder will be used.
+     * To prevent logs from being sent to the cloud set cluster property dataproc:disable_cloud_logging = true
      * </pre>
      *
      * <code>string log_group_id = 18;</code>
@@ -1556,7 +1558,8 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object logGroupId_;
     /**
      * <pre>
-     * ID of the cloud logging log group to write logs. If not set, logs will not be sent to logging service
+     * ID of the cloud logging log group to write logs. If not set, default log group for the folder will be used.
+     * To prevent logs from being sent to the cloud set cluster property dataproc:disable_cloud_logging = true
      * </pre>
      *
      * <code>string log_group_id = 18;</code>
@@ -1575,7 +1578,8 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the cloud logging log group to write logs. If not set, logs will not be sent to logging service
+     * ID of the cloud logging log group to write logs. If not set, default log group for the folder will be used.
+     * To prevent logs from being sent to the cloud set cluster property dataproc:disable_cloud_logging = true
      * </pre>
      *
      * <code>string log_group_id = 18;</code>
@@ -4185,7 +4189,8 @@ public final class ClusterOuterClass {
       private java.lang.Object logGroupId_ = "";
       /**
        * <pre>
-       * ID of the cloud logging log group to write logs. If not set, logs will not be sent to logging service
+       * ID of the cloud logging log group to write logs. If not set, default log group for the folder will be used.
+       * To prevent logs from being sent to the cloud set cluster property dataproc:disable_cloud_logging = true
        * </pre>
        *
        * <code>string log_group_id = 18;</code>
@@ -4204,7 +4209,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the cloud logging log group to write logs. If not set, logs will not be sent to logging service
+       * ID of the cloud logging log group to write logs. If not set, default log group for the folder will be used.
+       * To prevent logs from being sent to the cloud set cluster property dataproc:disable_cloud_logging = true
        * </pre>
        *
        * <code>string log_group_id = 18;</code>
@@ -4224,7 +4230,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the cloud logging log group to write logs. If not set, logs will not be sent to logging service
+       * ID of the cloud logging log group to write logs. If not set, default log group for the folder will be used.
+       * To prevent logs from being sent to the cloud set cluster property dataproc:disable_cloud_logging = true
        * </pre>
        *
        * <code>string log_group_id = 18;</code>
@@ -4241,7 +4248,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the cloud logging log group to write logs. If not set, logs will not be sent to logging service
+       * ID of the cloud logging log group to write logs. If not set, default log group for the folder will be used.
+       * To prevent logs from being sent to the cloud set cluster property dataproc:disable_cloud_logging = true
        * </pre>
        *
        * <code>string log_group_id = 18;</code>
@@ -4254,7 +4262,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the cloud logging log group to write logs. If not set, logs will not be sent to logging service
+       * ID of the cloud logging log group to write logs. If not set, default log group for the folder will be used.
+       * To prevent logs from being sent to the cloud set cluster property dataproc:disable_cloud_logging = true
        * </pre>
        *
        * <code>string log_group_id = 18;</code>
