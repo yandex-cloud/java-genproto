@@ -20,7 +20,7 @@ public final class ImageProductUsageServiceOuterClass {
 
     /**
      * <pre>
-     * Checks whether you have the access required for the emit usage
+     * Checks whether you have the access required for the emit usage.
      * </pre>
      *
      * <code>bool validate_only = 1;</code>
@@ -29,7 +29,7 @@ public final class ImageProductUsageServiceOuterClass {
 
     /**
      * <pre>
-     * Marketplace Product's ID
+     * Marketplace Product's ID.
      * </pre>
      *
      * <code>string product_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -37,7 +37,7 @@ public final class ImageProductUsageServiceOuterClass {
     java.lang.String getProductId();
     /**
      * <pre>
-     * Marketplace Product's ID
+     * Marketplace Product's ID.
      * </pre>
      *
      * <code>string product_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -47,7 +47,7 @@ public final class ImageProductUsageServiceOuterClass {
 
     /**
      * <pre>
-     * List of product usage records (up to 25 pet request)
+     * List of product usage records (up to 25 pet request).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -56,7 +56,7 @@ public final class ImageProductUsageServiceOuterClass {
         getUsageRecordsList();
     /**
      * <pre>
-     * List of product usage records (up to 25 pet request)
+     * List of product usage records (up to 25 pet request).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -64,7 +64,7 @@ public final class ImageProductUsageServiceOuterClass {
     yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.UsageRecord getUsageRecords(int index);
     /**
      * <pre>
-     * List of product usage records (up to 25 pet request)
+     * List of product usage records (up to 25 pet request).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -72,7 +72,7 @@ public final class ImageProductUsageServiceOuterClass {
     int getUsageRecordsCount();
     /**
      * <pre>
-     * List of product usage records (up to 25 pet request)
+     * List of product usage records (up to 25 pet request).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -81,7 +81,7 @@ public final class ImageProductUsageServiceOuterClass {
         getUsageRecordsOrBuilderList();
     /**
      * <pre>
-     * List of product usage records (up to 25 pet request)
+     * List of product usage records (up to 25 pet request).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -191,7 +191,7 @@ public final class ImageProductUsageServiceOuterClass {
     private boolean validateOnly_;
     /**
      * <pre>
-     * Checks whether you have the access required for the emit usage
+     * Checks whether you have the access required for the emit usage.
      * </pre>
      *
      * <code>bool validate_only = 1;</code>
@@ -204,7 +204,7 @@ public final class ImageProductUsageServiceOuterClass {
     private volatile java.lang.Object productId_;
     /**
      * <pre>
-     * Marketplace Product's ID
+     * Marketplace Product's ID.
      * </pre>
      *
      * <code>string product_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -223,7 +223,7 @@ public final class ImageProductUsageServiceOuterClass {
     }
     /**
      * <pre>
-     * Marketplace Product's ID
+     * Marketplace Product's ID.
      * </pre>
      *
      * <code>string product_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -246,7 +246,7 @@ public final class ImageProductUsageServiceOuterClass {
     private java.util.List<yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.UsageRecord> usageRecords_;
     /**
      * <pre>
-     * List of product usage records (up to 25 pet request)
+     * List of product usage records (up to 25 pet request).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -256,7 +256,7 @@ public final class ImageProductUsageServiceOuterClass {
     }
     /**
      * <pre>
-     * List of product usage records (up to 25 pet request)
+     * List of product usage records (up to 25 pet request).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -267,7 +267,7 @@ public final class ImageProductUsageServiceOuterClass {
     }
     /**
      * <pre>
-     * List of product usage records (up to 25 pet request)
+     * List of product usage records (up to 25 pet request).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -277,7 +277,7 @@ public final class ImageProductUsageServiceOuterClass {
     }
     /**
      * <pre>
-     * List of product usage records (up to 25 pet request)
+     * List of product usage records (up to 25 pet request).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -287,7 +287,7 @@ public final class ImageProductUsageServiceOuterClass {
     }
     /**
      * <pre>
-     * List of product usage records (up to 25 pet request)
+     * List of product usage records (up to 25 pet request).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -680,7 +680,7 @@ public final class ImageProductUsageServiceOuterClass {
       private boolean validateOnly_ ;
       /**
        * <pre>
-       * Checks whether you have the access required for the emit usage
+       * Checks whether you have the access required for the emit usage.
        * </pre>
        *
        * <code>bool validate_only = 1;</code>
@@ -690,7 +690,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * Checks whether you have the access required for the emit usage
+       * Checks whether you have the access required for the emit usage.
        * </pre>
        *
        * <code>bool validate_only = 1;</code>
@@ -703,7 +703,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * Checks whether you have the access required for the emit usage
+       * Checks whether you have the access required for the emit usage.
        * </pre>
        *
        * <code>bool validate_only = 1;</code>
@@ -718,7 +718,7 @@ public final class ImageProductUsageServiceOuterClass {
       private java.lang.Object productId_ = "";
       /**
        * <pre>
-       * Marketplace Product's ID
+       * Marketplace Product's ID.
        * </pre>
        *
        * <code>string product_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -737,7 +737,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * Marketplace Product's ID
+       * Marketplace Product's ID.
        * </pre>
        *
        * <code>string product_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -757,7 +757,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * Marketplace Product's ID
+       * Marketplace Product's ID.
        * </pre>
        *
        * <code>string product_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -774,7 +774,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * Marketplace Product's ID
+       * Marketplace Product's ID.
        * </pre>
        *
        * <code>string product_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -787,7 +787,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * Marketplace Product's ID
+       * Marketplace Product's ID.
        * </pre>
        *
        * <code>string product_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -818,7 +818,7 @@ public final class ImageProductUsageServiceOuterClass {
 
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request)
+       * List of product usage records (up to 25 pet request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -832,7 +832,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request)
+       * List of product usage records (up to 25 pet request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -846,7 +846,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request)
+       * List of product usage records (up to 25 pet request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -860,7 +860,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request)
+       * List of product usage records (up to 25 pet request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -881,7 +881,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request)
+       * List of product usage records (up to 25 pet request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -899,7 +899,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request)
+       * List of product usage records (up to 25 pet request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -919,7 +919,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request)
+       * List of product usage records (up to 25 pet request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -940,7 +940,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request)
+       * List of product usage records (up to 25 pet request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -958,7 +958,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request)
+       * List of product usage records (up to 25 pet request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -976,7 +976,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request)
+       * List of product usage records (up to 25 pet request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -995,7 +995,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request)
+       * List of product usage records (up to 25 pet request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -1012,7 +1012,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request)
+       * List of product usage records (up to 25 pet request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -1029,7 +1029,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request)
+       * List of product usage records (up to 25 pet request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -1040,7 +1040,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request)
+       * List of product usage records (up to 25 pet request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -1054,7 +1054,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request)
+       * List of product usage records (up to 25 pet request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -1069,7 +1069,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request)
+       * List of product usage records (up to 25 pet request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -1080,7 +1080,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request)
+       * List of product usage records (up to 25 pet request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -1092,7 +1092,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request)
+       * List of product usage records (up to 25 pet request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -1174,7 +1174,7 @@ public final class ImageProductUsageServiceOuterClass {
 
     /**
      * <pre>
-     * List of accepted product usage records
+     * List of accepted product usage records.
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -1183,7 +1183,7 @@ public final class ImageProductUsageServiceOuterClass {
         getAcceptedList();
     /**
      * <pre>
-     * List of accepted product usage records
+     * List of accepted product usage records.
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -1191,7 +1191,7 @@ public final class ImageProductUsageServiceOuterClass {
     yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.AcceptedUsageRecord getAccepted(int index);
     /**
      * <pre>
-     * List of accepted product usage records
+     * List of accepted product usage records.
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -1199,7 +1199,7 @@ public final class ImageProductUsageServiceOuterClass {
     int getAcceptedCount();
     /**
      * <pre>
-     * List of accepted product usage records
+     * List of accepted product usage records.
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -1208,7 +1208,7 @@ public final class ImageProductUsageServiceOuterClass {
         getAcceptedOrBuilderList();
     /**
      * <pre>
-     * List of accepted product usage records
+     * List of accepted product usage records.
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -1218,7 +1218,7 @@ public final class ImageProductUsageServiceOuterClass {
 
     /**
      * <pre>
-     * List of rejected product usage records (with reason)
+     * List of rejected product usage records (with reason).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -1227,7 +1227,7 @@ public final class ImageProductUsageServiceOuterClass {
         getRejectedList();
     /**
      * <pre>
-     * List of rejected product usage records (with reason)
+     * List of rejected product usage records (with reason).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -1235,7 +1235,7 @@ public final class ImageProductUsageServiceOuterClass {
     yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord getRejected(int index);
     /**
      * <pre>
-     * List of rejected product usage records (with reason)
+     * List of rejected product usage records (with reason).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -1243,7 +1243,7 @@ public final class ImageProductUsageServiceOuterClass {
     int getRejectedCount();
     /**
      * <pre>
-     * List of rejected product usage records (with reason)
+     * List of rejected product usage records (with reason).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -1252,7 +1252,7 @@ public final class ImageProductUsageServiceOuterClass {
         getRejectedOrBuilderList();
     /**
      * <pre>
-     * List of rejected product usage records (with reason)
+     * List of rejected product usage records (with reason).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -1361,7 +1361,7 @@ public final class ImageProductUsageServiceOuterClass {
     private java.util.List<yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.AcceptedUsageRecord> accepted_;
     /**
      * <pre>
-     * List of accepted product usage records
+     * List of accepted product usage records.
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -1371,7 +1371,7 @@ public final class ImageProductUsageServiceOuterClass {
     }
     /**
      * <pre>
-     * List of accepted product usage records
+     * List of accepted product usage records.
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -1382,7 +1382,7 @@ public final class ImageProductUsageServiceOuterClass {
     }
     /**
      * <pre>
-     * List of accepted product usage records
+     * List of accepted product usage records.
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -1392,7 +1392,7 @@ public final class ImageProductUsageServiceOuterClass {
     }
     /**
      * <pre>
-     * List of accepted product usage records
+     * List of accepted product usage records.
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -1402,7 +1402,7 @@ public final class ImageProductUsageServiceOuterClass {
     }
     /**
      * <pre>
-     * List of accepted product usage records
+     * List of accepted product usage records.
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -1416,7 +1416,7 @@ public final class ImageProductUsageServiceOuterClass {
     private java.util.List<yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.RejectedUsageRecord> rejected_;
     /**
      * <pre>
-     * List of rejected product usage records (with reason)
+     * List of rejected product usage records (with reason).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -1426,7 +1426,7 @@ public final class ImageProductUsageServiceOuterClass {
     }
     /**
      * <pre>
-     * List of rejected product usage records (with reason)
+     * List of rejected product usage records (with reason).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -1437,7 +1437,7 @@ public final class ImageProductUsageServiceOuterClass {
     }
     /**
      * <pre>
-     * List of rejected product usage records (with reason)
+     * List of rejected product usage records (with reason).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -1447,7 +1447,7 @@ public final class ImageProductUsageServiceOuterClass {
     }
     /**
      * <pre>
-     * List of rejected product usage records (with reason)
+     * List of rejected product usage records (with reason).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -1457,7 +1457,7 @@ public final class ImageProductUsageServiceOuterClass {
     }
     /**
      * <pre>
-     * List of rejected product usage records (with reason)
+     * List of rejected product usage records (with reason).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -1879,7 +1879,7 @@ public final class ImageProductUsageServiceOuterClass {
 
       /**
        * <pre>
-       * List of accepted product usage records
+       * List of accepted product usage records.
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -1893,7 +1893,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of accepted product usage records
+       * List of accepted product usage records.
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -1907,7 +1907,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of accepted product usage records
+       * List of accepted product usage records.
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -1921,7 +1921,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of accepted product usage records
+       * List of accepted product usage records.
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -1942,7 +1942,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of accepted product usage records
+       * List of accepted product usage records.
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -1960,7 +1960,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of accepted product usage records
+       * List of accepted product usage records.
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -1980,7 +1980,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of accepted product usage records
+       * List of accepted product usage records.
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -2001,7 +2001,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of accepted product usage records
+       * List of accepted product usage records.
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -2019,7 +2019,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of accepted product usage records
+       * List of accepted product usage records.
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -2037,7 +2037,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of accepted product usage records
+       * List of accepted product usage records.
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -2056,7 +2056,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of accepted product usage records
+       * List of accepted product usage records.
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -2073,7 +2073,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of accepted product usage records
+       * List of accepted product usage records.
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -2090,7 +2090,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of accepted product usage records
+       * List of accepted product usage records.
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -2101,7 +2101,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of accepted product usage records
+       * List of accepted product usage records.
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -2115,7 +2115,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of accepted product usage records
+       * List of accepted product usage records.
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -2130,7 +2130,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of accepted product usage records
+       * List of accepted product usage records.
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -2141,7 +2141,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of accepted product usage records
+       * List of accepted product usage records.
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -2153,7 +2153,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of accepted product usage records
+       * List of accepted product usage records.
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.AcceptedUsageRecord accepted = 1;</code>
@@ -2191,7 +2191,7 @@ public final class ImageProductUsageServiceOuterClass {
 
       /**
        * <pre>
-       * List of rejected product usage records (with reason)
+       * List of rejected product usage records (with reason).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -2205,7 +2205,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of rejected product usage records (with reason)
+       * List of rejected product usage records (with reason).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -2219,7 +2219,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of rejected product usage records (with reason)
+       * List of rejected product usage records (with reason).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -2233,7 +2233,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of rejected product usage records (with reason)
+       * List of rejected product usage records (with reason).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -2254,7 +2254,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of rejected product usage records (with reason)
+       * List of rejected product usage records (with reason).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -2272,7 +2272,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of rejected product usage records (with reason)
+       * List of rejected product usage records (with reason).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -2292,7 +2292,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of rejected product usage records (with reason)
+       * List of rejected product usage records (with reason).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -2313,7 +2313,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of rejected product usage records (with reason)
+       * List of rejected product usage records (with reason).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -2331,7 +2331,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of rejected product usage records (with reason)
+       * List of rejected product usage records (with reason).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -2349,7 +2349,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of rejected product usage records (with reason)
+       * List of rejected product usage records (with reason).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -2368,7 +2368,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of rejected product usage records (with reason)
+       * List of rejected product usage records (with reason).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -2385,7 +2385,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of rejected product usage records (with reason)
+       * List of rejected product usage records (with reason).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -2402,7 +2402,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of rejected product usage records (with reason)
+       * List of rejected product usage records (with reason).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -2413,7 +2413,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of rejected product usage records (with reason)
+       * List of rejected product usage records (with reason).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -2427,7 +2427,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of rejected product usage records (with reason)
+       * List of rejected product usage records (with reason).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -2442,7 +2442,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of rejected product usage records (with reason)
+       * List of rejected product usage records (with reason).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -2453,7 +2453,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of rejected product usage records (with reason)
+       * List of rejected product usage records (with reason).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>
@@ -2465,7 +2465,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of rejected product usage records (with reason)
+       * List of rejected product usage records (with reason).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.RejectedUsageRecord rejected = 2;</code>

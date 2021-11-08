@@ -6590,7 +6590,7 @@ public final class ContainerOuterClass {
     long getMemory();
 
     /**
-     * <code>int64 cores = 2 [(.yandex.cloud.value) = "1,2,4"];</code>
+     * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-1"];</code>
      */
     long getCores();
 
@@ -6700,7 +6700,7 @@ public final class ContainerOuterClass {
     public static final int CORES_FIELD_NUMBER = 2;
     private long cores_;
     /**
-     * <code>int64 cores = 2 [(.yandex.cloud.value) = "1,2,4"];</code>
+     * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-1"];</code>
      */
     public long getCores() {
       return cores_;
@@ -7083,13 +7083,13 @@ public final class ContainerOuterClass {
 
       private long cores_ ;
       /**
-       * <code>int64 cores = 2 [(.yandex.cloud.value) = "1,2,4"];</code>
+       * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-1"];</code>
        */
       public long getCores() {
         return cores_;
       }
       /**
-       * <code>int64 cores = 2 [(.yandex.cloud.value) = "1,2,4"];</code>
+       * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-1"];</code>
        */
       public Builder setCores(long value) {
         
@@ -7098,7 +7098,7 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
-       * <code>int64 cores = 2 [(.yandex.cloud.value) = "1,2,4"];</code>
+       * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-1"];</code>
        */
       public Builder clearCores() {
         
@@ -7272,13 +7272,13 @@ public final class ContainerOuterClass {
       "Z0-9_]*\022\023\n\013working_dir\030\006 \001(\t\0322\n\020Environm" +
       "entEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
       "\"\032\n\007Command\022\017\n\007command\030\001 \003(\t\"\024\n\004Args\022\014\n\004" +
-      "args\030\001 \003(\t\"q\n\tResources\022(\n\006memory\030\001 \001(\003B" +
-      "\030\372\3071\024134217728-8589934592\022\030\n\005cores\030\002 \001(\003" +
-      "B\t\372\3071\0051,2,4\022 \n\rcore_fraction\030\003 \001(\003B\t\372\3071\005" +
-      "0-100B\201\001\n)yandex.cloud.api.serverless.co" +
-      "ntainers.v1ZTgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/serverless/contain" +
-      "ers/v1;containersb\006proto3"
+      "args\030\001 \003(\t\"o\n\tResources\022(\n\006memory\030\001 \001(\003B" +
+      "\030\372\3071\024134217728-8589934592\022\026\n\005cores\030\002 \001(\003" +
+      "B\007\372\3071\0030-1\022 \n\rcore_fraction\030\003 \001(\003B\t\372\3071\0050-" +
+      "100B\201\001\n)yandex.cloud.api.serverless.cont" +
+      "ainers.v1ZTgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/serverless/container" +
+      "s/v1;containersb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

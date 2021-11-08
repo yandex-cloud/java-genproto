@@ -7138,6 +7138,56 @@ public final class GPCS {
 
     /**
      * <pre>
+     * Configuration of the Greenplum master subcluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfigSpec master_config = 7;</code>
+     */
+    boolean hasMasterConfig();
+    /**
+     * <pre>
+     * Configuration of the Greenplum master subcluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfigSpec master_config = 7;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec getMasterConfig();
+    /**
+     * <pre>
+     * Configuration of the Greenplum master subcluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfigSpec master_config = 7;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpecOrBuilder getMasterConfigOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration of the Greenplum segment subcluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfigSpec segment_config = 8;</code>
+     */
+    boolean hasSegmentConfig();
+    /**
+     * <pre>
+     * Configuration of the Greenplum segment subcluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfigSpec segment_config = 8;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec getSegmentConfig();
+    /**
+     * <pre>
+     * Configuration of the Greenplum segment subcluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfigSpec segment_config = 8;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpecOrBuilder getSegmentConfigOrBuilder();
+
+    /**
+     * <pre>
      * User security groups
      * </pre>
      *
@@ -7281,11 +7331,37 @@ public final class GPCS {
 
               break;
             }
+            case 58: {
+              yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec.Builder subBuilder = null;
+              if (masterConfig_ != null) {
+                subBuilder = masterConfig_.toBuilder();
+              }
+              masterConfig_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(masterConfig_);
+                masterConfig_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec.Builder subBuilder = null;
+              if (segmentConfig_ != null) {
+                subBuilder = segmentConfig_.toBuilder();
+              }
+              segmentConfig_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(segmentConfig_);
+                segmentConfig_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             case 138: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
                 securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000100;
               }
               securityGroupIds_.add(s);
               break;
@@ -7310,7 +7386,7 @@ public final class GPCS {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -7641,6 +7717,72 @@ public final class GPCS {
       return getConfig();
     }
 
+    public static final int MASTER_CONFIG_FIELD_NUMBER = 7;
+    private yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec masterConfig_;
+    /**
+     * <pre>
+     * Configuration of the Greenplum master subcluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfigSpec master_config = 7;</code>
+     */
+    public boolean hasMasterConfig() {
+      return masterConfig_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration of the Greenplum master subcluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfigSpec master_config = 7;</code>
+     */
+    public yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec getMasterConfig() {
+      return masterConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec.getDefaultInstance() : masterConfig_;
+    }
+    /**
+     * <pre>
+     * Configuration of the Greenplum master subcluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfigSpec master_config = 7;</code>
+     */
+    public yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpecOrBuilder getMasterConfigOrBuilder() {
+      return getMasterConfig();
+    }
+
+    public static final int SEGMENT_CONFIG_FIELD_NUMBER = 8;
+    private yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec segmentConfig_;
+    /**
+     * <pre>
+     * Configuration of the Greenplum segment subcluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfigSpec segment_config = 8;</code>
+     */
+    public boolean hasSegmentConfig() {
+      return segmentConfig_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration of the Greenplum segment subcluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfigSpec segment_config = 8;</code>
+     */
+    public yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec getSegmentConfig() {
+      return segmentConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec.getDefaultInstance() : segmentConfig_;
+    }
+    /**
+     * <pre>
+     * Configuration of the Greenplum segment subcluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfigSpec segment_config = 8;</code>
+     */
+    public yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpecOrBuilder getSegmentConfigOrBuilder() {
+      return getSegmentConfig();
+    }
+
     public static final int SECURITY_GROUP_IDS_FIELD_NUMBER = 17;
     private com.google.protobuf.LazyStringList securityGroupIds_;
     /**
@@ -7734,6 +7876,12 @@ public final class GPCS {
       if (config_ != null) {
         output.writeMessage(6, getConfig());
       }
+      if (masterConfig_ != null) {
+        output.writeMessage(7, getMasterConfig());
+      }
+      if (segmentConfig_ != null) {
+        output.writeMessage(8, getSegmentConfig());
+      }
       for (int i = 0; i < securityGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 17, securityGroupIds_.getRaw(i));
       }
@@ -7775,6 +7923,14 @@ public final class GPCS {
       if (config_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getConfig());
+      }
+      if (masterConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getMasterConfig());
+      }
+      if (segmentConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getSegmentConfig());
       }
       {
         int dataSize = 0;
@@ -7822,6 +7978,16 @@ public final class GPCS {
         result = result && getConfig()
             .equals(other.getConfig());
       }
+      result = result && (hasMasterConfig() == other.hasMasterConfig());
+      if (hasMasterConfig()) {
+        result = result && getMasterConfig()
+            .equals(other.getMasterConfig());
+      }
+      result = result && (hasSegmentConfig() == other.hasSegmentConfig());
+      if (hasSegmentConfig()) {
+        result = result && getSegmentConfig()
+            .equals(other.getSegmentConfig());
+      }
       result = result && getSecurityGroupIdsList()
           .equals(other.getSecurityGroupIdsList());
       result = result && (getDeletionProtection()
@@ -7854,6 +8020,14 @@ public final class GPCS {
       if (hasConfig()) {
         hash = (37 * hash) + CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + getConfig().hashCode();
+      }
+      if (hasMasterConfig()) {
+        hash = (37 * hash) + MASTER_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getMasterConfig().hashCode();
+      }
+      if (hasSegmentConfig()) {
+        hash = (37 * hash) + SEGMENT_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getSegmentConfig().hashCode();
       }
       if (getSecurityGroupIdsCount() > 0) {
         hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
@@ -8036,8 +8210,20 @@ public final class GPCS {
           config_ = null;
           configBuilder_ = null;
         }
+        if (masterConfigBuilder_ == null) {
+          masterConfig_ = null;
+        } else {
+          masterConfig_ = null;
+          masterConfigBuilder_ = null;
+        }
+        if (segmentConfigBuilder_ == null) {
+          segmentConfig_ = null;
+        } else {
+          segmentConfig_ = null;
+          segmentConfigBuilder_ = null;
+        }
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000100);
         deletionProtection_ = false;
 
         return this;
@@ -8083,9 +8269,19 @@ public final class GPCS {
         } else {
           result.config_ = configBuilder_.build();
         }
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (masterConfigBuilder_ == null) {
+          result.masterConfig_ = masterConfig_;
+        } else {
+          result.masterConfig_ = masterConfigBuilder_.build();
+        }
+        if (segmentConfigBuilder_ == null) {
+          result.segmentConfig_ = segmentConfig_;
+        } else {
+          result.segmentConfig_ = segmentConfigBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000100) == 0x00000100)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000100);
         }
         result.securityGroupIds_ = securityGroupIds_;
         result.deletionProtection_ = deletionProtection_;
@@ -8158,10 +8354,16 @@ public final class GPCS {
         if (other.hasConfig()) {
           mergeConfig(other.getConfig());
         }
+        if (other.hasMasterConfig()) {
+          mergeMasterConfig(other.getMasterConfig());
+        }
+        if (other.hasSegmentConfig()) {
+          mergeSegmentConfig(other.getSegmentConfig());
+        }
         if (!other.securityGroupIds_.isEmpty()) {
           if (securityGroupIds_.isEmpty()) {
             securityGroupIds_ = other.securityGroupIds_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000100);
           } else {
             ensureSecurityGroupIdsIsMutable();
             securityGroupIds_.addAll(other.securityGroupIds_);
@@ -8951,11 +9153,317 @@ public final class GPCS {
         return configBuilder_;
       }
 
+      private yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec masterConfig_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec, yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec.Builder, yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpecOrBuilder> masterConfigBuilder_;
+      /**
+       * <pre>
+       * Configuration of the Greenplum master subcluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfigSpec master_config = 7;</code>
+       */
+      public boolean hasMasterConfig() {
+        return masterConfigBuilder_ != null || masterConfig_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration of the Greenplum master subcluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfigSpec master_config = 7;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec getMasterConfig() {
+        if (masterConfigBuilder_ == null) {
+          return masterConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec.getDefaultInstance() : masterConfig_;
+        } else {
+          return masterConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of the Greenplum master subcluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfigSpec master_config = 7;</code>
+       */
+      public Builder setMasterConfig(yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec value) {
+        if (masterConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          masterConfig_ = value;
+          onChanged();
+        } else {
+          masterConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the Greenplum master subcluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfigSpec master_config = 7;</code>
+       */
+      public Builder setMasterConfig(
+          yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec.Builder builderForValue) {
+        if (masterConfigBuilder_ == null) {
+          masterConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          masterConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the Greenplum master subcluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfigSpec master_config = 7;</code>
+       */
+      public Builder mergeMasterConfig(yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec value) {
+        if (masterConfigBuilder_ == null) {
+          if (masterConfig_ != null) {
+            masterConfig_ =
+              yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec.newBuilder(masterConfig_).mergeFrom(value).buildPartial();
+          } else {
+            masterConfig_ = value;
+          }
+          onChanged();
+        } else {
+          masterConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the Greenplum master subcluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfigSpec master_config = 7;</code>
+       */
+      public Builder clearMasterConfig() {
+        if (masterConfigBuilder_ == null) {
+          masterConfig_ = null;
+          onChanged();
+        } else {
+          masterConfig_ = null;
+          masterConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the Greenplum master subcluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfigSpec master_config = 7;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec.Builder getMasterConfigBuilder() {
+        
+        onChanged();
+        return getMasterConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of the Greenplum master subcluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfigSpec master_config = 7;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpecOrBuilder getMasterConfigOrBuilder() {
+        if (masterConfigBuilder_ != null) {
+          return masterConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return masterConfig_ == null ?
+              yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec.getDefaultInstance() : masterConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of the Greenplum master subcluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfigSpec master_config = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec, yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec.Builder, yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpecOrBuilder> 
+          getMasterConfigFieldBuilder() {
+        if (masterConfigBuilder_ == null) {
+          masterConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec, yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpec.Builder, yandex.cloud.api.mdb.greenplum.v1.GPCS.MasterSubclusterConfigSpecOrBuilder>(
+                  getMasterConfig(),
+                  getParentForChildren(),
+                  isClean());
+          masterConfig_ = null;
+        }
+        return masterConfigBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec segmentConfig_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec, yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec.Builder, yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpecOrBuilder> segmentConfigBuilder_;
+      /**
+       * <pre>
+       * Configuration of the Greenplum segment subcluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfigSpec segment_config = 8;</code>
+       */
+      public boolean hasSegmentConfig() {
+        return segmentConfigBuilder_ != null || segmentConfig_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration of the Greenplum segment subcluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfigSpec segment_config = 8;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec getSegmentConfig() {
+        if (segmentConfigBuilder_ == null) {
+          return segmentConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec.getDefaultInstance() : segmentConfig_;
+        } else {
+          return segmentConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of the Greenplum segment subcluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfigSpec segment_config = 8;</code>
+       */
+      public Builder setSegmentConfig(yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec value) {
+        if (segmentConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          segmentConfig_ = value;
+          onChanged();
+        } else {
+          segmentConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the Greenplum segment subcluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfigSpec segment_config = 8;</code>
+       */
+      public Builder setSegmentConfig(
+          yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec.Builder builderForValue) {
+        if (segmentConfigBuilder_ == null) {
+          segmentConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          segmentConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the Greenplum segment subcluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfigSpec segment_config = 8;</code>
+       */
+      public Builder mergeSegmentConfig(yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec value) {
+        if (segmentConfigBuilder_ == null) {
+          if (segmentConfig_ != null) {
+            segmentConfig_ =
+              yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec.newBuilder(segmentConfig_).mergeFrom(value).buildPartial();
+          } else {
+            segmentConfig_ = value;
+          }
+          onChanged();
+        } else {
+          segmentConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the Greenplum segment subcluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfigSpec segment_config = 8;</code>
+       */
+      public Builder clearSegmentConfig() {
+        if (segmentConfigBuilder_ == null) {
+          segmentConfig_ = null;
+          onChanged();
+        } else {
+          segmentConfig_ = null;
+          segmentConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the Greenplum segment subcluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfigSpec segment_config = 8;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec.Builder getSegmentConfigBuilder() {
+        
+        onChanged();
+        return getSegmentConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of the Greenplum segment subcluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfigSpec segment_config = 8;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpecOrBuilder getSegmentConfigOrBuilder() {
+        if (segmentConfigBuilder_ != null) {
+          return segmentConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return segmentConfig_ == null ?
+              yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec.getDefaultInstance() : segmentConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of the Greenplum segment subcluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfigSpec segment_config = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec, yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec.Builder, yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpecOrBuilder> 
+          getSegmentConfigFieldBuilder() {
+        if (segmentConfigBuilder_ == null) {
+          segmentConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec, yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpec.Builder, yandex.cloud.api.mdb.greenplum.v1.GPCS.SegmentSubclusterConfigSpecOrBuilder>(
+                  getSegmentConfig(),
+                  getParentForChildren(),
+                  isClean());
+          segmentConfig_ = null;
+        }
+        return segmentConfigBuilder_;
+      }
+
       private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSecurityGroupIdsIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
           securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000100;
          }
       }
       /**
@@ -9058,7 +9566,7 @@ public final class GPCS {
        */
       public Builder clearSecurityGroupIds() {
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -19221,7 +19729,7 @@ public final class GPCS {
       " \003(\t\022\033\n\023deletion_protection\030\020 \001(\010\022\026\n\016hos" +
       "t_group_ids\030\021 \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030" +
       "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateCluste" +
-      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\356\003\n\024Update" +
+      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\224\005\n\024Update" +
       "ClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
       "\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.p" +
       "rotobuf.FieldMask\022\036\n\013description\030\003 \001(\tB\t" +
@@ -19231,89 +19739,94 @@ public final class GPCS {
       "-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022(\n\004" +
       "name\030\005 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022>" +
       "\n\006config\030\006 \001(\0132..yandex.cloud.mdb.greenp" +
-      "lum.v1.GreenplumConfig\022\032\n\022security_group" +
-      "_ids\030\021 \003(\t\022\033\n\023deletion_protection\030\022 \001(\010\032" +
-      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"+\n\025UpdateClusterMetadata\022\022\n\nclust" +
-      "er_id\030\001 \001(\t\"8\n\024DeleteClusterRequest\022 \n\nc" +
-      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteC" +
-      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"7\n\023St" +
-      "artClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\"*\n\024StartClusterMetadata\022\022\n\nc" +
-      "luster_id\030\001 \001(\t\"6\n\022StopClusterRequest\022 \n" +
-      "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopC" +
-      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"~\n\034Li" +
-      "stClusterOperationsRequest\022 \n\ncluster_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B" +
-      "\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
-      "00\"o\n\035ListClusterOperationsResponse\0225\n\no" +
-      "perations\030\001 \003(\0132!.yandex.cloud.operation" +
-      ".Operation\022\027\n\017next_page_token\030\002 \001(\t\"y\n\027L" +
-      "istClusterHostsRequest\022 \n\ncluster_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
-      "\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"g" +
-      "\n\030ListClusterHostsResponse\0222\n\005hosts\030\001 \003(" +
-      "\0132#.yandex.cloud.mdb.greenplum.v1.Host\022\027" +
-      "\n\017next_page_token\030\002 \001(\t\"\237\001\n\032MasterSubclu" +
-      "sterConfigSpec\022;\n\tresources\030\001 \001(\0132(.yand" +
-      "ex.cloud.mdb.greenplum.v1.Resources\022D\n\006c" +
-      "onfig\030\002 \001(\01324.yandex.cloud.mdb.greenplum" +
-      ".v1.GreenplumMasterConfig\"\241\001\n\033SegmentSub" +
-      "clusterConfigSpec\022;\n\tresources\030\001 \001(\0132(.y" +
-      "andex.cloud.mdb.greenplum.v1.Resources\022E" +
-      "\n\006config\030\002 \001(\01325.yandex.cloud.mdb.greenp" +
-      "lum.v1.GreenplumSegmentConfig2\374\016\n\016Cluste" +
-      "rService\022\230\001\n\003Get\0220.yandex.cloud.mdb.gree" +
-      "nplum.v1.GetClusterRequest\032&.yandex.clou" +
-      "d.mdb.greenplum.v1.Cluster\"7\202\323\344\223\0021\022//mdb" +
-      "/managed-greenplum/v1/clusters/{cluster_" +
-      "id}\022\233\001\n\004List\0222.yandex.cloud.mdb.greenplu" +
-      "m.v1.ListClustersRequest\0323.yandex.cloud." +
-      "mdb.greenplum.v1.ListClustersResponse\"*\202" +
-      "\323\344\223\002$\022\"/mdb/managed-greenplum/v1/cluster" +
-      "s\022\263\001\n\006Create\0223.yandex.cloud.mdb.greenplu" +
-      "m.v1.CreateClusterRequest\032!.yandex.cloud" +
-      ".operation.Operation\"Q\202\323\344\223\002\'\"\"/mdb/manag" +
-      "ed-greenplum/v1/clusters:\001*\262\322* \n\025CreateC" +
-      "lusterMetadata\022\007Cluster\022\300\001\n\006Update\0223.yan" +
-      "dex.cloud.mdb.greenplum.v1.UpdateCluster" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"^\202\323\344\223\00242//mdb/managed-greenplum/v1/cl" +
-      "usters/{cluster_id}:\001*\262\322* \n\025UpdateCluste" +
-      "rMetadata\022\007Cluster\022\313\001\n\006Delete\0223.yandex.c" +
-      "loud.mdb.greenplum.v1.DeleteClusterReque" +
-      "st\032!.yandex.cloud.operation.Operation\"i\202" +
-      "\323\344\223\0021*//mdb/managed-greenplum/v1/cluster" +
-      "s/{cluster_id}\262\322*.\n\025DeleteClusterMetadat" +
-      "a\022\025google.protobuf.Empty\022\300\001\n\005Start\0222.yan" +
-      "dex.cloud.mdb.greenplum.v1.StartClusterR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"`\202\323\344\223\0027\"5/mdb/managed-greenplum/v1/clu" +
-      "sters/{cluster_id}:start\262\322*\037\n\024StartClust" +
-      "erMetadata\022\007Cluster\022\274\001\n\004Stop\0221.yandex.cl" +
-      "oud.mdb.greenplum.v1.StopClusterRequest\032" +
-      "!.yandex.cloud.operation.Operation\"^\202\323\344\223" +
-      "\0026\"4/mdb/managed-greenplum/v1/clusters/{" +
-      "cluster_id}:stop\262\322*\036\n\023StopClusterMetadat" +
-      "a\022\007Cluster\022\317\001\n\016ListOperations\022;.yandex.c" +
-      "loud.mdb.greenplum.v1.ListClusterOperati" +
-      "onsRequest\032<.yandex.cloud.mdb.greenplum." +
-      "v1.ListClusterOperationsResponse\"B\202\323\344\223\002<" +
-      "\022:/mdb/managed-greenplum/v1/clusters/{cl" +
-      "uster_id}/operations\022\310\001\n\017ListMasterHosts" +
-      "\0226.yandex.cloud.mdb.greenplum.v1.ListClu" +
-      "sterHostsRequest\0327.yandex.cloud.mdb.gree" +
-      "nplum.v1.ListClusterHostsResponse\"D\202\323\344\223\002" +
-      ">\022</mdb/managed-greenplum/v1/clusters/{c" +
-      "luster_id}/master-hosts\022\312\001\n\020ListSegmentH" +
-      "osts\0226.yandex.cloud.mdb.greenplum.v1.Lis" +
-      "tClusterHostsRequest\0327.yandex.cloud.mdb." +
-      "greenplum.v1.ListClusterHostsResponse\"E\202" +
-      "\323\344\223\002?\022=/mdb/managed-greenplum/v1/cluster" +
-      "s/{cluster_id}/segment-hostsBv\n!yandex.c" +
-      "loud.api.mdb.greenplum.v1B\004GPCSZKgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/mdb/greenplum/v1;greenplumb\006proto3"
+      "lum.v1.GreenplumConfig\022P\n\rmaster_config\030" +
+      "\007 \001(\01329.yandex.cloud.mdb.greenplum.v1.Ma" +
+      "sterSubclusterConfigSpec\022R\n\016segment_conf" +
+      "ig\030\010 \001(\0132:.yandex.cloud.mdb.greenplum.v1" +
+      ".SegmentSubclusterConfigSpec\022\032\n\022security" +
+      "_group_ids\030\021 \003(\t\022\033\n\023deletion_protection\030" +
+      "\022 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMetadata\022\022\n" +
+      "\ncluster_id\030\001 \001(\t\"8\n\024DeleteClusterReques" +
+      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025D" +
+      "eleteClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
+      "\"7\n\023StartClusterRequest\022 \n\ncluster_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterMetadat" +
+      "a\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopClusterRequ" +
+      "est\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n" +
+      "\023StopClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
+      "\"~\n\034ListClusterOperationsRequest\022 \n\nclus" +
+      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030" +
+      "\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212" +
+      "\3101\005<=100\"o\n\035ListClusterOperationsRespons" +
+      "e\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.ope" +
+      "ration.Operation\022\027\n\017next_page_token\030\002 \001(" +
+      "\t\"y\n\027ListClusterHostsRequest\022 \n\ncluster_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(" +
+      "\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<" +
+      "=100\"g\n\030ListClusterHostsResponse\0222\n\005host" +
+      "s\030\001 \003(\0132#.yandex.cloud.mdb.greenplum.v1." +
+      "Host\022\027\n\017next_page_token\030\002 \001(\t\"\237\001\n\032Master" +
+      "SubclusterConfigSpec\022;\n\tresources\030\001 \001(\0132" +
+      "(.yandex.cloud.mdb.greenplum.v1.Resource" +
+      "s\022D\n\006config\030\002 \001(\01324.yandex.cloud.mdb.gre" +
+      "enplum.v1.GreenplumMasterConfig\"\241\001\n\033Segm" +
+      "entSubclusterConfigSpec\022;\n\tresources\030\001 \001" +
+      "(\0132(.yandex.cloud.mdb.greenplum.v1.Resou" +
+      "rces\022E\n\006config\030\002 \001(\01325.yandex.cloud.mdb." +
+      "greenplum.v1.GreenplumSegmentConfig2\374\016\n\016" +
+      "ClusterService\022\230\001\n\003Get\0220.yandex.cloud.md" +
+      "b.greenplum.v1.GetClusterRequest\032&.yande" +
+      "x.cloud.mdb.greenplum.v1.Cluster\"7\202\323\344\223\0021" +
+      "\022//mdb/managed-greenplum/v1/clusters/{cl" +
+      "uster_id}\022\233\001\n\004List\0222.yandex.cloud.mdb.gr" +
+      "eenplum.v1.ListClustersRequest\0323.yandex." +
+      "cloud.mdb.greenplum.v1.ListClustersRespo" +
+      "nse\"*\202\323\344\223\002$\022\"/mdb/managed-greenplum/v1/c" +
+      "lusters\022\263\001\n\006Create\0223.yandex.cloud.mdb.gr" +
+      "eenplum.v1.CreateClusterRequest\032!.yandex" +
+      ".cloud.operation.Operation\"Q\202\323\344\223\002\'\"\"/mdb" +
+      "/managed-greenplum/v1/clusters:\001*\262\322* \n\025C" +
+      "reateClusterMetadata\022\007Cluster\022\300\001\n\006Update" +
+      "\0223.yandex.cloud.mdb.greenplum.v1.UpdateC" +
+      "lusterRequest\032!.yandex.cloud.operation.O" +
+      "peration\"^\202\323\344\223\00242//mdb/managed-greenplum" +
+      "/v1/clusters/{cluster_id}:\001*\262\322* \n\025Update" +
+      "ClusterMetadata\022\007Cluster\022\313\001\n\006Delete\0223.ya" +
+      "ndex.cloud.mdb.greenplum.v1.DeleteCluste" +
+      "rRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"i\202\323\344\223\0021*//mdb/managed-greenplum/v1/c" +
+      "lusters/{cluster_id}\262\322*.\n\025DeleteClusterM" +
+      "etadata\022\025google.protobuf.Empty\022\300\001\n\005Start" +
+      "\0222.yandex.cloud.mdb.greenplum.v1.StartCl" +
+      "usterRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"`\202\323\344\223\0027\"5/mdb/managed-greenplum/" +
+      "v1/clusters/{cluster_id}:start\262\322*\037\n\024Star" +
+      "tClusterMetadata\022\007Cluster\022\274\001\n\004Stop\0221.yan" +
+      "dex.cloud.mdb.greenplum.v1.StopClusterRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"^\202\323\344\223\0026\"4/mdb/managed-greenplum/v1/clus" +
+      "ters/{cluster_id}:stop\262\322*\036\n\023StopClusterM" +
+      "etadata\022\007Cluster\022\317\001\n\016ListOperations\022;.ya" +
+      "ndex.cloud.mdb.greenplum.v1.ListClusterO" +
+      "perationsRequest\032<.yandex.cloud.mdb.gree" +
+      "nplum.v1.ListClusterOperationsResponse\"B" +
+      "\202\323\344\223\002<\022:/mdb/managed-greenplum/v1/cluste" +
+      "rs/{cluster_id}/operations\022\310\001\n\017ListMaste" +
+      "rHosts\0226.yandex.cloud.mdb.greenplum.v1.L" +
+      "istClusterHostsRequest\0327.yandex.cloud.md" +
+      "b.greenplum.v1.ListClusterHostsResponse\"" +
+      "D\202\323\344\223\002>\022</mdb/managed-greenplum/v1/clust" +
+      "ers/{cluster_id}/master-hosts\022\312\001\n\020ListSe" +
+      "gmentHosts\0226.yandex.cloud.mdb.greenplum." +
+      "v1.ListClusterHostsRequest\0327.yandex.clou" +
+      "d.mdb.greenplum.v1.ListClusterHostsRespo" +
+      "nse\"E\202\323\344\223\002?\022=/mdb/managed-greenplum/v1/c" +
+      "lusters/{cluster_id}/segment-hostsBv\n!ya" +
+      "ndex.cloud.api.mdb.greenplum.v1B\004GPCSZKg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/mdb/greenplum/v1;greenplumb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -19376,7 +19889,7 @@ public final class GPCS {
     internal_static_yandex_cloud_mdb_greenplum_v1_UpdateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_UpdateClusterRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "Name", "Config", "SecurityGroupIds", "DeletionProtection", });
+        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "Name", "Config", "MasterConfig", "SegmentConfig", "SecurityGroupIds", "DeletionProtection", });
     internal_static_yandex_cloud_mdb_greenplum_v1_UpdateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_greenplum_v1_UpdateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_greenplum_v1_UpdateClusterRequest_LabelsEntry_fieldAccessorTable = new

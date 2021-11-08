@@ -20,7 +20,7 @@ public final class UsageRecordOuterClass {
 
     /**
      * <pre>
-     * Unique identitifier of the usage record (UUID format)
+     * Unique identifier of the usage record (UUID format).
      * </pre>
      *
      * <code>string uuid = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
@@ -28,7 +28,7 @@ public final class UsageRecordOuterClass {
     java.lang.String getUuid();
     /**
      * <pre>
-     * Unique identitifier of the usage record (UUID format)
+     * Unique identifier of the usage record (UUID format).
      * </pre>
      *
      * <code>string uuid = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
@@ -38,7 +38,7 @@ public final class UsageRecordOuterClass {
 
     /**
      * <pre>
-     * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`
+     * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`.
      * </pre>
      *
      * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -46,7 +46,7 @@ public final class UsageRecordOuterClass {
     java.lang.String getSkuId();
     /**
      * <pre>
-     * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`
+     * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`.
      * </pre>
      *
      * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -56,7 +56,7 @@ public final class UsageRecordOuterClass {
 
     /**
      * <pre>
-     * Quantity of sku consumed, measured in `sku.usage_unit` units (e.g. bytes)
+     * Quantity of sku consumed, measured in `sku.usage_unit` units (e.g. bytes).
      * </pre>
      *
      * <code>int64 quantity = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -65,7 +65,7 @@ public final class UsageRecordOuterClass {
 
     /**
      * <pre>
-     * Timestamp in UTC for which the usage is being reported
+     * Timestamp in UTC for which the usage is being reported.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
@@ -73,7 +73,7 @@ public final class UsageRecordOuterClass {
     boolean hasTimestamp();
     /**
      * <pre>
-     * Timestamp in UTC for which the usage is being reported
+     * Timestamp in UTC for which the usage is being reported.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
@@ -81,7 +81,7 @@ public final class UsageRecordOuterClass {
     com.google.protobuf.Timestamp getTimestamp();
     /**
      * <pre>
-     * Timestamp in UTC for which the usage is being reported
+     * Timestamp in UTC for which the usage is being reported.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
@@ -196,7 +196,7 @@ public final class UsageRecordOuterClass {
     private volatile java.lang.Object uuid_;
     /**
      * <pre>
-     * Unique identitifier of the usage record (UUID format)
+     * Unique identifier of the usage record (UUID format).
      * </pre>
      *
      * <code>string uuid = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
@@ -215,7 +215,7 @@ public final class UsageRecordOuterClass {
     }
     /**
      * <pre>
-     * Unique identitifier of the usage record (UUID format)
+     * Unique identifier of the usage record (UUID format).
      * </pre>
      *
      * <code>string uuid = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
@@ -238,7 +238,7 @@ public final class UsageRecordOuterClass {
     private volatile java.lang.Object skuId_;
     /**
      * <pre>
-     * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`
+     * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`.
      * </pre>
      *
      * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -257,7 +257,7 @@ public final class UsageRecordOuterClass {
     }
     /**
      * <pre>
-     * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`
+     * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`.
      * </pre>
      *
      * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -280,7 +280,7 @@ public final class UsageRecordOuterClass {
     private long quantity_;
     /**
      * <pre>
-     * Quantity of sku consumed, measured in `sku.usage_unit` units (e.g. bytes)
+     * Quantity of sku consumed, measured in `sku.usage_unit` units (e.g. bytes).
      * </pre>
      *
      * <code>int64 quantity = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -293,7 +293,7 @@ public final class UsageRecordOuterClass {
     private com.google.protobuf.Timestamp timestamp_;
     /**
      * <pre>
-     * Timestamp in UTC for which the usage is being reported
+     * Timestamp in UTC for which the usage is being reported.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
@@ -303,7 +303,7 @@ public final class UsageRecordOuterClass {
     }
     /**
      * <pre>
-     * Timestamp in UTC for which the usage is being reported
+     * Timestamp in UTC for which the usage is being reported.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
@@ -313,7 +313,7 @@ public final class UsageRecordOuterClass {
     }
     /**
      * <pre>
-     * Timestamp in UTC for which the usage is being reported
+     * Timestamp in UTC for which the usage is being reported.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
@@ -693,7 +693,7 @@ public final class UsageRecordOuterClass {
       private java.lang.Object uuid_ = "";
       /**
        * <pre>
-       * Unique identitifier of the usage record (UUID format)
+       * Unique identifier of the usage record (UUID format).
        * </pre>
        *
        * <code>string uuid = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
@@ -712,7 +712,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Unique identitifier of the usage record (UUID format)
+       * Unique identifier of the usage record (UUID format).
        * </pre>
        *
        * <code>string uuid = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
@@ -732,7 +732,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Unique identitifier of the usage record (UUID format)
+       * Unique identifier of the usage record (UUID format).
        * </pre>
        *
        * <code>string uuid = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
@@ -749,7 +749,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Unique identitifier of the usage record (UUID format)
+       * Unique identifier of the usage record (UUID format).
        * </pre>
        *
        * <code>string uuid = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
@@ -762,7 +762,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Unique identitifier of the usage record (UUID format)
+       * Unique identifier of the usage record (UUID format).
        * </pre>
        *
        * <code>string uuid = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
@@ -782,7 +782,7 @@ public final class UsageRecordOuterClass {
       private java.lang.Object skuId_ = "";
       /**
        * <pre>
-       * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`
+       * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`.
        * </pre>
        *
        * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -801,7 +801,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`
+       * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`.
        * </pre>
        *
        * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -821,7 +821,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`
+       * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`.
        * </pre>
        *
        * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -838,7 +838,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`
+       * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`.
        * </pre>
        *
        * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -851,7 +851,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`
+       * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`.
        * </pre>
        *
        * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -871,7 +871,7 @@ public final class UsageRecordOuterClass {
       private long quantity_ ;
       /**
        * <pre>
-       * Quantity of sku consumed, measured in `sku.usage_unit` units (e.g. bytes)
+       * Quantity of sku consumed, measured in `sku.usage_unit` units (e.g. bytes).
        * </pre>
        *
        * <code>int64 quantity = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -881,7 +881,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Quantity of sku consumed, measured in `sku.usage_unit` units (e.g. bytes)
+       * Quantity of sku consumed, measured in `sku.usage_unit` units (e.g. bytes).
        * </pre>
        *
        * <code>int64 quantity = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -894,7 +894,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Quantity of sku consumed, measured in `sku.usage_unit` units (e.g. bytes)
+       * Quantity of sku consumed, measured in `sku.usage_unit` units (e.g. bytes).
        * </pre>
        *
        * <code>int64 quantity = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -911,7 +911,7 @@ public final class UsageRecordOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
       /**
        * <pre>
-       * Timestamp in UTC for which the usage is being reported
+       * Timestamp in UTC for which the usage is being reported.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
@@ -921,7 +921,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Timestamp in UTC for which the usage is being reported
+       * Timestamp in UTC for which the usage is being reported.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
@@ -935,7 +935,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Timestamp in UTC for which the usage is being reported
+       * Timestamp in UTC for which the usage is being reported.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
@@ -955,7 +955,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Timestamp in UTC for which the usage is being reported
+       * Timestamp in UTC for which the usage is being reported.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
@@ -973,7 +973,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Timestamp in UTC for which the usage is being reported
+       * Timestamp in UTC for which the usage is being reported.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
@@ -995,7 +995,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Timestamp in UTC for which the usage is being reported
+       * Timestamp in UTC for which the usage is being reported.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
@@ -1013,7 +1013,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Timestamp in UTC for which the usage is being reported
+       * Timestamp in UTC for which the usage is being reported.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
@@ -1025,7 +1025,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Timestamp in UTC for which the usage is being reported
+       * Timestamp in UTC for which the usage is being reported.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
@@ -1040,7 +1040,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Timestamp in UTC for which the usage is being reported
+       * Timestamp in UTC for which the usage is being reported.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 4 [(.yandex.cloud.required) = true];</code>
@@ -1117,7 +1117,7 @@ public final class UsageRecordOuterClass {
 
     /**
      * <pre>
-     * Unique identitifier of the usage record (UUID format)
+     * Unique identifier of the usage record (UUID format).
      * </pre>
      *
      * <code>string uuid = 1;</code>
@@ -1125,7 +1125,7 @@ public final class UsageRecordOuterClass {
     java.lang.String getUuid();
     /**
      * <pre>
-     * Unique identitifier of the usage record (UUID format)
+     * Unique identifier of the usage record (UUID format).
      * </pre>
      *
      * <code>string uuid = 1;</code>
@@ -1215,7 +1215,7 @@ public final class UsageRecordOuterClass {
     private volatile java.lang.Object uuid_;
     /**
      * <pre>
-     * Unique identitifier of the usage record (UUID format)
+     * Unique identifier of the usage record (UUID format).
      * </pre>
      *
      * <code>string uuid = 1;</code>
@@ -1234,7 +1234,7 @@ public final class UsageRecordOuterClass {
     }
     /**
      * <pre>
-     * Unique identitifier of the usage record (UUID format)
+     * Unique identifier of the usage record (UUID format).
      * </pre>
      *
      * <code>string uuid = 1;</code>
@@ -1559,7 +1559,7 @@ public final class UsageRecordOuterClass {
       private java.lang.Object uuid_ = "";
       /**
        * <pre>
-       * Unique identitifier of the usage record (UUID format)
+       * Unique identifier of the usage record (UUID format).
        * </pre>
        *
        * <code>string uuid = 1;</code>
@@ -1578,7 +1578,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Unique identitifier of the usage record (UUID format)
+       * Unique identifier of the usage record (UUID format).
        * </pre>
        *
        * <code>string uuid = 1;</code>
@@ -1598,7 +1598,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Unique identitifier of the usage record (UUID format)
+       * Unique identifier of the usage record (UUID format).
        * </pre>
        *
        * <code>string uuid = 1;</code>
@@ -1615,7 +1615,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Unique identitifier of the usage record (UUID format)
+       * Unique identifier of the usage record (UUID format).
        * </pre>
        *
        * <code>string uuid = 1;</code>
@@ -1628,7 +1628,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Unique identitifier of the usage record (UUID format)
+       * Unique identifier of the usage record (UUID format).
        * </pre>
        *
        * <code>string uuid = 1;</code>
@@ -1703,7 +1703,7 @@ public final class UsageRecordOuterClass {
 
     /**
      * <pre>
-     * Unique identitifier of the usage record (UUID format)
+     * Unique identifier of the usage record (UUID format).
      * </pre>
      *
      * <code>string uuid = 1;</code>
@@ -1711,7 +1711,7 @@ public final class UsageRecordOuterClass {
     java.lang.String getUuid();
     /**
      * <pre>
-     * Unique identitifier of the usage record (UUID format)
+     * Unique identifier of the usage record (UUID format).
      * </pre>
      *
      * <code>string uuid = 1;</code>
@@ -1721,7 +1721,7 @@ public final class UsageRecordOuterClass {
 
     /**
      * <pre>
-     * The reason of rejection
+     * The reason of rejection.
      * </pre>
      *
      * <code>.yandex.cloud.marketplace.v1.metering.RejectedUsageRecord.Reason reason = 2;</code>
@@ -1729,7 +1729,7 @@ public final class UsageRecordOuterClass {
     int getReasonValue();
     /**
      * <pre>
-     * The reason of rejection
+     * The reason of rejection.
      * </pre>
      *
      * <code>.yandex.cloud.marketplace.v1.metering.RejectedUsageRecord.Reason reason = 2;</code>
@@ -1977,7 +1977,7 @@ public final class UsageRecordOuterClass {
     private volatile java.lang.Object uuid_;
     /**
      * <pre>
-     * Unique identitifier of the usage record (UUID format)
+     * Unique identifier of the usage record (UUID format).
      * </pre>
      *
      * <code>string uuid = 1;</code>
@@ -1996,7 +1996,7 @@ public final class UsageRecordOuterClass {
     }
     /**
      * <pre>
-     * Unique identitifier of the usage record (UUID format)
+     * Unique identifier of the usage record (UUID format).
      * </pre>
      *
      * <code>string uuid = 1;</code>
@@ -2019,7 +2019,7 @@ public final class UsageRecordOuterClass {
     private int reason_;
     /**
      * <pre>
-     * The reason of rejection
+     * The reason of rejection.
      * </pre>
      *
      * <code>.yandex.cloud.marketplace.v1.metering.RejectedUsageRecord.Reason reason = 2;</code>
@@ -2029,7 +2029,7 @@ public final class UsageRecordOuterClass {
     }
     /**
      * <pre>
-     * The reason of rejection
+     * The reason of rejection.
      * </pre>
      *
      * <code>.yandex.cloud.marketplace.v1.metering.RejectedUsageRecord.Reason reason = 2;</code>
@@ -2362,7 +2362,7 @@ public final class UsageRecordOuterClass {
       private java.lang.Object uuid_ = "";
       /**
        * <pre>
-       * Unique identitifier of the usage record (UUID format)
+       * Unique identifier of the usage record (UUID format).
        * </pre>
        *
        * <code>string uuid = 1;</code>
@@ -2381,7 +2381,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Unique identitifier of the usage record (UUID format)
+       * Unique identifier of the usage record (UUID format).
        * </pre>
        *
        * <code>string uuid = 1;</code>
@@ -2401,7 +2401,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Unique identitifier of the usage record (UUID format)
+       * Unique identifier of the usage record (UUID format).
        * </pre>
        *
        * <code>string uuid = 1;</code>
@@ -2418,7 +2418,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Unique identitifier of the usage record (UUID format)
+       * Unique identifier of the usage record (UUID format).
        * </pre>
        *
        * <code>string uuid = 1;</code>
@@ -2431,7 +2431,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Unique identitifier of the usage record (UUID format)
+       * Unique identifier of the usage record (UUID format).
        * </pre>
        *
        * <code>string uuid = 1;</code>
@@ -2451,7 +2451,7 @@ public final class UsageRecordOuterClass {
       private int reason_ = 0;
       /**
        * <pre>
-       * The reason of rejection
+       * The reason of rejection.
        * </pre>
        *
        * <code>.yandex.cloud.marketplace.v1.metering.RejectedUsageRecord.Reason reason = 2;</code>
@@ -2461,7 +2461,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * The reason of rejection
+       * The reason of rejection.
        * </pre>
        *
        * <code>.yandex.cloud.marketplace.v1.metering.RejectedUsageRecord.Reason reason = 2;</code>
@@ -2473,7 +2473,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * The reason of rejection
+       * The reason of rejection.
        * </pre>
        *
        * <code>.yandex.cloud.marketplace.v1.metering.RejectedUsageRecord.Reason reason = 2;</code>
@@ -2485,7 +2485,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * The reason of rejection
+       * The reason of rejection.
        * </pre>
        *
        * <code>.yandex.cloud.marketplace.v1.metering.RejectedUsageRecord.Reason reason = 2;</code>
@@ -2501,7 +2501,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * The reason of rejection
+       * The reason of rejection.
        * </pre>
        *
        * <code>.yandex.cloud.marketplace.v1.metering.RejectedUsageRecord.Reason reason = 2;</code>

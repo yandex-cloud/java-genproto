@@ -5099,9 +5099,9 @@ public final class GPCF {
        */
       ON_CHANGE(2),
       /**
-       * <code>ON_NO_STATES = 3;</code>
+       * <code>ON_NO_STATS = 3;</code>
        */
-      ON_NO_STATES(3),
+      ON_NO_STATS(3),
       UNRECOGNIZED(-1),
       ;
 
@@ -5118,9 +5118,9 @@ public final class GPCF {
        */
       public static final int ON_CHANGE_VALUE = 2;
       /**
-       * <code>ON_NO_STATES = 3;</code>
+       * <code>ON_NO_STATS = 3;</code>
        */
-      public static final int ON_NO_STATES_VALUE = 3;
+      public static final int ON_NO_STATS_VALUE = 3;
 
 
       public final int getNumber() {
@@ -5144,7 +5144,7 @@ public final class GPCF {
           case 0: return AUTOSTATS_MODE_IN_FUNCTIONS_UNSPECIFIED;
           case 1: return MODE_NONE;
           case 2: return ON_CHANGE;
-          case 3: return ON_NO_STATES;
+          case 3: return ON_NO_STATS;
           default: return null;
         }
       }
@@ -10014,9 +10014,9 @@ public final class GPCF {
        */
       QUEUE(1),
       /**
-       * <code>GREOUP = 2;</code>
+       * <code>GROUP = 2;</code>
        */
-      GREOUP(2),
+      GROUP(2),
       UNRECOGNIZED(-1),
       ;
 
@@ -10029,9 +10029,9 @@ public final class GPCF {
        */
       public static final int QUEUE_VALUE = 1;
       /**
-       * <code>GREOUP = 2;</code>
+       * <code>GROUP = 2;</code>
        */
-      public static final int GREOUP_VALUE = 2;
+      public static final int GROUP_VALUE = 2;
 
 
       public final int getNumber() {
@@ -10054,7 +10054,7 @@ public final class GPCF {
         switch (value) {
           case 0: return GP_RESOURCE_MANAGER_UNSPECIFIED;
           case 1: return QUEUE;
-          case 2: return GREOUP;
+          case 2: return GROUP;
           default: return null;
         }
       }
@@ -14805,7 +14805,7 @@ public final class GPCF {
       "nfig\022;\n\tresources\030\001 \001(\0132(.yandex.cloud.m" +
       "db.greenplum.v1.Resources\022H\n\006config\030\002 \001(" +
       "\01328.yandex.cloud.mdb.greenplum.v1.Greenp" +
-      "lumSegmentConfigSet\"\224\014\n\025GreenplumMasterC" +
+      "lumSegmentConfigSet\"\223\014\n\025GreenplumMasterC" +
       "onfig\022P\n\tlog_level\030\001 \001(\0162=.yandex.cloud." +
       "mdb.greenplum.v1.GreenplumMasterConfig.L" +
       "ogLevel\0224\n\017max_connections\030\002 \001(\0132\033.googl" +
@@ -14841,48 +14841,48 @@ public final class GPCF {
       "\001\022\t\n\005DEBUG\020\002\022\017\n\013INFORMATION\020\003\022\013\n\007WARNING" +
       "\020\004\022\t\n\005ERROR\020\005\"R\n\014LogStatement\022\035\n\031LOG_STA" +
       "TEMENT_UNSPECIFIED\020\000\022\010\n\004NONE\020\001\022\007\n\003DDL\020\002\022" +
-      "\007\n\003MOD\020\003\022\007\n\003ALL\020\004\"w\n\030AutostatsModeInFunc" +
+      "\007\n\003MOD\020\003\022\007\n\003ALL\020\004\"v\n\030AutostatsModeInFunc" +
       "tions\022+\n\'AUTOSTATS_MODE_IN_FUNCTIONS_UNS" +
       "PECIFIED\020\000\022\r\n\tMODE_NONE\020\001\022\r\n\tON_CHANGE\020\002" +
-      "\022\020\n\014ON_NO_STATES\020\003\"\320\006\n\026GreenplumSegmentC" +
-      "onfig\022Q\n\tlog_level\030\001 \001(\0162>.yandex.cloud." +
-      "mdb.greenplum.v1.GreenplumSegmentConfig." +
-      "LogLevel\0224\n\017max_connections\030\002 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022;\n\026max_slot_wal_k" +
-      "eep_size\030\007 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\022B\n\035gp_workfile_limit_per_segment\030\010 \001" +
-      "(\0132\033.google.protobuf.Int64Value\022@\n\033gp_wo" +
-      "rkfile_limit_per_query\030\t \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\022F\n!gp_workfile_limit_f" +
-      "iles_per_query\030\n \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022d\n\023gp_resource_manager\030\013 \001(\0162G" +
-      ".yandex.cloud.mdb.greenplum.v1.Greenplum" +
-      "SegmentConfig.GPResourceManager\022@\n\033gp_re" +
-      "source_group_cpu_limit\030\021 \001(\0132\033.google.pr" +
-      "otobuf.FloatValue\022C\n\036gp_resource_group_m" +
-      "emory_limit\030\022 \001(\0132\033.google.protobuf.Floa" +
-      "tValue\"d\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECIF" +
-      "IED\020\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG\020\002\022\017\n\013INFORMATI" +
-      "ON\020\003\022\013\n\007WARNING\020\004\022\t\n\005ERROR\020\005\"O\n\021GPResour" +
-      "ceManager\022#\n\037GP_RESOURCE_MANAGER_UNSPECI" +
-      "FIED\020\000\022\t\n\005QUEUE\020\001\022\n\n\006GREOUP\020\002\"\211\002\n\030Greenp" +
-      "lumMasterConfigSet\022T\n\020effective_config\030\001" +
-      " \001(\01324.yandex.cloud.mdb.greenplum.v1.Gre" +
-      "enplumMasterConfigB\004\350\3071\001\022I\n\013user_config\030" +
-      "\002 \001(\01324.yandex.cloud.mdb.greenplum.v1.Gr" +
-      "eenplumMasterConfig\022L\n\016default_config\030\003 " +
+      "\022\017\n\013ON_NO_STATS\020\003\"\317\006\n\026GreenplumSegmentCo" +
+      "nfig\022Q\n\tlog_level\030\001 \001(\0162>.yandex.cloud.m" +
+      "db.greenplum.v1.GreenplumSegmentConfig.L" +
+      "ogLevel\0224\n\017max_connections\030\002 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\022;\n\026max_slot_wal_ke" +
+      "ep_size\030\007 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022B\n\035gp_workfile_limit_per_segment\030\010 \001(" +
+      "\0132\033.google.protobuf.Int64Value\022@\n\033gp_wor" +
+      "kfile_limit_per_query\030\t \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022F\n!gp_workfile_limit_fi" +
+      "les_per_query\030\n \001(\0132\033.google.protobuf.In" +
+      "t64Value\022d\n\023gp_resource_manager\030\013 \001(\0162G." +
+      "yandex.cloud.mdb.greenplum.v1.GreenplumS" +
+      "egmentConfig.GPResourceManager\022@\n\033gp_res" +
+      "ource_group_cpu_limit\030\021 \001(\0132\033.google.pro" +
+      "tobuf.FloatValue\022C\n\036gp_resource_group_me" +
+      "mory_limit\030\022 \001(\0132\033.google.protobuf.Float" +
+      "Value\"d\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECIFI" +
+      "ED\020\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG\020\002\022\017\n\013INFORMATIO" +
+      "N\020\003\022\013\n\007WARNING\020\004\022\t\n\005ERROR\020\005\"N\n\021GPResourc" +
+      "eManager\022#\n\037GP_RESOURCE_MANAGER_UNSPECIF" +
+      "IED\020\000\022\t\n\005QUEUE\020\001\022\t\n\005GROUP\020\002\"\211\002\n\030Greenplu" +
+      "mMasterConfigSet\022T\n\020effective_config\030\001 \001" +
+      "(\01324.yandex.cloud.mdb.greenplum.v1.Green" +
+      "plumMasterConfigB\004\350\3071\001\022I\n\013user_config\030\002 " +
       "\001(\01324.yandex.cloud.mdb.greenplum.v1.Gree" +
-      "nplumMasterConfig\"\215\002\n\031GreenplumSegmentCo" +
-      "nfigSet\022U\n\020effective_config\030\001 \001(\01325.yand" +
+      "nplumMasterConfig\022L\n\016default_config\030\003 \001(" +
+      "\01324.yandex.cloud.mdb.greenplum.v1.Greenp" +
+      "lumMasterConfig\"\215\002\n\031GreenplumSegmentConf" +
+      "igSet\022U\n\020effective_config\030\001 \001(\01325.yandex" +
+      ".cloud.mdb.greenplum.v1.GreenplumSegment" +
+      "ConfigB\004\350\3071\001\022J\n\013user_config\030\002 \001(\01325.yand" +
       "ex.cloud.mdb.greenplum.v1.GreenplumSegme" +
-      "ntConfigB\004\350\3071\001\022J\n\013user_config\030\002 \001(\01325.ya" +
-      "ndex.cloud.mdb.greenplum.v1.GreenplumSeg" +
-      "mentConfig\022M\n\016default_config\030\003 \001(\01325.yan" +
-      "dex.cloud.mdb.greenplum.v1.GreenplumSegm" +
-      "entConfigBv\n!yandex.cloud.api.mdb.greenp" +
-      "lum.v1B\004GPCFZKgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/mdb/greenplum/v1;" +
-      "greenplumb\006proto3"
+      "ntConfig\022M\n\016default_config\030\003 \001(\01325.yande" +
+      "x.cloud.mdb.greenplum.v1.GreenplumSegmen" +
+      "tConfigBv\n!yandex.cloud.api.mdb.greenplu" +
+      "m.v1B\004GPCFZKgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/mdb/greenplum/v1;gr" +
+      "eenplumb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

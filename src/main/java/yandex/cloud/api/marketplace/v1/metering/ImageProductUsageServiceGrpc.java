@@ -16,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * A set of methods for managing image product's usage.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.22.0)",
@@ -83,12 +86,15 @@ public final class ImageProductUsageServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing image product's usage.
+   * </pre>
    */
   public static abstract class ImageProductUsageServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Writes image product's usage (authenticated by user's service account)
+     * Writes image product's usage. Authentication is by user's service account.
      * </pre>
      */
     public void write(yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageRequest request,
@@ -110,6 +116,9 @@ public final class ImageProductUsageServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing image product's usage.
+   * </pre>
    */
   public static final class ImageProductUsageServiceStub extends io.grpc.stub.AbstractStub<ImageProductUsageServiceStub> {
     private ImageProductUsageServiceStub(io.grpc.Channel channel) {
@@ -129,7 +138,7 @@ public final class ImageProductUsageServiceGrpc {
 
     /**
      * <pre>
-     * Writes image product's usage (authenticated by user's service account)
+     * Writes image product's usage. Authentication is by user's service account.
      * </pre>
      */
     public void write(yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageRequest request,
@@ -140,6 +149,9 @@ public final class ImageProductUsageServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing image product's usage.
+   * </pre>
    */
   public static final class ImageProductUsageServiceBlockingStub extends io.grpc.stub.AbstractStub<ImageProductUsageServiceBlockingStub> {
     private ImageProductUsageServiceBlockingStub(io.grpc.Channel channel) {
@@ -159,7 +171,7 @@ public final class ImageProductUsageServiceGrpc {
 
     /**
      * <pre>
-     * Writes image product's usage (authenticated by user's service account)
+     * Writes image product's usage. Authentication is by user's service account.
      * </pre>
      */
     public yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageResponse write(yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageRequest request) {
@@ -169,6 +181,9 @@ public final class ImageProductUsageServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing image product's usage.
+   * </pre>
    */
   public static final class ImageProductUsageServiceFutureStub extends io.grpc.stub.AbstractStub<ImageProductUsageServiceFutureStub> {
     private ImageProductUsageServiceFutureStub(io.grpc.Channel channel) {
@@ -188,7 +203,7 @@ public final class ImageProductUsageServiceGrpc {
 
     /**
      * <pre>
-     * Writes image product's usage (authenticated by user's service account)
+     * Writes image product's usage. Authentication is by user's service account.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceOuterClass.WriteImageProductUsageResponse> write(
