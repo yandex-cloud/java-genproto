@@ -371,6 +371,41 @@ public final class ProjectOuterClass {
        * <code>.yandex.cloud.datasphere.v1.Project.Settings.CommitMode commit_mode = 4;</code>
        */
       yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings.CommitMode getCommitMode();
+
+      /**
+       * <pre>
+       * Network interfaces security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      java.util.List<java.lang.String>
+          getSecurityGroupIdsList();
+      /**
+       * <pre>
+       * Network interfaces security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      int getSecurityGroupIdsCount();
+      /**
+       * <pre>
+       * Network interfaces security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      java.lang.String getSecurityGroupIds(int index);
+      /**
+       * <pre>
+       * Network interfaces security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      com.google.protobuf.ByteString
+          getSecurityGroupIdsBytes(int index);
     }
     /**
      * Protobuf type {@code yandex.cloud.datasphere.v1.Project.Settings}
@@ -389,6 +424,7 @@ public final class ProjectOuterClass {
         subnetId_ = "";
         dataProcClusterId_ = "";
         commitMode_ = 0;
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       }
 
       @java.lang.Override
@@ -439,6 +475,15 @@ public final class ProjectOuterClass {
                 commitMode_ = rawValue;
                 break;
               }
+              case 42: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                  securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000010;
+                }
+                securityGroupIds_.add(s);
+                break;
+              }
               default: {
                 if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -454,6 +499,9 @@ public final class ProjectOuterClass {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
+          if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+            securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+          }
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
@@ -596,6 +644,7 @@ public final class ProjectOuterClass {
         // @@protoc_insertion_point(enum_scope:yandex.cloud.datasphere.v1.Project.Settings.CommitMode)
       }
 
+      private int bitField0_;
       public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 1;
       private volatile java.lang.Object serviceAccountId_;
       /**
@@ -749,6 +798,51 @@ public final class ProjectOuterClass {
         return result == null ? yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings.CommitMode.UNRECOGNIZED : result;
       }
 
+      public static final int SECURITY_GROUP_IDS_FIELD_NUMBER = 5;
+      private com.google.protobuf.LazyStringList securityGroupIds_;
+      /**
+       * <pre>
+       * Network interfaces security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupIdsList() {
+        return securityGroupIds_;
+      }
+      /**
+       * <pre>
+       * Network interfaces security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public int getSecurityGroupIdsCount() {
+        return securityGroupIds_.size();
+      }
+      /**
+       * <pre>
+       * Network interfaces security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public java.lang.String getSecurityGroupIds(int index) {
+        return securityGroupIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Network interfaces security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupIdsBytes(int index) {
+        return securityGroupIds_.getByteString(index);
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -775,6 +869,9 @@ public final class ProjectOuterClass {
         if (commitMode_ != yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings.CommitMode.COMMIT_MODE_UNSPECIFIED.getNumber()) {
           output.writeEnum(4, commitMode_);
         }
+        for (int i = 0; i < securityGroupIds_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 5, securityGroupIds_.getRaw(i));
+        }
         unknownFields.writeTo(output);
       }
 
@@ -796,6 +893,14 @@ public final class ProjectOuterClass {
         if (commitMode_ != yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings.CommitMode.COMMIT_MODE_UNSPECIFIED.getNumber()) {
           size += com.google.protobuf.CodedOutputStream
             .computeEnumSize(4, commitMode_);
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < securityGroupIds_.size(); i++) {
+            dataSize += computeStringSizeNoTag(securityGroupIds_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getSecurityGroupIdsList().size();
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -820,6 +925,8 @@ public final class ProjectOuterClass {
         result = result && getDataProcClusterId()
             .equals(other.getDataProcClusterId());
         result = result && commitMode_ == other.commitMode_;
+        result = result && getSecurityGroupIdsList()
+            .equals(other.getSecurityGroupIdsList());
         result = result && unknownFields.equals(other.unknownFields);
         return result;
       }
@@ -839,6 +946,10 @@ public final class ProjectOuterClass {
         hash = (53 * hash) + getDataProcClusterId().hashCode();
         hash = (37 * hash) + COMMIT_MODE_FIELD_NUMBER;
         hash = (53 * hash) + commitMode_;
+        if (getSecurityGroupIdsCount() > 0) {
+          hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
+          hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -980,6 +1091,8 @@ public final class ProjectOuterClass {
 
           commitMode_ = 0;
 
+          securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000010);
           return this;
         }
 
@@ -1006,10 +1119,18 @@ public final class ProjectOuterClass {
         @java.lang.Override
         public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings buildPartial() {
           yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings result = new yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Settings(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
           result.serviceAccountId_ = serviceAccountId_;
           result.subnetId_ = subnetId_;
           result.dataProcClusterId_ = dataProcClusterId_;
           result.commitMode_ = commitMode_;
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+            securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.securityGroupIds_ = securityGroupIds_;
+          result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
         }
@@ -1073,6 +1194,16 @@ public final class ProjectOuterClass {
           if (other.commitMode_ != 0) {
             setCommitModeValue(other.getCommitModeValue());
           }
+          if (!other.securityGroupIds_.isEmpty()) {
+            if (securityGroupIds_.isEmpty()) {
+              securityGroupIds_ = other.securityGroupIds_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureSecurityGroupIdsIsMutable();
+              securityGroupIds_.addAll(other.securityGroupIds_);
+            }
+            onChanged();
+          }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
@@ -1101,6 +1232,7 @@ public final class ProjectOuterClass {
           }
           return this;
         }
+        private int bitField0_;
 
         private java.lang.Object serviceAccountId_ = "";
         /**
@@ -1435,6 +1567,136 @@ public final class ProjectOuterClass {
         public Builder clearCommitMode() {
           
           commitMode_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureSecurityGroupIdsIsMutable() {
+          if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+            securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
+            bitField0_ |= 0x00000010;
+           }
+        }
+        /**
+         * <pre>
+         * Network interfaces security groups.
+         * </pre>
+         *
+         * <code>repeated string security_group_ids = 5;</code>
+         */
+        public com.google.protobuf.ProtocolStringList
+            getSecurityGroupIdsList() {
+          return securityGroupIds_.getUnmodifiableView();
+        }
+        /**
+         * <pre>
+         * Network interfaces security groups.
+         * </pre>
+         *
+         * <code>repeated string security_group_ids = 5;</code>
+         */
+        public int getSecurityGroupIdsCount() {
+          return securityGroupIds_.size();
+        }
+        /**
+         * <pre>
+         * Network interfaces security groups.
+         * </pre>
+         *
+         * <code>repeated string security_group_ids = 5;</code>
+         */
+        public java.lang.String getSecurityGroupIds(int index) {
+          return securityGroupIds_.get(index);
+        }
+        /**
+         * <pre>
+         * Network interfaces security groups.
+         * </pre>
+         *
+         * <code>repeated string security_group_ids = 5;</code>
+         */
+        public com.google.protobuf.ByteString
+            getSecurityGroupIdsBytes(int index) {
+          return securityGroupIds_.getByteString(index);
+        }
+        /**
+         * <pre>
+         * Network interfaces security groups.
+         * </pre>
+         *
+         * <code>repeated string security_group_ids = 5;</code>
+         */
+        public Builder setSecurityGroupIds(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+          securityGroupIds_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Network interfaces security groups.
+         * </pre>
+         *
+         * <code>repeated string security_group_ids = 5;</code>
+         */
+        public Builder addSecurityGroupIds(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+          securityGroupIds_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Network interfaces security groups.
+         * </pre>
+         *
+         * <code>repeated string security_group_ids = 5;</code>
+         */
+        public Builder addAllSecurityGroupIds(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureSecurityGroupIdsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, securityGroupIds_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Network interfaces security groups.
+         * </pre>
+         *
+         * <code>repeated string security_group_ids = 5;</code>
+         */
+        public Builder clearSecurityGroupIds() {
+          securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Network interfaces security groups.
+         * </pre>
+         *
+         * <code>repeated string security_group_ids = 5;</code>
+         */
+        public Builder addSecurityGroupIdsBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureSecurityGroupIdsIsMutable();
+          securityGroupIds_.add(value);
           onChanged();
           return this;
         }
@@ -3973,25 +4235,26 @@ public final class ProjectOuterClass {
       "\n(yandex/cloud/datasphere/v1/project.pro" +
       "to\022\032yandex.cloud.datasphere.v1\032\037google/p" +
       "rotobuf/timestamp.proto\032\036google/protobuf" +
-      "/wrappers.proto\"\343\004\n\007Project\022\n\n\002id\030\001 \001(\t\022" +
+      "/wrappers.proto\"\377\004\n\007Project\022\n\n\002id\030\001 \001(\t\022" +
       "\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032" +
       ".google.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t" +
       "\022\023\n\013description\030\005 \001(\t\022>\n\010settings\030\006 \001(\0132" +
       ",.yandex.cloud.datasphere.v1.Project.Set" +
       "tings\022:\n\006limits\030\007 \001(\0132*.yandex.cloud.dat" +
-      "asphere.v1.Project.Limits\032\350\001\n\010Settings\022\032" +
+      "asphere.v1.Project.Limits\032\204\002\n\010Settings\022\032" +
       "\n\022service_account_id\030\001 \001(\t\022\021\n\tsubnet_id\030" +
       "\002 \001(\t\022\034\n\024data_proc_cluster_id\030\003 \001(\t\022L\n\013c" +
       "ommit_mode\030\004 \001(\01627.yandex.cloud.datasphe" +
-      "re.v1.Project.Settings.CommitMode\"A\n\nCom" +
-      "mitMode\022\033\n\027COMMIT_MODE_UNSPECIFIED\020\000\022\014\n\010" +
-      "STANDARD\020\001\022\010\n\004AUTO\020\002\032\177\n\006Limits\0227\n\022max_un" +
-      "its_per_hour\030\002 \001(\0132\033.google.protobuf.Int" +
-      "64Value\022<\n\027max_units_per_execution\030\003 \001(\013" +
-      "2\033.google.protobuf.Int64ValueBk\n\036yandex." +
-      "cloud.api.datasphere.v1ZIgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/datasp" +
-      "here/v1;datasphereb\006proto3"
+      "re.v1.Project.Settings.CommitMode\022\032\n\022sec" +
+      "urity_group_ids\030\005 \003(\t\"A\n\nCommitMode\022\033\n\027C" +
+      "OMMIT_MODE_UNSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022\010" +
+      "\n\004AUTO\020\002\032\177\n\006Limits\0227\n\022max_units_per_hour" +
+      "\030\002 \001(\0132\033.google.protobuf.Int64Value\022<\n\027m" +
+      "ax_units_per_execution\030\003 \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueBk\n\036yandex.cloud.api.da" +
+      "tasphere.v1ZIgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/datasphere/v1;data" +
+      "sphereb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4018,7 +4281,7 @@ public final class ProjectOuterClass {
     internal_static_yandex_cloud_datasphere_v1_Project_Settings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v1_Project_Settings_descriptor,
-        new java.lang.String[] { "ServiceAccountId", "SubnetId", "DataProcClusterId", "CommitMode", });
+        new java.lang.String[] { "ServiceAccountId", "SubnetId", "DataProcClusterId", "CommitMode", "SecurityGroupIds", });
     internal_static_yandex_cloud_datasphere_v1_Project_Limits_descriptor =
       internal_static_yandex_cloud_datasphere_v1_Project_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_datasphere_v1_Project_Limits_fieldAccessorTable = new

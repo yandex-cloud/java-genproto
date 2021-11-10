@@ -2386,11 +2386,12 @@ public final class Common {
       "\n\n\010tls_mode\"#\n\tTLSConfig\022\026\n\016ca_certifica" +
       "te\030\001 \001(\t*h\n\023ObjectTransferStage\022%\n!OBJEC" +
       "T_TRANSFER_STAGE_UNSPECIFIED\020\000\022\017\n\013BEFORE" +
-      "_DATA\020\001\022\016\n\nAFTER_DATA\020\002\022\t\n\005NEVER\020\003B\177\n)ya" +
-      "ndex.cloud.api.datatransfer.v1.endpointZ" +
-      "Rgithub.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/datatransfer/v1/endpoint;endpo" +
-      "intb\006proto3"
+      "_DATA\020\001\022\016\n\nAFTER_DATA\020\002\022\t\n\005NEVER\020\003B\247\001\n)y" +
+      "andex.cloud.api.datatransfer.v1.endpoint" +
+      "ZRgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/datatransfer/v1/endpoint;endp" +
+      "oint\252\002%Yandex.Cloud.Datatransfer.V1.EndP" +
+      "ointb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
