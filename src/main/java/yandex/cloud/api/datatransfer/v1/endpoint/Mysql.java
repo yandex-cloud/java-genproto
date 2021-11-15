@@ -7236,10 +7236,11 @@ public final class Mysql {
       "\003 \001(\t\022?\n\010password\030\004 \001(\0132-.yandex.cloud.d" +
       "atatransfer.v1.endpoint.Secret\022\020\n\010sql_mo" +
       "de\030\005 \001(\t\022\036\n\026skip_constraint_checks\030\006 \001(\010" +
-      "\022\020\n\010timezone\030\007 \001(\tB\177\n)yandex.cloud.api.d" +
-      "atatransfer.v1.endpointZRgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/datatr" +
-      "ansfer/v1/endpoint;endpointb\006proto3"
+      "\022\020\n\010timezone\030\007 \001(\tB\247\001\n)yandex.cloud.api." +
+      "datatransfer.v1.endpointZRgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/datat" +
+      "ransfer/v1/endpoint;endpoint\252\002%Yandex.Cl" +
+      "oud.Datatransfer.V1.EndPointb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

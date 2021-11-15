@@ -8969,11 +8969,12 @@ public final class Postgres {
       "oud.datatransfer.v1.endpoint.PostgresCon" +
       "nection\022\020\n\010database\030\002 \001(\t\022\014\n\004user\030\003 \001(\t\022" +
       "?\n\010password\030\004 \001(\0132-.yandex.cloud.datatra" +
-      "nsfer.v1.endpoint.SecretB\177\n)yandex.cloud" +
-      ".api.datatransfer.v1.endpointZRgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "datatransfer/v1/endpoint;endpointb\006proto" +
-      "3"
+      "nsfer.v1.endpoint.SecretB\247\001\n)yandex.clou" +
+      "d.api.datatransfer.v1.endpointZRgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/datatransfer/v1/endpoint;endpoint\252\002%Yan" +
+      "dex.Cloud.Datatransfer.V1.EndPointb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -1923,6 +1923,15 @@ public final class SubclusterOuterClass {
 
     /**
      * <pre>
+     * Assign public ip addresses for all hosts in subcluter.
+     * </pre>
+     *
+     * <code>bool assign_public_ip = 9;</code>
+     */
+    boolean getAssignPublicIp();
+
+    /**
+     * <pre>
      * Configuration for instance group based subclusters
      * </pre>
      *
@@ -1987,6 +1996,7 @@ public final class SubclusterOuterClass {
       role_ = 0;
       subnetId_ = "";
       hostsCount_ = 0L;
+      assignPublicIp_ = false;
       instanceGroupId_ = "";
     }
 
@@ -2073,6 +2083,11 @@ public final class SubclusterOuterClass {
             case 64: {
 
               hostsCount_ = input.readInt64();
+              break;
+            }
+            case 72: {
+
+              assignPublicIp_ = input.readBool();
               break;
             }
             case 82: {
@@ -2398,6 +2413,19 @@ public final class SubclusterOuterClass {
       return hostsCount_;
     }
 
+    public static final int ASSIGN_PUBLIC_IP_FIELD_NUMBER = 9;
+    private boolean assignPublicIp_;
+    /**
+     * <pre>
+     * Assign public ip addresses for all hosts in subcluter.
+     * </pre>
+     *
+     * <code>bool assign_public_ip = 9;</code>
+     */
+    public boolean getAssignPublicIp() {
+      return assignPublicIp_;
+    }
+
     public static final int AUTOSCALING_CONFIG_FIELD_NUMBER = 10;
     private yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig autoscalingConfig_;
     /**
@@ -2511,6 +2539,9 @@ public final class SubclusterOuterClass {
       if (hostsCount_ != 0L) {
         output.writeInt64(8, hostsCount_);
       }
+      if (assignPublicIp_ != false) {
+        output.writeBool(9, assignPublicIp_);
+      }
       if (autoscalingConfig_ != null) {
         output.writeMessage(10, getAutoscalingConfig());
       }
@@ -2553,6 +2584,10 @@ public final class SubclusterOuterClass {
       if (hostsCount_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(8, hostsCount_);
+      }
+      if (assignPublicIp_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(9, assignPublicIp_);
       }
       if (autoscalingConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -2598,6 +2633,8 @@ public final class SubclusterOuterClass {
           .equals(other.getSubnetId());
       result = result && (getHostsCount()
           == other.getHostsCount());
+      result = result && (getAssignPublicIp()
+          == other.getAssignPublicIp());
       result = result && (hasAutoscalingConfig() == other.hasAutoscalingConfig());
       if (hasAutoscalingConfig()) {
         result = result && getAutoscalingConfig()
@@ -2637,6 +2674,9 @@ public final class SubclusterOuterClass {
       hash = (37 * hash) + HOSTS_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getHostsCount());
+      hash = (37 * hash) + ASSIGN_PUBLIC_IP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAssignPublicIp());
       if (hasAutoscalingConfig()) {
         hash = (37 * hash) + AUTOSCALING_CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + getAutoscalingConfig().hashCode();
@@ -2804,6 +2844,8 @@ public final class SubclusterOuterClass {
 
         hostsCount_ = 0L;
 
+        assignPublicIp_ = false;
+
         if (autoscalingConfigBuilder_ == null) {
           autoscalingConfig_ = null;
         } else {
@@ -2854,6 +2896,7 @@ public final class SubclusterOuterClass {
         }
         result.subnetId_ = subnetId_;
         result.hostsCount_ = hostsCount_;
+        result.assignPublicIp_ = assignPublicIp_;
         if (autoscalingConfigBuilder_ == null) {
           result.autoscalingConfig_ = autoscalingConfig_;
         } else {
@@ -2935,6 +2978,9 @@ public final class SubclusterOuterClass {
         }
         if (other.getHostsCount() != 0L) {
           setHostsCount(other.getHostsCount());
+        }
+        if (other.getAssignPublicIp() != false) {
+          setAssignPublicIp(other.getAssignPublicIp());
         }
         if (other.hasAutoscalingConfig()) {
           mergeAutoscalingConfig(other.getAutoscalingConfig());
@@ -3733,6 +3779,44 @@ public final class SubclusterOuterClass {
       public Builder clearHostsCount() {
         
         hostsCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean assignPublicIp_ ;
+      /**
+       * <pre>
+       * Assign public ip addresses for all hosts in subcluter.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 9;</code>
+       */
+      public boolean getAssignPublicIp() {
+        return assignPublicIp_;
+      }
+      /**
+       * <pre>
+       * Assign public ip addresses for all hosts in subcluter.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 9;</code>
+       */
+      public Builder setAssignPublicIp(boolean value) {
+        
+        assignPublicIp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Assign public ip addresses for all hosts in subcluter.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 9;</code>
+       */
+      public Builder clearAssignPublicIp() {
+        
+        assignPublicIp_ = false;
         onChanged();
         return this;
       }
@@ -5287,25 +5371,26 @@ public final class SubclusterOuterClass {
       "ation\030\005 \001(\0132\031.google.protobuf.DurationB\n" +
       "\372\3071\0061m-30m\022*\n\026cpu_utilization_target\030\006 \001" +
       "(\001B\n\372\3071\00610-100\022)\n\024decommission_timeout\030\007" +
-      " \001(\003B\013\372\3071\0070-86400\"\354\002\n\nSubcluster\022\n\n\002id\030\001" +
+      " \001(\003B\013\372\3071\0070-86400\"\200\003\n\nSubcluster\022\n\n\002id\030\001" +
       " \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022.\n\ncreated_at\030\003" +
       " \001(\0132\032.google.protobuf.Timestamp\022\026\n\004name" +
       "\030\004 \001(\tB\010\212\3101\0041-63\022,\n\004role\030\005 \001(\0162\036.yandex." +
       "cloud.dataproc.v1.Role\0226\n\tresources\030\006 \001(" +
       "\0132#.yandex.cloud.dataproc.v1.Resources\022\021" +
-      "\n\tsubnet_id\030\007 \001(\t\022\023\n\013hosts_count\030\010 \001(\003\022G" +
-      "\n\022autoscaling_config\030\n \001(\0132+.yandex.clou" +
-      "d.dataproc.v1.AutoscalingConfig\022\031\n\021insta" +
-      "nce_group_id\030\013 \001(\tJ\004\010\t\020\n\"\250\001\n\004Host\022\014\n\004nam" +
-      "e\030\001 \001(\t\022\025\n\rsubcluster_id\030\002 \001(\t\0220\n\006health" +
-      "\030\003 \001(\0162 .yandex.cloud.dataproc.v1.Health" +
-      "\022\033\n\023compute_instance_id\030\004 \001(\t\022,\n\004role\030\005 " +
-      "\001(\0162\036.yandex.cloud.dataproc.v1.Role*K\n\004R" +
-      "ole\022\024\n\020ROLE_UNSPECIFIED\020\000\022\016\n\nMASTERNODE\020" +
-      "\001\022\014\n\010DATANODE\020\002\022\017\n\013COMPUTENODE\020\003Be\n\034yand" +
-      "ex.cloud.api.dataproc.v1ZEgithub.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/datap" +
-      "roc/v1;dataprocb\006proto3"
+      "\n\tsubnet_id\030\007 \001(\t\022\023\n\013hosts_count\030\010 \001(\003\022\030" +
+      "\n\020assign_public_ip\030\t \001(\010\022G\n\022autoscaling_" +
+      "config\030\n \001(\0132+.yandex.cloud.dataproc.v1." +
+      "AutoscalingConfig\022\031\n\021instance_group_id\030\013" +
+      " \001(\t\"\250\001\n\004Host\022\014\n\004name\030\001 \001(\t\022\025\n\rsubcluste" +
+      "r_id\030\002 \001(\t\0220\n\006health\030\003 \001(\0162 .yandex.clou" +
+      "d.dataproc.v1.Health\022\033\n\023compute_instance" +
+      "_id\030\004 \001(\t\022,\n\004role\030\005 \001(\0162\036.yandex.cloud.d" +
+      "ataproc.v1.Role*K\n\004Role\022\024\n\020ROLE_UNSPECIF" +
+      "IED\020\000\022\016\n\nMASTERNODE\020\001\022\014\n\010DATANODE\020\002\022\017\n\013C" +
+      "OMPUTENODE\020\003Be\n\034yandex.cloud.api.datapro" +
+      "c.v1ZEgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/dataproc/v1;dataprocb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5334,7 +5419,7 @@ public final class SubclusterOuterClass {
     internal_static_yandex_cloud_dataproc_v1_Subcluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_v1_Subcluster_descriptor,
-        new java.lang.String[] { "Id", "ClusterId", "CreatedAt", "Name", "Role", "Resources", "SubnetId", "HostsCount", "AutoscalingConfig", "InstanceGroupId", });
+        new java.lang.String[] { "Id", "ClusterId", "CreatedAt", "Name", "Role", "Resources", "SubnetId", "HostsCount", "AssignPublicIp", "AutoscalingConfig", "InstanceGroupId", });
     internal_static_yandex_cloud_dataproc_v1_Host_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_dataproc_v1_Host_fieldAccessorTable = new
