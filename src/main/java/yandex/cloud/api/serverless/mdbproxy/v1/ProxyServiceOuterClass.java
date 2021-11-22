@@ -670,9 +670,8 @@ public final class ProxyServiceOuterClass {
      * A filter expression that filters proxies listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can only be applied to the [Proxy.name] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Example of a filter: `name=my-proxy`.
      * </pre>
      *
@@ -684,9 +683,8 @@ public final class ProxyServiceOuterClass {
      * A filter expression that filters proxies listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can only be applied to the [Proxy.name] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Example of a filter: `name=my-proxy`.
      * </pre>
      *
@@ -904,9 +902,8 @@ public final class ProxyServiceOuterClass {
      * A filter expression that filters proxies listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can only be applied to the [Proxy.name] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Example of a filter: `name=my-proxy`.
      * </pre>
      *
@@ -929,9 +926,8 @@ public final class ProxyServiceOuterClass {
      * A filter expression that filters proxies listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can only be applied to the [Proxy.name] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Example of a filter: `name=my-proxy`.
      * </pre>
      *
@@ -1547,9 +1543,8 @@ public final class ProxyServiceOuterClass {
        * A filter expression that filters proxies listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can only be applied to the [Proxy.name] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-proxy`.
        * </pre>
        *
@@ -1572,9 +1567,8 @@ public final class ProxyServiceOuterClass {
        * A filter expression that filters proxies listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can only be applied to the [Proxy.name] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-proxy`.
        * </pre>
        *
@@ -1598,9 +1592,8 @@ public final class ProxyServiceOuterClass {
        * A filter expression that filters proxies listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can only be applied to the [Proxy.name] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-proxy`.
        * </pre>
        *
@@ -1621,9 +1614,8 @@ public final class ProxyServiceOuterClass {
        * A filter expression that filters proxies listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can only be applied to the [Proxy.name] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-proxy`.
        * </pre>
        *
@@ -1640,9 +1632,8 @@ public final class ProxyServiceOuterClass {
        * A filter expression that filters proxies listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can only be applied to the [Proxy.name] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-proxy`.
        * </pre>
        *
@@ -8617,9 +8608,8 @@ public final class ProxyServiceOuterClass {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can be applied to the [operation.Operation.done], [operation.Operation.created_by] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Examples of a filter: `done=false`, `created_by='John.Doe'`.
      * </pre>
      *
@@ -8631,9 +8621,8 @@ public final class ProxyServiceOuterClass {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can be applied to the [operation.Operation.done], [operation.Operation.created_by] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Examples of a filter: `done=false`, `created_by='John.Doe'`.
      * </pre>
      *
@@ -8849,9 +8838,8 @@ public final class ProxyServiceOuterClass {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can be applied to the [operation.Operation.done], [operation.Operation.created_by] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Examples of a filter: `done=false`, `created_by='John.Doe'`.
      * </pre>
      *
@@ -8874,9 +8862,8 @@ public final class ProxyServiceOuterClass {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can be applied to the [operation.Operation.done], [operation.Operation.created_by] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Examples of a filter: `done=false`, `created_by='John.Doe'`.
      * </pre>
      *
@@ -9487,9 +9474,8 @@ public final class ProxyServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can be applied to the [operation.Operation.done], [operation.Operation.created_by] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Examples of a filter: `done=false`, `created_by='John.Doe'`.
        * </pre>
        *
@@ -9512,9 +9498,8 @@ public final class ProxyServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can be applied to the [operation.Operation.done], [operation.Operation.created_by] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Examples of a filter: `done=false`, `created_by='John.Doe'`.
        * </pre>
        *
@@ -9538,9 +9523,8 @@ public final class ProxyServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can be applied to the [operation.Operation.done], [operation.Operation.created_by] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Examples of a filter: `done=false`, `created_by='John.Doe'`.
        * </pre>
        *
@@ -9561,9 +9545,8 @@ public final class ProxyServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can be applied to the [operation.Operation.done], [operation.Operation.created_by] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Examples of a filter: `done=false`, `created_by='John.Doe'`.
        * </pre>
        *
@@ -9580,9 +9563,8 @@ public final class ProxyServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can be applied to the [operation.Operation.done], [operation.Operation.created_by] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Examples of a filter: `done=false`, `created_by='John.Doe'`.
        * </pre>
        *

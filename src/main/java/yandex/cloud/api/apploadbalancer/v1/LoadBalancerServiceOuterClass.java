@@ -670,8 +670,8 @@ public final class LoadBalancerServiceOuterClass {
      * A filter expression that filters application load balancers listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can use filtering only on [LoadBalancer.name] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Example of a filter: `name=my-load-balancer`.
      * </pre>
      *
@@ -683,8 +683,8 @@ public final class LoadBalancerServiceOuterClass {
      * A filter expression that filters application load balancers listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can use filtering only on [LoadBalancer.name] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Example of a filter: `name=my-load-balancer`.
      * </pre>
      *
@@ -902,8 +902,8 @@ public final class LoadBalancerServiceOuterClass {
      * A filter expression that filters application load balancers listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can use filtering only on [LoadBalancer.name] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Example of a filter: `name=my-load-balancer`.
      * </pre>
      *
@@ -926,8 +926,8 @@ public final class LoadBalancerServiceOuterClass {
      * A filter expression that filters application load balancers listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can use filtering only on [LoadBalancer.name] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Example of a filter: `name=my-load-balancer`.
      * </pre>
      *
@@ -1543,8 +1543,8 @@ public final class LoadBalancerServiceOuterClass {
        * A filter expression that filters application load balancers listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can use filtering only on [LoadBalancer.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-load-balancer`.
        * </pre>
        *
@@ -1567,8 +1567,8 @@ public final class LoadBalancerServiceOuterClass {
        * A filter expression that filters application load balancers listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can use filtering only on [LoadBalancer.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-load-balancer`.
        * </pre>
        *
@@ -1592,8 +1592,8 @@ public final class LoadBalancerServiceOuterClass {
        * A filter expression that filters application load balancers listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can use filtering only on [LoadBalancer.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-load-balancer`.
        * </pre>
        *
@@ -1614,8 +1614,8 @@ public final class LoadBalancerServiceOuterClass {
        * A filter expression that filters application load balancers listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can use filtering only on [LoadBalancer.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-load-balancer`.
        * </pre>
        *
@@ -1632,8 +1632,8 @@ public final class LoadBalancerServiceOuterClass {
        * A filter expression that filters application load balancers listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can use filtering only on [LoadBalancer.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-load-balancer`.
        * </pre>
        *

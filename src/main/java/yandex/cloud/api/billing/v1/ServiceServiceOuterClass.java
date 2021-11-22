@@ -618,8 +618,8 @@ public final class ServiceServiceOuterClass {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can use filtering only on the [yandex.cloud.billing.v1.Service.id] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * </pre>
      *
      * <code>string filter = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -630,8 +630,8 @@ public final class ServiceServiceOuterClass {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can use filtering only on the [yandex.cloud.billing.v1.Service.id] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * </pre>
      *
      * <code>string filter = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -771,8 +771,8 @@ public final class ServiceServiceOuterClass {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can use filtering only on the [yandex.cloud.billing.v1.Service.id] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * </pre>
      *
      * <code>string filter = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -794,8 +794,8 @@ public final class ServiceServiceOuterClass {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can use filtering only on the [yandex.cloud.billing.v1.Service.id] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * </pre>
      *
      * <code>string filter = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1220,8 +1220,8 @@ public final class ServiceServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can use filtering only on the [yandex.cloud.billing.v1.Service.id] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * </pre>
        *
        * <code>string filter = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1243,8 +1243,8 @@ public final class ServiceServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can use filtering only on the [yandex.cloud.billing.v1.Service.id] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * </pre>
        *
        * <code>string filter = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1267,8 +1267,8 @@ public final class ServiceServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can use filtering only on the [yandex.cloud.billing.v1.Service.id] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * </pre>
        *
        * <code>string filter = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1288,8 +1288,8 @@ public final class ServiceServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can use filtering only on the [yandex.cloud.billing.v1.Service.id] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * </pre>
        *
        * <code>string filter = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1305,8 +1305,8 @@ public final class ServiceServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can use filtering only on the [yandex.cloud.billing.v1.Service.id] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * </pre>
        *
        * <code>string filter = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>

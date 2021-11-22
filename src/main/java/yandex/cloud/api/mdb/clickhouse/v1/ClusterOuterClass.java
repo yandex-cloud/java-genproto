@@ -5714,6 +5714,31 @@ public final class ClusterOuterClass {
      * <code>.google.protobuf.BoolValue sql_user_management = 8;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getSqlUserManagementOrBuilder();
+
+    /**
+     * <pre>
+     * Whether cluster should use embedded Keeper instead of Zookeeper.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue embedded_keeper = 9;</code>
+     */
+    boolean hasEmbeddedKeeper();
+    /**
+     * <pre>
+     * Whether cluster should use embedded Keeper instead of Zookeeper.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue embedded_keeper = 9;</code>
+     */
+    com.google.protobuf.BoolValue getEmbeddedKeeper();
+    /**
+     * <pre>
+     * Whether cluster should use embedded Keeper instead of Zookeeper.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue embedded_keeper = 9;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getEmbeddedKeeperOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.ClusterConfig}
@@ -5848,6 +5873,19 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(sqlUserManagement_);
                 sqlUserManagement_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (embeddedKeeper_ != null) {
+                subBuilder = embeddedKeeper_.toBuilder();
+              }
+              embeddedKeeper_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(embeddedKeeper_);
+                embeddedKeeper_ = subBuilder.buildPartial();
               }
 
               break;
@@ -7733,6 +7771,39 @@ public final class ClusterOuterClass {
       return getSqlUserManagement();
     }
 
+    public static final int EMBEDDED_KEEPER_FIELD_NUMBER = 9;
+    private com.google.protobuf.BoolValue embeddedKeeper_;
+    /**
+     * <pre>
+     * Whether cluster should use embedded Keeper instead of Zookeeper.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue embedded_keeper = 9;</code>
+     */
+    public boolean hasEmbeddedKeeper() {
+      return embeddedKeeper_ != null;
+    }
+    /**
+     * <pre>
+     * Whether cluster should use embedded Keeper instead of Zookeeper.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue embedded_keeper = 9;</code>
+     */
+    public com.google.protobuf.BoolValue getEmbeddedKeeper() {
+      return embeddedKeeper_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : embeddedKeeper_;
+    }
+    /**
+     * <pre>
+     * Whether cluster should use embedded Keeper instead of Zookeeper.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue embedded_keeper = 9;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getEmbeddedKeeperOrBuilder() {
+      return getEmbeddedKeeper();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7770,6 +7841,9 @@ public final class ClusterOuterClass {
       }
       if (sqlUserManagement_ != null) {
         output.writeMessage(8, getSqlUserManagement());
+      }
+      if (embeddedKeeper_ != null) {
+        output.writeMessage(9, getEmbeddedKeeper());
       }
       unknownFields.writeTo(output);
     }
@@ -7810,6 +7884,10 @@ public final class ClusterOuterClass {
       if (sqlUserManagement_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getSqlUserManagement());
+      }
+      if (embeddedKeeper_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getEmbeddedKeeper());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7864,6 +7942,11 @@ public final class ClusterOuterClass {
         result = result && getSqlUserManagement()
             .equals(other.getSqlUserManagement());
       }
+      result = result && (hasEmbeddedKeeper() == other.hasEmbeddedKeeper());
+      if (hasEmbeddedKeeper()) {
+        result = result && getEmbeddedKeeper()
+            .equals(other.getEmbeddedKeeper());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -7904,6 +7987,10 @@ public final class ClusterOuterClass {
       if (hasSqlUserManagement()) {
         hash = (37 * hash) + SQL_USER_MANAGEMENT_FIELD_NUMBER;
         hash = (53 * hash) + getSqlUserManagement().hashCode();
+      }
+      if (hasEmbeddedKeeper()) {
+        hash = (37 * hash) + EMBEDDED_KEEPER_FIELD_NUMBER;
+        hash = (53 * hash) + getEmbeddedKeeper().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8082,6 +8169,12 @@ public final class ClusterOuterClass {
           sqlUserManagement_ = null;
           sqlUserManagementBuilder_ = null;
         }
+        if (embeddedKeeperBuilder_ == null) {
+          embeddedKeeper_ = null;
+        } else {
+          embeddedKeeper_ = null;
+          embeddedKeeperBuilder_ = null;
+        }
         return this;
       }
 
@@ -8143,6 +8236,11 @@ public final class ClusterOuterClass {
           result.sqlUserManagement_ = sqlUserManagement_;
         } else {
           result.sqlUserManagement_ = sqlUserManagementBuilder_.build();
+        }
+        if (embeddedKeeperBuilder_ == null) {
+          result.embeddedKeeper_ = embeddedKeeper_;
+        } else {
+          result.embeddedKeeper_ = embeddedKeeperBuilder_.build();
         }
         onBuilt();
         return result;
@@ -8216,6 +8314,9 @@ public final class ClusterOuterClass {
         }
         if (other.hasSqlUserManagement()) {
           mergeSqlUserManagement(other.getSqlUserManagement());
+        }
+        if (other.hasEmbeddedKeeper()) {
+          mergeEmbeddedKeeper(other.getEmbeddedKeeper());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9368,6 +9469,159 @@ public final class ClusterOuterClass {
           sqlUserManagement_ = null;
         }
         return sqlUserManagementBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue embeddedKeeper_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> embeddedKeeperBuilder_;
+      /**
+       * <pre>
+       * Whether cluster should use embedded Keeper instead of Zookeeper.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue embedded_keeper = 9;</code>
+       */
+      public boolean hasEmbeddedKeeper() {
+        return embeddedKeeperBuilder_ != null || embeddedKeeper_ != null;
+      }
+      /**
+       * <pre>
+       * Whether cluster should use embedded Keeper instead of Zookeeper.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue embedded_keeper = 9;</code>
+       */
+      public com.google.protobuf.BoolValue getEmbeddedKeeper() {
+        if (embeddedKeeperBuilder_ == null) {
+          return embeddedKeeper_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : embeddedKeeper_;
+        } else {
+          return embeddedKeeperBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Whether cluster should use embedded Keeper instead of Zookeeper.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue embedded_keeper = 9;</code>
+       */
+      public Builder setEmbeddedKeeper(com.google.protobuf.BoolValue value) {
+        if (embeddedKeeperBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          embeddedKeeper_ = value;
+          onChanged();
+        } else {
+          embeddedKeeperBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether cluster should use embedded Keeper instead of Zookeeper.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue embedded_keeper = 9;</code>
+       */
+      public Builder setEmbeddedKeeper(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (embeddedKeeperBuilder_ == null) {
+          embeddedKeeper_ = builderForValue.build();
+          onChanged();
+        } else {
+          embeddedKeeperBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether cluster should use embedded Keeper instead of Zookeeper.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue embedded_keeper = 9;</code>
+       */
+      public Builder mergeEmbeddedKeeper(com.google.protobuf.BoolValue value) {
+        if (embeddedKeeperBuilder_ == null) {
+          if (embeddedKeeper_ != null) {
+            embeddedKeeper_ =
+              com.google.protobuf.BoolValue.newBuilder(embeddedKeeper_).mergeFrom(value).buildPartial();
+          } else {
+            embeddedKeeper_ = value;
+          }
+          onChanged();
+        } else {
+          embeddedKeeperBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether cluster should use embedded Keeper instead of Zookeeper.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue embedded_keeper = 9;</code>
+       */
+      public Builder clearEmbeddedKeeper() {
+        if (embeddedKeeperBuilder_ == null) {
+          embeddedKeeper_ = null;
+          onChanged();
+        } else {
+          embeddedKeeper_ = null;
+          embeddedKeeperBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether cluster should use embedded Keeper instead of Zookeeper.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue embedded_keeper = 9;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getEmbeddedKeeperBuilder() {
+        
+        onChanged();
+        return getEmbeddedKeeperFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Whether cluster should use embedded Keeper instead of Zookeeper.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue embedded_keeper = 9;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getEmbeddedKeeperOrBuilder() {
+        if (embeddedKeeperBuilder_ != null) {
+          return embeddedKeeperBuilder_.getMessageOrBuilder();
+        } else {
+          return embeddedKeeper_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : embeddedKeeper_;
+        }
+      }
+      /**
+       * <pre>
+       * Whether cluster should use embedded Keeper instead of Zookeeper.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue embedded_keeper = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getEmbeddedKeeperFieldBuilder() {
+        if (embeddedKeeperBuilder_ == null) {
+          embeddedKeeperBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getEmbeddedKeeper(),
+                  getParentForChildren(),
+                  isClean());
+          embeddedKeeper_ = null;
+        }
+        return embeddedKeeperBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -19290,7 +19544,7 @@ public final class ClusterOuterClass {
       "\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPE" +
       "D\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004name\030" +
       "\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t" +
-      "\"\306\005\n\rClusterConfig\022\017\n\007version\030\001 \001(\t\022L\n\nc" +
+      "\"\373\005\n\rClusterConfig\022\017\n\007version\030\001 \001(\t\022L\n\nc" +
       "lickhouse\030\002 \001(\01328.yandex.cloud.mdb.click" +
       "house.v1.ClusterConfig.Clickhouse\022J\n\tzoo" +
       "keeper\030\003 \001(\01327.yandex.cloud.mdb.clickhou" +
@@ -19302,51 +19556,52 @@ public final class ClusterOuterClass {
       "Storage\022;\n\027sql_database_management\030\007 \001(\013" +
       "2\032.google.protobuf.BoolValue\0227\n\023sql_user" +
       "_management\030\010 \001(\0132\032.google.protobuf.Bool" +
-      "Value\032\226\001\n\nClickhouse\022J\n\006config\030\001 \001(\0132:.y" +
-      "andex.cloud.mdb.clickhouse.v1.config.Cli" +
-      "ckhouseConfigSet\022<\n\tresources\030\002 \001(\0132).ya" +
-      "ndex.cloud.mdb.clickhouse.v1.Resources\032I" +
-      "\n\tZookeeper\022<\n\tresources\030\001 \001(\0132).yandex." +
-      "cloud.mdb.clickhouse.v1.Resources\"f\n\005Sha" +
-      "rd\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022;\n\006" +
-      "config\030\003 \001(\0132+.yandex.cloud.mdb.clickhou" +
-      "se.v1.ShardConfig\"X\n\nShardGroup\022\014\n\004name\030" +
-      "\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\023\n\013description" +
-      "\030\003 \001(\t\022\023\n\013shard_names\030\004 \003(\t\"\237\002\n\013ShardCon" +
-      "fig\022J\n\nclickhouse\030\001 \001(\01326.yandex.cloud.m" +
-      "db.clickhouse.v1.ShardConfig.Clickhouse\032" +
-      "\303\001\n\nClickhouse\022J\n\006config\030\001 \001(\0132:.yandex." +
-      "cloud.mdb.clickhouse.v1.config.Clickhous" +
-      "eConfigSet\022<\n\tresources\030\002 \001(\0132).yandex.c" +
-      "loud.mdb.clickhouse.v1.Resources\022+\n\006weig" +
-      "ht\030\003 \001(\0132\033.google.protobuf.Int64Value\"\340\003" +
-      "\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t" +
-      "\022\017\n\007zone_id\030\003 \001(\t\0227\n\004type\030\004 \001(\0162).yandex" +
-      ".cloud.mdb.clickhouse.v1.Host.Type\022<\n\tre" +
-      "sources\030\005 \001(\0132).yandex.cloud.mdb.clickho" +
-      "use.v1.Resources\022;\n\006health\030\006 \001(\0162+.yande" +
-      "x.cloud.mdb.clickhouse.v1.Host.Health\0229\n" +
-      "\010services\030\007 \003(\0132\'.yandex.cloud.mdb.click" +
-      "house.v1.Service\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020a" +
-      "ssign_public_ip\030\t \001(\010\022\022\n\nshard_name\030\n \001(" +
-      "\t\";\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\016\n\nCLICK" +
-      "HOUSE\020\001\022\r\n\tZOOKEEPER\020\002\"8\n\006Health\022\013\n\007UNKN" +
-      "OWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003" +
-      "\"\356\001\n\007Service\022:\n\004type\030\001 \001(\0162,.yandex.clou" +
-      "d.mdb.clickhouse.v1.Service.Type\022>\n\006heal" +
-      "th\030\002 \001(\0162..yandex.cloud.mdb.clickhouse.v" +
-      "1.Service.Health\";\n\004Type\022\024\n\020TYPE_UNSPECI" +
-      "FIED\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\tZOOKEEPER\020\002\"*\n" +
-      "\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020" +
-      "\002\"P\n\tResources\022\032\n\022resource_preset_id\030\001 \001" +
-      "(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 " +
-      "\001(\t\"Q\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_" +
-      "sql\030\002 \001(\010\022\017\n\007metrika\030\003 \001(\010\022\022\n\nserverless" +
-      "\030\004 \001(\010\"\037\n\014CloudStorage\022\017\n\007enabled\030\001 \001(\010B" +
-      "s\n\"yandex.cloud.api.mdb.clickhouse.v1ZMg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/mdb/clickhouse/v1;clickhouseb\006pr" +
-      "oto3"
+      "Value\0223\n\017embedded_keeper\030\t \001(\0132\032.google." +
+      "protobuf.BoolValue\032\226\001\n\nClickhouse\022J\n\006con" +
+      "fig\030\001 \001(\0132:.yandex.cloud.mdb.clickhouse." +
+      "v1.config.ClickhouseConfigSet\022<\n\tresourc" +
+      "es\030\002 \001(\0132).yandex.cloud.mdb.clickhouse.v" +
+      "1.Resources\032I\n\tZookeeper\022<\n\tresources\030\001 " +
+      "\001(\0132).yandex.cloud.mdb.clickhouse.v1.Res" +
+      "ources\"f\n\005Shard\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster" +
+      "_id\030\002 \001(\t\022;\n\006config\030\003 \001(\0132+.yandex.cloud" +
+      ".mdb.clickhouse.v1.ShardConfig\"X\n\nShardG" +
+      "roup\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\023" +
+      "\n\013description\030\003 \001(\t\022\023\n\013shard_names\030\004 \003(\t" +
+      "\"\237\002\n\013ShardConfig\022J\n\nclickhouse\030\001 \001(\01326.y" +
+      "andex.cloud.mdb.clickhouse.v1.ShardConfi" +
+      "g.Clickhouse\032\303\001\n\nClickhouse\022J\n\006config\030\001 " +
+      "\001(\0132:.yandex.cloud.mdb.clickhouse.v1.con" +
+      "fig.ClickhouseConfigSet\022<\n\tresources\030\002 \001" +
+      "(\0132).yandex.cloud.mdb.clickhouse.v1.Reso" +
+      "urces\022+\n\006weight\030\003 \001(\0132\033.google.protobuf." +
+      "Int64Value\"\340\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\nclu" +
+      "ster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0227\n\004type\030\004" +
+      " \001(\0162).yandex.cloud.mdb.clickhouse.v1.Ho" +
+      "st.Type\022<\n\tresources\030\005 \001(\0132).yandex.clou" +
+      "d.mdb.clickhouse.v1.Resources\022;\n\006health\030" +
+      "\006 \001(\0162+.yandex.cloud.mdb.clickhouse.v1.H" +
+      "ost.Health\0229\n\010services\030\007 \003(\0132\'.yandex.cl" +
+      "oud.mdb.clickhouse.v1.Service\022\021\n\tsubnet_" +
+      "id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\022\022\n\nsh" +
+      "ard_name\030\n \001(\t\";\n\004Type\022\024\n\020TYPE_UNSPECIFI" +
+      "ED\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\tZOOKEEPER\020\002\"8\n\006H" +
+      "ealth\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022" +
+      "\014\n\010DEGRADED\020\003\"\356\001\n\007Service\022:\n\004type\030\001 \001(\0162" +
+      ",.yandex.cloud.mdb.clickhouse.v1.Service" +
+      ".Type\022>\n\006health\030\002 \001(\0162..yandex.cloud.mdb" +
+      ".clickhouse.v1.Service.Health\";\n\004Type\022\024\n" +
+      "\020TYPE_UNSPECIFIED\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\tZ" +
+      "OOKEEPER\020\002\"*\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALI" +
+      "VE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resource_" +
+      "preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014di" +
+      "sk_type_id\030\003 \001(\t\"Q\n\006Access\022\021\n\tdata_lens\030" +
+      "\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\017\n\007metrika\030\003 \001(\010\022" +
+      "\022\n\nserverless\030\004 \001(\010\"\037\n\014CloudStorage\022\017\n\007e" +
+      "nabled\030\001 \001(\010Bs\n\"yandex.cloud.api.mdb.cli" +
+      "ckhouse.v1ZMgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/mdb/clickhouse/v1;c" +
+      "lickhouseb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -19388,7 +19643,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "Version", "Clickhouse", "Zookeeper", "BackupWindowStart", "Access", "CloudStorage", "SqlDatabaseManagement", "SqlUserManagement", });
+        new java.lang.String[] { "Version", "Clickhouse", "Zookeeper", "BackupWindowStart", "Access", "CloudStorage", "SqlDatabaseManagement", "SqlUserManagement", "EmbeddedKeeper", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ClusterConfig_Clickhouse_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_ClusterConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ClusterConfig_Clickhouse_fieldAccessorTable = new

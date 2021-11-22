@@ -399,7 +399,7 @@ public final class InstanceGroupOuterClass {
 
     /**
      * <pre>
-     * Information that indicates which entities can be related to this load balancer.
+     * Status of the Network Load Balancer target group attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerState load_balancer_state = 11;</code>
@@ -407,7 +407,7 @@ public final class InstanceGroupOuterClass {
     boolean hasLoadBalancerState();
     /**
      * <pre>
-     * Information that indicates which entities can be related to this load balancer.
+     * Status of the Network Load Balancer target group attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerState load_balancer_state = 11;</code>
@@ -415,7 +415,7 @@ public final class InstanceGroupOuterClass {
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerState getLoadBalancerState();
     /**
      * <pre>
-     * Information that indicates which entities can be related to this load balancer.
+     * Status of the Network Load Balancer target group attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerState load_balancer_state = 11;</code>
@@ -449,7 +449,8 @@ public final class InstanceGroupOuterClass {
 
     /**
      * <pre>
-     * Load balancing specification.
+     * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+     * (OSI model layer 3).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -457,7 +458,8 @@ public final class InstanceGroupOuterClass {
     boolean hasLoadBalancerSpec();
     /**
      * <pre>
-     * Load balancing specification.
+     * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+     * (OSI model layer 3).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -465,7 +467,8 @@ public final class InstanceGroupOuterClass {
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerSpec getLoadBalancerSpec();
     /**
      * <pre>
-     * Load balancing specification.
+     * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+     * (OSI model layer 3).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -474,7 +477,7 @@ public final class InstanceGroupOuterClass {
 
     /**
      * <pre>
-     * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+     * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 15;</code>
@@ -482,7 +485,7 @@ public final class InstanceGroupOuterClass {
     boolean hasHealthChecksSpec();
     /**
      * <pre>
-     * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+     * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 15;</code>
@@ -490,7 +493,7 @@ public final class InstanceGroupOuterClass {
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthChecksSpec getHealthChecksSpec();
     /**
      * <pre>
-     * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+     * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 15;</code>
@@ -573,7 +576,8 @@ public final class InstanceGroupOuterClass {
 
     /**
      * <pre>
-     * Application load balancer spec
+     * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+     * (OSI model layer 7).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 20;</code>
@@ -581,7 +585,8 @@ public final class InstanceGroupOuterClass {
     boolean hasApplicationLoadBalancerSpec();
     /**
      * <pre>
-     * Application load balancer spec
+     * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+     * (OSI model layer 7).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 20;</code>
@@ -589,7 +594,8 @@ public final class InstanceGroupOuterClass {
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec getApplicationLoadBalancerSpec();
     /**
      * <pre>
-     * Application load balancer spec
+     * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+     * (OSI model layer 7).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 20;</code>
@@ -598,7 +604,8 @@ public final class InstanceGroupOuterClass {
 
     /**
      * <pre>
-     * Application load balancer state
+     * Status of the Application Load Balancer target group attributed to the instance group.
+     * Returned if there is a working load balancer that the target group is connected to.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerState application_load_balancer_state = 21;</code>
@@ -606,7 +613,8 @@ public final class InstanceGroupOuterClass {
     boolean hasApplicationLoadBalancerState();
     /**
      * <pre>
-     * Application load balancer state
+     * Status of the Application Load Balancer target group attributed to the instance group.
+     * Returned if there is a working load balancer that the target group is connected to.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerState application_load_balancer_state = 21;</code>
@@ -614,7 +622,8 @@ public final class InstanceGroupOuterClass {
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerState getApplicationLoadBalancerState();
     /**
      * <pre>
-     * Application load balancer state
+     * Status of the Application Load Balancer target group attributed to the instance group.
+     * Returned if there is a working load balancer that the target group is connected to.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerState application_load_balancer_state = 21;</code>
@@ -1577,7 +1586,7 @@ public final class InstanceGroupOuterClass {
     private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerState loadBalancerState_;
     /**
      * <pre>
-     * Information that indicates which entities can be related to this load balancer.
+     * Status of the Network Load Balancer target group attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerState load_balancer_state = 11;</code>
@@ -1587,7 +1596,7 @@ public final class InstanceGroupOuterClass {
     }
     /**
      * <pre>
-     * Information that indicates which entities can be related to this load balancer.
+     * Status of the Network Load Balancer target group attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerState load_balancer_state = 11;</code>
@@ -1597,7 +1606,7 @@ public final class InstanceGroupOuterClass {
     }
     /**
      * <pre>
-     * Information that indicates which entities can be related to this load balancer.
+     * Status of the Network Load Balancer target group attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerState load_balancer_state = 11;</code>
@@ -1643,7 +1652,8 @@ public final class InstanceGroupOuterClass {
     private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerSpec loadBalancerSpec_;
     /**
      * <pre>
-     * Load balancing specification.
+     * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+     * (OSI model layer 3).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -1653,7 +1663,8 @@ public final class InstanceGroupOuterClass {
     }
     /**
      * <pre>
-     * Load balancing specification.
+     * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+     * (OSI model layer 3).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -1663,7 +1674,8 @@ public final class InstanceGroupOuterClass {
     }
     /**
      * <pre>
-     * Load balancing specification.
+     * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+     * (OSI model layer 3).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -1676,7 +1688,7 @@ public final class InstanceGroupOuterClass {
     private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthChecksSpec healthChecksSpec_;
     /**
      * <pre>
-     * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+     * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 15;</code>
@@ -1686,7 +1698,7 @@ public final class InstanceGroupOuterClass {
     }
     /**
      * <pre>
-     * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+     * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 15;</code>
@@ -1696,7 +1708,7 @@ public final class InstanceGroupOuterClass {
     }
     /**
      * <pre>
-     * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+     * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 15;</code>
@@ -1830,7 +1842,8 @@ public final class InstanceGroupOuterClass {
     private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec applicationLoadBalancerSpec_;
     /**
      * <pre>
-     * Application load balancer spec
+     * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+     * (OSI model layer 7).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 20;</code>
@@ -1840,7 +1853,8 @@ public final class InstanceGroupOuterClass {
     }
     /**
      * <pre>
-     * Application load balancer spec
+     * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+     * (OSI model layer 7).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 20;</code>
@@ -1850,7 +1864,8 @@ public final class InstanceGroupOuterClass {
     }
     /**
      * <pre>
-     * Application load balancer spec
+     * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+     * (OSI model layer 7).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 20;</code>
@@ -1863,7 +1878,8 @@ public final class InstanceGroupOuterClass {
     private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerState applicationLoadBalancerState_;
     /**
      * <pre>
-     * Application load balancer state
+     * Status of the Application Load Balancer target group attributed to the instance group.
+     * Returned if there is a working load balancer that the target group is connected to.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerState application_load_balancer_state = 21;</code>
@@ -1873,7 +1889,8 @@ public final class InstanceGroupOuterClass {
     }
     /**
      * <pre>
-     * Application load balancer state
+     * Status of the Application Load Balancer target group attributed to the instance group.
+     * Returned if there is a working load balancer that the target group is connected to.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerState application_load_balancer_state = 21;</code>
@@ -1883,7 +1900,8 @@ public final class InstanceGroupOuterClass {
     }
     /**
      * <pre>
-     * Application load balancer state
+     * Status of the Application Load Balancer target group attributed to the instance group.
+     * Returned if there is a working load balancer that the target group is connected to.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerState application_load_balancer_state = 21;</code>
@@ -4026,7 +4044,7 @@ public final class InstanceGroupOuterClass {
           yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerState, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerState.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerStateOrBuilder> loadBalancerStateBuilder_;
       /**
        * <pre>
-       * Information that indicates which entities can be related to this load balancer.
+       * Status of the Network Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerState load_balancer_state = 11;</code>
@@ -4036,7 +4054,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Information that indicates which entities can be related to this load balancer.
+       * Status of the Network Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerState load_balancer_state = 11;</code>
@@ -4050,7 +4068,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Information that indicates which entities can be related to this load balancer.
+       * Status of the Network Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerState load_balancer_state = 11;</code>
@@ -4070,7 +4088,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Information that indicates which entities can be related to this load balancer.
+       * Status of the Network Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerState load_balancer_state = 11;</code>
@@ -4088,7 +4106,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Information that indicates which entities can be related to this load balancer.
+       * Status of the Network Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerState load_balancer_state = 11;</code>
@@ -4110,7 +4128,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Information that indicates which entities can be related to this load balancer.
+       * Status of the Network Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerState load_balancer_state = 11;</code>
@@ -4128,7 +4146,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Information that indicates which entities can be related to this load balancer.
+       * Status of the Network Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerState load_balancer_state = 11;</code>
@@ -4140,7 +4158,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Information that indicates which entities can be related to this load balancer.
+       * Status of the Network Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerState load_balancer_state = 11;</code>
@@ -4155,7 +4173,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Information that indicates which entities can be related to this load balancer.
+       * Status of the Network Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerState load_balancer_state = 11;</code>
@@ -4332,7 +4350,8 @@ public final class InstanceGroupOuterClass {
           yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerSpec, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerSpec.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerSpecOrBuilder> loadBalancerSpecBuilder_;
       /**
        * <pre>
-       * Load balancing specification.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -4342,7 +4361,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Load balancing specification.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -4356,7 +4376,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Load balancing specification.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -4376,7 +4397,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Load balancing specification.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -4394,7 +4416,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Load balancing specification.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -4416,7 +4439,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Load balancing specification.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -4434,7 +4458,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Load balancing specification.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -4446,7 +4471,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Load balancing specification.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -4461,7 +4487,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Load balancing specification.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -4485,7 +4512,7 @@ public final class InstanceGroupOuterClass {
           yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthChecksSpec, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthChecksSpec.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthChecksSpecOrBuilder> healthChecksSpecBuilder_;
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 15;</code>
@@ -4495,7 +4522,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 15;</code>
@@ -4509,7 +4536,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 15;</code>
@@ -4529,7 +4556,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 15;</code>
@@ -4547,7 +4574,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 15;</code>
@@ -4569,7 +4596,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 15;</code>
@@ -4587,7 +4614,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 15;</code>
@@ -4599,7 +4626,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 15;</code>
@@ -4614,7 +4641,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 15;</code>
@@ -5086,7 +5113,8 @@ public final class InstanceGroupOuterClass {
           yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpecOrBuilder> applicationLoadBalancerSpecBuilder_;
       /**
        * <pre>
-       * Application load balancer spec
+       * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+       * (OSI model layer 7).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 20;</code>
@@ -5096,7 +5124,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Application load balancer spec
+       * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+       * (OSI model layer 7).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 20;</code>
@@ -5110,7 +5139,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Application load balancer spec
+       * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+       * (OSI model layer 7).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 20;</code>
@@ -5130,7 +5160,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Application load balancer spec
+       * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+       * (OSI model layer 7).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 20;</code>
@@ -5148,7 +5179,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Application load balancer spec
+       * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+       * (OSI model layer 7).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 20;</code>
@@ -5170,7 +5202,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Application load balancer spec
+       * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+       * (OSI model layer 7).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 20;</code>
@@ -5188,7 +5221,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Application load balancer spec
+       * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+       * (OSI model layer 7).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 20;</code>
@@ -5200,7 +5234,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Application load balancer spec
+       * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+       * (OSI model layer 7).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 20;</code>
@@ -5215,7 +5250,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Application load balancer spec
+       * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+       * (OSI model layer 7).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 20;</code>
@@ -5239,7 +5275,8 @@ public final class InstanceGroupOuterClass {
           yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerState, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerState.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerStateOrBuilder> applicationLoadBalancerStateBuilder_;
       /**
        * <pre>
-       * Application load balancer state
+       * Status of the Application Load Balancer target group attributed to the instance group.
+       * Returned if there is a working load balancer that the target group is connected to.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerState application_load_balancer_state = 21;</code>
@@ -5249,7 +5286,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Application load balancer state
+       * Status of the Application Load Balancer target group attributed to the instance group.
+       * Returned if there is a working load balancer that the target group is connected to.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerState application_load_balancer_state = 21;</code>
@@ -5263,7 +5301,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Application load balancer state
+       * Status of the Application Load Balancer target group attributed to the instance group.
+       * Returned if there is a working load balancer that the target group is connected to.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerState application_load_balancer_state = 21;</code>
@@ -5283,7 +5322,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Application load balancer state
+       * Status of the Application Load Balancer target group attributed to the instance group.
+       * Returned if there is a working load balancer that the target group is connected to.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerState application_load_balancer_state = 21;</code>
@@ -5301,7 +5341,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Application load balancer state
+       * Status of the Application Load Balancer target group attributed to the instance group.
+       * Returned if there is a working load balancer that the target group is connected to.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerState application_load_balancer_state = 21;</code>
@@ -5323,7 +5364,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Application load balancer state
+       * Status of the Application Load Balancer target group attributed to the instance group.
+       * Returned if there is a working load balancer that the target group is connected to.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerState application_load_balancer_state = 21;</code>
@@ -5341,7 +5383,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Application load balancer state
+       * Status of the Application Load Balancer target group attributed to the instance group.
+       * Returned if there is a working load balancer that the target group is connected to.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerState application_load_balancer_state = 21;</code>
@@ -5353,7 +5396,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Application load balancer state
+       * Status of the Application Load Balancer target group attributed to the instance group.
+       * Returned if there is a working load balancer that the target group is connected to.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerState application_load_balancer_state = 21;</code>
@@ -5368,7 +5412,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Application load balancer state
+       * Status of the Application Load Balancer target group attributed to the instance group.
+       * Returned if there is a working load balancer that the target group is connected to.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerState application_load_balancer_state = 21;</code>
@@ -5444,20 +5489,36 @@ public final class InstanceGroupOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the Application Load Balancer target group attributed to the instance group.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     java.lang.String getTargetGroupId();
     /**
+     * <pre>
+     * ID of the Application Load Balancer target group attributed to the instance group.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getTargetGroupIdBytes();
 
     /**
+     * <pre>
+     * Status message of the target group.
+     * </pre>
+     *
      * <code>string status_message = 2;</code>
      */
     java.lang.String getStatusMessage();
     /**
+     * <pre>
+     * Status message of the target group.
+     * </pre>
+     *
      * <code>string status_message = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -5551,6 +5612,10 @@ public final class InstanceGroupOuterClass {
     public static final int TARGET_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object targetGroupId_;
     /**
+     * <pre>
+     * ID of the Application Load Balancer target group attributed to the instance group.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     public java.lang.String getTargetGroupId() {
@@ -5566,6 +5631,10 @@ public final class InstanceGroupOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the Application Load Balancer target group attributed to the instance group.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -5585,6 +5654,10 @@ public final class InstanceGroupOuterClass {
     public static final int STATUS_MESSAGE_FIELD_NUMBER = 2;
     private volatile java.lang.Object statusMessage_;
     /**
+     * <pre>
+     * Status message of the target group.
+     * </pre>
+     *
      * <code>string status_message = 2;</code>
      */
     public java.lang.String getStatusMessage() {
@@ -5600,6 +5673,10 @@ public final class InstanceGroupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Status message of the target group.
+     * </pre>
+     *
      * <code>string status_message = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -5938,6 +6015,10 @@ public final class InstanceGroupOuterClass {
 
       private java.lang.Object targetGroupId_ = "";
       /**
+       * <pre>
+       * ID of the Application Load Balancer target group attributed to the instance group.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public java.lang.String getTargetGroupId() {
@@ -5953,6 +6034,10 @@ public final class InstanceGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the Application Load Balancer target group attributed to the instance group.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -5969,6 +6054,10 @@ public final class InstanceGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the Application Load Balancer target group attributed to the instance group.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public Builder setTargetGroupId(
@@ -5982,6 +6071,10 @@ public final class InstanceGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the Application Load Balancer target group attributed to the instance group.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public Builder clearTargetGroupId() {
@@ -5991,6 +6084,10 @@ public final class InstanceGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the Application Load Balancer target group attributed to the instance group.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public Builder setTargetGroupIdBytes(
@@ -6007,6 +6104,10 @@ public final class InstanceGroupOuterClass {
 
       private java.lang.Object statusMessage_ = "";
       /**
+       * <pre>
+       * Status message of the target group.
+       * </pre>
+       *
        * <code>string status_message = 2;</code>
        */
       public java.lang.String getStatusMessage() {
@@ -6022,6 +6123,10 @@ public final class InstanceGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Status message of the target group.
+       * </pre>
+       *
        * <code>string status_message = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -6038,6 +6143,10 @@ public final class InstanceGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Status message of the target group.
+       * </pre>
+       *
        * <code>string status_message = 2;</code>
        */
       public Builder setStatusMessage(
@@ -6051,6 +6160,10 @@ public final class InstanceGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status message of the target group.
+       * </pre>
+       *
        * <code>string status_message = 2;</code>
        */
       public Builder clearStatusMessage() {
@@ -6060,6 +6173,10 @@ public final class InstanceGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status message of the target group.
+       * </pre>
+       *
        * <code>string status_message = 2;</code>
        */
       public Builder setStatusMessageBytes(
@@ -6819,7 +6936,7 @@ public final class InstanceGroupOuterClass {
 
     /**
      * <pre>
-     * ID of the target group used for load balancing.
+     * ID of the Network Load Balancer target group attributed to the instance group.
      * </pre>
      *
      * <code>string target_group_id = 1;</code>
@@ -6827,7 +6944,7 @@ public final class InstanceGroupOuterClass {
     java.lang.String getTargetGroupId();
     /**
      * <pre>
-     * ID of the target group used for load balancing.
+     * ID of the Network Load Balancer target group attributed to the instance group.
      * </pre>
      *
      * <code>string target_group_id = 1;</code>
@@ -6942,7 +7059,7 @@ public final class InstanceGroupOuterClass {
     private volatile java.lang.Object targetGroupId_;
     /**
      * <pre>
-     * ID of the target group used for load balancing.
+     * ID of the Network Load Balancer target group attributed to the instance group.
      * </pre>
      *
      * <code>string target_group_id = 1;</code>
@@ -6961,7 +7078,7 @@ public final class InstanceGroupOuterClass {
     }
     /**
      * <pre>
-     * ID of the target group used for load balancing.
+     * ID of the Network Load Balancer target group attributed to the instance group.
      * </pre>
      *
      * <code>string target_group_id = 1;</code>
@@ -7345,7 +7462,7 @@ public final class InstanceGroupOuterClass {
       private java.lang.Object targetGroupId_ = "";
       /**
        * <pre>
-       * ID of the target group used for load balancing.
+       * ID of the Network Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>string target_group_id = 1;</code>
@@ -7364,7 +7481,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * ID of the target group used for load balancing.
+       * ID of the Network Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>string target_group_id = 1;</code>
@@ -7384,7 +7501,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * ID of the target group used for load balancing.
+       * ID of the Network Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>string target_group_id = 1;</code>
@@ -7401,7 +7518,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * ID of the target group used for load balancing.
+       * ID of the Network Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>string target_group_id = 1;</code>
@@ -7414,7 +7531,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * ID of the target group used for load balancing.
+       * ID of the Network Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>string target_group_id = 1;</code>
@@ -9957,6 +10074,23 @@ public final class InstanceGroupOuterClass {
        */
       yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRuleOrBuilder getCustomRulesOrBuilder(
           int index);
+
+      /**
+       * <pre>
+       * Autoscaling type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.AutoScale.AutoScaleType auto_scale_type = 9;</code>
+       */
+      int getAutoScaleTypeValue();
+      /**
+       * <pre>
+       * Autoscaling type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.AutoScale.AutoScaleType auto_scale_type = 9;</code>
+       */
+      yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.AutoScale.AutoScaleType getAutoScaleType();
     }
     /**
      * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.ScalePolicy.AutoScale}
@@ -9975,6 +10109,7 @@ public final class InstanceGroupOuterClass {
         maxSize_ = 0L;
         initialSize_ = 0L;
         customRules_ = java.util.Collections.emptyList();
+        autoScaleType_ = 0;
       }
 
       @java.lang.Override
@@ -10077,6 +10212,12 @@ public final class InstanceGroupOuterClass {
                     input.readMessage(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule.parser(), extensionRegistry));
                 break;
               }
+              case 72: {
+                int rawValue = input.readEnum();
+
+                autoScaleType_ = rawValue;
+                break;
+              }
               default: {
                 if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -10110,6 +10251,129 @@ public final class InstanceGroupOuterClass {
         return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_AutoScale_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.AutoScale.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.AutoScale.Builder.class);
+      }
+
+      /**
+       * Protobuf enum {@code yandex.cloud.compute.v1.instancegroup.ScalePolicy.AutoScale.AutoScaleType}
+       */
+      public enum AutoScaleType
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>AUTO_SCALE_TYPE_UNSPECIFIED = 0;</code>
+         */
+        AUTO_SCALE_TYPE_UNSPECIFIED(0),
+        /**
+         * <pre>
+         * Scale each zone independently. This is the default.
+         * </pre>
+         *
+         * <code>ZONAL = 1;</code>
+         */
+        ZONAL(1),
+        /**
+         * <pre>
+         * Scale group as a whole.
+         * </pre>
+         *
+         * <code>REGIONAL = 2;</code>
+         */
+        REGIONAL(2),
+        UNRECOGNIZED(-1),
+        ;
+
+        /**
+         * <code>AUTO_SCALE_TYPE_UNSPECIFIED = 0;</code>
+         */
+        public static final int AUTO_SCALE_TYPE_UNSPECIFIED_VALUE = 0;
+        /**
+         * <pre>
+         * Scale each zone independently. This is the default.
+         * </pre>
+         *
+         * <code>ZONAL = 1;</code>
+         */
+        public static final int ZONAL_VALUE = 1;
+        /**
+         * <pre>
+         * Scale group as a whole.
+         * </pre>
+         *
+         * <code>REGIONAL = 2;</code>
+         */
+        public static final int REGIONAL_VALUE = 2;
+
+
+        public final int getNumber() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalArgumentException(
+                "Can't get the number of an unknown enum value.");
+          }
+          return value;
+        }
+
+        /**
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static AutoScaleType valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static AutoScaleType forNumber(int value) {
+          switch (value) {
+            case 0: return AUTO_SCALE_TYPE_UNSPECIFIED;
+            case 1: return ZONAL;
+            case 2: return REGIONAL;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<AutoScaleType>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            AutoScaleType> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<AutoScaleType>() {
+                public AutoScaleType findValueByNumber(int number) {
+                  return AutoScaleType.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.AutoScale.getDescriptor().getEnumTypes().get(0);
+        }
+
+        private static final AutoScaleType[] VALUES = values();
+
+        public static AutoScaleType valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          if (desc.getIndex() == -1) {
+            return UNRECOGNIZED;
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private AutoScaleType(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:yandex.cloud.compute.v1.instancegroup.ScalePolicy.AutoScale.AutoScaleType)
       }
 
       private int bitField0_;
@@ -10355,6 +10619,31 @@ public final class InstanceGroupOuterClass {
         return customRules_.get(index);
       }
 
+      public static final int AUTO_SCALE_TYPE_FIELD_NUMBER = 9;
+      private int autoScaleType_;
+      /**
+       * <pre>
+       * Autoscaling type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.AutoScale.AutoScaleType auto_scale_type = 9;</code>
+       */
+      public int getAutoScaleTypeValue() {
+        return autoScaleType_;
+      }
+      /**
+       * <pre>
+       * Autoscaling type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.AutoScale.AutoScaleType auto_scale_type = 9;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.AutoScale.AutoScaleType getAutoScaleType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.AutoScale.AutoScaleType result = yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.AutoScale.AutoScaleType.valueOf(autoScaleType_);
+        return result == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.AutoScale.AutoScaleType.UNRECOGNIZED : result;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -10392,6 +10681,9 @@ public final class InstanceGroupOuterClass {
         }
         for (int i = 0; i < customRules_.size(); i++) {
           output.writeMessage(8, customRules_.get(i));
+        }
+        if (autoScaleType_ != yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.AutoScale.AutoScaleType.AUTO_SCALE_TYPE_UNSPECIFIED.getNumber()) {
+          output.writeEnum(9, autoScaleType_);
         }
         unknownFields.writeTo(output);
       }
@@ -10433,6 +10725,10 @@ public final class InstanceGroupOuterClass {
         for (int i = 0; i < customRules_.size(); i++) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(8, customRules_.get(i));
+        }
+        if (autoScaleType_ != yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.AutoScale.AutoScaleType.AUTO_SCALE_TYPE_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(9, autoScaleType_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -10478,6 +10774,7 @@ public final class InstanceGroupOuterClass {
         }
         result = result && getCustomRulesList()
             .equals(other.getCustomRulesList());
+        result = result && autoScaleType_ == other.autoScaleType_;
         result = result && unknownFields.equals(other.unknownFields);
         return result;
       }
@@ -10518,6 +10815,8 @@ public final class InstanceGroupOuterClass {
           hash = (37 * hash) + CUSTOM_RULES_FIELD_NUMBER;
           hash = (53 * hash) + getCustomRulesList().hashCode();
         }
+        hash = (37 * hash) + AUTO_SCALE_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + autoScaleType_;
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -10688,6 +10987,8 @@ public final class InstanceGroupOuterClass {
           } else {
             customRulesBuilder_.clear();
           }
+          autoScaleType_ = 0;
+
           return this;
         }
 
@@ -10748,6 +11049,7 @@ public final class InstanceGroupOuterClass {
           } else {
             result.customRules_ = customRulesBuilder_.build();
           }
+          result.autoScaleType_ = autoScaleType_;
           result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
@@ -10843,6 +11145,9 @@ public final class InstanceGroupOuterClass {
                 customRulesBuilder_.addAllMessages(other.customRules_);
               }
             }
+          }
+          if (other.autoScaleType_ != 0) {
+            setAutoScaleTypeValue(other.getAutoScaleTypeValue());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -11959,6 +12264,71 @@ public final class InstanceGroupOuterClass {
           }
           return customRulesBuilder_;
         }
+
+        private int autoScaleType_ = 0;
+        /**
+         * <pre>
+         * Autoscaling type.
+         * </pre>
+         *
+         * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.AutoScale.AutoScaleType auto_scale_type = 9;</code>
+         */
+        public int getAutoScaleTypeValue() {
+          return autoScaleType_;
+        }
+        /**
+         * <pre>
+         * Autoscaling type.
+         * </pre>
+         *
+         * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.AutoScale.AutoScaleType auto_scale_type = 9;</code>
+         */
+        public Builder setAutoScaleTypeValue(int value) {
+          autoScaleType_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Autoscaling type.
+         * </pre>
+         *
+         * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.AutoScale.AutoScaleType auto_scale_type = 9;</code>
+         */
+        public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.AutoScale.AutoScaleType getAutoScaleType() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.AutoScale.AutoScaleType result = yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.AutoScale.AutoScaleType.valueOf(autoScaleType_);
+          return result == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.AutoScale.AutoScaleType.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * Autoscaling type.
+         * </pre>
+         *
+         * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.AutoScale.AutoScaleType auto_scale_type = 9;</code>
+         */
+        public Builder setAutoScaleType(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.AutoScale.AutoScaleType value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          autoScaleType_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Autoscaling type.
+         * </pre>
+         *
+         * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.AutoScale.AutoScaleType auto_scale_type = 9;</code>
+         */
+        public Builder clearAutoScaleType() {
+          
+          autoScaleType_ = 0;
+          onChanged();
+          return this;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -12818,7 +13188,7 @@ public final class InstanceGroupOuterClass {
          * <pre>
          * This type means that the metric applies to one instance.
          * First, Instance Groups calculates the average metric value for each instance,
-         * then averages the values for instances in one availability zone.
+         * then averages the values for instances in one availability zone or in whole group depends on autoscaling type.
          * This type of metric must have the `instance_id` label.
          * </pre>
          *
@@ -12827,8 +13197,8 @@ public final class InstanceGroupOuterClass {
         UTILIZATION(1),
         /**
          * <pre>
-         * This type means that the metric applies to instances in one availability zone.
-         * This type of metric must have the `zone_id` label.
+         * This type means that the metric applies to instances in one availability zone or to whole group depends on autoscaling type.
+         * This type of metric must have the `zone_id` label if ZONAL autoscaling type is chosen.
          * </pre>
          *
          * <code>WORKLOAD = 2;</code>
@@ -12845,7 +13215,7 @@ public final class InstanceGroupOuterClass {
          * <pre>
          * This type means that the metric applies to one instance.
          * First, Instance Groups calculates the average metric value for each instance,
-         * then averages the values for instances in one availability zone.
+         * then averages the values for instances in one availability zone or in whole group depends on autoscaling type.
          * This type of metric must have the `instance_id` label.
          * </pre>
          *
@@ -12854,8 +13224,8 @@ public final class InstanceGroupOuterClass {
         public static final int UTILIZATION_VALUE = 1;
         /**
          * <pre>
-         * This type means that the metric applies to instances in one availability zone.
-         * This type of metric must have the `zone_id` label.
+         * This type means that the metric applies to instances in one availability zone or to whole group depends on autoscaling type.
+         * This type of metric must have the `zone_id` label if ZONAL autoscaling type is chosen.
          * </pre>
          *
          * <code>WORKLOAD = 2;</code>
@@ -37426,7 +37796,7 @@ public final class InstanceGroupOuterClass {
 
     /**
      * <pre>
-     * Specification of the alb's target group that the instance group will be added to.
+     * Basic properties of the Application Load Balancer target group attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
@@ -37434,7 +37804,7 @@ public final class InstanceGroupOuterClass {
     boolean hasTargetGroupSpec();
     /**
      * <pre>
-     * Specification of the alb's target group that the instance group will be added to.
+     * Basic properties of the Application Load Balancer target group attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
@@ -37442,7 +37812,7 @@ public final class InstanceGroupOuterClass {
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec getTargetGroupSpec();
     /**
      * <pre>
-     * Specification of the alb's target group that the instance group will be added to.
+     * Basic properties of the Application Load Balancer target group attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
@@ -37578,7 +37948,7 @@ public final class InstanceGroupOuterClass {
     private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec targetGroupSpec_;
     /**
      * <pre>
-     * Specification of the alb's target group that the instance group will be added to.
+     * Basic properties of the Application Load Balancer target group attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
@@ -37588,7 +37958,7 @@ public final class InstanceGroupOuterClass {
     }
     /**
      * <pre>
-     * Specification of the alb's target group that the instance group will be added to.
+     * Basic properties of the Application Load Balancer target group attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
@@ -37598,7 +37968,7 @@ public final class InstanceGroupOuterClass {
     }
     /**
      * <pre>
-     * Specification of the alb's target group that the instance group will be added to.
+     * Basic properties of the Application Load Balancer target group attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
@@ -37994,7 +38364,7 @@ public final class InstanceGroupOuterClass {
           yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpecOrBuilder> targetGroupSpecBuilder_;
       /**
        * <pre>
-       * Specification of the alb's target group that the instance group will be added to.
+       * Basic properties of the Application Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
@@ -38004,7 +38374,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Specification of the alb's target group that the instance group will be added to.
+       * Basic properties of the Application Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
@@ -38018,7 +38388,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Specification of the alb's target group that the instance group will be added to.
+       * Basic properties of the Application Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
@@ -38038,7 +38408,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Specification of the alb's target group that the instance group will be added to.
+       * Basic properties of the Application Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
@@ -38056,7 +38426,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Specification of the alb's target group that the instance group will be added to.
+       * Basic properties of the Application Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
@@ -38078,7 +38448,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Specification of the alb's target group that the instance group will be added to.
+       * Basic properties of the Application Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
@@ -38096,7 +38466,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Specification of the alb's target group that the instance group will be added to.
+       * Basic properties of the Application Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
@@ -38108,7 +38478,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Specification of the alb's target group that the instance group will be added to.
+       * Basic properties of the Application Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
@@ -38123,7 +38493,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Specification of the alb's target group that the instance group will be added to.
+       * Basic properties of the Application Load Balancer target group attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
@@ -52245,14 +52615,14 @@ public final class InstanceGroupOuterClass {
       "pening\030\003 \001(\003\022\017\n\007warming\030\004 \001(\003\022\017\n\007running" +
       "\030\005 \001(\003\022\017\n\007closing\030\006 \001(\003\022\020\n\010stopping\030\007 \001(" +
       "\003\022\020\n\010updating\030\010 \001(\003\022\020\n\010deleting\030\t \001(\003\022\016\n" +
-      "\006failed\030\n \001(\003\"\346\014\n\013ScalePolicy\022T\n\013fixed_s" +
+      "\006failed\030\n \001(\003\"\226\016\n\013ScalePolicy\022T\n\013fixed_s" +
       "cale\030\001 \001(\0132=.yandex.cloud.compute.v1.ins" +
       "tancegroup.ScalePolicy.FixedScaleH\000\022R\n\na" +
       "uto_scale\030\002 \001(\0132<.yandex.cloud.compute.v" +
       "1.instancegroup.ScalePolicy.AutoScaleH\000\022" +
       "U\n\017test_auto_scale\030\003 \001(\0132<.yandex.cloud." +
       "compute.v1.instancegroup.ScalePolicy.Aut" +
-      "oScale\032\367\003\n\tAutoScale\022 \n\rmin_zone_size\030\001 " +
+      "oScale\032\247\005\n\tAutoScale\022 \n\rmin_zone_size\030\001 " +
       "\001(\003B\t\372\3071\0050-100\022\033\n\010max_size\030\002 \001(\003B\t\372\3071\0050-" +
       "100\022C\n\024measurement_duration\030\003 \001(\0132\031.goog" +
       "le.protobuf.DurationB\n\372\3071\0061m-10m\022=\n\017warm" +
@@ -52264,207 +52634,211 @@ public final class InstanceGroupOuterClass {
       "ud.compute.v1.instancegroup.ScalePolicy." +
       "CpuUtilizationRule\022\\\n\014custom_rules\030\010 \003(\013" +
       "2=.yandex.cloud.compute.v1.instancegroup" +
-      ".ScalePolicy.CustomRuleB\007\202\3101\003<=1\032<\n\022CpuU" +
-      "tilizationRule\022&\n\022utilization_target\030\001 \001" +
-      "(\001B\n\372\3071\00610-100\032\342\005\n\nCustomRule\022_\n\trule_ty" +
-      "pe\030\001 \001(\0162F.yandex.cloud.compute.v1.insta" +
-      "ncegroup.ScalePolicy.CustomRule.RuleType" +
-      "B\004\350\3071\001\022c\n\013metric_type\030\002 \001(\0162H.yandex.clo" +
-      "ud.compute.v1.instancegroup.ScalePolicy." +
-      "CustomRule.MetricTypeB\004\350\3071\001\022O\n\013metric_na" +
-      "me\030\003 \001(\tB:\350\3071\001\362\30712[a-zA-Z0-9./@_][ 0-9a-" +
-      "zA-Z./@_,:;()\\[\\]<>-]{0,198}\022\263\001\n\006labels\030" +
-      "\005 \003(\0132I.yandex.cloud.compute.v1.instance" +
-      "group.ScalePolicy.CustomRule.LabelsEntry" +
-      "BX\362\30712[a-zA-Z0-9./@_][ 0-9a-zA-Z./@_,:;(" +
-      ")\\[\\]<>-]{0,198}\262\3101\036\022\034^[a-zA-Z][0-9a-zA-" +
-      "Z_]{0,31}$\022\026\n\006target\030\004 \001(\001B\006\372\3071\002>0\022\033\n\tfo" +
-      "lder_id\030\006 \001(\tB\010\212\3101\004<=50\022\032\n\007service\030\007 \001(\t" +
-      "B\t\212\3101\005<=200\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\"D\n\010RuleType\022\031\n\025RULE_T" +
-      "YPE_UNSPECIFIED\020\000\022\017\n\013UTILIZATION\020\001\022\014\n\010WO" +
-      "RKLOAD\020\002\"A\n\nMetricType\022\033\n\027METRIC_TYPE_UN" +
-      "SPECIFIED\020\000\022\t\n\005GAUGE\020\001\022\013\n\007COUNTER\020\002\032%\n\nF" +
-      "ixedScale\022\027\n\004size\030\001 \001(\003B\t\372\3071\0051-100B\022\n\nsc" +
-      "ale_type\022\004\300\3011\001\"\356\002\n\014DeployPolicy\022\"\n\017max_u" +
-      "navailable\030\001 \001(\003B\t\372\3071\0050-100\022\037\n\014max_delet" +
-      "ing\030\002 \001(\003B\t\372\3071\0050-100\022\037\n\014max_creating\030\003 \001" +
-      "(\003B\t\372\3071\0050-100\022 \n\rmax_expansion\030\006 \001(\003B\t\372\307" +
-      "1\0050-100\022>\n\020startup_duration\030\007 \001(\0132\031.goog" +
-      "le.protobuf.DurationB\t\372\3071\0050m-1h\022N\n\010strat" +
-      "egy\030\010 \001(\0162<.yandex.cloud.compute.v1.inst" +
-      "ancegroup.DeployPolicy.Strategy\"F\n\010Strat" +
-      "egy\022\030\n\024STRATEGY_UNSPECIFIED\020\000\022\r\n\tPROACTI" +
-      "VE\020\001\022\021\n\rOPPORTUNISTIC\020\002\"\207\001\n\020AllocationPo" +
-      "licy\022T\n\005zones\030\001 \003(\0132<.yandex.cloud.compu" +
-      "te.v1.instancegroup.AllocationPolicy.Zon" +
-      "eB\007\202\3101\003>=1\032\035\n\004Zone\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071" +
-      "\001\"\205\t\n\020InstanceTemplate\022\036\n\013description\030\001 " +
-      "\001(\tB\t\212\3101\005<=256\022\212\001\n\006labels\030\002 \003(\0132C.yandex" +
-      ".cloud.compute.v1.instancegroup.Instance" +
-      "Template.LabelsEntryB5\202\3101\004<=64\212\3101\005<=128\262" +
-      "\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\031\n\013p" +
-      "latform_id\030\003 \001(\tB\004\350\3071\001\022R\n\016resources_spec" +
-      "\030\004 \001(\01324.yandex.cloud.compute.v1.instanc" +
-      "egroup.ResourcesSpecB\004\350\3071\001\022\216\001\n\010metadata\030" +
-      "\005 \003(\0132E.yandex.cloud.compute.v1.instance" +
-      "group.InstanceTemplate.MetadataEntryB5\202\310" +
-      "1\005<=128\212\3101\010<=262144\262\3101\006\032\0041-63\262\3101\022\022\020[a-z]" +
-      "[-_0-9a-z]*\022U\n\016boot_disk_spec\030\006 \001(\01327.ya" +
-      "ndex.cloud.compute.v1.instancegroup.Atta" +
-      "chedDiskSpecB\004\350\3071\001\022^\n\024secondary_disk_spe" +
-      "cs\030\007 \003(\01327.yandex.cloud.compute.v1.insta" +
-      "ncegroup.AttachedDiskSpecB\007\202\3101\003<=3\022c\n\027ne" +
-      "twork_interface_specs\030\010 \003(\0132;.yandex.clo" +
-      "ud.compute.v1.instancegroup.NetworkInter" +
-      "faceSpecB\005\202\3101\0011\022R\n\021scheduling_policy\030\t \001" +
-      "(\01327.yandex.cloud.compute.v1.instancegro" +
-      "up.SchedulingPolicy\022\032\n\022service_account_i" +
-      "d\030\n \001(\t\022P\n\020network_settings\030\013 \001(\01326.yand" +
-      "ex.cloud.compute.v1.instancegroup.Networ" +
-      "kSettings\022\027\n\004name\030\014 \001(\tB\t\212\3101\005<=128\022\033\n\010ho" +
-      "stname\030\r \001(\tB\t\212\3101\005<=128\022P\n\020placement_pol" +
-      "icy\030\016 \001(\01326.yandex.cloud.compute.v1.inst" +
-      "ancegroup.PlacementPolicy\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMeta" +
-      "dataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\"\335\002\n\017PlacementPolicy\022\032\n\022placement_group" +
-      "_id\030\001 \001(\t\022d\n\023host_affinity_rules\030\002 \003(\0132G" +
-      ".yandex.cloud.compute.v1.instancegroup.P" +
-      "lacementPolicy.HostAffinityRule\032\307\001\n\020Host" +
-      "AffinityRule\022\013\n\003key\030\001 \001(\t\022\\\n\002op\030\002 \001(\0162P." +
-      "yandex.cloud.compute.v1.instancegroup.Pl" +
-      "acementPolicy.HostAffinityRule.Operator\022" +
-      "\016\n\006values\030\003 \003(\t\"8\n\010Operator\022\030\n\024OPERATOR_" +
-      "UNSPECIFIED\020\000\022\006\n\002IN\020\001\022\n\n\006NOT_IN\020\002\"\337\001\n\rRe" +
-      "sourcesSpec\022\"\n\006memory\030\001 \001(\003B\022\372\3071\016<=82463" +
-      "3720832\022e\n\005cores\030\002 \001(\003BV\372\3071R2,4,6,8,10,1" +
-      "2,14,16,18,20,22,24,26,28,30,32,34,36,40" +
-      ",44,48,52,56,60,64,68,72,76,80\022(\n\rcore_f" +
-      "raction\030\003 \001(\003B\021\372\3071\r0,5,20,50,100\022\031\n\004gpus" +
-      "\030\004 \001(\003B\013\372\3071\0070,1,2,4\"\302\004\n\020AttachedDiskSpec" +
-      "\022P\n\004mode\030\001 \001(\0162<.yandex.cloud.compute.v1" +
-      ".instancegroup.AttachedDiskSpec.ModeB\004\350\307" +
-      "1\001\022/\n\013device_name\030\002 \001(\tB\032\362\3071\026|[a-z][-_0-" +
-      "9a-z]{0,19}\022Y\n\tdisk_spec\030\003 \001(\0132@.yandex." +
+      ".ScalePolicy.CustomRuleB\007\202\3101\003<=1\022c\n\017auto" +
+      "_scale_type\030\t \001(\0162J.yandex.cloud.compute" +
+      ".v1.instancegroup.ScalePolicy.AutoScale." +
+      "AutoScaleType\"I\n\rAutoScaleType\022\037\n\033AUTO_S" +
+      "CALE_TYPE_UNSPECIFIED\020\000\022\t\n\005ZONAL\020\001\022\014\n\010RE" +
+      "GIONAL\020\002\032<\n\022CpuUtilizationRule\022&\n\022utiliz" +
+      "ation_target\030\001 \001(\001B\n\372\3071\00610-100\032\342\005\n\nCusto" +
+      "mRule\022_\n\trule_type\030\001 \001(\0162F.yandex.cloud." +
+      "compute.v1.instancegroup.ScalePolicy.Cus" +
+      "tomRule.RuleTypeB\004\350\3071\001\022c\n\013metric_type\030\002 " +
+      "\001(\0162H.yandex.cloud.compute.v1.instancegr" +
+      "oup.ScalePolicy.CustomRule.MetricTypeB\004\350" +
+      "\3071\001\022O\n\013metric_name\030\003 \001(\tB:\350\3071\001\362\30712[a-zA-" +
+      "Z0-9./@_][ 0-9a-zA-Z./@_,:;()\\[\\]<>-]{0," +
+      "198}\022\263\001\n\006labels\030\005 \003(\0132I.yandex.cloud.com" +
+      "pute.v1.instancegroup.ScalePolicy.Custom" +
+      "Rule.LabelsEntryBX\362\30712[a-zA-Z0-9./@_][ 0" +
+      "-9a-zA-Z./@_,:;()\\[\\]<>-]{0,198}\262\3101\036\022\034^[" +
+      "a-zA-Z][0-9a-zA-Z_]{0,31}$\022\026\n\006target\030\004 \001" +
+      "(\001B\006\372\3071\002>0\022\033\n\tfolder_id\030\006 \001(\tB\010\212\3101\004<=50\022" +
+      "\032\n\007service\030\007 \001(\tB\t\212\3101\005<=200\032-\n\013LabelsEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"D\n\010Ru" +
+      "leType\022\031\n\025RULE_TYPE_UNSPECIFIED\020\000\022\017\n\013UTI" +
+      "LIZATION\020\001\022\014\n\010WORKLOAD\020\002\"A\n\nMetricType\022\033" +
+      "\n\027METRIC_TYPE_UNSPECIFIED\020\000\022\t\n\005GAUGE\020\001\022\013" +
+      "\n\007COUNTER\020\002\032%\n\nFixedScale\022\027\n\004size\030\001 \001(\003B" +
+      "\t\372\3071\0051-100B\022\n\nscale_type\022\004\300\3011\001\"\356\002\n\014Deplo" +
+      "yPolicy\022\"\n\017max_unavailable\030\001 \001(\003B\t\372\3071\0050-" +
+      "100\022\037\n\014max_deleting\030\002 \001(\003B\t\372\3071\0050-100\022\037\n\014" +
+      "max_creating\030\003 \001(\003B\t\372\3071\0050-100\022 \n\rmax_exp" +
+      "ansion\030\006 \001(\003B\t\372\3071\0050-100\022>\n\020startup_durat" +
+      "ion\030\007 \001(\0132\031.google.protobuf.DurationB\t\372\307" +
+      "1\0050m-1h\022N\n\010strategy\030\010 \001(\0162<.yandex.cloud" +
+      ".compute.v1.instancegroup.DeployPolicy.S" +
+      "trategy\"F\n\010Strategy\022\030\n\024STRATEGY_UNSPECIF" +
+      "IED\020\000\022\r\n\tPROACTIVE\020\001\022\021\n\rOPPORTUNISTIC\020\002\"" +
+      "\207\001\n\020AllocationPolicy\022T\n\005zones\030\001 \003(\0132<.ya" +
+      "ndex.cloud.compute.v1.instancegroup.Allo" +
+      "cationPolicy.ZoneB\007\202\3101\003>=1\032\035\n\004Zone\022\025\n\007zo" +
+      "ne_id\030\001 \001(\tB\004\350\3071\001\"\205\t\n\020InstanceTemplate\022\036" +
+      "\n\013description\030\001 \001(\tB\t\212\3101\005<=256\022\212\001\n\006label" +
+      "s\030\002 \003(\0132C.yandex.cloud.compute.v1.instan" +
+      "cegroup.InstanceTemplate.LabelsEntryB5\202\310" +
+      "1\004<=64\212\3101\005<=128\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_." +
+      "/\\@0-9a-z]*\022\031\n\013platform_id\030\003 \001(\tB\004\350\3071\001\022R" +
+      "\n\016resources_spec\030\004 \001(\01324.yandex.cloud.co" +
+      "mpute.v1.instancegroup.ResourcesSpecB\004\350\307" +
+      "1\001\022\216\001\n\010metadata\030\005 \003(\0132E.yandex.cloud.com" +
+      "pute.v1.instancegroup.InstanceTemplate.M" +
+      "etadataEntryB5\202\3101\005<=128\212\3101\010<=262144\262\3101\006\032" +
+      "\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022U\n\016boot_disk" +
+      "_spec\030\006 \001(\01327.yandex.cloud.compute.v1.in" +
+      "stancegroup.AttachedDiskSpecB\004\350\3071\001\022^\n\024se" +
+      "condary_disk_specs\030\007 \003(\01327.yandex.cloud." +
+      "compute.v1.instancegroup.AttachedDiskSpe" +
+      "cB\007\202\3101\003<=3\022c\n\027network_interface_specs\030\010 " +
+      "\003(\0132;.yandex.cloud.compute.v1.instancegr" +
+      "oup.NetworkInterfaceSpecB\005\202\3101\0011\022R\n\021sched" +
+      "uling_policy\030\t \001(\01327.yandex.cloud.comput" +
+      "e.v1.instancegroup.SchedulingPolicy\022\032\n\022s" +
+      "ervice_account_id\030\n \001(\t\022P\n\020network_setti" +
+      "ngs\030\013 \001(\01326.yandex.cloud.compute.v1.inst" +
+      "ancegroup.NetworkSettings\022\027\n\004name\030\014 \001(\tB" +
+      "\t\212\3101\005<=128\022\033\n\010hostname\030\r \001(\tB\t\212\3101\005<=128\022" +
+      "P\n\020placement_policy\030\016 \001(\01326.yandex.cloud" +
+      ".compute.v1.instancegroup.PlacementPolic" +
+      "y\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001\"\335\002\n\017PlacementPolicy\022\032\n" +
+      "\022placement_group_id\030\001 \001(\t\022d\n\023host_affini" +
+      "ty_rules\030\002 \003(\0132G.yandex.cloud.compute.v1" +
+      ".instancegroup.PlacementPolicy.HostAffin" +
+      "ityRule\032\307\001\n\020HostAffinityRule\022\013\n\003key\030\001 \001(" +
+      "\t\022\\\n\002op\030\002 \001(\0162P.yandex.cloud.compute.v1." +
+      "instancegroup.PlacementPolicy.HostAffini" +
+      "tyRule.Operator\022\016\n\006values\030\003 \003(\t\"8\n\010Opera" +
+      "tor\022\030\n\024OPERATOR_UNSPECIFIED\020\000\022\006\n\002IN\020\001\022\n\n" +
+      "\006NOT_IN\020\002\"\337\001\n\rResourcesSpec\022\"\n\006memory\030\001 " +
+      "\001(\003B\022\372\3071\016<=824633720832\022e\n\005cores\030\002 \001(\003BV" +
+      "\372\3071R2,4,6,8,10,12,14,16,18,20,22,24,26,2" +
+      "8,30,32,34,36,40,44,48,52,56,60,64,68,72" +
+      ",76,80\022(\n\rcore_fraction\030\003 \001(\003B\021\372\3071\r0,5,2" +
+      "0,50,100\022\031\n\004gpus\030\004 \001(\003B\013\372\3071\0070,1,2,4\"\302\004\n\020" +
+      "AttachedDiskSpec\022P\n\004mode\030\001 \001(\0162<.yandex." +
       "cloud.compute.v1.instancegroup.AttachedD" +
-      "iskSpec.DiskSpecB\004\350\3071\001\022/\n\007disk_id\030\004 \001(\tB" +
-      "\036\212\3101\005<=128\362\3071\021[-a-zA-Z0-9._{}]*\032\341\001\n\010Disk" +
-      "Spec\022\036\n\013description\030\001 \001(\tB\t\212\3101\005<=256\022\025\n\007" +
-      "type_id\030\002 \001(\tB\004\350\3071\001\022\'\n\004size\030\003 \001(\003B\031\372\3071\0254" +
-      "194304-4398046511104\022\034\n\010image_id\030\004 \001(\tB\010" +
-      "\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\005 \001(\tB\010\212\3101\004<=5" +
-      "0H\000\022&\n\036preserve_after_instance_delete\030\006 " +
-      "\001(\010B\016\n\014source_oneof\";\n\004Mode\022\024\n\020MODE_UNSP" +
-      "ECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002" +
-      "\"\222\002\n\024NetworkInterfaceSpec\022\022\n\nnetwork_id\030" +
-      "\001 \001(\t\022\022\n\nsubnet_ids\030\002 \003(\t\022Z\n\027primary_v4_" +
-      "address_spec\030\003 \001(\01329.yandex.cloud.comput" +
-      "e.v1.instancegroup.PrimaryAddressSpec\022Z\n" +
-      "\027primary_v6_address_spec\030\004 \001(\01329.yandex." +
-      "cloud.compute.v1.instancegroup.PrimaryAd" +
-      "dressSpec\022\032\n\022security_group_ids\030\005 \003(\t\"\312\001" +
-      "\n\022PrimaryAddressSpec\022S\n\023one_to_one_nat_s" +
-      "pec\030\001 \001(\01326.yandex.cloud.compute.v1.inst" +
-      "ancegroup.OneToOneNatSpec\022N\n\020dns_record_" +
-      "specs\030\002 \003(\01324.yandex.cloud.compute.v1.in" +
-      "stancegroup.DnsRecordSpec\022\017\n\007address\030\003 \001" +
-      "(\t\"\270\001\n\017OneToOneNatSpec\022D\n\nip_version\030\001 \001" +
-      "(\01620.yandex.cloud.compute.v1.instancegro" +
-      "up.IpVersion\022\017\n\007address\030\002 \001(\t\022N\n\020dns_rec" +
-      "ord_specs\030\003 \003(\01324.yandex.cloud.compute.v" +
-      "1.instancegroup.DnsRecordSpec\"_\n\rDnsReco" +
-      "rdSpec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_i" +
-      "d\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr" +
-      "\030\004 \001(\010\"\'\n\020SchedulingPolicy\022\023\n\013preemptibl" +
-      "e\030\001 \001(\010\"\274\001\n\017NetworkSettings\022I\n\004type\030\001 \001(" +
-      "\0162;.yandex.cloud.compute.v1.instancegrou" +
-      "p.NetworkSettings.Type\"^\n\004Type\022\024\n\020TYPE_U" +
-      "NSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE_A" +
-      "CCELERATED\020\002\022\030\n\024HARDWARE_ACCELERATED\020\003\"\260" +
-      "\001\n\020LoadBalancerSpec\022Q\n\021target_group_spec" +
-      "\030\001 \001(\01326.yandex.cloud.compute.v1.instanc" +
-      "egroup.TargetGroupSpec\022I\n\034max_opening_tr" +
-      "affic_duration\030\002 \001(\0132\031.google.protobuf.D" +
-      "urationB\010\372\3071\004>=1s\"\262\002\n\017TargetGroupSpec\0222\n" +
-      "\004name\030\001 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[" +
-      "a-z0-9])?\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=25" +
-      "6\022\233\001\n\006labels\030\003 \003(\0132B.yandex.cloud.comput" +
-      "e.v1.instancegroup.TargetGroupSpec.Label" +
-      "sEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-" +
-      "z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032" +
-      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"\314\001\n\033ApplicationLoadBalancerSpec\022b" +
-      "\n\021target_group_spec\030\001 \001(\0132A.yandex.cloud" +
-      ".compute.v1.instancegroup.ApplicationTar" +
-      "getGroupSpecB\004\350\3071\001\022I\n\034max_opening_traffi" +
-      "c_duration\030\002 \001(\0132\031.google.protobuf.Durat" +
-      "ionB\010\372\3071\004>=1s\"\315\001\n\032ApplicationTargetGroup" +
-      "Spec\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022" +
-      "]\n\006labels\030\003 \003(\0132M.yandex.cloud.compute.v" +
-      "1.instancegroup.ApplicationTargetGroupSp" +
-      "ec.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\272\001\n\020HealthChecksSp" +
-      "ec\022[\n\022health_check_specs\030\001 \003(\01326.yandex." +
-      "cloud.compute.v1.instancegroup.HealthChe" +
-      "ckSpecB\007\202\3101\003>=1\022I\n\034max_checking_health_d" +
-      "uration\030\002 \001(\0132\031.google.protobuf.Duration" +
-      "B\010\372\3071\004>=1s\"\244\004\n\017HealthCheckSpec\0228\n\010interv" +
-      "al\030\001 \001(\0132\031.google.protobuf.DurationB\013\372\3071" +
-      "\0071s-300s\0226\n\007timeout\030\002 \001(\0132\031.google.proto" +
-      "buf.DurationB\n\372\3071\0061s-60s\0225\n\023unhealthy_th" +
-      "reshold\030\003 \001(\003B\030\372\3071\0240,2,3,4,5,6,7,8,9,10\022" +
-      "3\n\021healthy_threshold\030\004 \001(\003B\030\372\3071\0240,2,3,4," +
-      "5,6,7,8,9,10\022X\n\013tcp_options\030\005 \001(\0132A.yand" +
-      "ex.cloud.compute.v1.instancegroup.Health" +
-      "CheckSpec.TcpOptionsH\000\022Z\n\014http_options\030\006" +
-      " \001(\0132B.yandex.cloud.compute.v1.instanceg" +
-      "roup.HealthCheckSpec.HttpOptionsH\000\032\'\n\nTc" +
-      "pOptions\022\031\n\004port\030\001 \001(\003B\013\372\3071\0071-65535\0326\n\013H" +
-      "ttpOptions\022\031\n\004port\030\001 \001(\003B\013\372\3071\0071-65535\022\014\n" +
-      "\004path\030\002 \001(\tB\034\n\024health_check_options\022\004\300\3011" +
-      "\001\"\250\005\n\017ManagedInstance\022\n\n\002id\030\001 \001(\t\022M\n\006sta" +
-      "tus\030\002 \001(\0162=.yandex.cloud.compute.v1.inst" +
-      "ancegroup.ManagedInstance.Status\022\023\n\013inst" +
-      "ance_id\030\003 \001(\t\022\014\n\004fqdn\030\004 \001(\t\022\014\n\004name\030\005 \001(" +
-      "\t\022\026\n\016status_message\030\006 \001(\t\022\017\n\007zone_id\030\007 \001" +
-      "(\t\022S\n\022network_interfaces\030\010 \003(\01327.yandex." +
-      "cloud.compute.v1.instancegroup.NetworkIn" +
-      "terface\0225\n\021status_changed_at\030\t \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\"\323\002\n\006Status\022\026\n\022STA" +
-      "TUS_UNSPECIFIED\020\000\022\025\n\021CREATING_INSTANCE\020\013" +
-      "\022\025\n\021UPDATING_INSTANCE\020\014\022\025\n\021DELETING_INST" +
-      "ANCE\020\r\022\025\n\021STARTING_INSTANCE\020\016\022\025\n\021STOPPIN" +
-      "G_INSTANCE\020\017\022\035\n\031AWAITING_STARTUP_DURATIO" +
-      "N\020\020\022\023\n\017CHECKING_HEALTH\020\021\022\023\n\017OPENING_TRAF" +
-      "FIC\020\022\022\034\n\030AWAITING_WARMUP_DURATION\020\023\022\023\n\017C" +
-      "LOSING_TRAFFIC\020\024\022\022\n\016RUNNING_ACTUAL\020\025\022\024\n\020" +
-      "RUNNING_OUTDATED\020\026\022\013\n\007STOPPED\020\027\022\013\n\007DELET" +
-      "ED\020\030\"\357\001\n\020NetworkInterface\022\r\n\005index\030\001 \001(\t" +
-      "\022\023\n\013mac_address\030\002 \001(\t\022\021\n\tsubnet_id\030\003 \001(\t" +
-      "\022Q\n\022primary_v4_address\030\004 \001(\01325.yandex.cl" +
-      "oud.compute.v1.instancegroup.PrimaryAddr" +
-      "ess\022Q\n\022primary_v6_address\030\005 \001(\01325.yandex" +
-      ".cloud.compute.v1.instancegroup.PrimaryA" +
-      "ddress\"\264\001\n\016PrimaryAddress\022\017\n\007address\030\001 \001" +
-      "(\t\022J\n\016one_to_one_nat\030\002 \001(\01322.yandex.clou" +
-      "d.compute.v1.instancegroup.OneToOneNat\022E" +
-      "\n\013dns_records\030\003 \003(\01320.yandex.cloud.compu" +
-      "te.v1.instancegroup.DnsRecord\"\253\001\n\013OneToO" +
-      "neNat\022\017\n\007address\030\001 \001(\t\022D\n\nip_version\030\002 \001" +
-      "(\01620.yandex.cloud.compute.v1.instancegro" +
-      "up.IpVersion\022E\n\013dns_records\030\003 \003(\01320.yand" +
-      "ex.cloud.compute.v1.instancegroup.DnsRec" +
-      "ord\"[\n\tDnsRecord\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013" +
-      "dns_zone_id\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86" +
-      "400\022\013\n\003ptr\030\004 \001(\010\"K\n\tLogRecord\022-\n\ttimesta" +
-      "mp\030\001 \001(\0132\032.google.protobuf.Timestamp\022\017\n\007" +
-      "message\030\002 \001(\t*;\n\tIpVersion\022\032\n\026IP_VERSION" +
-      "_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002B\204\001\n)y" +
-      "andex.cloud.api.compute.v1.instancegroup" +
-      "ZWgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/compute/v1/instancegroup;inst" +
-      "ancegroupb\006proto3"
+      "iskSpec.ModeB\004\350\3071\001\022/\n\013device_name\030\002 \001(\tB" +
+      "\032\362\3071\026|[a-z][-_0-9a-z]{0,19}\022Y\n\tdisk_spec" +
+      "\030\003 \001(\0132@.yandex.cloud.compute.v1.instanc" +
+      "egroup.AttachedDiskSpec.DiskSpecB\004\350\3071\001\022/" +
+      "\n\007disk_id\030\004 \001(\tB\036\212\3101\005<=128\362\3071\021[-a-zA-Z0-" +
+      "9._{}]*\032\341\001\n\010DiskSpec\022\036\n\013description\030\001 \001(" +
+      "\tB\t\212\3101\005<=256\022\025\n\007type_id\030\002 \001(\tB\004\350\3071\001\022\'\n\004s" +
+      "ize\030\003 \001(\003B\031\372\3071\0254194304-4398046511104\022\034\n\010" +
+      "image_id\030\004 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snapshot_i" +
+      "d\030\005 \001(\tB\010\212\3101\004<=50H\000\022&\n\036preserve_after_in" +
+      "stance_delete\030\006 \001(\010B\016\n\014source_oneof\";\n\004M" +
+      "ode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001" +
+      "\022\016\n\nREAD_WRITE\020\002\"\222\002\n\024NetworkInterfaceSpe" +
+      "c\022\022\n\nnetwork_id\030\001 \001(\t\022\022\n\nsubnet_ids\030\002 \003(" +
+      "\t\022Z\n\027primary_v4_address_spec\030\003 \001(\01329.yan" +
+      "dex.cloud.compute.v1.instancegroup.Prima" +
+      "ryAddressSpec\022Z\n\027primary_v6_address_spec" +
+      "\030\004 \001(\01329.yandex.cloud.compute.v1.instanc" +
+      "egroup.PrimaryAddressSpec\022\032\n\022security_gr" +
+      "oup_ids\030\005 \003(\t\"\312\001\n\022PrimaryAddressSpec\022S\n\023" +
+      "one_to_one_nat_spec\030\001 \001(\01326.yandex.cloud" +
+      ".compute.v1.instancegroup.OneToOneNatSpe" +
+      "c\022N\n\020dns_record_specs\030\002 \003(\01324.yandex.clo" +
+      "ud.compute.v1.instancegroup.DnsRecordSpe" +
+      "c\022\017\n\007address\030\003 \001(\t\"\270\001\n\017OneToOneNatSpec\022D" +
+      "\n\nip_version\030\001 \001(\01620.yandex.cloud.comput" +
+      "e.v1.instancegroup.IpVersion\022\017\n\007address\030" +
+      "\002 \001(\t\022N\n\020dns_record_specs\030\003 \003(\01324.yandex" +
+      ".cloud.compute.v1.instancegroup.DnsRecor" +
+      "dSpec\"_\n\rDnsRecordSpec\022\022\n\004fqdn\030\001 \001(\tB\004\350\307" +
+      "1\001\022\023\n\013dns_zone_id\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\307" +
+      "1\0070-86400\022\013\n\003ptr\030\004 \001(\010\"\'\n\020SchedulingPoli" +
+      "cy\022\023\n\013preemptible\030\001 \001(\010\"\274\001\n\017NetworkSetti" +
+      "ngs\022I\n\004type\030\001 \001(\0162;.yandex.cloud.compute" +
+      ".v1.instancegroup.NetworkSettings.Type\"^" +
+      "\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010STANDARD" +
+      "\020\001\022\030\n\024SOFTWARE_ACCELERATED\020\002\022\030\n\024HARDWARE" +
+      "_ACCELERATED\020\003\"\260\001\n\020LoadBalancerSpec\022Q\n\021t" +
+      "arget_group_spec\030\001 \001(\01326.yandex.cloud.co" +
+      "mpute.v1.instancegroup.TargetGroupSpec\022I" +
+      "\n\034max_opening_traffic_duration\030\002 \001(\0132\031.g" +
+      "oogle.protobuf.DurationB\010\372\3071\004>=1s\"\262\002\n\017Ta" +
+      "rgetGroupSpec\0222\n\004name\030\001 \001(\tB$\362\3071 |[a-z](" +
+      "[-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013description" +
+      "\030\002 \001(\tB\t\212\3101\005<=256\022\233\001\n\006labels\030\003 \003(\0132B.yan" +
+      "dex.cloud.compute.v1.instancegroup.Targe" +
+      "tGroupSpec.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63" +
+      "\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z]" +
+      "[-_./\\@0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\314\001\n\033ApplicationLo" +
+      "adBalancerSpec\022b\n\021target_group_spec\030\001 \001(" +
+      "\0132A.yandex.cloud.compute.v1.instancegrou" +
+      "p.ApplicationTargetGroupSpecB\004\350\3071\001\022I\n\034ma" +
+      "x_opening_traffic_duration\030\002 \001(\0132\031.googl" +
+      "e.protobuf.DurationB\010\372\3071\004>=1s\"\315\001\n\032Applic" +
+      "ationTargetGroupSpec\022\014\n\004name\030\001 \001(\t\022\023\n\013de" +
+      "scription\030\002 \001(\t\022]\n\006labels\030\003 \003(\0132M.yandex" +
+      ".cloud.compute.v1.instancegroup.Applicat" +
+      "ionTargetGroupSpec.LabelsEntry\032-\n\013Labels" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\272\001" +
+      "\n\020HealthChecksSpec\022[\n\022health_check_specs" +
+      "\030\001 \003(\01326.yandex.cloud.compute.v1.instanc" +
+      "egroup.HealthCheckSpecB\007\202\3101\003>=1\022I\n\034max_c" +
+      "hecking_health_duration\030\002 \001(\0132\031.google.p" +
+      "rotobuf.DurationB\010\372\3071\004>=1s\"\244\004\n\017HealthChe" +
+      "ckSpec\0228\n\010interval\030\001 \001(\0132\031.google.protob" +
+      "uf.DurationB\013\372\3071\0071s-300s\0226\n\007timeout\030\002 \001(" +
+      "\0132\031.google.protobuf.DurationB\n\372\3071\0061s-60s" +
+      "\0225\n\023unhealthy_threshold\030\003 \001(\003B\030\372\3071\0240,2,3" +
+      ",4,5,6,7,8,9,10\0223\n\021healthy_threshold\030\004 \001" +
+      "(\003B\030\372\3071\0240,2,3,4,5,6,7,8,9,10\022X\n\013tcp_opti" +
+      "ons\030\005 \001(\0132A.yandex.cloud.compute.v1.inst" +
+      "ancegroup.HealthCheckSpec.TcpOptionsH\000\022Z" +
+      "\n\014http_options\030\006 \001(\0132B.yandex.cloud.comp" +
+      "ute.v1.instancegroup.HealthCheckSpec.Htt" +
+      "pOptionsH\000\032\'\n\nTcpOptions\022\031\n\004port\030\001 \001(\003B\013" +
+      "\372\3071\0071-65535\0326\n\013HttpOptions\022\031\n\004port\030\001 \001(\003" +
+      "B\013\372\3071\0071-65535\022\014\n\004path\030\002 \001(\tB\034\n\024health_ch" +
+      "eck_options\022\004\300\3011\001\"\250\005\n\017ManagedInstance\022\n\n" +
+      "\002id\030\001 \001(\t\022M\n\006status\030\002 \001(\0162=.yandex.cloud" +
+      ".compute.v1.instancegroup.ManagedInstanc" +
+      "e.Status\022\023\n\013instance_id\030\003 \001(\t\022\014\n\004fqdn\030\004 " +
+      "\001(\t\022\014\n\004name\030\005 \001(\t\022\026\n\016status_message\030\006 \001(" +
+      "\t\022\017\n\007zone_id\030\007 \001(\t\022S\n\022network_interfaces" +
+      "\030\010 \003(\01327.yandex.cloud.compute.v1.instanc" +
+      "egroup.NetworkInterface\0225\n\021status_change" +
+      "d_at\030\t \001(\0132\032.google.protobuf.Timestamp\"\323" +
+      "\002\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\025\n\021CRE" +
+      "ATING_INSTANCE\020\013\022\025\n\021UPDATING_INSTANCE\020\014\022" +
+      "\025\n\021DELETING_INSTANCE\020\r\022\025\n\021STARTING_INSTA" +
+      "NCE\020\016\022\025\n\021STOPPING_INSTANCE\020\017\022\035\n\031AWAITING" +
+      "_STARTUP_DURATION\020\020\022\023\n\017CHECKING_HEALTH\020\021" +
+      "\022\023\n\017OPENING_TRAFFIC\020\022\022\034\n\030AWAITING_WARMUP" +
+      "_DURATION\020\023\022\023\n\017CLOSING_TRAFFIC\020\024\022\022\n\016RUNN" +
+      "ING_ACTUAL\020\025\022\024\n\020RUNNING_OUTDATED\020\026\022\013\n\007ST" +
+      "OPPED\020\027\022\013\n\007DELETED\020\030\"\357\001\n\020NetworkInterfac" +
+      "e\022\r\n\005index\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\t\022\021\n" +
+      "\tsubnet_id\030\003 \001(\t\022Q\n\022primary_v4_address\030\004" +
+      " \001(\01325.yandex.cloud.compute.v1.instanceg" +
+      "roup.PrimaryAddress\022Q\n\022primary_v6_addres" +
+      "s\030\005 \001(\01325.yandex.cloud.compute.v1.instan" +
+      "cegroup.PrimaryAddress\"\264\001\n\016PrimaryAddres" +
+      "s\022\017\n\007address\030\001 \001(\t\022J\n\016one_to_one_nat\030\002 \001" +
+      "(\01322.yandex.cloud.compute.v1.instancegro" +
+      "up.OneToOneNat\022E\n\013dns_records\030\003 \003(\01320.ya" +
+      "ndex.cloud.compute.v1.instancegroup.DnsR" +
+      "ecord\"\253\001\n\013OneToOneNat\022\017\n\007address\030\001 \001(\t\022D" +
+      "\n\nip_version\030\002 \001(\01620.yandex.cloud.comput" +
+      "e.v1.instancegroup.IpVersion\022E\n\013dns_reco" +
+      "rds\030\003 \003(\01320.yandex.cloud.compute.v1.inst" +
+      "ancegroup.DnsRecord\"[\n\tDnsRecord\022\022\n\004fqdn" +
+      "\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022\030\n\003ttl" +
+      "\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"K\n\tLogR" +
+      "ecord\022-\n\ttimestamp\030\001 \001(\0132\032.google.protob" +
+      "uf.Timestamp\022\017\n\007message\030\002 \001(\t*;\n\tIpVersi" +
+      "on\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001" +
+      "\022\010\n\004IPV6\020\002B\204\001\n)yandex.cloud.api.compute." +
+      "v1.instancegroupZWgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/compute/v1/in" +
+      "stancegroup;instancegroupb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -52534,7 +52908,7 @@ public final class InstanceGroupOuterClass {
     internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_AutoScale_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_AutoScale_descriptor,
-        new java.lang.String[] { "MinZoneSize", "MaxSize", "MeasurementDuration", "WarmupDuration", "StabilizationDuration", "InitialSize", "CpuUtilizationRule", "CustomRules", });
+        new java.lang.String[] { "MinZoneSize", "MaxSize", "MeasurementDuration", "WarmupDuration", "StabilizationDuration", "InitialSize", "CpuUtilizationRule", "CustomRules", "AutoScaleType", });
     internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_CpuUtilizationRule_descriptor =
       internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_CpuUtilizationRule_fieldAccessorTable = new

@@ -530,6 +530,22 @@ public final class JobOuterClass {
        * <code>DONE = 5;</code>
        */
       DONE(5),
+      /**
+       * <pre>
+       * Job cancelled.
+       * </pre>
+       *
+       * <code>CANCELLED = 6;</code>
+       */
+      CANCELLED(6),
+      /**
+       * <pre>
+       * Job is waiting for cancellation.
+       * </pre>
+       *
+       * <code>CANCELLING = 7;</code>
+       */
+      CANCELLING(7),
       UNRECOGNIZED(-1),
       ;
 
@@ -577,6 +593,22 @@ public final class JobOuterClass {
        * <code>DONE = 5;</code>
        */
       public static final int DONE_VALUE = 5;
+      /**
+       * <pre>
+       * Job cancelled.
+       * </pre>
+       *
+       * <code>CANCELLED = 6;</code>
+       */
+      public static final int CANCELLED_VALUE = 6;
+      /**
+       * <pre>
+       * Job is waiting for cancellation.
+       * </pre>
+       *
+       * <code>CANCELLING = 7;</code>
+       */
+      public static final int CANCELLING_VALUE = 7;
 
 
       public final int getNumber() {
@@ -603,6 +635,8 @@ public final class JobOuterClass {
           case 3: return RUNNING;
           case 4: return ERROR;
           case 5: return DONE;
+          case 6: return CANCELLED;
+          case 7: return CANCELLING;
           default: return null;
         }
       }
@@ -16102,7 +16136,7 @@ public final class JobOuterClass {
     java.lang.String[] descriptorData = {
       "\n*yandex/cloud/dataproc/manager/v1/job.p" +
       "roto\022 yandex.cloud.dataproc.manager.v1\032\037" +
-      "google/protobuf/timestamp.proto\"\340\005\n\003Job\022" +
+      "google/protobuf/timestamp.proto\"\200\006\n\003Job\022" +
       "\n\n\002id\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022.\n\ncreat" +
       "ed_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022" +
       ".\n\nstarted_at\030\004 \001(\0132\032.google.protobuf.Ti" +
@@ -16118,54 +16152,55 @@ public final class JobOuterClass {
       "=\n\010hive_job\030\013 \001(\0132).yandex.cloud.datapro" +
       "c.manager.v1.HiveJobH\000\022K\n\020application_in" +
       "fo\030\r \001(\01321.yandex.cloud.dataproc.manager" +
-      ".v1.ApplicationInfo\"a\n\006Status\022\026\n\022STATUS_" +
-      "UNSPECIFIED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007PENDI" +
-      "NG\020\002\022\013\n\007RUNNING\020\003\022\t\n\005ERROR\020\004\022\010\n\004DONE\020\005B\n" +
-      "\n\010job_spec\"9\n\022ApplicationAttempt\022\n\n\002id\030\001" +
-      " \001(\t\022\027\n\017am_container_id\030\002 \001(\t\"q\n\017Applica" +
-      "tionInfo\022\n\n\002id\030\001 \001(\t\022R\n\024application_atte" +
-      "mpts\030\002 \003(\01324.yandex.cloud.dataproc.manag" +
-      "er.v1.ApplicationAttempt\"\240\002\n\014MapreduceJo" +
-      "b\022\014\n\004args\030\001 \003(\t\022\025\n\rjar_file_uris\030\002 \003(\t\022\021" +
-      "\n\tfile_uris\030\003 \003(\t\022\024\n\014archive_uris\030\004 \003(\t\022" +
-      "R\n\nproperties\030\005 \003(\0132>.yandex.cloud.datap" +
-      "roc.manager.v1.MapreduceJob.PropertiesEn" +
-      "try\022\033\n\021main_jar_file_uri\030\006 \001(\tH\000\022\024\n\nmain" +
-      "_class\030\007 \001(\tH\000\0321\n\017PropertiesEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\010\n\006driver\"\314\002\n\010" +
-      "SparkJob\022\014\n\004args\030\001 \003(\t\022\025\n\rjar_file_uris\030" +
-      "\002 \003(\t\022\021\n\tfile_uris\030\003 \003(\t\022\024\n\014archive_uris" +
-      "\030\004 \003(\t\022N\n\nproperties\030\005 \003(\0132:.yandex.clou" +
-      "d.dataproc.manager.v1.SparkJob.Propertie" +
-      "sEntry\022\031\n\021main_jar_file_uri\030\006 \001(\t\022\022\n\nmai" +
-      "n_class\030\007 \001(\t\022\020\n\010packages\030\010 \003(\t\022\024\n\014repos" +
-      "itories\030\t \003(\t\022\030\n\020exclude_packages\030\n \003(\t\032" +
-      "1\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\"\331\002\n\nPysparkJob\022\014\n\004args\030\001 \003(\t\022" +
-      "\025\n\rjar_file_uris\030\002 \003(\t\022\021\n\tfile_uris\030\003 \003(" +
-      "\t\022\024\n\014archive_uris\030\004 \003(\t\022P\n\nproperties\030\005 " +
-      "\003(\0132<.yandex.cloud.dataproc.manager.v1.P" +
-      "ysparkJob.PropertiesEntry\022\034\n\024main_python" +
-      "_file_uri\030\006 \001(\t\022\030\n\020python_file_uris\030\007 \003(" +
-      "\t\022\020\n\010packages\030\010 \003(\t\022\024\n\014repositories\030\t \003(" +
-      "\t\022\030\n\020exclude_packages\030\n \003(\t\0321\n\017Propertie" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\034" +
-      "\n\tQueryList\022\017\n\007queries\030\001 \003(\t\"\274\003\n\007HiveJob" +
-      "\022M\n\nproperties\030\001 \003(\01329.yandex.cloud.data" +
-      "proc.manager.v1.HiveJob.PropertiesEntry\022" +
-      "\033\n\023continue_on_failure\030\002 \001(\010\022X\n\020script_v" +
-      "ariables\030\003 \003(\0132>.yandex.cloud.dataproc.m" +
-      "anager.v1.HiveJob.ScriptVariablesEntry\022\025" +
-      "\n\rjar_file_uris\030\004 \003(\t\022\030\n\016query_file_uri\030" +
-      "\005 \001(\tH\000\022A\n\nquery_list\030\006 \001(\0132+.yandex.clo" +
-      "ud.dataproc.manager.v1.QueryListH\000\0321\n\017Pr" +
-      "opertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\0326\n\024ScriptVariablesEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\nquery_typeB}\n$y" +
-      "andex.cloud.api.dataproc.manager.v1ZUgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/dataproc/manager/v1;dataproc_manag" +
-      "erb\006proto3"
+      ".v1.ApplicationInfo\"\200\001\n\006Status\022\026\n\022STATUS" +
+      "_UNSPECIFIED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007PEND" +
+      "ING\020\002\022\013\n\007RUNNING\020\003\022\t\n\005ERROR\020\004\022\010\n\004DONE\020\005\022" +
+      "\r\n\tCANCELLED\020\006\022\016\n\nCANCELLING\020\007B\n\n\010job_sp" +
+      "ec\"9\n\022ApplicationAttempt\022\n\n\002id\030\001 \001(\t\022\027\n\017" +
+      "am_container_id\030\002 \001(\t\"q\n\017ApplicationInfo" +
+      "\022\n\n\002id\030\001 \001(\t\022R\n\024application_attempts\030\002 \003" +
+      "(\01324.yandex.cloud.dataproc.manager.v1.Ap" +
+      "plicationAttempt\"\240\002\n\014MapreduceJob\022\014\n\004arg" +
+      "s\030\001 \003(\t\022\025\n\rjar_file_uris\030\002 \003(\t\022\021\n\tfile_u" +
+      "ris\030\003 \003(\t\022\024\n\014archive_uris\030\004 \003(\t\022R\n\nprope" +
+      "rties\030\005 \003(\0132>.yandex.cloud.dataproc.mana" +
+      "ger.v1.MapreduceJob.PropertiesEntry\022\033\n\021m" +
+      "ain_jar_file_uri\030\006 \001(\tH\000\022\024\n\nmain_class\030\007" +
+      " \001(\tH\000\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001B\010\n\006driver\"\314\002\n\010SparkJob" +
+      "\022\014\n\004args\030\001 \003(\t\022\025\n\rjar_file_uris\030\002 \003(\t\022\021\n" +
+      "\tfile_uris\030\003 \003(\t\022\024\n\014archive_uris\030\004 \003(\t\022N" +
+      "\n\nproperties\030\005 \003(\0132:.yandex.cloud.datapr" +
+      "oc.manager.v1.SparkJob.PropertiesEntry\022\031" +
+      "\n\021main_jar_file_uri\030\006 \001(\t\022\022\n\nmain_class\030" +
+      "\007 \001(\t\022\020\n\010packages\030\010 \003(\t\022\024\n\014repositories\030" +
+      "\t \003(\t\022\030\n\020exclude_packages\030\n \003(\t\0321\n\017Prope" +
+      "rtiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
+      "8\001\"\331\002\n\nPysparkJob\022\014\n\004args\030\001 \003(\t\022\025\n\rjar_f" +
+      "ile_uris\030\002 \003(\t\022\021\n\tfile_uris\030\003 \003(\t\022\024\n\014arc" +
+      "hive_uris\030\004 \003(\t\022P\n\nproperties\030\005 \003(\0132<.ya" +
+      "ndex.cloud.dataproc.manager.v1.PysparkJo" +
+      "b.PropertiesEntry\022\034\n\024main_python_file_ur" +
+      "i\030\006 \001(\t\022\030\n\020python_file_uris\030\007 \003(\t\022\020\n\010pac" +
+      "kages\030\010 \003(\t\022\024\n\014repositories\030\t \003(\t\022\030\n\020exc" +
+      "lude_packages\030\n \003(\t\0321\n\017PropertiesEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\034\n\tQueryL" +
+      "ist\022\017\n\007queries\030\001 \003(\t\"\274\003\n\007HiveJob\022M\n\nprop" +
+      "erties\030\001 \003(\01329.yandex.cloud.dataproc.man" +
+      "ager.v1.HiveJob.PropertiesEntry\022\033\n\023conti" +
+      "nue_on_failure\030\002 \001(\010\022X\n\020script_variables" +
+      "\030\003 \003(\0132>.yandex.cloud.dataproc.manager.v" +
+      "1.HiveJob.ScriptVariablesEntry\022\025\n\rjar_fi" +
+      "le_uris\030\004 \003(\t\022\030\n\016query_file_uri\030\005 \001(\tH\000\022" +
+      "A\n\nquery_list\030\006 \001(\0132+.yandex.cloud.datap" +
+      "roc.manager.v1.QueryListH\000\0321\n\017Properties" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0326\n" +
+      "\024ScriptVariablesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001B\014\n\nquery_typeB}\n$yandex.cl" +
+      "oud.api.dataproc.manager.v1ZUgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/da" +
+      "taproc/manager/v1;dataproc_managerb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

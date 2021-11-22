@@ -3449,7 +3449,10 @@ public final class InstanceGroupServiceOuterClass {
 
     /**
      * <pre>
-     * Load balancing specification.
+     * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+     * (OSI model layer 3).
+     * If specified, a Network Load Balancer target group containing all instances from the instance group will be created
+     * and attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 10;</code>
@@ -3457,7 +3460,10 @@ public final class InstanceGroupServiceOuterClass {
     boolean hasLoadBalancerSpec();
     /**
      * <pre>
-     * Load balancing specification.
+     * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+     * (OSI model layer 3).
+     * If specified, a Network Load Balancer target group containing all instances from the instance group will be created
+     * and attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 10;</code>
@@ -3465,7 +3471,10 @@ public final class InstanceGroupServiceOuterClass {
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerSpec getLoadBalancerSpec();
     /**
      * <pre>
-     * Load balancing specification.
+     * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+     * (OSI model layer 3).
+     * If specified, a Network Load Balancer target group containing all instances from the instance group will be created
+     * and attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 10;</code>
@@ -3556,7 +3565,10 @@ public final class InstanceGroupServiceOuterClass {
 
     /**
      * <pre>
-     * Application Load balancing (L7) specification.
+     * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+     * (OSI model layer 7).
+     * If specified, an Application Load Balancer target group containing all instances from the instance group will be created
+     * and attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 15;</code>
@@ -3564,7 +3576,10 @@ public final class InstanceGroupServiceOuterClass {
     boolean hasApplicationLoadBalancerSpec();
     /**
      * <pre>
-     * Application Load balancing (L7) specification.
+     * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+     * (OSI model layer 7).
+     * If specified, an Application Load Balancer target group containing all instances from the instance group will be created
+     * and attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 15;</code>
@@ -3572,7 +3587,10 @@ public final class InstanceGroupServiceOuterClass {
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec getApplicationLoadBalancerSpec();
     /**
      * <pre>
-     * Application Load balancing (L7) specification.
+     * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+     * (OSI model layer 7).
+     * If specified, an Application Load Balancer target group containing all instances from the instance group will be created
+     * and attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 15;</code>
@@ -4170,7 +4188,10 @@ public final class InstanceGroupServiceOuterClass {
     private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerSpec loadBalancerSpec_;
     /**
      * <pre>
-     * Load balancing specification.
+     * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+     * (OSI model layer 3).
+     * If specified, a Network Load Balancer target group containing all instances from the instance group will be created
+     * and attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 10;</code>
@@ -4180,7 +4201,10 @@ public final class InstanceGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Load balancing specification.
+     * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+     * (OSI model layer 3).
+     * If specified, a Network Load Balancer target group containing all instances from the instance group will be created
+     * and attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 10;</code>
@@ -4190,7 +4214,10 @@ public final class InstanceGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Load balancing specification.
+     * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+     * (OSI model layer 3).
+     * If specified, a Network Load Balancer target group containing all instances from the instance group will be created
+     * and attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 10;</code>
@@ -4332,7 +4359,10 @@ public final class InstanceGroupServiceOuterClass {
     private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec applicationLoadBalancerSpec_;
     /**
      * <pre>
-     * Application Load balancing (L7) specification.
+     * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+     * (OSI model layer 7).
+     * If specified, an Application Load Balancer target group containing all instances from the instance group will be created
+     * and attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 15;</code>
@@ -4342,7 +4372,10 @@ public final class InstanceGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Application Load balancing (L7) specification.
+     * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+     * (OSI model layer 7).
+     * If specified, an Application Load Balancer target group containing all instances from the instance group will be created
+     * and attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 15;</code>
@@ -4352,7 +4385,10 @@ public final class InstanceGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Application Load balancing (L7) specification.
+     * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+     * (OSI model layer 7).
+     * If specified, an Application Load Balancer target group containing all instances from the instance group will be created
+     * and attributed to the instance group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 15;</code>
@@ -6091,7 +6127,10 @@ public final class InstanceGroupServiceOuterClass {
           yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerSpec, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerSpec.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerSpecOrBuilder> loadBalancerSpecBuilder_;
       /**
        * <pre>
-       * Load balancing specification.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
+       * If specified, a Network Load Balancer target group containing all instances from the instance group will be created
+       * and attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 10;</code>
@@ -6101,7 +6140,10 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Load balancing specification.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
+       * If specified, a Network Load Balancer target group containing all instances from the instance group will be created
+       * and attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 10;</code>
@@ -6115,7 +6157,10 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Load balancing specification.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
+       * If specified, a Network Load Balancer target group containing all instances from the instance group will be created
+       * and attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 10;</code>
@@ -6135,7 +6180,10 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Load balancing specification.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
+       * If specified, a Network Load Balancer target group containing all instances from the instance group will be created
+       * and attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 10;</code>
@@ -6153,7 +6201,10 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Load balancing specification.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
+       * If specified, a Network Load Balancer target group containing all instances from the instance group will be created
+       * and attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 10;</code>
@@ -6175,7 +6226,10 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Load balancing specification.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
+       * If specified, a Network Load Balancer target group containing all instances from the instance group will be created
+       * and attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 10;</code>
@@ -6193,7 +6247,10 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Load balancing specification.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
+       * If specified, a Network Load Balancer target group containing all instances from the instance group will be created
+       * and attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 10;</code>
@@ -6205,7 +6262,10 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Load balancing specification.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
+       * If specified, a Network Load Balancer target group containing all instances from the instance group will be created
+       * and attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 10;</code>
@@ -6220,7 +6280,10 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Load balancing specification.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
+       * If specified, a Network Load Balancer target group containing all instances from the instance group will be created
+       * and attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 10;</code>
@@ -6780,7 +6843,10 @@ public final class InstanceGroupServiceOuterClass {
           yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpecOrBuilder> applicationLoadBalancerSpecBuilder_;
       /**
        * <pre>
-       * Application Load balancing (L7) specification.
+       * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+       * (OSI model layer 7).
+       * If specified, an Application Load Balancer target group containing all instances from the instance group will be created
+       * and attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 15;</code>
@@ -6790,7 +6856,10 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Application Load balancing (L7) specification.
+       * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+       * (OSI model layer 7).
+       * If specified, an Application Load Balancer target group containing all instances from the instance group will be created
+       * and attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 15;</code>
@@ -6804,7 +6873,10 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Application Load balancing (L7) specification.
+       * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+       * (OSI model layer 7).
+       * If specified, an Application Load Balancer target group containing all instances from the instance group will be created
+       * and attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 15;</code>
@@ -6824,7 +6896,10 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Application Load balancing (L7) specification.
+       * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+       * (OSI model layer 7).
+       * If specified, an Application Load Balancer target group containing all instances from the instance group will be created
+       * and attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 15;</code>
@@ -6842,7 +6917,10 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Application Load balancing (L7) specification.
+       * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+       * (OSI model layer 7).
+       * If specified, an Application Load Balancer target group containing all instances from the instance group will be created
+       * and attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 15;</code>
@@ -6864,7 +6942,10 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Application Load balancing (L7) specification.
+       * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+       * (OSI model layer 7).
+       * If specified, an Application Load Balancer target group containing all instances from the instance group will be created
+       * and attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 15;</code>
@@ -6882,7 +6963,10 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Application Load balancing (L7) specification.
+       * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+       * (OSI model layer 7).
+       * If specified, an Application Load Balancer target group containing all instances from the instance group will be created
+       * and attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 15;</code>
@@ -6894,7 +6978,10 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Application Load balancing (L7) specification.
+       * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+       * (OSI model layer 7).
+       * If specified, an Application Load Balancer target group containing all instances from the instance group will be created
+       * and attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 15;</code>
@@ -6909,7 +6996,10 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Application Load balancing (L7) specification.
+       * Settings for balancing load between instances via [Application Load Balancer](/docs/application-load-balancer/concepts)
+       * (OSI model layer 7).
+       * If specified, an Application Load Balancer target group containing all instances from the instance group will be created
+       * and attributed to the instance group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec application_load_balancer_spec = 15;</code>
@@ -8627,7 +8717,8 @@ public final class InstanceGroupServiceOuterClass {
 
     /**
      * <pre>
-     * Load Balancer specification for load balancing support.
+     * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+     * (OSI model layer 3).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -8635,7 +8726,8 @@ public final class InstanceGroupServiceOuterClass {
     boolean hasLoadBalancerSpec();
     /**
      * <pre>
-     * Load Balancer specification for load balancing support.
+     * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+     * (OSI model layer 3).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -8643,7 +8735,8 @@ public final class InstanceGroupServiceOuterClass {
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerSpec getLoadBalancerSpec();
     /**
      * <pre>
-     * Load Balancer specification for load balancing support.
+     * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+     * (OSI model layer 3).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -9390,7 +9483,8 @@ public final class InstanceGroupServiceOuterClass {
     private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerSpec loadBalancerSpec_;
     /**
      * <pre>
-     * Load Balancer specification for load balancing support.
+     * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+     * (OSI model layer 3).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -9400,7 +9494,8 @@ public final class InstanceGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Load Balancer specification for load balancing support.
+     * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+     * (OSI model layer 3).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -9410,7 +9505,8 @@ public final class InstanceGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Load Balancer specification for load balancing support.
+     * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+     * (OSI model layer 3).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -11609,7 +11705,8 @@ public final class InstanceGroupServiceOuterClass {
           yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerSpec, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerSpec.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerSpecOrBuilder> loadBalancerSpecBuilder_;
       /**
        * <pre>
-       * Load Balancer specification for load balancing support.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -11619,7 +11716,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Load Balancer specification for load balancing support.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -11633,7 +11731,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Load Balancer specification for load balancing support.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -11653,7 +11752,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Load Balancer specification for load balancing support.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -11671,7 +11771,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Load Balancer specification for load balancing support.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -11693,7 +11794,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Load Balancer specification for load balancing support.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -11711,7 +11813,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Load Balancer specification for load balancing support.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -11723,7 +11826,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Load Balancer specification for load balancing support.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
@@ -11738,7 +11842,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Load Balancer specification for load balancing support.
+       * Settings for balancing load between instances via [Network Load Balancer](/docs/network-load-balancer/concepts)
+       * (OSI model layer 3).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>

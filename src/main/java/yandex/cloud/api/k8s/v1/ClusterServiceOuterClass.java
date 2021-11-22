@@ -662,8 +662,8 @@ public final class ClusterServiceOuterClass {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-61 characters long and match the regular expression `|[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -674,8 +674,8 @@ public final class ClusterServiceOuterClass {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-61 characters long and match the regular expression `|[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -893,8 +893,8 @@ public final class ClusterServiceOuterClass {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-61 characters long and match the regular expression `|[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -916,8 +916,8 @@ public final class ClusterServiceOuterClass {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-61 characters long and match the regular expression `|[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1535,8 +1535,8 @@ public final class ClusterServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-61 characters long and match the regular expression `|[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1558,8 +1558,8 @@ public final class ClusterServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-61 characters long and match the regular expression `|[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1582,8 +1582,8 @@ public final class ClusterServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-61 characters long and match the regular expression `|[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1603,8 +1603,8 @@ public final class ClusterServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-61 characters long and match the regular expression `|[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1620,8 +1620,8 @@ public final class ClusterServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-61 characters long and match the regular expression `|[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -6580,6 +6580,19 @@ public final class ClusterServiceOuterClass {
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder getNetworkPolicyOrBuilder();
 
+    /**
+     * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+     */
+    boolean hasIpAllocationPolicy();
+    /**
+     * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy getIpAllocationPolicy();
+    /**
+     * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicyOrBuilder getIpAllocationPolicyOrBuilder();
+
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.UpdateClusterRequest.InternetGatewayCase getInternetGatewayCase();
   }
   /**
@@ -6710,6 +6723,19 @@ public final class ClusterServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(networkPolicy_);
                 networkPolicy_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy.Builder subBuilder = null;
+              if (ipAllocationPolicy_ != null) {
+                subBuilder = ipAllocationPolicy_.toBuilder();
+              }
+              ipAllocationPolicy_ = input.readMessage(yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(ipAllocationPolicy_);
+                ipAllocationPolicy_ = subBuilder.buildPartial();
               }
 
               break;
@@ -7237,6 +7263,27 @@ public final class ClusterServiceOuterClass {
       return getNetworkPolicy();
     }
 
+    public static final int IP_ALLOCATION_POLICY_FIELD_NUMBER = 11;
+    private yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy ipAllocationPolicy_;
+    /**
+     * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+     */
+    public boolean hasIpAllocationPolicy() {
+      return ipAllocationPolicy_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+     */
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy getIpAllocationPolicy() {
+      return ipAllocationPolicy_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy.getDefaultInstance() : ipAllocationPolicy_;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+     */
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicyOrBuilder getIpAllocationPolicyOrBuilder() {
+      return getIpAllocationPolicy();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7283,6 +7330,9 @@ public final class ClusterServiceOuterClass {
       }
       if (networkPolicy_ != null) {
         output.writeMessage(10, getNetworkPolicy());
+      }
+      if (ipAllocationPolicy_ != null) {
+        output.writeMessage(11, getIpAllocationPolicy());
       }
       unknownFields.writeTo(output);
     }
@@ -7333,6 +7383,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getNetworkPolicy());
       }
+      if (ipAllocationPolicy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getIpAllocationPolicy());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7375,6 +7429,11 @@ public final class ClusterServiceOuterClass {
       if (hasNetworkPolicy()) {
         result = result && getNetworkPolicy()
             .equals(other.getNetworkPolicy());
+      }
+      result = result && (hasIpAllocationPolicy() == other.hasIpAllocationPolicy());
+      if (hasIpAllocationPolicy()) {
+        result = result && getIpAllocationPolicy()
+            .equals(other.getIpAllocationPolicy());
       }
       result = result && getInternetGatewayCase().equals(
           other.getInternetGatewayCase());
@@ -7423,6 +7482,10 @@ public final class ClusterServiceOuterClass {
       if (hasNetworkPolicy()) {
         hash = (37 * hash) + NETWORK_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getNetworkPolicy().hashCode();
+      }
+      if (hasIpAllocationPolicy()) {
+        hash = (37 * hash) + IP_ALLOCATION_POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getIpAllocationPolicy().hashCode();
       }
       switch (internetGatewayCase_) {
         case 6:
@@ -7616,6 +7679,12 @@ public final class ClusterServiceOuterClass {
           networkPolicy_ = null;
           networkPolicyBuilder_ = null;
         }
+        if (ipAllocationPolicyBuilder_ == null) {
+          ipAllocationPolicy_ = null;
+        } else {
+          ipAllocationPolicy_ = null;
+          ipAllocationPolicyBuilder_ = null;
+        }
         internetGatewayCase_ = 0;
         internetGateway_ = null;
         return this;
@@ -7670,6 +7739,11 @@ public final class ClusterServiceOuterClass {
           result.networkPolicy_ = networkPolicy_;
         } else {
           result.networkPolicy_ = networkPolicyBuilder_.build();
+        }
+        if (ipAllocationPolicyBuilder_ == null) {
+          result.ipAllocationPolicy_ = ipAllocationPolicy_;
+        } else {
+          result.ipAllocationPolicy_ = ipAllocationPolicyBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         result.internetGatewayCase_ = internetGatewayCase_;
@@ -7751,6 +7825,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasNetworkPolicy()) {
           mergeNetworkPolicy(other.getNetworkPolicy());
+        }
+        if (other.hasIpAllocationPolicy()) {
+          mergeIpAllocationPolicy(other.getIpAllocationPolicy());
         }
         switch (other.getInternetGatewayCase()) {
           case GATEWAY_IPV4_ADDRESS: {
@@ -8921,6 +8998,123 @@ public final class ClusterServiceOuterClass {
           networkPolicy_ = null;
         }
         return networkPolicyBuilder_;
+      }
+
+      private yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy ipAllocationPolicy_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicyOrBuilder> ipAllocationPolicyBuilder_;
+      /**
+       * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+       */
+      public boolean hasIpAllocationPolicy() {
+        return ipAllocationPolicyBuilder_ != null || ipAllocationPolicy_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy getIpAllocationPolicy() {
+        if (ipAllocationPolicyBuilder_ == null) {
+          return ipAllocationPolicy_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy.getDefaultInstance() : ipAllocationPolicy_;
+        } else {
+          return ipAllocationPolicyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+       */
+      public Builder setIpAllocationPolicy(yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy value) {
+        if (ipAllocationPolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ipAllocationPolicy_ = value;
+          onChanged();
+        } else {
+          ipAllocationPolicyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+       */
+      public Builder setIpAllocationPolicy(
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy.Builder builderForValue) {
+        if (ipAllocationPolicyBuilder_ == null) {
+          ipAllocationPolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          ipAllocationPolicyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+       */
+      public Builder mergeIpAllocationPolicy(yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy value) {
+        if (ipAllocationPolicyBuilder_ == null) {
+          if (ipAllocationPolicy_ != null) {
+            ipAllocationPolicy_ =
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy.newBuilder(ipAllocationPolicy_).mergeFrom(value).buildPartial();
+          } else {
+            ipAllocationPolicy_ = value;
+          }
+          onChanged();
+        } else {
+          ipAllocationPolicyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+       */
+      public Builder clearIpAllocationPolicy() {
+        if (ipAllocationPolicyBuilder_ == null) {
+          ipAllocationPolicy_ = null;
+          onChanged();
+        } else {
+          ipAllocationPolicy_ = null;
+          ipAllocationPolicyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy.Builder getIpAllocationPolicyBuilder() {
+        
+        onChanged();
+        return getIpAllocationPolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicyOrBuilder getIpAllocationPolicyOrBuilder() {
+        if (ipAllocationPolicyBuilder_ != null) {
+          return ipAllocationPolicyBuilder_.getMessageOrBuilder();
+        } else {
+          return ipAllocationPolicy_ == null ?
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy.getDefaultInstance() : ipAllocationPolicy_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.IPAllocationPolicy ip_allocation_policy = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicyOrBuilder> 
+          getIpAllocationPolicyFieldBuilder() {
+        if (ipAllocationPolicyBuilder_ == null) {
+          ipAllocationPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicyOrBuilder>(
+                  getIpAllocationPolicy(),
+                  getParentForChildren(),
+                  isClean());
+          ipAllocationPolicy_ = null;
+        }
+        return ipAllocationPolicyBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -27916,7 +28110,7 @@ public final class ClusterServiceOuterClass {
       ")\n\023StopClusterMetadata\022\022\n\ncluster_id\030\001 \001" +
       "(\t\"/\n\023StartClusterRequest\022\030\n\ncluster_id\030" +
       "\001 \001(\tB\004\350\3071\001\"*\n\024StartClusterMetadata\022\022\n\nc" +
-      "luster_id\030\001 \001(\t\"\350\004\n\024UpdateClusterRequest" +
+      "luster_id\030\001 \001(\t\"\257\005\n\024UpdateClusterRequest" +
       "\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mas" +
       "k\030\002 \001(\0132\032.google.protobuf.FieldMask\0222\n\004n" +
       "ame\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-" +
@@ -27930,123 +28124,125 @@ public final class ClusterServiceOuterClass {
       "teSpec\022\032\n\022service_account_id\030\t \001(\t\022\037\n\027no" +
       "de_service_account_id\030\010 \001(\t\022:\n\016network_p" +
       "olicy\030\n \001(\0132\".yandex.cloud.k8s.v1.Networ" +
-      "kPolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001B\022\n\020internet_gateway\"\261\001\n\020M" +
-      "asterUpdateSpec\0227\n\007version\030\001 \001(\0132&.yande" +
-      "x.cloud.k8s.v1.UpdateVersionSpec\022H\n\022main" +
-      "tenance_policy\030\002 \001(\0132,.yandex.cloud.k8s." +
-      "v1.MasterMaintenancePolicy\022\032\n\022security_g" +
-      "roup_ids\030\003 \003(\t\"+\n\025UpdateClusterMetadata\022" +
-      "\022\n\ncluster_id\030\001 \001(\t\"\330\006\n\024CreateClusterReq" +
-      "uest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\0222\n\004name\030\002 " +
-      "\001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])" +
-      "?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\216\001\n\006la" +
-      "bels\030\004 \003(\01325.yandex.cloud.k8s.v1.CreateC" +
-      "lusterRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<" +
-      "=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a" +
-      "-z][-_./\\@0-9a-z]*\022\030\n\nnetwork_id\030\005 \001(\tB\004" +
-      "\350\3071\001\022:\n\013master_spec\030\006 \001(\0132\037.yandex.cloud" +
-      ".k8s.v1.MasterSpecB\004\350\3071\001\022E\n\024ip_allocatio" +
-      "n_policy\030\007 \001(\0132\'.yandex.cloud.k8s.v1.IPA" +
-      "llocationPolicy\022\036\n\024gateway_ipv4_address\030" +
-      "\010 \001(\tH\000\022 \n\022service_account_id\030\t \001(\tB\004\350\3071" +
-      "\001\022%\n\027node_service_account_id\030\n \001(\tB\004\350\3071\001" +
-      "\022<\n\017release_channel\030\013 \001(\0162#.yandex.cloud" +
-      ".k8s.v1.ReleaseChannel\022:\n\016network_policy" +
-      "\030\014 \001(\0132\".yandex.cloud.k8s.v1.NetworkPoli" +
-      "cy\0226\n\014kms_provider\030\r \001(\0132 .yandex.cloud." +
-      "k8s.v1.KMSProvider\022-\n\006cilium\030\016 \001(\0132\033.yan" +
-      "dex.cloud.k8s.v1.CiliumH\001\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\022\n\020inte" +
-      "rnet_gatewayB\030\n\026network_implementation\"+" +
-      "\n\025CreateClusterMetadata\022\022\n\ncluster_id\030\001 " +
-      "\001(\t\"/\n\031AutoUpgradeMasterMetadata\022\022\n\nclus" +
-      "ter_id\030\001 \001(\t\"\222\001\n\034ListClusterOperationsRe" +
-      "quest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_" +
-      "size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001" +
-      "(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=100" +
-      "0\"o\n\035ListClusterOperationsResponse\0225\n\nop" +
-      "erations\030\001 \003(\0132!.yandex.cloud.operation." +
-      "Operation\022\027\n\017next_page_token\030\002 \001(\t\"\222\001\n\034L" +
-      "istClusterNodeGroupsRequest\022\030\n\ncluster_i" +
-      "d\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-" +
-      "1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006f" +
-      "ilter\030\004 \001(\tB\n\212\3101\006<=1000\"m\n\035ListClusterNo" +
-      "deGroupsResponse\0223\n\013node_groups\030\001 \003(\0132\036." +
-      "yandex.cloud.k8s.v1.NodeGroup\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t\"q\n\027ListClusterNodesReques" +
-      "t\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size" +
-      "\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t" +
-      "\212\3101\005<=100\"]\n\030ListClusterNodesResponse\022(\n" +
-      "\005nodes\030\001 \003(\0132\031.yandex.cloud.k8s.v1.Node\022" +
-      "\027\n\017next_page_token\030\002 \001(\t\"\244\002\n\nMasterSpec\022" +
-      "A\n\021zonal_master_spec\030\001 \001(\0132$.yandex.clou" +
-      "d.k8s.v1.ZonalMasterSpecH\000\022G\n\024regional_m" +
-      "aster_spec\030\002 \001(\0132\'.yandex.cloud.k8s.v1.R" +
-      "egionalMasterSpecH\000\022\017\n\007version\030\003 \001(\t\022H\n\022" +
-      "maintenance_policy\030\004 \001(\0132,.yandex.cloud." +
-      "k8s.v1.MasterMaintenancePolicy\022\032\n\022securi" +
-      "ty_group_ids\030\006 \003(\tB\023\n\013master_type\022\004\300\3011\001\"" +
-      "\300\001\n\017ZonalMasterSpec\022\025\n\007zone_id\030\001 \001(\tB\004\350\307" +
-      "1\001\022J\n\030internal_v4_address_spec\030\002 \001(\0132(.y" +
-      "andex.cloud.k8s.v1.InternalAddressSpec\022J" +
-      "\n\030external_v4_address_spec\030\003 \001(\0132(.yande" +
-      "x.cloud.k8s.v1.ExternalAddressSpec\"\261\001\n\022R" +
-      "egionalMasterSpec\022\027\n\tregion_id\030\001 \001(\tB\004\350\307" +
-      "1\001\0226\n\tlocations\030\002 \003(\0132#.yandex.cloud.k8s" +
-      ".v1.MasterLocation\022J\n\030external_v4_addres" +
-      "s_spec\030\003 \001(\0132(.yandex.cloud.k8s.v1.Exter" +
-      "nalAddressSpec\"(\n\023InternalAddressSpec\022\021\n" +
-      "\tsubnet_id\030\002 \001(\t\"\025\n\023ExternalAddressSpec\"" +
-      "s\n\016MasterLocation\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001" +
-      "\022J\n\030internal_v4_address_spec\030\002 \001(\0132(.yan" +
-      "dex.cloud.k8s.v1.InternalAddressSpec2\306\r\n" +
-      "\016ClusterService\022\201\001\n\003Get\022&.yandex.cloud.k" +
-      "8s.v1.GetClusterRequest\032\034.yandex.cloud.k" +
-      "8s.v1.Cluster\"4\202\323\344\223\002.\022,/managed-kubernet" +
-      "es/v1/clusters/{cluster_id}\022\204\001\n\004List\022(.y" +
-      "andex.cloud.k8s.v1.ListClustersRequest\032)" +
-      ".yandex.cloud.k8s.v1.ListClustersRespons" +
-      "e\"\'\202\323\344\223\002!\022\037/managed-kubernetes/v1/cluste" +
-      "rs\022\246\001\n\006Create\022).yandex.cloud.k8s.v1.Crea" +
-      "teClusterRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"N\202\323\344\223\002$\"\037/managed-kubernetes" +
-      "/v1/clusters:\001*\262\322* \n\025CreateClusterMetada" +
-      "ta\022\007Cluster\022\263\001\n\006Update\022).yandex.cloud.k8" +
-      "s.v1.UpdateClusterRequest\032!.yandex.cloud" +
-      ".operation.Operation\"[\202\323\344\223\00212,/managed-k" +
-      "ubernetes/v1/clusters/{cluster_id}:\001*\262\322*" +
-      " \n\025UpdateClusterMetadata\022\007Cluster\022\276\001\n\006De" +
-      "lete\022).yandex.cloud.k8s.v1.DeleteCluster" +
+      "kPolicy\022E\n\024ip_allocation_policy\030\013 \001(\0132\'." +
+      "yandex.cloud.k8s.v1.IPAllocationPolicy\032-" +
+      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001B\022\n\020internet_gateway\"\261\001\n\020MasterUpda" +
+      "teSpec\0227\n\007version\030\001 \001(\0132&.yandex.cloud.k" +
+      "8s.v1.UpdateVersionSpec\022H\n\022maintenance_p" +
+      "olicy\030\002 \001(\0132,.yandex.cloud.k8s.v1.Master" +
+      "MaintenancePolicy\022\032\n\022security_group_ids\030" +
+      "\003 \003(\t\"+\n\025UpdateClusterMetadata\022\022\n\ncluste" +
+      "r_id\030\001 \001(\t\"\330\006\n\024CreateClusterRequest\022\027\n\tf" +
+      "older_id\030\001 \001(\tB\004\350\3071\001\0222\n\004name\030\002 \001(\tB$\362\3071 " +
+      "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013desc" +
+      "ription\030\003 \001(\tB\t\212\3101\005<=256\022\216\001\n\006labels\030\004 \003(" +
+      "\01325.yandex.cloud.k8s.v1.CreateClusterReq" +
+      "uest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-" +
+      "_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\" +
+      "@0-9a-z]*\022\030\n\nnetwork_id\030\005 \001(\tB\004\350\3071\001\022:\n\013m" +
+      "aster_spec\030\006 \001(\0132\037.yandex.cloud.k8s.v1.M" +
+      "asterSpecB\004\350\3071\001\022E\n\024ip_allocation_policy\030" +
+      "\007 \001(\0132\'.yandex.cloud.k8s.v1.IPAllocation" +
+      "Policy\022\036\n\024gateway_ipv4_address\030\010 \001(\tH\000\022 " +
+      "\n\022service_account_id\030\t \001(\tB\004\350\3071\001\022%\n\027node" +
+      "_service_account_id\030\n \001(\tB\004\350\3071\001\022<\n\017relea" +
+      "se_channel\030\013 \001(\0162#.yandex.cloud.k8s.v1.R" +
+      "eleaseChannel\022:\n\016network_policy\030\014 \001(\0132\"." +
+      "yandex.cloud.k8s.v1.NetworkPolicy\0226\n\014kms" +
+      "_provider\030\r \001(\0132 .yandex.cloud.k8s.v1.KM" +
+      "SProvider\022-\n\006cilium\030\016 \001(\0132\033.yandex.cloud" +
+      ".k8s.v1.CiliumH\001\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\022\n\020internet_gate" +
+      "wayB\030\n\026network_implementation\"+\n\025CreateC" +
+      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"/\n\031Au" +
+      "toUpgradeMasterMetadata\022\022\n\ncluster_id\030\001 " +
+      "\001(\t\"\222\001\n\034ListClusterOperationsRequest\022\030\n\n" +
+      "cluster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(" +
+      "\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<" +
+      "=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\035List" +
+      "ClusterOperationsResponse\0225\n\noperations\030" +
+      "\001 \003(\0132!.yandex.cloud.operation.Operation" +
+      "\022\027\n\017next_page_token\030\002 \001(\t\"\222\001\n\034ListCluste" +
+      "rNodeGroupsRequest\022\030\n\ncluster_id\030\001 \001(\tB\004" +
+      "\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\np" +
+      "age_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001" +
+      "(\tB\n\212\3101\006<=1000\"m\n\035ListClusterNodeGroupsR" +
+      "esponse\0223\n\013node_groups\030\001 \003(\0132\036.yandex.cl" +
+      "oud.k8s.v1.NodeGroup\022\027\n\017next_page_token\030" +
+      "\002 \001(\t\"q\n\027ListClusterNodesRequest\022\030\n\nclus" +
+      "ter_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
+      "\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
+      "\"]\n\030ListClusterNodesResponse\022(\n\005nodes\030\001 " +
+      "\003(\0132\031.yandex.cloud.k8s.v1.Node\022\027\n\017next_p" +
+      "age_token\030\002 \001(\t\"\244\002\n\nMasterSpec\022A\n\021zonal_" +
+      "master_spec\030\001 \001(\0132$.yandex.cloud.k8s.v1." +
+      "ZonalMasterSpecH\000\022G\n\024regional_master_spe" +
+      "c\030\002 \001(\0132\'.yandex.cloud.k8s.v1.RegionalMa" +
+      "sterSpecH\000\022\017\n\007version\030\003 \001(\t\022H\n\022maintenan" +
+      "ce_policy\030\004 \001(\0132,.yandex.cloud.k8s.v1.Ma" +
+      "sterMaintenancePolicy\022\032\n\022security_group_" +
+      "ids\030\006 \003(\tB\023\n\013master_type\022\004\300\3011\001\"\300\001\n\017Zonal" +
+      "MasterSpec\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022J\n\030int" +
+      "ernal_v4_address_spec\030\002 \001(\0132(.yandex.clo" +
+      "ud.k8s.v1.InternalAddressSpec\022J\n\030externa" +
+      "l_v4_address_spec\030\003 \001(\0132(.yandex.cloud.k" +
+      "8s.v1.ExternalAddressSpec\"\261\001\n\022RegionalMa" +
+      "sterSpec\022\027\n\tregion_id\030\001 \001(\tB\004\350\3071\001\0226\n\tloc" +
+      "ations\030\002 \003(\0132#.yandex.cloud.k8s.v1.Maste" +
+      "rLocation\022J\n\030external_v4_address_spec\030\003 " +
+      "\001(\0132(.yandex.cloud.k8s.v1.ExternalAddres" +
+      "sSpec\"(\n\023InternalAddressSpec\022\021\n\tsubnet_i" +
+      "d\030\002 \001(\t\"\025\n\023ExternalAddressSpec\"s\n\016Master" +
+      "Location\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022J\n\030inter" +
+      "nal_v4_address_spec\030\002 \001(\0132(.yandex.cloud" +
+      ".k8s.v1.InternalAddressSpec2\306\r\n\016ClusterS" +
+      "ervice\022\201\001\n\003Get\022&.yandex.cloud.k8s.v1.Get" +
+      "ClusterRequest\032\034.yandex.cloud.k8s.v1.Clu" +
+      "ster\"4\202\323\344\223\002.\022,/managed-kubernetes/v1/clu" +
+      "sters/{cluster_id}\022\204\001\n\004List\022(.yandex.clo" +
+      "ud.k8s.v1.ListClustersRequest\032).yandex.c" +
+      "loud.k8s.v1.ListClustersResponse\"\'\202\323\344\223\002!" +
+      "\022\037/managed-kubernetes/v1/clusters\022\246\001\n\006Cr" +
+      "eate\022).yandex.cloud.k8s.v1.CreateCluster" +
       "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"f\202\323\344\223\002.*,/managed-kubernetes/v1/clust" +
-      "ers/{cluster_id}\262\322*.\n\025DeleteClusterMetad" +
-      "ata\022\025google.protobuf.Empty\022\262\001\n\004Stop\022\'.ya" +
-      "ndex.cloud.k8s.v1.StopClusterRequest\032!.y" +
-      "andex.cloud.operation.Operation\"^\202\323\344\223\0026\"" +
-      "1/managed-kubernetes/v1/clusters/{cluste" +
-      "r_id}:stop:\001*\262\322*\036\n\023StopClusterMetadata\022\007" +
-      "Cluster\022\266\001\n\005Start\022(.yandex.cloud.k8s.v1." +
-      "StartClusterRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"`\202\323\344\223\0027\"2/managed-kuberne" +
-      "tes/v1/clusters/{cluster_id}:start:\001*\262\322*" +
-      "\037\n\024StartClusterMetadata\022\007Cluster\022\270\001\n\016Lis" +
-      "tNodeGroups\0221.yandex.cloud.k8s.v1.ListCl" +
-      "usterNodeGroupsRequest\0322.yandex.cloud.k8" +
-      "s.v1.ListClusterNodeGroupsResponse\"?\202\323\344\223" +
-      "\0029\0227/managed-kubernetes/v1/clusters/{clu" +
-      "ster_id}/nodeGroups\022\270\001\n\016ListOperations\0221" +
-      ".yandex.cloud.k8s.v1.ListClusterOperatio" +
-      "nsRequest\0322.yandex.cloud.k8s.v1.ListClus" +
-      "terOperationsResponse\"?\202\323\344\223\0029\0227/managed-" +
-      "kubernetes/v1/clusters/{cluster_id}/oper" +
-      "ations\022\244\001\n\tListNodes\022,.yandex.cloud.k8s." +
-      "v1.ListClusterNodesRequest\032-.yandex.clou" +
-      "d.k8s.v1.ListClusterNodesResponse\":\202\323\344\223\002" +
-      "4\0222/managed-kubernetes/v1/clusters/{clus" +
-      "ter_id}/nodesBV\n\027yandex.cloud.api.k8s.v1" +
-      "Z;github.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/k8s/v1;k8sb\006proto3"
+      "on\"N\202\323\344\223\002$\"\037/managed-kubernetes/v1/clust" +
+      "ers:\001*\262\322* \n\025CreateClusterMetadata\022\007Clust" +
+      "er\022\263\001\n\006Update\022).yandex.cloud.k8s.v1.Upda" +
+      "teClusterRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"[\202\323\344\223\00212,/managed-kubernetes" +
+      "/v1/clusters/{cluster_id}:\001*\262\322* \n\025Update" +
+      "ClusterMetadata\022\007Cluster\022\276\001\n\006Delete\022).ya" +
+      "ndex.cloud.k8s.v1.DeleteClusterRequest\032!" +
+      ".yandex.cloud.operation.Operation\"f\202\323\344\223\002" +
+      ".*,/managed-kubernetes/v1/clusters/{clus" +
+      "ter_id}\262\322*.\n\025DeleteClusterMetadata\022\025goog" +
+      "le.protobuf.Empty\022\262\001\n\004Stop\022\'.yandex.clou" +
+      "d.k8s.v1.StopClusterRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"^\202\323\344\223\0026\"1/managed" +
+      "-kubernetes/v1/clusters/{cluster_id}:sto" +
+      "p:\001*\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\266" +
+      "\001\n\005Start\022(.yandex.cloud.k8s.v1.StartClus" +
+      "terRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"`\202\323\344\223\0027\"2/managed-kubernetes/v1/cl" +
+      "usters/{cluster_id}:start:\001*\262\322*\037\n\024StartC" +
+      "lusterMetadata\022\007Cluster\022\270\001\n\016ListNodeGrou" +
+      "ps\0221.yandex.cloud.k8s.v1.ListClusterNode" +
+      "GroupsRequest\0322.yandex.cloud.k8s.v1.List" +
+      "ClusterNodeGroupsResponse\"?\202\323\344\223\0029\0227/mana" +
+      "ged-kubernetes/v1/clusters/{cluster_id}/" +
+      "nodeGroups\022\270\001\n\016ListOperations\0221.yandex.c" +
+      "loud.k8s.v1.ListClusterOperationsRequest" +
+      "\0322.yandex.cloud.k8s.v1.ListClusterOperat" +
+      "ionsResponse\"?\202\323\344\223\0029\0227/managed-kubernete" +
+      "s/v1/clusters/{cluster_id}/operations\022\244\001" +
+      "\n\tListNodes\022,.yandex.cloud.k8s.v1.ListCl" +
+      "usterNodesRequest\032-.yandex.cloud.k8s.v1." +
+      "ListClusterNodesResponse\":\202\323\344\223\0024\0222/manag" +
+      "ed-kubernetes/v1/clusters/{cluster_id}/n" +
+      "odesBV\n\027yandex.cloud.api.k8s.v1Z;github." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/k8s/v1;k8sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -28128,7 +28324,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_k8s_v1_UpdateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_UpdateClusterRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UpdateMask", "Name", "Description", "Labels", "GatewayIpv4Address", "MasterSpec", "ServiceAccountId", "NodeServiceAccountId", "NetworkPolicy", "InternetGateway", });
+        new java.lang.String[] { "ClusterId", "UpdateMask", "Name", "Description", "Labels", "GatewayIpv4Address", "MasterSpec", "ServiceAccountId", "NodeServiceAccountId", "NetworkPolicy", "IpAllocationPolicy", "InternetGateway", });
     internal_static_yandex_cloud_k8s_v1_UpdateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_UpdateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_UpdateClusterRequest_LabelsEntry_fieldAccessorTable = new

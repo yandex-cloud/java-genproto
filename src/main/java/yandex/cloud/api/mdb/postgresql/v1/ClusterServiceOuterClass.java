@@ -669,8 +669,8 @@ public final class ClusterServiceOuterClass {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -681,8 +681,8 @@ public final class ClusterServiceOuterClass {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -898,8 +898,8 @@ public final class ClusterServiceOuterClass {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -921,8 +921,8 @@ public final class ClusterServiceOuterClass {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1534,8 +1534,8 @@ public final class ClusterServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1557,8 +1557,8 @@ public final class ClusterServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1581,8 +1581,8 @@ public final class ClusterServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1602,8 +1602,8 @@ public final class ClusterServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1619,8 +1619,8 @@ public final class ClusterServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -28888,8 +28888,8 @@ public final class ClusterServiceOuterClass {
      * The expression must specify:
      * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
      * [LogRecord.logs.message.error_severity] (for POSTGRESQL service), [LogRecord.logs.message.level] (for POOLER service) fields.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
      * Examples of a filter:
      * `message.hostname='node1.db.cloud.yandex.net'`
      * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
@@ -28904,8 +28904,8 @@ public final class ClusterServiceOuterClass {
      * The expression must specify:
      * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
      * [LogRecord.logs.message.error_severity] (for POSTGRESQL service), [LogRecord.logs.message.level] (for POOLER service) fields.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
      * Examples of a filter:
      * `message.hostname='node1.db.cloud.yandex.net'`
      * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
@@ -29406,8 +29406,8 @@ public final class ClusterServiceOuterClass {
      * The expression must specify:
      * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
      * [LogRecord.logs.message.error_severity] (for POSTGRESQL service), [LogRecord.logs.message.level] (for POOLER service) fields.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
      * Examples of a filter:
      * `message.hostname='node1.db.cloud.yandex.net'`
      * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
@@ -29433,8 +29433,8 @@ public final class ClusterServiceOuterClass {
      * The expression must specify:
      * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
      * [LogRecord.logs.message.error_severity] (for POSTGRESQL service), [LogRecord.logs.message.level] (for POOLER service) fields.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
      * Examples of a filter:
      * `message.hostname='node1.db.cloud.yandex.net'`
      * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
@@ -30596,8 +30596,8 @@ public final class ClusterServiceOuterClass {
        * The expression must specify:
        * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
        * [LogRecord.logs.message.error_severity] (for POSTGRESQL service), [LogRecord.logs.message.level] (for POOLER service) fields.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
        * Examples of a filter:
        * `message.hostname='node1.db.cloud.yandex.net'`
        * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
@@ -30623,8 +30623,8 @@ public final class ClusterServiceOuterClass {
        * The expression must specify:
        * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
        * [LogRecord.logs.message.error_severity] (for POSTGRESQL service), [LogRecord.logs.message.level] (for POOLER service) fields.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
        * Examples of a filter:
        * `message.hostname='node1.db.cloud.yandex.net'`
        * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
@@ -30651,8 +30651,8 @@ public final class ClusterServiceOuterClass {
        * The expression must specify:
        * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
        * [LogRecord.logs.message.error_severity] (for POSTGRESQL service), [LogRecord.logs.message.level] (for POOLER service) fields.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
        * Examples of a filter:
        * `message.hostname='node1.db.cloud.yandex.net'`
        * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
@@ -30676,8 +30676,8 @@ public final class ClusterServiceOuterClass {
        * The expression must specify:
        * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
        * [LogRecord.logs.message.error_severity] (for POSTGRESQL service), [LogRecord.logs.message.level] (for POOLER service) fields.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
        * Examples of a filter:
        * `message.hostname='node1.db.cloud.yandex.net'`
        * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
@@ -30697,8 +30697,8 @@ public final class ClusterServiceOuterClass {
        * The expression must specify:
        * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
        * [LogRecord.logs.message.error_severity] (for POSTGRESQL service), [LogRecord.logs.message.level] (for POOLER service) fields.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
        * Examples of a filter:
        * `message.hostname='node1.db.cloud.yandex.net'`
        * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`

@@ -158,6 +158,38 @@ public final class JobServiceGrpc {
      return getListLogMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.PHJS.CancelJobRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getCancelMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Cancel",
+      requestType = yandex.cloud.api.dataproc.v1.PHJS.CancelJobRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.PHJS.CancelJobRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getCancelMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.PHJS.CancelJobRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getCancelMethod;
+    if ((getCancelMethod = JobServiceGrpc.getCancelMethod) == null) {
+      synchronized (JobServiceGrpc.class) {
+        if ((getCancelMethod = JobServiceGrpc.getCancelMethod) == null) {
+          JobServiceGrpc.getCancelMethod = getCancelMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.dataproc.v1.PHJS.CancelJobRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.dataproc.v1.JobService", "Cancel"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.dataproc.v1.PHJS.CancelJobRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new JobServiceMethodDescriptorSupplier("Cancel"))
+                  .build();
+          }
+        }
+     }
+     return getCancelMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -228,6 +260,16 @@ public final class JobServiceGrpc {
       asyncUnimplementedUnaryCall(getListLogMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Cancels the specified Dataproc job.
+     * </pre>
+     */
+    public void cancel(yandex.cloud.api.dataproc.v1.PHJS.CancelJobRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getCancelMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -258,6 +300,13 @@ public final class JobServiceGrpc {
                 yandex.cloud.api.dataproc.v1.PHJS.ListJobLogRequest,
                 yandex.cloud.api.dataproc.v1.PHJS.ListJobLogResponse>(
                   this, METHODID_LIST_LOG)))
+          .addMethod(
+            getCancelMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.dataproc.v1.PHJS.CancelJobRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_CANCEL)))
           .build();
     }
   }
@@ -326,6 +375,17 @@ public final class JobServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getListLogMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Cancels the specified Dataproc job.
+     * </pre>
+     */
+    public void cancel(yandex.cloud.api.dataproc.v1.PHJS.CancelJobRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCancelMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -387,6 +447,16 @@ public final class JobServiceGrpc {
     public yandex.cloud.api.dataproc.v1.PHJS.ListJobLogResponse listLog(yandex.cloud.api.dataproc.v1.PHJS.ListJobLogRequest request) {
       return blockingUnaryCall(
           getChannel(), getListLogMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Cancels the specified Dataproc job.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation cancel(yandex.cloud.api.dataproc.v1.PHJS.CancelJobRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getCancelMethod(), getCallOptions(), request);
     }
   }
 
@@ -454,12 +524,24 @@ public final class JobServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getListLogMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Cancels the specified Dataproc job.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> cancel(
+        yandex.cloud.api.dataproc.v1.PHJS.CancelJobRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCancelMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST = 0;
   private static final int METHODID_CREATE = 1;
   private static final int METHODID_GET = 2;
   private static final int METHODID_LIST_LOG = 3;
+  private static final int METHODID_CANCEL = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -493,6 +575,10 @@ public final class JobServiceGrpc {
         case METHODID_LIST_LOG:
           serviceImpl.listLog((yandex.cloud.api.dataproc.v1.PHJS.ListJobLogRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.PHJS.ListJobLogResponse>) responseObserver);
+          break;
+        case METHODID_CANCEL:
+          serviceImpl.cancel((yandex.cloud.api.dataproc.v1.PHJS.CancelJobRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -559,6 +645,7 @@ public final class JobServiceGrpc {
               .addMethod(getCreateMethod())
               .addMethod(getGetMethod())
               .addMethod(getListLogMethod())
+              .addMethod(getCancelMethod())
               .build();
         }
       }

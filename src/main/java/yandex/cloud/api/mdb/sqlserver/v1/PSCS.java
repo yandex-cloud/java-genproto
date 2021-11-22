@@ -669,8 +669,8 @@ public final class PSCS {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
      * Example of a filter: `name NOT IN 'test,beta'`.
      * </pre>
      *
@@ -682,8 +682,8 @@ public final class PSCS {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
      * Example of a filter: `name NOT IN 'test,beta'`.
      * </pre>
      *
@@ -900,8 +900,8 @@ public final class PSCS {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
      * Example of a filter: `name NOT IN 'test,beta'`.
      * </pre>
      *
@@ -924,8 +924,8 @@ public final class PSCS {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
      * Example of a filter: `name NOT IN 'test,beta'`.
      * </pre>
      *
@@ -1538,8 +1538,8 @@ public final class PSCS {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
        * Example of a filter: `name NOT IN 'test,beta'`.
        * </pre>
        *
@@ -1562,8 +1562,8 @@ public final class PSCS {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
        * Example of a filter: `name NOT IN 'test,beta'`.
        * </pre>
        *
@@ -1587,8 +1587,8 @@ public final class PSCS {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
        * Example of a filter: `name NOT IN 'test,beta'`.
        * </pre>
        *
@@ -1609,8 +1609,8 @@ public final class PSCS {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
        * Example of a filter: `name NOT IN 'test,beta'`.
        * </pre>
        *
@@ -1627,8 +1627,8 @@ public final class PSCS {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
        * Example of a filter: `name NOT IN 'test,beta'`.
        * </pre>
        *
@@ -17423,8 +17423,8 @@ public final class PSCS {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
      * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`
      * </pre>
      *
@@ -17436,8 +17436,8 @@ public final class PSCS {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
      * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`
      * </pre>
      *
@@ -17983,8 +17983,8 @@ public final class PSCS {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
      * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`
      * </pre>
      *
@@ -18007,8 +18007,8 @@ public final class PSCS {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
      * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`
      * </pre>
      *
@@ -19301,8 +19301,8 @@ public final class PSCS {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
        * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`
        * </pre>
        *
@@ -19325,8 +19325,8 @@ public final class PSCS {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
        * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`
        * </pre>
        *
@@ -19350,8 +19350,8 @@ public final class PSCS {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
        * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`
        * </pre>
        *
@@ -19372,8 +19372,8 @@ public final class PSCS {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
        * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`
        * </pre>
        *
@@ -19390,8 +19390,8 @@ public final class PSCS {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
        * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`
        * </pre>
        *

@@ -670,9 +670,8 @@ public final class TriggerServiceOuterClass {
      * A filter expression that filters triggers listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Example of a filter: `name=my-trigger`.
      * </pre>
      *
@@ -684,9 +683,8 @@ public final class TriggerServiceOuterClass {
      * A filter expression that filters triggers listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Example of a filter: `name=my-trigger`.
      * </pre>
      *
@@ -904,9 +902,8 @@ public final class TriggerServiceOuterClass {
      * A filter expression that filters triggers listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Example of a filter: `name=my-trigger`.
      * </pre>
      *
@@ -929,9 +926,8 @@ public final class TriggerServiceOuterClass {
      * A filter expression that filters triggers listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Example of a filter: `name=my-trigger`.
      * </pre>
      *
@@ -1547,9 +1543,8 @@ public final class TriggerServiceOuterClass {
        * A filter expression that filters triggers listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-trigger`.
        * </pre>
        *
@@ -1572,9 +1567,8 @@ public final class TriggerServiceOuterClass {
        * A filter expression that filters triggers listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-trigger`.
        * </pre>
        *
@@ -1598,9 +1592,8 @@ public final class TriggerServiceOuterClass {
        * A filter expression that filters triggers listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-trigger`.
        * </pre>
        *
@@ -1621,9 +1614,8 @@ public final class TriggerServiceOuterClass {
        * A filter expression that filters triggers listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-trigger`.
        * </pre>
        *
@@ -1640,9 +1632,8 @@ public final class TriggerServiceOuterClass {
        * A filter expression that filters triggers listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-trigger`.
        * </pre>
        *
@@ -10775,9 +10766,8 @@ public final class TriggerServiceOuterClass {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Example of a filter: `name=my-function`.
      * </pre>
      *
@@ -10789,9 +10779,8 @@ public final class TriggerServiceOuterClass {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Example of a filter: `name=my-function`.
      * </pre>
      *
@@ -11007,9 +10996,8 @@ public final class TriggerServiceOuterClass {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Example of a filter: `name=my-function`.
      * </pre>
      *
@@ -11032,9 +11020,8 @@ public final class TriggerServiceOuterClass {
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
-     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Example of a filter: `name=my-function`.
      * </pre>
      *
@@ -11645,9 +11632,8 @@ public final class TriggerServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-function`.
        * </pre>
        *
@@ -11670,9 +11656,8 @@ public final class TriggerServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-function`.
        * </pre>
        *
@@ -11696,9 +11681,8 @@ public final class TriggerServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-function`.
        * </pre>
        *
@@ -11719,9 +11703,8 @@ public final class TriggerServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-function`.
        * </pre>
        *
@@ -11738,9 +11721,8 @@ public final class TriggerServiceOuterClass {
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
-       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-function`.
        * </pre>
        *
