@@ -231,6 +231,16 @@ public final class LogGroupOuterClass {
      * <code>.google.protobuf.Duration retention_period = 9;</code>
      */
     com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder();
+
+    /**
+     * <code>string data_stream = 10;</code>
+     */
+    java.lang.String getDataStream();
+    /**
+     * <code>string data_stream = 10;</code>
+     */
+    com.google.protobuf.ByteString
+        getDataStreamBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.LogGroup}
@@ -251,6 +261,7 @@ public final class LogGroupOuterClass {
       name_ = "";
       description_ = "";
       status_ = 0;
+      dataStream_ = "";
     }
 
     @java.lang.Override
@@ -350,6 +361,12 @@ public final class LogGroupOuterClass {
                 retentionPeriod_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              dataStream_ = s;
               break;
             }
             default: {
@@ -966,6 +983,40 @@ public final class LogGroupOuterClass {
       return getRetentionPeriod();
     }
 
+    public static final int DATA_STREAM_FIELD_NUMBER = 10;
+    private volatile java.lang.Object dataStream_;
+    /**
+     * <code>string data_stream = 10;</code>
+     */
+    public java.lang.String getDataStream() {
+      java.lang.Object ref = dataStream_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dataStream_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string data_stream = 10;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDataStreamBytes() {
+      java.lang.Object ref = dataStream_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dataStream_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1009,6 +1060,9 @@ public final class LogGroupOuterClass {
       }
       if (retentionPeriod_ != null) {
         output.writeMessage(9, getRetentionPeriod());
+      }
+      if (!getDataStreamBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, dataStream_);
       }
       unknownFields.writeTo(output);
     }
@@ -1056,6 +1110,9 @@ public final class LogGroupOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getRetentionPeriod());
       }
+      if (!getDataStreamBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, dataStream_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1095,6 +1152,8 @@ public final class LogGroupOuterClass {
         result = result && getRetentionPeriod()
             .equals(other.getRetentionPeriod());
       }
+      result = result && getDataStream()
+          .equals(other.getDataStream());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1130,6 +1189,8 @@ public final class LogGroupOuterClass {
         hash = (37 * hash) + RETENTION_PERIOD_FIELD_NUMBER;
         hash = (53 * hash) + getRetentionPeriod().hashCode();
       }
+      hash = (37 * hash) + DATA_STREAM_FIELD_NUMBER;
+      hash = (53 * hash) + getDataStream().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1310,6 +1371,8 @@ public final class LogGroupOuterClass {
           retentionPeriod_ = null;
           retentionPeriodBuilder_ = null;
         }
+        dataStream_ = "";
+
         return this;
       }
 
@@ -1356,6 +1419,7 @@ public final class LogGroupOuterClass {
         } else {
           result.retentionPeriod_ = retentionPeriodBuilder_.build();
         }
+        result.dataStream_ = dataStream_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1435,6 +1499,10 @@ public final class LogGroupOuterClass {
         }
         if (other.hasRetentionPeriod()) {
           mergeRetentionPeriod(other.getRetentionPeriod());
+        }
+        if (!other.getDataStream().isEmpty()) {
+          dataStream_ = other.dataStream_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2441,6 +2509,75 @@ public final class LogGroupOuterClass {
         }
         return retentionPeriodBuilder_;
       }
+
+      private java.lang.Object dataStream_ = "";
+      /**
+       * <code>string data_stream = 10;</code>
+       */
+      public java.lang.String getDataStream() {
+        java.lang.Object ref = dataStream_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dataStream_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string data_stream = 10;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDataStreamBytes() {
+        java.lang.Object ref = dataStream_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dataStream_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string data_stream = 10;</code>
+       */
+      public Builder setDataStream(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        dataStream_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data_stream = 10;</code>
+       */
+      public Builder clearDataStream() {
+        
+        dataStream_ = getDefaultInstance().getDataStream();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data_stream = 10;</code>
+       */
+      public Builder setDataStreamBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        dataStream_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2516,7 +2653,7 @@ public final class LogGroupOuterClass {
       "\n\'yandex/cloud/logging/v1/log_group.prot" +
       "o\022\027yandex.cloud.logging.v1\032\036google/proto" +
       "buf/duration.proto\032\037google/protobuf/time" +
-      "stamp.proto\"\300\003\n\010LogGroup\022\n\n\002id\030\001 \001(\t\022\021\n\t" +
+      "stamp.proto\"\325\003\n\010LogGroup\022\n\n\002id\030\001 \001(\t\022\021\n\t" +
       "folder_id\030\002 \001(\t\022\020\n\010cloud_id\030\003 \001(\t\022.\n\ncre" +
       "ated_at\030\004 \001(\0132\032.google.protobuf.Timestam" +
       "p\022\014\n\004name\030\005 \001(\t\022\023\n\013description\030\006 \001(\t\022=\n\006" +
@@ -2524,13 +2661,13 @@ public final class LogGroupOuterClass {
       "ogGroup.LabelsEntry\0228\n\006status\030\010 \001(\0162(.ya" +
       "ndex.cloud.logging.v1.LogGroup.Status\0223\n" +
       "\020retention_period\030\t \001(\0132\031.google.protobu" +
-      "f.Duration\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\"S\n\006Status\022\026\n\022STATUS_UN" +
-      "SPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n" +
-      "\010DELETING\020\003\022\t\n\005ERROR\020\004Bb\n\033yandex.cloud.a" +
-      "pi.logging.v1ZCgithub.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/logging/v1;loggi" +
-      "ngb\006proto3"
+      "f.Duration\022\023\n\013data_stream\030\n \001(\t\032-\n\013Label" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"S" +
+      "\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREA" +
+      "TING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020\003\022\t\n\005ERRO" +
+      "R\020\004Bb\n\033yandex.cloud.api.logging.v1ZCgith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/logging/v1;loggingb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2551,7 +2688,7 @@ public final class LogGroupOuterClass {
     internal_static_yandex_cloud_logging_v1_LogGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_LogGroup_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CloudId", "CreatedAt", "Name", "Description", "Labels", "Status", "RetentionPeriod", });
+        new java.lang.String[] { "Id", "FolderId", "CloudId", "CreatedAt", "Name", "Description", "Labels", "Status", "RetentionPeriod", "DataStream", });
     internal_static_yandex_cloud_logging_v1_LogGroup_LabelsEntry_descriptor =
       internal_static_yandex_cloud_logging_v1_LogGroup_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_logging_v1_LogGroup_LabelsEntry_fieldAccessorTable = new

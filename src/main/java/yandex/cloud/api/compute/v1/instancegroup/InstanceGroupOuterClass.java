@@ -10009,6 +10009,8 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Defines an autoscaling rule based on the average CPU utilization of the instance group.
+       * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+       * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.CpuUtilizationRule cpu_utilization_rule = 7;</code>
@@ -10017,6 +10019,8 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Defines an autoscaling rule based on the average CPU utilization of the instance group.
+       * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+       * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.CpuUtilizationRule cpu_utilization_rule = 7;</code>
@@ -10025,6 +10029,8 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Defines an autoscaling rule based on the average CPU utilization of the instance group.
+       * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+       * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.CpuUtilizationRule cpu_utilization_rule = 7;</code>
@@ -10034,43 +10040,53 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+       * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
        */
       java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule> 
           getCustomRulesList();
       /**
        * <pre>
        * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+       * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
        */
       yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule getCustomRules(int index);
       /**
        * <pre>
        * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+       * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
        */
       int getCustomRulesCount();
       /**
        * <pre>
        * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+       * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
        */
       java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRuleOrBuilder> 
           getCustomRulesOrBuilderList();
       /**
        * <pre>
        * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+       * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
        */
       yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRuleOrBuilder getCustomRulesOrBuilder(
           int index);
@@ -10536,6 +10552,8 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Defines an autoscaling rule based on the average CPU utilization of the instance group.
+       * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+       * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.CpuUtilizationRule cpu_utilization_rule = 7;</code>
@@ -10546,6 +10564,8 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Defines an autoscaling rule based on the average CPU utilization of the instance group.
+       * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+       * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.CpuUtilizationRule cpu_utilization_rule = 7;</code>
@@ -10556,6 +10576,8 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Defines an autoscaling rule based on the average CPU utilization of the instance group.
+       * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+       * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.CpuUtilizationRule cpu_utilization_rule = 7;</code>
@@ -10569,9 +10591,11 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+       * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
        */
       public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule> getCustomRulesList() {
         return customRules_;
@@ -10579,9 +10603,11 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+       * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
        */
       public java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRuleOrBuilder> 
           getCustomRulesOrBuilderList() {
@@ -10590,9 +10616,11 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+       * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
        */
       public int getCustomRulesCount() {
         return customRules_.size();
@@ -10600,9 +10628,11 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+       * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
        */
       public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule getCustomRules(int index) {
         return customRules_.get(index);
@@ -10610,9 +10640,11 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+       * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
        */
       public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRuleOrBuilder getCustomRulesOrBuilder(
           int index) {
@@ -11806,6 +11838,8 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on the average CPU utilization of the instance group.
+         * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+         * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
          * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.CpuUtilizationRule cpu_utilization_rule = 7;</code>
@@ -11816,6 +11850,8 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on the average CPU utilization of the instance group.
+         * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+         * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
          * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.CpuUtilizationRule cpu_utilization_rule = 7;</code>
@@ -11830,6 +11866,8 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on the average CPU utilization of the instance group.
+         * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+         * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
          * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.CpuUtilizationRule cpu_utilization_rule = 7;</code>
@@ -11850,6 +11888,8 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on the average CPU utilization of the instance group.
+         * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+         * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
          * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.CpuUtilizationRule cpu_utilization_rule = 7;</code>
@@ -11868,6 +11908,8 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on the average CPU utilization of the instance group.
+         * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+         * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
          * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.CpuUtilizationRule cpu_utilization_rule = 7;</code>
@@ -11890,6 +11932,8 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on the average CPU utilization of the instance group.
+         * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+         * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
          * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.CpuUtilizationRule cpu_utilization_rule = 7;</code>
@@ -11908,6 +11952,8 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on the average CPU utilization of the instance group.
+         * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+         * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
          * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.CpuUtilizationRule cpu_utilization_rule = 7;</code>
@@ -11920,6 +11966,8 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on the average CPU utilization of the instance group.
+         * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+         * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
          * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.CpuUtilizationRule cpu_utilization_rule = 7;</code>
@@ -11935,6 +11983,8 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on the average CPU utilization of the instance group.
+         * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+         * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
          * <code>.yandex.cloud.compute.v1.instancegroup.ScalePolicy.CpuUtilizationRule cpu_utilization_rule = 7;</code>
@@ -11968,9 +12018,11 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
          */
         public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule> getCustomRulesList() {
           if (customRulesBuilder_ == null) {
@@ -11982,9 +12034,11 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
          */
         public int getCustomRulesCount() {
           if (customRulesBuilder_ == null) {
@@ -11996,9 +12050,11 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
          */
         public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule getCustomRules(int index) {
           if (customRulesBuilder_ == null) {
@@ -12010,9 +12066,11 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
          */
         public Builder setCustomRules(
             int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule value) {
@@ -12031,9 +12089,11 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
          */
         public Builder setCustomRules(
             int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule.Builder builderForValue) {
@@ -12049,9 +12109,11 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
          */
         public Builder addCustomRules(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule value) {
           if (customRulesBuilder_ == null) {
@@ -12069,9 +12131,11 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
          */
         public Builder addCustomRules(
             int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule value) {
@@ -12090,9 +12154,11 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
          */
         public Builder addCustomRules(
             yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule.Builder builderForValue) {
@@ -12108,9 +12174,11 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
          */
         public Builder addCustomRules(
             int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule.Builder builderForValue) {
@@ -12126,9 +12194,11 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
          */
         public Builder addAllCustomRules(
             java.lang.Iterable<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule> values) {
@@ -12145,9 +12215,11 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
          */
         public Builder clearCustomRules() {
           if (customRulesBuilder_ == null) {
@@ -12162,9 +12234,11 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
          */
         public Builder removeCustomRules(int index) {
           if (customRulesBuilder_ == null) {
@@ -12179,9 +12253,11 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
          */
         public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule.Builder getCustomRulesBuilder(
             int index) {
@@ -12190,9 +12266,11 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
          */
         public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRuleOrBuilder getCustomRulesOrBuilder(
             int index) {
@@ -12204,9 +12282,11 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
          */
         public java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRuleOrBuilder> 
              getCustomRulesOrBuilderList() {
@@ -12219,9 +12299,11 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
          */
         public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule.Builder addCustomRulesBuilder() {
           return getCustomRulesFieldBuilder().addBuilder(
@@ -12230,9 +12312,11 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
          */
         public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule.Builder addCustomRulesBuilder(
             int index) {
@@ -12242,9 +12326,11 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
-         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+         * <code>repeated .yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule custom_rules = 8 [(.yandex.cloud.size) = "&lt;=3"];</code>
          */
         public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule.Builder> 
              getCustomRulesBuilderList() {
@@ -52634,7 +52720,7 @@ public final class InstanceGroupOuterClass {
       "ud.compute.v1.instancegroup.ScalePolicy." +
       "CpuUtilizationRule\022\\\n\014custom_rules\030\010 \003(\013" +
       "2=.yandex.cloud.compute.v1.instancegroup" +
-      ".ScalePolicy.CustomRuleB\007\202\3101\003<=1\022c\n\017auto" +
+      ".ScalePolicy.CustomRuleB\007\202\3101\003<=3\022c\n\017auto" +
       "_scale_type\030\t \001(\0162J.yandex.cloud.compute" +
       ".v1.instancegroup.ScalePolicy.AutoScale." +
       "AutoScaleType\"I\n\rAutoScaleType\022\037\n\033AUTO_S" +

@@ -3544,6 +3544,24 @@ public final class LogGroupServiceOuterClass {
      * <code>.google.protobuf.Duration retention_period = 5;</code>
      */
     com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder();
+
+    /**
+     * <pre>
+     * If specified, all log records will be written to this data stream
+     * </pre>
+     *
+     * <code>string data_stream = 6 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     */
+    java.lang.String getDataStream();
+    /**
+     * <pre>
+     * If specified, all log records will be written to this data stream
+     * </pre>
+     *
+     * <code>string data_stream = 6 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     */
+    com.google.protobuf.ByteString
+        getDataStreamBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.CreateLogGroupRequest}
@@ -3561,6 +3579,7 @@ public final class LogGroupServiceOuterClass {
       folderId_ = "";
       name_ = "";
       description_ = "";
+      dataStream_ = "";
     }
 
     @java.lang.Override
@@ -3629,6 +3648,12 @@ public final class LogGroupServiceOuterClass {
                 retentionPeriod_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              dataStream_ = s;
               break;
             }
             default: {
@@ -3940,6 +3965,48 @@ public final class LogGroupServiceOuterClass {
       return getRetentionPeriod();
     }
 
+    public static final int DATA_STREAM_FIELD_NUMBER = 6;
+    private volatile java.lang.Object dataStream_;
+    /**
+     * <pre>
+     * If specified, all log records will be written to this data stream
+     * </pre>
+     *
+     * <code>string data_stream = 6 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     */
+    public java.lang.String getDataStream() {
+      java.lang.Object ref = dataStream_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dataStream_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * If specified, all log records will be written to this data stream
+     * </pre>
+     *
+     * <code>string data_stream = 6 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getDataStreamBytes() {
+      java.lang.Object ref = dataStream_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dataStream_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3971,6 +4038,9 @@ public final class LogGroupServiceOuterClass {
           4);
       if (retentionPeriod_ != null) {
         output.writeMessage(5, getRetentionPeriod());
+      }
+      if (!getDataStreamBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, dataStream_);
       }
       unknownFields.writeTo(output);
     }
@@ -4004,6 +4074,9 @@ public final class LogGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getRetentionPeriod());
       }
+      if (!getDataStreamBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, dataStream_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4033,6 +4106,8 @@ public final class LogGroupServiceOuterClass {
         result = result && getRetentionPeriod()
             .equals(other.getRetentionPeriod());
       }
+      result = result && getDataStream()
+          .equals(other.getDataStream());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -4058,6 +4133,8 @@ public final class LogGroupServiceOuterClass {
         hash = (37 * hash) + RETENTION_PERIOD_FIELD_NUMBER;
         hash = (53 * hash) + getRetentionPeriod().hashCode();
       }
+      hash = (37 * hash) + DATA_STREAM_FIELD_NUMBER;
+      hash = (53 * hash) + getDataStream().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4226,6 +4303,8 @@ public final class LogGroupServiceOuterClass {
           retentionPeriod_ = null;
           retentionPeriodBuilder_ = null;
         }
+        dataStream_ = "";
+
         return this;
       }
 
@@ -4264,6 +4343,7 @@ public final class LogGroupServiceOuterClass {
         } else {
           result.retentionPeriod_ = retentionPeriodBuilder_.build();
         }
+        result.dataStream_ = dataStream_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4329,6 +4409,10 @@ public final class LogGroupServiceOuterClass {
             other.internalGetLabels());
         if (other.hasRetentionPeriod()) {
           mergeRetentionPeriod(other.getRetentionPeriod());
+        }
+        if (!other.getDataStream().isEmpty()) {
+          dataStream_ = other.dataStream_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4966,6 +5050,95 @@ public final class LogGroupServiceOuterClass {
           retentionPeriod_ = null;
         }
         return retentionPeriodBuilder_;
+      }
+
+      private java.lang.Object dataStream_ = "";
+      /**
+       * <pre>
+       * If specified, all log records will be written to this data stream
+       * </pre>
+       *
+       * <code>string data_stream = 6 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       */
+      public java.lang.String getDataStream() {
+        java.lang.Object ref = dataStream_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dataStream_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * If specified, all log records will be written to this data stream
+       * </pre>
+       *
+       * <code>string data_stream = 6 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getDataStreamBytes() {
+        java.lang.Object ref = dataStream_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dataStream_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * If specified, all log records will be written to this data stream
+       * </pre>
+       *
+       * <code>string data_stream = 6 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       */
+      public Builder setDataStream(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        dataStream_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If specified, all log records will be written to this data stream
+       * </pre>
+       *
+       * <code>string data_stream = 6 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       */
+      public Builder clearDataStream() {
+        
+        dataStream_ = getDefaultInstance().getDataStream();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If specified, all log records will be written to this data stream
+       * </pre>
+       *
+       * <code>string data_stream = 6 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       */
+      public Builder setDataStreamBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        dataStream_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5780,6 +5953,24 @@ public final class LogGroupServiceOuterClass {
      * <code>.google.protobuf.Duration retention_period = 6;</code>
      */
     com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder();
+
+    /**
+     * <pre>
+     * If specified, log records will be written to this data stream
+     * </pre>
+     *
+     * <code>string data_stream = 7 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     */
+    java.lang.String getDataStream();
+    /**
+     * <pre>
+     * If specified, log records will be written to this data stream
+     * </pre>
+     *
+     * <code>string data_stream = 7 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     */
+    com.google.protobuf.ByteString
+        getDataStreamBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.UpdateLogGroupRequest}
@@ -5797,6 +5988,7 @@ public final class LogGroupServiceOuterClass {
       logGroupId_ = "";
       name_ = "";
       description_ = "";
+      dataStream_ = "";
     }
 
     @java.lang.Override
@@ -5878,6 +6070,12 @@ public final class LogGroupServiceOuterClass {
                 retentionPeriod_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              dataStream_ = s;
               break;
             }
             default: {
@@ -6222,6 +6420,48 @@ public final class LogGroupServiceOuterClass {
       return getRetentionPeriod();
     }
 
+    public static final int DATA_STREAM_FIELD_NUMBER = 7;
+    private volatile java.lang.Object dataStream_;
+    /**
+     * <pre>
+     * If specified, log records will be written to this data stream
+     * </pre>
+     *
+     * <code>string data_stream = 7 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     */
+    public java.lang.String getDataStream() {
+      java.lang.Object ref = dataStream_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dataStream_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * If specified, log records will be written to this data stream
+     * </pre>
+     *
+     * <code>string data_stream = 7 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getDataStreamBytes() {
+      java.lang.Object ref = dataStream_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dataStream_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6256,6 +6496,9 @@ public final class LogGroupServiceOuterClass {
           5);
       if (retentionPeriod_ != null) {
         output.writeMessage(6, getRetentionPeriod());
+      }
+      if (!getDataStreamBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, dataStream_);
       }
       unknownFields.writeTo(output);
     }
@@ -6293,6 +6536,9 @@ public final class LogGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getRetentionPeriod());
       }
+      if (!getDataStreamBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, dataStream_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6327,6 +6573,8 @@ public final class LogGroupServiceOuterClass {
         result = result && getRetentionPeriod()
             .equals(other.getRetentionPeriod());
       }
+      result = result && getDataStream()
+          .equals(other.getDataStream());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -6356,6 +6604,8 @@ public final class LogGroupServiceOuterClass {
         hash = (37 * hash) + RETENTION_PERIOD_FIELD_NUMBER;
         hash = (53 * hash) + getRetentionPeriod().hashCode();
       }
+      hash = (37 * hash) + DATA_STREAM_FIELD_NUMBER;
+      hash = (53 * hash) + getDataStream().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6530,6 +6780,8 @@ public final class LogGroupServiceOuterClass {
           retentionPeriod_ = null;
           retentionPeriodBuilder_ = null;
         }
+        dataStream_ = "";
+
         return this;
       }
 
@@ -6573,6 +6825,7 @@ public final class LogGroupServiceOuterClass {
         } else {
           result.retentionPeriod_ = retentionPeriodBuilder_.build();
         }
+        result.dataStream_ = dataStream_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -6641,6 +6894,10 @@ public final class LogGroupServiceOuterClass {
             other.internalGetLabels());
         if (other.hasRetentionPeriod()) {
           mergeRetentionPeriod(other.getRetentionPeriod());
+        }
+        if (!other.getDataStream().isEmpty()) {
+          dataStream_ = other.dataStream_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7431,6 +7688,95 @@ public final class LogGroupServiceOuterClass {
           retentionPeriod_ = null;
         }
         return retentionPeriodBuilder_;
+      }
+
+      private java.lang.Object dataStream_ = "";
+      /**
+       * <pre>
+       * If specified, log records will be written to this data stream
+       * </pre>
+       *
+       * <code>string data_stream = 7 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       */
+      public java.lang.String getDataStream() {
+        java.lang.Object ref = dataStream_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dataStream_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * If specified, log records will be written to this data stream
+       * </pre>
+       *
+       * <code>string data_stream = 7 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getDataStreamBytes() {
+        java.lang.Object ref = dataStream_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dataStream_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * If specified, log records will be written to this data stream
+       * </pre>
+       *
+       * <code>string data_stream = 7 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       */
+      public Builder setDataStream(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        dataStream_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If specified, log records will be written to this data stream
+       * </pre>
+       *
+       * <code>string data_stream = 7 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       */
+      public Builder clearDataStream() {
+        
+        dataStream_ = getDefaultInstance().getDataStream();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If specified, log records will be written to this data stream
+       * </pre>
+       *
+       * <code>string data_stream = 7 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       */
+      public Builder setDataStreamBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        dataStream_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13980,7 +14326,7 @@ public final class LogGroupServiceOuterClass {
       "_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB" +
       "\n\212\3101\006<=1000\"c\n\025ListLogGroupsResponse\0221\n\006" +
       "groups\030\001 \003(\0132!.yandex.cloud.logging.v1.L" +
-      "ogGroup\022\027\n\017next_page_token\030\002 \001(\t\"\200\003\n\025Cre" +
+      "ogGroup\022\027\n\017next_page_token\030\002 \001(\t\"\240\003\n\025Cre" +
       "ateLogGroupRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350" +
       "\3071\001\212\3101\004<=64\0224\n\004name\030\002 \001(\tB&\362\3071\"([a-z]([-" +
       "a-z0-9]{1,61}[a-z0-9])?)?\022\036\n\013description" +
@@ -13989,89 +14335,91 @@ public final class LogGroupServiceOuterClass {
       "st.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0" +
       "-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022" +
       "3\n\020retention_period\030\005 \001(\0132\031.google.proto" +
-      "buf.Duration\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\".\n\026CreateLogGroupMet" +
-      "adata\022\024\n\014log_group_id\030\001 \001(\t\"\264\003\n\025UpdateLo" +
-      "gGroupRequest\022\"\n\014log_group_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=64\022/\n\013update_mask\030\002 \001(\0132\032.google." +
-      "protobuf.FieldMask\0224\n\004name\030\003 \001(\tB&\362\3071\"([" +
-      "a-z]([-a-z0-9]{1,61}[a-z0-9])?)?\022\036\n\013desc" +
-      "ription\030\004 \001(\tB\t\212\3101\005<=256\022\213\001\n\006labels\030\005 \003(" +
-      "\0132:.yandex.cloud.logging.v1.UpdateLogGro" +
-      "upRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362" +
-      "\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-" +
-      "9a-z]*\0223\n\020retention_period\030\006 \001(\0132\031.googl" +
-      "e.protobuf.Duration\032-\n\013LabelsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\".\n\026UpdateLogG" +
-      "roupMetadata\022\024\n\014log_group_id\030\001 \001(\t\";\n\025De" +
-      "leteLogGroupRequest\022\"\n\014log_group_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=64\".\n\026DeleteLogGroupMetadat" +
-      "a\022\024\n\014log_group_id\030\001 \001(\t\"S\n\024ListResources" +
-      "Request\022\"\n\014log_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=64\022\027\n\004type\030\002 \001(\tB\t\212\3101\005<=256\"U\n\025ListReso" +
-      "urcesResponse\022<\n\tresources\030\001 \003(\0132).yande" +
-      "x.cloud.logging.v1.LogGroupResource\"\225\001\n\025" +
-      "ListOperationsRequest\022\"\n\014log_group_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=64\022\035\n\tpage_size\030\002 \001(\003B\n\372\307" +
-      "1\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022" +
-      "\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"h\n\026ListOpera" +
-      "tionsResponse\0225\n\noperations\030\001 \003(\0132!.yand" +
-      "ex.cloud.operation.Operation\022\027\n\017next_pag" +
-      "e_token\030\002 \001(\t\"P\n\030GetLogGroupStatsRespons" +
-      "e\022\024\n\014log_group_id\030\001 \001(\t\022\r\n\005bytes\030\002 \001(\003\022\017" +
-      "\n\007records\030\003 \001(\0032\310\017\n\017LogGroupService\022\203\001\n\003" +
-      "Get\022+.yandex.cloud.logging.v1.GetLogGrou" +
-      "pRequest\032!.yandex.cloud.logging.v1.LogGr" +
-      "oup\",\202\323\344\223\002&\022$/logging/v1/logGroups/{log_" +
-      "group_id}\022\240\001\n\005Stats\0220.yandex.cloud.loggi" +
-      "ng.v1.GetLogGroupStatsRequest\0321.yandex.c" +
-      "loud.logging.v1.GetLogGroupStatsResponse" +
-      "\"2\202\323\344\223\002,\022*/logging/v1/logGroups/{log_gro" +
-      "up_id}/stats\022\204\001\n\004List\022-.yandex.cloud.log" +
-      "ging.v1.ListLogGroupsRequest\032..yandex.cl" +
-      "oud.logging.v1.ListLogGroupsResponse\"\035\202\323" +
-      "\344\223\002\027\022\025/logging/v1/logGroups\022\243\001\n\006Create\022." +
-      ".yandex.cloud.logging.v1.CreateLogGroupR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"F\202\323\344\223\002\032\"\025/logging/v1/logGroups:\001*\262\322*\"\n" +
-      "\026CreateLogGroupMetadata\022\010LogGroup\022\262\001\n\006Up" +
-      "date\022..yandex.cloud.logging.v1.UpdateLog" +
-      "GroupRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"U\202\323\344\223\002)2$/logging/v1/logGroups/{" +
-      "log_group_id}:\001*\262\322*\"\n\026UpdateLogGroupMeta" +
-      "data\022\010LogGroup\022\274\001\n\006Delete\022..yandex.cloud" +
-      ".logging.v1.DeleteLogGroupRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"_\202\323\344\223\002&*$/l" +
-      "ogging/v1/logGroups/{log_group_id}\262\322*/\n\026" +
-      "DeleteLogGroupMetadata\022\025google.protobuf." +
-      "Empty\022\252\001\n\rListResources\022-.yandex.cloud.l" +
-      "ogging.v1.ListResourcesRequest\032..yandex." +
-      "cloud.logging.v1.ListResourcesResponse\":" +
-      "\202\323\344\223\0024\0222/logging/v1/logGroups/{log_group" +
-      "_id}:listResources\022\252\001\n\016ListOperations\022.." +
-      "yandex.cloud.logging.v1.ListOperationsRe" +
-      "quest\032/.yandex.cloud.logging.v1.ListOper" +
-      "ationsResponse\"7\202\323\344\223\0021\022//logging/v1/logG" +
-      "roups/{log_group_id}/operations\022\265\001\n\022List" +
-      "AccessBindings\022..yandex.cloud.access.Lis" +
-      "tAccessBindingsRequest\032/.yandex.cloud.ac" +
-      "cess.ListAccessBindingsResponse\">\202\323\344\223\0028\022" +
-      "6/logging/v1/logGroups/{resource_id}:lis" +
-      "tAccessBindings\022\344\001\n\021SetAccessBindings\022-." +
-      "yandex.cloud.access.SetAccessBindingsReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "}\202\323\344\223\002:\"5/logging/v1/logGroups/{resource" +
-      "_id}:setAccessBindings:\001*\262\322*9\n access.Se" +
-      "tAccessBindingsMetadata\022\025google.protobuf" +
-      ".Empty\022\361\001\n\024UpdateAccessBindings\0220.yandex" +
-      ".cloud.access.UpdateAccessBindingsReques" +
-      "t\032!.yandex.cloud.operation.Operation\"\203\001\202" +
-      "\323\344\223\002=28/logging/v1/logGroups/{resource_i" +
-      "d}:updateAccessBindings:\001*\262\322*<\n#access.U" +
-      "pdateAccessBindingsMetadata\022\025google.prot" +
-      "obuf.EmptyBb\n\033yandex.cloud.api.logging.v" +
-      "1ZCgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/logging/v1;loggingb\006proto3"
+      "buf.Duration\022\036\n\013data_stream\030\006 \001(\tB\t\212\3101\005<" +
+      "=512\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\".\n\026CreateLogGroupMetadata\022\024\n" +
+      "\014log_group_id\030\001 \001(\t\"\324\003\n\025UpdateLogGroupRe" +
+      "quest\022\"\n\014log_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=6" +
+      "4\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf" +
+      ".FieldMask\0224\n\004name\030\003 \001(\tB&\362\3071\"([a-z]([-a" +
+      "-z0-9]{1,61}[a-z0-9])?)?\022\036\n\013description\030" +
+      "\004 \001(\tB\t\212\3101\005<=256\022\213\001\n\006labels\030\005 \003(\0132:.yand" +
+      "ex.cloud.logging.v1.UpdateLogGroupReques" +
+      "t.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-" +
+      "9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\0223" +
+      "\n\020retention_period\030\006 \001(\0132\031.google.protob" +
+      "uf.Duration\022\036\n\013data_stream\030\007 \001(\tB\t\212\3101\005<=" +
+      "512\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\".\n\026UpdateLogGroupMetadata\022\024\n\014" +
+      "log_group_id\030\001 \001(\t\";\n\025DeleteLogGroupRequ" +
+      "est\022\"\n\014log_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\"" +
+      ".\n\026DeleteLogGroupMetadata\022\024\n\014log_group_i" +
+      "d\030\001 \001(\t\"S\n\024ListResourcesRequest\022\"\n\014log_g" +
+      "roup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022\027\n\004type\030\002 \001(" +
+      "\tB\t\212\3101\005<=256\"U\n\025ListResourcesResponse\022<\n" +
+      "\tresources\030\001 \003(\0132).yandex.cloud.logging." +
+      "v1.LogGroupResource\"\225\001\n\025ListOperationsRe" +
+      "quest\022\"\n\014log_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=6" +
+      "4\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage" +
+      "_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB" +
+      "\n\212\3101\006<=1000\"h\n\026ListOperationsResponse\0225\n" +
+      "\noperations\030\001 \003(\0132!.yandex.cloud.operati" +
+      "on.Operation\022\027\n\017next_page_token\030\002 \001(\t\"P\n" +
+      "\030GetLogGroupStatsResponse\022\024\n\014log_group_i" +
+      "d\030\001 \001(\t\022\r\n\005bytes\030\002 \001(\003\022\017\n\007records\030\003 \001(\0032" +
+      "\310\017\n\017LogGroupService\022\203\001\n\003Get\022+.yandex.clo" +
+      "ud.logging.v1.GetLogGroupRequest\032!.yande" +
+      "x.cloud.logging.v1.LogGroup\",\202\323\344\223\002&\022$/lo" +
+      "gging/v1/logGroups/{log_group_id}\022\240\001\n\005St" +
+      "ats\0220.yandex.cloud.logging.v1.GetLogGrou" +
+      "pStatsRequest\0321.yandex.cloud.logging.v1." +
+      "GetLogGroupStatsResponse\"2\202\323\344\223\002,\022*/loggi" +
+      "ng/v1/logGroups/{log_group_id}/stats\022\204\001\n" +
+      "\004List\022-.yandex.cloud.logging.v1.ListLogG" +
+      "roupsRequest\032..yandex.cloud.logging.v1.L" +
+      "istLogGroupsResponse\"\035\202\323\344\223\002\027\022\025/logging/v" +
+      "1/logGroups\022\243\001\n\006Create\022..yandex.cloud.lo" +
+      "gging.v1.CreateLogGroupRequest\032!.yandex." +
+      "cloud.operation.Operation\"F\202\323\344\223\002\032\"\025/logg" +
+      "ing/v1/logGroups:\001*\262\322*\"\n\026CreateLogGroupM" +
+      "etadata\022\010LogGroup\022\262\001\n\006Update\022..yandex.cl" +
+      "oud.logging.v1.UpdateLogGroupRequest\032!.y" +
+      "andex.cloud.operation.Operation\"U\202\323\344\223\002)2" +
+      "$/logging/v1/logGroups/{log_group_id}:\001*" +
+      "\262\322*\"\n\026UpdateLogGroupMetadata\022\010LogGroup\022\274" +
+      "\001\n\006Delete\022..yandex.cloud.logging.v1.Dele" +
+      "teLogGroupRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"_\202\323\344\223\002&*$/logging/v1/logGro" +
+      "ups/{log_group_id}\262\322*/\n\026DeleteLogGroupMe" +
+      "tadata\022\025google.protobuf.Empty\022\252\001\n\rListRe" +
+      "sources\022-.yandex.cloud.logging.v1.ListRe" +
+      "sourcesRequest\032..yandex.cloud.logging.v1" +
+      ".ListResourcesResponse\":\202\323\344\223\0024\0222/logging" +
+      "/v1/logGroups/{log_group_id}:listResourc" +
+      "es\022\252\001\n\016ListOperations\022..yandex.cloud.log" +
+      "ging.v1.ListOperationsRequest\032/.yandex.c" +
+      "loud.logging.v1.ListOperationsResponse\"7" +
+      "\202\323\344\223\0021\022//logging/v1/logGroups/{log_group" +
+      "_id}/operations\022\265\001\n\022ListAccessBindings\022." +
+      ".yandex.cloud.access.ListAccessBindingsR" +
+      "equest\032/.yandex.cloud.access.ListAccessB" +
+      "indingsResponse\">\202\323\344\223\0028\0226/logging/v1/log" +
+      "Groups/{resource_id}:listAccessBindings\022" +
+      "\344\001\n\021SetAccessBindings\022-.yandex.cloud.acc" +
+      "ess.SetAccessBindingsRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"}\202\323\344\223\002:\"5/loggin" +
+      "g/v1/logGroups/{resource_id}:setAccessBi" +
+      "ndings:\001*\262\322*9\n access.SetAccessBindingsM" +
+      "etadata\022\025google.protobuf.Empty\022\361\001\n\024Updat" +
+      "eAccessBindings\0220.yandex.cloud.access.Up" +
+      "dateAccessBindingsRequest\032!.yandex.cloud" +
+      ".operation.Operation\"\203\001\202\323\344\223\002=28/logging/" +
+      "v1/logGroups/{resource_id}:updateAccessB" +
+      "indings:\001*\262\322*<\n#access.UpdateAccessBindi" +
+      "ngsMetadata\022\025google.protobuf.EmptyBb\n\033ya" +
+      "ndex.cloud.api.logging.v1ZCgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/logg" +
+      "ing/v1;loggingb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -14123,7 +14471,7 @@ public final class LogGroupServiceOuterClass {
     internal_static_yandex_cloud_logging_v1_CreateLogGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_CreateLogGroupRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "RetentionPeriod", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "RetentionPeriod", "DataStream", });
     internal_static_yandex_cloud_logging_v1_CreateLogGroupRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_logging_v1_CreateLogGroupRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_logging_v1_CreateLogGroupRequest_LabelsEntry_fieldAccessorTable = new
@@ -14141,7 +14489,7 @@ public final class LogGroupServiceOuterClass {
     internal_static_yandex_cloud_logging_v1_UpdateLogGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_UpdateLogGroupRequest_descriptor,
-        new java.lang.String[] { "LogGroupId", "UpdateMask", "Name", "Description", "Labels", "RetentionPeriod", });
+        new java.lang.String[] { "LogGroupId", "UpdateMask", "Name", "Description", "Labels", "RetentionPeriod", "DataStream", });
     internal_static_yandex_cloud_logging_v1_UpdateLogGroupRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_logging_v1_UpdateLogGroupRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_logging_v1_UpdateLogGroupRequest_LabelsEntry_fieldAccessorTable = new
