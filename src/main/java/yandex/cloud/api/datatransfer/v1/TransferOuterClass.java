@@ -360,6 +360,40 @@ public final class TransferOuterClass {
         getDescriptionBytes();
 
     /**
+     * <code>map&lt;string, string&gt; labels = 6;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <code>map&lt;string, string&gt; labels = 6;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <code>map&lt;string, string&gt; labels = 6;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <code>map&lt;string, string&gt; labels = 6;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; labels = 6;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    /**
      * <code>.yandex.cloud.datatransfer.v1.Endpoint source = 7;</code>
      */
     boolean hasSource();
@@ -483,6 +517,19 @@ public final class TransferOuterClass {
               description_ = s;
               break;
             }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000010;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             case 58: {
               yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint.Builder subBuilder = null;
               if (source_ != null) {
@@ -551,6 +598,18 @@ public final class TransferOuterClass {
       return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_Transfer_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 6:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -559,6 +618,7 @@ public final class TransferOuterClass {
               yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer.class, yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -693,6 +753,82 @@ public final class TransferOuterClass {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 6;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_Transfer_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 6;</code>
+     */
+
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 6;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 6;</code>
+     */
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 6;</code>
+     */
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
     }
 
     public static final int SOURCE_FIELD_NUMBER = 7;
@@ -831,6 +967,12 @@ public final class TransferOuterClass {
       if (!getDescriptionBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          6);
       if (source_ != null) {
         output.writeMessage(7, getSource());
       }
@@ -866,6 +1008,16 @@ public final class TransferOuterClass {
       }
       if (!getDescriptionBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(6, labels__);
       }
       if (source_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -910,6 +1062,8 @@ public final class TransferOuterClass {
           .equals(other.getName());
       result = result && getDescription()
           .equals(other.getDescription());
+      result = result && internalGetLabels().equals(
+          other.internalGetLabels());
       result = result && (hasSource() == other.hasSource());
       if (hasSource()) {
         result = result && getSource()
@@ -943,6 +1097,10 @@ public final class TransferOuterClass {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       if (hasSource()) {
         hash = (37 * hash) + SOURCE_FIELD_NUMBER;
         hash = (53 * hash) + getSource().hashCode();
@@ -1064,6 +1222,28 @@ public final class TransferOuterClass {
         return yandex.cloud.api.datatransfer.v1.TransferOuterClass.internal_static_yandex_cloud_datatransfer_v1_Transfer_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 6:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 6:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -1098,6 +1278,7 @@ public final class TransferOuterClass {
 
         description_ = "";
 
+        internalGetMutableLabels().clear();
         if (sourceBuilder_ == null) {
           source_ = null;
         } else {
@@ -1142,10 +1323,14 @@ public final class TransferOuterClass {
       @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer buildPartial() {
         yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer result = new yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.id_ = id_;
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.description_ = description_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         if (sourceBuilder_ == null) {
           result.source_ = source_;
         } else {
@@ -1159,6 +1344,7 @@ public final class TransferOuterClass {
         result.status_ = status_;
         result.type_ = type_;
         result.warning_ = warning_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -1223,6 +1409,8 @@ public final class TransferOuterClass {
           description_ = other.description_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         if (other.hasSource()) {
           mergeSource(other.getSource());
         }
@@ -1267,6 +1455,7 @@ public final class TransferOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -1541,6 +1730,129 @@ public final class TransferOuterClass {
         
         description_ = value;
         onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 6;</code>
+       */
+
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 6;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 6;</code>
+       */
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 6;</code>
+       */
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 6;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 6;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 6;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
         return this;
       }
 
@@ -1994,6 +2306,11 @@ public final class TransferOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datatransfer_v1_Transfer_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_Transfer_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_Transfer_LabelsEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2006,25 +2323,27 @@ public final class TransferOuterClass {
       "\n+yandex/cloud/datatransfer/v1/transfer." +
       "proto\022\034yandex.cloud.datatransfer.v1\032+yan" +
       "dex/cloud/datatransfer/v1/endpoint.proto" +
-      "\"\305\002\n\010Transfer\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002" +
+      "\"\270\003\n\010Transfer\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002" +
       " \001(\t\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022" +
-      "6\n\006source\030\007 \001(\0132&.yandex.cloud.datatrans" +
-      "fer.v1.Endpoint\0226\n\006target\030\010 \001(\0132&.yandex" +
-      ".cloud.datatransfer.v1.Endpoint\022<\n\006statu" +
-      "s\030\n \001(\0162,.yandex.cloud.datatransfer.v1.T" +
-      "ransferStatus\0228\n\004type\030\014 \001(\0162*.yandex.clo" +
-      "ud.datatransfer.v1.TransferType\022\017\n\007warni" +
-      "ng\030\017 \001(\t*p\n\014TransferType\022\035\n\031TRANSFER_TYP" +
-      "E_UNSPECIFIED\020\000\022\032\n\026SNAPSHOT_AND_INCREMEN" +
-      "T\020\001\022\021\n\rSNAPSHOT_ONLY\020\002\022\022\n\016INCREMENT_ONLY" +
-      "\020\003*\233\001\n\016TransferStatus\022\037\n\033TRANSFER_STATUS" +
-      "_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\013\n\007CREATED\020" +
-      "\002\022\013\n\007RUNNING\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPPED\020" +
-      "\005\022\t\n\005ERROR\020\006\022\020\n\014SNAPSHOTTING\020\007\022\010\n\004DONE\020\010" +
-      "Bq\n yandex.cloud.api.datatransfer.v1ZMgi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/datatransfer/v1;datatransferb\006pro" +
-      "to3"
+      "B\n\006labels\030\006 \003(\01322.yandex.cloud.datatrans" +
+      "fer.v1.Transfer.LabelsEntry\0226\n\006source\030\007 " +
+      "\001(\0132&.yandex.cloud.datatransfer.v1.Endpo" +
+      "int\0226\n\006target\030\010 \001(\0132&.yandex.cloud.datat" +
+      "ransfer.v1.Endpoint\022<\n\006status\030\n \001(\0162,.ya" +
+      "ndex.cloud.datatransfer.v1.TransferStatu" +
+      "s\0228\n\004type\030\014 \001(\0162*.yandex.cloud.datatrans" +
+      "fer.v1.TransferType\022\017\n\007warning\030\017 \001(\t\032-\n\013" +
+      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001*p\n\014TransferType\022\035\n\031TRANSFER_TYPE_UNS" +
+      "PECIFIED\020\000\022\032\n\026SNAPSHOT_AND_INCREMENT\020\001\022\021" +
+      "\n\rSNAPSHOT_ONLY\020\002\022\022\n\016INCREMENT_ONLY\020\003*\233\001" +
+      "\n\016TransferStatus\022\037\n\033TRANSFER_STATUS_UNSP" +
+      "ECIFIED\020\000\022\014\n\010CREATING\020\001\022\013\n\007CREATED\020\002\022\013\n\007" +
+      "RUNNING\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPPED\020\005\022\t\n\005" +
+      "ERROR\020\006\022\020\n\014SNAPSHOTTING\020\007\022\010\n\004DONE\020\010Bq\n y" +
+      "andex.cloud.api.datatransfer.v1ZMgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/datatransfer/v1;datatransferb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2044,7 +2363,13 @@ public final class TransferOuterClass {
     internal_static_yandex_cloud_datatransfer_v1_Transfer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_Transfer_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "Name", "Description", "Source", "Target", "Status", "Type", "Warning", });
+        new java.lang.String[] { "Id", "FolderId", "Name", "Description", "Labels", "Source", "Target", "Status", "Type", "Warning", });
+    internal_static_yandex_cloud_datatransfer_v1_Transfer_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_datatransfer_v1_Transfer_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_datatransfer_v1_Transfer_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_Transfer_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     yandex.cloud.api.datatransfer.v1.EndpointOuterClass.getDescriptor();
   }
 

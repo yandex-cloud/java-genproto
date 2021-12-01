@@ -3977,7 +3977,7 @@ public final class Postgres {
 
     /**
      * <pre>
-     * MDB cluster
+     * Managed cluster
      * 
      * Yandex.Cloud Managed PostgreSQL cluster ID
      * </pre>
@@ -3987,7 +3987,7 @@ public final class Postgres {
     java.lang.String getMdbClusterId();
     /**
      * <pre>
-     * MDB cluster
+     * Managed cluster
      * 
      * Yandex.Cloud Managed PostgreSQL cluster ID
      * </pre>
@@ -4162,7 +4162,7 @@ public final class Postgres {
     public static final int MDB_CLUSTER_ID_FIELD_NUMBER = 1;
     /**
      * <pre>
-     * MDB cluster
+     * Managed cluster
      * 
      * Yandex.Cloud Managed PostgreSQL cluster ID
      * </pre>
@@ -4188,7 +4188,7 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * MDB cluster
+     * Managed cluster
      * 
      * Yandex.Cloud Managed PostgreSQL cluster ID
      * </pre>
@@ -4629,7 +4629,7 @@ public final class Postgres {
 
       /**
        * <pre>
-       * MDB cluster
+       * Managed cluster
        * 
        * Yandex.Cloud Managed PostgreSQL cluster ID
        * </pre>
@@ -4655,7 +4655,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * MDB cluster
+       * Managed cluster
        * 
        * Yandex.Cloud Managed PostgreSQL cluster ID
        * </pre>
@@ -4682,7 +4682,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * MDB cluster
+       * Managed cluster
        * 
        * Yandex.Cloud Managed PostgreSQL cluster ID
        * </pre>
@@ -4701,7 +4701,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * MDB cluster
+       * Managed cluster
        * 
        * Yandex.Cloud Managed PostgreSQL cluster ID
        * </pre>
@@ -4718,7 +4718,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * MDB cluster
+       * Managed cluster
        * 
        * Yandex.Cloud Managed PostgreSQL cluster ID
        * </pre>
@@ -5087,7 +5087,7 @@ public final class Postgres {
 
     /**
      * <pre>
-     * List of tables
+     * Included tables
      * 
      * If none or empty list is presented, all tables are replicated. Can contain
      * regular expression.
@@ -5099,7 +5099,7 @@ public final class Postgres {
         getIncludeTablesList();
     /**
      * <pre>
-     * List of tables
+     * Included tables
      * 
      * If none or empty list is presented, all tables are replicated. Can contain
      * regular expression.
@@ -5110,7 +5110,7 @@ public final class Postgres {
     int getIncludeTablesCount();
     /**
      * <pre>
-     * List of tables
+     * Included tables
      * 
      * If none or empty list is presented, all tables are replicated. Can contain
      * regular expression.
@@ -5121,7 +5121,7 @@ public final class Postgres {
     java.lang.String getIncludeTables(int index);
     /**
      * <pre>
-     * List of tables
+     * Included tables
      * 
      * If none or empty list is presented, all tables are replicated. Can contain
      * regular expression.
@@ -5581,7 +5581,7 @@ public final class Postgres {
     private com.google.protobuf.LazyStringList includeTables_;
     /**
      * <pre>
-     * List of tables
+     * Included tables
      * 
      * If none or empty list is presented, all tables are replicated. Can contain
      * regular expression.
@@ -5595,7 +5595,7 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * List of tables
+     * Included tables
      * 
      * If none or empty list is presented, all tables are replicated. Can contain
      * regular expression.
@@ -5608,7 +5608,7 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * List of tables
+     * Included tables
      * 
      * If none or empty list is presented, all tables are replicated. Can contain
      * regular expression.
@@ -5621,7 +5621,7 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * List of tables
+     * Included tables
      * 
      * If none or empty list is presented, all tables are replicated. Can contain
      * regular expression.
@@ -6851,7 +6851,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * List of tables
+       * Included tables
        * 
        * If none or empty list is presented, all tables are replicated. Can contain
        * regular expression.
@@ -6865,7 +6865,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * List of tables
+       * Included tables
        * 
        * If none or empty list is presented, all tables are replicated. Can contain
        * regular expression.
@@ -6878,7 +6878,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * List of tables
+       * Included tables
        * 
        * If none or empty list is presented, all tables are replicated. Can contain
        * regular expression.
@@ -6891,7 +6891,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * List of tables
+       * Included tables
        * 
        * If none or empty list is presented, all tables are replicated. Can contain
        * regular expression.
@@ -6905,7 +6905,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * List of tables
+       * Included tables
        * 
        * If none or empty list is presented, all tables are replicated. Can contain
        * regular expression.
@@ -6925,7 +6925,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * List of tables
+       * Included tables
        * 
        * If none or empty list is presented, all tables are replicated. Can contain
        * regular expression.
@@ -6945,7 +6945,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * List of tables
+       * Included tables
        * 
        * If none or empty list is presented, all tables are replicated. Can contain
        * regular expression.
@@ -6963,7 +6963,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * List of tables
+       * Included tables
        * 
        * If none or empty list is presented, all tables are replicated. Can contain
        * regular expression.
@@ -6979,7 +6979,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * List of tables
+       * Included tables
        * 
        * If none or empty list is presented, all tables are replicated. Can contain
        * regular expression.

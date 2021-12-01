@@ -59,6 +59,38 @@ public final class EndpointServiceGrpc {
      return getGetMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest,
+      yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse> getListMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "List",
+      requestType = yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest.class,
+      responseType = yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest,
+      yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse> getListMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest, yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse> getListMethod;
+    if ((getListMethod = EndpointServiceGrpc.getListMethod) == null) {
+      synchronized (EndpointServiceGrpc.class) {
+        if ((getListMethod = EndpointServiceGrpc.getListMethod) == null) {
+          EndpointServiceGrpc.getListMethod = getListMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest, yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.datatransfer.v1.EndpointService", "List"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new EndpointServiceMethodDescriptorSupplier("List"))
+                  .build();
+          }
+        }
+     }
+     return getListMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.CreateEndpointRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
 
@@ -191,6 +223,13 @@ public final class EndpointServiceGrpc {
 
     /**
      */
+    public void list(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void create(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.CreateEndpointRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
@@ -219,6 +258,13 @@ public final class EndpointServiceGrpc {
                 yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.GetEndpointRequest,
                 yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint>(
                   this, METHODID_GET)))
+          .addMethod(
+            getListMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest,
+                yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse>(
+                  this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
             asyncUnaryCall(
@@ -268,6 +314,14 @@ public final class EndpointServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void list(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -322,6 +376,13 @@ public final class EndpointServiceGrpc {
 
     /**
      */
+    public yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse list(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getListMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.CreateEndpointRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
@@ -370,6 +431,14 @@ public final class EndpointServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse> list(
+        yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getListMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.CreateEndpointRequest request) {
       return futureUnaryCall(
@@ -394,9 +463,10 @@ public final class EndpointServiceGrpc {
   }
 
   private static final int METHODID_GET = 0;
-  private static final int METHODID_CREATE = 1;
-  private static final int METHODID_UPDATE = 2;
-  private static final int METHODID_DELETE = 3;
+  private static final int METHODID_LIST = 1;
+  private static final int METHODID_CREATE = 2;
+  private static final int METHODID_UPDATE = 3;
+  private static final int METHODID_DELETE = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -418,6 +488,10 @@ public final class EndpointServiceGrpc {
         case METHODID_GET:
           serviceImpl.get((yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.GetEndpointRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint>) responseObserver);
+          break;
+        case METHODID_LIST:
+          serviceImpl.list((yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse>) responseObserver);
           break;
         case METHODID_CREATE:
           serviceImpl.create((yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.CreateEndpointRequest) request,
@@ -493,6 +567,7 @@ public final class EndpointServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new EndpointServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
+              .addMethod(getListMethod())
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())

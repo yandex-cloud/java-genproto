@@ -22816,7 +22816,7 @@ public final class LoadBalancerServiceOuterClass {
 
     /**
      * <pre>
-     * HTTPS (HTTP over TLS) listener settings.
+     * TLS listener settings.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -22824,7 +22824,7 @@ public final class LoadBalancerServiceOuterClass {
     boolean hasTls();
     /**
      * <pre>
-     * HTTPS (HTTP over TLS) listener settings.
+     * TLS listener settings.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -22832,12 +22832,37 @@ public final class LoadBalancerServiceOuterClass {
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener getTls();
     /**
      * <pre>
-     * HTTPS (HTTP over TLS) listener settings.
+     * TLS listener settings.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListenerOrBuilder getTlsOrBuilder();
+
+    /**
+     * <pre>
+     * TCP listener settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+     */
+    boolean hasStream();
+    /**
+     * <pre>
+     * TCP listener settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener getStream();
+    /**
+     * <pre>
+     * TCP listener settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListenerOrBuilder getStreamOrBuilder();
 
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListenerSpec.ListenerCase getListenerCase();
   }
@@ -22925,6 +22950,20 @@ public final class LoadBalancerServiceOuterClass {
               listenerCase_ = 4;
               break;
             }
+            case 42: {
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.Builder subBuilder = null;
+              if (listenerCase_ == 5) {
+                subBuilder = ((yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_).toBuilder();
+              }
+              listener_ =
+                  input.readMessage(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_);
+                listener_ = subBuilder.buildPartial();
+              }
+              listenerCase_ = 5;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -22967,6 +23006,7 @@ public final class LoadBalancerServiceOuterClass {
         implements com.google.protobuf.Internal.EnumLite {
       HTTP(3),
       TLS(4),
+      STREAM(5),
       LISTENER_NOT_SET(0);
       private final int value;
       private ListenerCase(int value) {
@@ -22984,6 +23024,7 @@ public final class LoadBalancerServiceOuterClass {
         switch (value) {
           case 3: return HTTP;
           case 4: return TLS;
+          case 5: return STREAM;
           case 0: return LISTENER_NOT_SET;
           default: return null;
         }
@@ -23142,7 +23183,7 @@ public final class LoadBalancerServiceOuterClass {
     public static final int TLS_FIELD_NUMBER = 4;
     /**
      * <pre>
-     * HTTPS (HTTP over TLS) listener settings.
+     * TLS listener settings.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -23152,7 +23193,7 @@ public final class LoadBalancerServiceOuterClass {
     }
     /**
      * <pre>
-     * HTTPS (HTTP over TLS) listener settings.
+     * TLS listener settings.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -23165,7 +23206,7 @@ public final class LoadBalancerServiceOuterClass {
     }
     /**
      * <pre>
-     * HTTPS (HTTP over TLS) listener settings.
+     * TLS listener settings.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -23175,6 +23216,44 @@ public final class LoadBalancerServiceOuterClass {
          return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener) listener_;
       }
       return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener.getDefaultInstance();
+    }
+
+    public static final int STREAM_FIELD_NUMBER = 5;
+    /**
+     * <pre>
+     * TCP listener settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+     */
+    public boolean hasStream() {
+      return listenerCase_ == 5;
+    }
+    /**
+     * <pre>
+     * TCP listener settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener getStream() {
+      if (listenerCase_ == 5) {
+         return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * TCP listener settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListenerOrBuilder getStreamOrBuilder() {
+      if (listenerCase_ == 5) {
+         return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -23203,6 +23282,9 @@ public final class LoadBalancerServiceOuterClass {
       if (listenerCase_ == 4) {
         output.writeMessage(4, (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener) listener_);
       }
+      if (listenerCase_ == 5) {
+        output.writeMessage(5, (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -23226,6 +23308,10 @@ public final class LoadBalancerServiceOuterClass {
       if (listenerCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener) listener_);
+      }
+      if (listenerCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -23259,6 +23345,10 @@ public final class LoadBalancerServiceOuterClass {
           result = result && getTls()
               .equals(other.getTls());
           break;
+        case 5:
+          result = result && getStream()
+              .equals(other.getStream());
+          break;
         case 0:
         default:
       }
@@ -23287,6 +23377,10 @@ public final class LoadBalancerServiceOuterClass {
         case 4:
           hash = (37 * hash) + TLS_FIELD_NUMBER;
           hash = (53 * hash) + getTls().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + STREAM_FIELD_NUMBER;
+          hash = (53 * hash) + getStream().hashCode();
           break;
         case 0:
         default:
@@ -23487,6 +23581,13 @@ public final class LoadBalancerServiceOuterClass {
             result.listener_ = tlsBuilder_.build();
           }
         }
+        if (listenerCase_ == 5) {
+          if (streamBuilder_ == null) {
+            result.listener_ = listener_;
+          } else {
+            result.listener_ = streamBuilder_.build();
+          }
+        }
         result.bitField0_ = to_bitField0_;
         result.listenerCase_ = listenerCase_;
         onBuilt();
@@ -23574,6 +23675,10 @@ public final class LoadBalancerServiceOuterClass {
           }
           case TLS: {
             mergeTls(other.getTls());
+            break;
+          }
+          case STREAM: {
+            mergeStream(other.getStream());
             break;
           }
           case LISTENER_NOT_SET: {
@@ -24220,7 +24325,7 @@ public final class LoadBalancerServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListenerOrBuilder> tlsBuilder_;
       /**
        * <pre>
-       * HTTPS (HTTP over TLS) listener settings.
+       * TLS listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -24230,7 +24335,7 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * HTTPS (HTTP over TLS) listener settings.
+       * TLS listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -24250,7 +24355,7 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * HTTPS (HTTP over TLS) listener settings.
+       * TLS listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -24270,7 +24375,7 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * HTTPS (HTTP over TLS) listener settings.
+       * TLS listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -24288,7 +24393,7 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * HTTPS (HTTP over TLS) listener settings.
+       * TLS listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -24314,7 +24419,7 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * HTTPS (HTTP over TLS) listener settings.
+       * TLS listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -24337,7 +24442,7 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * HTTPS (HTTP over TLS) listener settings.
+       * TLS listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -24347,7 +24452,7 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * HTTPS (HTTP over TLS) listener settings.
+       * TLS listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -24364,7 +24469,7 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * HTTPS (HTTP over TLS) listener settings.
+       * TLS listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -24386,6 +24491,178 @@ public final class LoadBalancerServiceOuterClass {
         listenerCase_ = 4;
         onChanged();;
         return tlsBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListenerOrBuilder> streamBuilder_;
+      /**
+       * <pre>
+       * TCP listener settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+       */
+      public boolean hasStream() {
+        return listenerCase_ == 5;
+      }
+      /**
+       * <pre>
+       * TCP listener settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener getStream() {
+        if (streamBuilder_ == null) {
+          if (listenerCase_ == 5) {
+            return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.getDefaultInstance();
+        } else {
+          if (listenerCase_ == 5) {
+            return streamBuilder_.getMessage();
+          }
+          return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * TCP listener settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+       */
+      public Builder setStream(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener value) {
+        if (streamBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          listener_ = value;
+          onChanged();
+        } else {
+          streamBuilder_.setMessage(value);
+        }
+        listenerCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * TCP listener settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+       */
+      public Builder setStream(
+          yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.Builder builderForValue) {
+        if (streamBuilder_ == null) {
+          listener_ = builderForValue.build();
+          onChanged();
+        } else {
+          streamBuilder_.setMessage(builderForValue.build());
+        }
+        listenerCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * TCP listener settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+       */
+      public Builder mergeStream(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener value) {
+        if (streamBuilder_ == null) {
+          if (listenerCase_ == 5 &&
+              listener_ != yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.getDefaultInstance()) {
+            listener_ = yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.newBuilder((yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            listener_ = value;
+          }
+          onChanged();
+        } else {
+          if (listenerCase_ == 5) {
+            streamBuilder_.mergeFrom(value);
+          }
+          streamBuilder_.setMessage(value);
+        }
+        listenerCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * TCP listener settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+       */
+      public Builder clearStream() {
+        if (streamBuilder_ == null) {
+          if (listenerCase_ == 5) {
+            listenerCase_ = 0;
+            listener_ = null;
+            onChanged();
+          }
+        } else {
+          if (listenerCase_ == 5) {
+            listenerCase_ = 0;
+            listener_ = null;
+          }
+          streamBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TCP listener settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.Builder getStreamBuilder() {
+        return getStreamFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * TCP listener settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListenerOrBuilder getStreamOrBuilder() {
+        if ((listenerCase_ == 5) && (streamBuilder_ != null)) {
+          return streamBuilder_.getMessageOrBuilder();
+        } else {
+          if (listenerCase_ == 5) {
+            return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * TCP listener settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListenerOrBuilder> 
+          getStreamFieldBuilder() {
+        if (streamBuilder_ == null) {
+          if (!(listenerCase_ == 5)) {
+            listener_ = yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.getDefaultInstance();
+          }
+          streamBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListenerOrBuilder>(
+                  (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_,
+                  getParentForChildren(),
+                  isClean());
+          listener_ = null;
+        }
+        listenerCase_ = 5;
+        onChanged();;
+        return streamBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -35482,134 +35759,136 @@ public final class LoadBalancerServiceOuterClass {
       "pv6AddressSpec\022\017\n\007address\030\001 \001(\t\"}\n\014Endpo" +
       "intSpec\022K\n\raddress_specs\030\001 \003(\0132,.yandex." +
       "cloud.apploadbalancer.v1.AddressSpecB\006\202\310" +
-      "1\002>0\022 \n\005ports\030\002 \003(\003B\021\202\3101\002>0\372\3071\0071-65535\"\242" +
+      "1\002>0\022 \n\005ports\030\002 \003(\003B\021\202\3101\002>0\372\3071\0071-65535\"\345" +
       "\002\n\014ListenerSpec\0225\n\004name\030\001 \001(\tB\'\350\3071\001\362\3071\037[" +
       "a-z]([-a-z0-9]{0,61}[a-z0-9])?\022M\n\016endpoi" +
       "nt_specs\030\002 \003(\0132-.yandex.cloud.apploadbal" +
       "ancer.v1.EndpointSpecB\006\202\3101\002>0\022=\n\004http\030\003 " +
       "\001(\0132-.yandex.cloud.apploadbalancer.v1.Ht" +
       "tpListenerH\000\022;\n\003tls\030\004 \001(\0132,.yandex.cloud" +
-      ".apploadbalancer.v1.TlsListenerH\000B\020\n\010lis" +
-      "tener\022\004\300\3011\001\"w\n\026GetTargetStatesRequest\022\036\n" +
-      "\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\022\036\n\020backend" +
-      "_group_id\030\002 \001(\tB\004\350\3071\001\022\035\n\017target_group_id" +
-      "\030\003 \001(\tB\004\350\3071\001\"^\n\027GetTargetStatesResponse\022" +
-      "C\n\rtarget_states\030\001 \003(\0132,.yandex.cloud.ap" +
-      "ploadbalancer.v1.TargetState\"\307\001\n\022AddSniM" +
-      "atchRequest\022\036\n\020load_balancer_id\030\001 \001(\tB\004\350" +
-      "\3071\001\022\033\n\rlistener_name\030\002 \001(\tB\004\350\3071\001\022\022\n\004name" +
-      "\030\003 \001(\tB\004\350\3071\001\022\034\n\014server_names\030\004 \003(\tB\006\202\3101\002" +
-      ">0\022B\n\007handler\030\005 \001(\0132+.yandex.cloud.applo" +
-      "adbalancer.v1.TlsHandlerB\004\350\3071\001\"^\n\023AddSni" +
-      "MatchMetadata\022\030\n\020load_balancer_id\030\001 \001(\t\022" +
-      "\025\n\rlistener_name\030\002 \001(\t\022\026\n\016sni_match_name" +
-      "\030\003 \001(\t\"r\n\025RemoveSniMatchRequest\022\036\n\020load_" +
-      "balancer_id\030\001 \001(\tB\004\350\3071\001\022\033\n\rlistener_name" +
-      "\030\002 \001(\tB\004\350\3071\001\022\034\n\016sni_match_name\030\003 \001(\tB\004\350\307" +
-      "1\001\"a\n\026RemoveSniMatchMetadata\022\030\n\020load_bal" +
-      "ancer_id\030\001 \001(\t\022\025\n\rlistener_name\030\002 \001(\t\022\026\n" +
-      "\016sni_match_name\030\003 \001(\t\"\373\001\n\025UpdateSniMatch" +
-      "Request\022\036\n\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\022" +
-      "\033\n\rlistener_name\030\002 \001(\tB\004\350\3071\001\022\022\n\004name\030\003 \001" +
-      "(\tB\004\350\3071\001\022/\n\013update_mask\030\004 \001(\0132\032.google.p" +
-      "rotobuf.FieldMask\022\034\n\014server_names\030\005 \003(\tB" +
-      "\006\202\3101\002>0\022B\n\007handler\030\006 \001(\0132+.yandex.cloud." +
-      "apploadbalancer.v1.TlsHandlerB\004\350\3071\001\"a\n\026U" +
-      "pdateSniMatchMetadata\022\030\n\020load_balancer_i" +
-      "d\030\001 \001(\t\022\025\n\rlistener_name\030\002 \001(\t\022\026\n\016sni_ma" +
-      "tch_name\030\003 \001(\t\"\211\001\n!ListLoadBalancerOpera" +
-      "tionsRequest\022&\n\020load_balancer_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1" +
-      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"t\n\"Li" +
-      "stLoadBalancerOperationsResponse\0225\n\noper" +
-      "ations\030\001 \003(\0132!.yandex.cloud.operation.Op" +
-      "eration\022\027\n\017next_page_token\030\002 \001(\t2\353\031\n\023Loa" +
-      "dBalancerService\022\253\001\n\003Get\0227.yandex.cloud." +
-      "apploadbalancer.v1.GetLoadBalancerReques" +
-      "t\032-.yandex.cloud.apploadbalancer.v1.Load" +
-      "Balancer\"<\202\323\344\223\0026\0224/apploadbalancer/v1/lo" +
-      "adBalancers/{load_balancer_id}\022\250\001\n\004List\022" +
-      "9.yandex.cloud.apploadbalancer.v1.ListLo" +
-      "adBalancersRequest\032:.yandex.cloud.apploa" +
-      "dbalancer.v1.ListLoadBalancersResponse\")" +
-      "\202\323\344\223\002#\022!/apploadbalancer/v1/loadBalancer" +
-      "s\022\303\001\n\006Create\022:.yandex.cloud.apploadbalan" +
-      "cer.v1.CreateLoadBalancerRequest\032!.yande" +
-      "x.cloud.operation.Operation\"Z\202\323\344\223\002&\"!/ap" +
-      "ploadbalancer/v1/loadBalancers:\001*\262\322**\n\032C" +
-      "reateLoadBalancerMetadata\022\014LoadBalancer\022" +
-      "\326\001\n\006Update\022:.yandex.cloud.apploadbalance" +
-      "r.v1.UpdateLoadBalancerRequest\032!.yandex." +
-      "cloud.operation.Operation\"m\202\323\344\223\002924/appl" +
-      "oadbalancer/v1/loadBalancers/{load_balan" +
-      "cer_id}:\001*\262\322**\n\032UpdateLoadBalancerMetada" +
-      "ta\022\014LoadBalancer\022\334\001\n\006Delete\022:.yandex.clo" +
-      "ud.apploadbalancer.v1.DeleteLoadBalancer" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"s\202\323\344\223\0026*4/apploadbalancer/v1/loadBala" +
-      "ncers/{load_balancer_id}\262\322*3\n\032DeleteLoad" +
-      "BalancerMetadata\022\025google.protobuf.Empty\022" +
-      "\326\001\n\005Start\0229.yandex.cloud.apploadbalancer" +
-      ".v1.StartLoadBalancerRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"o\202\323\344\223\002<\":/apploa" +
-      "dbalancer/v1/loadBalancers/{load_balance" +
-      "r_id}:start\262\322*)\n\031StartLoadBalancerMetada" +
-      "ta\022\014LoadBalancer\022\322\001\n\004Stop\0228.yandex.cloud" +
-      ".apploadbalancer.v1.StopLoadBalancerRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"m" +
-      "\202\323\344\223\002;\"9/apploadbalancer/v1/loadBalancer" +
-      "s/{load_balancer_id}:stop\262\322*(\n\030StopLoadB" +
-      "alancerMetadata\022\014LoadBalancer\022\331\001\n\013AddLis" +
-      "tener\0223.yandex.cloud.apploadbalancer.v1." +
-      "AddListenerRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"r\202\323\344\223\002E\"@/apploadbalancer/" +
-      "v1/loadBalancers/{load_balancer_id}:addL" +
-      "istener:\001*\262\322*#\n\023AddListenerMetadata\022\014Loa" +
-      "dBalancer\022\345\001\n\016RemoveListener\0226.yandex.cl" +
-      "oud.apploadbalancer.v1.RemoveListenerReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "x\202\323\344\223\002H\"C/apploadbalancer/v1/loadBalance" +
-      "rs/{load_balancer_id}:removeListener:\001*\262" +
-      "\322*&\n\026RemoveListenerMetadata\022\014LoadBalance" +
-      "r\022\345\001\n\016UpdateListener\0226.yandex.cloud.appl" +
-      "oadbalancer.v1.UpdateListenerRequest\032!.y" +
-      "andex.cloud.operation.Operation\"x\202\323\344\223\002H\"" +
-      "C/apploadbalancer/v1/loadBalancers/{load" +
-      "_balancer_id}:updateListener:\001*\262\322*&\n\026Upd" +
-      "ateListenerMetadata\022\014LoadBalancer\022\342\001\n\013Ad" +
-      "dSniMatch\0223.yandex.cloud.apploadbalancer" +
-      ".v1.AddSniMatchRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"{\202\323\344\223\002E\"@/apploadbalan" +
-      "cer/v1/loadBalancers/{load_balancer_id}:" +
-      "addSniMatch:\001*\262\322*,\n\023AddSniMatchMetadata\022" +
-      "\025google.protobuf.Empty\022\357\001\n\016UpdateSniMatc" +
-      "h\0226.yandex.cloud.apploadbalancer.v1.Upda" +
-      "teSniMatchRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"\201\001\202\323\344\223\002H\"C/apploadbalancer/" +
-      "v1/loadBalancers/{load_balancer_id}:upda" +
-      "teSniMatch:\001*\262\322*/\n\026UpdateSniMatchMetadat" +
-      "a\022\025google.protobuf.Empty\022\357\001\n\016RemoveSniMa" +
-      "tch\0226.yandex.cloud.apploadbalancer.v1.Re" +
-      "moveSniMatchRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"\201\001\202\323\344\223\002H\"C/apploadbalance" +
-      "r/v1/loadBalancers/{load_balancer_id}:re" +
-      "moveSniMatch:\001*\262\322*/\n\026RemoveSniMatchMetad" +
-      "ata\022\025google.protobuf.Empty\022\364\001\n\017GetTarget" +
-      "States\0227.yandex.cloud.apploadbalancer.v1" +
-      ".GetTargetStatesRequest\0328.yandex.cloud.a" +
-      "pploadbalancer.v1.GetTargetStatesRespons" +
-      "e\"n\202\323\344\223\002h\022f/apploadbalancer/v1/loadBalan" +
-      "cers/{load_balancer_id}/targetStates/{ba" +
-      "ckend_group_id}/{target_group_id}\022\342\001\n\016Li" +
-      "stOperations\022B.yandex.cloud.apploadbalan" +
-      "cer.v1.ListLoadBalancerOperationsRequest" +
-      "\032C.yandex.cloud.apploadbalancer.v1.ListL" +
-      "oadBalancerOperationsResponse\"G\202\323\344\223\002A\022?/" +
+      ".apploadbalancer.v1.TlsListenerH\000\022A\n\006str" +
+      "eam\030\005 \001(\0132/.yandex.cloud.apploadbalancer" +
+      ".v1.StreamListenerH\000B\020\n\010listener\022\004\300\3011\001\"w" +
+      "\n\026GetTargetStatesRequest\022\036\n\020load_balance" +
+      "r_id\030\001 \001(\tB\004\350\3071\001\022\036\n\020backend_group_id\030\002 \001" +
+      "(\tB\004\350\3071\001\022\035\n\017target_group_id\030\003 \001(\tB\004\350\3071\001\"" +
+      "^\n\027GetTargetStatesResponse\022C\n\rtarget_sta" +
+      "tes\030\001 \003(\0132,.yandex.cloud.apploadbalancer" +
+      ".v1.TargetState\"\307\001\n\022AddSniMatchRequest\022\036" +
+      "\n\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\022\033\n\rlisten" +
+      "er_name\030\002 \001(\tB\004\350\3071\001\022\022\n\004name\030\003 \001(\tB\004\350\3071\001\022" +
+      "\034\n\014server_names\030\004 \003(\tB\006\202\3101\002>0\022B\n\007handler" +
+      "\030\005 \001(\0132+.yandex.cloud.apploadbalancer.v1" +
+      ".TlsHandlerB\004\350\3071\001\"^\n\023AddSniMatchMetadata" +
+      "\022\030\n\020load_balancer_id\030\001 \001(\t\022\025\n\rlistener_n" +
+      "ame\030\002 \001(\t\022\026\n\016sni_match_name\030\003 \001(\t\"r\n\025Rem" +
+      "oveSniMatchRequest\022\036\n\020load_balancer_id\030\001" +
+      " \001(\tB\004\350\3071\001\022\033\n\rlistener_name\030\002 \001(\tB\004\350\3071\001\022" +
+      "\034\n\016sni_match_name\030\003 \001(\tB\004\350\3071\001\"a\n\026RemoveS" +
+      "niMatchMetadata\022\030\n\020load_balancer_id\030\001 \001(" +
+      "\t\022\025\n\rlistener_name\030\002 \001(\t\022\026\n\016sni_match_na" +
+      "me\030\003 \001(\t\"\373\001\n\025UpdateSniMatchRequest\022\036\n\020lo" +
+      "ad_balancer_id\030\001 \001(\tB\004\350\3071\001\022\033\n\rlistener_n" +
+      "ame\030\002 \001(\tB\004\350\3071\001\022\022\n\004name\030\003 \001(\tB\004\350\3071\001\022/\n\013u" +
+      "pdate_mask\030\004 \001(\0132\032.google.protobuf.Field" +
+      "Mask\022\034\n\014server_names\030\005 \003(\tB\006\202\3101\002>0\022B\n\007ha" +
+      "ndler\030\006 \001(\0132+.yandex.cloud.apploadbalanc" +
+      "er.v1.TlsHandlerB\004\350\3071\001\"a\n\026UpdateSniMatch" +
+      "Metadata\022\030\n\020load_balancer_id\030\001 \001(\t\022\025\n\rli" +
+      "stener_name\030\002 \001(\t\022\026\n\016sni_match_name\030\003 \001(" +
+      "\t\"\211\001\n!ListLoadBalancerOperationsRequest\022" +
+      "&\n\020load_balancer_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_t" +
+      "oken\030\003 \001(\tB\t\212\3101\005<=100\"t\n\"ListLoadBalance" +
+      "rOperationsResponse\0225\n\noperations\030\001 \003(\0132" +
+      "!.yandex.cloud.operation.Operation\022\027\n\017ne" +
+      "xt_page_token\030\002 \001(\t2\353\031\n\023LoadBalancerServ" +
+      "ice\022\253\001\n\003Get\0227.yandex.cloud.apploadbalanc" +
+      "er.v1.GetLoadBalancerRequest\032-.yandex.cl" +
+      "oud.apploadbalancer.v1.LoadBalancer\"<\202\323\344" +
+      "\223\0026\0224/apploadbalancer/v1/loadBalancers/{" +
+      "load_balancer_id}\022\250\001\n\004List\0229.yandex.clou" +
+      "d.apploadbalancer.v1.ListLoadBalancersRe" +
+      "quest\032:.yandex.cloud.apploadbalancer.v1." +
+      "ListLoadBalancersResponse\")\202\323\344\223\002#\022!/appl" +
+      "oadbalancer/v1/loadBalancers\022\303\001\n\006Create\022" +
+      ":.yandex.cloud.apploadbalancer.v1.Create" +
+      "LoadBalancerRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"Z\202\323\344\223\002&\"!/apploadbalancer" +
+      "/v1/loadBalancers:\001*\262\322**\n\032CreateLoadBala" +
+      "ncerMetadata\022\014LoadBalancer\022\326\001\n\006Update\022:." +
+      "yandex.cloud.apploadbalancer.v1.UpdateLo" +
+      "adBalancerRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"m\202\323\344\223\002924/apploadbalancer/v" +
+      "1/loadBalancers/{load_balancer_id}:\001*\262\322*" +
+      "*\n\032UpdateLoadBalancerMetadata\022\014LoadBalan" +
+      "cer\022\334\001\n\006Delete\022:.yandex.cloud.apploadbal" +
+      "ancer.v1.DeleteLoadBalancerRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"s\202\323\344\223\0026*4/" +
       "apploadbalancer/v1/loadBalancers/{load_b" +
-      "alancer_id}/operationsBz\n#yandex.cloud.a" +
-      "pi.apploadbalancer.v1ZSgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/apploadb" +
-      "alancer/v1;apploadbalancerb\006proto3"
+      "alancer_id}\262\322*3\n\032DeleteLoadBalancerMetad" +
+      "ata\022\025google.protobuf.Empty\022\326\001\n\005Start\0229.y" +
+      "andex.cloud.apploadbalancer.v1.StartLoad" +
+      "BalancerRequest\032!.yandex.cloud.operation" +
+      ".Operation\"o\202\323\344\223\002<\":/apploadbalancer/v1/" +
+      "loadBalancers/{load_balancer_id}:start\262\322" +
+      "*)\n\031StartLoadBalancerMetadata\022\014LoadBalan" +
+      "cer\022\322\001\n\004Stop\0228.yandex.cloud.apploadbalan" +
+      "cer.v1.StopLoadBalancerRequest\032!.yandex." +
+      "cloud.operation.Operation\"m\202\323\344\223\002;\"9/appl" +
+      "oadbalancer/v1/loadBalancers/{load_balan" +
+      "cer_id}:stop\262\322*(\n\030StopLoadBalancerMetada" +
+      "ta\022\014LoadBalancer\022\331\001\n\013AddListener\0223.yande" +
+      "x.cloud.apploadbalancer.v1.AddListenerRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"r\202\323\344\223\002E\"@/apploadbalancer/v1/loadBalanc" +
+      "ers/{load_balancer_id}:addListener:\001*\262\322*" +
+      "#\n\023AddListenerMetadata\022\014LoadBalancer\022\345\001\n" +
+      "\016RemoveListener\0226.yandex.cloud.apploadba" +
+      "lancer.v1.RemoveListenerRequest\032!.yandex" +
+      ".cloud.operation.Operation\"x\202\323\344\223\002H\"C/app" +
+      "loadbalancer/v1/loadBalancers/{load_bala" +
+      "ncer_id}:removeListener:\001*\262\322*&\n\026RemoveLi" +
+      "stenerMetadata\022\014LoadBalancer\022\345\001\n\016UpdateL" +
+      "istener\0226.yandex.cloud.apploadbalancer.v" +
+      "1.UpdateListenerRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"x\202\323\344\223\002H\"C/apploadbala" +
+      "ncer/v1/loadBalancers/{load_balancer_id}" +
+      ":updateListener:\001*\262\322*&\n\026UpdateListenerMe" +
+      "tadata\022\014LoadBalancer\022\342\001\n\013AddSniMatch\0223.y" +
+      "andex.cloud.apploadbalancer.v1.AddSniMat" +
+      "chRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"{\202\323\344\223\002E\"@/apploadbalancer/v1/loadBa" +
+      "lancers/{load_balancer_id}:addSniMatch:\001" +
+      "*\262\322*,\n\023AddSniMatchMetadata\022\025google.proto" +
+      "buf.Empty\022\357\001\n\016UpdateSniMatch\0226.yandex.cl" +
+      "oud.apploadbalancer.v1.UpdateSniMatchReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "\201\001\202\323\344\223\002H\"C/apploadbalancer/v1/loadBalanc" +
+      "ers/{load_balancer_id}:updateSniMatch:\001*" +
+      "\262\322*/\n\026UpdateSniMatchMetadata\022\025google.pro" +
+      "tobuf.Empty\022\357\001\n\016RemoveSniMatch\0226.yandex." +
+      "cloud.apploadbalancer.v1.RemoveSniMatchR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"\201\001\202\323\344\223\002H\"C/apploadbalancer/v1/loadBala" +
+      "ncers/{load_balancer_id}:removeSniMatch:" +
+      "\001*\262\322*/\n\026RemoveSniMatchMetadata\022\025google.p" +
+      "rotobuf.Empty\022\364\001\n\017GetTargetStates\0227.yand" +
+      "ex.cloud.apploadbalancer.v1.GetTargetSta" +
+      "tesRequest\0328.yandex.cloud.apploadbalance" +
+      "r.v1.GetTargetStatesResponse\"n\202\323\344\223\002h\022f/a" +
+      "pploadbalancer/v1/loadBalancers/{load_ba" +
+      "lancer_id}/targetStates/{backend_group_i" +
+      "d}/{target_group_id}\022\342\001\n\016ListOperations\022" +
+      "B.yandex.cloud.apploadbalancer.v1.ListLo" +
+      "adBalancerOperationsRequest\032C.yandex.clo" +
+      "ud.apploadbalancer.v1.ListLoadBalancerOp" +
+      "erationsResponse\"G\202\323\344\223\002A\022?/apploadbalanc" +
+      "er/v1/loadBalancers/{load_balancer_id}/o" +
+      "perationsBz\n#yandex.cloud.api.apploadbal" +
+      "ancer.v1ZSgithub.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/apploadbalancer/v1;ap" +
+      "ploadbalancerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -35790,7 +36069,7 @@ public final class LoadBalancerServiceOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_ListenerSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_ListenerSpec_descriptor,
-        new java.lang.String[] { "Name", "EndpointSpecs", "Http", "Tls", "Listener", });
+        new java.lang.String[] { "Name", "EndpointSpecs", "Http", "Tls", "Stream", "Listener", });
     internal_static_yandex_cloud_apploadbalancer_v1_GetTargetStatesRequest_descriptor =
       getDescriptor().getMessageTypes().get(25);
     internal_static_yandex_cloud_apploadbalancer_v1_GetTargetStatesRequest_fieldAccessorTable = new

@@ -41,7 +41,7 @@ public final class Mysql {
      * <pre>
      * Database port
      * 
-     * Will be used if the cluster ID is not specified. Default: 6432.
+     * Default: 3306.
      * </pre>
      *
      * <code>int64 port = 2;</code>
@@ -247,7 +247,7 @@ public final class Mysql {
      * <pre>
      * Database port
      * 
-     * Will be used if the cluster ID is not specified. Default: 6432.
+     * Default: 3306.
      * </pre>
      *
      * <code>int64 port = 2;</code>
@@ -829,7 +829,7 @@ public final class Mysql {
        * <pre>
        * Database port
        * 
-       * Will be used if the cluster ID is not specified. Default: 6432.
+       * Default: 3306.
        * </pre>
        *
        * <code>int64 port = 2;</code>
@@ -841,7 +841,7 @@ public final class Mysql {
        * <pre>
        * Database port
        * 
-       * Will be used if the cluster ID is not specified. Default: 6432.
+       * Default: 3306.
        * </pre>
        *
        * <code>int64 port = 2;</code>
@@ -856,7 +856,7 @@ public final class Mysql {
        * <pre>
        * Database port
        * 
-       * Will be used if the cluster ID is not specified. Default: 6432.
+       * Default: 3306.
        * </pre>
        *
        * <code>int64 port = 2;</code>
@@ -1196,7 +1196,7 @@ public final class Mysql {
 
     /**
      * <pre>
-     * MDB cluster
+     * Managed cluster
      * 
      * Yandex.Cloud Managed MySQL cluster ID
      * </pre>
@@ -1206,7 +1206,7 @@ public final class Mysql {
     java.lang.String getMdbClusterId();
     /**
      * <pre>
-     * MDB cluster
+     * Managed cluster
      * 
      * Yandex.Cloud Managed MySQL cluster ID
      * </pre>
@@ -1381,7 +1381,7 @@ public final class Mysql {
     public static final int MDB_CLUSTER_ID_FIELD_NUMBER = 1;
     /**
      * <pre>
-     * MDB cluster
+     * Managed cluster
      * 
      * Yandex.Cloud Managed MySQL cluster ID
      * </pre>
@@ -1407,7 +1407,7 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * MDB cluster
+     * Managed cluster
      * 
      * Yandex.Cloud Managed MySQL cluster ID
      * </pre>
@@ -1848,7 +1848,7 @@ public final class Mysql {
 
       /**
        * <pre>
-       * MDB cluster
+       * Managed cluster
        * 
        * Yandex.Cloud Managed MySQL cluster ID
        * </pre>
@@ -1874,7 +1874,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * MDB cluster
+       * Managed cluster
        * 
        * Yandex.Cloud Managed MySQL cluster ID
        * </pre>
@@ -1901,7 +1901,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * MDB cluster
+       * Managed cluster
        * 
        * Yandex.Cloud Managed MySQL cluster ID
        * </pre>
@@ -1920,7 +1920,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * MDB cluster
+       * Managed cluster
        * 
        * Yandex.Cloud Managed MySQL cluster ID
        * </pre>
@@ -1937,7 +1937,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * MDB cluster
+       * Managed cluster
        * 
        * Yandex.Cloud Managed MySQL cluster ID
        * </pre>

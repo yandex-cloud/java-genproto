@@ -4337,6 +4337,2050 @@ public final class ConnectorServiceOuterClass {
 
   }
 
+  public interface UpdateConnectorRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.UpdateConnectorRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. ID of the Apache Kafka cluster to update a connector in.
+     * To get the cluster ID use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * Required. ID of the Apache Kafka cluster to update a connector in.
+     * To get the cluster ID use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Required. Name of the connector to update.
+     * To get the name of the connector, use a [ConnectorService.List] request.
+     * </pre>
+     *
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    java.lang.String getConnectorName();
+    /**
+     * <pre>
+     * Required. Name of the connector to update.
+     * To get the name of the connector, use a [ConnectorService.List] request.
+     * </pre>
+     *
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    com.google.protobuf.ByteString
+        getConnectorNameBytes();
+
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Connector resource should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     */
+    boolean hasUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Connector resource should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     */
+    com.google.protobuf.FieldMask getUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Connector resource should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     */
+    com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
+
+    /**
+     * <pre>
+     * Required. Configuration of the connector to update.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec connector_spec = 4 [(.yandex.cloud.required) = true];</code>
+     */
+    boolean hasConnectorSpec();
+    /**
+     * <pre>
+     * Required. Configuration of the connector to update.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec connector_spec = 4 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec getConnectorSpec();
+    /**
+     * <pre>
+     * Required. Configuration of the connector to update.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec connector_spec = 4 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpecOrBuilder getConnectorSpecOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.UpdateConnectorRequest}
+   */
+  public  static final class UpdateConnectorRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.UpdateConnectorRequest)
+      UpdateConnectorRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateConnectorRequest.newBuilder() to construct.
+    private UpdateConnectorRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateConnectorRequest() {
+      clusterId_ = "";
+      connectorName_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateConnectorRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              connectorName_ = s;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.FieldMask.Builder subBuilder = null;
+              if (updateMask_ != null) {
+                subBuilder = updateMask_.toBuilder();
+              }
+              updateMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updateMask_);
+                updateMask_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.Builder subBuilder = null;
+              if (connectorSpec_ != null) {
+                subBuilder = connectorSpec_.toBuilder();
+              }
+              connectorSpec_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(connectorSpec_);
+                connectorSpec_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest.class, yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * Required. ID of the Apache Kafka cluster to update a connector in.
+     * To get the cluster ID use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. ID of the Apache Kafka cluster to update a connector in.
+     * To get the cluster ID use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONNECTOR_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object connectorName_;
+    /**
+     * <pre>
+     * Required. Name of the connector to update.
+     * To get the name of the connector, use a [ConnectorService.List] request.
+     * </pre>
+     *
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    public java.lang.String getConnectorName() {
+      java.lang.Object ref = connectorName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectorName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. Name of the connector to update.
+     * To get the name of the connector, use a [ConnectorService.List] request.
+     * </pre>
+     *
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getConnectorNameBytes() {
+      java.lang.Object ref = connectorName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectorName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPDATE_MASK_FIELD_NUMBER = 3;
+    private com.google.protobuf.FieldMask updateMask_;
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Connector resource should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     */
+    public boolean hasUpdateMask() {
+      return updateMask_ != null;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Connector resource should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     */
+    public com.google.protobuf.FieldMask getUpdateMask() {
+      return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Connector resource should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     */
+    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+      return getUpdateMask();
+    }
+
+    public static final int CONNECTOR_SPEC_FIELD_NUMBER = 4;
+    private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec connectorSpec_;
+    /**
+     * <pre>
+     * Required. Configuration of the connector to update.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec connector_spec = 4 [(.yandex.cloud.required) = true];</code>
+     */
+    public boolean hasConnectorSpec() {
+      return connectorSpec_ != null;
+    }
+    /**
+     * <pre>
+     * Required. Configuration of the connector to update.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec connector_spec = 4 [(.yandex.cloud.required) = true];</code>
+     */
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec getConnectorSpec() {
+      return connectorSpec_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.getDefaultInstance() : connectorSpec_;
+    }
+    /**
+     * <pre>
+     * Required. Configuration of the connector to update.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec connector_spec = 4 [(.yandex.cloud.required) = true];</code>
+     */
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpecOrBuilder getConnectorSpecOrBuilder() {
+      return getConnectorSpec();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (!getConnectorNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, connectorName_);
+      }
+      if (updateMask_ != null) {
+        output.writeMessage(3, getUpdateMask());
+      }
+      if (connectorSpec_ != null) {
+        output.writeMessage(4, getConnectorSpec());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (!getConnectorNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, connectorName_);
+      }
+      if (updateMask_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getUpdateMask());
+      }
+      if (connectorSpec_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getConnectorSpec());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest other = (yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && getConnectorName()
+          .equals(other.getConnectorName());
+      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (hasUpdateMask()) {
+        result = result && getUpdateMask()
+            .equals(other.getUpdateMask());
+      }
+      result = result && (hasConnectorSpec() == other.hasConnectorSpec());
+      if (hasConnectorSpec()) {
+        result = result && getConnectorSpec()
+            .equals(other.getConnectorSpec());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + CONNECTOR_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectorName().hashCode();
+      if (hasUpdateMask()) {
+        hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdateMask().hashCode();
+      }
+      if (hasConnectorSpec()) {
+        hash = (37 * hash) + CONNECTOR_SPEC_FIELD_NUMBER;
+        hash = (53 * hash) + getConnectorSpec().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.UpdateConnectorRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.UpdateConnectorRequest)
+        yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest.class, yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        connectorName_ = "";
+
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+        if (connectorSpecBuilder_ == null) {
+          connectorSpec_ = null;
+        } else {
+          connectorSpec_ = null;
+          connectorSpecBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest build() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest result = new yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest(this);
+        result.clusterId_ = clusterId_;
+        result.connectorName_ = connectorName_;
+        if (updateMaskBuilder_ == null) {
+          result.updateMask_ = updateMask_;
+        } else {
+          result.updateMask_ = updateMaskBuilder_.build();
+        }
+        if (connectorSpecBuilder_ == null) {
+          result.connectorSpec_ = connectorSpec_;
+        } else {
+          result.connectorSpec_ = connectorSpecBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.getConnectorName().isEmpty()) {
+          connectorName_ = other.connectorName_;
+          onChanged();
+        }
+        if (other.hasUpdateMask()) {
+          mergeUpdateMask(other.getUpdateMask());
+        }
+        if (other.hasConnectorSpec()) {
+          mergeConnectorSpec(other.getConnectorSpec());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * Required. ID of the Apache Kafka cluster to update a connector in.
+       * To get the cluster ID use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the Apache Kafka cluster to update a connector in.
+       * To get the cluster ID use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the Apache Kafka cluster to update a connector in.
+       * To get the cluster ID use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the Apache Kafka cluster to update a connector in.
+       * To get the cluster ID use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the Apache Kafka cluster to update a connector in.
+       * To get the cluster ID use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object connectorName_ = "";
+      /**
+       * <pre>
+       * Required. Name of the connector to update.
+       * To get the name of the connector, use a [ConnectorService.List] request.
+       * </pre>
+       *
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public java.lang.String getConnectorName() {
+        java.lang.Object ref = connectorName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectorName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Name of the connector to update.
+       * To get the name of the connector, use a [ConnectorService.List] request.
+       * </pre>
+       *
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getConnectorNameBytes() {
+        java.lang.Object ref = connectorName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectorName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Name of the connector to update.
+       * To get the name of the connector, use a [ConnectorService.List] request.
+       * </pre>
+       *
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public Builder setConnectorName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        connectorName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Name of the connector to update.
+       * To get the name of the connector, use a [ConnectorService.List] request.
+       * </pre>
+       *
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public Builder clearConnectorName() {
+        
+        connectorName_ = getDefaultInstance().getConnectorName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Name of the connector to update.
+       * To get the name of the connector, use a [ConnectorService.List] request.
+       * </pre>
+       *
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public Builder setConnectorNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        connectorName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Connector resource should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public boolean hasUpdateMask() {
+        return updateMaskBuilder_ != null || updateMask_ != null;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Connector resource should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public com.google.protobuf.FieldMask getUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        } else {
+          return updateMaskBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Connector resource should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updateMask_ = value;
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Connector resource should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public Builder setUpdateMask(
+          com.google.protobuf.FieldMask.Builder builderForValue) {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = builderForValue.build();
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Connector resource should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (updateMask_ != null) {
+            updateMask_ =
+              com.google.protobuf.FieldMask.newBuilder(updateMask_).mergeFrom(value).buildPartial();
+          } else {
+            updateMask_ = value;
+          }
+          onChanged();
+        } else {
+          updateMaskBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Connector resource should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public Builder clearUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+          onChanged();
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Connector resource should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
+        
+        onChanged();
+        return getUpdateMaskFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Connector resource should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+        if (updateMaskBuilder_ != null) {
+          return updateMaskBuilder_.getMessageOrBuilder();
+        } else {
+          return updateMask_ == null ?
+              com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Connector resource should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+          getUpdateMaskFieldBuilder() {
+        if (updateMaskBuilder_ == null) {
+          updateMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                  getUpdateMask(),
+                  getParentForChildren(),
+                  isClean());
+          updateMask_ = null;
+        }
+        return updateMaskBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec connectorSpec_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpecOrBuilder> connectorSpecBuilder_;
+      /**
+       * <pre>
+       * Required. Configuration of the connector to update.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec connector_spec = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public boolean hasConnectorSpec() {
+        return connectorSpecBuilder_ != null || connectorSpec_ != null;
+      }
+      /**
+       * <pre>
+       * Required. Configuration of the connector to update.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec connector_spec = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec getConnectorSpec() {
+        if (connectorSpecBuilder_ == null) {
+          return connectorSpec_ == null ? yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.getDefaultInstance() : connectorSpec_;
+        } else {
+          return connectorSpecBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Required. Configuration of the connector to update.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec connector_spec = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setConnectorSpec(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec value) {
+        if (connectorSpecBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          connectorSpec_ = value;
+          onChanged();
+        } else {
+          connectorSpecBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Configuration of the connector to update.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec connector_spec = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setConnectorSpec(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.Builder builderForValue) {
+        if (connectorSpecBuilder_ == null) {
+          connectorSpec_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectorSpecBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Configuration of the connector to update.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec connector_spec = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergeConnectorSpec(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec value) {
+        if (connectorSpecBuilder_ == null) {
+          if (connectorSpec_ != null) {
+            connectorSpec_ =
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.newBuilder(connectorSpec_).mergeFrom(value).buildPartial();
+          } else {
+            connectorSpec_ = value;
+          }
+          onChanged();
+        } else {
+          connectorSpecBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Configuration of the connector to update.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec connector_spec = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearConnectorSpec() {
+        if (connectorSpecBuilder_ == null) {
+          connectorSpec_ = null;
+          onChanged();
+        } else {
+          connectorSpec_ = null;
+          connectorSpecBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Configuration of the connector to update.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec connector_spec = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.Builder getConnectorSpecBuilder() {
+        
+        onChanged();
+        return getConnectorSpecFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Required. Configuration of the connector to update.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec connector_spec = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpecOrBuilder getConnectorSpecOrBuilder() {
+        if (connectorSpecBuilder_ != null) {
+          return connectorSpecBuilder_.getMessageOrBuilder();
+        } else {
+          return connectorSpec_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.getDefaultInstance() : connectorSpec_;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Configuration of the connector to update.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec connector_spec = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpecOrBuilder> 
+          getConnectorSpecFieldBuilder() {
+        if (connectorSpecBuilder_ == null) {
+          connectorSpecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpecOrBuilder>(
+                  getConnectorSpec(),
+                  getParentForChildren(),
+                  isClean());
+          connectorSpec_ = null;
+        }
+        return connectorSpecBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.UpdateConnectorRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.UpdateConnectorRequest)
+    private static final yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateConnectorRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateConnectorRequest>() {
+      @java.lang.Override
+      public UpdateConnectorRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateConnectorRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateConnectorRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateConnectorRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateConnectorMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.UpdateConnectorMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Apache Kafka cluster where a connector is being updated.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the Apache Kafka cluster where a connector is being updated.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Name of the Apache Kafka connector that is being updated.
+     * </pre>
+     *
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    java.lang.String getConnectorName();
+    /**
+     * <pre>
+     * Name of the Apache Kafka connector that is being updated.
+     * </pre>
+     *
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    com.google.protobuf.ByteString
+        getConnectorNameBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.UpdateConnectorMetadata}
+   */
+  public  static final class UpdateConnectorMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.UpdateConnectorMetadata)
+      UpdateConnectorMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateConnectorMetadata.newBuilder() to construct.
+    private UpdateConnectorMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateConnectorMetadata() {
+      clusterId_ = "";
+      connectorName_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateConnectorMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              connectorName_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata.class, yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the Apache Kafka cluster where a connector is being updated.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Apache Kafka cluster where a connector is being updated.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONNECTOR_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object connectorName_;
+    /**
+     * <pre>
+     * Name of the Apache Kafka connector that is being updated.
+     * </pre>
+     *
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    public java.lang.String getConnectorName() {
+      java.lang.Object ref = connectorName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectorName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the Apache Kafka connector that is being updated.
+     * </pre>
+     *
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getConnectorNameBytes() {
+      java.lang.Object ref = connectorName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectorName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (!getConnectorNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, connectorName_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (!getConnectorNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, connectorName_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata other = (yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && getConnectorName()
+          .equals(other.getConnectorName());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + CONNECTOR_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectorName().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.UpdateConnectorMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.UpdateConnectorMetadata)
+        yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata.class, yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        connectorName_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata build() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata result = new yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata(this);
+        result.clusterId_ = clusterId_;
+        result.connectorName_ = connectorName_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.getConnectorName().isEmpty()) {
+          connectorName_ = other.connectorName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the Apache Kafka cluster where a connector is being updated.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Apache Kafka cluster where a connector is being updated.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Apache Kafka cluster where a connector is being updated.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Apache Kafka cluster where a connector is being updated.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Apache Kafka cluster where a connector is being updated.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object connectorName_ = "";
+      /**
+       * <pre>
+       * Name of the Apache Kafka connector that is being updated.
+       * </pre>
+       *
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public java.lang.String getConnectorName() {
+        java.lang.Object ref = connectorName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectorName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the Apache Kafka connector that is being updated.
+       * </pre>
+       *
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getConnectorNameBytes() {
+        java.lang.Object ref = connectorName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectorName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the Apache Kafka connector that is being updated.
+       * </pre>
+       *
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public Builder setConnectorName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        connectorName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the Apache Kafka connector that is being updated.
+       * </pre>
+       *
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public Builder clearConnectorName() {
+        
+        connectorName_ = getDefaultInstance().getConnectorName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the Apache Kafka connector that is being updated.
+       * </pre>
+       *
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public Builder setConnectorNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        connectorName_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.UpdateConnectorMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.UpdateConnectorMetadata)
+    private static final yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateConnectorMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateConnectorMetadata>() {
+      @java.lang.Override
+      public UpdateConnectorMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateConnectorMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateConnectorMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateConnectorMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface DeleteConnectorRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.DeleteConnectorRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -8953,6 +10997,16 @@ public final class ConnectorServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_kafka_v1_CreateConnectorMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_kafka_v1_DeleteConnectorRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8993,75 +11047,90 @@ public final class ConnectorServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n1yandex/cloud/mdb/kafka/v1/connector_se" +
       "rvice.proto\022\031yandex.cloud.mdb.kafka.v1\032\034" +
-      "google/api/annotations.proto\032 yandex/clo" +
-      "ud/api/operation.proto\032&yandex/cloud/ope" +
-      "ration/operation.proto\032\035yandex/cloud/val" +
-      "idation.proto\032)yandex/cloud/mdb/kafka/v1" +
-      "/connector.proto\"p\n\023GetConnectorRequest\022" +
-      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0227\n\016con" +
-      "nector_name\030\002 \001(\tB\037\350\3071\001\212\3101\005<=256\362\3071\016[a-z" +
-      "A-Z0-9_-]*\"w\n\025ListConnectorsRequest\022 \n\nc" +
-      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_si" +
-      "ze\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\t" +
-      "B\t\212\3101\005<=100\"k\n\026ListConnectorsResponse\0228\n" +
-      "\nconnectors\030\001 \003(\0132$.yandex.cloud.mdb.kaf" +
-      "ka.v1.Connector\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\"\202\001\n\026CreateConnectorRequest\022 \n\ncluster_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022F\n\016connector_spec\030" +
-      "\002 \001(\0132(.yandex.cloud.mdb.kafka.v1.Connec" +
-      "torSpecB\004\350\3071\001\"f\n\027CreateConnectorMetadata" +
-      "\022\022\n\ncluster_id\030\001 \001(\t\0227\n\016connector_name\030\002" +
-      " \001(\tB\037\350\3071\001\212\3101\005<=256\362\3071\016[a-zA-Z0-9_-]*\"s\n" +
-      "\026DeleteConnectorRequest\022 \n\ncluster_id\030\001 " +
+      "google/api/annotations.proto\032 google/pro" +
+      "tobuf/field_mask.proto\032 yandex/cloud/api" +
+      "/operation.proto\032&yandex/cloud/operation" +
+      "/operation.proto\032\035yandex/cloud/validatio" +
+      "n.proto\032)yandex/cloud/mdb/kafka/v1/conne" +
+      "ctor.proto\"p\n\023GetConnectorRequest\022 \n\nclu" +
+      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0227\n\016connector" +
+      "_name\030\002 \001(\tB\037\350\3071\001\212\3101\005<=256\362\3071\016[a-zA-Z0-9" +
+      "_-]*\"w\n\025ListConnectorsRequest\022 \n\ncluster" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
+      "(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
+      "<=100\"k\n\026ListConnectorsResponse\0228\n\nconne" +
+      "ctors\030\001 \003(\0132$.yandex.cloud.mdb.kafka.v1." +
+      "Connector\022\027\n\017next_page_token\030\002 \001(\t\"\202\001\n\026C" +
+      "reateConnectorRequest\022 \n\ncluster_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022F\n\016connector_spec\030\002 \001(\0132" +
+      "(.yandex.cloud.mdb.kafka.v1.ConnectorSpe" +
+      "cB\004\350\3071\001\"f\n\027CreateConnectorMetadata\022\022\n\ncl" +
+      "uster_id\030\001 \001(\t\0227\n\016connector_name\030\002 \001(\tB\037" +
+      "\350\3071\001\212\3101\005<=256\362\3071\016[a-zA-Z0-9_-]*\"\362\001\n\026Upda" +
+      "teConnectorRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\0227\n\016connector_name\030\002 \001(\tB\037\350\307" +
+      "1\001\212\3101\005<=256\362\3071\016[a-zA-Z0-9_-]*\022/\n\013update_" +
+      "mask\030\003 \001(\0132\032.google.protobuf.FieldMask\022L" +
+      "\n\016connector_spec\030\004 \001(\0132..yandex.cloud.md" +
+      "b.kafka.v1.UpdateConnectorSpecB\004\350\3071\001\"t\n\027" +
+      "UpdateConnectorMetadata\022 \n\ncluster_id\030\001 " +
       "\001(\tB\014\350\3071\001\212\3101\004<=50\0227\n\016connector_name\030\002 \001(" +
-      "\tB\037\350\3071\001\212\3101\005<=256\362\3071\016[a-zA-Z0-9_-]*\"E\n\027De" +
-      "leteConnectorMetadata\022\022\n\ncluster_id\030\001 \001(" +
-      "\t\022\026\n\016connector_name\030\002 \001(\t\"s\n\026ResumeConne" +
-      "ctorRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\0227\n\016connector_name\030\002 \001(\tB\037\350\3071\001\212\3101\005<" +
-      "=256\362\3071\016[a-zA-Z0-9_-]*\"f\n\027ResumeConnecto" +
-      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\0227\n\016connect" +
-      "or_name\030\002 \001(\tB\037\350\3071\001\212\3101\005<=256\362\3071\016[a-zA-Z0" +
-      "-9_-]*\"r\n\025PauseConnectorRequest\022 \n\nclust" +
-      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0227\n\016connector_n" +
-      "ame\030\002 \001(\tB\037\350\3071\001\212\3101\005<=256\362\3071\016[a-zA-Z0-9_-" +
-      "]*\"e\n\026PauseConnectorMetadata\022\022\n\ncluster_" +
-      "id\030\001 \001(\t\0227\n\016connector_name\030\002 \001(\tB\037\350\3071\001\212\310" +
-      "1\005<=256\362\3071\016[a-zA-Z0-9_-]*2\315\t\n\020ConnectorS" +
-      "ervice\022\250\001\n\003Get\022..yandex.cloud.mdb.kafka." +
-      "v1.GetConnectorRequest\032$.yandex.cloud.md" +
-      "b.kafka.v1.Connector\"K\202\323\344\223\002E\022C/managed-k" +
-      "afka/v1/clusters/{cluster_id}/connectors" +
-      "/{connector_name}\022\247\001\n\004List\0220.yandex.clou" +
-      "d.mdb.kafka.v1.ListConnectorsRequest\0321.y" +
-      "andex.cloud.mdb.kafka.v1.ListConnectorsR" +
-      "esponse\":\202\323\344\223\0024\0222/managed-kafka/v1/clust" +
-      "ers/{cluster_id}/connectors\022\305\001\n\006Create\0221" +
-      ".yandex.cloud.mdb.kafka.v1.CreateConnect" +
+      "\tB\037\350\3071\001\212\3101\005<=256\362\3071\016[a-zA-Z0-9_-]*\"s\n\026De" +
+      "leteConnectorRequest\022 \n\ncluster_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\0227\n\016connector_name\030\002 \001(\tB\037" +
+      "\350\3071\001\212\3101\005<=256\362\3071\016[a-zA-Z0-9_-]*\"E\n\027Delet" +
+      "eConnectorMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\026" +
+      "\n\016connector_name\030\002 \001(\t\"s\n\026ResumeConnecto" +
+      "rRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\0227\n\016connector_name\030\002 \001(\tB\037\350\3071\001\212\3101\005<=25" +
+      "6\362\3071\016[a-zA-Z0-9_-]*\"f\n\027ResumeConnectorMe" +
+      "tadata\022\022\n\ncluster_id\030\001 \001(\t\0227\n\016connector_" +
+      "name\030\002 \001(\tB\037\350\3071\001\212\3101\005<=256\362\3071\016[a-zA-Z0-9_" +
+      "-]*\"r\n\025PauseConnectorRequest\022 \n\ncluster_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0227\n\016connector_name" +
+      "\030\002 \001(\tB\037\350\3071\001\212\3101\005<=256\362\3071\016[a-zA-Z0-9_-]*\"" +
+      "e\n\026PauseConnectorMetadata\022\022\n\ncluster_id\030" +
+      "\001 \001(\t\0227\n\016connector_name\030\002 \001(\tB\037\350\3071\001\212\3101\005<" +
+      "=256\362\3071\016[a-zA-Z0-9_-]*2\246\013\n\020ConnectorServ" +
+      "ice\022\250\001\n\003Get\022..yandex.cloud.mdb.kafka.v1." +
+      "GetConnectorRequest\032$.yandex.cloud.mdb.k" +
+      "afka.v1.Connector\"K\202\323\344\223\002E\022C/managed-kafk" +
+      "a/v1/clusters/{cluster_id}/connectors/{c" +
+      "onnector_name}\022\247\001\n\004List\0220.yandex.cloud.m" +
+      "db.kafka.v1.ListConnectorsRequest\0321.yand" +
+      "ex.cloud.mdb.kafka.v1.ListConnectorsResp" +
+      "onse\":\202\323\344\223\0024\0222/managed-kafka/v1/clusters" +
+      "/{cluster_id}/connectors\022\305\001\n\006Create\0221.ya" +
+      "ndex.cloud.mdb.kafka.v1.CreateConnectorR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"e\202\323\344\223\0027\"2/managed-kafka/v1/clusters/{c" +
+      "luster_id}/connectors:\001*\262\322*$\n\027CreateConn" +
+      "ectorMetadata\022\tConnector\022\326\001\n\006Update\0221.ya" +
+      "ndex.cloud.mdb.kafka.v1.UpdateConnectorR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"v\202\323\344\223\002H2C/managed-kafka/v1/clusters/{c" +
+      "luster_id}/connectors/{connector_name}:\001" +
+      "*\262\322*$\n\027UpdateConnectorMetadata\022\tConnecto" +
+      "r\022\337\001\n\006Delete\0221.yandex.cloud.mdb.kafka.v1" +
+      ".DeleteConnectorRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"\177\202\323\344\223\002E*C/managed-kaf" +
+      "ka/v1/clusters/{cluster_id}/connectors/{" +
+      "connector_name}\262\322*0\n\027DeleteConnectorMeta" +
+      "data\022\025google.protobuf.Empty\022\335\001\n\006Resume\0221" +
+      ".yandex.cloud.mdb.kafka.v1.ResumeConnect" +
       "orRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"e\202\323\344\223\0027\"2/managed-kafka/v1/clusters" +
-      "/{cluster_id}/connectors:\001*\262\322*$\n\027CreateC" +
-      "onnectorMetadata\022\tConnector\022\337\001\n\006Delete\0221" +
-      ".yandex.cloud.mdb.kafka.v1.DeleteConnect" +
-      "orRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"\177\202\323\344\223\002E*C/managed-kafka/v1/clusters" +
-      "/{cluster_id}/connectors/{connector_name" +
-      "}\262\322*0\n\027DeleteConnectorMetadata\022\025google.p" +
-      "rotobuf.Empty\022\335\001\n\006Resume\0221.yandex.cloud." +
-      "mdb.kafka.v1.ResumeConnectorRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"}\202\323\344\223\002O\"J" +
-      "/managed-kafka/v1/clusters/{cluster_id}/" +
-      "connectors/resume/{connector_name}:\001*\262\322*" +
-      "$\n\027ResumeConnectorMetadata\022\tConnector\022\331\001" +
-      "\n\005Pause\0220.yandex.cloud.mdb.kafka.v1.Paus" +
-      "eConnectorRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"{\202\323\344\223\002N\"I/managed-kafka/v1/" +
-      "clusters/{cluster_id}/connectors/pause/{" +
-      "connector_name}:\001*\262\322*#\n\026PauseConnectorMe" +
-      "tadata\022\tConnectorBd\n\035yandex.cloud.api.md" +
-      "b.kafka.v1ZCgithub.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/mdb/kafka/v1;kafkab" +
-      "\006proto3"
+      "tion\"}\202\323\344\223\002O\"J/managed-kafka/v1/clusters" +
+      "/{cluster_id}/connectors/resume/{connect" +
+      "or_name}:\001*\262\322*$\n\027ResumeConnectorMetadata" +
+      "\022\tConnector\022\331\001\n\005Pause\0220.yandex.cloud.mdb" +
+      ".kafka.v1.PauseConnectorRequest\032!.yandex" +
+      ".cloud.operation.Operation\"{\202\323\344\223\002N\"I/man" +
+      "aged-kafka/v1/clusters/{cluster_id}/conn" +
+      "ectors/pause/{connector_name}:\001*\262\322*#\n\026Pa" +
+      "useConnectorMetadata\022\tConnectorBd\n\035yande" +
+      "x.cloud.api.mdb.kafka.v1ZCgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/mdb/k" +
+      "afka/v1;kafkab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9075,6 +11144,7 @@ public final class ConnectorServiceOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
@@ -9110,38 +11180,50 @@ public final class ConnectorServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_CreateConnectorMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "ConnectorName", });
-    internal_static_yandex_cloud_mdb_kafka_v1_DeleteConnectorRequest_descriptor =
+    internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "ConnectorName", "UpdateMask", "ConnectorSpec", });
+    internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorMetadata_descriptor,
+        new java.lang.String[] { "ClusterId", "ConnectorName", });
+    internal_static_yandex_cloud_mdb_kafka_v1_DeleteConnectorRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_mdb_kafka_v1_DeleteConnectorRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_DeleteConnectorRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ConnectorName", });
     internal_static_yandex_cloud_mdb_kafka_v1_DeleteConnectorMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_mdb_kafka_v1_DeleteConnectorMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_DeleteConnectorMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "ConnectorName", });
     internal_static_yandex_cloud_mdb_kafka_v1_ResumeConnectorRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_mdb_kafka_v1_ResumeConnectorRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ResumeConnectorRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ConnectorName", });
     internal_static_yandex_cloud_mdb_kafka_v1_ResumeConnectorMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_mdb_kafka_v1_ResumeConnectorMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ResumeConnectorMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "ConnectorName", });
     internal_static_yandex_cloud_mdb_kafka_v1_PauseConnectorRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_mdb_kafka_v1_PauseConnectorRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_PauseConnectorRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ConnectorName", });
     internal_static_yandex_cloud_mdb_kafka_v1_PauseConnectorMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_mdb_kafka_v1_PauseConnectorMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_PauseConnectorMetadata_descriptor,
@@ -9157,6 +11239,7 @@ public final class ConnectorServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();

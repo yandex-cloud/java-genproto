@@ -123,6 +123,38 @@ public final class TransferServiceGrpc {
      return getDeleteMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest,
+      yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse> getListMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "List",
+      requestType = yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest.class,
+      responseType = yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest,
+      yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse> getListMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest, yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse> getListMethod;
+    if ((getListMethod = TransferServiceGrpc.getListMethod) == null) {
+      synchronized (TransferServiceGrpc.class) {
+        if ((getListMethod = TransferServiceGrpc.getListMethod) == null) {
+          TransferServiceGrpc.getListMethod = getListMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest, yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.datatransfer.v1.TransferService", "List"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new TransferServiceMethodDescriptorSupplier("List"))
+                  .build();
+          }
+        }
+     }
+     return getListMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.GetTransferRequest,
       yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer> getGetMethod;
 
@@ -269,6 +301,13 @@ public final class TransferServiceGrpc {
 
     /**
      */
+    public void list(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void get(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.GetTransferRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer> responseObserver) {
       asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
@@ -311,6 +350,13 @@ public final class TransferServiceGrpc {
                 yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.DeleteTransferRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
+          .addMethod(
+            getListMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest,
+                yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse>(
+                  this, METHODID_LIST)))
           .addMethod(
             getGetMethod(),
             asyncUnaryCall(
@@ -380,6 +426,14 @@ public final class TransferServiceGrpc {
 
     /**
      */
+    public void list(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void get(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.GetTransferRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer> responseObserver) {
       asyncUnaryCall(
@@ -440,6 +494,13 @@ public final class TransferServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.DeleteTransferRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse list(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getListMethod(), getCallOptions(), request);
     }
 
     /**
@@ -508,6 +569,14 @@ public final class TransferServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse> list(
+        yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getListMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer> get(
         yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.GetTransferRequest request) {
       return futureUnaryCall(
@@ -534,9 +603,10 @@ public final class TransferServiceGrpc {
   private static final int METHODID_CREATE = 0;
   private static final int METHODID_UPDATE = 1;
   private static final int METHODID_DELETE = 2;
-  private static final int METHODID_GET = 3;
-  private static final int METHODID_DEACTIVATE = 4;
-  private static final int METHODID_ACTIVATE = 5;
+  private static final int METHODID_LIST = 3;
+  private static final int METHODID_GET = 4;
+  private static final int METHODID_DEACTIVATE = 5;
+  private static final int METHODID_ACTIVATE = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -566,6 +636,10 @@ public final class TransferServiceGrpc {
         case METHODID_DELETE:
           serviceImpl.delete((yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.DeleteTransferRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_LIST:
+          serviceImpl.list((yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse>) responseObserver);
           break;
         case METHODID_GET:
           serviceImpl.get((yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.GetTransferRequest) request,
@@ -643,6 +717,7 @@ public final class TransferServiceGrpc {
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
+              .addMethod(getListMethod())
               .addMethod(getGetMethod())
               .addMethod(getDeactivateMethod())
               .addMethod(getActivateMethod())

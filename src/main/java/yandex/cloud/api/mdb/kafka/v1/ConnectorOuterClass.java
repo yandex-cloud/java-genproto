@@ -1616,6 +1616,1436 @@ public final class ConnectorOuterClass {
 
   }
 
+  public interface UpdateConnectorSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Maximum number of tasks to update.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+     */
+    boolean hasTasksMax();
+    /**
+     * <pre>
+     * Maximum number of tasks to update.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+     */
+    com.google.protobuf.Int64Value getTasksMax();
+    /**
+     * <pre>
+     * Maximum number of tasks to update.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getTasksMaxOrBuilder();
+
+    /**
+     * <pre>
+     * Properties passed with connector config to Connect service, that
+     * we should change or add in existing Properties-set of connector.
+     * Example: 'sync.topics.config.enabled: false'
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+    int getPropertiesCount();
+    /**
+     * <pre>
+     * Properties passed with connector config to Connect service, that
+     * we should change or add in existing Properties-set of connector.
+     * Example: 'sync.topics.config.enabled: false'
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+    boolean containsProperties(
+        java.lang.String key);
+    /**
+     * Use {@link #getPropertiesMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getProperties();
+    /**
+     * <pre>
+     * Properties passed with connector config to Connect service, that
+     * we should change or add in existing Properties-set of connector.
+     * Example: 'sync.topics.config.enabled: false'
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getPropertiesMap();
+    /**
+     * <pre>
+     * Properties passed with connector config to Connect service, that
+     * we should change or add in existing Properties-set of connector.
+     * Example: 'sync.topics.config.enabled: false'
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+
+    java.lang.String getPropertiesOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Properties passed with connector config to Connect service, that
+     * we should change or add in existing Properties-set of connector.
+     * Example: 'sync.topics.config.enabled: false'
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+
+    java.lang.String getPropertiesOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * Update specification for MirrorMaker.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+     */
+    boolean hasConnectorConfigMirrormaker();
+    /**
+     * <pre>
+     * Update specification for MirrorMaker.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec getConnectorConfigMirrormaker();
+    /**
+     * <pre>
+     * Update specification for MirrorMaker.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpecOrBuilder getConnectorConfigMirrormakerOrBuilder();
+
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.ConnectorConfigCase getConnectorConfigCase();
+  }
+  /**
+   * <pre>
+   * An Apache Kafka® connector's update specification.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec}
+   */
+  public  static final class UpdateConnectorSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec)
+      UpdateConnectorSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateConnectorSpec.newBuilder() to construct.
+    private UpdateConnectorSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateConnectorSpec() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateConnectorSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (tasksMax_ != null) {
+                subBuilder = tasksMax_.toBuilder();
+              }
+              tasksMax_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tasksMax_);
+                tasksMax_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                properties_ = com.google.protobuf.MapField.newMapField(
+                    PropertiesDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              properties__ = input.readMessage(
+                  PropertiesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              properties_.getMutableMap().put(
+                  properties__.getKey(), properties__.getValue());
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec.Builder subBuilder = null;
+              if (connectorConfigCase_ == 10) {
+                subBuilder = ((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec) connectorConfig_).toBuilder();
+              }
+              connectorConfig_ =
+                  input.readMessage(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec) connectorConfig_);
+                connectorConfig_ = subBuilder.buildPartial();
+              }
+              connectorConfigCase_ = 10;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetProperties();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.Builder.class);
+    }
+
+    private int bitField0_;
+    private int connectorConfigCase_ = 0;
+    private java.lang.Object connectorConfig_;
+    public enum ConnectorConfigCase
+        implements com.google.protobuf.Internal.EnumLite {
+      CONNECTOR_CONFIG_MIRRORMAKER(10),
+      CONNECTORCONFIG_NOT_SET(0);
+      private final int value;
+      private ConnectorConfigCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ConnectorConfigCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ConnectorConfigCase forNumber(int value) {
+        switch (value) {
+          case 10: return CONNECTOR_CONFIG_MIRRORMAKER;
+          case 0: return CONNECTORCONFIG_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ConnectorConfigCase
+    getConnectorConfigCase() {
+      return ConnectorConfigCase.forNumber(
+          connectorConfigCase_);
+    }
+
+    public static final int TASKS_MAX_FIELD_NUMBER = 1;
+    private com.google.protobuf.Int64Value tasksMax_;
+    /**
+     * <pre>
+     * Maximum number of tasks to update.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+     */
+    public boolean hasTasksMax() {
+      return tasksMax_ != null;
+    }
+    /**
+     * <pre>
+     * Maximum number of tasks to update.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+     */
+    public com.google.protobuf.Int64Value getTasksMax() {
+      return tasksMax_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tasksMax_;
+    }
+    /**
+     * <pre>
+     * Maximum number of tasks to update.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getTasksMaxOrBuilder() {
+      return getTasksMax();
+    }
+
+    public static final int PROPERTIES_FIELD_NUMBER = 2;
+    private static final class PropertiesDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_PropertiesEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> properties_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetProperties() {
+      if (properties_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            PropertiesDefaultEntryHolder.defaultEntry);
+      }
+      return properties_;
+    }
+
+    public int getPropertiesCount() {
+      return internalGetProperties().getMap().size();
+    }
+    /**
+     * <pre>
+     * Properties passed with connector config to Connect service, that
+     * we should change or add in existing Properties-set of connector.
+     * Example: 'sync.topics.config.enabled: false'
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+
+    public boolean containsProperties(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetProperties().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getPropertiesMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getProperties() {
+      return getPropertiesMap();
+    }
+    /**
+     * <pre>
+     * Properties passed with connector config to Connect service, that
+     * we should change or add in existing Properties-set of connector.
+     * Example: 'sync.topics.config.enabled: false'
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
+      return internalGetProperties().getMap();
+    }
+    /**
+     * <pre>
+     * Properties passed with connector config to Connect service, that
+     * we should change or add in existing Properties-set of connector.
+     * Example: 'sync.topics.config.enabled: false'
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+
+    public java.lang.String getPropertiesOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetProperties().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Properties passed with connector config to Connect service, that
+     * we should change or add in existing Properties-set of connector.
+     * Example: 'sync.topics.config.enabled: false'
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+
+    public java.lang.String getPropertiesOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetProperties().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int CONNECTOR_CONFIG_MIRRORMAKER_FIELD_NUMBER = 10;
+    /**
+     * <pre>
+     * Update specification for MirrorMaker.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+     */
+    public boolean hasConnectorConfigMirrormaker() {
+      return connectorConfigCase_ == 10;
+    }
+    /**
+     * <pre>
+     * Update specification for MirrorMaker.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+     */
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec getConnectorConfigMirrormaker() {
+      if (connectorConfigCase_ == 10) {
+         return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec) connectorConfig_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Update specification for MirrorMaker.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+     */
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpecOrBuilder getConnectorConfigMirrormakerOrBuilder() {
+      if (connectorConfigCase_ == 10) {
+         return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec) connectorConfig_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (tasksMax_ != null) {
+        output.writeMessage(1, getTasksMax());
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetProperties(),
+          PropertiesDefaultEntryHolder.defaultEntry,
+          2);
+      if (connectorConfigCase_ == 10) {
+        output.writeMessage(10, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec) connectorConfig_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (tasksMax_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTasksMax());
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetProperties().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        properties__ = PropertiesDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, properties__);
+      }
+      if (connectorConfigCase_ == 10) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec) connectorConfig_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec other = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec) obj;
+
+      boolean result = true;
+      result = result && (hasTasksMax() == other.hasTasksMax());
+      if (hasTasksMax()) {
+        result = result && getTasksMax()
+            .equals(other.getTasksMax());
+      }
+      result = result && internalGetProperties().equals(
+          other.internalGetProperties());
+      result = result && getConnectorConfigCase().equals(
+          other.getConnectorConfigCase());
+      if (!result) return false;
+      switch (connectorConfigCase_) {
+        case 10:
+          result = result && getConnectorConfigMirrormaker()
+              .equals(other.getConnectorConfigMirrormaker());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTasksMax()) {
+        hash = (37 * hash) + TASKS_MAX_FIELD_NUMBER;
+        hash = (53 * hash) + getTasksMax().hashCode();
+      }
+      if (!internalGetProperties().getMap().isEmpty()) {
+        hash = (37 * hash) + PROPERTIES_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetProperties().hashCode();
+      }
+      switch (connectorConfigCase_) {
+        case 10:
+          hash = (37 * hash) + CONNECTOR_CONFIG_MIRRORMAKER_FIELD_NUMBER;
+          hash = (53 * hash) + getConnectorConfigMirrormaker().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * An Apache Kafka® connector's update specification.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec)
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetProperties();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetMutableProperties();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.class, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (tasksMaxBuilder_ == null) {
+          tasksMax_ = null;
+        } else {
+          tasksMax_ = null;
+          tasksMaxBuilder_ = null;
+        }
+        internalGetMutableProperties().clear();
+        connectorConfigCase_ = 0;
+        connectorConfig_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec build() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec result = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (tasksMaxBuilder_ == null) {
+          result.tasksMax_ = tasksMax_;
+        } else {
+          result.tasksMax_ = tasksMaxBuilder_.build();
+        }
+        result.properties_ = internalGetProperties();
+        result.properties_.makeImmutable();
+        if (connectorConfigCase_ == 10) {
+          if (connectorConfigMirrormakerBuilder_ == null) {
+            result.connectorConfig_ = connectorConfig_;
+          } else {
+            result.connectorConfig_ = connectorConfigMirrormakerBuilder_.build();
+          }
+        }
+        result.bitField0_ = to_bitField0_;
+        result.connectorConfigCase_ = connectorConfigCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.getDefaultInstance()) return this;
+        if (other.hasTasksMax()) {
+          mergeTasksMax(other.getTasksMax());
+        }
+        internalGetMutableProperties().mergeFrom(
+            other.internalGetProperties());
+        switch (other.getConnectorConfigCase()) {
+          case CONNECTOR_CONFIG_MIRRORMAKER: {
+            mergeConnectorConfigMirrormaker(other.getConnectorConfigMirrormaker());
+            break;
+          }
+          case CONNECTORCONFIG_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int connectorConfigCase_ = 0;
+      private java.lang.Object connectorConfig_;
+      public ConnectorConfigCase
+          getConnectorConfigCase() {
+        return ConnectorConfigCase.forNumber(
+            connectorConfigCase_);
+      }
+
+      public Builder clearConnectorConfig() {
+        connectorConfigCase_ = 0;
+        connectorConfig_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.Int64Value tasksMax_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> tasksMaxBuilder_;
+      /**
+       * <pre>
+       * Maximum number of tasks to update.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+       */
+      public boolean hasTasksMax() {
+        return tasksMaxBuilder_ != null || tasksMax_ != null;
+      }
+      /**
+       * <pre>
+       * Maximum number of tasks to update.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+       */
+      public com.google.protobuf.Int64Value getTasksMax() {
+        if (tasksMaxBuilder_ == null) {
+          return tasksMax_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tasksMax_;
+        } else {
+          return tasksMaxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Maximum number of tasks to update.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+       */
+      public Builder setTasksMax(com.google.protobuf.Int64Value value) {
+        if (tasksMaxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tasksMax_ = value;
+          onChanged();
+        } else {
+          tasksMaxBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum number of tasks to update.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+       */
+      public Builder setTasksMax(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (tasksMaxBuilder_ == null) {
+          tasksMax_ = builderForValue.build();
+          onChanged();
+        } else {
+          tasksMaxBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum number of tasks to update.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+       */
+      public Builder mergeTasksMax(com.google.protobuf.Int64Value value) {
+        if (tasksMaxBuilder_ == null) {
+          if (tasksMax_ != null) {
+            tasksMax_ =
+              com.google.protobuf.Int64Value.newBuilder(tasksMax_).mergeFrom(value).buildPartial();
+          } else {
+            tasksMax_ = value;
+          }
+          onChanged();
+        } else {
+          tasksMaxBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum number of tasks to update.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+       */
+      public Builder clearTasksMax() {
+        if (tasksMaxBuilder_ == null) {
+          tasksMax_ = null;
+          onChanged();
+        } else {
+          tasksMax_ = null;
+          tasksMaxBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum number of tasks to update.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getTasksMaxBuilder() {
+        
+        onChanged();
+        return getTasksMaxFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Maximum number of tasks to update.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getTasksMaxOrBuilder() {
+        if (tasksMaxBuilder_ != null) {
+          return tasksMaxBuilder_.getMessageOrBuilder();
+        } else {
+          return tasksMax_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : tasksMax_;
+        }
+      }
+      /**
+       * <pre>
+       * Maximum number of tasks to update.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getTasksMaxFieldBuilder() {
+        if (tasksMaxBuilder_ == null) {
+          tasksMaxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getTasksMax(),
+                  getParentForChildren(),
+                  isClean());
+          tasksMax_ = null;
+        }
+        return tasksMaxBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> properties_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetProperties() {
+        if (properties_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              PropertiesDefaultEntryHolder.defaultEntry);
+        }
+        return properties_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableProperties() {
+        onChanged();;
+        if (properties_ == null) {
+          properties_ = com.google.protobuf.MapField.newMapField(
+              PropertiesDefaultEntryHolder.defaultEntry);
+        }
+        if (!properties_.isMutable()) {
+          properties_ = properties_.copy();
+        }
+        return properties_;
+      }
+
+      public int getPropertiesCount() {
+        return internalGetProperties().getMap().size();
+      }
+      /**
+       * <pre>
+       * Properties passed with connector config to Connect service, that
+       * we should change or add in existing Properties-set of connector.
+       * Example: 'sync.topics.config.enabled: false'
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+
+      public boolean containsProperties(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetProperties().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getPropertiesMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getProperties() {
+        return getPropertiesMap();
+      }
+      /**
+       * <pre>
+       * Properties passed with connector config to Connect service, that
+       * we should change or add in existing Properties-set of connector.
+       * Example: 'sync.topics.config.enabled: false'
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
+        return internalGetProperties().getMap();
+      }
+      /**
+       * <pre>
+       * Properties passed with connector config to Connect service, that
+       * we should change or add in existing Properties-set of connector.
+       * Example: 'sync.topics.config.enabled: false'
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+
+      public java.lang.String getPropertiesOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetProperties().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Properties passed with connector config to Connect service, that
+       * we should change or add in existing Properties-set of connector.
+       * Example: 'sync.topics.config.enabled: false'
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+
+      public java.lang.String getPropertiesOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetProperties().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearProperties() {
+        internalGetMutableProperties().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Properties passed with connector config to Connect service, that
+       * we should change or add in existing Properties-set of connector.
+       * Example: 'sync.topics.config.enabled: false'
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+
+      public Builder removeProperties(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableProperties().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableProperties() {
+        return internalGetMutableProperties().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Properties passed with connector config to Connect service, that
+       * we should change or add in existing Properties-set of connector.
+       * Example: 'sync.topics.config.enabled: false'
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+      public Builder putProperties(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableProperties().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Properties passed with connector config to Connect service, that
+       * we should change or add in existing Properties-set of connector.
+       * Example: 'sync.topics.config.enabled: false'
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+
+      public Builder putAllProperties(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableProperties().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpecOrBuilder> connectorConfigMirrormakerBuilder_;
+      /**
+       * <pre>
+       * Update specification for MirrorMaker.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+       */
+      public boolean hasConnectorConfigMirrormaker() {
+        return connectorConfigCase_ == 10;
+      }
+      /**
+       * <pre>
+       * Update specification for MirrorMaker.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec getConnectorConfigMirrormaker() {
+        if (connectorConfigMirrormakerBuilder_ == null) {
+          if (connectorConfigCase_ == 10) {
+            return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec) connectorConfig_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec.getDefaultInstance();
+        } else {
+          if (connectorConfigCase_ == 10) {
+            return connectorConfigMirrormakerBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Update specification for MirrorMaker.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+       */
+      public Builder setConnectorConfigMirrormaker(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec value) {
+        if (connectorConfigMirrormakerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          connectorConfig_ = value;
+          onChanged();
+        } else {
+          connectorConfigMirrormakerBuilder_.setMessage(value);
+        }
+        connectorConfigCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Update specification for MirrorMaker.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+       */
+      public Builder setConnectorConfigMirrormaker(
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec.Builder builderForValue) {
+        if (connectorConfigMirrormakerBuilder_ == null) {
+          connectorConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectorConfigMirrormakerBuilder_.setMessage(builderForValue.build());
+        }
+        connectorConfigCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Update specification for MirrorMaker.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+       */
+      public Builder mergeConnectorConfigMirrormaker(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec value) {
+        if (connectorConfigMirrormakerBuilder_ == null) {
+          if (connectorConfigCase_ == 10 &&
+              connectorConfig_ != yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec.getDefaultInstance()) {
+            connectorConfig_ = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec.newBuilder((yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec) connectorConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            connectorConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (connectorConfigCase_ == 10) {
+            connectorConfigMirrormakerBuilder_.mergeFrom(value);
+          }
+          connectorConfigMirrormakerBuilder_.setMessage(value);
+        }
+        connectorConfigCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Update specification for MirrorMaker.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+       */
+      public Builder clearConnectorConfigMirrormaker() {
+        if (connectorConfigMirrormakerBuilder_ == null) {
+          if (connectorConfigCase_ == 10) {
+            connectorConfigCase_ = 0;
+            connectorConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (connectorConfigCase_ == 10) {
+            connectorConfigCase_ = 0;
+            connectorConfig_ = null;
+          }
+          connectorConfigMirrormakerBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Update specification for MirrorMaker.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec.Builder getConnectorConfigMirrormakerBuilder() {
+        return getConnectorConfigMirrormakerFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Update specification for MirrorMaker.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpecOrBuilder getConnectorConfigMirrormakerOrBuilder() {
+        if ((connectorConfigCase_ == 10) && (connectorConfigMirrormakerBuilder_ != null)) {
+          return connectorConfigMirrormakerBuilder_.getMessageOrBuilder();
+        } else {
+          if (connectorConfigCase_ == 10) {
+            return (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec) connectorConfig_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Update specification for MirrorMaker.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpecOrBuilder> 
+          getConnectorConfigMirrormakerFieldBuilder() {
+        if (connectorConfigMirrormakerBuilder_ == null) {
+          if (!(connectorConfigCase_ == 10)) {
+            connectorConfig_ = yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec.getDefaultInstance();
+          }
+          connectorConfigMirrormakerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpecOrBuilder>(
+                  (yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec) connectorConfig_,
+                  getParentForChildren(),
+                  isClean());
+          connectorConfig_ = null;
+        }
+        connectorConfigCase_ = 10;
+        onChanged();;
+        return connectorConfigMirrormakerBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec)
+    private static final yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateConnectorSpec>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateConnectorSpec>() {
+      @java.lang.Override
+      public UpdateConnectorSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateConnectorSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateConnectorSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateConnectorSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ConnectorConfigMirrorMakerSpecOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec)
       com.google.protobuf.MessageOrBuilder {
@@ -12558,6 +13988,16 @@ public final class ConnectorOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_kafka_v1_ConnectorSpec_PropertiesEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_PropertiesEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_PropertiesEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigMirrorMakerSpec_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -12626,55 +14066,64 @@ public final class ConnectorOuterClass {
       "_mirrormaker\030\n \001(\01329.yandex.cloud.mdb.ka" +
       "fka.v1.ConnectorConfigMirrorMakerSpecH\000\032" +
       "1\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001B\022\n\020connector_config\"\375\001\n\036Conne" +
-      "ctorConfigMirrorMakerSpec\022H\n\016source_clus" +
-      "ter\030\001 \001(\01320.yandex.cloud.mdb.kafka.v1.Cl" +
-      "usterConnectionSpec\022H\n\016target_cluster\030\002 " +
-      "\001(\01320.yandex.cloud.mdb.kafka.v1.ClusterC" +
-      "onnectionSpec\022\016\n\006topics\030\003 \001(\t\0227\n\022replica" +
-      "tion_factor\030\004 \001(\0132\033.google.protobuf.Int6" +
-      "4Value\"\326\001\n\025ClusterConnectionSpec\022\r\n\005alia" +
-      "s\030\001 \001(\t\022B\n\014this_cluster\030\002 \001(\0132*.yandex.c" +
-      "loud.mdb.kafka.v1.ThisClusterSpecH\000\022T\n\020e" +
-      "xternal_cluster\030\003 \001(\01328.yandex.cloud.mdb" +
-      ".kafka.v1.ExternalClusterConnectionSpecH" +
-      "\000B\024\n\022cluster_connection\"\021\n\017ThisClusterSp" +
-      "ec\"\233\001\n\035ExternalClusterConnectionSpec\022\031\n\021" +
-      "bootstrap_servers\030\001 \001(\t\022\025\n\rsasl_username" +
-      "\030\002 \001(\t\022\025\n\rsasl_password\030\003 \001(\t\022\026\n\016sasl_me" +
-      "chanism\030\004 \001(\t\022\031\n\021security_protocol\030\005 \001(\t" +
-      "\"\274\004\n\tConnector\022\014\n\004name\030\001 \001(\t\022.\n\ttasks_ma" +
-      "x\030\002 \001(\0132\033.google.protobuf.Int64Value\022H\n\n" +
-      "properties\030\003 \003(\01324.yandex.cloud.mdb.kafk" +
-      "a.v1.Connector.PropertiesEntry\022;\n\006health" +
-      "\030\004 \001(\0162+.yandex.cloud.mdb.kafka.v1.Conne" +
-      "ctor.Health\022;\n\006status\030\005 \001(\0162+.yandex.clo" +
-      "ud.mdb.kafka.v1.Connector.Status\022\022\n\nclus" +
-      "ter_id\030\006 \001(\t\022]\n\034connector_config_mirrorm" +
-      "aker\030\n \001(\01325.yandex.cloud.mdb.kafka.v1.C" +
-      "onnectorConfigMirrorMakerH\000\0321\n\017Propertie" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"1" +
-      "\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022" +
-      "\010\n\004DEAD\020\002\"@\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022" +
-      "\013\n\007RUNNING\020\001\022\t\n\005ERROR\020\002\022\n\n\006PAUSED\020\003B\022\n\020c" +
-      "onnector_config\"\361\001\n\032ConnectorConfigMirro" +
-      "rMaker\022D\n\016source_cluster\030\001 \001(\0132,.yandex." +
-      "cloud.mdb.kafka.v1.ClusterConnection\022D\n\016" +
-      "target_cluster\030\002 \001(\0132,.yandex.cloud.mdb." +
-      "kafka.v1.ClusterConnection\022\016\n\006topics\030\003 \001" +
-      "(\t\0227\n\022replication_factor\030\004 \001(\0132\033.google." +
-      "protobuf.Int64Value\"\312\001\n\021ClusterConnectio" +
-      "n\022\r\n\005alias\030\001 \001(\t\022>\n\014this_cluster\030\002 \001(\0132&" +
-      ".yandex.cloud.mdb.kafka.v1.ThisClusterH\000" +
-      "\022P\n\020external_cluster\030\003 \001(\01324.yandex.clou" +
-      "d.mdb.kafka.v1.ExternalClusterConnection" +
-      "H\000B\024\n\022cluster_connection\"\r\n\013ThisCluster\"" +
-      "\200\001\n\031ExternalClusterConnection\022\031\n\021bootstr" +
-      "ap_servers\030\001 \001(\t\022\025\n\rsasl_username\030\002 \001(\t\022" +
-      "\026\n\016sasl_mechanism\030\004 \001(\t\022\031\n\021security_prot" +
-      "ocol\030\005 \001(\tBd\n\035yandex.cloud.api.mdb.kafka" +
-      ".v1ZCgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/mdb/kafka/v1;kafkab\006proto3"
+      "\030\002 \001(\t:\0028\001B\022\n\020connector_config\"\303\002\n\023Updat" +
+      "eConnectorSpec\022.\n\ttasks_max\030\001 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022R\n\nproperties\030\002 \003" +
+      "(\0132>.yandex.cloud.mdb.kafka.v1.UpdateCon" +
+      "nectorSpec.PropertiesEntry\022a\n\034connector_" +
+      "config_mirrormaker\030\n \001(\01329.yandex.cloud." +
+      "mdb.kafka.v1.ConnectorConfigMirrorMakerS" +
+      "pecH\000\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001B\022\n\020connector_config\"\375\001\n" +
+      "\036ConnectorConfigMirrorMakerSpec\022H\n\016sourc" +
+      "e_cluster\030\001 \001(\01320.yandex.cloud.mdb.kafka" +
+      ".v1.ClusterConnectionSpec\022H\n\016target_clus" +
+      "ter\030\002 \001(\01320.yandex.cloud.mdb.kafka.v1.Cl" +
+      "usterConnectionSpec\022\016\n\006topics\030\003 \001(\t\0227\n\022r" +
+      "eplication_factor\030\004 \001(\0132\033.google.protobu" +
+      "f.Int64Value\"\326\001\n\025ClusterConnectionSpec\022\r" +
+      "\n\005alias\030\001 \001(\t\022B\n\014this_cluster\030\002 \001(\0132*.ya" +
+      "ndex.cloud.mdb.kafka.v1.ThisClusterSpecH" +
+      "\000\022T\n\020external_cluster\030\003 \001(\01328.yandex.clo" +
+      "ud.mdb.kafka.v1.ExternalClusterConnectio" +
+      "nSpecH\000B\024\n\022cluster_connection\"\021\n\017ThisClu" +
+      "sterSpec\"\233\001\n\035ExternalClusterConnectionSp" +
+      "ec\022\031\n\021bootstrap_servers\030\001 \001(\t\022\025\n\rsasl_us" +
+      "ername\030\002 \001(\t\022\025\n\rsasl_password\030\003 \001(\t\022\026\n\016s" +
+      "asl_mechanism\030\004 \001(\t\022\031\n\021security_protocol" +
+      "\030\005 \001(\t\"\274\004\n\tConnector\022\014\n\004name\030\001 \001(\t\022.\n\tta" +
+      "sks_max\030\002 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022H\n\nproperties\030\003 \003(\01324.yandex.cloud.md" +
+      "b.kafka.v1.Connector.PropertiesEntry\022;\n\006" +
+      "health\030\004 \001(\0162+.yandex.cloud.mdb.kafka.v1" +
+      ".Connector.Health\022;\n\006status\030\005 \001(\0162+.yand" +
+      "ex.cloud.mdb.kafka.v1.Connector.Status\022\022" +
+      "\n\ncluster_id\030\006 \001(\t\022]\n\034connector_config_m" +
+      "irrormaker\030\n \001(\01325.yandex.cloud.mdb.kafk" +
+      "a.v1.ConnectorConfigMirrorMakerH\000\0321\n\017Pro" +
+      "pertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\"1\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005AL" +
+      "IVE\020\001\022\010\n\004DEAD\020\002\"@\n\006Status\022\022\n\016STATUS_UNKN" +
+      "OWN\020\000\022\013\n\007RUNNING\020\001\022\t\n\005ERROR\020\002\022\n\n\006PAUSED\020" +
+      "\003B\022\n\020connector_config\"\361\001\n\032ConnectorConfi" +
+      "gMirrorMaker\022D\n\016source_cluster\030\001 \001(\0132,.y" +
+      "andex.cloud.mdb.kafka.v1.ClusterConnecti" +
+      "on\022D\n\016target_cluster\030\002 \001(\0132,.yandex.clou" +
+      "d.mdb.kafka.v1.ClusterConnection\022\016\n\006topi" +
+      "cs\030\003 \001(\t\0227\n\022replication_factor\030\004 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\"\312\001\n\021ClusterCon" +
+      "nection\022\r\n\005alias\030\001 \001(\t\022>\n\014this_cluster\030\002" +
+      " \001(\0132&.yandex.cloud.mdb.kafka.v1.ThisClu" +
+      "sterH\000\022P\n\020external_cluster\030\003 \001(\01324.yande" +
+      "x.cloud.mdb.kafka.v1.ExternalClusterConn" +
+      "ectionH\000B\024\n\022cluster_connection\"\r\n\013ThisCl" +
+      "uster\"\200\001\n\031ExternalClusterConnection\022\031\n\021b" +
+      "ootstrap_servers\030\001 \001(\t\022\025\n\rsasl_username\030" +
+      "\002 \001(\t\022\026\n\016sasl_mechanism\030\004 \001(\t\022\031\n\021securit" +
+      "y_protocol\030\005 \001(\tBd\n\035yandex.cloud.api.mdb" +
+      ".kafka.v1ZCgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/mdb/kafka/v1;kafkab\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12701,32 +14150,44 @@ public final class ConnectorOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConnectorSpec_PropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigMirrorMakerSpec_descriptor =
+    internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_descriptor,
+        new java.lang.String[] { "TasksMax", "Properties", "ConnectorConfigMirrormaker", "ConnectorConfig", });
+    internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_PropertiesEntry_descriptor =
+      internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_PropertiesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_UpdateConnectorSpec_PropertiesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigMirrorMakerSpec_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigMirrorMakerSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigMirrorMakerSpec_descriptor,
         new java.lang.String[] { "SourceCluster", "TargetCluster", "Topics", "ReplicationFactor", });
     internal_static_yandex_cloud_mdb_kafka_v1_ClusterConnectionSpec_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_kafka_v1_ClusterConnectionSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ClusterConnectionSpec_descriptor,
         new java.lang.String[] { "Alias", "ThisCluster", "ExternalCluster", "ClusterConnection", });
     internal_static_yandex_cloud_mdb_kafka_v1_ThisClusterSpec_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_mdb_kafka_v1_ThisClusterSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ThisClusterSpec_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_mdb_kafka_v1_ExternalClusterConnectionSpec_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_mdb_kafka_v1_ExternalClusterConnectionSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ExternalClusterConnectionSpec_descriptor,
         new java.lang.String[] { "BootstrapServers", "SaslUsername", "SaslPassword", "SaslMechanism", "SecurityProtocol", });
     internal_static_yandex_cloud_mdb_kafka_v1_Connector_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_kafka_v1_Connector_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_Connector_descriptor,
@@ -12738,25 +14199,25 @@ public final class ConnectorOuterClass {
         internal_static_yandex_cloud_mdb_kafka_v1_Connector_PropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigMirrorMaker_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigMirrorMaker_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConnectorConfigMirrorMaker_descriptor,
         new java.lang.String[] { "SourceCluster", "TargetCluster", "Topics", "ReplicationFactor", });
     internal_static_yandex_cloud_mdb_kafka_v1_ClusterConnection_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_mdb_kafka_v1_ClusterConnection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ClusterConnection_descriptor,
         new java.lang.String[] { "Alias", "ThisCluster", "ExternalCluster", "ClusterConnection", });
     internal_static_yandex_cloud_mdb_kafka_v1_ThisCluster_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_mdb_kafka_v1_ThisCluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ThisCluster_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_mdb_kafka_v1_ExternalClusterConnection_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_mdb_kafka_v1_ExternalClusterConnection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ExternalClusterConnection_descriptor,

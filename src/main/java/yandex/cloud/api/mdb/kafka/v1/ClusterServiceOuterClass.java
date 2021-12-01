@@ -3116,6 +3116,31 @@ public final class ClusterServiceOuterClass {
      * <code>bool deletion_protection = 14;</code>
      */
     boolean getDeletionProtection();
+
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 15;</code>
+     */
+    boolean hasMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 15;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 15;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.CreateClusterRequest}
@@ -3271,6 +3296,19 @@ public final class ClusterServiceOuterClass {
             case 112: {
 
               deletionProtection_ = input.readBool();
+              break;
+            }
+            case 122: {
+              yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.Builder subBuilder = null;
+              if (maintenanceWindow_ != null) {
+                subBuilder = maintenanceWindow_.toBuilder();
+              }
+              maintenanceWindow_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maintenanceWindow_);
+                maintenanceWindow_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -3915,6 +3953,39 @@ public final class ClusterServiceOuterClass {
       return deletionProtection_;
     }
 
+    public static final int MAINTENANCE_WINDOW_FIELD_NUMBER = 15;
+    private yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 15;</code>
+     */
+    public boolean hasMaintenanceWindow() {
+      return maintenanceWindow_ != null;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 15;</code>
+     */
+    public yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+      return maintenanceWindow_ == null ? yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 15;</code>
+     */
+    public yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+      return getMaintenanceWindow();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3970,6 +4041,9 @@ public final class ClusterServiceOuterClass {
       }
       if (deletionProtection_ != false) {
         output.writeBool(14, deletionProtection_);
+      }
+      if (maintenanceWindow_ != null) {
+        output.writeMessage(15, getMaintenanceWindow());
       }
       unknownFields.writeTo(output);
     }
@@ -4046,6 +4120,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(14, deletionProtection_);
       }
+      if (maintenanceWindow_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getMaintenanceWindow());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4090,6 +4168,11 @@ public final class ClusterServiceOuterClass {
           .equals(other.getHostGroupIdsList());
       result = result && (getDeletionProtection()
           == other.getDeletionProtection());
+      result = result && (hasMaintenanceWindow() == other.hasMaintenanceWindow());
+      if (hasMaintenanceWindow()) {
+        result = result && getMaintenanceWindow()
+            .equals(other.getMaintenanceWindow());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -4142,6 +4225,10 @@ public final class ClusterServiceOuterClass {
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
+      if (hasMaintenanceWindow()) {
+        hash = (37 * hash) + MAINTENANCE_WINDOW_FIELD_NUMBER;
+        hash = (53 * hash) + getMaintenanceWindow().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4336,6 +4423,12 @@ public final class ClusterServiceOuterClass {
         bitField0_ = (bitField0_ & ~0x00000800);
         deletionProtection_ = false;
 
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
         return this;
       }
 
@@ -4410,6 +4503,11 @@ public final class ClusterServiceOuterClass {
         }
         result.hostGroupIds_ = hostGroupIds_;
         result.deletionProtection_ = deletionProtection_;
+        if (maintenanceWindowBuilder_ == null) {
+          result.maintenanceWindow_ = maintenanceWindow_;
+        } else {
+          result.maintenanceWindow_ = maintenanceWindowBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4567,6 +4665,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
+        }
+        if (other.hasMaintenanceWindow()) {
+          mergeMaintenanceWindow(other.getMaintenanceWindow());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6386,6 +6487,159 @@ public final class ClusterServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow maintenanceWindow_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 15;</code>
+       */
+      public boolean hasMaintenanceWindow() {
+        return maintenanceWindowBuilder_ != null || maintenanceWindow_ != null;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 15;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          return maintenanceWindow_ == null ? yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        } else {
+          return maintenanceWindowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 15;</code>
+       */
+      public Builder setMaintenanceWindow(yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maintenanceWindow_ = value;
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 15;</code>
+       */
+      public Builder setMaintenanceWindow(
+          yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = builderForValue.build();
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 15;</code>
+       */
+      public Builder mergeMaintenanceWindow(yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (maintenanceWindow_ != null) {
+            maintenanceWindow_ =
+              yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.newBuilder(maintenanceWindow_).mergeFrom(value).buildPartial();
+          } else {
+            maintenanceWindow_ = value;
+          }
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 15;</code>
+       */
+      public Builder clearMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+          onChanged();
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 15;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.Builder getMaintenanceWindowBuilder() {
+        
+        onChanged();
+        return getMaintenanceWindowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 15;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+        if (maintenanceWindowBuilder_ != null) {
+          return maintenanceWindowBuilder_.getMessageOrBuilder();
+        } else {
+          return maintenanceWindow_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindowOrBuilder> 
+          getMaintenanceWindowFieldBuilder() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindowOrBuilder>(
+                  getMaintenanceWindow(),
+                  getParentForChildren(),
+                  isClean());
+          maintenanceWindow_ = null;
+        }
+        return maintenanceWindowBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7238,6 +7492,31 @@ public final class ClusterServiceOuterClass {
      * <code>bool deletion_protection = 8;</code>
      */
     boolean getDeletionProtection();
+
+    /**
+     * <pre>
+     * New maintenance window settings for the cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 9;</code>
+     */
+    boolean hasMaintenanceWindow();
+    /**
+     * <pre>
+     * New maintenance window settings for the cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 9;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
+    /**
+     * <pre>
+     * New maintenance window settings for the cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 9;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.UpdateClusterRequest}
@@ -7352,6 +7631,19 @@ public final class ClusterServiceOuterClass {
             case 64: {
 
               deletionProtection_ = input.readBool();
+              break;
+            }
+            case 74: {
+              yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.Builder subBuilder = null;
+              if (maintenanceWindow_ != null) {
+                subBuilder = maintenanceWindow_.toBuilder();
+              }
+              maintenanceWindow_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maintenanceWindow_);
+                maintenanceWindow_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -7749,6 +8041,39 @@ public final class ClusterServiceOuterClass {
       return deletionProtection_;
     }
 
+    public static final int MAINTENANCE_WINDOW_FIELD_NUMBER = 9;
+    private yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
+    /**
+     * <pre>
+     * New maintenance window settings for the cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 9;</code>
+     */
+    public boolean hasMaintenanceWindow() {
+      return maintenanceWindow_ != null;
+    }
+    /**
+     * <pre>
+     * New maintenance window settings for the cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 9;</code>
+     */
+    public yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+      return maintenanceWindow_ == null ? yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+    }
+    /**
+     * <pre>
+     * New maintenance window settings for the cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 9;</code>
+     */
+    public yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+      return getMaintenanceWindow();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7789,6 +8114,9 @@ public final class ClusterServiceOuterClass {
       }
       if (deletionProtection_ != false) {
         output.writeBool(8, deletionProtection_);
+      }
+      if (maintenanceWindow_ != null) {
+        output.writeMessage(9, getMaintenanceWindow());
       }
       unknownFields.writeTo(output);
     }
@@ -7838,6 +8166,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, deletionProtection_);
       }
+      if (maintenanceWindow_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getMaintenanceWindow());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7876,6 +8208,11 @@ public final class ClusterServiceOuterClass {
           .equals(other.getSecurityGroupIdsList());
       result = result && (getDeletionProtection()
           == other.getDeletionProtection());
+      result = result && (hasMaintenanceWindow() == other.hasMaintenanceWindow());
+      if (hasMaintenanceWindow()) {
+        result = result && getMaintenanceWindow()
+            .equals(other.getMaintenanceWindow());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -7912,6 +8249,10 @@ public final class ClusterServiceOuterClass {
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
+      if (hasMaintenanceWindow()) {
+        hash = (37 * hash) + MAINTENANCE_WINDOW_FIELD_NUMBER;
+        hash = (53 * hash) + getMaintenanceWindow().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8090,6 +8431,12 @@ public final class ClusterServiceOuterClass {
         bitField0_ = (bitField0_ & ~0x00000040);
         deletionProtection_ = false;
 
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
         return this;
       }
 
@@ -8139,6 +8486,11 @@ public final class ClusterServiceOuterClass {
         }
         result.securityGroupIds_ = securityGroupIds_;
         result.deletionProtection_ = deletionProtection_;
+        if (maintenanceWindowBuilder_ == null) {
+          result.maintenanceWindow_ = maintenanceWindow_;
+        } else {
+          result.maintenanceWindow_ = maintenanceWindowBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -8220,6 +8572,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
+        }
+        if (other.hasMaintenanceWindow()) {
+          mergeMaintenanceWindow(other.getMaintenanceWindow());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9140,6 +9495,159 @@ public final class ClusterServiceOuterClass {
         deletionProtection_ = false;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow maintenanceWindow_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
+      /**
+       * <pre>
+       * New maintenance window settings for the cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 9;</code>
+       */
+      public boolean hasMaintenanceWindow() {
+        return maintenanceWindowBuilder_ != null || maintenanceWindow_ != null;
+      }
+      /**
+       * <pre>
+       * New maintenance window settings for the cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 9;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          return maintenanceWindow_ == null ? yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        } else {
+          return maintenanceWindowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * New maintenance window settings for the cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 9;</code>
+       */
+      public Builder setMaintenanceWindow(yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maintenanceWindow_ = value;
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New maintenance window settings for the cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 9;</code>
+       */
+      public Builder setMaintenanceWindow(
+          yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = builderForValue.build();
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New maintenance window settings for the cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 9;</code>
+       */
+      public Builder mergeMaintenanceWindow(yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (maintenanceWindow_ != null) {
+            maintenanceWindow_ =
+              yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.newBuilder(maintenanceWindow_).mergeFrom(value).buildPartial();
+          } else {
+            maintenanceWindow_ = value;
+          }
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New maintenance window settings for the cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 9;</code>
+       */
+      public Builder clearMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+          onChanged();
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New maintenance window settings for the cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 9;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.Builder getMaintenanceWindowBuilder() {
+        
+        onChanged();
+        return getMaintenanceWindowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * New maintenance window settings for the cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 9;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+        if (maintenanceWindowBuilder_ != null) {
+          return maintenanceWindowBuilder_.getMessageOrBuilder();
+        } else {
+          return maintenanceWindow_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        }
+      }
+      /**
+       * <pre>
+       * New maintenance window settings for the cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindowOrBuilder> 
+          getMaintenanceWindowFieldBuilder() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindowOrBuilder>(
+                  getMaintenanceWindow(),
+                  getParentForChildren(),
+                  isClean());
+          maintenanceWindow_ = null;
+        }
+        return maintenanceWindowBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -25700,6 +26208,1956 @@ public final class ClusterServiceOuterClass {
 
   }
 
+  public interface RescheduleMaintenanceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Kafka cluster to reschedule the maintenance operation for.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the Kafka cluster to reschedule the maintenance operation for.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * The type of reschedule request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    int getRescheduleTypeValue();
+    /**
+     * <pre>
+     * The type of reschedule request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType getRescheduleType();
+
+    /**
+     * <pre>
+     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+     */
+    boolean hasDelayedUntil();
+    /**
+     * <pre>
+     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+     */
+    com.google.protobuf.Timestamp getDelayedUntil();
+    /**
+     * <pre>
+     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceRequest}
+   */
+  public  static final class RescheduleMaintenanceRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceRequest)
+      RescheduleMaintenanceRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RescheduleMaintenanceRequest.newBuilder() to construct.
+    private RescheduleMaintenanceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RescheduleMaintenanceRequest() {
+      clusterId_ = "";
+      rescheduleType_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RescheduleMaintenanceRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              rescheduleType_ = rawValue;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (delayedUntil_ != null) {
+                subBuilder = delayedUntil_.toBuilder();
+              }
+              delayedUntil_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(delayedUntil_);
+                delayedUntil_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_RescheduleMaintenanceRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_RescheduleMaintenanceRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.class, yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceRequest.RescheduleType}
+     */
+    public enum RescheduleType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>RESCHEDULE_TYPE_UNSPECIFIED = 0;</code>
+       */
+      RESCHEDULE_TYPE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Start the maintenance operation immediately.
+       * </pre>
+       *
+       * <code>IMMEDIATE = 1;</code>
+       */
+      IMMEDIATE(1),
+      /**
+       * <pre>
+       * Start the maintenance operation within the next available maintenance window.
+       * </pre>
+       *
+       * <code>NEXT_AVAILABLE_WINDOW = 2;</code>
+       */
+      NEXT_AVAILABLE_WINDOW(2),
+      /**
+       * <pre>
+       * Start the maintenance operation at the specific time.
+       * </pre>
+       *
+       * <code>SPECIFIC_TIME = 3;</code>
+       */
+      SPECIFIC_TIME(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>RESCHEDULE_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int RESCHEDULE_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Start the maintenance operation immediately.
+       * </pre>
+       *
+       * <code>IMMEDIATE = 1;</code>
+       */
+      public static final int IMMEDIATE_VALUE = 1;
+      /**
+       * <pre>
+       * Start the maintenance operation within the next available maintenance window.
+       * </pre>
+       *
+       * <code>NEXT_AVAILABLE_WINDOW = 2;</code>
+       */
+      public static final int NEXT_AVAILABLE_WINDOW_VALUE = 2;
+      /**
+       * <pre>
+       * Start the maintenance operation at the specific time.
+       * </pre>
+       *
+       * <code>SPECIFIC_TIME = 3;</code>
+       */
+      public static final int SPECIFIC_TIME_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static RescheduleType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static RescheduleType forNumber(int value) {
+        switch (value) {
+          case 0: return RESCHEDULE_TYPE_UNSPECIFIED;
+          case 1: return IMMEDIATE;
+          case 2: return NEXT_AVAILABLE_WINDOW;
+          case 3: return SPECIFIC_TIME;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<RescheduleType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          RescheduleType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<RescheduleType>() {
+              public RescheduleType findValueByNumber(int number) {
+                return RescheduleType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final RescheduleType[] VALUES = values();
+
+      public static RescheduleType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private RescheduleType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceRequest.RescheduleType)
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the Kafka cluster to reschedule the maintenance operation for.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Kafka cluster to reschedule the maintenance operation for.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESCHEDULE_TYPE_FIELD_NUMBER = 2;
+    private int rescheduleType_;
+    /**
+     * <pre>
+     * The type of reschedule request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public int getRescheduleTypeValue() {
+      return rescheduleType_;
+    }
+    /**
+     * <pre>
+     * The type of reschedule request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType getRescheduleType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType result = yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType.valueOf(rescheduleType_);
+      return result == null ? yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType.UNRECOGNIZED : result;
+    }
+
+    public static final int DELAYED_UNTIL_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp delayedUntil_;
+    /**
+     * <pre>
+     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+     */
+    public boolean hasDelayedUntil() {
+      return delayedUntil_ != null;
+    }
+    /**
+     * <pre>
+     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+     */
+    public com.google.protobuf.Timestamp getDelayedUntil() {
+      return delayedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+    }
+    /**
+     * <pre>
+     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
+      return getDelayedUntil();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (rescheduleType_ != yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType.RESCHEDULE_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, rescheduleType_);
+      }
+      if (delayedUntil_ != null) {
+        output.writeMessage(3, getDelayedUntil());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (rescheduleType_ != yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType.RESCHEDULE_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, rescheduleType_);
+      }
+      if (delayedUntil_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDelayedUntil());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest other = (yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && rescheduleType_ == other.rescheduleType_;
+      result = result && (hasDelayedUntil() == other.hasDelayedUntil());
+      if (hasDelayedUntil()) {
+        result = result && getDelayedUntil()
+            .equals(other.getDelayedUntil());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + RESCHEDULE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + rescheduleType_;
+      if (hasDelayedUntil()) {
+        hash = (37 * hash) + DELAYED_UNTIL_FIELD_NUMBER;
+        hash = (53 * hash) + getDelayedUntil().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceRequest)
+        yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_RescheduleMaintenanceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_RescheduleMaintenanceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.class, yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        rescheduleType_ = 0;
+
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = null;
+        } else {
+          delayedUntil_ = null;
+          delayedUntilBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_RescheduleMaintenanceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest build() {
+        yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest result = new yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest(this);
+        result.clusterId_ = clusterId_;
+        result.rescheduleType_ = rescheduleType_;
+        if (delayedUntilBuilder_ == null) {
+          result.delayedUntil_ = delayedUntil_;
+        } else {
+          result.delayedUntil_ = delayedUntilBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (other.rescheduleType_ != 0) {
+          setRescheduleTypeValue(other.getRescheduleTypeValue());
+        }
+        if (other.hasDelayedUntil()) {
+          mergeDelayedUntil(other.getDelayedUntil());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the Kafka cluster to reschedule the maintenance operation for.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Kafka cluster to reschedule the maintenance operation for.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Kafka cluster to reschedule the maintenance operation for.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Kafka cluster to reschedule the maintenance operation for.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Kafka cluster to reschedule the maintenance operation for.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int rescheduleType_ = 0;
+      /**
+       * <pre>
+       * The type of reschedule request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public int getRescheduleTypeValue() {
+        return rescheduleType_;
+      }
+      /**
+       * <pre>
+       * The type of reschedule request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setRescheduleTypeValue(int value) {
+        rescheduleType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of reschedule request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType getRescheduleType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType result = yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType.valueOf(rescheduleType_);
+        return result == null ? yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * The type of reschedule request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setRescheduleType(yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        rescheduleType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of reschedule request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearRescheduleType() {
+        
+        rescheduleType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp delayedUntil_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> delayedUntilBuilder_;
+      /**
+       * <pre>
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public boolean hasDelayedUntil() {
+        return delayedUntilBuilder_ != null || delayedUntil_ != null;
+      }
+      /**
+       * <pre>
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public com.google.protobuf.Timestamp getDelayedUntil() {
+        if (delayedUntilBuilder_ == null) {
+          return delayedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+        } else {
+          return delayedUntilBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public Builder setDelayedUntil(com.google.protobuf.Timestamp value) {
+        if (delayedUntilBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          delayedUntil_ = value;
+          onChanged();
+        } else {
+          delayedUntilBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public Builder setDelayedUntil(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = builderForValue.build();
+          onChanged();
+        } else {
+          delayedUntilBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public Builder mergeDelayedUntil(com.google.protobuf.Timestamp value) {
+        if (delayedUntilBuilder_ == null) {
+          if (delayedUntil_ != null) {
+            delayedUntil_ =
+              com.google.protobuf.Timestamp.newBuilder(delayedUntil_).mergeFrom(value).buildPartial();
+          } else {
+            delayedUntil_ = value;
+          }
+          onChanged();
+        } else {
+          delayedUntilBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public Builder clearDelayedUntil() {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = null;
+          onChanged();
+        } else {
+          delayedUntil_ = null;
+          delayedUntilBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDelayedUntilBuilder() {
+        
+        onChanged();
+        return getDelayedUntilFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
+        if (delayedUntilBuilder_ != null) {
+          return delayedUntilBuilder_.getMessageOrBuilder();
+        } else {
+          return delayedUntil_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+        }
+      }
+      /**
+       * <pre>
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDelayedUntilFieldBuilder() {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntilBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDelayedUntil(),
+                  getParentForChildren(),
+                  isClean());
+          delayedUntil_ = null;
+        }
+        return delayedUntilBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceRequest)
+    private static final yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RescheduleMaintenanceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RescheduleMaintenanceRequest>() {
+      @java.lang.Override
+      public RescheduleMaintenanceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RescheduleMaintenanceRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RescheduleMaintenanceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RescheduleMaintenanceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RescheduleMaintenanceMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Kafka cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the Kafka cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * The time until which this maintenance operation is to be delayed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+     */
+    boolean hasDelayedUntil();
+    /**
+     * <pre>
+     * The time until which this maintenance operation is to be delayed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+     */
+    com.google.protobuf.Timestamp getDelayedUntil();
+    /**
+     * <pre>
+     * The time until which this maintenance operation is to be delayed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceMetadata}
+   */
+  public  static final class RescheduleMaintenanceMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceMetadata)
+      RescheduleMaintenanceMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RescheduleMaintenanceMetadata.newBuilder() to construct.
+    private RescheduleMaintenanceMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RescheduleMaintenanceMetadata() {
+      clusterId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RescheduleMaintenanceMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (delayedUntil_ != null) {
+                subBuilder = delayedUntil_.toBuilder();
+              }
+              delayedUntil_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(delayedUntil_);
+                delayedUntil_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_RescheduleMaintenanceMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_RescheduleMaintenanceMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.class, yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the Kafka cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Kafka cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DELAYED_UNTIL_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp delayedUntil_;
+    /**
+     * <pre>
+     * The time until which this maintenance operation is to be delayed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+     */
+    public boolean hasDelayedUntil() {
+      return delayedUntil_ != null;
+    }
+    /**
+     * <pre>
+     * The time until which this maintenance operation is to be delayed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+     */
+    public com.google.protobuf.Timestamp getDelayedUntil() {
+      return delayedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+    }
+    /**
+     * <pre>
+     * The time until which this maintenance operation is to be delayed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
+      return getDelayedUntil();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (delayedUntil_ != null) {
+        output.writeMessage(4, getDelayedUntil());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (delayedUntil_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getDelayedUntil());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata other = (yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && (hasDelayedUntil() == other.hasDelayedUntil());
+      if (hasDelayedUntil()) {
+        result = result && getDelayedUntil()
+            .equals(other.getDelayedUntil());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      if (hasDelayedUntil()) {
+        hash = (37 * hash) + DELAYED_UNTIL_FIELD_NUMBER;
+        hash = (53 * hash) + getDelayedUntil().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceMetadata)
+        yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_RescheduleMaintenanceMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_RescheduleMaintenanceMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.class, yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = null;
+        } else {
+          delayedUntil_ = null;
+          delayedUntilBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_RescheduleMaintenanceMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata build() {
+        yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata result = new yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata(this);
+        result.clusterId_ = clusterId_;
+        if (delayedUntilBuilder_ == null) {
+          result.delayedUntil_ = delayedUntil_;
+        } else {
+          result.delayedUntil_ = delayedUntilBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (other.hasDelayedUntil()) {
+          mergeDelayedUntil(other.getDelayedUntil());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the Kafka cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Kafka cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Kafka cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Kafka cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Kafka cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp delayedUntil_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> delayedUntilBuilder_;
+      /**
+       * <pre>
+       * The time until which this maintenance operation is to be delayed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public boolean hasDelayedUntil() {
+        return delayedUntilBuilder_ != null || delayedUntil_ != null;
+      }
+      /**
+       * <pre>
+       * The time until which this maintenance operation is to be delayed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public com.google.protobuf.Timestamp getDelayedUntil() {
+        if (delayedUntilBuilder_ == null) {
+          return delayedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+        } else {
+          return delayedUntilBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The time until which this maintenance operation is to be delayed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public Builder setDelayedUntil(com.google.protobuf.Timestamp value) {
+        if (delayedUntilBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          delayedUntil_ = value;
+          onChanged();
+        } else {
+          delayedUntilBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time until which this maintenance operation is to be delayed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public Builder setDelayedUntil(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = builderForValue.build();
+          onChanged();
+        } else {
+          delayedUntilBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time until which this maintenance operation is to be delayed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public Builder mergeDelayedUntil(com.google.protobuf.Timestamp value) {
+        if (delayedUntilBuilder_ == null) {
+          if (delayedUntil_ != null) {
+            delayedUntil_ =
+              com.google.protobuf.Timestamp.newBuilder(delayedUntil_).mergeFrom(value).buildPartial();
+          } else {
+            delayedUntil_ = value;
+          }
+          onChanged();
+        } else {
+          delayedUntilBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time until which this maintenance operation is to be delayed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public Builder clearDelayedUntil() {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = null;
+          onChanged();
+        } else {
+          delayedUntil_ = null;
+          delayedUntilBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time until which this maintenance operation is to be delayed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDelayedUntilBuilder() {
+        
+        onChanged();
+        return getDelayedUntilFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The time until which this maintenance operation is to be delayed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
+        if (delayedUntilBuilder_ != null) {
+          return delayedUntilBuilder_.getMessageOrBuilder();
+        } else {
+          return delayedUntil_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+        }
+      }
+      /**
+       * <pre>
+       * The time until which this maintenance operation is to be delayed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDelayedUntilFieldBuilder() {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntilBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDelayedUntil(),
+                  getParentForChildren(),
+                  isClean());
+          delayedUntil_ = null;
+        }
+        return delayedUntilBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.RescheduleMaintenanceMetadata)
+    private static final yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RescheduleMaintenanceMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<RescheduleMaintenanceMetadata>() {
+      @java.lang.Override
+      public RescheduleMaintenanceMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RescheduleMaintenanceMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RescheduleMaintenanceMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RescheduleMaintenanceMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_kafka_v1_GetClusterRequest_descriptor;
   private static final 
@@ -25835,6 +28293,16 @@ public final class ClusterServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_kafka_v1_StopClusterMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_RescheduleMaintenanceRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_RescheduleMaintenanceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_RescheduleMaintenanceMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_RescheduleMaintenanceMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -25853,150 +28321,172 @@ public final class ClusterServiceOuterClass {
       "yandex/cloud/operation/operation.proto\032\'" +
       "yandex/cloud/mdb/kafka/v1/cluster.proto\032" +
       "%yandex/cloud/mdb/kafka/v1/topic.proto\032$" +
-      "yandex/cloud/mdb/kafka/v1/user.proto\"5\n\021" +
-      "GetClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\"\220\001\n\023ListClustersRequest\022\037\n\tf" +
-      "older_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_siz" +
-      "e\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB" +
-      "\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"e" +
-      "\n\024ListClustersResponse\0224\n\010clusters\030\001 \003(\013" +
-      "2\".yandex.cloud.mdb.kafka.v1.Cluster\022\027\n\017" +
-      "next_page_token\030\002 \001(\t\"\323\005\n\024CreateClusterR" +
-      "equest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "=\n\004name\030\002 \001(\tB/\350\3071\001\212\3101\0041-63\362\3071\037[a-z]([-a" +
-      "-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\003 " +
-      "\001(\tB\t\212\3101\005<=256\022\224\001\n\006labels\030\004 \003(\0132;.yandex" +
-      ".cloud.mdb.kafka.v1.CreateClusterRequest" +
-      ".LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\" +
-      "@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9" +
-      "a-z]*\022C\n\013environment\030\005 \001(\0162..yandex.clou" +
-      "d.mdb.kafka.v1.Cluster.Environment\022:\n\013co" +
-      "nfig_spec\030\006 \001(\0132%.yandex.cloud.mdb.kafka" +
-      ".v1.ConfigSpec\0229\n\013topic_specs\030\007 \003(\0132$.ya" +
-      "ndex.cloud.mdb.kafka.v1.TopicSpec\0227\n\nuse" +
-      "r_specs\030\010 \003(\0132#.yandex.cloud.mdb.kafka.v" +
-      "1.UserSpec\022\034\n\nnetwork_id\030\n \001(\tB\010\212\3101\004<=50" +
-      "\022\021\n\tsubnet_id\030\013 \003(\t\022\032\n\022security_group_id" +
-      "s\030\014 \003(\t\022\026\n\016host_group_ids\030\r \003(\t\022\033\n\023delet" +
-      "ion_protection\030\016 \001(\010\032-\n\013LabelsEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateClu" +
-      "sterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\346\003\n\024Upd" +
-      "ateClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.googl" +
-      "e.protobuf.FieldMask\022\036\n\013description\030\003 \001(" +
-      "\tB\t\212\3101\005<=256\022\214\001\n\006labels\030\004 \003(\0132;.yandex.c" +
-      "loud.mdb.kafka.v1.UpdateClusterRequest.L" +
-      "abelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-" +
-      "z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022:\n\013c" +
-      "onfig_spec\030\005 \001(\0132%.yandex.cloud.mdb.kafk" +
-      "a.v1.ConfigSpec\022(\n\004name\030\006 \001(\tB\032\212\3101\004<=63\362" +
-      "\3071\016[a-zA-Z0-9_-]*\022\032\n\022security_group_ids\030" +
-      "\007 \003(\t\022\033\n\023deletion_protection\030\010 \001(\010\032-\n\013La" +
-      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\"+\n\025UpdateClusterMetadata\022\022\n\ncluster_id" +
-      "\030\001 \001(\t\"8\n\024DeleteClusterRequest\022 \n\ncluste" +
-      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteCluste" +
-      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\247\002\n\026ListCl" +
-      "usterLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022-\n\tfro" +
-      "m_time\030\003 \001(\0132\032.google.protobuf.Timestamp" +
-      "\022+\n\007to_time\030\004 \001(\0132\032.google.protobuf.Time" +
-      "stamp\022\035\n\tpage_size\030\005 \001(\003B\n\372\3071\006<=1000\022\035\n\n" +
-      "page_token\030\006 \001(\tB\t\212\3101\005<=100\022\036\n\026always_ne" +
-      "xt_page_token\030\007 \001(\010\022\032\n\006filter\030\010 \001(\tB\n\212\3101" +
-      "\006<=1000\"\256\001\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\013" +
-      "2\032.google.protobuf.Timestamp\022B\n\007message\030" +
-      "\002 \003(\01321.yandex.cloud.mdb.kafka.v1.LogRec" +
-      "ord.MessageEntry\032.\n\014MessageEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"f\n\027ListClusterL" +
-      "ogsResponse\0222\n\004logs\030\001 \003(\0132$.yandex.cloud" +
-      ".mdb.kafka.v1.LogRecord\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t\"b\n\017StreamLogRecord\0224\n\006record\030\001 " +
-      "\001(\0132$.yandex.cloud.mdb.kafka.v1.LogRecor" +
-      "d\022\031\n\021next_record_token\030\002 \001(\t\"\354\001\n\030StreamC" +
-      "lusterLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022-\n\tfr" +
-      "om_time\030\003 \001(\0132\032.google.protobuf.Timestam" +
-      "p\022+\n\007to_time\030\004 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\022\037\n\014record_token\030\005 \001(\tB\t\212\3101\005<=100\022" +
-      "\032\n\006filter\030\006 \001(\tB\n\212\3101\006<=1000\"~\n\034ListClust" +
-      "erOperationsRequest\022 \n\ncluster_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=" +
-      "1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035L" +
-      "istClusterOperationsResponse\0225\n\noperatio" +
-      "ns\030\001 \003(\0132!.yandex.cloud.operation.Operat" +
-      "ion\022\027\n\017next_page_token\030\002 \001(\t\"y\n\027ListClus" +
-      "terHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000" +
-      "\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"c\n\030ListC" +
-      "lusterHostsResponse\022.\n\005hosts\030\001 \003(\0132\037.yan" +
-      "dex.cloud.mdb.kafka.v1.Host\022\027\n\017next_page" +
-      "_token\030\002 \001(\t\"c\n\022MoveClusterRequest\022 \n\ncl" +
-      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destinat" +
-      "ion_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023Mov" +
-      "eClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020" +
-      "source_folder_id\030\002 \001(\t\022\035\n\025destination_fo" +
-      "lder_id\030\003 \001(\t\"7\n\023StartClusterRequest\022 \n\n" +
-      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartC" +
-      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022St" +
-      "opClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\")\n\023StopClusterMetadata\022\022\n\nclu" +
-      "ster_id\030\001 \001(\t2\265\020\n\016ClusterService\022\210\001\n\003Get" +
-      "\022,.yandex.cloud.mdb.kafka.v1.GetClusterR" +
-      "equest\032\".yandex.cloud.mdb.kafka.v1.Clust" +
-      "er\"/\202\323\344\223\002)\022\'/managed-kafka/v1/clusters/{" +
-      "cluster_id}\022\213\001\n\004List\022..yandex.cloud.mdb." +
-      "kafka.v1.ListClustersRequest\032/.yandex.cl" +
-      "oud.mdb.kafka.v1.ListClustersResponse\"\"\202" +
-      "\323\344\223\002\034\022\032/managed-kafka/v1/clusters\022\247\001\n\006Cr" +
-      "eate\022/.yandex.cloud.mdb.kafka.v1.CreateC" +
+      "yandex/cloud/mdb/kafka/v1/user.proto\032+ya" +
+      "ndex/cloud/mdb/kafka/v1/maintenance.prot" +
+      "o\"5\n\021GetClusterRequest\022 \n\ncluster_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"\220\001\n\023ListClustersRequest" +
+      "\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpag" +
+      "e_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003" +
+      " \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1" +
+      "000\"e\n\024ListClustersResponse\0224\n\010clusters\030" +
+      "\001 \003(\0132\".yandex.cloud.mdb.kafka.v1.Cluste" +
+      "r\022\027\n\017next_page_token\030\002 \001(\t\"\235\006\n\024CreateClu" +
+      "sterRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022=\n\004name\030\002 \001(\tB/\350\3071\001\212\3101\0041-63\362\3071\037[a-z" +
+      "]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descripti" +
+      "on\030\003 \001(\tB\t\212\3101\005<=256\022\224\001\n\006labels\030\004 \003(\0132;.y" +
+      "andex.cloud.mdb.kafka.v1.CreateClusterRe" +
+      "quest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[" +
+      "-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./" +
+      "\\@0-9a-z]*\022C\n\013environment\030\005 \001(\0162..yandex" +
+      ".cloud.mdb.kafka.v1.Cluster.Environment\022" +
+      ":\n\013config_spec\030\006 \001(\0132%.yandex.cloud.mdb." +
+      "kafka.v1.ConfigSpec\0229\n\013topic_specs\030\007 \003(\013" +
+      "2$.yandex.cloud.mdb.kafka.v1.TopicSpec\0227" +
+      "\n\nuser_specs\030\010 \003(\0132#.yandex.cloud.mdb.ka" +
+      "fka.v1.UserSpec\022\034\n\nnetwork_id\030\n \001(\tB\010\212\3101" +
+      "\004<=50\022\021\n\tsubnet_id\030\013 \003(\t\022\032\n\022security_gro" +
+      "up_ids\030\014 \003(\t\022\026\n\016host_group_ids\030\r \003(\t\022\033\n\023" +
+      "deletion_protection\030\016 \001(\010\022H\n\022maintenance" +
+      "_window\030\017 \001(\0132,.yandex.cloud.mdb.kafka.v" +
+      "1.MaintenanceWindow\032-\n\013LabelsEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateClus" +
+      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\260\004\n\024Upda" +
+      "teClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google" +
+      ".protobuf.FieldMask\022\036\n\013description\030\003 \001(\t" +
+      "B\t\212\3101\005<=256\022\214\001\n\006labels\030\004 \003(\0132;.yandex.cl" +
+      "oud.mdb.kafka.v1.UpdateClusterRequest.La" +
+      "belsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z" +
+      "]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022:\n\013co" +
+      "nfig_spec\030\005 \001(\0132%.yandex.cloud.mdb.kafka" +
+      ".v1.ConfigSpec\022(\n\004name\030\006 \001(\tB\032\212\3101\004<=63\362\307" +
+      "1\016[a-zA-Z0-9_-]*\022\032\n\022security_group_ids\030\007" +
+      " \003(\t\022\033\n\023deletion_protection\030\010 \001(\010\022H\n\022mai" +
+      "ntenance_window\030\t \001(\0132,.yandex.cloud.mdb" +
+      ".kafka.v1.MaintenanceWindow\032-\n\013LabelsEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025Up" +
+      "dateClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"" +
+      "8\n\024DeleteClusterRequest\022 \n\ncluster_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteClusterMetada" +
+      "ta\022\022\n\ncluster_id\030\001 \001(\t\"\247\002\n\026ListClusterLo" +
+      "gsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022\025\n\rcolumn_filter\030\002 \003(\t\022-\n\tfrom_time\030" +
+      "\003 \001(\0132\032.google.protobuf.Timestamp\022+\n\007to_" +
+      "time\030\004 \001(\0132\032.google.protobuf.Timestamp\022\035" +
+      "\n\tpage_size\030\005 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_to" +
+      "ken\030\006 \001(\tB\t\212\3101\005<=100\022\036\n\026always_next_page" +
+      "_token\030\007 \001(\010\022\032\n\006filter\030\010 \001(\tB\n\212\3101\006<=1000" +
+      "\"\256\001\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132\032.goog" +
+      "le.protobuf.Timestamp\022B\n\007message\030\002 \003(\01321" +
+      ".yandex.cloud.mdb.kafka.v1.LogRecord.Mes" +
+      "sageEntry\032.\n\014MessageEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001\"f\n\027ListClusterLogsResp" +
+      "onse\0222\n\004logs\030\001 \003(\0132$.yandex.cloud.mdb.ka" +
+      "fka.v1.LogRecord\022\027\n\017next_page_token\030\002 \001(" +
+      "\t\"b\n\017StreamLogRecord\0224\n\006record\030\001 \001(\0132$.y" +
+      "andex.cloud.mdb.kafka.v1.LogRecord\022\031\n\021ne" +
+      "xt_record_token\030\002 \001(\t\"\354\001\n\030StreamClusterL" +
+      "ogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022-\n\tfrom_time" +
+      "\030\003 \001(\0132\032.google.protobuf.Timestamp\022+\n\007to" +
+      "_time\030\004 \001(\0132\032.google.protobuf.Timestamp\022" +
+      "\037\n\014record_token\030\005 \001(\tB\t\212\3101\005<=100\022\032\n\006filt" +
+      "er\030\006 \001(\tB\n\212\3101\006<=1000\"~\n\034ListClusterOpera" +
+      "tionsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n" +
+      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClus" +
+      "terOperationsResponse\0225\n\noperations\030\001 \003(" +
+      "\0132!.yandex.cloud.operation.Operation\022\027\n\017" +
+      "next_page_token\030\002 \001(\t\"y\n\027ListClusterHost" +
+      "sRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npag" +
+      "e_token\030\003 \001(\tB\t\212\3101\005<=100\"c\n\030ListClusterH" +
+      "ostsResponse\022.\n\005hosts\030\001 \003(\0132\037.yandex.clo" +
+      "ud.mdb.kafka.v1.Host\022\027\n\017next_page_token\030" +
+      "\002 \001(\t\"c\n\022MoveClusterRequest\022 \n\ncluster_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_fol" +
+      "der_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023MoveCluste" +
+      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020source_" +
+      "folder_id\030\002 \001(\t\022\035\n\025destination_folder_id" +
+      "\030\003 \001(\t\"7\n\023StartClusterRequest\022 \n\ncluster" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterM" +
+      "etadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopClust" +
+      "erRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\")\n\023StopClusterMetadata\022\022\n\ncluster_id" +
+      "\030\001 \001(\t\"\312\002\n\034RescheduleMaintenanceRequest\022" +
+      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022e\n\017res" +
+      "chedule_type\030\002 \001(\0162F.yandex.cloud.mdb.ka" +
+      "fka.v1.RescheduleMaintenanceRequest.Resc" +
+      "heduleTypeB\004\350\3071\001\0221\n\rdelayed_until\030\003 \001(\0132" +
+      "\032.google.protobuf.Timestamp\"n\n\016Reschedul" +
+      "eType\022\037\n\033RESCHEDULE_TYPE_UNSPECIFIED\020\000\022\r" +
+      "\n\tIMMEDIATE\020\001\022\031\n\025NEXT_AVAILABLE_WINDOW\020\002" +
+      "\022\021\n\rSPECIFIC_TIME\020\003\"f\n\035RescheduleMainten" +
+      "anceMetadata\022\022\n\ncluster_id\030\001 \001(\t\0221\n\rdela" +
+      "yed_until\030\004 \001(\0132\032.google.protobuf.Timest" +
+      "amp2\241\022\n\016ClusterService\022\210\001\n\003Get\022,.yandex." +
+      "cloud.mdb.kafka.v1.GetClusterRequest\032\".y" +
+      "andex.cloud.mdb.kafka.v1.Cluster\"/\202\323\344\223\002)" +
+      "\022\'/managed-kafka/v1/clusters/{cluster_id" +
+      "}\022\213\001\n\004List\022..yandex.cloud.mdb.kafka.v1.L" +
+      "istClustersRequest\032/.yandex.cloud.mdb.ka" +
+      "fka.v1.ListClustersResponse\"\"\202\323\344\223\002\034\022\032/ma" +
+      "naged-kafka/v1/clusters\022\247\001\n\006Create\022/.yan" +
+      "dex.cloud.mdb.kafka.v1.CreateClusterRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"I" +
+      "\202\323\344\223\002\037\"\032/managed-kafka/v1/clusters:\001*\262\322*" +
+      " \n\025CreateClusterMetadata\022\007Cluster\022\264\001\n\006Up" +
+      "date\022/.yandex.cloud.mdb.kafka.v1.UpdateC" +
       "lusterRequest\032!.yandex.cloud.operation.O" +
-      "peration\"I\202\323\344\223\002\037\"\032/managed-kafka/v1/clus" +
-      "ters:\001*\262\322* \n\025CreateClusterMetadata\022\007Clus" +
-      "ter\022\264\001\n\006Update\022/.yandex.cloud.mdb.kafka." +
-      "v1.UpdateClusterRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"V\202\323\344\223\002,2\'/managed-kaf" +
-      "ka/v1/clusters/{cluster_id}:\001*\262\322* \n\025Upda" +
-      "teClusterMetadata\022\007Cluster\022\277\001\n\006Delete\022/." +
-      "yandex.cloud.mdb.kafka.v1.DeleteClusterR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"a\202\323\344\223\002)*\'/managed-kafka/v1/clusters/{c" +
-      "luster_id}\262\322*.\n\025DeleteClusterMetadata\022\025g" +
-      "oogle.protobuf.Empty\022\263\001\n\004Move\022-.yandex.c" +
-      "loud.mdb.kafka.v1.MoveClusterRequest\032!.y" +
-      "andex.cloud.operation.Operation\"Y\202\323\344\223\0021\"" +
-      ",/managed-kafka/v1/clusters/{cluster_id}" +
-      ":move:\001*\262\322*\036\n\023MoveClusterMetadata\022\007Clust" +
-      "er\022\264\001\n\005Start\022..yandex.cloud.mdb.kafka.v1" +
-      ".StartClusterRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"X\202\323\344\223\002/\"-/managed-kafka/" +
-      "v1/clusters/{cluster_id}:start\262\322*\037\n\024Star" +
-      "tClusterMetadata\022\007Cluster\022\260\001\n\004Stop\022-.yan" +
-      "dex.cloud.mdb.kafka.v1.StopClusterReques" +
-      "t\032!.yandex.cloud.operation.Operation\"V\202\323" +
-      "\344\223\002.\",/managed-kafka/v1/clusters/{cluste" +
-      "r_id}:stop\262\322*\036\n\023StopClusterMetadata\022\007Clu" +
-      "ster\022\247\001\n\010ListLogs\0221.yandex.cloud.mdb.kaf" +
-      "ka.v1.ListClusterLogsRequest\0322.yandex.cl" +
-      "oud.mdb.kafka.v1.ListClusterLogsResponse" +
-      "\"4\202\323\344\223\002.\022,/managed-kafka/v1/clusters/{cl" +
-      "uster_id}:logs\022\254\001\n\nStreamLogs\0223.yandex.c" +
-      "loud.mdb.kafka.v1.StreamClusterLogsReque" +
-      "st\032*.yandex.cloud.mdb.kafka.v1.StreamLog" +
-      "Record\";\202\323\344\223\0025\0223/managed-kafka/v1/cluste" +
-      "rs/{cluster_id}:stream_logs0\001\022\277\001\n\016ListOp" +
-      "erations\0227.yandex.cloud.mdb.kafka.v1.Lis" +
-      "tClusterOperationsRequest\0328.yandex.cloud" +
-      ".mdb.kafka.v1.ListClusterOperationsRespo" +
-      "nse\":\202\323\344\223\0024\0222/managed-kafka/v1/clusters/" +
-      "{cluster_id}/operations\022\253\001\n\tListHosts\0222." +
-      "yandex.cloud.mdb.kafka.v1.ListClusterHos" +
-      "tsRequest\0323.yandex.cloud.mdb.kafka.v1.Li" +
-      "stClusterHostsResponse\"5\202\323\344\223\002/\022-/managed" +
-      "-kafka/v1/clusters/{cluster_id}/hostsBd\n" +
-      "\035yandex.cloud.api.mdb.kafka.v1ZCgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/mdb/kafka/v1;kafkab\006proto3"
+      "peration\"V\202\323\344\223\002,2\'/managed-kafka/v1/clus" +
+      "ters/{cluster_id}:\001*\262\322* \n\025UpdateClusterM" +
+      "etadata\022\007Cluster\022\277\001\n\006Delete\022/.yandex.clo" +
+      "ud.mdb.kafka.v1.DeleteClusterRequest\032!.y" +
+      "andex.cloud.operation.Operation\"a\202\323\344\223\002)*" +
+      "\'/managed-kafka/v1/clusters/{cluster_id}" +
+      "\262\322*.\n\025DeleteClusterMetadata\022\025google.prot" +
+      "obuf.Empty\022\263\001\n\004Move\022-.yandex.cloud.mdb.k" +
+      "afka.v1.MoveClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"Y\202\323\344\223\0021\",/managed-" +
+      "kafka/v1/clusters/{cluster_id}:move:\001*\262\322" +
+      "*\036\n\023MoveClusterMetadata\022\007Cluster\022\264\001\n\005Sta" +
+      "rt\022..yandex.cloud.mdb.kafka.v1.StartClus" +
+      "terRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"X\202\323\344\223\002/\"-/managed-kafka/v1/cluster" +
+      "s/{cluster_id}:start\262\322*\037\n\024StartClusterMe" +
+      "tadata\022\007Cluster\022\260\001\n\004Stop\022-.yandex.cloud." +
+      "mdb.kafka.v1.StopClusterRequest\032!.yandex" +
+      ".cloud.operation.Operation\"V\202\323\344\223\002.\",/man" +
+      "aged-kafka/v1/clusters/{cluster_id}:stop" +
+      "\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\351\001\n\025R" +
+      "escheduleMaintenance\0227.yandex.cloud.mdb." +
+      "kafka.v1.RescheduleMaintenanceRequest\032!." +
+      "yandex.cloud.operation.Operation\"t\202\323\344\223\002B" +
+      "\"=/managed-kafka/v1/clusters/{cluster_id" +
+      "}:rescheduleMaintenance:\001*\262\322*(\n\035Reschedu" +
+      "leMaintenanceMetadata\022\007Cluster\022\247\001\n\010ListL" +
+      "ogs\0221.yandex.cloud.mdb.kafka.v1.ListClus" +
+      "terLogsRequest\0322.yandex.cloud.mdb.kafka." +
+      "v1.ListClusterLogsResponse\"4\202\323\344\223\002.\022,/man" +
+      "aged-kafka/v1/clusters/{cluster_id}:logs" +
+      "\022\254\001\n\nStreamLogs\0223.yandex.cloud.mdb.kafka" +
+      ".v1.StreamClusterLogsRequest\032*.yandex.cl" +
+      "oud.mdb.kafka.v1.StreamLogRecord\";\202\323\344\223\0025" +
+      "\0223/managed-kafka/v1/clusters/{cluster_id" +
+      "}:stream_logs0\001\022\277\001\n\016ListOperations\0227.yan" +
+      "dex.cloud.mdb.kafka.v1.ListClusterOperat" +
+      "ionsRequest\0328.yandex.cloud.mdb.kafka.v1." +
+      "ListClusterOperationsResponse\":\202\323\344\223\0024\0222/" +
+      "managed-kafka/v1/clusters/{cluster_id}/o" +
+      "perations\022\253\001\n\tListHosts\0222.yandex.cloud.m" +
+      "db.kafka.v1.ListClusterHostsRequest\0323.ya" +
+      "ndex.cloud.mdb.kafka.v1.ListClusterHosts" +
+      "Response\"5\202\323\344\223\002/\022-/managed-kafka/v1/clus" +
+      "ters/{cluster_id}/hostsBd\n\035yandex.cloud." +
+      "api.mdb.kafka.v1ZCgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/mdb/kafka/v1;" +
+      "kafkab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -26018,6 +28508,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.getDescriptor(),
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.getDescriptor(),
           yandex.cloud.api.mdb.kafka.v1.UserOuterClass.getDescriptor(),
+          yandex.cloud.api.mdb.kafka.v1.Maintenance.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_mdb_kafka_v1_GetClusterRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -26042,7 +28533,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_CreateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_CreateClusterRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "TopicSpecs", "UserSpecs", "NetworkId", "SubnetId", "SecurityGroupIds", "HostGroupIds", "DeletionProtection", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "TopicSpecs", "UserSpecs", "NetworkId", "SubnetId", "SecurityGroupIds", "HostGroupIds", "DeletionProtection", "MaintenanceWindow", });
     internal_static_yandex_cloud_mdb_kafka_v1_CreateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_kafka_v1_CreateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_CreateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -26060,7 +28551,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_UpdateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_UpdateClusterRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "ConfigSpec", "Name", "SecurityGroupIds", "DeletionProtection", });
+        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "ConfigSpec", "Name", "SecurityGroupIds", "DeletionProtection", "MaintenanceWindow", });
     internal_static_yandex_cloud_mdb_kafka_v1_UpdateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_kafka_v1_UpdateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_UpdateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -26181,6 +28672,18 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_StopClusterMetadata_descriptor,
         new java.lang.String[] { "ClusterId", });
+    internal_static_yandex_cloud_mdb_kafka_v1_RescheduleMaintenanceRequest_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_yandex_cloud_mdb_kafka_v1_RescheduleMaintenanceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_RescheduleMaintenanceRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "RescheduleType", "DelayedUntil", });
+    internal_static_yandex_cloud_mdb_kafka_v1_RescheduleMaintenanceMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_yandex_cloud_mdb_kafka_v1_RescheduleMaintenanceMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_RescheduleMaintenanceMetadata_descriptor,
+        new java.lang.String[] { "ClusterId", "DelayedUntil", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -26202,6 +28705,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.getDescriptor();
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.getDescriptor();
     yandex.cloud.api.mdb.kafka.v1.UserOuterClass.getDescriptor();
+    yandex.cloud.api.mdb.kafka.v1.Maintenance.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

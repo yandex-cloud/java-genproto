@@ -564,6 +564,2040 @@ public final class EndpointServiceOuterClass {
 
   }
 
+  public interface ListEndpointsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.ListEndpointsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Identifier of the folder containing the endpoints to be listed.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * Identifier of the folder containing the endpoints to be listed.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of endpoints to be sent in the response message. If the
+     * folder contains more endpoints than page_size, next_page_token will be included
+     * in the response message. Include it into the subsequent ListEndpointRequest to
+     * fetch the next page. Defaults to 100 if not specified. The maximum allowed value
+     * for this field is 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2;</code>
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Opaque value identifying the endpoints page to be fetched. Should be empty in
+     * the first ListEndpointsRequest. Subsequent request should have this field filled
+     * with the next_page_token from the previous ListEndpointsResponse.
+     * </pre>
+     *
+     * <code>string page_token = 3;</code>
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Opaque value identifying the endpoints page to be fetched. Should be empty in
+     * the first ListEndpointsRequest. Subsequent request should have this field filled
+     * with the next_page_token from the previous ListEndpointsResponse.
+     * </pre>
+     *
+     * <code>string page_token = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datatransfer.v1.ListEndpointsRequest}
+   */
+  public  static final class ListEndpointsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.ListEndpointsRequest)
+      ListEndpointsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListEndpointsRequest.newBuilder() to construct.
+    private ListEndpointsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListEndpointsRequest() {
+      folderId_ = "";
+      pageSize_ = 0L;
+      pageToken_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListEndpointsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_ListEndpointsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_ListEndpointsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest.class, yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest.Builder.class);
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * Identifier of the folder containing the endpoints to be listed.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     */
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Identifier of the folder containing the endpoints to be listed.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of endpoints to be sent in the response message. If the
+     * folder contains more endpoints than page_size, next_page_token will be included
+     * in the response message. Include it into the subsequent ListEndpointRequest to
+     * fetch the next page. Defaults to 100 if not specified. The maximum allowed value
+     * for this field is 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2;</code>
+     */
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Opaque value identifying the endpoints page to be fetched. Should be empty in
+     * the first ListEndpointsRequest. Subsequent request should have this field filled
+     * with the next_page_token from the previous ListEndpointsResponse.
+     * </pre>
+     *
+     * <code>string page_token = 3;</code>
+     */
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Opaque value identifying the endpoints page to be fetched. Should be empty in
+     * the first ListEndpointsRequest. Subsequent request should have this field filled
+     * with the next_page_token from the previous ListEndpointsResponse.
+     * </pre>
+     *
+     * <code>string page_token = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getFolderIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!getPageTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getFolderIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!getPageTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest other = (yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest) obj;
+
+      boolean result = true;
+      result = result && getFolderId()
+          .equals(other.getFolderId());
+      result = result && (getPageSize()
+          == other.getPageSize());
+      result = result && getPageToken()
+          .equals(other.getPageToken());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datatransfer.v1.ListEndpointsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datatransfer.v1.ListEndpointsRequest)
+        yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_ListEndpointsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_ListEndpointsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest.class, yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        folderId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_ListEndpointsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest build() {
+        yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest buildPartial() {
+        yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest result = new yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest(this);
+        result.folderId_ = folderId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest) {
+          return mergeFrom((yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest other) {
+        if (other == yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest.getDefaultInstance()) return this;
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * Identifier of the folder containing the endpoints to be listed.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Identifier of the folder containing the endpoints to be listed.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Identifier of the folder containing the endpoints to be listed.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifier of the folder containing the endpoints to be listed.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifier of the folder containing the endpoints to be listed.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of endpoints to be sent in the response message. If the
+       * folder contains more endpoints than page_size, next_page_token will be included
+       * in the response message. Include it into the subsequent ListEndpointRequest to
+       * fetch the next page. Defaults to 100 if not specified. The maximum allowed value
+       * for this field is 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2;</code>
+       */
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of endpoints to be sent in the response message. If the
+       * folder contains more endpoints than page_size, next_page_token will be included
+       * in the response message. Include it into the subsequent ListEndpointRequest to
+       * fetch the next page. Defaults to 100 if not specified. The maximum allowed value
+       * for this field is 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2;</code>
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of endpoints to be sent in the response message. If the
+       * folder contains more endpoints than page_size, next_page_token will be included
+       * in the response message. Include it into the subsequent ListEndpointRequest to
+       * fetch the next page. Defaults to 100 if not specified. The maximum allowed value
+       * for this field is 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2;</code>
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Opaque value identifying the endpoints page to be fetched. Should be empty in
+       * the first ListEndpointsRequest. Subsequent request should have this field filled
+       * with the next_page_token from the previous ListEndpointsResponse.
+       * </pre>
+       *
+       * <code>string page_token = 3;</code>
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Opaque value identifying the endpoints page to be fetched. Should be empty in
+       * the first ListEndpointsRequest. Subsequent request should have this field filled
+       * with the next_page_token from the previous ListEndpointsResponse.
+       * </pre>
+       *
+       * <code>string page_token = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Opaque value identifying the endpoints page to be fetched. Should be empty in
+       * the first ListEndpointsRequest. Subsequent request should have this field filled
+       * with the next_page_token from the previous ListEndpointsResponse.
+       * </pre>
+       *
+       * <code>string page_token = 3;</code>
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Opaque value identifying the endpoints page to be fetched. Should be empty in
+       * the first ListEndpointsRequest. Subsequent request should have this field filled
+       * with the next_page_token from the previous ListEndpointsResponse.
+       * </pre>
+       *
+       * <code>string page_token = 3;</code>
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Opaque value identifying the endpoints page to be fetched. Should be empty in
+       * the first ListEndpointsRequest. Subsequent request should have this field filled
+       * with the next_page_token from the previous ListEndpointsResponse.
+       * </pre>
+       *
+       * <code>string page_token = 3;</code>
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datatransfer.v1.ListEndpointsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datatransfer.v1.ListEndpointsRequest)
+    private static final yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest();
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListEndpointsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListEndpointsRequest>() {
+      @java.lang.Override
+      public ListEndpointsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListEndpointsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListEndpointsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListEndpointsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListEndpointsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.ListEndpointsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The list of endpoints. If there are more endpoints in the folder, then
+     * next_page_token is a non-empty string to be included into the subsequent
+     * ListEndpointsRequest to fetch the next endpoints page.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint> 
+        getEndpointsList();
+    /**
+     * <pre>
+     * The list of endpoints. If there are more endpoints in the folder, then
+     * next_page_token is a non-empty string to be included into the subsequent
+     * ListEndpointsRequest to fetch the next endpoints page.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint getEndpoints(int index);
+    /**
+     * <pre>
+     * The list of endpoints. If there are more endpoints in the folder, then
+     * next_page_token is a non-empty string to be included into the subsequent
+     * ListEndpointsRequest to fetch the next endpoints page.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+     */
+    int getEndpointsCount();
+    /**
+     * <pre>
+     * The list of endpoints. If there are more endpoints in the folder, then
+     * next_page_token is a non-empty string to be included into the subsequent
+     * ListEndpointsRequest to fetch the next endpoints page.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointOrBuilder> 
+        getEndpointsOrBuilderList();
+    /**
+     * <pre>
+     * The list of endpoints. If there are more endpoints in the folder, then
+     * next_page_token is a non-empty string to be included into the subsequent
+     * ListEndpointsRequest to fetch the next endpoints page.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointOrBuilder getEndpointsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Opaque value identifying the next endpoints page. This field is empty if there
+     * are no more endpoints in the folder. Otherwise it is non-empty and should be
+     * included in the subsequent ListEndpointsRequest to fetch the next endpoints
+     * page.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * Opaque value identifying the next endpoints page. This field is empty if there
+     * are no more endpoints in the folder. Otherwise it is non-empty and should be
+     * included in the subsequent ListEndpointsRequest to fetch the next endpoints
+     * page.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datatransfer.v1.ListEndpointsResponse}
+   */
+  public  static final class ListEndpointsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.ListEndpointsResponse)
+      ListEndpointsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListEndpointsResponse.newBuilder() to construct.
+    private ListEndpointsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListEndpointsResponse() {
+      endpoints_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListEndpointsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                endpoints_ = new java.util.ArrayList<yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              endpoints_.add(
+                  input.readMessage(yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          endpoints_ = java.util.Collections.unmodifiableList(endpoints_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_ListEndpointsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_ListEndpointsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse.class, yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ENDPOINTS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint> endpoints_;
+    /**
+     * <pre>
+     * The list of endpoints. If there are more endpoints in the folder, then
+     * next_page_token is a non-empty string to be included into the subsequent
+     * ListEndpointsRequest to fetch the next endpoints page.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+     */
+    public java.util.List<yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint> getEndpointsList() {
+      return endpoints_;
+    }
+    /**
+     * <pre>
+     * The list of endpoints. If there are more endpoints in the folder, then
+     * next_page_token is a non-empty string to be included into the subsequent
+     * ListEndpointsRequest to fetch the next endpoints page.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointOrBuilder> 
+        getEndpointsOrBuilderList() {
+      return endpoints_;
+    }
+    /**
+     * <pre>
+     * The list of endpoints. If there are more endpoints in the folder, then
+     * next_page_token is a non-empty string to be included into the subsequent
+     * ListEndpointsRequest to fetch the next endpoints page.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+     */
+    public int getEndpointsCount() {
+      return endpoints_.size();
+    }
+    /**
+     * <pre>
+     * The list of endpoints. If there are more endpoints in the folder, then
+     * next_page_token is a non-empty string to be included into the subsequent
+     * ListEndpointsRequest to fetch the next endpoints page.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+     */
+    public yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint getEndpoints(int index) {
+      return endpoints_.get(index);
+    }
+    /**
+     * <pre>
+     * The list of endpoints. If there are more endpoints in the folder, then
+     * next_page_token is a non-empty string to be included into the subsequent
+     * ListEndpointsRequest to fetch the next endpoints page.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+     */
+    public yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointOrBuilder getEndpointsOrBuilder(
+        int index) {
+      return endpoints_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * Opaque value identifying the next endpoints page. This field is empty if there
+     * are no more endpoints in the folder. Otherwise it is non-empty and should be
+     * included in the subsequent ListEndpointsRequest to fetch the next endpoints
+     * page.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Opaque value identifying the next endpoints page. This field is empty if there
+     * are no more endpoints in the folder. Otherwise it is non-empty and should be
+     * included in the subsequent ListEndpointsRequest to fetch the next endpoints
+     * page.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < endpoints_.size(); i++) {
+        output.writeMessage(1, endpoints_.get(i));
+      }
+      if (!getNextPageTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < endpoints_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, endpoints_.get(i));
+      }
+      if (!getNextPageTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse other = (yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse) obj;
+
+      boolean result = true;
+      result = result && getEndpointsList()
+          .equals(other.getEndpointsList());
+      result = result && getNextPageToken()
+          .equals(other.getNextPageToken());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEndpointsCount() > 0) {
+        hash = (37 * hash) + ENDPOINTS_FIELD_NUMBER;
+        hash = (53 * hash) + getEndpointsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datatransfer.v1.ListEndpointsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datatransfer.v1.ListEndpointsResponse)
+        yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_ListEndpointsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_ListEndpointsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse.class, yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEndpointsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (endpointsBuilder_ == null) {
+          endpoints_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          endpointsBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_ListEndpointsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse build() {
+        yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse buildPartial() {
+        yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse result = new yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (endpointsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            endpoints_ = java.util.Collections.unmodifiableList(endpoints_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.endpoints_ = endpoints_;
+        } else {
+          result.endpoints_ = endpointsBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse) {
+          return mergeFrom((yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse other) {
+        if (other == yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse.getDefaultInstance()) return this;
+        if (endpointsBuilder_ == null) {
+          if (!other.endpoints_.isEmpty()) {
+            if (endpoints_.isEmpty()) {
+              endpoints_ = other.endpoints_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEndpointsIsMutable();
+              endpoints_.addAll(other.endpoints_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.endpoints_.isEmpty()) {
+            if (endpointsBuilder_.isEmpty()) {
+              endpointsBuilder_.dispose();
+              endpointsBuilder_ = null;
+              endpoints_ = other.endpoints_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              endpointsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEndpointsFieldBuilder() : null;
+            } else {
+              endpointsBuilder_.addAllMessages(other.endpoints_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint> endpoints_ =
+        java.util.Collections.emptyList();
+      private void ensureEndpointsIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          endpoints_ = new java.util.ArrayList<yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint>(endpoints_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint, yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint.Builder, yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointOrBuilder> endpointsBuilder_;
+
+      /**
+       * <pre>
+       * The list of endpoints. If there are more endpoints in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListEndpointsRequest to fetch the next endpoints page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint> getEndpointsList() {
+        if (endpointsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(endpoints_);
+        } else {
+          return endpointsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * The list of endpoints. If there are more endpoints in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListEndpointsRequest to fetch the next endpoints page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+       */
+      public int getEndpointsCount() {
+        if (endpointsBuilder_ == null) {
+          return endpoints_.size();
+        } else {
+          return endpointsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * The list of endpoints. If there are more endpoints in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListEndpointsRequest to fetch the next endpoints page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint getEndpoints(int index) {
+        if (endpointsBuilder_ == null) {
+          return endpoints_.get(index);
+        } else {
+          return endpointsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * The list of endpoints. If there are more endpoints in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListEndpointsRequest to fetch the next endpoints page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+       */
+      public Builder setEndpoints(
+          int index, yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint value) {
+        if (endpointsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEndpointsIsMutable();
+          endpoints_.set(index, value);
+          onChanged();
+        } else {
+          endpointsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of endpoints. If there are more endpoints in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListEndpointsRequest to fetch the next endpoints page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+       */
+      public Builder setEndpoints(
+          int index, yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint.Builder builderForValue) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          endpointsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of endpoints. If there are more endpoints in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListEndpointsRequest to fetch the next endpoints page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+       */
+      public Builder addEndpoints(yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint value) {
+        if (endpointsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEndpointsIsMutable();
+          endpoints_.add(value);
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of endpoints. If there are more endpoints in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListEndpointsRequest to fetch the next endpoints page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+       */
+      public Builder addEndpoints(
+          int index, yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint value) {
+        if (endpointsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEndpointsIsMutable();
+          endpoints_.add(index, value);
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of endpoints. If there are more endpoints in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListEndpointsRequest to fetch the next endpoints page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+       */
+      public Builder addEndpoints(
+          yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint.Builder builderForValue) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.add(builderForValue.build());
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of endpoints. If there are more endpoints in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListEndpointsRequest to fetch the next endpoints page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+       */
+      public Builder addEndpoints(
+          int index, yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint.Builder builderForValue) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of endpoints. If there are more endpoints in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListEndpointsRequest to fetch the next endpoints page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+       */
+      public Builder addAllEndpoints(
+          java.lang.Iterable<? extends yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint> values) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, endpoints_);
+          onChanged();
+        } else {
+          endpointsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of endpoints. If there are more endpoints in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListEndpointsRequest to fetch the next endpoints page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+       */
+      public Builder clearEndpoints() {
+        if (endpointsBuilder_ == null) {
+          endpoints_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          endpointsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of endpoints. If there are more endpoints in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListEndpointsRequest to fetch the next endpoints page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+       */
+      public Builder removeEndpoints(int index) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.remove(index);
+          onChanged();
+        } else {
+          endpointsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of endpoints. If there are more endpoints in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListEndpointsRequest to fetch the next endpoints page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint.Builder getEndpointsBuilder(
+          int index) {
+        return getEndpointsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * The list of endpoints. If there are more endpoints in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListEndpointsRequest to fetch the next endpoints page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointOrBuilder getEndpointsOrBuilder(
+          int index) {
+        if (endpointsBuilder_ == null) {
+          return endpoints_.get(index);  } else {
+          return endpointsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * The list of endpoints. If there are more endpoints in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListEndpointsRequest to fetch the next endpoints page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointOrBuilder> 
+           getEndpointsOrBuilderList() {
+        if (endpointsBuilder_ != null) {
+          return endpointsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(endpoints_);
+        }
+      }
+      /**
+       * <pre>
+       * The list of endpoints. If there are more endpoints in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListEndpointsRequest to fetch the next endpoints page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint.Builder addEndpointsBuilder() {
+        return getEndpointsFieldBuilder().addBuilder(
+            yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The list of endpoints. If there are more endpoints in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListEndpointsRequest to fetch the next endpoints page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint.Builder addEndpointsBuilder(
+          int index) {
+        return getEndpointsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The list of endpoints. If there are more endpoints in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListEndpointsRequest to fetch the next endpoints page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint.Builder> 
+           getEndpointsBuilderList() {
+        return getEndpointsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint, yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint.Builder, yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointOrBuilder> 
+          getEndpointsFieldBuilder() {
+        if (endpointsBuilder_ == null) {
+          endpointsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint, yandex.cloud.api.datatransfer.v1.EndpointOuterClass.Endpoint.Builder, yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointOrBuilder>(
+                  endpoints_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          endpoints_ = null;
+        }
+        return endpointsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * Opaque value identifying the next endpoints page. This field is empty if there
+       * are no more endpoints in the folder. Otherwise it is non-empty and should be
+       * included in the subsequent ListEndpointsRequest to fetch the next endpoints
+       * page.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Opaque value identifying the next endpoints page. This field is empty if there
+       * are no more endpoints in the folder. Otherwise it is non-empty and should be
+       * included in the subsequent ListEndpointsRequest to fetch the next endpoints
+       * page.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Opaque value identifying the next endpoints page. This field is empty if there
+       * are no more endpoints in the folder. Otherwise it is non-empty and should be
+       * included in the subsequent ListEndpointsRequest to fetch the next endpoints
+       * page.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Opaque value identifying the next endpoints page. This field is empty if there
+       * are no more endpoints in the folder. Otherwise it is non-empty and should be
+       * included in the subsequent ListEndpointsRequest to fetch the next endpoints
+       * page.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Opaque value identifying the next endpoints page. This field is empty if there
+       * are no more endpoints in the folder. Otherwise it is non-empty and should be
+       * included in the subsequent ListEndpointsRequest to fetch the next endpoints
+       * page.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datatransfer.v1.ListEndpointsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datatransfer.v1.ListEndpointsResponse)
+    private static final yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse();
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListEndpointsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListEndpointsResponse>() {
+      @java.lang.Override
+      public ListEndpointsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListEndpointsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListEndpointsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListEndpointsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.ListEndpointsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CreateEndpointRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.CreateEndpointRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -597,6 +2631,40 @@ public final class EndpointServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <code>map&lt;string, string&gt; labels = 4;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <code>map&lt;string, string&gt; labels = 4;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <code>map&lt;string, string&gt; labels = 4;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <code>map&lt;string, string&gt; labels = 4;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; labels = 4;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
 
     /**
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
@@ -671,6 +2739,19 @@ public final class EndpointServiceOuterClass {
               description_ = s;
               break;
             }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000008;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             case 418: {
               yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings.Builder subBuilder = null;
               if (settings_ != null) {
@@ -708,6 +2789,18 @@ public final class EndpointServiceOuterClass {
       return yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_CreateEndpointRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 4:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -716,6 +2809,7 @@ public final class EndpointServiceOuterClass {
               yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.CreateEndpointRequest.class, yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.CreateEndpointRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
@@ -818,6 +2912,82 @@ public final class EndpointServiceOuterClass {
       }
     }
 
+    public static final int LABELS_FIELD_NUMBER = 4;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_CreateEndpointRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 4;</code>
+     */
+
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 4;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 4;</code>
+     */
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 4;</code>
+     */
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     public static final int SETTINGS_FIELD_NUMBER = 52;
     private yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings settings_;
     /**
@@ -862,6 +3032,12 @@ public final class EndpointServiceOuterClass {
       if (!getDescriptionBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          4);
       if (settings_ != null) {
         output.writeMessage(52, getSettings());
       }
@@ -882,6 +3058,16 @@ public final class EndpointServiceOuterClass {
       }
       if (!getDescriptionBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, labels__);
       }
       if (settings_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -909,6 +3095,8 @@ public final class EndpointServiceOuterClass {
           .equals(other.getName());
       result = result && getDescription()
           .equals(other.getDescription());
+      result = result && internalGetLabels().equals(
+          other.internalGetLabels());
       result = result && (hasSettings() == other.hasSettings());
       if (hasSettings()) {
         result = result && getSettings()
@@ -931,6 +3119,10 @@ public final class EndpointServiceOuterClass {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       if (hasSettings()) {
         hash = (37 * hash) + SETTINGS_FIELD_NUMBER;
         hash = (53 * hash) + getSettings().hashCode();
@@ -1042,6 +3234,28 @@ public final class EndpointServiceOuterClass {
         return yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_CreateEndpointRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -1074,6 +3288,7 @@ public final class EndpointServiceOuterClass {
 
         description_ = "";
 
+        internalGetMutableLabels().clear();
         if (settingsBuilder_ == null) {
           settings_ = null;
         } else {
@@ -1106,14 +3321,19 @@ public final class EndpointServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.CreateEndpointRequest buildPartial() {
         yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.CreateEndpointRequest result = new yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.CreateEndpointRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.description_ = description_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         if (settingsBuilder_ == null) {
           result.settings_ = settings_;
         } else {
           result.settings_ = settingsBuilder_.build();
         }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -1174,6 +3394,8 @@ public final class EndpointServiceOuterClass {
           description_ = other.description_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         if (other.hasSettings()) {
           mergeSettings(other.getSettings());
         }
@@ -1205,6 +3427,7 @@ public final class EndpointServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object folderId_ = "";
       /**
@@ -1410,6 +3633,129 @@ public final class EndpointServiceOuterClass {
         
         description_ = value;
         onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 4;</code>
+       */
+
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 4;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 4;</code>
+       */
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 4;</code>
+       */
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 4;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 4;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 4;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
         return this;
       }
 
@@ -2137,47 +4483,154 @@ public final class EndpointServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Identifier of the endpoint to be updated.
+     * </pre>
+     *
      * <code>string endpoint_id = 10;</code>
      */
     java.lang.String getEndpointId();
     /**
+     * <pre>
+     * Identifier of the endpoint to be updated.
+     * </pre>
+     *
      * <code>string endpoint_id = 10;</code>
      */
     com.google.protobuf.ByteString
         getEndpointIdBytes();
 
     /**
+     * <pre>
+     * The new endpoint name. Must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 11;</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * The new endpoint name. Must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 11;</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * The new description for the endpoint.
+     * </pre>
+     *
      * <code>string description = 12;</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * The new description for the endpoint.
+     * </pre>
+     *
      * <code>string description = 12;</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <code>map&lt;string, string&gt; labels = 13;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <code>map&lt;string, string&gt; labels = 13;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <code>map&lt;string, string&gt; labels = 13;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <code>map&lt;string, string&gt; labels = 13;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; labels = 13;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * The new endpoint name. Must be unique within the folder.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
      */
     boolean hasSettings();
     /**
+     * <pre>
+     * The new endpoint name. Must be unique within the folder.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
      */
     yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings getSettings();
     /**
+     * <pre>
+     * The new endpoint name. Must be unique within the folder.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
      */
     yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettingsOrBuilder getSettingsOrBuilder();
+
+    /**
+     * <pre>
+     * Field mask specifying endpoint fields to be updated. Semantics for this field is
+     * described here:
+     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+     * The only exception is that if the repeated field is specified in the mask, then
+     * the new value replaces the old one instead of being appended to the old one.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 60;</code>
+     */
+    boolean hasUpdateMask();
+    /**
+     * <pre>
+     * Field mask specifying endpoint fields to be updated. Semantics for this field is
+     * described here:
+     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+     * The only exception is that if the repeated field is specified in the mask, then
+     * the new value replaces the old one instead of being appended to the old one.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 60;</code>
+     */
+    com.google.protobuf.FieldMask getUpdateMask();
+    /**
+     * <pre>
+     * Field mask specifying endpoint fields to be updated. Semantics for this field is
+     * described here:
+     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+     * The only exception is that if the repeated field is specified in the mask, then
+     * the new value replaces the old one instead of being appended to the old one.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 60;</code>
+     */
+    com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.UpdateEndpointRequest}
@@ -2239,6 +4692,19 @@ public final class EndpointServiceOuterClass {
               description_ = s;
               break;
             }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000008;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             case 418: {
               yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings.Builder subBuilder = null;
               if (settings_ != null) {
@@ -2248,6 +4714,19 @@ public final class EndpointServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(settings_);
                 settings_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 482: {
+              com.google.protobuf.FieldMask.Builder subBuilder = null;
+              if (updateMask_ != null) {
+                subBuilder = updateMask_.toBuilder();
+              }
+              updateMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updateMask_);
+                updateMask_ = subBuilder.buildPartial();
               }
 
               break;
@@ -2276,6 +4755,18 @@ public final class EndpointServiceOuterClass {
       return yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_UpdateEndpointRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 13:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -2284,9 +4775,14 @@ public final class EndpointServiceOuterClass {
               yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.UpdateEndpointRequest.class, yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.UpdateEndpointRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ENDPOINT_ID_FIELD_NUMBER = 10;
     private volatile java.lang.Object endpointId_;
     /**
+     * <pre>
+     * Identifier of the endpoint to be updated.
+     * </pre>
+     *
      * <code>string endpoint_id = 10;</code>
      */
     public java.lang.String getEndpointId() {
@@ -2302,6 +4798,10 @@ public final class EndpointServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Identifier of the endpoint to be updated.
+     * </pre>
+     *
      * <code>string endpoint_id = 10;</code>
      */
     public com.google.protobuf.ByteString
@@ -2321,6 +4821,10 @@ public final class EndpointServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 11;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * The new endpoint name. Must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 11;</code>
      */
     public java.lang.String getName() {
@@ -2336,6 +4840,10 @@ public final class EndpointServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * The new endpoint name. Must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 11;</code>
      */
     public com.google.protobuf.ByteString
@@ -2355,6 +4863,10 @@ public final class EndpointServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 12;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * The new description for the endpoint.
+     * </pre>
+     *
      * <code>string description = 12;</code>
      */
     public java.lang.String getDescription() {
@@ -2370,6 +4882,10 @@ public final class EndpointServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * The new description for the endpoint.
+     * </pre>
+     *
      * <code>string description = 12;</code>
      */
     public com.google.protobuf.ByteString
@@ -2386,25 +4902,158 @@ public final class EndpointServiceOuterClass {
       }
     }
 
+    public static final int LABELS_FIELD_NUMBER = 13;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_UpdateEndpointRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 13;</code>
+     */
+
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 13;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 13;</code>
+     */
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 13;</code>
+     */
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     public static final int SETTINGS_FIELD_NUMBER = 52;
     private yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings settings_;
     /**
+     * <pre>
+     * The new endpoint name. Must be unique within the folder.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
      */
     public boolean hasSettings() {
       return settings_ != null;
     }
     /**
+     * <pre>
+     * The new endpoint name. Must be unique within the folder.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
      */
     public yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings getSettings() {
       return settings_ == null ? yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings.getDefaultInstance() : settings_;
     }
     /**
+     * <pre>
+     * The new endpoint name. Must be unique within the folder.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
      */
     public yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettingsOrBuilder getSettingsOrBuilder() {
       return getSettings();
+    }
+
+    public static final int UPDATE_MASK_FIELD_NUMBER = 60;
+    private com.google.protobuf.FieldMask updateMask_;
+    /**
+     * <pre>
+     * Field mask specifying endpoint fields to be updated. Semantics for this field is
+     * described here:
+     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+     * The only exception is that if the repeated field is specified in the mask, then
+     * the new value replaces the old one instead of being appended to the old one.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 60;</code>
+     */
+    public boolean hasUpdateMask() {
+      return updateMask_ != null;
+    }
+    /**
+     * <pre>
+     * Field mask specifying endpoint fields to be updated. Semantics for this field is
+     * described here:
+     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+     * The only exception is that if the repeated field is specified in the mask, then
+     * the new value replaces the old one instead of being appended to the old one.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 60;</code>
+     */
+    public com.google.protobuf.FieldMask getUpdateMask() {
+      return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+    }
+    /**
+     * <pre>
+     * Field mask specifying endpoint fields to be updated. Semantics for this field is
+     * described here:
+     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+     * The only exception is that if the repeated field is specified in the mask, then
+     * the new value replaces the old one instead of being appended to the old one.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 60;</code>
+     */
+    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+      return getUpdateMask();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2430,8 +5079,17 @@ public final class EndpointServiceOuterClass {
       if (!getDescriptionBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, description_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          13);
       if (settings_ != null) {
         output.writeMessage(52, getSettings());
+      }
+      if (updateMask_ != null) {
+        output.writeMessage(60, getUpdateMask());
       }
       unknownFields.writeTo(output);
     }
@@ -2451,9 +5109,23 @@ public final class EndpointServiceOuterClass {
       if (!getDescriptionBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, description_);
       }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(13, labels__);
+      }
       if (settings_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(52, getSettings());
+      }
+      if (updateMask_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(60, getUpdateMask());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2477,10 +5149,17 @@ public final class EndpointServiceOuterClass {
           .equals(other.getName());
       result = result && getDescription()
           .equals(other.getDescription());
+      result = result && internalGetLabels().equals(
+          other.internalGetLabels());
       result = result && (hasSettings() == other.hasSettings());
       if (hasSettings()) {
         result = result && getSettings()
             .equals(other.getSettings());
+      }
+      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (hasUpdateMask()) {
+        result = result && getUpdateMask()
+            .equals(other.getUpdateMask());
       }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
@@ -2499,9 +5178,17 @@ public final class EndpointServiceOuterClass {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       if (hasSettings()) {
         hash = (37 * hash) + SETTINGS_FIELD_NUMBER;
         hash = (53 * hash) + getSettings().hashCode();
+      }
+      if (hasUpdateMask()) {
+        hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdateMask().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2610,6 +5297,28 @@ public final class EndpointServiceOuterClass {
         return yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_UpdateEndpointRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 13:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 13:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -2642,11 +5351,18 @@ public final class EndpointServiceOuterClass {
 
         description_ = "";
 
+        internalGetMutableLabels().clear();
         if (settingsBuilder_ == null) {
           settings_ = null;
         } else {
           settings_ = null;
           settingsBuilder_ = null;
+        }
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
         }
         return this;
       }
@@ -2674,14 +5390,24 @@ public final class EndpointServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.UpdateEndpointRequest buildPartial() {
         yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.UpdateEndpointRequest result = new yandex.cloud.api.datatransfer.v1.EndpointServiceOuterClass.UpdateEndpointRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.endpointId_ = endpointId_;
         result.name_ = name_;
         result.description_ = description_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         if (settingsBuilder_ == null) {
           result.settings_ = settings_;
         } else {
           result.settings_ = settingsBuilder_.build();
         }
+        if (updateMaskBuilder_ == null) {
+          result.updateMask_ = updateMask_;
+        } else {
+          result.updateMask_ = updateMaskBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -2742,8 +5468,13 @@ public final class EndpointServiceOuterClass {
           description_ = other.description_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         if (other.hasSettings()) {
           mergeSettings(other.getSettings());
+        }
+        if (other.hasUpdateMask()) {
+          mergeUpdateMask(other.getUpdateMask());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2773,9 +5504,14 @@ public final class EndpointServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object endpointId_ = "";
       /**
+       * <pre>
+       * Identifier of the endpoint to be updated.
+       * </pre>
+       *
        * <code>string endpoint_id = 10;</code>
        */
       public java.lang.String getEndpointId() {
@@ -2791,6 +5527,10 @@ public final class EndpointServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the endpoint to be updated.
+       * </pre>
+       *
        * <code>string endpoint_id = 10;</code>
        */
       public com.google.protobuf.ByteString
@@ -2807,6 +5547,10 @@ public final class EndpointServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the endpoint to be updated.
+       * </pre>
+       *
        * <code>string endpoint_id = 10;</code>
        */
       public Builder setEndpointId(
@@ -2820,6 +5564,10 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the endpoint to be updated.
+       * </pre>
+       *
        * <code>string endpoint_id = 10;</code>
        */
       public Builder clearEndpointId() {
@@ -2829,6 +5577,10 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the endpoint to be updated.
+       * </pre>
+       *
        * <code>string endpoint_id = 10;</code>
        */
       public Builder setEndpointIdBytes(
@@ -2845,6 +5597,10 @@ public final class EndpointServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * The new endpoint name. Must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 11;</code>
        */
       public java.lang.String getName() {
@@ -2860,6 +5616,10 @@ public final class EndpointServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The new endpoint name. Must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 11;</code>
        */
       public com.google.protobuf.ByteString
@@ -2876,6 +5636,10 @@ public final class EndpointServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The new endpoint name. Must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 11;</code>
        */
       public Builder setName(
@@ -2889,6 +5653,10 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The new endpoint name. Must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 11;</code>
        */
       public Builder clearName() {
@@ -2898,6 +5666,10 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The new endpoint name. Must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 11;</code>
        */
       public Builder setNameBytes(
@@ -2914,6 +5686,10 @@ public final class EndpointServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * The new description for the endpoint.
+       * </pre>
+       *
        * <code>string description = 12;</code>
        */
       public java.lang.String getDescription() {
@@ -2929,6 +5705,10 @@ public final class EndpointServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The new description for the endpoint.
+       * </pre>
+       *
        * <code>string description = 12;</code>
        */
       public com.google.protobuf.ByteString
@@ -2945,6 +5725,10 @@ public final class EndpointServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The new description for the endpoint.
+       * </pre>
+       *
        * <code>string description = 12;</code>
        */
       public Builder setDescription(
@@ -2958,6 +5742,10 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The new description for the endpoint.
+       * </pre>
+       *
        * <code>string description = 12;</code>
        */
       public Builder clearDescription() {
@@ -2967,6 +5755,10 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The new description for the endpoint.
+       * </pre>
+       *
        * <code>string description = 12;</code>
        */
       public Builder setDescriptionBytes(
@@ -2981,16 +5773,147 @@ public final class EndpointServiceOuterClass {
         return this;
       }
 
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 13;</code>
+       */
+
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 13;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 13;</code>
+       */
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 13;</code>
+       */
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 13;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 13;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 13;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
       private yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings settings_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings, yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings.Builder, yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettingsOrBuilder> settingsBuilder_;
       /**
+       * <pre>
+       * The new endpoint name. Must be unique within the folder.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
        */
       public boolean hasSettings() {
         return settingsBuilder_ != null || settings_ != null;
       }
       /**
+       * <pre>
+       * The new endpoint name. Must be unique within the folder.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
        */
       public yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings getSettings() {
@@ -3001,6 +5924,10 @@ public final class EndpointServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The new endpoint name. Must be unique within the folder.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
        */
       public Builder setSettings(yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings value) {
@@ -3017,6 +5944,10 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The new endpoint name. Must be unique within the folder.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
        */
       public Builder setSettings(
@@ -3031,6 +5962,10 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The new endpoint name. Must be unique within the folder.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
        */
       public Builder mergeSettings(yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings value) {
@@ -3049,6 +5984,10 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The new endpoint name. Must be unique within the folder.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
        */
       public Builder clearSettings() {
@@ -3063,6 +6002,10 @@ public final class EndpointServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The new endpoint name. Must be unique within the folder.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
        */
       public yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings.Builder getSettingsBuilder() {
@@ -3071,6 +6014,10 @@ public final class EndpointServiceOuterClass {
         return getSettingsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The new endpoint name. Must be unique within the folder.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
        */
       public yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettingsOrBuilder getSettingsOrBuilder() {
@@ -3082,6 +6029,10 @@ public final class EndpointServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The new endpoint name. Must be unique within the folder.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3096,6 +6047,195 @@ public final class EndpointServiceOuterClass {
           settings_ = null;
         }
         return settingsBuilder_;
+      }
+
+      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
+      /**
+       * <pre>
+       * Field mask specifying endpoint fields to be updated. Semantics for this field is
+       * described here:
+       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+       * The only exception is that if the repeated field is specified in the mask, then
+       * the new value replaces the old one instead of being appended to the old one.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 60;</code>
+       */
+      public boolean hasUpdateMask() {
+        return updateMaskBuilder_ != null || updateMask_ != null;
+      }
+      /**
+       * <pre>
+       * Field mask specifying endpoint fields to be updated. Semantics for this field is
+       * described here:
+       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+       * The only exception is that if the repeated field is specified in the mask, then
+       * the new value replaces the old one instead of being appended to the old one.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 60;</code>
+       */
+      public com.google.protobuf.FieldMask getUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        } else {
+          return updateMaskBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Field mask specifying endpoint fields to be updated. Semantics for this field is
+       * described here:
+       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+       * The only exception is that if the repeated field is specified in the mask, then
+       * the new value replaces the old one instead of being appended to the old one.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 60;</code>
+       */
+      public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updateMask_ = value;
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask specifying endpoint fields to be updated. Semantics for this field is
+       * described here:
+       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+       * The only exception is that if the repeated field is specified in the mask, then
+       * the new value replaces the old one instead of being appended to the old one.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 60;</code>
+       */
+      public Builder setUpdateMask(
+          com.google.protobuf.FieldMask.Builder builderForValue) {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = builderForValue.build();
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask specifying endpoint fields to be updated. Semantics for this field is
+       * described here:
+       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+       * The only exception is that if the repeated field is specified in the mask, then
+       * the new value replaces the old one instead of being appended to the old one.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 60;</code>
+       */
+      public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (updateMask_ != null) {
+            updateMask_ =
+              com.google.protobuf.FieldMask.newBuilder(updateMask_).mergeFrom(value).buildPartial();
+          } else {
+            updateMask_ = value;
+          }
+          onChanged();
+        } else {
+          updateMaskBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask specifying endpoint fields to be updated. Semantics for this field is
+       * described here:
+       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+       * The only exception is that if the repeated field is specified in the mask, then
+       * the new value replaces the old one instead of being appended to the old one.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 60;</code>
+       */
+      public Builder clearUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+          onChanged();
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask specifying endpoint fields to be updated. Semantics for this field is
+       * described here:
+       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+       * The only exception is that if the repeated field is specified in the mask, then
+       * the new value replaces the old one instead of being appended to the old one.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 60;</code>
+       */
+      public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
+        
+        onChanged();
+        return getUpdateMaskFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Field mask specifying endpoint fields to be updated. Semantics for this field is
+       * described here:
+       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+       * The only exception is that if the repeated field is specified in the mask, then
+       * the new value replaces the old one instead of being appended to the old one.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 60;</code>
+       */
+      public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+        if (updateMaskBuilder_ != null) {
+          return updateMaskBuilder_.getMessageOrBuilder();
+        } else {
+          return updateMask_ == null ?
+              com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        }
+      }
+      /**
+       * <pre>
+       * Field mask specifying endpoint fields to be updated. Semantics for this field is
+       * described here:
+       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+       * The only exception is that if the repeated field is specified in the mask, then
+       * the new value replaces the old one instead of being appended to the old one.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 60;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+          getUpdateMaskFieldBuilder() {
+        if (updateMaskBuilder_ == null) {
+          updateMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                  getUpdateMask(),
+                  getParentForChildren(),
+                  isClean());
+          updateMask_ = null;
+        }
+        return updateMaskBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4806,10 +7946,25 @@ public final class EndpointServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datatransfer_v1_GetEndpointRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_ListEndpointsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_ListEndpointsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_ListEndpointsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_ListEndpointsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datatransfer_v1_CreateEndpointRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datatransfer_v1_CreateEndpointRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_CreateEndpointRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_CreateEndpointRequest_LabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datatransfer_v1_CreateEndpointMetadata_descriptor;
   private static final 
@@ -4820,6 +7975,11 @@ public final class EndpointServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datatransfer_v1_UpdateEndpointRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_UpdateEndpointRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_UpdateEndpointRequest_LabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datatransfer_v1_UpdateEndpointMetadata_descriptor;
   private static final 
@@ -4846,43 +8006,61 @@ public final class EndpointServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n3yandex/cloud/datatransfer/v1/endpoint_" +
       "service.proto\022\034yandex.cloud.datatransfer" +
-      ".v1\032\034google/api/annotations.proto\032+yande" +
-      "x/cloud/datatransfer/v1/endpoint.proto\032 " +
-      "yandex/cloud/api/operation.proto\032&yandex" +
-      "/cloud/operation/operation.proto\")\n\022GetE" +
-      "ndpointRequest\022\023\n\013endpoint_id\030\001 \001(\t\"\217\001\n\025" +
-      "CreateEndpointRequest\022\021\n\tfolder_id\030\001 \001(\t" +
-      "\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022@\n\010s" +
-      "ettings\0304 \001(\0132..yandex.cloud.datatransfe" +
-      "r.v1.EndpointSettings\"-\n\026CreateEndpointM" +
-      "etadata\022\023\n\013endpoint_id\030\001 \001(\t\"\221\001\n\025UpdateE" +
-      "ndpointRequest\022\023\n\013endpoint_id\030\n \001(\t\022\014\n\004n" +
-      "ame\030\013 \001(\t\022\023\n\013description\030\014 \001(\t\022@\n\010settin" +
-      "gs\0304 \001(\0132..yandex.cloud.datatransfer.v1." +
-      "EndpointSettings\"-\n\026UpdateEndpointMetada" +
-      "ta\022\023\n\013endpoint_id\030\001 \001(\t\",\n\025DeleteEndpoin" +
-      "tRequest\022\023\n\013endpoint_id\030\001 \001(\t\"-\n\026DeleteE" +
-      "ndpointMetadata\022\023\n\013endpoint_id\030\001 \001(\t2\243\005\n" +
-      "\017EndpointService\022\203\001\n\003Get\0220.yandex.cloud." +
-      "datatransfer.v1.GetEndpointRequest\032&.yan" +
-      "dex.cloud.datatransfer.v1.Endpoint\"\"\202\323\344\223" +
-      "\002\034\022\032/v1/endpoint/{endpoint_id}\022\237\001\n\006Creat" +
-      "e\0223.yandex.cloud.datatransfer.v1.CreateE" +
-      "ndpointRequest\032!.yandex.cloud.operation." +
-      "Operation\"=\202\323\344\223\002\021\"\014/v1/endpoint:\001*\262\322*\"\n\026" +
-      "CreateEndpointMetadata\022\010Endpoint\022\255\001\n\006Upd" +
-      "ate\0223.yandex.cloud.datatransfer.v1.Updat" +
-      "eEndpointRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"K\202\323\344\223\002\0372\032/v1/endpoint/{endpo" +
-      "int_id}:\001*\262\322*\"\n\026UpdateEndpointMetadata\022\010" +
-      "Endpoint\022\267\001\n\006Delete\0223.yandex.cloud.datat" +
-      "ransfer.v1.DeleteEndpointRequest\032!.yande" +
-      "x.cloud.operation.Operation\"U\202\323\344\223\002\034*\032/v1" +
-      "/endpoint/{endpoint_id}\262\322*/\n\026DeleteEndpo" +
-      "intMetadata\022\025google.protobuf.EmptyBq\n ya" +
-      "ndex.cloud.api.datatransfer.v1ZMgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/datatransfer/v1;datatransferb\006proto3"
+      ".v1\032\034google/api/annotations.proto\032 googl" +
+      "e/protobuf/field_mask.proto\032+yandex/clou" +
+      "d/datatransfer/v1/endpoint.proto\032 yandex" +
+      "/cloud/api/operation.proto\032&yandex/cloud" +
+      "/operation/operation.proto\")\n\022GetEndpoin" +
+      "tRequest\022\023\n\013endpoint_id\030\001 \001(\t\"P\n\024ListEnd" +
+      "pointsRequest\022\021\n\tfolder_id\030\001 \001(\t\022\021\n\tpage" +
+      "_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"k\n\025ListE" +
+      "ndpointsResponse\0229\n\tendpoints\030\001 \003(\0132&.ya" +
+      "ndex.cloud.datatransfer.v1.Endpoint\022\027\n\017n" +
+      "ext_page_token\030\002 \001(\t\"\217\002\n\025CreateEndpointR" +
+      "equest\022\021\n\tfolder_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022" +
+      "\023\n\013description\030\003 \001(\t\022O\n\006labels\030\004 \003(\0132?.y" +
+      "andex.cloud.datatransfer.v1.CreateEndpoi" +
+      "ntRequest.LabelsEntry\022@\n\010settings\0304 \001(\0132" +
+      "..yandex.cloud.datatransfer.v1.EndpointS" +
+      "ettings\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\"-\n\026CreateEndpointMetadata" +
+      "\022\023\n\013endpoint_id\030\001 \001(\t\"\302\002\n\025UpdateEndpoint" +
+      "Request\022\023\n\013endpoint_id\030\n \001(\t\022\014\n\004name\030\013 \001" +
+      "(\t\022\023\n\013description\030\014 \001(\t\022O\n\006labels\030\r \003(\0132" +
+      "?.yandex.cloud.datatransfer.v1.UpdateEnd" +
+      "pointRequest.LabelsEntry\022@\n\010settings\0304 \001" +
+      "(\0132..yandex.cloud.datatransfer.v1.Endpoi" +
+      "ntSettings\022/\n\013update_mask\030< \001(\0132\032.google" +
+      ".protobuf.FieldMask\032-\n\013LabelsEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026UpdateEndp" +
+      "ointMetadata\022\023\n\013endpoint_id\030\001 \001(\t\",\n\025Del" +
+      "eteEndpointRequest\022\023\n\013endpoint_id\030\001 \001(\t\"" +
+      "-\n\026DeleteEndpointMetadata\022\023\n\013endpoint_id" +
+      "\030\001 \001(\t2\275\006\n\017EndpointService\022\203\001\n\003Get\0220.yan" +
+      "dex.cloud.datatransfer.v1.GetEndpointReq" +
+      "uest\032&.yandex.cloud.datatransfer.v1.Endp" +
+      "oint\"\"\202\323\344\223\002\034\022\032/v1/endpoint/{endpoint_id}" +
+      "\022\227\001\n\004List\0222.yandex.cloud.datatransfer.v1" +
+      ".ListEndpointsRequest\0323.yandex.cloud.dat" +
+      "atransfer.v1.ListEndpointsResponse\"&\202\323\344\223" +
+      "\002 \022\036/v1/endpoints/list/{folder_id}\022\237\001\n\006C" +
+      "reate\0223.yandex.cloud.datatransfer.v1.Cre" +
+      "ateEndpointRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"=\202\323\344\223\002\021\"\014/v1/endpoint:\001*\262\322" +
+      "*\"\n\026CreateEndpointMetadata\022\010Endpoint\022\255\001\n" +
+      "\006Update\0223.yandex.cloud.datatransfer.v1.U" +
+      "pdateEndpointRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"K\202\323\344\223\002\0372\032/v1/endpoint/{e" +
+      "ndpoint_id}:\001*\262\322*\"\n\026UpdateEndpointMetada" +
+      "ta\022\010Endpoint\022\267\001\n\006Delete\0223.yandex.cloud.d" +
+      "atatransfer.v1.DeleteEndpointRequest\032!.y" +
+      "andex.cloud.operation.Operation\"U\202\323\344\223\002\034*" +
+      "\032/v1/endpoint/{endpoint_id}\262\322*/\n\026DeleteE" +
+      "ndpointMetadata\022\025google.protobuf.EmptyBq" +
+      "\n yandex.cloud.api.datatransfer.v1ZMgith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/datatransfer/v1;datatransferb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4896,6 +8074,7 @@ public final class EndpointServiceOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.datatransfer.v1.EndpointOuterClass.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
@@ -4906,38 +8085,62 @@ public final class EndpointServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_GetEndpointRequest_descriptor,
         new java.lang.String[] { "EndpointId", });
-    internal_static_yandex_cloud_datatransfer_v1_CreateEndpointRequest_descriptor =
+    internal_static_yandex_cloud_datatransfer_v1_ListEndpointsRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_datatransfer_v1_ListEndpointsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_ListEndpointsRequest_descriptor,
+        new java.lang.String[] { "FolderId", "PageSize", "PageToken", });
+    internal_static_yandex_cloud_datatransfer_v1_ListEndpointsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_datatransfer_v1_ListEndpointsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_ListEndpointsResponse_descriptor,
+        new java.lang.String[] { "Endpoints", "NextPageToken", });
+    internal_static_yandex_cloud_datatransfer_v1_CreateEndpointRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_datatransfer_v1_CreateEndpointRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_CreateEndpointRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Settings", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Settings", });
+    internal_static_yandex_cloud_datatransfer_v1_CreateEndpointRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_datatransfer_v1_CreateEndpointRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_datatransfer_v1_CreateEndpointRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_CreateEndpointRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_datatransfer_v1_CreateEndpointMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_datatransfer_v1_CreateEndpointMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_CreateEndpointMetadata_descriptor,
         new java.lang.String[] { "EndpointId", });
     internal_static_yandex_cloud_datatransfer_v1_UpdateEndpointRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_datatransfer_v1_UpdateEndpointRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_UpdateEndpointRequest_descriptor,
-        new java.lang.String[] { "EndpointId", "Name", "Description", "Settings", });
+        new java.lang.String[] { "EndpointId", "Name", "Description", "Labels", "Settings", "UpdateMask", });
+    internal_static_yandex_cloud_datatransfer_v1_UpdateEndpointRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_datatransfer_v1_UpdateEndpointRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_datatransfer_v1_UpdateEndpointRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_UpdateEndpointRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_datatransfer_v1_UpdateEndpointMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_datatransfer_v1_UpdateEndpointMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_UpdateEndpointMetadata_descriptor,
         new java.lang.String[] { "EndpointId", });
     internal_static_yandex_cloud_datatransfer_v1_DeleteEndpointRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_datatransfer_v1_DeleteEndpointRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_DeleteEndpointRequest_descriptor,
         new java.lang.String[] { "EndpointId", });
     internal_static_yandex_cloud_datatransfer_v1_DeleteEndpointMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_datatransfer_v1_DeleteEndpointMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_DeleteEndpointMetadata_descriptor,
@@ -4949,6 +8152,7 @@ public final class EndpointServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.datatransfer.v1.EndpointOuterClass.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();

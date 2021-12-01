@@ -59,6 +59,40 @@ public final class TransferServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <code>map&lt;string, string&gt; labels = 8;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <code>map&lt;string, string&gt; labels = 8;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <code>map&lt;string, string&gt; labels = 8;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <code>map&lt;string, string&gt; labels = 8;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; labels = 8;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    /**
      * <code>string folder_id = 4;</code>
      */
     java.lang.String getFolderId();
@@ -158,6 +192,19 @@ public final class TransferServiceOuterClass {
               name_ = s;
               break;
             }
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000010;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -182,6 +229,18 @@ public final class TransferServiceOuterClass {
       return yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 8:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -190,6 +249,7 @@ public final class TransferServiceOuterClass {
               yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.CreateTransferRequest.class, yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.CreateTransferRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SOURCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object sourceId_;
     /**
@@ -326,6 +386,82 @@ public final class TransferServiceOuterClass {
       }
     }
 
+    public static final int LABELS_FIELD_NUMBER = 8;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 8;</code>
+     */
+
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 8;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 8;</code>
+     */
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 8;</code>
+     */
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     public static final int FOLDER_ID_FIELD_NUMBER = 4;
     private volatile java.lang.Object folderId_;
     /**
@@ -409,6 +545,12 @@ public final class TransferServiceOuterClass {
       if (!getNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, name_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          8);
       unknownFields.writeTo(output);
     }
 
@@ -437,6 +579,16 @@ public final class TransferServiceOuterClass {
       if (!getNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, name_);
       }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(8, labels__);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -461,6 +613,8 @@ public final class TransferServiceOuterClass {
           .equals(other.getName());
       result = result && getDescription()
           .equals(other.getDescription());
+      result = result && internalGetLabels().equals(
+          other.internalGetLabels());
       result = result && getFolderId()
           .equals(other.getFolderId());
       result = result && type_ == other.type_;
@@ -483,6 +637,10 @@ public final class TransferServiceOuterClass {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getFolderId().hashCode();
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
@@ -594,6 +752,28 @@ public final class TransferServiceOuterClass {
         return yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 8:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 8:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -628,6 +808,7 @@ public final class TransferServiceOuterClass {
 
         description_ = "";
 
+        internalGetMutableLabels().clear();
         folderId_ = "";
 
         type_ = 0;
@@ -658,12 +839,17 @@ public final class TransferServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.CreateTransferRequest buildPartial() {
         yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.CreateTransferRequest result = new yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.CreateTransferRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.sourceId_ = sourceId_;
         result.targetId_ = targetId_;
         result.name_ = name_;
         result.description_ = description_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         result.folderId_ = folderId_;
         result.type_ = type_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -728,6 +914,8 @@ public final class TransferServiceOuterClass {
           description_ = other.description_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         if (!other.getFolderId().isEmpty()) {
           folderId_ = other.folderId_;
           onChanged();
@@ -763,6 +951,7 @@ public final class TransferServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object sourceId_ = "";
       /**
@@ -1037,6 +1226,129 @@ public final class TransferServiceOuterClass {
         
         description_ = value;
         onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 8;</code>
+       */
+
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 8;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 8;</code>
+       */
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 8;</code>
+       */
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 8;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 8;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 8;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
         return this;
       }
 
@@ -1761,34 +2073,129 @@ public final class TransferServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Identifier of the transfer to be updated.
+     * </pre>
+     *
      * <code>string transfer_id = 1;</code>
      */
     java.lang.String getTransferId();
     /**
+     * <pre>
+     * Identifier of the transfer to be updated.
+     * </pre>
+     *
      * <code>string transfer_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getTransferIdBytes();
 
     /**
+     * <pre>
+     * The new description for the transfer.
+     * </pre>
+     *
      * <code>string description = 2;</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * The new description for the transfer.
+     * </pre>
+     *
      * <code>string description = 2;</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <code>map&lt;string, string&gt; labels = 6;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <code>map&lt;string, string&gt; labels = 6;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <code>map&lt;string, string&gt; labels = 6;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <code>map&lt;string, string&gt; labels = 6;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; labels = 6;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * The new transfer name. Must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * The new transfer name. Must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
+
+    /**
+     * <pre>
+     * Field mask specifying transfer fields to be updated. Semantics for this field is
+     * described here:
+     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+     * The only exception is that if the repeated field is specified in the mask, then
+     * the new value replaces the old one instead of being appended to the old one.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+     */
+    boolean hasUpdateMask();
+    /**
+     * <pre>
+     * Field mask specifying transfer fields to be updated. Semantics for this field is
+     * described here:
+     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+     * The only exception is that if the repeated field is specified in the mask, then
+     * the new value replaces the old one instead of being appended to the old one.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+     */
+    com.google.protobuf.FieldMask getUpdateMask();
+    /**
+     * <pre>
+     * Field mask specifying transfer fields to be updated. Semantics for this field is
+     * described here:
+     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+     * The only exception is that if the repeated field is specified in the mask, then
+     * the new value replaces the old one instead of being appended to the old one.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+     */
+    com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.UpdateTransferRequest}
@@ -1850,6 +2257,32 @@ public final class TransferServiceOuterClass {
               name_ = s;
               break;
             }
+            case 42: {
+              com.google.protobuf.FieldMask.Builder subBuilder = null;
+              if (updateMask_ != null) {
+                subBuilder = updateMask_.toBuilder();
+              }
+              updateMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updateMask_);
+                updateMask_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1874,6 +2307,18 @@ public final class TransferServiceOuterClass {
       return yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 6:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -1882,9 +2327,14 @@ public final class TransferServiceOuterClass {
               yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.UpdateTransferRequest.class, yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.UpdateTransferRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TRANSFER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object transferId_;
     /**
+     * <pre>
+     * Identifier of the transfer to be updated.
+     * </pre>
+     *
      * <code>string transfer_id = 1;</code>
      */
     public java.lang.String getTransferId() {
@@ -1900,6 +2350,10 @@ public final class TransferServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Identifier of the transfer to be updated.
+     * </pre>
+     *
      * <code>string transfer_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -1919,6 +2373,10 @@ public final class TransferServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 2;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * The new description for the transfer.
+     * </pre>
+     *
      * <code>string description = 2;</code>
      */
     public java.lang.String getDescription() {
@@ -1934,6 +2392,10 @@ public final class TransferServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * The new description for the transfer.
+     * </pre>
+     *
      * <code>string description = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -1950,9 +2412,89 @@ public final class TransferServiceOuterClass {
       }
     }
 
+    public static final int LABELS_FIELD_NUMBER = 6;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 6;</code>
+     */
+
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 6;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 6;</code>
+     */
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 6;</code>
+     */
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     public static final int NAME_FIELD_NUMBER = 4;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * The new transfer name. Must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      */
     public java.lang.String getName() {
@@ -1968,6 +2510,10 @@ public final class TransferServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * The new transfer name. Must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      */
     public com.google.protobuf.ByteString
@@ -1982,6 +2528,51 @@ public final class TransferServiceOuterClass {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int UPDATE_MASK_FIELD_NUMBER = 5;
+    private com.google.protobuf.FieldMask updateMask_;
+    /**
+     * <pre>
+     * Field mask specifying transfer fields to be updated. Semantics for this field is
+     * described here:
+     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+     * The only exception is that if the repeated field is specified in the mask, then
+     * the new value replaces the old one instead of being appended to the old one.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+     */
+    public boolean hasUpdateMask() {
+      return updateMask_ != null;
+    }
+    /**
+     * <pre>
+     * Field mask specifying transfer fields to be updated. Semantics for this field is
+     * described here:
+     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+     * The only exception is that if the repeated field is specified in the mask, then
+     * the new value replaces the old one instead of being appended to the old one.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+     */
+    public com.google.protobuf.FieldMask getUpdateMask() {
+      return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+    }
+    /**
+     * <pre>
+     * Field mask specifying transfer fields to be updated. Semantics for this field is
+     * described here:
+     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+     * The only exception is that if the repeated field is specified in the mask, then
+     * the new value replaces the old one instead of being appended to the old one.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+     */
+    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+      return getUpdateMask();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2007,6 +2598,15 @@ public final class TransferServiceOuterClass {
       if (!getNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
+      if (updateMask_ != null) {
+        output.writeMessage(5, getUpdateMask());
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          6);
       unknownFields.writeTo(output);
     }
 
@@ -2024,6 +2624,20 @@ public final class TransferServiceOuterClass {
       }
       if (!getNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
+      }
+      if (updateMask_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getUpdateMask());
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(6, labels__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2045,8 +2659,15 @@ public final class TransferServiceOuterClass {
           .equals(other.getTransferId());
       result = result && getDescription()
           .equals(other.getDescription());
+      result = result && internalGetLabels().equals(
+          other.internalGetLabels());
       result = result && getName()
           .equals(other.getName());
+      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (hasUpdateMask()) {
+        result = result && getUpdateMask()
+            .equals(other.getUpdateMask());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2062,8 +2683,16 @@ public final class TransferServiceOuterClass {
       hash = (53 * hash) + getTransferId().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      if (hasUpdateMask()) {
+        hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdateMask().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2171,6 +2800,28 @@ public final class TransferServiceOuterClass {
         return yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 6:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 6:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -2201,8 +2852,15 @@ public final class TransferServiceOuterClass {
 
         description_ = "";
 
+        internalGetMutableLabels().clear();
         name_ = "";
 
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
         return this;
       }
 
@@ -2229,9 +2887,19 @@ public final class TransferServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.UpdateTransferRequest buildPartial() {
         yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.UpdateTransferRequest result = new yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.UpdateTransferRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.transferId_ = transferId_;
         result.description_ = description_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         result.name_ = name_;
+        if (updateMaskBuilder_ == null) {
+          result.updateMask_ = updateMask_;
+        } else {
+          result.updateMask_ = updateMaskBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -2288,9 +2956,14 @@ public final class TransferServiceOuterClass {
           description_ = other.description_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
+        }
+        if (other.hasUpdateMask()) {
+          mergeUpdateMask(other.getUpdateMask());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2320,9 +2993,14 @@ public final class TransferServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object transferId_ = "";
       /**
+       * <pre>
+       * Identifier of the transfer to be updated.
+       * </pre>
+       *
        * <code>string transfer_id = 1;</code>
        */
       public java.lang.String getTransferId() {
@@ -2338,6 +3016,10 @@ public final class TransferServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the transfer to be updated.
+       * </pre>
+       *
        * <code>string transfer_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -2354,6 +3036,10 @@ public final class TransferServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Identifier of the transfer to be updated.
+       * </pre>
+       *
        * <code>string transfer_id = 1;</code>
        */
       public Builder setTransferId(
@@ -2367,6 +3053,10 @@ public final class TransferServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the transfer to be updated.
+       * </pre>
+       *
        * <code>string transfer_id = 1;</code>
        */
       public Builder clearTransferId() {
@@ -2376,6 +3066,10 @@ public final class TransferServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the transfer to be updated.
+       * </pre>
+       *
        * <code>string transfer_id = 1;</code>
        */
       public Builder setTransferIdBytes(
@@ -2392,6 +3086,10 @@ public final class TransferServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * The new description for the transfer.
+       * </pre>
+       *
        * <code>string description = 2;</code>
        */
       public java.lang.String getDescription() {
@@ -2407,6 +3105,10 @@ public final class TransferServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The new description for the transfer.
+       * </pre>
+       *
        * <code>string description = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -2423,6 +3125,10 @@ public final class TransferServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The new description for the transfer.
+       * </pre>
+       *
        * <code>string description = 2;</code>
        */
       public Builder setDescription(
@@ -2436,6 +3142,10 @@ public final class TransferServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The new description for the transfer.
+       * </pre>
+       *
        * <code>string description = 2;</code>
        */
       public Builder clearDescription() {
@@ -2445,6 +3155,10 @@ public final class TransferServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The new description for the transfer.
+       * </pre>
+       *
        * <code>string description = 2;</code>
        */
       public Builder setDescriptionBytes(
@@ -2459,8 +3173,135 @@ public final class TransferServiceOuterClass {
         return this;
       }
 
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 6;</code>
+       */
+
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 6;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 6;</code>
+       */
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 6;</code>
+       */
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 6;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 6;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 6;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * The new transfer name. Must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        */
       public java.lang.String getName() {
@@ -2476,6 +3317,10 @@ public final class TransferServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The new transfer name. Must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        */
       public com.google.protobuf.ByteString
@@ -2492,6 +3337,10 @@ public final class TransferServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The new transfer name. Must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        */
       public Builder setName(
@@ -2505,6 +3354,10 @@ public final class TransferServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The new transfer name. Must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        */
       public Builder clearName() {
@@ -2514,6 +3367,10 @@ public final class TransferServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The new transfer name. Must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        */
       public Builder setNameBytes(
@@ -2526,6 +3383,195 @@ public final class TransferServiceOuterClass {
         name_ = value;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
+      /**
+       * <pre>
+       * Field mask specifying transfer fields to be updated. Semantics for this field is
+       * described here:
+       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+       * The only exception is that if the repeated field is specified in the mask, then
+       * the new value replaces the old one instead of being appended to the old one.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+       */
+      public boolean hasUpdateMask() {
+        return updateMaskBuilder_ != null || updateMask_ != null;
+      }
+      /**
+       * <pre>
+       * Field mask specifying transfer fields to be updated. Semantics for this field is
+       * described here:
+       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+       * The only exception is that if the repeated field is specified in the mask, then
+       * the new value replaces the old one instead of being appended to the old one.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+       */
+      public com.google.protobuf.FieldMask getUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        } else {
+          return updateMaskBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Field mask specifying transfer fields to be updated. Semantics for this field is
+       * described here:
+       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+       * The only exception is that if the repeated field is specified in the mask, then
+       * the new value replaces the old one instead of being appended to the old one.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+       */
+      public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updateMask_ = value;
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask specifying transfer fields to be updated. Semantics for this field is
+       * described here:
+       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+       * The only exception is that if the repeated field is specified in the mask, then
+       * the new value replaces the old one instead of being appended to the old one.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+       */
+      public Builder setUpdateMask(
+          com.google.protobuf.FieldMask.Builder builderForValue) {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = builderForValue.build();
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask specifying transfer fields to be updated. Semantics for this field is
+       * described here:
+       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+       * The only exception is that if the repeated field is specified in the mask, then
+       * the new value replaces the old one instead of being appended to the old one.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+       */
+      public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (updateMask_ != null) {
+            updateMask_ =
+              com.google.protobuf.FieldMask.newBuilder(updateMask_).mergeFrom(value).buildPartial();
+          } else {
+            updateMask_ = value;
+          }
+          onChanged();
+        } else {
+          updateMaskBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask specifying transfer fields to be updated. Semantics for this field is
+       * described here:
+       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+       * The only exception is that if the repeated field is specified in the mask, then
+       * the new value replaces the old one instead of being appended to the old one.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+       */
+      public Builder clearUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+          onChanged();
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask specifying transfer fields to be updated. Semantics for this field is
+       * described here:
+       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+       * The only exception is that if the repeated field is specified in the mask, then
+       * the new value replaces the old one instead of being appended to the old one.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+       */
+      public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
+        
+        onChanged();
+        return getUpdateMaskFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Field mask specifying transfer fields to be updated. Semantics for this field is
+       * described here:
+       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+       * The only exception is that if the repeated field is specified in the mask, then
+       * the new value replaces the old one instead of being appended to the old one.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+       */
+      public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+        if (updateMaskBuilder_ != null) {
+          return updateMaskBuilder_.getMessageOrBuilder();
+        } else {
+          return updateMask_ == null ?
+              com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        }
+      }
+      /**
+       * <pre>
+       * Field mask specifying transfer fields to be updated. Semantics for this field is
+       * described here:
+       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
+       * The only exception is that if the repeated field is specified in the mask, then
+       * the new value replaces the old one instead of being appended to the old one.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+          getUpdateMaskFieldBuilder() {
+        if (updateMaskBuilder_ == null) {
+          updateMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                  getUpdateMask(),
+                  getParentForChildren(),
+                  isClean());
+          updateMask_ = null;
+        }
+        return updateMaskBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4225,6 +5271,2040 @@ public final class TransferServiceOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.DeleteTransferMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListTransfersRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.ListTransfersRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Identifier of the folder containing the transfers to be listed.
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * Identifier of the folder containing the transfers to be listed.
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of transfers to be sent in the response message. If the
+     * folder contains more transfers than page_size, next_page_token will be included
+     * in the response message. Include it into the subsequent ListTransfersRequest to
+     * fetch the next page. Defaults to 100 if not specified. The maximum allowed value
+     * for this field is 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 3;</code>
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Opaque value identifying the transfers page to be fetched. Should be empty in
+     * the first ListTransfersRequest. Subsequent request should have this field filled
+     * with the next_page_token from the previous ListTransfersResponse.
+     * </pre>
+     *
+     * <code>string page_token = 4;</code>
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Opaque value identifying the transfers page to be fetched. Should be empty in
+     * the first ListTransfersRequest. Subsequent request should have this field filled
+     * with the next_page_token from the previous ListTransfersResponse.
+     * </pre>
+     *
+     * <code>string page_token = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datatransfer.v1.ListTransfersRequest}
+   */
+  public  static final class ListTransfersRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.ListTransfersRequest)
+      ListTransfersRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListTransfersRequest.newBuilder() to construct.
+    private ListTransfersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListTransfersRequest() {
+      folderId_ = "";
+      pageSize_ = 0L;
+      pageToken_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListTransfersRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            case 24: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_ListTransfersRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_ListTransfersRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest.class, yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest.Builder.class);
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * Identifier of the folder containing the transfers to be listed.
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     */
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Identifier of the folder containing the transfers to be listed.
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 3;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of transfers to be sent in the response message. If the
+     * folder contains more transfers than page_size, next_page_token will be included
+     * in the response message. Include it into the subsequent ListTransfersRequest to
+     * fetch the next page. Defaults to 100 if not specified. The maximum allowed value
+     * for this field is 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 3;</code>
+     */
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 4;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Opaque value identifying the transfers page to be fetched. Should be empty in
+     * the first ListTransfersRequest. Subsequent request should have this field filled
+     * with the next_page_token from the previous ListTransfersResponse.
+     * </pre>
+     *
+     * <code>string page_token = 4;</code>
+     */
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Opaque value identifying the transfers page to be fetched. Should be empty in
+     * the first ListTransfersRequest. Subsequent request should have this field filled
+     * with the next_page_token from the previous ListTransfersResponse.
+     * </pre>
+     *
+     * <code>string page_token = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getFolderIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(3, pageSize_);
+      }
+      if (!getPageTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getFolderIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, pageSize_);
+      }
+      if (!getPageTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest other = (yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest) obj;
+
+      boolean result = true;
+      result = result && getFolderId()
+          .equals(other.getFolderId());
+      result = result && (getPageSize()
+          == other.getPageSize());
+      result = result && getPageToken()
+          .equals(other.getPageToken());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datatransfer.v1.ListTransfersRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datatransfer.v1.ListTransfersRequest)
+        yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_ListTransfersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_ListTransfersRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest.class, yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        folderId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_ListTransfersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest build() {
+        yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest buildPartial() {
+        yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest result = new yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest(this);
+        result.folderId_ = folderId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest) {
+          return mergeFrom((yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest other) {
+        if (other == yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest.getDefaultInstance()) return this;
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * Identifier of the folder containing the transfers to be listed.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Identifier of the folder containing the transfers to be listed.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Identifier of the folder containing the transfers to be listed.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifier of the folder containing the transfers to be listed.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifier of the folder containing the transfers to be listed.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of transfers to be sent in the response message. If the
+       * folder contains more transfers than page_size, next_page_token will be included
+       * in the response message. Include it into the subsequent ListTransfersRequest to
+       * fetch the next page. Defaults to 100 if not specified. The maximum allowed value
+       * for this field is 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 3;</code>
+       */
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of transfers to be sent in the response message. If the
+       * folder contains more transfers than page_size, next_page_token will be included
+       * in the response message. Include it into the subsequent ListTransfersRequest to
+       * fetch the next page. Defaults to 100 if not specified. The maximum allowed value
+       * for this field is 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 3;</code>
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of transfers to be sent in the response message. If the
+       * folder contains more transfers than page_size, next_page_token will be included
+       * in the response message. Include it into the subsequent ListTransfersRequest to
+       * fetch the next page. Defaults to 100 if not specified. The maximum allowed value
+       * for this field is 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 3;</code>
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Opaque value identifying the transfers page to be fetched. Should be empty in
+       * the first ListTransfersRequest. Subsequent request should have this field filled
+       * with the next_page_token from the previous ListTransfersResponse.
+       * </pre>
+       *
+       * <code>string page_token = 4;</code>
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Opaque value identifying the transfers page to be fetched. Should be empty in
+       * the first ListTransfersRequest. Subsequent request should have this field filled
+       * with the next_page_token from the previous ListTransfersResponse.
+       * </pre>
+       *
+       * <code>string page_token = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Opaque value identifying the transfers page to be fetched. Should be empty in
+       * the first ListTransfersRequest. Subsequent request should have this field filled
+       * with the next_page_token from the previous ListTransfersResponse.
+       * </pre>
+       *
+       * <code>string page_token = 4;</code>
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Opaque value identifying the transfers page to be fetched. Should be empty in
+       * the first ListTransfersRequest. Subsequent request should have this field filled
+       * with the next_page_token from the previous ListTransfersResponse.
+       * </pre>
+       *
+       * <code>string page_token = 4;</code>
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Opaque value identifying the transfers page to be fetched. Should be empty in
+       * the first ListTransfersRequest. Subsequent request should have this field filled
+       * with the next_page_token from the previous ListTransfersResponse.
+       * </pre>
+       *
+       * <code>string page_token = 4;</code>
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datatransfer.v1.ListTransfersRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datatransfer.v1.ListTransfersRequest)
+    private static final yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest();
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListTransfersRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListTransfersRequest>() {
+      @java.lang.Override
+      public ListTransfersRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListTransfersRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListTransfersRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListTransfersRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListTransfersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.ListTransfersResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The list of transfers. If there are more transfers in the folder, then
+     * next_page_token is a non-empty string to be included into the subsequent
+     * ListTransfersRequest to fetch the next transfers page.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer> 
+        getTransfersList();
+    /**
+     * <pre>
+     * The list of transfers. If there are more transfers in the folder, then
+     * next_page_token is a non-empty string to be included into the subsequent
+     * ListTransfersRequest to fetch the next transfers page.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer getTransfers(int index);
+    /**
+     * <pre>
+     * The list of transfers. If there are more transfers in the folder, then
+     * next_page_token is a non-empty string to be included into the subsequent
+     * ListTransfersRequest to fetch the next transfers page.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+     */
+    int getTransfersCount();
+    /**
+     * <pre>
+     * The list of transfers. If there are more transfers in the folder, then
+     * next_page_token is a non-empty string to be included into the subsequent
+     * ListTransfersRequest to fetch the next transfers page.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferOrBuilder> 
+        getTransfersOrBuilderList();
+    /**
+     * <pre>
+     * The list of transfers. If there are more transfers in the folder, then
+     * next_page_token is a non-empty string to be included into the subsequent
+     * ListTransfersRequest to fetch the next transfers page.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferOrBuilder getTransfersOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Opaque value identifying the next transfers page. This field is empty if there
+     * are no more transfers in the folder. Otherwise it is non-empty and should be
+     * included in the subsequent ListTransfersRequest to fetch the next transfers
+     * page.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * Opaque value identifying the next transfers page. This field is empty if there
+     * are no more transfers in the folder. Otherwise it is non-empty and should be
+     * included in the subsequent ListTransfersRequest to fetch the next transfers
+     * page.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datatransfer.v1.ListTransfersResponse}
+   */
+  public  static final class ListTransfersResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.ListTransfersResponse)
+      ListTransfersResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListTransfersResponse.newBuilder() to construct.
+    private ListTransfersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListTransfersResponse() {
+      transfers_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListTransfersResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                transfers_ = new java.util.ArrayList<yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              transfers_.add(
+                  input.readMessage(yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          transfers_ = java.util.Collections.unmodifiableList(transfers_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_ListTransfersResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_ListTransfersResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse.class, yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int TRANSFERS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer> transfers_;
+    /**
+     * <pre>
+     * The list of transfers. If there are more transfers in the folder, then
+     * next_page_token is a non-empty string to be included into the subsequent
+     * ListTransfersRequest to fetch the next transfers page.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+     */
+    public java.util.List<yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer> getTransfersList() {
+      return transfers_;
+    }
+    /**
+     * <pre>
+     * The list of transfers. If there are more transfers in the folder, then
+     * next_page_token is a non-empty string to be included into the subsequent
+     * ListTransfersRequest to fetch the next transfers page.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferOrBuilder> 
+        getTransfersOrBuilderList() {
+      return transfers_;
+    }
+    /**
+     * <pre>
+     * The list of transfers. If there are more transfers in the folder, then
+     * next_page_token is a non-empty string to be included into the subsequent
+     * ListTransfersRequest to fetch the next transfers page.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+     */
+    public int getTransfersCount() {
+      return transfers_.size();
+    }
+    /**
+     * <pre>
+     * The list of transfers. If there are more transfers in the folder, then
+     * next_page_token is a non-empty string to be included into the subsequent
+     * ListTransfersRequest to fetch the next transfers page.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+     */
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer getTransfers(int index) {
+      return transfers_.get(index);
+    }
+    /**
+     * <pre>
+     * The list of transfers. If there are more transfers in the folder, then
+     * next_page_token is a non-empty string to be included into the subsequent
+     * ListTransfersRequest to fetch the next transfers page.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+     */
+    public yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferOrBuilder getTransfersOrBuilder(
+        int index) {
+      return transfers_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * Opaque value identifying the next transfers page. This field is empty if there
+     * are no more transfers in the folder. Otherwise it is non-empty and should be
+     * included in the subsequent ListTransfersRequest to fetch the next transfers
+     * page.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Opaque value identifying the next transfers page. This field is empty if there
+     * are no more transfers in the folder. Otherwise it is non-empty and should be
+     * included in the subsequent ListTransfersRequest to fetch the next transfers
+     * page.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < transfers_.size(); i++) {
+        output.writeMessage(1, transfers_.get(i));
+      }
+      if (!getNextPageTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < transfers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, transfers_.get(i));
+      }
+      if (!getNextPageTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse other = (yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse) obj;
+
+      boolean result = true;
+      result = result && getTransfersList()
+          .equals(other.getTransfersList());
+      result = result && getNextPageToken()
+          .equals(other.getNextPageToken());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTransfersCount() > 0) {
+        hash = (37 * hash) + TRANSFERS_FIELD_NUMBER;
+        hash = (53 * hash) + getTransfersList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datatransfer.v1.ListTransfersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datatransfer.v1.ListTransfersResponse)
+        yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_ListTransfersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_ListTransfersResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse.class, yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTransfersFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (transfersBuilder_ == null) {
+          transfers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          transfersBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.internal_static_yandex_cloud_datatransfer_v1_ListTransfersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse build() {
+        yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse buildPartial() {
+        yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse result = new yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (transfersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            transfers_ = java.util.Collections.unmodifiableList(transfers_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.transfers_ = transfers_;
+        } else {
+          result.transfers_ = transfersBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse) {
+          return mergeFrom((yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse other) {
+        if (other == yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse.getDefaultInstance()) return this;
+        if (transfersBuilder_ == null) {
+          if (!other.transfers_.isEmpty()) {
+            if (transfers_.isEmpty()) {
+              transfers_ = other.transfers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTransfersIsMutable();
+              transfers_.addAll(other.transfers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.transfers_.isEmpty()) {
+            if (transfersBuilder_.isEmpty()) {
+              transfersBuilder_.dispose();
+              transfersBuilder_ = null;
+              transfers_ = other.transfers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              transfersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTransfersFieldBuilder() : null;
+            } else {
+              transfersBuilder_.addAllMessages(other.transfers_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer> transfers_ =
+        java.util.Collections.emptyList();
+      private void ensureTransfersIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          transfers_ = new java.util.ArrayList<yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer>(transfers_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer, yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferOrBuilder> transfersBuilder_;
+
+      /**
+       * <pre>
+       * The list of transfers. If there are more transfers in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListTransfersRequest to fetch the next transfers page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer> getTransfersList() {
+        if (transfersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(transfers_);
+        } else {
+          return transfersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * The list of transfers. If there are more transfers in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListTransfersRequest to fetch the next transfers page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+       */
+      public int getTransfersCount() {
+        if (transfersBuilder_ == null) {
+          return transfers_.size();
+        } else {
+          return transfersBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * The list of transfers. If there are more transfers in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListTransfersRequest to fetch the next transfers page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer getTransfers(int index) {
+        if (transfersBuilder_ == null) {
+          return transfers_.get(index);
+        } else {
+          return transfersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * The list of transfers. If there are more transfers in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListTransfersRequest to fetch the next transfers page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+       */
+      public Builder setTransfers(
+          int index, yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer value) {
+        if (transfersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTransfersIsMutable();
+          transfers_.set(index, value);
+          onChanged();
+        } else {
+          transfersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of transfers. If there are more transfers in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListTransfersRequest to fetch the next transfers page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+       */
+      public Builder setTransfers(
+          int index, yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer.Builder builderForValue) {
+        if (transfersBuilder_ == null) {
+          ensureTransfersIsMutable();
+          transfers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          transfersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of transfers. If there are more transfers in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListTransfersRequest to fetch the next transfers page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+       */
+      public Builder addTransfers(yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer value) {
+        if (transfersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTransfersIsMutable();
+          transfers_.add(value);
+          onChanged();
+        } else {
+          transfersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of transfers. If there are more transfers in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListTransfersRequest to fetch the next transfers page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+       */
+      public Builder addTransfers(
+          int index, yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer value) {
+        if (transfersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTransfersIsMutable();
+          transfers_.add(index, value);
+          onChanged();
+        } else {
+          transfersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of transfers. If there are more transfers in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListTransfersRequest to fetch the next transfers page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+       */
+      public Builder addTransfers(
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer.Builder builderForValue) {
+        if (transfersBuilder_ == null) {
+          ensureTransfersIsMutable();
+          transfers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          transfersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of transfers. If there are more transfers in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListTransfersRequest to fetch the next transfers page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+       */
+      public Builder addTransfers(
+          int index, yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer.Builder builderForValue) {
+        if (transfersBuilder_ == null) {
+          ensureTransfersIsMutable();
+          transfers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          transfersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of transfers. If there are more transfers in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListTransfersRequest to fetch the next transfers page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+       */
+      public Builder addAllTransfers(
+          java.lang.Iterable<? extends yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer> values) {
+        if (transfersBuilder_ == null) {
+          ensureTransfersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, transfers_);
+          onChanged();
+        } else {
+          transfersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of transfers. If there are more transfers in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListTransfersRequest to fetch the next transfers page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+       */
+      public Builder clearTransfers() {
+        if (transfersBuilder_ == null) {
+          transfers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          transfersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of transfers. If there are more transfers in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListTransfersRequest to fetch the next transfers page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+       */
+      public Builder removeTransfers(int index) {
+        if (transfersBuilder_ == null) {
+          ensureTransfersIsMutable();
+          transfers_.remove(index);
+          onChanged();
+        } else {
+          transfersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of transfers. If there are more transfers in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListTransfersRequest to fetch the next transfers page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer.Builder getTransfersBuilder(
+          int index) {
+        return getTransfersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * The list of transfers. If there are more transfers in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListTransfersRequest to fetch the next transfers page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferOrBuilder getTransfersOrBuilder(
+          int index) {
+        if (transfersBuilder_ == null) {
+          return transfers_.get(index);  } else {
+          return transfersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * The list of transfers. If there are more transfers in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListTransfersRequest to fetch the next transfers page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferOrBuilder> 
+           getTransfersOrBuilderList() {
+        if (transfersBuilder_ != null) {
+          return transfersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(transfers_);
+        }
+      }
+      /**
+       * <pre>
+       * The list of transfers. If there are more transfers in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListTransfersRequest to fetch the next transfers page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer.Builder addTransfersBuilder() {
+        return getTransfersFieldBuilder().addBuilder(
+            yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The list of transfers. If there are more transfers in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListTransfersRequest to fetch the next transfers page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer.Builder addTransfersBuilder(
+          int index) {
+        return getTransfersFieldBuilder().addBuilder(
+            index, yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The list of transfers. If there are more transfers in the folder, then
+       * next_page_token is a non-empty string to be included into the subsequent
+       * ListTransfersRequest to fetch the next transfers page.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer.Builder> 
+           getTransfersBuilderList() {
+        return getTransfersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer, yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferOrBuilder> 
+          getTransfersFieldBuilder() {
+        if (transfersBuilder_ == null) {
+          transfersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer, yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transfer.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferOrBuilder>(
+                  transfers_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          transfers_ = null;
+        }
+        return transfersBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * Opaque value identifying the next transfers page. This field is empty if there
+       * are no more transfers in the folder. Otherwise it is non-empty and should be
+       * included in the subsequent ListTransfersRequest to fetch the next transfers
+       * page.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Opaque value identifying the next transfers page. This field is empty if there
+       * are no more transfers in the folder. Otherwise it is non-empty and should be
+       * included in the subsequent ListTransfersRequest to fetch the next transfers
+       * page.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Opaque value identifying the next transfers page. This field is empty if there
+       * are no more transfers in the folder. Otherwise it is non-empty and should be
+       * included in the subsequent ListTransfersRequest to fetch the next transfers
+       * page.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Opaque value identifying the next transfers page. This field is empty if there
+       * are no more transfers in the folder. Otherwise it is non-empty and should be
+       * included in the subsequent ListTransfersRequest to fetch the next transfers
+       * page.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Opaque value identifying the next transfers page. This field is empty if there
+       * are no more transfers in the folder. Otherwise it is non-empty and should be
+       * included in the subsequent ListTransfersRequest to fetch the next transfers
+       * page.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datatransfer.v1.ListTransfersResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datatransfer.v1.ListTransfersResponse)
+    private static final yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse();
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListTransfersResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListTransfersResponse>() {
+      @java.lang.Override
+      public ListTransfersResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListTransfersResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListTransfersResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListTransfersResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.TransferServiceOuterClass.ListTransfersResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6986,6 +10066,11 @@ public final class TransferServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datatransfer_v1_CreateTransferMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -6995,6 +10080,11 @@ public final class TransferServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_LabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datatransfer_v1_UpdateTransferMetadata_descriptor;
   private static final 
@@ -7010,6 +10100,16 @@ public final class TransferServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datatransfer_v1_DeleteTransferMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_ListTransfersRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_ListTransfersRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_ListTransfersResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_ListTransfersResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datatransfer_v1_GetTransferRequest_descriptor;
   private static final 
@@ -7046,58 +10146,75 @@ public final class TransferServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n3yandex/cloud/datatransfer/v1/transfer_" +
       "service.proto\022\034yandex.cloud.datatransfer" +
-      ".v1\032\034google/api/annotations.proto\032+yande" +
-      "x/cloud/datatransfer/v1/transfer.proto\032 " +
-      "yandex/cloud/api/operation.proto\032&yandex" +
-      "/cloud/operation/operation.proto\"\255\001\n\025Cre" +
-      "ateTransferRequest\022\021\n\tsource_id\030\001 \001(\t\022\021\n" +
-      "\ttarget_id\030\002 \001(\t\022\014\n\004name\030\007 \001(\t\022\023\n\013descri" +
-      "ption\030\003 \001(\t\022\021\n\tfolder_id\030\004 \001(\t\0228\n\004type\030\006" +
-      " \001(\0162*.yandex.cloud.datatransfer.v1.Tran" +
-      "sferType\"-\n\026CreateTransferMetadata\022\023\n\013tr" +
-      "ansfer_id\030\001 \001(\t\"O\n\025UpdateTransferRequest" +
-      "\022\023\n\013transfer_id\030\001 \001(\t\022\023\n\013description\030\002 \001" +
-      "(\t\022\014\n\004name\030\004 \001(\t\"-\n\026UpdateTransferMetada" +
-      "ta\022\023\n\013transfer_id\030\001 \001(\t\",\n\025DeleteTransfe" +
-      "rRequest\022\023\n\013transfer_id\030\001 \001(\t\"-\n\026DeleteT" +
-      "ransferMetadata\022\023\n\013transfer_id\030\001 \001(\t\")\n\022" +
-      "GetTransferRequest\022\023\n\013transfer_id\030\001 \001(\t\"" +
-      "0\n\031DeactivateTransferRequest\022\023\n\013transfer" +
-      "_id\030\001 \001(\t\"1\n\032DeactivateTransferMetadata\022" +
-      "\023\n\013transfer_id\030\001 \001(\t\".\n\027ActivateTransfer" +
-      "Request\022\023\n\013transfer_id\030\001 \001(\t\"/\n\030Activate" +
-      "TransferMetadata\022\023\n\013transfer_id\030\001 \001(\t2\303\010" +
-      "\n\017TransferService\022\237\001\n\006Create\0223.yandex.cl" +
-      "oud.datatransfer.v1.CreateTransferReques" +
-      "t\032!.yandex.cloud.operation.Operation\"=\202\323" +
-      "\344\223\002\021\"\014/v1/transfer:\001*\262\322*\"\n\026CreateTransfe" +
-      "rMetadata\022\010Transfer\022\255\001\n\006Update\0223.yandex." +
-      "cloud.datatransfer.v1.UpdateTransferRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"K" +
-      "\202\323\344\223\002\0372\032/v1/transfer/{transfer_id}:\001*\262\322*" +
-      "\"\n\026UpdateTransferMetadata\022\010Transfer\022\267\001\n\006" +
-      "Delete\0223.yandex.cloud.datatransfer.v1.De" +
-      "leteTransferRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"U\202\323\344\223\002\034*\032/v1/transfer/{tr" +
-      "ansfer_id}\262\322*/\n\026DeleteTransferMetadata\022\025" +
-      "google.protobuf.Empty\022\203\001\n\003Get\0220.yandex.c" +
-      "loud.datatransfer.v1.GetTransferRequest\032" +
-      "&.yandex.cloud.datatransfer.v1.Transfer\"" +
-      "\"\202\323\344\223\002\034\022\032/v1/transfer/{transfer_id}\022\321\001\n\n" +
-      "Deactivate\0227.yandex.cloud.datatransfer.v" +
-      "1.DeactivateTransferRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"g\202\323\344\223\002*\"%/v1/tran" +
-      "sfer/{transfer_id}:deactivate:\001*\262\322*3\n\032De" +
-      "activateTransferMetadata\022\025google.protobu" +
-      "f.Empty\022\311\001\n\010Activate\0225.yandex.cloud.data" +
-      "transfer.v1.ActivateTransferRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"c\202\323\344\223\002(\"#" +
-      "/v1/transfer/{transfer_id}:activate:\001*\262\322" +
-      "*1\n\030ActivateTransferMetadata\022\025google.pro" +
-      "tobuf.EmptyBq\n yandex.cloud.api.datatran" +
-      "sfer.v1ZMgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/datatransfer/v1;datatr" +
-      "ansferb\006proto3"
+      ".v1\032\034google/api/annotations.proto\032 googl" +
+      "e/protobuf/field_mask.proto\032+yandex/clou" +
+      "d/datatransfer/v1/transfer.proto\032 yandex" +
+      "/cloud/api/operation.proto\032&yandex/cloud" +
+      "/operation/operation.proto\"\255\002\n\025CreateTra" +
+      "nsferRequest\022\021\n\tsource_id\030\001 \001(\t\022\021\n\ttarge" +
+      "t_id\030\002 \001(\t\022\014\n\004name\030\007 \001(\t\022\023\n\013description\030" +
+      "\003 \001(\t\022O\n\006labels\030\010 \003(\0132?.yandex.cloud.dat" +
+      "atransfer.v1.CreateTransferRequest.Label" +
+      "sEntry\022\021\n\tfolder_id\030\004 \001(\t\0228\n\004type\030\006 \001(\0162" +
+      "*.yandex.cloud.datatransfer.v1.TransferT" +
+      "ype\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"-\n\026CreateTransferMetadata\022\023\n\013" +
+      "transfer_id\030\001 \001(\t\"\200\002\n\025UpdateTransferRequ" +
+      "est\022\023\n\013transfer_id\030\001 \001(\t\022\023\n\013description\030" +
+      "\002 \001(\t\022O\n\006labels\030\006 \003(\0132?.yandex.cloud.dat" +
+      "atransfer.v1.UpdateTransferRequest.Label" +
+      "sEntry\022\014\n\004name\030\004 \001(\t\022/\n\013update_mask\030\005 \001(" +
+      "\0132\032.google.protobuf.FieldMask\032-\n\013LabelsE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026" +
+      "UpdateTransferMetadata\022\023\n\013transfer_id\030\001 " +
+      "\001(\t\",\n\025DeleteTransferRequest\022\023\n\013transfer" +
+      "_id\030\001 \001(\t\"-\n\026DeleteTransferMetadata\022\023\n\013t" +
+      "ransfer_id\030\001 \001(\t\"P\n\024ListTransfersRequest" +
+      "\022\021\n\tfolder_id\030\002 \001(\t\022\021\n\tpage_size\030\003 \001(\003\022\022" +
+      "\n\npage_token\030\004 \001(\t\"k\n\025ListTransfersRespo" +
+      "nse\0229\n\ttransfers\030\001 \003(\0132&.yandex.cloud.da" +
+      "tatransfer.v1.Transfer\022\027\n\017next_page_toke" +
+      "n\030\002 \001(\t\")\n\022GetTransferRequest\022\023\n\013transfe" +
+      "r_id\030\001 \001(\t\"0\n\031DeactivateTransferRequest\022" +
+      "\023\n\013transfer_id\030\001 \001(\t\"1\n\032DeactivateTransf" +
+      "erMetadata\022\023\n\013transfer_id\030\001 \001(\t\".\n\027Activ" +
+      "ateTransferRequest\022\023\n\013transfer_id\030\001 \001(\t\"" +
+      "/\n\030ActivateTransferMetadata\022\023\n\013transfer_" +
+      "id\030\001 \001(\t2\335\t\n\017TransferService\022\237\001\n\006Create\022" +
+      "3.yandex.cloud.datatransfer.v1.CreateTra" +
+      "nsferRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"=\202\323\344\223\002\021\"\014/v1/transfer:\001*\262\322*\"\n\026Cr" +
+      "eateTransferMetadata\022\010Transfer\022\255\001\n\006Updat" +
+      "e\0223.yandex.cloud.datatransfer.v1.UpdateT" +
+      "ransferRequest\032!.yandex.cloud.operation." +
+      "Operation\"K\202\323\344\223\002\0372\032/v1/transfer/{transfe" +
+      "r_id}:\001*\262\322*\"\n\026UpdateTransferMetadata\022\010Tr" +
+      "ansfer\022\267\001\n\006Delete\0223.yandex.cloud.datatra" +
+      "nsfer.v1.DeleteTransferRequest\032!.yandex." +
+      "cloud.operation.Operation\"U\202\323\344\223\002\034*\032/v1/t" +
+      "ransfer/{transfer_id}\262\322*/\n\026DeleteTransfe" +
+      "rMetadata\022\025google.protobuf.Empty\022\227\001\n\004Lis" +
+      "t\0222.yandex.cloud.datatransfer.v1.ListTra" +
+      "nsfersRequest\0323.yandex.cloud.datatransfe" +
+      "r.v1.ListTransfersResponse\"&\202\323\344\223\002 \022\036/v1/" +
+      "transfers/list/{folder_id}\022\203\001\n\003Get\0220.yan" +
+      "dex.cloud.datatransfer.v1.GetTransferReq" +
+      "uest\032&.yandex.cloud.datatransfer.v1.Tran" +
+      "sfer\"\"\202\323\344\223\002\034\022\032/v1/transfer/{transfer_id}" +
+      "\022\321\001\n\nDeactivate\0227.yandex.cloud.datatrans" +
+      "fer.v1.DeactivateTransferRequest\032!.yande" +
+      "x.cloud.operation.Operation\"g\202\323\344\223\002*\"%/v1" +
+      "/transfer/{transfer_id}:deactivate:\001*\262\322*" +
+      "3\n\032DeactivateTransferMetadata\022\025google.pr" +
+      "otobuf.Empty\022\311\001\n\010Activate\0225.yandex.cloud" +
+      ".datatransfer.v1.ActivateTransferRequest" +
+      "\032!.yandex.cloud.operation.Operation\"c\202\323\344" +
+      "\223\002(\"#/v1/transfer/{transfer_id}:activate" +
+      ":\001*\262\322*1\n\030ActivateTransferMetadata\022\025googl" +
+      "e.protobuf.EmptyBq\n yandex.cloud.api.dat" +
+      "atransfer.v1ZMgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/datatransfer/v1;d" +
+      "atatransferb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7111,6 +10228,7 @@ public final class TransferServiceOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.datatransfer.v1.TransferOuterClass.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
@@ -7120,7 +10238,13 @@ public final class TransferServiceOuterClass {
     internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_descriptor,
-        new java.lang.String[] { "SourceId", "TargetId", "Name", "Description", "FolderId", "Type", });
+        new java.lang.String[] { "SourceId", "TargetId", "Name", "Description", "Labels", "FolderId", "Type", });
+    internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_CreateTransferRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_datatransfer_v1_CreateTransferMetadata_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_datatransfer_v1_CreateTransferMetadata_fieldAccessorTable = new
@@ -7132,7 +10256,13 @@ public final class TransferServiceOuterClass {
     internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_descriptor,
-        new java.lang.String[] { "TransferId", "Description", "Name", });
+        new java.lang.String[] { "TransferId", "Description", "Labels", "Name", "UpdateMask", });
+    internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_UpdateTransferRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_datatransfer_v1_UpdateTransferMetadata_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_datatransfer_v1_UpdateTransferMetadata_fieldAccessorTable = new
@@ -7151,32 +10281,44 @@ public final class TransferServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_DeleteTransferMetadata_descriptor,
         new java.lang.String[] { "TransferId", });
-    internal_static_yandex_cloud_datatransfer_v1_GetTransferRequest_descriptor =
+    internal_static_yandex_cloud_datatransfer_v1_ListTransfersRequest_descriptor =
       getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_datatransfer_v1_ListTransfersRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_ListTransfersRequest_descriptor,
+        new java.lang.String[] { "FolderId", "PageSize", "PageToken", });
+    internal_static_yandex_cloud_datatransfer_v1_ListTransfersResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_yandex_cloud_datatransfer_v1_ListTransfersResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_ListTransfersResponse_descriptor,
+        new java.lang.String[] { "Transfers", "NextPageToken", });
+    internal_static_yandex_cloud_datatransfer_v1_GetTransferRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_datatransfer_v1_GetTransferRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_GetTransferRequest_descriptor,
         new java.lang.String[] { "TransferId", });
     internal_static_yandex_cloud_datatransfer_v1_DeactivateTransferRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_datatransfer_v1_DeactivateTransferRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_DeactivateTransferRequest_descriptor,
         new java.lang.String[] { "TransferId", });
     internal_static_yandex_cloud_datatransfer_v1_DeactivateTransferMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_datatransfer_v1_DeactivateTransferMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_DeactivateTransferMetadata_descriptor,
         new java.lang.String[] { "TransferId", });
     internal_static_yandex_cloud_datatransfer_v1_ActivateTransferRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_datatransfer_v1_ActivateTransferRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_ActivateTransferRequest_descriptor,
         new java.lang.String[] { "TransferId", });
     internal_static_yandex_cloud_datatransfer_v1_ActivateTransferMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_datatransfer_v1_ActivateTransferMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_ActivateTransferMetadata_descriptor,
@@ -7188,6 +10330,7 @@ public final class TransferServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();

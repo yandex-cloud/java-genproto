@@ -8896,28 +8896,28 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * TCP listener settings.
+     * Stream listener settings.
      * </pre>
      *
-     * <code>.yandex.cloud.apploadbalancer.v1.TcpListener tcp = 5;</code>
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
      */
-    boolean hasTcp();
+    boolean hasStream();
     /**
      * <pre>
-     * TCP listener settings.
+     * Stream listener settings.
      * </pre>
      *
-     * <code>.yandex.cloud.apploadbalancer.v1.TcpListener tcp = 5;</code>
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
      */
-    yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener getTcp();
+    yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener getStream();
     /**
      * <pre>
-     * TCP listener settings.
+     * Stream listener settings.
      * </pre>
      *
-     * <code>.yandex.cloud.apploadbalancer.v1.TcpListener tcp = 5;</code>
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
      */
-    yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListenerOrBuilder getTcpOrBuilder();
+    yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListenerOrBuilder getStreamOrBuilder();
 
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Listener.ListenerCase getListenerCase();
   }
@@ -9011,14 +9011,14 @@ public final class LoadBalancerOuterClass {
               break;
             }
             case 42: {
-              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.Builder subBuilder = null;
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.Builder subBuilder = null;
               if (listenerCase_ == 5) {
-                subBuilder = ((yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener) listener_).toBuilder();
+                subBuilder = ((yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_).toBuilder();
               }
               listener_ =
-                  input.readMessage(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.parser(), extensionRegistry);
+                  input.readMessage(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener) listener_);
+                subBuilder.mergeFrom((yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_);
                 listener_ = subBuilder.buildPartial();
               }
               listenerCase_ = 5;
@@ -9066,7 +9066,7 @@ public final class LoadBalancerOuterClass {
         implements com.google.protobuf.Internal.EnumLite {
       HTTP(3),
       TLS(4),
-      TCP(5),
+      STREAM(5),
       LISTENER_NOT_SET(0);
       private final int value;
       private ListenerCase(int value) {
@@ -9084,7 +9084,7 @@ public final class LoadBalancerOuterClass {
         switch (value) {
           case 3: return HTTP;
           case 4: return TLS;
-          case 5: return TCP;
+          case 5: return STREAM;
           case 0: return LISTENER_NOT_SET;
           default: return null;
         }
@@ -9280,42 +9280,42 @@ public final class LoadBalancerOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener.getDefaultInstance();
     }
 
-    public static final int TCP_FIELD_NUMBER = 5;
+    public static final int STREAM_FIELD_NUMBER = 5;
     /**
      * <pre>
-     * TCP listener settings.
+     * Stream listener settings.
      * </pre>
      *
-     * <code>.yandex.cloud.apploadbalancer.v1.TcpListener tcp = 5;</code>
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
      */
-    public boolean hasTcp() {
+    public boolean hasStream() {
       return listenerCase_ == 5;
     }
     /**
      * <pre>
-     * TCP listener settings.
+     * Stream listener settings.
      * </pre>
      *
-     * <code>.yandex.cloud.apploadbalancer.v1.TcpListener tcp = 5;</code>
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
      */
-    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener getTcp() {
+    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener getStream() {
       if (listenerCase_ == 5) {
-         return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener) listener_;
+         return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_;
       }
-      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.getDefaultInstance();
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.getDefaultInstance();
     }
     /**
      * <pre>
-     * TCP listener settings.
+     * Stream listener settings.
      * </pre>
      *
-     * <code>.yandex.cloud.apploadbalancer.v1.TcpListener tcp = 5;</code>
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
      */
-    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListenerOrBuilder getTcpOrBuilder() {
+    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListenerOrBuilder getStreamOrBuilder() {
       if (listenerCase_ == 5) {
-         return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener) listener_;
+         return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_;
       }
-      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.getDefaultInstance();
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -9345,7 +9345,7 @@ public final class LoadBalancerOuterClass {
         output.writeMessage(4, (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener) listener_);
       }
       if (listenerCase_ == 5) {
-        output.writeMessage(5, (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener) listener_);
+        output.writeMessage(5, (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_);
       }
       unknownFields.writeTo(output);
     }
@@ -9373,7 +9373,7 @@ public final class LoadBalancerOuterClass {
       }
       if (listenerCase_ == 5) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener) listener_);
+          .computeMessageSize(5, (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9408,8 +9408,8 @@ public final class LoadBalancerOuterClass {
               .equals(other.getTls());
           break;
         case 5:
-          result = result && getTcp()
-              .equals(other.getTcp());
+          result = result && getStream()
+              .equals(other.getStream());
           break;
         case 0:
         default:
@@ -9441,8 +9441,8 @@ public final class LoadBalancerOuterClass {
           hash = (53 * hash) + getTls().hashCode();
           break;
         case 5:
-          hash = (37 * hash) + TCP_FIELD_NUMBER;
-          hash = (53 * hash) + getTcp().hashCode();
+          hash = (37 * hash) + STREAM_FIELD_NUMBER;
+          hash = (53 * hash) + getStream().hashCode();
           break;
         case 0:
         default:
@@ -9649,10 +9649,10 @@ public final class LoadBalancerOuterClass {
           }
         }
         if (listenerCase_ == 5) {
-          if (tcpBuilder_ == null) {
+          if (streamBuilder_ == null) {
             result.listener_ = listener_;
           } else {
-            result.listener_ = tcpBuilder_.build();
+            result.listener_ = streamBuilder_.build();
           }
         }
         result.bitField0_ = to_bitField0_;
@@ -9744,8 +9744,8 @@ public final class LoadBalancerOuterClass {
             mergeTls(other.getTls());
             break;
           }
-          case TCP: {
-            mergeTcp(other.getTcp());
+          case STREAM: {
+            mergeStream(other.getStream());
             break;
           }
           case LISTENER_NOT_SET: {
@@ -10566,87 +10566,87 @@ public final class LoadBalancerOuterClass {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListenerOrBuilder> tcpBuilder_;
+          yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListenerOrBuilder> streamBuilder_;
       /**
        * <pre>
-       * TCP listener settings.
+       * Stream listener settings.
        * </pre>
        *
-       * <code>.yandex.cloud.apploadbalancer.v1.TcpListener tcp = 5;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
        */
-      public boolean hasTcp() {
+      public boolean hasStream() {
         return listenerCase_ == 5;
       }
       /**
        * <pre>
-       * TCP listener settings.
+       * Stream listener settings.
        * </pre>
        *
-       * <code>.yandex.cloud.apploadbalancer.v1.TcpListener tcp = 5;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
        */
-      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener getTcp() {
-        if (tcpBuilder_ == null) {
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener getStream() {
+        if (streamBuilder_ == null) {
           if (listenerCase_ == 5) {
-            return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener) listener_;
+            return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_;
           }
-          return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.getDefaultInstance();
+          return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.getDefaultInstance();
         } else {
           if (listenerCase_ == 5) {
-            return tcpBuilder_.getMessage();
+            return streamBuilder_.getMessage();
           }
-          return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.getDefaultInstance();
+          return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.getDefaultInstance();
         }
       }
       /**
        * <pre>
-       * TCP listener settings.
+       * Stream listener settings.
        * </pre>
        *
-       * <code>.yandex.cloud.apploadbalancer.v1.TcpListener tcp = 5;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
        */
-      public Builder setTcp(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener value) {
-        if (tcpBuilder_ == null) {
+      public Builder setStream(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener value) {
+        if (streamBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           listener_ = value;
           onChanged();
         } else {
-          tcpBuilder_.setMessage(value);
+          streamBuilder_.setMessage(value);
         }
         listenerCase_ = 5;
         return this;
       }
       /**
        * <pre>
-       * TCP listener settings.
+       * Stream listener settings.
        * </pre>
        *
-       * <code>.yandex.cloud.apploadbalancer.v1.TcpListener tcp = 5;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
        */
-      public Builder setTcp(
-          yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.Builder builderForValue) {
-        if (tcpBuilder_ == null) {
+      public Builder setStream(
+          yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.Builder builderForValue) {
+        if (streamBuilder_ == null) {
           listener_ = builderForValue.build();
           onChanged();
         } else {
-          tcpBuilder_.setMessage(builderForValue.build());
+          streamBuilder_.setMessage(builderForValue.build());
         }
         listenerCase_ = 5;
         return this;
       }
       /**
        * <pre>
-       * TCP listener settings.
+       * Stream listener settings.
        * </pre>
        *
-       * <code>.yandex.cloud.apploadbalancer.v1.TcpListener tcp = 5;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
        */
-      public Builder mergeTcp(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener value) {
-        if (tcpBuilder_ == null) {
+      public Builder mergeStream(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener value) {
+        if (streamBuilder_ == null) {
           if (listenerCase_ == 5 &&
-              listener_ != yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.getDefaultInstance()) {
-            listener_ = yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.newBuilder((yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener) listener_)
+              listener_ != yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.getDefaultInstance()) {
+            listener_ = yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.newBuilder((yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_)
                 .mergeFrom(value).buildPartial();
           } else {
             listener_ = value;
@@ -10654,22 +10654,22 @@ public final class LoadBalancerOuterClass {
           onChanged();
         } else {
           if (listenerCase_ == 5) {
-            tcpBuilder_.mergeFrom(value);
+            streamBuilder_.mergeFrom(value);
           }
-          tcpBuilder_.setMessage(value);
+          streamBuilder_.setMessage(value);
         }
         listenerCase_ = 5;
         return this;
       }
       /**
        * <pre>
-       * TCP listener settings.
+       * Stream listener settings.
        * </pre>
        *
-       * <code>.yandex.cloud.apploadbalancer.v1.TcpListener tcp = 5;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
        */
-      public Builder clearTcp() {
-        if (tcpBuilder_ == null) {
+      public Builder clearStream() {
+        if (streamBuilder_ == null) {
           if (listenerCase_ == 5) {
             listenerCase_ = 0;
             listener_ = null;
@@ -10680,61 +10680,61 @@ public final class LoadBalancerOuterClass {
             listenerCase_ = 0;
             listener_ = null;
           }
-          tcpBuilder_.clear();
+          streamBuilder_.clear();
         }
         return this;
       }
       /**
        * <pre>
-       * TCP listener settings.
+       * Stream listener settings.
        * </pre>
        *
-       * <code>.yandex.cloud.apploadbalancer.v1.TcpListener tcp = 5;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
        */
-      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.Builder getTcpBuilder() {
-        return getTcpFieldBuilder().getBuilder();
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.Builder getStreamBuilder() {
+        return getStreamFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * TCP listener settings.
+       * Stream listener settings.
        * </pre>
        *
-       * <code>.yandex.cloud.apploadbalancer.v1.TcpListener tcp = 5;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
        */
-      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListenerOrBuilder getTcpOrBuilder() {
-        if ((listenerCase_ == 5) && (tcpBuilder_ != null)) {
-          return tcpBuilder_.getMessageOrBuilder();
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListenerOrBuilder getStreamOrBuilder() {
+        if ((listenerCase_ == 5) && (streamBuilder_ != null)) {
+          return streamBuilder_.getMessageOrBuilder();
         } else {
           if (listenerCase_ == 5) {
-            return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener) listener_;
+            return (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_;
           }
-          return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.getDefaultInstance();
+          return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.getDefaultInstance();
         }
       }
       /**
        * <pre>
-       * TCP listener settings.
+       * Stream listener settings.
        * </pre>
        *
-       * <code>.yandex.cloud.apploadbalancer.v1.TcpListener tcp = 5;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListenerOrBuilder> 
-          getTcpFieldBuilder() {
-        if (tcpBuilder_ == null) {
+          yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListenerOrBuilder> 
+          getStreamFieldBuilder() {
+        if (streamBuilder_ == null) {
           if (!(listenerCase_ == 5)) {
-            listener_ = yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.getDefaultInstance();
+            listener_ = yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.getDefaultInstance();
           }
-          tcpBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListenerOrBuilder>(
-                  (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener) listener_,
+          streamBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListenerOrBuilder>(
+                  (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) listener_,
                   getParentForChildren(),
                   isClean());
           listener_ = null;
         }
         listenerCase_ = 5;
         onChanged();;
-        return tcpBuilder_;
+        return streamBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12880,8 +12880,8 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * Settings for handling HTTPS requests by default,
-     * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+     * Settings for handling requests by default, with Server Name
+     * Indication (SNI) not matching any of the [sni_handlers].
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
@@ -12889,8 +12889,8 @@ public final class LoadBalancerOuterClass {
     boolean hasDefaultHandler();
     /**
      * <pre>
-     * Settings for handling HTTPS requests by default,
-     * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+     * Settings for handling requests by default, with Server Name
+     * Indication (SNI) not matching any of the [sni_handlers].
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
@@ -12898,8 +12898,8 @@ public final class LoadBalancerOuterClass {
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler getDefaultHandler();
     /**
      * <pre>
-     * Settings for handling HTTPS requests by default,
-     * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+     * Settings for handling requests by default, with Server Name
+     * Indication (SNI) not matching any of the [sni_handlers].
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
@@ -12908,7 +12908,7 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * Settings for handling HTTPS requests with Server Name Indication (SNI)
+     * Settings for handling requests with Server Name Indication (SNI)
      * matching one of [SniMatch.server_names] values.
      * </pre>
      *
@@ -12918,7 +12918,7 @@ public final class LoadBalancerOuterClass {
         getSniHandlersList();
     /**
      * <pre>
-     * Settings for handling HTTPS requests with Server Name Indication (SNI)
+     * Settings for handling requests with Server Name Indication (SNI)
      * matching one of [SniMatch.server_names] values.
      * </pre>
      *
@@ -12927,7 +12927,7 @@ public final class LoadBalancerOuterClass {
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatch getSniHandlers(int index);
     /**
      * <pre>
-     * Settings for handling HTTPS requests with Server Name Indication (SNI)
+     * Settings for handling requests with Server Name Indication (SNI)
      * matching one of [SniMatch.server_names] values.
      * </pre>
      *
@@ -12936,7 +12936,7 @@ public final class LoadBalancerOuterClass {
     int getSniHandlersCount();
     /**
      * <pre>
-     * Settings for handling HTTPS requests with Server Name Indication (SNI)
+     * Settings for handling requests with Server Name Indication (SNI)
      * matching one of [SniMatch.server_names] values.
      * </pre>
      *
@@ -12946,7 +12946,7 @@ public final class LoadBalancerOuterClass {
         getSniHandlersOrBuilderList();
     /**
      * <pre>
-     * Settings for handling HTTPS requests with Server Name Indication (SNI)
+     * Settings for handling requests with Server Name Indication (SNI)
      * matching one of [SniMatch.server_names] values.
      * </pre>
      *
@@ -13061,8 +13061,8 @@ public final class LoadBalancerOuterClass {
     private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler defaultHandler_;
     /**
      * <pre>
-     * Settings for handling HTTPS requests by default,
-     * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+     * Settings for handling requests by default, with Server Name
+     * Indication (SNI) not matching any of the [sni_handlers].
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
@@ -13072,8 +13072,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Settings for handling HTTPS requests by default,
-     * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+     * Settings for handling requests by default, with Server Name
+     * Indication (SNI) not matching any of the [sni_handlers].
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
@@ -13083,8 +13083,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Settings for handling HTTPS requests by default,
-     * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+     * Settings for handling requests by default, with Server Name
+     * Indication (SNI) not matching any of the [sni_handlers].
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
@@ -13097,7 +13097,7 @@ public final class LoadBalancerOuterClass {
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatch> sniHandlers_;
     /**
      * <pre>
-     * Settings for handling HTTPS requests with Server Name Indication (SNI)
+     * Settings for handling requests with Server Name Indication (SNI)
      * matching one of [SniMatch.server_names] values.
      * </pre>
      *
@@ -13108,7 +13108,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Settings for handling HTTPS requests with Server Name Indication (SNI)
+     * Settings for handling requests with Server Name Indication (SNI)
      * matching one of [SniMatch.server_names] values.
      * </pre>
      *
@@ -13120,7 +13120,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Settings for handling HTTPS requests with Server Name Indication (SNI)
+     * Settings for handling requests with Server Name Indication (SNI)
      * matching one of [SniMatch.server_names] values.
      * </pre>
      *
@@ -13131,7 +13131,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Settings for handling HTTPS requests with Server Name Indication (SNI)
+     * Settings for handling requests with Server Name Indication (SNI)
      * matching one of [SniMatch.server_names] values.
      * </pre>
      *
@@ -13142,7 +13142,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Settings for handling HTTPS requests with Server Name Indication (SNI)
+     * Settings for handling requests with Server Name Indication (SNI)
      * matching one of [SniMatch.server_names] values.
      * </pre>
      *
@@ -13537,8 +13537,8 @@ public final class LoadBalancerOuterClass {
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandlerOrBuilder> defaultHandlerBuilder_;
       /**
        * <pre>
-       * Settings for handling HTTPS requests by default,
-       * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+       * Settings for handling requests by default, with Server Name
+       * Indication (SNI) not matching any of the [sni_handlers].
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
@@ -13548,8 +13548,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests by default,
-       * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+       * Settings for handling requests by default, with Server Name
+       * Indication (SNI) not matching any of the [sni_handlers].
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
@@ -13563,8 +13563,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests by default,
-       * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+       * Settings for handling requests by default, with Server Name
+       * Indication (SNI) not matching any of the [sni_handlers].
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
@@ -13584,8 +13584,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests by default,
-       * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+       * Settings for handling requests by default, with Server Name
+       * Indication (SNI) not matching any of the [sni_handlers].
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
@@ -13603,8 +13603,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests by default,
-       * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+       * Settings for handling requests by default, with Server Name
+       * Indication (SNI) not matching any of the [sni_handlers].
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
@@ -13626,8 +13626,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests by default,
-       * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+       * Settings for handling requests by default, with Server Name
+       * Indication (SNI) not matching any of the [sni_handlers].
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
@@ -13645,8 +13645,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests by default,
-       * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+       * Settings for handling requests by default, with Server Name
+       * Indication (SNI) not matching any of the [sni_handlers].
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
@@ -13658,8 +13658,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests by default,
-       * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+       * Settings for handling requests by default, with Server Name
+       * Indication (SNI) not matching any of the [sni_handlers].
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
@@ -13674,8 +13674,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests by default,
-       * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+       * Settings for handling requests by default, with Server Name
+       * Indication (SNI) not matching any of the [sni_handlers].
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
@@ -13708,7 +13708,7 @@ public final class LoadBalancerOuterClass {
 
       /**
        * <pre>
-       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * Settings for handling requests with Server Name Indication (SNI)
        * matching one of [SniMatch.server_names] values.
        * </pre>
        *
@@ -13723,7 +13723,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * Settings for handling requests with Server Name Indication (SNI)
        * matching one of [SniMatch.server_names] values.
        * </pre>
        *
@@ -13738,7 +13738,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * Settings for handling requests with Server Name Indication (SNI)
        * matching one of [SniMatch.server_names] values.
        * </pre>
        *
@@ -13753,7 +13753,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * Settings for handling requests with Server Name Indication (SNI)
        * matching one of [SniMatch.server_names] values.
        * </pre>
        *
@@ -13775,7 +13775,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * Settings for handling requests with Server Name Indication (SNI)
        * matching one of [SniMatch.server_names] values.
        * </pre>
        *
@@ -13794,7 +13794,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * Settings for handling requests with Server Name Indication (SNI)
        * matching one of [SniMatch.server_names] values.
        * </pre>
        *
@@ -13815,7 +13815,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * Settings for handling requests with Server Name Indication (SNI)
        * matching one of [SniMatch.server_names] values.
        * </pre>
        *
@@ -13837,7 +13837,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * Settings for handling requests with Server Name Indication (SNI)
        * matching one of [SniMatch.server_names] values.
        * </pre>
        *
@@ -13856,7 +13856,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * Settings for handling requests with Server Name Indication (SNI)
        * matching one of [SniMatch.server_names] values.
        * </pre>
        *
@@ -13875,7 +13875,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * Settings for handling requests with Server Name Indication (SNI)
        * matching one of [SniMatch.server_names] values.
        * </pre>
        *
@@ -13895,7 +13895,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * Settings for handling requests with Server Name Indication (SNI)
        * matching one of [SniMatch.server_names] values.
        * </pre>
        *
@@ -13913,7 +13913,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * Settings for handling requests with Server Name Indication (SNI)
        * matching one of [SniMatch.server_names] values.
        * </pre>
        *
@@ -13931,7 +13931,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * Settings for handling requests with Server Name Indication (SNI)
        * matching one of [SniMatch.server_names] values.
        * </pre>
        *
@@ -13943,7 +13943,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * Settings for handling requests with Server Name Indication (SNI)
        * matching one of [SniMatch.server_names] values.
        * </pre>
        *
@@ -13958,7 +13958,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * Settings for handling requests with Server Name Indication (SNI)
        * matching one of [SniMatch.server_names] values.
        * </pre>
        *
@@ -13974,7 +13974,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * Settings for handling requests with Server Name Indication (SNI)
        * matching one of [SniMatch.server_names] values.
        * </pre>
        *
@@ -13986,7 +13986,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * Settings for handling requests with Server Name Indication (SNI)
        * matching one of [SniMatch.server_names] values.
        * </pre>
        *
@@ -13999,7 +13999,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * Settings for handling requests with Server Name Indication (SNI)
        * matching one of [SniMatch.server_names] values.
        * </pre>
        *
@@ -14076,8 +14076,8 @@ public final class LoadBalancerOuterClass {
 
   }
 
-  public interface TcpListenerOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.TcpListener)
+  public interface StreamListenerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.StreamListener)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -14095,21 +14095,21 @@ public final class LoadBalancerOuterClass {
   }
   /**
    * <pre>
-   * A TCP listener resource.
+   * A Stream listener resource.
    * </pre>
    *
-   * Protobuf type {@code yandex.cloud.apploadbalancer.v1.TcpListener}
+   * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StreamListener}
    */
-  public  static final class TcpListener extends
+  public  static final class StreamListener extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.TcpListener)
-      TcpListenerOrBuilder {
+      // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.StreamListener)
+      StreamListenerOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use TcpListener.newBuilder() to construct.
-    private TcpListener(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use StreamListener.newBuilder() to construct.
+    private StreamListener(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private TcpListener() {
+    private StreamListener() {
     }
 
     @java.lang.Override
@@ -14117,7 +14117,7 @@ public final class LoadBalancerOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TcpListener(
+    private StreamListener(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -14170,15 +14170,15 @@ public final class LoadBalancerOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_TcpListener_descriptor;
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_StreamListener_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_TcpListener_fieldAccessorTable
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_StreamListener_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.Builder.class);
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.Builder.class);
     }
 
     public static final int HANDLER_FIELD_NUMBER = 1;
@@ -14242,10 +14242,10 @@ public final class LoadBalancerOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener)) {
+      if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener) obj;
+      yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) obj;
 
       boolean result = true;
       result = result && (hasHandler() == other.hasHandler());
@@ -14273,69 +14273,69 @@ public final class LoadBalancerOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener parseFrom(
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener parseFrom(
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener parseFrom(
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener parseFrom(
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener parseFrom(byte[] data)
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener parseFrom(
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener parseFrom(
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener parseDelimitedFrom(
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener parseFrom(
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener parseFrom(
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -14348,7 +14348,7 @@ public final class LoadBalancerOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener prototype) {
+    public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -14365,29 +14365,29 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * A TCP listener resource.
+     * A Stream listener resource.
      * </pre>
      *
-     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.TcpListener}
+     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StreamListener}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.TcpListener)
-        yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListenerOrBuilder {
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.StreamListener)
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListenerOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_TcpListener_descriptor;
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_StreamListener_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_TcpListener_fieldAccessorTable
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_StreamListener_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.Builder.class);
+                yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.newBuilder()
+      // Construct using yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -14417,17 +14417,17 @@ public final class LoadBalancerOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_TcpListener_descriptor;
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_StreamListener_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener getDefaultInstanceForType() {
-        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.getDefaultInstance();
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener getDefaultInstanceForType() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener build() {
-        yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener result = buildPartial();
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener build() {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -14435,8 +14435,8 @@ public final class LoadBalancerOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener buildPartial() {
-        yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener(this);
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener buildPartial() {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener(this);
         if (handlerBuilder_ == null) {
           result.handler_ = handler_;
         } else {
@@ -14480,16 +14480,16 @@ public final class LoadBalancerOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener) {
-          return mergeFrom((yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener)other);
+        if (other instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) {
+          return mergeFrom((yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener other) {
-        if (other == yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener other) {
+        if (other == yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.getDefaultInstance()) return this;
         if (other.hasHandler()) {
           mergeHandler(other.getHandler());
         }
@@ -14508,11 +14508,11 @@ public final class LoadBalancerOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener parsedMessage = null;
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -14651,41 +14651,41 @@ public final class LoadBalancerOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.TcpListener)
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.StreamListener)
     }
 
-    // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.TcpListener)
-    private static final yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.StreamListener)
+    private static final yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener();
+      DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener();
     }
 
-    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener getDefaultInstance() {
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<TcpListener>
-        PARSER = new com.google.protobuf.AbstractParser<TcpListener>() {
+    private static final com.google.protobuf.Parser<StreamListener>
+        PARSER = new com.google.protobuf.AbstractParser<StreamListener>() {
       @java.lang.Override
-      public TcpListener parsePartialFrom(
+      public StreamListener parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TcpListener(input, extensionRegistry);
+        return new StreamListener(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<TcpListener> parser() {
+    public static com.google.protobuf.Parser<StreamListener> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<TcpListener> getParserForType() {
+    public com.google.protobuf.Parser<StreamListener> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TcpListener getDefaultInstanceForType() {
+    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -22666,10 +22666,10 @@ public final class LoadBalancerOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_apploadbalancer_v1_TlsListener_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_apploadbalancer_v1_TcpListener_descriptor;
+    internal_static_yandex_cloud_apploadbalancer_v1_StreamListener_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_apploadbalancer_v1_TcpListener_fieldAccessorTable;
+      internal_static_yandex_cloud_apploadbalancer_v1_StreamListener_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_apploadbalancer_v1_Http2Options_descriptor;
   private static final 
@@ -22760,59 +22760,60 @@ public final class LoadBalancerOuterClass {
       "d\030\001 \001(\tB\004\350\3071\001\022\021\n\tsubnet_id\030\002 \001(\t\022\027\n\017disa" +
       "ble_traffic\030\003 \001(\010\"]\n\020AllocationPolicy\022I\n" +
       "\tlocations\030\001 \003(\0132).yandex.cloud.apploadb" +
-      "alancer.v1.LocationB\013\202\3101\003>=1\220\3101\001\"\247\002\n\010Lis" +
+      "alancer.v1.LocationB\013\202\3101\003>=1\220\3101\001\"\255\002\n\010Lis" +
       "tener\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022<\n\tendpoints\030\002" +
       " \003(\0132).yandex.cloud.apploadbalancer.v1.E" +
       "ndpoint\022=\n\004http\030\003 \001(\0132-.yandex.cloud.app" +
       "loadbalancer.v1.HttpListenerH\000\022;\n\003tls\030\004 " +
       "\001(\0132,.yandex.cloud.apploadbalancer.v1.Tl" +
-      "sListenerH\000\022;\n\003tcp\030\005 \001(\0132,.yandex.cloud." +
-      "apploadbalancer.v1.TcpListenerH\000B\020\n\010list" +
-      "ener\022\004\300\3011\001\"q\n\010Endpoint\022C\n\taddresses\030\001 \003(" +
-      "\0132(.yandex.cloud.apploadbalancer.v1.Addr" +
-      "essB\006\202\3101\002>0\022 \n\005ports\030\002 \003(\003B\021\202\3101\002>0\372\3071\0071-" +
-      "65535\"\214\001\n\014HttpListener\022=\n\007handler\030\001 \001(\0132" +
-      ",.yandex.cloud.apploadbalancer.v1.HttpHa" +
-      "ndler\022=\n\tredirects\030\002 \001(\0132*.yandex.cloud." +
-      "apploadbalancer.v1.Redirects\"\232\001\n\013TlsList" +
-      "ener\022J\n\017default_handler\030\001 \001(\0132+.yandex.c" +
-      "loud.apploadbalancer.v1.TlsHandlerB\004\350\3071\001" +
-      "\022?\n\014sni_handlers\030\002 \003(\0132).yandex.cloud.ap" +
-      "ploadbalancer.v1.SniMatch\"T\n\013TcpListener" +
-      "\022E\n\007handler\030\001 \001(\0132..yandex.cloud.appload" +
-      "balancer.v1.StreamHandlerB\004\350\3071\001\".\n\014Http2" +
-      "Options\022\036\n\026max_concurrent_streams\030\001 \001(\003\"" +
-      "/\n\rStreamHandler\022\036\n\020backend_group_id\030\001 \001" +
-      "(\tB\004\350\3071\001\"\232\001\n\013HttpHandler\022\026\n\016http_router_" +
-      "id\030\001 \001(\t\022F\n\rhttp2_options\030\002 \001(\0132-.yandex" +
-      ".cloud.apploadbalancer.v1.Http2OptionsH\000" +
-      "\022\026\n\014allow_http10\030\003 \001(\010H\000B\023\n\021protocol_set" +
-      "tings\"\"\n\tRedirects\022\025\n\rhttp_to_https\030\001 \001(" +
-      "\010\"\200\001\n\010SniMatch\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\034\n\014se" +
-      "rver_names\030\002 \003(\tB\006\202\3101\002>0\022B\n\007handler\030\003 \001(" +
-      "\0132+.yandex.cloud.apploadbalancer.v1.TlsH" +
-      "andlerB\004\350\3071\001\"\316\001\n\nTlsHandler\022D\n\014http_hand" +
-      "ler\030\002 \001(\0132,.yandex.cloud.apploadbalancer" +
-      ".v1.HttpHandlerH\000\022H\n\016stream_handler\030\004 \001(" +
-      "\0132..yandex.cloud.apploadbalancer.v1.Stre" +
-      "amHandlerH\000\022\037\n\017certificate_ids\030\003 \003(\tB\006\202\310" +
-      "1\002>0B\017\n\007handler\022\004\300\3011\001\"\214\004\n\013TargetState\022N\n" +
-      "\006status\030\001 \001(\0132>.yandex.cloud.apploadbala" +
-      "ncer.v1.TargetState.HealthcheckStatus\022=\n" +
-      "\006target\030\002 \001(\0132\'.yandex.cloud.apploadbala" +
-      "ncer.v1.TargetB\004\350\3071\001\032n\n\021HealthcheckStatu" +
-      "s\022Y\n\rzone_statuses\030\001 \003(\0132B.yandex.cloud." +
-      "apploadbalancer.v1.TargetState.ZoneHealt" +
-      "hcheckStatus\032\215\001\n\025ZoneHealthcheckStatus\022\025" +
-      "\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022C\n\006status\030\002 \001(\01623." +
-      "yandex.cloud.apploadbalancer.v1.TargetSt" +
-      "ate.Status\022\030\n\020failed_active_hc\030\003 \001(\010\"n\n\006" +
-      "Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\013\n\007HEALTH" +
-      "Y\020\001\022\025\n\021PARTIALLY_HEALTHY\020\002\022\r\n\tUNHEALTHY\020" +
-      "\003\022\014\n\010DRAINING\020\004\022\013\n\007TIMEOUT\020\005Bz\n#yandex.c" +
-      "loud.api.apploadbalancer.v1ZSgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/ap" +
-      "ploadbalancer/v1;apploadbalancerb\006proto3"
+      "sListenerH\000\022A\n\006stream\030\005 \001(\0132/.yandex.clo" +
+      "ud.apploadbalancer.v1.StreamListenerH\000B\020" +
+      "\n\010listener\022\004\300\3011\001\"q\n\010Endpoint\022C\n\taddresse" +
+      "s\030\001 \003(\0132(.yandex.cloud.apploadbalancer.v" +
+      "1.AddressB\006\202\3101\002>0\022 \n\005ports\030\002 \003(\003B\021\202\3101\002>0" +
+      "\372\3071\0071-65535\"\214\001\n\014HttpListener\022=\n\007handler\030" +
+      "\001 \001(\0132,.yandex.cloud.apploadbalancer.v1." +
+      "HttpHandler\022=\n\tredirects\030\002 \001(\0132*.yandex." +
+      "cloud.apploadbalancer.v1.Redirects\"\232\001\n\013T" +
+      "lsListener\022J\n\017default_handler\030\001 \001(\0132+.ya" +
+      "ndex.cloud.apploadbalancer.v1.TlsHandler" +
+      "B\004\350\3071\001\022?\n\014sni_handlers\030\002 \003(\0132).yandex.cl" +
+      "oud.apploadbalancer.v1.SniMatch\"W\n\016Strea" +
+      "mListener\022E\n\007handler\030\001 \001(\0132..yandex.clou" +
+      "d.apploadbalancer.v1.StreamHandlerB\004\350\3071\001" +
+      "\".\n\014Http2Options\022\036\n\026max_concurrent_strea" +
+      "ms\030\001 \001(\003\"/\n\rStreamHandler\022\036\n\020backend_gro" +
+      "up_id\030\001 \001(\tB\004\350\3071\001\"\232\001\n\013HttpHandler\022\026\n\016htt" +
+      "p_router_id\030\001 \001(\t\022F\n\rhttp2_options\030\002 \001(\013" +
+      "2-.yandex.cloud.apploadbalancer.v1.Http2" +
+      "OptionsH\000\022\026\n\014allow_http10\030\003 \001(\010H\000B\023\n\021pro" +
+      "tocol_settings\"\"\n\tRedirects\022\025\n\rhttp_to_h" +
+      "ttps\030\001 \001(\010\"\200\001\n\010SniMatch\022\022\n\004name\030\001 \001(\tB\004\350" +
+      "\3071\001\022\034\n\014server_names\030\002 \003(\tB\006\202\3101\002>0\022B\n\007han" +
+      "dler\030\003 \001(\0132+.yandex.cloud.apploadbalance" +
+      "r.v1.TlsHandlerB\004\350\3071\001\"\316\001\n\nTlsHandler\022D\n\014" +
+      "http_handler\030\002 \001(\0132,.yandex.cloud.apploa" +
+      "dbalancer.v1.HttpHandlerH\000\022H\n\016stream_han" +
+      "dler\030\004 \001(\0132..yandex.cloud.apploadbalance" +
+      "r.v1.StreamHandlerH\000\022\037\n\017certificate_ids\030" +
+      "\003 \003(\tB\006\202\3101\002>0B\017\n\007handler\022\004\300\3011\001\"\214\004\n\013Targe" +
+      "tState\022N\n\006status\030\001 \001(\0132>.yandex.cloud.ap" +
+      "ploadbalancer.v1.TargetState.Healthcheck" +
+      "Status\022=\n\006target\030\002 \001(\0132\'.yandex.cloud.ap" +
+      "ploadbalancer.v1.TargetB\004\350\3071\001\032n\n\021Healthc" +
+      "heckStatus\022Y\n\rzone_statuses\030\001 \003(\0132B.yand" +
+      "ex.cloud.apploadbalancer.v1.TargetState." +
+      "ZoneHealthcheckStatus\032\215\001\n\025ZoneHealthchec" +
+      "kStatus\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022C\n\006status" +
+      "\030\002 \001(\01623.yandex.cloud.apploadbalancer.v1" +
+      ".TargetState.Status\022\030\n\020failed_active_hc\030" +
+      "\003 \001(\010\"n\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022" +
+      "\013\n\007HEALTHY\020\001\022\025\n\021PARTIALLY_HEALTHY\020\002\022\r\n\tU" +
+      "NHEALTHY\020\003\022\014\n\010DRAINING\020\004\022\013\n\007TIMEOUT\020\005Bz\n" +
+      "#yandex.cloud.api.apploadbalancer.v1ZSgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/apploadbalancer/v1;apploadbalance" +
+      "rb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -22882,7 +22883,7 @@ public final class LoadBalancerOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_Listener_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_Listener_descriptor,
-        new java.lang.String[] { "Name", "Endpoints", "Http", "Tls", "Tcp", "Listener", });
+        new java.lang.String[] { "Name", "Endpoints", "Http", "Tls", "Stream", "Listener", });
     internal_static_yandex_cloud_apploadbalancer_v1_Endpoint_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_apploadbalancer_v1_Endpoint_fieldAccessorTable = new
@@ -22901,11 +22902,11 @@ public final class LoadBalancerOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_TlsListener_descriptor,
         new java.lang.String[] { "DefaultHandler", "SniHandlers", });
-    internal_static_yandex_cloud_apploadbalancer_v1_TcpListener_descriptor =
+    internal_static_yandex_cloud_apploadbalancer_v1_StreamListener_descriptor =
       getDescriptor().getMessageTypes().get(11);
-    internal_static_yandex_cloud_apploadbalancer_v1_TcpListener_fieldAccessorTable = new
+    internal_static_yandex_cloud_apploadbalancer_v1_StreamListener_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_apploadbalancer_v1_TcpListener_descriptor,
+        internal_static_yandex_cloud_apploadbalancer_v1_StreamListener_descriptor,
         new java.lang.String[] { "Handler", });
     internal_static_yandex_cloud_apploadbalancer_v1_Http2Options_descriptor =
       getDescriptor().getMessageTypes().get(12);
