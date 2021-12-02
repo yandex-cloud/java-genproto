@@ -2013,7 +2013,7 @@ public final class Tts {
       AUDIO_ENCODING_UNSPECIFIED(0),
       /**
        * <pre>
-       * 16-bit signed little-endian (Linear PCM).
+       * Audio bit depth 16-bit signed little-endian (Linear PCM).
        * </pre>
        *
        * <code>LINEAR16_PCM = 1;</code>
@@ -2028,7 +2028,7 @@ public final class Tts {
       public static final int AUDIO_ENCODING_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * 16-bit signed little-endian (Linear PCM).
+       * Audio bit depth 16-bit signed little-endian (Linear PCM).
        * </pre>
        *
        * <code>LINEAR16_PCM = 1;</code>
@@ -2723,7 +2723,7 @@ public final class Tts {
       CONTAINER_AUDIO_TYPE_UNSPECIFIED(0),
       /**
        * <pre>
-       * RIFF linear pcm with header audio file format.
+       * Audio bit depth 16-bit signed little-endian (Linear PCM).
        * </pre>
        *
        * <code>WAV = 1;</code>
@@ -2742,7 +2742,7 @@ public final class Tts {
       public static final int CONTAINER_AUDIO_TYPE_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * RIFF linear pcm with header audio file format.
+       * Audio bit depth 16-bit signed little-endian (Linear PCM).
        * </pre>
        *
        * <code>WAV = 1;</code>

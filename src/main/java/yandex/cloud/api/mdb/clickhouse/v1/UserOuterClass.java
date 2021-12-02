@@ -2568,7 +2568,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -2577,7 +2577,7 @@ public final class UserOuterClass {
         getPermissionsList();
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -2585,7 +2585,7 @@ public final class UserOuterClass {
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission getPermissions(int index);
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -2593,7 +2593,7 @@ public final class UserOuterClass {
     int getPermissionsCount();
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -2602,7 +2602,7 @@ public final class UserOuterClass {
         getPermissionsOrBuilderList();
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -2880,7 +2880,7 @@ public final class UserOuterClass {
     private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission> permissions_;
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -2890,7 +2890,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -2901,7 +2901,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -2911,7 +2911,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -2921,7 +2921,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -3663,7 +3663,7 @@ public final class UserOuterClass {
 
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -3677,7 +3677,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -3691,7 +3691,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -3705,7 +3705,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -3726,7 +3726,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -3744,7 +3744,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -3764,7 +3764,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -3785,7 +3785,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -3803,7 +3803,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -3821,7 +3821,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -3840,7 +3840,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -3857,7 +3857,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -3874,7 +3874,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -3885,7 +3885,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -3899,7 +3899,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -3914,7 +3914,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -3925,7 +3925,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>
@@ -3937,7 +3937,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user. If not set, it's granted permissions to access all databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission permissions = 3;</code>

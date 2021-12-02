@@ -2294,6 +2294,18 @@ public final class TargetGroupOuterClass {
     com.google.protobuf.ByteString
         getSubnetIdBytes();
 
+    /**
+     * <pre>
+     * If set, will not require `subnet_id` to validate the target.
+     * Instead, the address should belong to one of the following ranges:
+     * 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
+     * Only one of `subnet_id` or `private_ipv4_address` should be set.
+     * </pre>
+     *
+     * <code>bool private_ipv4_address = 4;</code>
+     */
+    boolean getPrivateIpv4Address();
+
     public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.AddressTypeCase getAddressTypeCase();
   }
   /**
@@ -2315,6 +2327,7 @@ public final class TargetGroupOuterClass {
     }
     private Target() {
       subnetId_ = "";
+      privateIpv4Address_ = false;
     }
 
     @java.lang.Override
@@ -2351,6 +2364,11 @@ public final class TargetGroupOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               subnetId_ = s;
+              break;
+            }
+            case 32: {
+
+              privateIpv4Address_ = input.readBool();
               break;
             }
             default: {
@@ -2514,6 +2532,22 @@ public final class TargetGroupOuterClass {
       }
     }
 
+    public static final int PRIVATE_IPV4_ADDRESS_FIELD_NUMBER = 4;
+    private boolean privateIpv4Address_;
+    /**
+     * <pre>
+     * If set, will not require `subnet_id` to validate the target.
+     * Instead, the address should belong to one of the following ranges:
+     * 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
+     * Only one of `subnet_id` or `private_ipv4_address` should be set.
+     * </pre>
+     *
+     * <code>bool private_ipv4_address = 4;</code>
+     */
+    public boolean getPrivateIpv4Address() {
+      return privateIpv4Address_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2534,6 +2568,9 @@ public final class TargetGroupOuterClass {
       if (!getSubnetIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, subnetId_);
       }
+      if (privateIpv4Address_ != false) {
+        output.writeBool(4, privateIpv4Address_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2548,6 +2585,10 @@ public final class TargetGroupOuterClass {
       }
       if (!getSubnetIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, subnetId_);
+      }
+      if (privateIpv4Address_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, privateIpv4Address_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2567,6 +2608,8 @@ public final class TargetGroupOuterClass {
       boolean result = true;
       result = result && getSubnetId()
           .equals(other.getSubnetId());
+      result = result && (getPrivateIpv4Address()
+          == other.getPrivateIpv4Address());
       result = result && getAddressTypeCase().equals(
           other.getAddressTypeCase());
       if (!result) return false;
@@ -2591,6 +2634,9 @@ public final class TargetGroupOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSubnetId().hashCode();
+      hash = (37 * hash) + PRIVATE_IPV4_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPrivateIpv4Address());
       switch (addressTypeCase_) {
         case 1:
           hash = (37 * hash) + IP_ADDRESS_FIELD_NUMBER;
@@ -2739,6 +2785,8 @@ public final class TargetGroupOuterClass {
         super.clear();
         subnetId_ = "";
 
+        privateIpv4Address_ = false;
+
         addressTypeCase_ = 0;
         addressType_ = null;
         return this;
@@ -2771,6 +2819,7 @@ public final class TargetGroupOuterClass {
           result.addressType_ = addressType_;
         }
         result.subnetId_ = subnetId_;
+        result.privateIpv4Address_ = privateIpv4Address_;
         result.addressTypeCase_ = addressTypeCase_;
         onBuilt();
         return result;
@@ -2823,6 +2872,9 @@ public final class TargetGroupOuterClass {
         if (!other.getSubnetId().isEmpty()) {
           subnetId_ = other.subnetId_;
           onChanged();
+        }
+        if (other.getPrivateIpv4Address() != false) {
+          setPrivateIpv4Address(other.getPrivateIpv4Address());
         }
         switch (other.getAddressTypeCase()) {
           case IP_ADDRESS: {
@@ -3067,6 +3119,53 @@ public final class TargetGroupOuterClass {
         onChanged();
         return this;
       }
+
+      private boolean privateIpv4Address_ ;
+      /**
+       * <pre>
+       * If set, will not require `subnet_id` to validate the target.
+       * Instead, the address should belong to one of the following ranges:
+       * 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
+       * Only one of `subnet_id` or `private_ipv4_address` should be set.
+       * </pre>
+       *
+       * <code>bool private_ipv4_address = 4;</code>
+       */
+      public boolean getPrivateIpv4Address() {
+        return privateIpv4Address_;
+      }
+      /**
+       * <pre>
+       * If set, will not require `subnet_id` to validate the target.
+       * Instead, the address should belong to one of the following ranges:
+       * 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
+       * Only one of `subnet_id` or `private_ipv4_address` should be set.
+       * </pre>
+       *
+       * <code>bool private_ipv4_address = 4;</code>
+       */
+      public Builder setPrivateIpv4Address(boolean value) {
+        
+        privateIpv4Address_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If set, will not require `subnet_id` to validate the target.
+       * Instead, the address should belong to one of the following ranges:
+       * 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
+       * Only one of `subnet_id` or `private_ipv4_address` should be set.
+       * </pre>
+       *
+       * <code>bool private_ipv4_address = 4;</code>
+       */
+      public Builder clearPrivateIpv4Address() {
+        
+        privateIpv4Address_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3155,12 +3254,13 @@ public final class TargetGroupOuterClass {
       "(\0132\'.yandex.cloud.apploadbalancer.v1.Tar" +
       "get\022.\n\ncreated_at\030\007 \001(\0132\032.google.protobu" +
       "f.Timestamp\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\"G\n\006Target\022\024\n\nip_addre" +
-      "ss\030\001 \001(\tH\000\022\021\n\tsubnet_id\030\003 \001(\tB\024\n\014address" +
-      "_type\022\004\300\3011\001Bz\n#yandex.cloud.api.apploadb" +
-      "alancer.v1ZSgithub.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/apploadbalancer/v1;" +
-      "apploadbalancerb\006proto3"
+      "\r\n\005value\030\002 \001(\t:\0028\001\"e\n\006Target\022\024\n\nip_addre" +
+      "ss\030\001 \001(\tH\000\022\021\n\tsubnet_id\030\003 \001(\t\022\034\n\024private" +
+      "_ipv4_address\030\004 \001(\010B\024\n\014address_type\022\004\300\3011" +
+      "\001Bz\n#yandex.cloud.api.apploadbalancer.v1" +
+      "ZSgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/apploadbalancer/v1;apploadbal" +
+      "ancerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3193,7 +3293,7 @@ public final class TargetGroupOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_Target_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_Target_descriptor,
-        new java.lang.String[] { "IpAddress", "SubnetId", "AddressType", });
+        new java.lang.String[] { "IpAddress", "SubnetId", "PrivateIpv4Address", "AddressType", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);
