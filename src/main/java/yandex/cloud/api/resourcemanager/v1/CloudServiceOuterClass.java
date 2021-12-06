@@ -673,6 +673,26 @@ public final class CloudServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getFilterBytes();
+
+    /**
+     * <pre>
+     * ID of the organization to list clouds in.
+     * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+     * </pre>
+     *
+     * <code>string organization_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <pre>
+     * ID of the organization to list clouds in.
+     * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+     * </pre>
+     *
+     * <code>string organization_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.resourcemanager.v1.ListCloudsRequest}
@@ -690,6 +710,7 @@ public final class CloudServiceOuterClass {
       pageSize_ = 0L;
       pageToken_ = "";
       filter_ = "";
+      organizationId_ = "";
     }
 
     @java.lang.Override
@@ -731,6 +752,12 @@ public final class CloudServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               filter_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              organizationId_ = s;
               break;
             }
             default: {
@@ -878,6 +905,50 @@ public final class CloudServiceOuterClass {
       }
     }
 
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object organizationId_;
+    /**
+     * <pre>
+     * ID of the organization to list clouds in.
+     * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+     * </pre>
+     *
+     * <code>string organization_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getOrganizationId() {
+      java.lang.Object ref = organizationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        organizationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the organization to list clouds in.
+     * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+     * </pre>
+     *
+     * <code>string organization_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      java.lang.Object ref = organizationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        organizationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -901,6 +972,9 @@ public final class CloudServiceOuterClass {
       if (!getFilterBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, filter_);
       }
+      if (!getOrganizationIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, organizationId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -919,6 +993,9 @@ public final class CloudServiceOuterClass {
       }
       if (!getFilterBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, filter_);
+      }
+      if (!getOrganizationIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, organizationId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -942,6 +1019,8 @@ public final class CloudServiceOuterClass {
           .equals(other.getPageToken());
       result = result && getFilter()
           .equals(other.getFilter());
+      result = result && getOrganizationId()
+          .equals(other.getOrganizationId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -960,6 +1039,8 @@ public final class CloudServiceOuterClass {
       hash = (53 * hash) + getPageToken().hashCode();
       hash = (37 * hash) + FILTER_FIELD_NUMBER;
       hash = (53 * hash) + getFilter().hashCode();
+      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOrganizationId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1099,6 +1180,8 @@ public final class CloudServiceOuterClass {
 
         filter_ = "";
 
+        organizationId_ = "";
+
         return this;
       }
 
@@ -1128,6 +1211,7 @@ public final class CloudServiceOuterClass {
         result.pageSize_ = pageSize_;
         result.pageToken_ = pageToken_;
         result.filter_ = filter_;
+        result.organizationId_ = organizationId_;
         onBuilt();
         return result;
       }
@@ -1185,6 +1269,10 @@ public final class CloudServiceOuterClass {
         }
         if (!other.getFilter().isEmpty()) {
           filter_ = other.filter_;
+          onChanged();
+        }
+        if (!other.getOrganizationId().isEmpty()) {
+          organizationId_ = other.organizationId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1470,6 +1558,100 @@ public final class CloudServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         filter_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object organizationId_ = "";
+      /**
+       * <pre>
+       * ID of the organization to list clouds in.
+       * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+       * </pre>
+       *
+       * <code>string organization_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getOrganizationId() {
+        java.lang.Object ref = organizationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          organizationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the organization to list clouds in.
+       * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+       * </pre>
+       *
+       * <code>string organization_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        java.lang.Object ref = organizationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          organizationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the organization to list clouds in.
+       * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+       * </pre>
+       *
+       * <code>string organization_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        organizationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the organization to list clouds in.
+       * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+       * </pre>
+       *
+       * <code>string organization_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearOrganizationId() {
+        
+        organizationId_ = getDefaultInstance().getOrganizationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the organization to list clouds in.
+       * To get the organization ID, use a [yandex.cloud.organizationmanager.v1.OrganizationService.List] request.
+       * </pre>
+       *
+       * <code>string organization_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        organizationId_ = value;
         onChanged();
         return this;
       }
@@ -10522,89 +10704,90 @@ public final class CloudServiceOuterClass {
       "ess/access.proto\032&yandex/cloud/operation" +
       "/operation.proto\032\035yandex/cloud/validatio" +
       "n.proto\"1\n\017GetCloudRequest\022\036\n\010cloud_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\"n\n\021ListCloudsRequest\022" +
-      "\035\n\tpage_size\030\001 \001(\003B\n\372\3071\006<=1000\022\036\n\npage_t" +
-      "oken\030\002 \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\003 \001(\tB\n" +
-      "\212\3101\006<=1000\"e\n\022ListCloudsResponse\0226\n\006clou" +
-      "ds\030\001 \003(\0132&.yandex.cloud.resourcemanager." +
-      "v1.Cloud\022\027\n\017next_page_token\030\002 \001(\t\"\322\002\n\022Cr" +
-      "eateCloudRequest\022%\n\017organization_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\0223\n\004name\030\002 \001(\tB%\350\3071\001\362\3071\035|" +
-      "[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013descript" +
-      "ion\030\003 \001(\tB\t\212\3101\005<=256\022\220\001\n\006labels\030\004 \003(\0132?." +
-      "yandex.cloud.resourcemanager.v1.CreateCl" +
-      "oudRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63" +
-      "\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0" +
-      "-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\"\'\n\023CreateCloudMetadata\022\020\n" +
-      "\010cloud_id\030\001 \001(\t\"z\n\032ListCloudOperationsRe" +
-      "quest\022\036\n\010cloud_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n" +
-      "\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
-      "en\030\003 \001(\tB\t\212\3101\005<=100\"m\n\033ListCloudOperatio" +
-      "nsResponse\0225\n\noperations\030\001 \003(\0132!.yandex." +
-      "cloud.operation.Operation\022\027\n\017next_page_t" +
-      "oken\030\002 \001(\t\"\372\002\n\022UpdateCloudRequest\022\036\n\010clo" +
-      "ud_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask" +
-      "\030\002 \001(\0132\032.google.protobuf.FieldMask\0221\n\004na" +
-      "me\030\003 \001(\tB#\362\3071\037[a-z]([-a-z0-9]{0,61}[a-z0" +
-      "-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\220\001" +
-      "\n\006labels\030\005 \003(\0132?.yandex.cloud.resourcema" +
-      "nager.v1.UpdateCloudRequest.LabelsEntryB" +
-      "?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-" +
-      "63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\'\n\023Updat" +
-      "eCloudMetadata\022\020\n\010cloud_id\030\001 \001(\t\"f\n\022Dele" +
-      "teCloudRequest\022\036\n\010cloud_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\0220\n\014delete_after\030\002 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\"Y\n\023DeleteCloudMetadata\022" +
-      "\020\n\010cloud_id\030\001 \001(\t\0220\n\014delete_after\030\002 \001(\0132" +
-      "\032.google.protobuf.Timestamp2\234\r\n\014CloudSer" +
-      "vice\022\217\001\n\003Get\0220.yandex.cloud.resourcemana" +
-      "ger.v1.GetCloudRequest\032&.yandex.cloud.re" +
-      "sourcemanager.v1.Cloud\".\202\323\344\223\002(\022&/resourc" +
-      "e-manager/v1/clouds/{cloud_id}\022\224\001\n\004List\022" +
-      "2.yandex.cloud.resourcemanager.v1.ListCl" +
-      "oudsRequest\0323.yandex.cloud.resourcemanag" +
-      "er.v1.ListCloudsResponse\"#\202\323\344\223\002\035\022\033/resou" +
-      "rce-manager/v1/clouds\022\250\001\n\006Create\0223.yande" +
-      "x.cloud.resourcemanager.v1.CreateCloudRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"F\202\323\344\223\002 \"\033/resource-manager/v1/clouds:\001*" +
-      "\262\322*\034\n\023CreateCloudMetadata\022\005Cloud\022\263\001\n\006Upd" +
-      "ate\0223.yandex.cloud.resourcemanager.v1.Up" +
-      "dateCloudRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"Q\202\323\344\223\002+2&/resource-manager/v" +
-      "1/clouds/{cloud_id}:\001*\262\322*\034\n\023UpdateCloudM" +
-      "etadata\022\005Cloud\022\222\001\n\006Delete\0223.yandex.cloud" +
-      ".resourcemanager.v1.DeleteCloudRequest\032!" +
-      ".yandex.cloud.operation.Operation\"0\262\322*,\n" +
-      "\023DeleteCloudMetadata\022\025google.protobuf.Em" +
-      "pty\022\306\001\n\016ListOperations\022;.yandex.cloud.re" +
-      "sourcemanager.v1.ListCloudOperationsRequ" +
-      "est\032<.yandex.cloud.resourcemanager.v1.Li" +
-      "stCloudOperationsResponse\"9\202\323\344\223\0023\0221/reso" +
-      "urce-manager/v1/clouds/{cloud_id}/operat" +
-      "ions\022\273\001\n\022ListAccessBindings\022..yandex.clo" +
-      "ud.access.ListAccessBindingsRequest\032/.ya" +
-      "ndex.cloud.access.ListAccessBindingsResp" +
-      "onse\"D\202\323\344\223\002>\022</resource-manager/v1/cloud" +
-      "s/{resource_id}:listAccessBindings\022\353\001\n\021S" +
-      "etAccessBindings\022-.yandex.cloud.access.S" +
-      "etAccessBindingsRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"\203\001\202\323\344\223\002@\";/resource-m" +
-      "anager/v1/clouds/{resource_id}:setAccess" +
-      "Bindings:\001*\262\322*9\n access.SetAccessBinding" +
-      "sMetadata\022\025google.protobuf.Empty\022\367\001\n\024Upd" +
-      "ateAccessBindings\0220.yandex.cloud.access." +
-      "UpdateAccessBindingsRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"\211\001\202\323\344\223\002C\">/resour" +
-      "ce-manager/v1/clouds/{resource_id}:updat" +
-      "eAccessBindings:\001*\262\322*<\n#access.UpdateAcc" +
-      "essBindingsMetadata\022\025google.protobuf.Emp" +
-      "tyBz\n#yandex.cloud.api.resourcemanager.v" +
-      "1ZSgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/resourcemanager/v1;resourcem" +
-      "anagerb\006proto3"
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\"\221\001\n\021ListCloudsRequest" +
+      "\022\035\n\tpage_size\030\001 \001(\003B\n\372\3071\006<=1000\022\036\n\npage_" +
+      "token\030\002 \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\003 \001(\tB" +
+      "\n\212\3101\006<=1000\022!\n\017organization_id\030\004 \001(\tB\010\212\310" +
+      "1\004<=50\"e\n\022ListCloudsResponse\0226\n\006clouds\030\001" +
+      " \003(\0132&.yandex.cloud.resourcemanager.v1.C" +
+      "loud\022\027\n\017next_page_token\030\002 \001(\t\"\322\002\n\022Create" +
+      "CloudRequest\022%\n\017organization_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\0223\n\004name\030\002 \001(\tB%\350\3071\001\362\3071\035|[a-z" +
+      "][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013description\030" +
+      "\003 \001(\tB\t\212\3101\005<=256\022\220\001\n\006labels\030\004 \003(\0132?.yand" +
+      "ex.cloud.resourcemanager.v1.CreateCloudR" +
+      "equest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013" +
+      "[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-" +
+      "z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"\'\n\023CreateCloudMetadata\022\020\n\010clo" +
+      "ud_id\030\001 \001(\t\"z\n\032ListCloudOperationsReques" +
+      "t\022\036\n\010cloud_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpag" +
+      "e_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003" +
+      " \001(\tB\t\212\3101\005<=100\"m\n\033ListCloudOperationsRe" +
+      "sponse\0225\n\noperations\030\001 \003(\0132!.yandex.clou" +
+      "d.operation.Operation\022\027\n\017next_page_token" +
+      "\030\002 \001(\t\"\372\002\n\022UpdateCloudRequest\022\036\n\010cloud_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001" +
+      "(\0132\032.google.protobuf.FieldMask\0221\n\004name\030\003" +
+      " \001(\tB#\362\3071\037[a-z]([-a-z0-9]{0,61}[a-z0-9])" +
+      "?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\220\001\n\006la" +
+      "bels\030\005 \003(\0132?.yandex.cloud.resourcemanage" +
+      "r.v1.UpdateCloudRequest.LabelsEntryB?\202\3101" +
+      "\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\310" +
+      "1\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\'\n\023UpdateClo" +
+      "udMetadata\022\020\n\010cloud_id\030\001 \001(\t\"f\n\022DeleteCl" +
+      "oudRequest\022\036\n\010cloud_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\0220\n\014delete_after\030\002 \001(\0132\032.google.protob" +
+      "uf.Timestamp\"Y\n\023DeleteCloudMetadata\022\020\n\010c" +
+      "loud_id\030\001 \001(\t\0220\n\014delete_after\030\002 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp2\234\r\n\014CloudService" +
+      "\022\217\001\n\003Get\0220.yandex.cloud.resourcemanager." +
+      "v1.GetCloudRequest\032&.yandex.cloud.resour" +
+      "cemanager.v1.Cloud\".\202\323\344\223\002(\022&/resource-ma" +
+      "nager/v1/clouds/{cloud_id}\022\224\001\n\004List\0222.ya" +
+      "ndex.cloud.resourcemanager.v1.ListClouds" +
+      "Request\0323.yandex.cloud.resourcemanager.v" +
+      "1.ListCloudsResponse\"#\202\323\344\223\002\035\022\033/resource-" +
+      "manager/v1/clouds\022\250\001\n\006Create\0223.yandex.cl" +
+      "oud.resourcemanager.v1.CreateCloudReques" +
+      "t\032!.yandex.cloud.operation.Operation\"F\202\323" +
+      "\344\223\002 \"\033/resource-manager/v1/clouds:\001*\262\322*\034" +
+      "\n\023CreateCloudMetadata\022\005Cloud\022\263\001\n\006Update\022" +
+      "3.yandex.cloud.resourcemanager.v1.Update" +
+      "CloudRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"Q\202\323\344\223\002+2&/resource-manager/v1/cl" +
+      "ouds/{cloud_id}:\001*\262\322*\034\n\023UpdateCloudMetad" +
+      "ata\022\005Cloud\022\222\001\n\006Delete\0223.yandex.cloud.res" +
+      "ourcemanager.v1.DeleteCloudRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"0\262\322*,\n\023Del" +
+      "eteCloudMetadata\022\025google.protobuf.Empty\022" +
+      "\306\001\n\016ListOperations\022;.yandex.cloud.resour" +
+      "cemanager.v1.ListCloudOperationsRequest\032" +
+      "<.yandex.cloud.resourcemanager.v1.ListCl" +
+      "oudOperationsResponse\"9\202\323\344\223\0023\0221/resource" +
+      "-manager/v1/clouds/{cloud_id}/operations" +
+      "\022\273\001\n\022ListAccessBindings\022..yandex.cloud.a" +
+      "ccess.ListAccessBindingsRequest\032/.yandex" +
+      ".cloud.access.ListAccessBindingsResponse" +
+      "\"D\202\323\344\223\002>\022</resource-manager/v1/clouds/{r" +
+      "esource_id}:listAccessBindings\022\353\001\n\021SetAc" +
+      "cessBindings\022-.yandex.cloud.access.SetAc" +
+      "cessBindingsRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"\203\001\202\323\344\223\002@\";/resource-manag" +
+      "er/v1/clouds/{resource_id}:setAccessBind" +
+      "ings:\001*\262\322*9\n access.SetAccessBindingsMet" +
+      "adata\022\025google.protobuf.Empty\022\367\001\n\024UpdateA" +
+      "ccessBindings\0220.yandex.cloud.access.Upda" +
+      "teAccessBindingsRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"\211\001\202\323\344\223\002C\">/resource-m" +
+      "anager/v1/clouds/{resource_id}:updateAcc" +
+      "essBindings:\001*\262\322*<\n#access.UpdateAccessB" +
+      "indingsMetadata\022\025google.protobuf.EmptyBz" +
+      "\n#yandex.cloud.api.resourcemanager.v1ZSg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/resourcemanager/v1;resourcemanag" +
+      "erb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10637,7 +10820,7 @@ public final class CloudServiceOuterClass {
     internal_static_yandex_cloud_resourcemanager_v1_ListCloudsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_resourcemanager_v1_ListCloudsRequest_descriptor,
-        new java.lang.String[] { "PageSize", "PageToken", "Filter", });
+        new java.lang.String[] { "PageSize", "PageToken", "Filter", "OrganizationId", });
     internal_static_yandex_cloud_resourcemanager_v1_ListCloudsResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_resourcemanager_v1_ListCloudsResponse_fieldAccessorTable = new
