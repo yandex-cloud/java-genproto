@@ -377,6 +377,56 @@ public final class ClusterOuterClass {
      * <code>bool deletion_protection = 15;</code>
      */
     boolean getDeletionProtection();
+
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceWindow maintenance_window = 16;</code>
+     */
+    boolean hasMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceWindow maintenance_window = 16;</code>
+     */
+    yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceWindow maintenance_window = 16;</code>
+     */
+    yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
+
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceOperation planned_operation = 17;</code>
+     */
+    boolean hasPlannedOperation();
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceOperation planned_operation = 17;</code>
+     */
+    yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation getPlannedOperation();
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceOperation planned_operation = 17;</code>
+     */
+    yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperationOrBuilder getPlannedOperationOrBuilder();
   }
   /**
    * <pre>
@@ -548,6 +598,32 @@ public final class ClusterOuterClass {
             case 120: {
 
               deletionProtection_ = input.readBool();
+              break;
+            }
+            case 130: {
+              yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow.Builder subBuilder = null;
+              if (maintenanceWindow_ != null) {
+                subBuilder = maintenanceWindow_.toBuilder();
+              }
+              maintenanceWindow_ = input.readMessage(yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maintenanceWindow_);
+                maintenanceWindow_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 138: {
+              yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation.Builder subBuilder = null;
+              if (plannedOperation_ != null) {
+                subBuilder = plannedOperation_.toBuilder();
+              }
+              plannedOperation_ = input.readMessage(yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(plannedOperation_);
+                plannedOperation_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1694,6 +1770,72 @@ public final class ClusterOuterClass {
       return deletionProtection_;
     }
 
+    public static final int MAINTENANCE_WINDOW_FIELD_NUMBER = 16;
+    private yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceWindow maintenance_window = 16;</code>
+     */
+    public boolean hasMaintenanceWindow() {
+      return maintenanceWindow_ != null;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceWindow maintenance_window = 16;</code>
+     */
+    public yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+      return maintenanceWindow_ == null ? yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceWindow maintenance_window = 16;</code>
+     */
+    public yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+      return getMaintenanceWindow();
+    }
+
+    public static final int PLANNED_OPERATION_FIELD_NUMBER = 17;
+    private yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation plannedOperation_;
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceOperation planned_operation = 17;</code>
+     */
+    public boolean hasPlannedOperation() {
+      return plannedOperation_ != null;
+    }
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceOperation planned_operation = 17;</code>
+     */
+    public yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation getPlannedOperation() {
+      return plannedOperation_ == null ? yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation.getDefaultInstance() : plannedOperation_;
+    }
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceOperation planned_operation = 17;</code>
+     */
+    public yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperationOrBuilder getPlannedOperationOrBuilder() {
+      return getPlannedOperation();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1755,6 +1897,12 @@ public final class ClusterOuterClass {
       }
       if (deletionProtection_ != false) {
         output.writeBool(15, deletionProtection_);
+      }
+      if (maintenanceWindow_ != null) {
+        output.writeMessage(16, getMaintenanceWindow());
+      }
+      if (plannedOperation_ != null) {
+        output.writeMessage(17, getPlannedOperation());
       }
       unknownFields.writeTo(output);
     }
@@ -1829,6 +1977,14 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(15, deletionProtection_);
       }
+      if (maintenanceWindow_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getMaintenanceWindow());
+      }
+      if (plannedOperation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, getPlannedOperation());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1878,6 +2034,16 @@ public final class ClusterOuterClass {
           .equals(other.getServiceAccountId());
       result = result && (getDeletionProtection()
           == other.getDeletionProtection());
+      result = result && (hasMaintenanceWindow() == other.hasMaintenanceWindow());
+      if (hasMaintenanceWindow()) {
+        result = result && getMaintenanceWindow()
+            .equals(other.getMaintenanceWindow());
+      }
+      result = result && (hasPlannedOperation() == other.hasPlannedOperation());
+      if (hasPlannedOperation()) {
+        result = result && getPlannedOperation()
+            .equals(other.getPlannedOperation());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1930,6 +2096,14 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
+      if (hasMaintenanceWindow()) {
+        hash = (37 * hash) + MAINTENANCE_WINDOW_FIELD_NUMBER;
+        hash = (53 * hash) + getMaintenanceWindow().hashCode();
+      }
+      if (hasPlannedOperation()) {
+        hash = (37 * hash) + PLANNED_OPERATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPlannedOperation().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2132,6 +2306,18 @@ public final class ClusterOuterClass {
 
         deletionProtection_ = false;
 
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
+        if (plannedOperationBuilder_ == null) {
+          plannedOperation_ = null;
+        } else {
+          plannedOperation_ = null;
+          plannedOperationBuilder_ = null;
+        }
         return this;
       }
 
@@ -2196,6 +2382,16 @@ public final class ClusterOuterClass {
         result.securityGroupIds_ = securityGroupIds_;
         result.serviceAccountId_ = serviceAccountId_;
         result.deletionProtection_ = deletionProtection_;
+        if (maintenanceWindowBuilder_ == null) {
+          result.maintenanceWindow_ = maintenanceWindow_;
+        } else {
+          result.maintenanceWindow_ = maintenanceWindowBuilder_.build();
+        }
+        if (plannedOperationBuilder_ == null) {
+          result.plannedOperation_ = plannedOperation_;
+        } else {
+          result.plannedOperation_ = plannedOperationBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2324,6 +2520,12 @@ public final class ClusterOuterClass {
         }
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
+        }
+        if (other.hasMaintenanceWindow()) {
+          mergeMaintenanceWindow(other.getMaintenanceWindow());
+        }
+        if (other.hasPlannedOperation()) {
+          mergePlannedOperation(other.getPlannedOperation());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4036,6 +4238,312 @@ public final class ClusterOuterClass {
         deletionProtection_ = false;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow maintenanceWindow_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceWindow maintenance_window = 16;</code>
+       */
+      public boolean hasMaintenanceWindow() {
+        return maintenanceWindowBuilder_ != null || maintenanceWindow_ != null;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceWindow maintenance_window = 16;</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          return maintenanceWindow_ == null ? yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        } else {
+          return maintenanceWindowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceWindow maintenance_window = 16;</code>
+       */
+      public Builder setMaintenanceWindow(yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maintenanceWindow_ = value;
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceWindow maintenance_window = 16;</code>
+       */
+      public Builder setMaintenanceWindow(
+          yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = builderForValue.build();
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceWindow maintenance_window = 16;</code>
+       */
+      public Builder mergeMaintenanceWindow(yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (maintenanceWindow_ != null) {
+            maintenanceWindow_ =
+              yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow.newBuilder(maintenanceWindow_).mergeFrom(value).buildPartial();
+          } else {
+            maintenanceWindow_ = value;
+          }
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceWindow maintenance_window = 16;</code>
+       */
+      public Builder clearMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+          onChanged();
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceWindow maintenance_window = 16;</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow.Builder getMaintenanceWindowBuilder() {
+        
+        onChanged();
+        return getMaintenanceWindowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceWindow maintenance_window = 16;</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+        if (maintenanceWindowBuilder_ != null) {
+          return maintenanceWindowBuilder_.getMessageOrBuilder();
+        } else {
+          return maintenanceWindow_ == null ?
+              yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceWindow maintenance_window = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindowOrBuilder> 
+          getMaintenanceWindowFieldBuilder() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceWindowOrBuilder>(
+                  getMaintenanceWindow(),
+                  getParentForChildren(),
+                  isClean());
+          maintenanceWindow_ = null;
+        }
+        return maintenanceWindowBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation plannedOperation_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation, yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation.Builder, yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperationOrBuilder> plannedOperationBuilder_;
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceOperation planned_operation = 17;</code>
+       */
+      public boolean hasPlannedOperation() {
+        return plannedOperationBuilder_ != null || plannedOperation_ != null;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceOperation planned_operation = 17;</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation getPlannedOperation() {
+        if (plannedOperationBuilder_ == null) {
+          return plannedOperation_ == null ? yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation.getDefaultInstance() : plannedOperation_;
+        } else {
+          return plannedOperationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceOperation planned_operation = 17;</code>
+       */
+      public Builder setPlannedOperation(yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation value) {
+        if (plannedOperationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          plannedOperation_ = value;
+          onChanged();
+        } else {
+          plannedOperationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceOperation planned_operation = 17;</code>
+       */
+      public Builder setPlannedOperation(
+          yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation.Builder builderForValue) {
+        if (plannedOperationBuilder_ == null) {
+          plannedOperation_ = builderForValue.build();
+          onChanged();
+        } else {
+          plannedOperationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceOperation planned_operation = 17;</code>
+       */
+      public Builder mergePlannedOperation(yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation value) {
+        if (plannedOperationBuilder_ == null) {
+          if (plannedOperation_ != null) {
+            plannedOperation_ =
+              yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation.newBuilder(plannedOperation_).mergeFrom(value).buildPartial();
+          } else {
+            plannedOperation_ = value;
+          }
+          onChanged();
+        } else {
+          plannedOperationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceOperation planned_operation = 17;</code>
+       */
+      public Builder clearPlannedOperation() {
+        if (plannedOperationBuilder_ == null) {
+          plannedOperation_ = null;
+          onChanged();
+        } else {
+          plannedOperation_ = null;
+          plannedOperationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceOperation planned_operation = 17;</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation.Builder getPlannedOperationBuilder() {
+        
+        onChanged();
+        return getPlannedOperationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceOperation planned_operation = 17;</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperationOrBuilder getPlannedOperationOrBuilder() {
+        if (plannedOperationBuilder_ != null) {
+          return plannedOperationBuilder_.getMessageOrBuilder();
+        } else {
+          return plannedOperation_ == null ?
+              yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation.getDefaultInstance() : plannedOperation_;
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.MaintenanceOperation planned_operation = 17;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation, yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation.Builder, yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperationOrBuilder> 
+          getPlannedOperationFieldBuilder() {
+        if (plannedOperationBuilder_ == null) {
+          plannedOperationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation, yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperation.Builder, yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.MaintenanceOperationOrBuilder>(
+                  getPlannedOperation(),
+                  getParentForChildren(),
+                  isClean());
+          plannedOperation_ = null;
+        }
+        return plannedOperationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13168,71 +13676,77 @@ public final class ClusterOuterClass {
       "ter.proto\022!yandex.cloud.mdb.elasticsearc" +
       "h.v1\032\037google/protobuf/timestamp.proto\032<y" +
       "andex/cloud/mdb/elasticsearch/v1/config/" +
-      "elasticsearch.proto\"\272\007\n\007Cluster\022\n\n\002id\030\001 " +
-      "\001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001" +
-      "(\0132\032.google.protobuf.Timestamp\022\014\n\004name\030\004" +
-      " \001(\t\022\023\n\013description\030\005 \001(\t\022F\n\006labels\030\006 \003(" +
-      "\01326.yandex.cloud.mdb.elasticsearch.v1.Cl" +
-      "uster.LabelsEntry\022K\n\013environment\030\007 \001(\01626" +
-      ".yandex.cloud.mdb.elasticsearch.v1.Clust" +
-      "er.Environment\022A\n\nmonitoring\030\010 \003(\0132-.yan" +
-      "dex.cloud.mdb.elasticsearch.v1.Monitorin" +
-      "g\022@\n\006config\030\t \001(\01320.yandex.cloud.mdb.ela" +
-      "sticsearch.v1.ClusterConfig\022\022\n\nnetwork_i" +
-      "d\030\n \001(\t\022A\n\006health\030\013 \001(\01621.yandex.cloud.m" +
-      "db.elasticsearch.v1.Cluster.Health\022A\n\006st" +
-      "atus\030\014 \001(\01621.yandex.cloud.mdb.elasticsea" +
-      "rch.v1.Cluster.Status\022\032\n\022security_group_" +
-      "ids\030\r \003(\t\022\032\n\022service_account_id\030\016 \001(\t\022\033\n" +
-      "\023deletion_protection\030\017 \001(\010\032-\n\013LabelsEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013Env" +
-      "ironment\022\033\n\027ENVIRONMENT_UNSPECIFIED\020\000\022\016\n" +
-      "\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Health\022\022" +
-      "\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022" +
-      "\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_UNKNOW" +
-      "N\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020" +
-      "\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED" +
-      "\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004name\030\001" +
-      " \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"" +
-      "z\n\rClusterConfig\022\017\n\007version\030\001 \001(\t\022G\n\rela" +
-      "sticsearch\030\002 \001(\01320.yandex.cloud.mdb.elas" +
-      "ticsearch.v1.Elasticsearch\022\017\n\007edition\030\003 " +
-      "\001(\t\"\353\003\n\rElasticsearch\022L\n\tdata_node\030\001 \001(\013" +
-      "29.yandex.cloud.mdb.elasticsearch.v1.Ela" +
-      "sticsearch.DataNode\022P\n\013master_node\030\002 \001(\013" +
-      "2;.yandex.cloud.mdb.elasticsearch.v1.Ela" +
-      "sticsearch.MasterNode\022\017\n\007plugins\030\003 \003(\t\032\331" +
-      "\001\n\010DataNode\022\201\001\n\032elasticsearch_config_set" +
-      "_7\030\001 \001(\0132A.yandex.cloud.mdb.elasticsearc" +
-      "h.v1.config.ElasticsearchConfigSet7H\000R\030e" +
-      "lasticsearchConfigSet_7\022?\n\tresources\030\002 \001" +
-      "(\0132,.yandex.cloud.mdb.elasticsearch.v1.R" +
-      "esourcesB\010\n\006config\032M\n\nMasterNode\022?\n\treso" +
-      "urces\030\001 \001(\0132,.yandex.cloud.mdb.elasticse" +
-      "arch.v1.Resources\"P\n\tResources\022\032\n\022resour" +
-      "ce_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n" +
-      "\014disk_type_id\030\003 \001(\t\"\331\003\n\004Host\022\014\n\004name\030\001 \001" +
-      "(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022" +
-      ":\n\004type\030\004 \001(\0162,.yandex.cloud.mdb.elastic" +
-      "search.v1.Host.Type\022?\n\tresources\030\005 \001(\0132," +
-      ".yandex.cloud.mdb.elasticsearch.v1.Resou" +
-      "rces\022>\n\006health\030\006 \001(\0162..yandex.cloud.mdb." +
-      "elasticsearch.v1.Host.Health\022<\n\010services" +
-      "\030\007 \003(\0132*.yandex.cloud.mdb.elasticsearch." +
-      "v1.Service\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_" +
-      "public_ip\030\t \001(\010\"<\n\004Type\022\024\n\020TYPE_UNSPECIF" +
-      "IED\020\000\022\r\n\tDATA_NODE\020\001\022\017\n\013MASTER_NODE\020\002\"8\n" +
-      "\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020" +
-      "\002\022\014\n\010DEGRADED\020\003\"\350\001\n\007Service\022=\n\004type\030\001 \001(" +
-      "\0162/.yandex.cloud.mdb.elasticsearch.v1.Se" +
-      "rvice.Type\022A\n\006health\030\002 \001(\01621.yandex.clou" +
-      "d.mdb.elasticsearch.v1.Service.Health\"/\n" +
-      "\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\021\n\rELASTICSE" +
-      "ARCH\020\001\"*\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001" +
-      "\022\010\n\004DEAD\020\002B|\n%yandex.cloud.api.mdb.elast" +
-      "icsearch.v1ZSgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/mdb/elasticsearch/" +
-      "v1;elasticsearchb\006proto3"
+      "elasticsearch.proto\0323yandex/cloud/mdb/el" +
+      "asticsearch/v1/maintenance.proto\"\340\010\n\007Clu" +
+      "ster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\nc" +
+      "reated_at\030\003 \001(\0132\032.google.protobuf.Timest" +
+      "amp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022F" +
+      "\n\006labels\030\006 \003(\01326.yandex.cloud.mdb.elasti" +
+      "csearch.v1.Cluster.LabelsEntry\022K\n\013enviro" +
+      "nment\030\007 \001(\01626.yandex.cloud.mdb.elasticse" +
+      "arch.v1.Cluster.Environment\022A\n\nmonitorin" +
+      "g\030\010 \003(\0132-.yandex.cloud.mdb.elasticsearch" +
+      ".v1.Monitoring\022@\n\006config\030\t \001(\01320.yandex." +
+      "cloud.mdb.elasticsearch.v1.ClusterConfig" +
+      "\022\022\n\nnetwork_id\030\n \001(\t\022A\n\006health\030\013 \001(\01621.y" +
+      "andex.cloud.mdb.elasticsearch.v1.Cluster" +
+      ".Health\022A\n\006status\030\014 \001(\01621.yandex.cloud.m" +
+      "db.elasticsearch.v1.Cluster.Status\022\032\n\022se" +
+      "curity_group_ids\030\r \003(\t\022\032\n\022service_accoun" +
+      "t_id\030\016 \001(\t\022\033\n\023deletion_protection\030\017 \001(\010\022" +
+      "P\n\022maintenance_window\030\020 \001(\01324.yandex.clo" +
+      "ud.mdb.elasticsearch.v1.MaintenanceWindo" +
+      "w\022R\n\021planned_operation\030\021 \001(\01327.yandex.cl" +
+      "oud.mdb.elasticsearch.v1.MaintenanceOper" +
+      "ation\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONME" +
+      "NT_UNSPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRES" +
+      "TABLE\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n" +
+      "\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Stat" +
+      "us\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007" +
+      "RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010ST" +
+      "OPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nM" +
+      "onitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002" +
+      " \001(\t\022\014\n\004link\030\003 \001(\t\"z\n\rClusterConfig\022\017\n\007v" +
+      "ersion\030\001 \001(\t\022G\n\relasticsearch\030\002 \001(\01320.ya" +
+      "ndex.cloud.mdb.elasticsearch.v1.Elastics" +
+      "earch\022\017\n\007edition\030\003 \001(\t\"\353\003\n\rElasticsearch" +
+      "\022L\n\tdata_node\030\001 \001(\01329.yandex.cloud.mdb.e" +
+      "lasticsearch.v1.Elasticsearch.DataNode\022P" +
+      "\n\013master_node\030\002 \001(\0132;.yandex.cloud.mdb.e" +
+      "lasticsearch.v1.Elasticsearch.MasterNode" +
+      "\022\017\n\007plugins\030\003 \003(\t\032\331\001\n\010DataNode\022\201\001\n\032elast" +
+      "icsearch_config_set_7\030\001 \001(\0132A.yandex.clo" +
+      "ud.mdb.elasticsearch.v1.config.Elasticse" +
+      "archConfigSet7H\000R\030elasticsearchConfigSet" +
+      "_7\022?\n\tresources\030\002 \001(\0132,.yandex.cloud.mdb" +
+      ".elasticsearch.v1.ResourcesB\010\n\006config\032M\n" +
+      "\nMasterNode\022?\n\tresources\030\001 \001(\0132,.yandex." +
+      "cloud.mdb.elasticsearch.v1.Resources\"P\n\t" +
+      "Resources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n" +
+      "\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\331" +
+      "\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(" +
+      "\t\022\017\n\007zone_id\030\003 \001(\t\022:\n\004type\030\004 \001(\0162,.yande" +
+      "x.cloud.mdb.elasticsearch.v1.Host.Type\022?" +
+      "\n\tresources\030\005 \001(\0132,.yandex.cloud.mdb.ela" +
+      "sticsearch.v1.Resources\022>\n\006health\030\006 \001(\0162" +
+      "..yandex.cloud.mdb.elasticsearch.v1.Host" +
+      ".Health\022<\n\010services\030\007 \003(\0132*.yandex.cloud" +
+      ".mdb.elasticsearch.v1.Service\022\021\n\tsubnet_" +
+      "id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\"<\n\004Ty" +
+      "pe\022\024\n\020TYPE_UNSPECIFIED\020\000\022\r\n\tDATA_NODE\020\001\022" +
+      "\017\n\013MASTER_NODE\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022" +
+      "\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\350\001\n\007S" +
+      "ervice\022=\n\004type\030\001 \001(\0162/.yandex.cloud.mdb." +
+      "elasticsearch.v1.Service.Type\022A\n\006health\030" +
+      "\002 \001(\01621.yandex.cloud.mdb.elasticsearch.v" +
+      "1.Service.Health\"/\n\004Type\022\024\n\020TYPE_UNSPECI" +
+      "FIED\020\000\022\021\n\rELASTICSEARCH\020\001\"*\n\006Health\022\013\n\007U" +
+      "NKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002B|\n%yandex." +
+      "cloud.api.mdb.elasticsearch.v1ZSgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/mdb/elasticsearch/v1;elasticsearchb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13247,13 +13761,14 @@ public final class ClusterOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.getDescriptor(),
+          yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_mdb_elasticsearch_v1_Cluster_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_elasticsearch_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_elasticsearch_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "SecurityGroupIds", "ServiceAccountId", "DeletionProtection", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "SecurityGroupIds", "ServiceAccountId", "DeletionProtection", "MaintenanceWindow", "PlannedOperation", });
     internal_static_yandex_cloud_mdb_elasticsearch_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_elasticsearch_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_elasticsearch_v1_Cluster_LabelsEntry_fieldAccessorTable = new
@@ -13310,6 +13825,7 @@ public final class ClusterOuterClass {
         new java.lang.String[] { "Type", "Health", });
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.getDescriptor();
+    yandex.cloud.api.mdb.elasticsearch.v1.Maintenance.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

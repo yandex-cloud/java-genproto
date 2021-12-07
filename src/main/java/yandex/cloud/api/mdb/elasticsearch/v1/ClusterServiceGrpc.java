@@ -478,6 +478,38 @@ public final class ClusterServiceGrpc {
      return getDeleteHostsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRescheduleMaintenanceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RescheduleMaintenance",
+      requestType = yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRescheduleMaintenanceMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getRescheduleMaintenanceMethod;
+    if ((getRescheduleMaintenanceMethod = ClusterServiceGrpc.getRescheduleMaintenanceMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getRescheduleMaintenanceMethod = ClusterServiceGrpc.getRescheduleMaintenanceMethod) == null) {
+          ClusterServiceGrpc.getRescheduleMaintenanceMethod = getRescheduleMaintenanceMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.mdb.elasticsearch.v1.ClusterService", "RescheduleMaintenance"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("RescheduleMaintenance"))
+                  .build();
+          }
+        }
+     }
+     return getRescheduleMaintenanceMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -650,6 +682,16 @@ public final class ClusterServiceGrpc {
       asyncUnimplementedUnaryCall(getDeleteHostsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Reschedule planned maintenance operation.
+     * </pre>
+     */
+    public void rescheduleMaintenance(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getRescheduleMaintenanceMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -750,6 +792,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.DeleteClusterHostsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE_HOSTS)))
+          .addMethod(
+            getRescheduleMaintenanceMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_RESCHEDULE_MAINTENANCE)))
           .build();
     }
   }
@@ -930,6 +979,17 @@ public final class ClusterServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getDeleteHostsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Reschedule planned maintenance operation.
+     * </pre>
+     */
+    public void rescheduleMaintenance(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getRescheduleMaintenanceMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1094,6 +1154,16 @@ public final class ClusterServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation deleteHosts(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.DeleteClusterHostsRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteHostsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Reschedule planned maintenance operation.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation rescheduleMaintenance(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getRescheduleMaintenanceMethod(), getCallOptions(), request);
     }
   }
 
@@ -1262,6 +1332,17 @@ public final class ClusterServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getDeleteHostsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Reschedule planned maintenance operation.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> rescheduleMaintenance(
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getRescheduleMaintenanceMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -1278,6 +1359,7 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_LIST_HOSTS = 11;
   private static final int METHODID_ADD_HOSTS = 12;
   private static final int METHODID_DELETE_HOSTS = 13;
+  private static final int METHODID_RESCHEDULE_MAINTENANCE = 14;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1350,6 +1432,10 @@ public final class ClusterServiceGrpc {
           break;
         case METHODID_DELETE_HOSTS:
           serviceImpl.deleteHosts((yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.DeleteClusterHostsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_RESCHEDULE_MAINTENANCE:
+          serviceImpl.rescheduleMaintenance((yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
@@ -1427,6 +1513,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getListHostsMethod())
               .addMethod(getAddHostsMethod())
               .addMethod(getDeleteHostsMethod())
+              .addMethod(getRescheduleMaintenanceMethod())
               .build();
         }
       }
