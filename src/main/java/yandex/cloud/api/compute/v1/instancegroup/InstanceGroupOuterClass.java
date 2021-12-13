@@ -44463,6 +44463,14 @@ public final class InstanceGroupOuterClass {
        * <code>DELETED = 24;</code>
        */
       DELETED(24),
+      /**
+       * <pre>
+       * Instance Groups is preparing dependent resources.
+       * </pre>
+       *
+       * <code>PREPARING_RESOURCES = 25;</code>
+       */
+      PREPARING_RESOURCES(25),
       UNRECOGNIZED(-1),
       ;
 
@@ -44583,6 +44591,14 @@ public final class InstanceGroupOuterClass {
        * <code>DELETED = 24;</code>
        */
       public static final int DELETED_VALUE = 24;
+      /**
+       * <pre>
+       * Instance Groups is preparing dependent resources.
+       * </pre>
+       *
+       * <code>PREPARING_RESOURCES = 25;</code>
+       */
+      public static final int PREPARING_RESOURCES_VALUE = 25;
 
 
       public final int getNumber() {
@@ -44618,6 +44634,7 @@ public final class InstanceGroupOuterClass {
           case 22: return RUNNING_OUTDATED;
           case 23: return STOPPED;
           case 24: return DELETED;
+          case 25: return PREPARING_RESOURCES;
           default: return null;
         }
       }
@@ -52883,7 +52900,7 @@ public final class InstanceGroupOuterClass {
       "pOptionsH\000\032\'\n\nTcpOptions\022\031\n\004port\030\001 \001(\003B\013" +
       "\372\3071\0071-65535\0326\n\013HttpOptions\022\031\n\004port\030\001 \001(\003" +
       "B\013\372\3071\0071-65535\022\014\n\004path\030\002 \001(\tB\034\n\024health_ch" +
-      "eck_options\022\004\300\3011\001\"\250\005\n\017ManagedInstance\022\n\n" +
+      "eck_options\022\004\300\3011\001\"\301\005\n\017ManagedInstance\022\n\n" +
       "\002id\030\001 \001(\t\022M\n\006status\030\002 \001(\0162=.yandex.cloud" +
       ".compute.v1.instancegroup.ManagedInstanc" +
       "e.Status\022\023\n\013instance_id\030\003 \001(\t\022\014\n\004fqdn\030\004 " +
@@ -52891,7 +52908,7 @@ public final class InstanceGroupOuterClass {
       "\t\022\017\n\007zone_id\030\007 \001(\t\022S\n\022network_interfaces" +
       "\030\010 \003(\01327.yandex.cloud.compute.v1.instanc" +
       "egroup.NetworkInterface\0225\n\021status_change" +
-      "d_at\030\t \001(\0132\032.google.protobuf.Timestamp\"\323" +
+      "d_at\030\t \001(\0132\032.google.protobuf.Timestamp\"\354" +
       "\002\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\025\n\021CRE" +
       "ATING_INSTANCE\020\013\022\025\n\021UPDATING_INSTANCE\020\014\022" +
       "\025\n\021DELETING_INSTANCE\020\r\022\025\n\021STARTING_INSTA" +
@@ -52900,31 +52917,32 @@ public final class InstanceGroupOuterClass {
       "\022\023\n\017OPENING_TRAFFIC\020\022\022\034\n\030AWAITING_WARMUP" +
       "_DURATION\020\023\022\023\n\017CLOSING_TRAFFIC\020\024\022\022\n\016RUNN" +
       "ING_ACTUAL\020\025\022\024\n\020RUNNING_OUTDATED\020\026\022\013\n\007ST" +
-      "OPPED\020\027\022\013\n\007DELETED\020\030\"\357\001\n\020NetworkInterfac" +
-      "e\022\r\n\005index\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\t\022\021\n" +
-      "\tsubnet_id\030\003 \001(\t\022Q\n\022primary_v4_address\030\004" +
-      " \001(\01325.yandex.cloud.compute.v1.instanceg" +
-      "roup.PrimaryAddress\022Q\n\022primary_v6_addres" +
-      "s\030\005 \001(\01325.yandex.cloud.compute.v1.instan" +
-      "cegroup.PrimaryAddress\"\264\001\n\016PrimaryAddres" +
-      "s\022\017\n\007address\030\001 \001(\t\022J\n\016one_to_one_nat\030\002 \001" +
-      "(\01322.yandex.cloud.compute.v1.instancegro" +
-      "up.OneToOneNat\022E\n\013dns_records\030\003 \003(\01320.ya" +
-      "ndex.cloud.compute.v1.instancegroup.DnsR" +
-      "ecord\"\253\001\n\013OneToOneNat\022\017\n\007address\030\001 \001(\t\022D" +
-      "\n\nip_version\030\002 \001(\01620.yandex.cloud.comput" +
-      "e.v1.instancegroup.IpVersion\022E\n\013dns_reco" +
-      "rds\030\003 \003(\01320.yandex.cloud.compute.v1.inst" +
-      "ancegroup.DnsRecord\"[\n\tDnsRecord\022\022\n\004fqdn" +
-      "\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022\030\n\003ttl" +
-      "\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"K\n\tLogR" +
-      "ecord\022-\n\ttimestamp\030\001 \001(\0132\032.google.protob" +
-      "uf.Timestamp\022\017\n\007message\030\002 \001(\t*;\n\tIpVersi" +
-      "on\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001" +
-      "\022\010\n\004IPV6\020\002B\204\001\n)yandex.cloud.api.compute." +
-      "v1.instancegroupZWgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/compute/v1/in" +
-      "stancegroup;instancegroupb\006proto3"
+      "OPPED\020\027\022\013\n\007DELETED\020\030\022\027\n\023PREPARING_RESOUR" +
+      "CES\020\031\"\357\001\n\020NetworkInterface\022\r\n\005index\030\001 \001(" +
+      "\t\022\023\n\013mac_address\030\002 \001(\t\022\021\n\tsubnet_id\030\003 \001(" +
+      "\t\022Q\n\022primary_v4_address\030\004 \001(\01325.yandex.c" +
+      "loud.compute.v1.instancegroup.PrimaryAdd" +
+      "ress\022Q\n\022primary_v6_address\030\005 \001(\01325.yande" +
+      "x.cloud.compute.v1.instancegroup.Primary" +
+      "Address\"\264\001\n\016PrimaryAddress\022\017\n\007address\030\001 " +
+      "\001(\t\022J\n\016one_to_one_nat\030\002 \001(\01322.yandex.clo" +
+      "ud.compute.v1.instancegroup.OneToOneNat\022" +
+      "E\n\013dns_records\030\003 \003(\01320.yandex.cloud.comp" +
+      "ute.v1.instancegroup.DnsRecord\"\253\001\n\013OneTo" +
+      "OneNat\022\017\n\007address\030\001 \001(\t\022D\n\nip_version\030\002 " +
+      "\001(\01620.yandex.cloud.compute.v1.instancegr" +
+      "oup.IpVersion\022E\n\013dns_records\030\003 \003(\01320.yan" +
+      "dex.cloud.compute.v1.instancegroup.DnsRe" +
+      "cord\"[\n\tDnsRecord\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n" +
+      "\013dns_zone_id\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-8" +
+      "6400\022\013\n\003ptr\030\004 \001(\010\"K\n\tLogRecord\022-\n\ttimest" +
+      "amp\030\001 \001(\0132\032.google.protobuf.Timestamp\022\017\n" +
+      "\007message\030\002 \001(\t*;\n\tIpVersion\022\032\n\026IP_VERSIO" +
+      "N_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002B\204\001\n)" +
+      "yandex.cloud.api.compute.v1.instancegrou" +
+      "pZWgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/compute/v1/instancegroup;ins" +
+      "tancegroupb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

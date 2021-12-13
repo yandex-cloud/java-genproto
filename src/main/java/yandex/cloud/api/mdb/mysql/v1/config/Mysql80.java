@@ -1538,6 +1538,184 @@ public final class Mysql80 {
      * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getRangeOptimizerMaxMemSizeOrBuilder();
+
+    /**
+     * <pre>
+     * Manages slow query log
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_slow_query_log).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+     */
+    boolean hasSlowQueryLog();
+    /**
+     * <pre>
+     * Manages slow query log
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_slow_query_log).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+     */
+    com.google.protobuf.BoolValue getSlowQueryLog();
+    /**
+     * <pre>
+     * Manages slow query log
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_slow_query_log).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getSlowQueryLogOrBuilder();
+
+    /**
+     * <pre>
+     * Query execution time, after which query to be logged unconditionally, that is, log_slow_rate_limit will not apply to it
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#slow_query_log_always_write_time).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+     */
+    boolean hasSlowQueryLogAlwaysWriteTime();
+    /**
+     * <pre>
+     * Query execution time, after which query to be logged unconditionally, that is, log_slow_rate_limit will not apply to it
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#slow_query_log_always_write_time).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+     */
+    com.google.protobuf.DoubleValue getSlowQueryLogAlwaysWriteTime();
+    /**
+     * <pre>
+     * Query execution time, after which query to be logged unconditionally, that is, log_slow_rate_limit will not apply to it
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#slow_query_log_always_write_time).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+     */
+    com.google.protobuf.DoubleValueOrBuilder getSlowQueryLogAlwaysWriteTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Specifies slow log granularity for log_slow_rate_limit: QUERY or SESSION
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_type).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowRateType log_slow_rate_type = 59;</code>
+     */
+    int getLogSlowRateTypeValue();
+    /**
+     * <pre>
+     * Specifies slow log granularity for log_slow_rate_limit: QUERY or SESSION
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_type).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowRateType log_slow_rate_type = 59;</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType getLogSlowRateType();
+
+    /**
+     * <pre>
+     * Specifies what fraction of session/query should be logged. Logging is enabled for every nth session/query.
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_limit).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+     */
+    boolean hasLogSlowRateLimit();
+    /**
+     * <pre>
+     * Specifies what fraction of session/query should be logged. Logging is enabled for every nth session/query.
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_limit).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+     */
+    com.google.protobuf.Int64Value getLogSlowRateLimit();
+    /**
+     * <pre>
+     * Specifies what fraction of session/query should be logged. Logging is enabled for every nth session/query.
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_limit).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getLogSlowRateLimitOrBuilder();
+
+    /**
+     * <pre>
+     * When TRUE, statements executed by stored procedures are logged to the slow log
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_sp_statements).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+     */
+    boolean hasLogSlowSpStatements();
+    /**
+     * <pre>
+     * When TRUE, statements executed by stored procedures are logged to the slow log
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_sp_statements).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+     */
+    com.google.protobuf.BoolValue getLogSlowSpStatements();
+    /**
+     * <pre>
+     * When TRUE, statements executed by stored procedures are logged to the slow log
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_sp_statements).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getLogSlowSpStatementsOrBuilder();
+
+    /**
+     * <pre>
+     * Filters the slow log by the query's execution plan
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+     */
+    java.util.List<yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType> getLogSlowFilterList();
+    /**
+     * <pre>
+     * Filters the slow log by the query's execution plan
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+     */
+    int getLogSlowFilterCount();
+    /**
+     * <pre>
+     * Filters the slow log by the query's execution plan
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType getLogSlowFilter(int index);
+    /**
+     * <pre>
+     * Filters the slow log by the query's execution plan
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+     */
+    java.util.List<java.lang.Integer>
+    getLogSlowFilterValueList();
+    /**
+     * <pre>
+     * Filters the slow log by the query's execution plan
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+     */
+    int getLogSlowFilterValue(int index);
   }
   /**
    * <pre>
@@ -1564,6 +1742,8 @@ public final class Mysql80 {
       collationServer_ = "";
       binlogRowImage_ = 0;
       slaveParallelType_ = 0;
+      logSlowRateType_ = 0;
+      logSlowFilter_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -2280,6 +2460,87 @@ public final class Mysql80 {
 
               break;
             }
+            case 458: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (slowQueryLog_ != null) {
+                subBuilder = slowQueryLog_.toBuilder();
+              }
+              slowQueryLog_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(slowQueryLog_);
+                slowQueryLog_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 466: {
+              com.google.protobuf.DoubleValue.Builder subBuilder = null;
+              if (slowQueryLogAlwaysWriteTime_ != null) {
+                subBuilder = slowQueryLogAlwaysWriteTime_.toBuilder();
+              }
+              slowQueryLogAlwaysWriteTime_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(slowQueryLogAlwaysWriteTime_);
+                slowQueryLogAlwaysWriteTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 472: {
+              int rawValue = input.readEnum();
+
+              logSlowRateType_ = rawValue;
+              break;
+            }
+            case 482: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (logSlowRateLimit_ != null) {
+                subBuilder = logSlowRateLimit_.toBuilder();
+              }
+              logSlowRateLimit_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logSlowRateLimit_);
+                logSlowRateLimit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 490: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (logSlowSpStatements_ != null) {
+                subBuilder = logSlowSpStatements_.toBuilder();
+              }
+              logSlowSpStatements_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logSlowSpStatements_);
+                logSlowSpStatements_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 496: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField1_ & 0x20000000) == 0x20000000)) {
+                logSlowFilter_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField1_ |= 0x20000000;
+              }
+              logSlowFilter_.add(rawValue);
+              break;
+            }
+            case 498: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField1_ & 0x20000000) == 0x20000000)) {
+                  logSlowFilter_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField1_ |= 0x20000000;
+                }
+                logSlowFilter_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2297,6 +2558,9 @@ public final class Mysql80 {
       } finally {
         if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
           sqlMode_ = java.util.Collections.unmodifiableList(sqlMode_);
+        }
+        if (((mutable_bitField1_ & 0x20000000) == 0x20000000)) {
+          logSlowFilter_ = java.util.Collections.unmodifiableList(logSlowFilter_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -3070,6 +3334,256 @@ public final class Mysql80 {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.SlaveParallelType)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowRateType}
+     */
+    public enum LogSlowRateType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>LOG_SLOW_RATE_TYPE_UNSPECIFIED = 0;</code>
+       */
+      LOG_SLOW_RATE_TYPE_UNSPECIFIED(0),
+      /**
+       * <code>SESSION = 1;</code>
+       */
+      SESSION(1),
+      /**
+       * <code>QUERY = 2;</code>
+       */
+      QUERY(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>LOG_SLOW_RATE_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int LOG_SLOW_RATE_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>SESSION = 1;</code>
+       */
+      public static final int SESSION_VALUE = 1;
+      /**
+       * <code>QUERY = 2;</code>
+       */
+      public static final int QUERY_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static LogSlowRateType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static LogSlowRateType forNumber(int value) {
+        switch (value) {
+          case 0: return LOG_SLOW_RATE_TYPE_UNSPECIFIED;
+          case 1: return SESSION;
+          case 2: return QUERY;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<LogSlowRateType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          LogSlowRateType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<LogSlowRateType>() {
+              public LogSlowRateType findValueByNumber(int number) {
+                return LogSlowRateType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.getDescriptor().getEnumTypes().get(5);
+      }
+
+      private static final LogSlowRateType[] VALUES = values();
+
+      public static LogSlowRateType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private LogSlowRateType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowRateType)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType}
+     */
+    public enum LogSlowFilterType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>LOG_SLOW_FILTER_TYPE_UNSPECIFIED = 0;</code>
+       */
+      LOG_SLOW_FILTER_TYPE_UNSPECIFIED(0),
+      /**
+       * <code>FULL_SCAN = 1;</code>
+       */
+      FULL_SCAN(1),
+      /**
+       * <code>FULL_JOIN = 2;</code>
+       */
+      FULL_JOIN(2),
+      /**
+       * <code>TMP_TABLE = 3;</code>
+       */
+      TMP_TABLE(3),
+      /**
+       * <code>TMP_TABLE_ON_DISK = 4;</code>
+       */
+      TMP_TABLE_ON_DISK(4),
+      /**
+       * <code>FILESORT = 5;</code>
+       */
+      FILESORT(5),
+      /**
+       * <code>FILESORT_ON_DISK = 6;</code>
+       */
+      FILESORT_ON_DISK(6),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>LOG_SLOW_FILTER_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int LOG_SLOW_FILTER_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>FULL_SCAN = 1;</code>
+       */
+      public static final int FULL_SCAN_VALUE = 1;
+      /**
+       * <code>FULL_JOIN = 2;</code>
+       */
+      public static final int FULL_JOIN_VALUE = 2;
+      /**
+       * <code>TMP_TABLE = 3;</code>
+       */
+      public static final int TMP_TABLE_VALUE = 3;
+      /**
+       * <code>TMP_TABLE_ON_DISK = 4;</code>
+       */
+      public static final int TMP_TABLE_ON_DISK_VALUE = 4;
+      /**
+       * <code>FILESORT = 5;</code>
+       */
+      public static final int FILESORT_VALUE = 5;
+      /**
+       * <code>FILESORT_ON_DISK = 6;</code>
+       */
+      public static final int FILESORT_ON_DISK_VALUE = 6;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static LogSlowFilterType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static LogSlowFilterType forNumber(int value) {
+        switch (value) {
+          case 0: return LOG_SLOW_FILTER_TYPE_UNSPECIFIED;
+          case 1: return FULL_SCAN;
+          case 2: return FULL_JOIN;
+          case 3: return TMP_TABLE;
+          case 4: return TMP_TABLE_ON_DISK;
+          case 5: return FILESORT;
+          case 6: return FILESORT_ON_DISK;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<LogSlowFilterType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          LogSlowFilterType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<LogSlowFilterType>() {
+              public LogSlowFilterType findValueByNumber(int number) {
+                return LogSlowFilterType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.getDescriptor().getEnumTypes().get(6);
+      }
+
+      private static final LogSlowFilterType[] VALUES = values();
+
+      public static LogSlowFilterType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private LogSlowFilterType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType)
     }
 
     private int bitField0_;
@@ -5107,6 +5621,248 @@ public final class Mysql80 {
       return getRangeOptimizerMaxMemSize();
     }
 
+    public static final int SLOW_QUERY_LOG_FIELD_NUMBER = 57;
+    private com.google.protobuf.BoolValue slowQueryLog_;
+    /**
+     * <pre>
+     * Manages slow query log
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_slow_query_log).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+     */
+    public boolean hasSlowQueryLog() {
+      return slowQueryLog_ != null;
+    }
+    /**
+     * <pre>
+     * Manages slow query log
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_slow_query_log).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+     */
+    public com.google.protobuf.BoolValue getSlowQueryLog() {
+      return slowQueryLog_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : slowQueryLog_;
+    }
+    /**
+     * <pre>
+     * Manages slow query log
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_slow_query_log).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getSlowQueryLogOrBuilder() {
+      return getSlowQueryLog();
+    }
+
+    public static final int SLOW_QUERY_LOG_ALWAYS_WRITE_TIME_FIELD_NUMBER = 58;
+    private com.google.protobuf.DoubleValue slowQueryLogAlwaysWriteTime_;
+    /**
+     * <pre>
+     * Query execution time, after which query to be logged unconditionally, that is, log_slow_rate_limit will not apply to it
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#slow_query_log_always_write_time).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+     */
+    public boolean hasSlowQueryLogAlwaysWriteTime() {
+      return slowQueryLogAlwaysWriteTime_ != null;
+    }
+    /**
+     * <pre>
+     * Query execution time, after which query to be logged unconditionally, that is, log_slow_rate_limit will not apply to it
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#slow_query_log_always_write_time).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+     */
+    public com.google.protobuf.DoubleValue getSlowQueryLogAlwaysWriteTime() {
+      return slowQueryLogAlwaysWriteTime_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : slowQueryLogAlwaysWriteTime_;
+    }
+    /**
+     * <pre>
+     * Query execution time, after which query to be logged unconditionally, that is, log_slow_rate_limit will not apply to it
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#slow_query_log_always_write_time).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getSlowQueryLogAlwaysWriteTimeOrBuilder() {
+      return getSlowQueryLogAlwaysWriteTime();
+    }
+
+    public static final int LOG_SLOW_RATE_TYPE_FIELD_NUMBER = 59;
+    private int logSlowRateType_;
+    /**
+     * <pre>
+     * Specifies slow log granularity for log_slow_rate_limit: QUERY or SESSION
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_type).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowRateType log_slow_rate_type = 59;</code>
+     */
+    public int getLogSlowRateTypeValue() {
+      return logSlowRateType_;
+    }
+    /**
+     * <pre>
+     * Specifies slow log granularity for log_slow_rate_limit: QUERY or SESSION
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_type).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowRateType log_slow_rate_type = 59;</code>
+     */
+    public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType getLogSlowRateType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType result = yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType.valueOf(logSlowRateType_);
+      return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType.UNRECOGNIZED : result;
+    }
+
+    public static final int LOG_SLOW_RATE_LIMIT_FIELD_NUMBER = 60;
+    private com.google.protobuf.Int64Value logSlowRateLimit_;
+    /**
+     * <pre>
+     * Specifies what fraction of session/query should be logged. Logging is enabled for every nth session/query.
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_limit).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+     */
+    public boolean hasLogSlowRateLimit() {
+      return logSlowRateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies what fraction of session/query should be logged. Logging is enabled for every nth session/query.
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_limit).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+     */
+    public com.google.protobuf.Int64Value getLogSlowRateLimit() {
+      return logSlowRateLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logSlowRateLimit_;
+    }
+    /**
+     * <pre>
+     * Specifies what fraction of session/query should be logged. Logging is enabled for every nth session/query.
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_limit).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getLogSlowRateLimitOrBuilder() {
+      return getLogSlowRateLimit();
+    }
+
+    public static final int LOG_SLOW_SP_STATEMENTS_FIELD_NUMBER = 61;
+    private com.google.protobuf.BoolValue logSlowSpStatements_;
+    /**
+     * <pre>
+     * When TRUE, statements executed by stored procedures are logged to the slow log
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_sp_statements).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+     */
+    public boolean hasLogSlowSpStatements() {
+      return logSlowSpStatements_ != null;
+    }
+    /**
+     * <pre>
+     * When TRUE, statements executed by stored procedures are logged to the slow log
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_sp_statements).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+     */
+    public com.google.protobuf.BoolValue getLogSlowSpStatements() {
+      return logSlowSpStatements_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logSlowSpStatements_;
+    }
+    /**
+     * <pre>
+     * When TRUE, statements executed by stored procedures are logged to the slow log
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_sp_statements).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getLogSlowSpStatementsOrBuilder() {
+      return getLogSlowSpStatements();
+    }
+
+    public static final int LOG_SLOW_FILTER_FIELD_NUMBER = 62;
+    private java.util.List<java.lang.Integer> logSlowFilter_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType> logSlowFilter_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType>() {
+              public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType result = yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType.valueOf(from);
+                return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * Filters the slow log by the query's execution plan
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+     */
+    public java.util.List<yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType> getLogSlowFilterList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType>(logSlowFilter_, logSlowFilter_converter_);
+    }
+    /**
+     * <pre>
+     * Filters the slow log by the query's execution plan
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+     */
+    public int getLogSlowFilterCount() {
+      return logSlowFilter_.size();
+    }
+    /**
+     * <pre>
+     * Filters the slow log by the query's execution plan
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+     */
+    public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType getLogSlowFilter(int index) {
+      return logSlowFilter_converter_.convert(logSlowFilter_.get(index));
+    }
+    /**
+     * <pre>
+     * Filters the slow log by the query's execution plan
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+     */
+    public java.util.List<java.lang.Integer>
+    getLogSlowFilterValueList() {
+      return logSlowFilter_;
+    }
+    /**
+     * <pre>
+     * Filters the slow log by the query's execution plan
+     * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+     */
+    public int getLogSlowFilterValue(int index) {
+      return logSlowFilter_.get(index);
+    }
+    private int logSlowFilterMemoizedSerializedSize;
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5293,6 +6049,28 @@ public final class Mysql80 {
       }
       if (rangeOptimizerMaxMemSize_ != null) {
         output.writeMessage(56, getRangeOptimizerMaxMemSize());
+      }
+      if (slowQueryLog_ != null) {
+        output.writeMessage(57, getSlowQueryLog());
+      }
+      if (slowQueryLogAlwaysWriteTime_ != null) {
+        output.writeMessage(58, getSlowQueryLogAlwaysWriteTime());
+      }
+      if (logSlowRateType_ != yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType.LOG_SLOW_RATE_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(59, logSlowRateType_);
+      }
+      if (logSlowRateLimit_ != null) {
+        output.writeMessage(60, getLogSlowRateLimit());
+      }
+      if (logSlowSpStatements_ != null) {
+        output.writeMessage(61, getLogSlowSpStatements());
+      }
+      if (getLogSlowFilterList().size() > 0) {
+        output.writeUInt32NoTag(498);
+        output.writeUInt32NoTag(logSlowFilterMemoizedSerializedSize);
+      }
+      for (int i = 0; i < logSlowFilter_.size(); i++) {
+        output.writeEnumNoTag(logSlowFilter_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -5531,6 +6309,38 @@ public final class Mysql80 {
       if (rangeOptimizerMaxMemSize_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(56, getRangeOptimizerMaxMemSize());
+      }
+      if (slowQueryLog_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(57, getSlowQueryLog());
+      }
+      if (slowQueryLogAlwaysWriteTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(58, getSlowQueryLogAlwaysWriteTime());
+      }
+      if (logSlowRateType_ != yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType.LOG_SLOW_RATE_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(59, logSlowRateType_);
+      }
+      if (logSlowRateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(60, getLogSlowRateLimit());
+      }
+      if (logSlowSpStatements_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(61, getLogSlowSpStatements());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < logSlowFilter_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(logSlowFilter_.get(i));
+        }
+        size += dataSize;
+        if (!getLogSlowFilterList().isEmpty()) {  size += 2;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }logSlowFilterMemoizedSerializedSize = dataSize;
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5799,6 +6609,28 @@ public final class Mysql80 {
         result = result && getRangeOptimizerMaxMemSize()
             .equals(other.getRangeOptimizerMaxMemSize());
       }
+      result = result && (hasSlowQueryLog() == other.hasSlowQueryLog());
+      if (hasSlowQueryLog()) {
+        result = result && getSlowQueryLog()
+            .equals(other.getSlowQueryLog());
+      }
+      result = result && (hasSlowQueryLogAlwaysWriteTime() == other.hasSlowQueryLogAlwaysWriteTime());
+      if (hasSlowQueryLogAlwaysWriteTime()) {
+        result = result && getSlowQueryLogAlwaysWriteTime()
+            .equals(other.getSlowQueryLogAlwaysWriteTime());
+      }
+      result = result && logSlowRateType_ == other.logSlowRateType_;
+      result = result && (hasLogSlowRateLimit() == other.hasLogSlowRateLimit());
+      if (hasLogSlowRateLimit()) {
+        result = result && getLogSlowRateLimit()
+            .equals(other.getLogSlowRateLimit());
+      }
+      result = result && (hasLogSlowSpStatements() == other.hasLogSlowSpStatements());
+      if (hasLogSlowSpStatements()) {
+        result = result && getLogSlowSpStatements()
+            .equals(other.getLogSlowSpStatements());
+      }
+      result = result && logSlowFilter_.equals(other.logSlowFilter_);
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -6019,6 +6851,28 @@ public final class Mysql80 {
       if (hasRangeOptimizerMaxMemSize()) {
         hash = (37 * hash) + RANGE_OPTIMIZER_MAX_MEM_SIZE_FIELD_NUMBER;
         hash = (53 * hash) + getRangeOptimizerMaxMemSize().hashCode();
+      }
+      if (hasSlowQueryLog()) {
+        hash = (37 * hash) + SLOW_QUERY_LOG_FIELD_NUMBER;
+        hash = (53 * hash) + getSlowQueryLog().hashCode();
+      }
+      if (hasSlowQueryLogAlwaysWriteTime()) {
+        hash = (37 * hash) + SLOW_QUERY_LOG_ALWAYS_WRITE_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getSlowQueryLogAlwaysWriteTime().hashCode();
+      }
+      hash = (37 * hash) + LOG_SLOW_RATE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + logSlowRateType_;
+      if (hasLogSlowRateLimit()) {
+        hash = (37 * hash) + LOG_SLOW_RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getLogSlowRateLimit().hashCode();
+      }
+      if (hasLogSlowSpStatements()) {
+        hash = (37 * hash) + LOG_SLOW_SP_STATEMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogSlowSpStatements().hashCode();
+      }
+      if (getLogSlowFilterCount() > 0) {
+        hash = (37 * hash) + LOG_SLOW_FILTER_FIELD_NUMBER;
+        hash = (53 * hash) + logSlowFilter_.hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -6461,6 +7315,34 @@ public final class Mysql80 {
           rangeOptimizerMaxMemSize_ = null;
           rangeOptimizerMaxMemSizeBuilder_ = null;
         }
+        if (slowQueryLogBuilder_ == null) {
+          slowQueryLog_ = null;
+        } else {
+          slowQueryLog_ = null;
+          slowQueryLogBuilder_ = null;
+        }
+        if (slowQueryLogAlwaysWriteTimeBuilder_ == null) {
+          slowQueryLogAlwaysWriteTime_ = null;
+        } else {
+          slowQueryLogAlwaysWriteTime_ = null;
+          slowQueryLogAlwaysWriteTimeBuilder_ = null;
+        }
+        logSlowRateType_ = 0;
+
+        if (logSlowRateLimitBuilder_ == null) {
+          logSlowRateLimit_ = null;
+        } else {
+          logSlowRateLimit_ = null;
+          logSlowRateLimitBuilder_ = null;
+        }
+        if (logSlowSpStatementsBuilder_ == null) {
+          logSlowSpStatements_ = null;
+        } else {
+          logSlowSpStatements_ = null;
+          logSlowSpStatementsBuilder_ = null;
+        }
+        logSlowFilter_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x20000000);
         return this;
       }
 
@@ -6743,6 +7625,32 @@ public final class Mysql80 {
         } else {
           result.rangeOptimizerMaxMemSize_ = rangeOptimizerMaxMemSizeBuilder_.build();
         }
+        if (slowQueryLogBuilder_ == null) {
+          result.slowQueryLog_ = slowQueryLog_;
+        } else {
+          result.slowQueryLog_ = slowQueryLogBuilder_.build();
+        }
+        if (slowQueryLogAlwaysWriteTimeBuilder_ == null) {
+          result.slowQueryLogAlwaysWriteTime_ = slowQueryLogAlwaysWriteTime_;
+        } else {
+          result.slowQueryLogAlwaysWriteTime_ = slowQueryLogAlwaysWriteTimeBuilder_.build();
+        }
+        result.logSlowRateType_ = logSlowRateType_;
+        if (logSlowRateLimitBuilder_ == null) {
+          result.logSlowRateLimit_ = logSlowRateLimit_;
+        } else {
+          result.logSlowRateLimit_ = logSlowRateLimitBuilder_.build();
+        }
+        if (logSlowSpStatementsBuilder_ == null) {
+          result.logSlowSpStatements_ = logSlowSpStatements_;
+        } else {
+          result.logSlowSpStatements_ = logSlowSpStatementsBuilder_.build();
+        }
+        if (((bitField1_ & 0x20000000) == 0x20000000)) {
+          logSlowFilter_ = java.util.Collections.unmodifiableList(logSlowFilter_);
+          bitField1_ = (bitField1_ & ~0x20000000);
+        }
+        result.logSlowFilter_ = logSlowFilter_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -6970,6 +7878,31 @@ public final class Mysql80 {
         }
         if (other.hasRangeOptimizerMaxMemSize()) {
           mergeRangeOptimizerMaxMemSize(other.getRangeOptimizerMaxMemSize());
+        }
+        if (other.hasSlowQueryLog()) {
+          mergeSlowQueryLog(other.getSlowQueryLog());
+        }
+        if (other.hasSlowQueryLogAlwaysWriteTime()) {
+          mergeSlowQueryLogAlwaysWriteTime(other.getSlowQueryLogAlwaysWriteTime());
+        }
+        if (other.logSlowRateType_ != 0) {
+          setLogSlowRateTypeValue(other.getLogSlowRateTypeValue());
+        }
+        if (other.hasLogSlowRateLimit()) {
+          mergeLogSlowRateLimit(other.getLogSlowRateLimit());
+        }
+        if (other.hasLogSlowSpStatements()) {
+          mergeLogSlowSpStatements(other.getLogSlowSpStatements());
+        }
+        if (!other.logSlowFilter_.isEmpty()) {
+          if (logSlowFilter_.isEmpty()) {
+            logSlowFilter_ = other.logSlowFilter_;
+            bitField1_ = (bitField1_ & ~0x20000000);
+          } else {
+            ensureLogSlowFilterIsMutable();
+            logSlowFilter_.addAll(other.logSlowFilter_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -15499,6 +16432,902 @@ public final class Mysql80 {
         }
         return rangeOptimizerMaxMemSizeBuilder_;
       }
+
+      private com.google.protobuf.BoolValue slowQueryLog_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> slowQueryLogBuilder_;
+      /**
+       * <pre>
+       * Manages slow query log
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_slow_query_log).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+       */
+      public boolean hasSlowQueryLog() {
+        return slowQueryLogBuilder_ != null || slowQueryLog_ != null;
+      }
+      /**
+       * <pre>
+       * Manages slow query log
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_slow_query_log).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+       */
+      public com.google.protobuf.BoolValue getSlowQueryLog() {
+        if (slowQueryLogBuilder_ == null) {
+          return slowQueryLog_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : slowQueryLog_;
+        } else {
+          return slowQueryLogBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Manages slow query log
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_slow_query_log).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+       */
+      public Builder setSlowQueryLog(com.google.protobuf.BoolValue value) {
+        if (slowQueryLogBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          slowQueryLog_ = value;
+          onChanged();
+        } else {
+          slowQueryLogBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Manages slow query log
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_slow_query_log).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+       */
+      public Builder setSlowQueryLog(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (slowQueryLogBuilder_ == null) {
+          slowQueryLog_ = builderForValue.build();
+          onChanged();
+        } else {
+          slowQueryLogBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Manages slow query log
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_slow_query_log).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+       */
+      public Builder mergeSlowQueryLog(com.google.protobuf.BoolValue value) {
+        if (slowQueryLogBuilder_ == null) {
+          if (slowQueryLog_ != null) {
+            slowQueryLog_ =
+              com.google.protobuf.BoolValue.newBuilder(slowQueryLog_).mergeFrom(value).buildPartial();
+          } else {
+            slowQueryLog_ = value;
+          }
+          onChanged();
+        } else {
+          slowQueryLogBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Manages slow query log
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_slow_query_log).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+       */
+      public Builder clearSlowQueryLog() {
+        if (slowQueryLogBuilder_ == null) {
+          slowQueryLog_ = null;
+          onChanged();
+        } else {
+          slowQueryLog_ = null;
+          slowQueryLogBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Manages slow query log
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_slow_query_log).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getSlowQueryLogBuilder() {
+        
+        onChanged();
+        return getSlowQueryLogFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Manages slow query log
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_slow_query_log).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getSlowQueryLogOrBuilder() {
+        if (slowQueryLogBuilder_ != null) {
+          return slowQueryLogBuilder_.getMessageOrBuilder();
+        } else {
+          return slowQueryLog_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : slowQueryLog_;
+        }
+      }
+      /**
+       * <pre>
+       * Manages slow query log
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_slow_query_log).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue slow_query_log = 57;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getSlowQueryLogFieldBuilder() {
+        if (slowQueryLogBuilder_ == null) {
+          slowQueryLogBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getSlowQueryLog(),
+                  getParentForChildren(),
+                  isClean());
+          slowQueryLog_ = null;
+        }
+        return slowQueryLogBuilder_;
+      }
+
+      private com.google.protobuf.DoubleValue slowQueryLogAlwaysWriteTime_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> slowQueryLogAlwaysWriteTimeBuilder_;
+      /**
+       * <pre>
+       * Query execution time, after which query to be logged unconditionally, that is, log_slow_rate_limit will not apply to it
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#slow_query_log_always_write_time).
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+       */
+      public boolean hasSlowQueryLogAlwaysWriteTime() {
+        return slowQueryLogAlwaysWriteTimeBuilder_ != null || slowQueryLogAlwaysWriteTime_ != null;
+      }
+      /**
+       * <pre>
+       * Query execution time, after which query to be logged unconditionally, that is, log_slow_rate_limit will not apply to it
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#slow_query_log_always_write_time).
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+       */
+      public com.google.protobuf.DoubleValue getSlowQueryLogAlwaysWriteTime() {
+        if (slowQueryLogAlwaysWriteTimeBuilder_ == null) {
+          return slowQueryLogAlwaysWriteTime_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : slowQueryLogAlwaysWriteTime_;
+        } else {
+          return slowQueryLogAlwaysWriteTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Query execution time, after which query to be logged unconditionally, that is, log_slow_rate_limit will not apply to it
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#slow_query_log_always_write_time).
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+       */
+      public Builder setSlowQueryLogAlwaysWriteTime(com.google.protobuf.DoubleValue value) {
+        if (slowQueryLogAlwaysWriteTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          slowQueryLogAlwaysWriteTime_ = value;
+          onChanged();
+        } else {
+          slowQueryLogAlwaysWriteTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Query execution time, after which query to be logged unconditionally, that is, log_slow_rate_limit will not apply to it
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#slow_query_log_always_write_time).
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+       */
+      public Builder setSlowQueryLogAlwaysWriteTime(
+          com.google.protobuf.DoubleValue.Builder builderForValue) {
+        if (slowQueryLogAlwaysWriteTimeBuilder_ == null) {
+          slowQueryLogAlwaysWriteTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          slowQueryLogAlwaysWriteTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Query execution time, after which query to be logged unconditionally, that is, log_slow_rate_limit will not apply to it
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#slow_query_log_always_write_time).
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+       */
+      public Builder mergeSlowQueryLogAlwaysWriteTime(com.google.protobuf.DoubleValue value) {
+        if (slowQueryLogAlwaysWriteTimeBuilder_ == null) {
+          if (slowQueryLogAlwaysWriteTime_ != null) {
+            slowQueryLogAlwaysWriteTime_ =
+              com.google.protobuf.DoubleValue.newBuilder(slowQueryLogAlwaysWriteTime_).mergeFrom(value).buildPartial();
+          } else {
+            slowQueryLogAlwaysWriteTime_ = value;
+          }
+          onChanged();
+        } else {
+          slowQueryLogAlwaysWriteTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Query execution time, after which query to be logged unconditionally, that is, log_slow_rate_limit will not apply to it
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#slow_query_log_always_write_time).
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+       */
+      public Builder clearSlowQueryLogAlwaysWriteTime() {
+        if (slowQueryLogAlwaysWriteTimeBuilder_ == null) {
+          slowQueryLogAlwaysWriteTime_ = null;
+          onChanged();
+        } else {
+          slowQueryLogAlwaysWriteTime_ = null;
+          slowQueryLogAlwaysWriteTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Query execution time, after which query to be logged unconditionally, that is, log_slow_rate_limit will not apply to it
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#slow_query_log_always_write_time).
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+       */
+      public com.google.protobuf.DoubleValue.Builder getSlowQueryLogAlwaysWriteTimeBuilder() {
+        
+        onChanged();
+        return getSlowQueryLogAlwaysWriteTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Query execution time, after which query to be logged unconditionally, that is, log_slow_rate_limit will not apply to it
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#slow_query_log_always_write_time).
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+       */
+      public com.google.protobuf.DoubleValueOrBuilder getSlowQueryLogAlwaysWriteTimeOrBuilder() {
+        if (slowQueryLogAlwaysWriteTimeBuilder_ != null) {
+          return slowQueryLogAlwaysWriteTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return slowQueryLogAlwaysWriteTime_ == null ?
+              com.google.protobuf.DoubleValue.getDefaultInstance() : slowQueryLogAlwaysWriteTime_;
+        }
+      }
+      /**
+       * <pre>
+       * Query execution time, after which query to be logged unconditionally, that is, log_slow_rate_limit will not apply to it
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#slow_query_log_always_write_time).
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue slow_query_log_always_write_time = 58;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          getSlowQueryLogAlwaysWriteTimeFieldBuilder() {
+        if (slowQueryLogAlwaysWriteTimeBuilder_ == null) {
+          slowQueryLogAlwaysWriteTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                  getSlowQueryLogAlwaysWriteTime(),
+                  getParentForChildren(),
+                  isClean());
+          slowQueryLogAlwaysWriteTime_ = null;
+        }
+        return slowQueryLogAlwaysWriteTimeBuilder_;
+      }
+
+      private int logSlowRateType_ = 0;
+      /**
+       * <pre>
+       * Specifies slow log granularity for log_slow_rate_limit: QUERY or SESSION
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_type).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowRateType log_slow_rate_type = 59;</code>
+       */
+      public int getLogSlowRateTypeValue() {
+        return logSlowRateType_;
+      }
+      /**
+       * <pre>
+       * Specifies slow log granularity for log_slow_rate_limit: QUERY or SESSION
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_type).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowRateType log_slow_rate_type = 59;</code>
+       */
+      public Builder setLogSlowRateTypeValue(int value) {
+        logSlowRateType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies slow log granularity for log_slow_rate_limit: QUERY or SESSION
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_type).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowRateType log_slow_rate_type = 59;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType getLogSlowRateType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType result = yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType.valueOf(logSlowRateType_);
+        return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Specifies slow log granularity for log_slow_rate_limit: QUERY or SESSION
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_type).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowRateType log_slow_rate_type = 59;</code>
+       */
+      public Builder setLogSlowRateType(yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowRateType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        logSlowRateType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies slow log granularity for log_slow_rate_limit: QUERY or SESSION
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_type).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowRateType log_slow_rate_type = 59;</code>
+       */
+      public Builder clearLogSlowRateType() {
+        
+        logSlowRateType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value logSlowRateLimit_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> logSlowRateLimitBuilder_;
+      /**
+       * <pre>
+       * Specifies what fraction of session/query should be logged. Logging is enabled for every nth session/query.
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_limit).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+       */
+      public boolean hasLogSlowRateLimit() {
+        return logSlowRateLimitBuilder_ != null || logSlowRateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies what fraction of session/query should be logged. Logging is enabled for every nth session/query.
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_limit).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+       */
+      public com.google.protobuf.Int64Value getLogSlowRateLimit() {
+        if (logSlowRateLimitBuilder_ == null) {
+          return logSlowRateLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logSlowRateLimit_;
+        } else {
+          return logSlowRateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies what fraction of session/query should be logged. Logging is enabled for every nth session/query.
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_limit).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+       */
+      public Builder setLogSlowRateLimit(com.google.protobuf.Int64Value value) {
+        if (logSlowRateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logSlowRateLimit_ = value;
+          onChanged();
+        } else {
+          logSlowRateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies what fraction of session/query should be logged. Logging is enabled for every nth session/query.
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_limit).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+       */
+      public Builder setLogSlowRateLimit(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (logSlowRateLimitBuilder_ == null) {
+          logSlowRateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          logSlowRateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies what fraction of session/query should be logged. Logging is enabled for every nth session/query.
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_limit).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+       */
+      public Builder mergeLogSlowRateLimit(com.google.protobuf.Int64Value value) {
+        if (logSlowRateLimitBuilder_ == null) {
+          if (logSlowRateLimit_ != null) {
+            logSlowRateLimit_ =
+              com.google.protobuf.Int64Value.newBuilder(logSlowRateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            logSlowRateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          logSlowRateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies what fraction of session/query should be logged. Logging is enabled for every nth session/query.
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_limit).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+       */
+      public Builder clearLogSlowRateLimit() {
+        if (logSlowRateLimitBuilder_ == null) {
+          logSlowRateLimit_ = null;
+          onChanged();
+        } else {
+          logSlowRateLimit_ = null;
+          logSlowRateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies what fraction of session/query should be logged. Logging is enabled for every nth session/query.
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_limit).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getLogSlowRateLimitBuilder() {
+        
+        onChanged();
+        return getLogSlowRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies what fraction of session/query should be logged. Logging is enabled for every nth session/query.
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_limit).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getLogSlowRateLimitOrBuilder() {
+        if (logSlowRateLimitBuilder_ != null) {
+          return logSlowRateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return logSlowRateLimit_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : logSlowRateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies what fraction of session/query should be logged. Logging is enabled for every nth session/query.
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_rate_limit).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_slow_rate_limit = 60 [(.yandex.cloud.value) = "1-1000"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getLogSlowRateLimitFieldBuilder() {
+        if (logSlowRateLimitBuilder_ == null) {
+          logSlowRateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getLogSlowRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          logSlowRateLimit_ = null;
+        }
+        return logSlowRateLimitBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue logSlowSpStatements_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> logSlowSpStatementsBuilder_;
+      /**
+       * <pre>
+       * When TRUE, statements executed by stored procedures are logged to the slow log
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_sp_statements).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+       */
+      public boolean hasLogSlowSpStatements() {
+        return logSlowSpStatementsBuilder_ != null || logSlowSpStatements_ != null;
+      }
+      /**
+       * <pre>
+       * When TRUE, statements executed by stored procedures are logged to the slow log
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_sp_statements).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+       */
+      public com.google.protobuf.BoolValue getLogSlowSpStatements() {
+        if (logSlowSpStatementsBuilder_ == null) {
+          return logSlowSpStatements_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logSlowSpStatements_;
+        } else {
+          return logSlowSpStatementsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * When TRUE, statements executed by stored procedures are logged to the slow log
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_sp_statements).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+       */
+      public Builder setLogSlowSpStatements(com.google.protobuf.BoolValue value) {
+        if (logSlowSpStatementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logSlowSpStatements_ = value;
+          onChanged();
+        } else {
+          logSlowSpStatementsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When TRUE, statements executed by stored procedures are logged to the slow log
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_sp_statements).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+       */
+      public Builder setLogSlowSpStatements(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (logSlowSpStatementsBuilder_ == null) {
+          logSlowSpStatements_ = builderForValue.build();
+          onChanged();
+        } else {
+          logSlowSpStatementsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When TRUE, statements executed by stored procedures are logged to the slow log
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_sp_statements).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+       */
+      public Builder mergeLogSlowSpStatements(com.google.protobuf.BoolValue value) {
+        if (logSlowSpStatementsBuilder_ == null) {
+          if (logSlowSpStatements_ != null) {
+            logSlowSpStatements_ =
+              com.google.protobuf.BoolValue.newBuilder(logSlowSpStatements_).mergeFrom(value).buildPartial();
+          } else {
+            logSlowSpStatements_ = value;
+          }
+          onChanged();
+        } else {
+          logSlowSpStatementsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When TRUE, statements executed by stored procedures are logged to the slow log
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_sp_statements).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+       */
+      public Builder clearLogSlowSpStatements() {
+        if (logSlowSpStatementsBuilder_ == null) {
+          logSlowSpStatements_ = null;
+          onChanged();
+        } else {
+          logSlowSpStatements_ = null;
+          logSlowSpStatementsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When TRUE, statements executed by stored procedures are logged to the slow log
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_sp_statements).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getLogSlowSpStatementsBuilder() {
+        
+        onChanged();
+        return getLogSlowSpStatementsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * When TRUE, statements executed by stored procedures are logged to the slow log
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_sp_statements).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getLogSlowSpStatementsOrBuilder() {
+        if (logSlowSpStatementsBuilder_ != null) {
+          return logSlowSpStatementsBuilder_.getMessageOrBuilder();
+        } else {
+          return logSlowSpStatements_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : logSlowSpStatements_;
+        }
+      }
+      /**
+       * <pre>
+       * When TRUE, statements executed by stored procedures are logged to the slow log
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_sp_statements).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_slow_sp_statements = 61;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getLogSlowSpStatementsFieldBuilder() {
+        if (logSlowSpStatementsBuilder_ == null) {
+          logSlowSpStatementsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getLogSlowSpStatements(),
+                  getParentForChildren(),
+                  isClean());
+          logSlowSpStatements_ = null;
+        }
+        return logSlowSpStatementsBuilder_;
+      }
+
+      private java.util.List<java.lang.Integer> logSlowFilter_ =
+        java.util.Collections.emptyList();
+      private void ensureLogSlowFilterIsMutable() {
+        if (!((bitField1_ & 0x20000000) == 0x20000000)) {
+          logSlowFilter_ = new java.util.ArrayList<java.lang.Integer>(logSlowFilter_);
+          bitField1_ |= 0x20000000;
+        }
+      }
+      /**
+       * <pre>
+       * Filters the slow log by the query's execution plan
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType> getLogSlowFilterList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType>(logSlowFilter_, logSlowFilter_converter_);
+      }
+      /**
+       * <pre>
+       * Filters the slow log by the query's execution plan
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       */
+      public int getLogSlowFilterCount() {
+        return logSlowFilter_.size();
+      }
+      /**
+       * <pre>
+       * Filters the slow log by the query's execution plan
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType getLogSlowFilter(int index) {
+        return logSlowFilter_converter_.convert(logSlowFilter_.get(index));
+      }
+      /**
+       * <pre>
+       * Filters the slow log by the query's execution plan
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       */
+      public Builder setLogSlowFilter(
+          int index, yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureLogSlowFilterIsMutable();
+        logSlowFilter_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Filters the slow log by the query's execution plan
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       */
+      public Builder addLogSlowFilter(yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureLogSlowFilterIsMutable();
+        logSlowFilter_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Filters the slow log by the query's execution plan
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       */
+      public Builder addAllLogSlowFilter(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType> values) {
+        ensureLogSlowFilterIsMutable();
+        for (yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.LogSlowFilterType value : values) {
+          logSlowFilter_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Filters the slow log by the query's execution plan
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       */
+      public Builder clearLogSlowFilter() {
+        logSlowFilter_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x20000000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Filters the slow log by the query's execution plan
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       */
+      public java.util.List<java.lang.Integer>
+      getLogSlowFilterValueList() {
+        return java.util.Collections.unmodifiableList(logSlowFilter_);
+      }
+      /**
+       * <pre>
+       * Filters the slow log by the query's execution plan
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       */
+      public int getLogSlowFilterValue(int index) {
+        return logSlowFilter_.get(index);
+      }
+      /**
+       * <pre>
+       * Filters the slow log by the query's execution plan
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       */
+      public Builder setLogSlowFilterValue(
+          int index, int value) {
+        ensureLogSlowFilterIsMutable();
+        logSlowFilter_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Filters the slow log by the query's execution plan
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       */
+      public Builder addLogSlowFilterValue(int value) {
+        ensureLogSlowFilterIsMutable();
+        logSlowFilter_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Filters the slow log by the query's execution plan
+       * For details, see [Percona documentation for the variable](https://www.percona.com/doc/percona-server/8.0/diagnostics/slow_extended.html#log_slow_filter).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.LogSlowFilterType log_slow_filter = 62;</code>
+       */
+      public Builder addAllLogSlowFilterValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureLogSlowFilterIsMutable();
+        for (int value : values) {
+          logSlowFilter_.add(value);
+        }
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -16764,7 +18593,7 @@ public final class Mysql80 {
       "\n/yandex/cloud/mdb/mysql/v1/config/mysql" +
       "8_0.proto\022 yandex.cloud.mdb.mysql.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\224\'\n\016MysqlConf" +
+      "dex/cloud/validation.proto\"\300,\n\016MysqlConf" +
       "ig8_0\022K\n\027innodb_buffer_pool_size\030\001 \001(\0132\033" +
       ".google.protobuf.Int64ValueB\r\372\3071\t>=52428" +
       "80\022B\n\017max_connections\030\002 \001(\0132\033.google.pro" +
@@ -16866,40 +18695,57 @@ public final class Mysql80 {
       "g\0307 \001(\0132\033.google.protobuf.Int64ValueB\014\372\307" +
       "1\01060-86400\022X\n\034range_optimizer_max_mem_si" +
       "ze\0308 \001(\0132\033.google.protobuf.Int64ValueB\025\372" +
-      "\3071\0211048576-268435456\"\210\004\n\007SQLMode\022\027\n\023SQLM" +
-      "ODE_UNSPECIFIED\020\000\022\027\n\023ALLOW_INVALID_DATES" +
-      "\020\001\022\017\n\013ANSI_QUOTES\020\002\022\036\n\032ERROR_FOR_DIVISIO" +
-      "N_BY_ZERO\020\003\022\027\n\023HIGH_NOT_PRECEDENCE\020\004\022\020\n\014" +
-      "IGNORE_SPACE\020\005\022\031\n\025NO_AUTO_VALUE_ON_ZERO\020" +
-      "\006\022\030\n\024NO_BACKSLASH_ESCAPES\020\007\022\032\n\026NO_ENGINE" +
-      "_SUBSTITUTION\020\010\022\033\n\027NO_UNSIGNED_SUBTRACTI" +
-      "ON\020\t\022\020\n\014NO_ZERO_DATE\020\n\022\023\n\017NO_ZERO_IN_DAT" +
-      "E\020\013\022\026\n\022ONLY_FULL_GROUP_BY\020\017\022\033\n\027PAD_CHAR_" +
-      "TO_FULL_LENGTH\020\020\022\023\n\017PIPES_AS_CONCAT\020\021\022\021\n" +
-      "\rREAL_AS_FLOAT\020\022\022\025\n\021STRICT_ALL_TABLES\020\023\022" +
-      "\027\n\023STRICT_TRANS_TABLES\020\024\022\034\n\030TIME_TRUNCAT" +
-      "E_FRACTIONAL\020\025\022\010\n\004ANSI\020\026\022\017\n\013TRADITIONAL\020" +
-      "\027\022\024\n\020NO_DIR_IN_CREATE\020\030\"t\n\nAuthPlugin\022\033\n" +
-      "\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NATI" +
-      "VE_PASSWORD\020\001\022\031\n\025CACHING_SHA2_PASSWORD\020\002" +
-      "\022\023\n\017SHA256_PASSWORD\020\003\"x\n\024TransactionIsol" +
-      "ation\022%\n!TRANSACTION_ISOLATION_UNSPECIFI" +
-      "ED\020\000\022\022\n\016READ_COMMITTED\020\001\022\023\n\017REPEATABLE_R" +
-      "EAD\020\002\022\020\n\014SERIALIZABLE\020\003\"U\n\016BinlogRowImag" +
-      "e\022 \n\034BINLOG_ROW_IMAGE_UNSPECIFIED\020\000\022\010\n\004F" +
-      "ULL\020\001\022\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021SlaveP" +
-      "arallelType\022#\n\037SLAVE_PARALLEL_TYPE_UNSPE" +
-      "CIFIED\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLOGICAL_CLOCK\020" +
-      "\002\"\360\001\n\021MysqlConfigSet8_0\022J\n\020effective_con" +
-      "fig\030\001 \001(\01320.yandex.cloud.mdb.mysql.v1.co" +
-      "nfig.MysqlConfig8_0\022E\n\013user_config\030\002 \001(\013" +
-      "20.yandex.cloud.mdb.mysql.v1.config.Mysq" +
-      "lConfig8_0\022H\n\016default_config\030\003 \001(\01320.yan" +
-      "dex.cloud.mdb.mysql.v1.config.MysqlConfi" +
-      "g8_0Br\n$yandex.cloud.api.mdb.mysql.v1.co" +
-      "nfigZJgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/mdb/mysql/v1/config;mysql" +
-      "b\006proto3"
+      "\3071\0211048576-268435456\0222\n\016slow_query_log\0309" +
+      " \001(\0132\032.google.protobuf.BoolValue\022F\n slow" +
+      "_query_log_always_write_time\030: \001(\0132\034.goo" +
+      "gle.protobuf.DoubleValue\022\\\n\022log_slow_rat" +
+      "e_type\030; \001(\0162@.yandex.cloud.mdb.mysql.v1" +
+      ".config.MysqlConfig8_0.LogSlowRateType\022D" +
+      "\n\023log_slow_rate_limit\030< \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\n\372\3071\0061-1000\022:\n\026log_slow" +
+      "_sp_statements\030= \001(\0132\032.google.protobuf.B" +
+      "oolValue\022[\n\017log_slow_filter\030> \003(\0162B.yand" +
+      "ex.cloud.mdb.mysql.v1.config.MysqlConfig" +
+      "8_0.LogSlowFilterType\"\210\004\n\007SQLMode\022\027\n\023SQL" +
+      "MODE_UNSPECIFIED\020\000\022\027\n\023ALLOW_INVALID_DATE" +
+      "S\020\001\022\017\n\013ANSI_QUOTES\020\002\022\036\n\032ERROR_FOR_DIVISI" +
+      "ON_BY_ZERO\020\003\022\027\n\023HIGH_NOT_PRECEDENCE\020\004\022\020\n" +
+      "\014IGNORE_SPACE\020\005\022\031\n\025NO_AUTO_VALUE_ON_ZERO" +
+      "\020\006\022\030\n\024NO_BACKSLASH_ESCAPES\020\007\022\032\n\026NO_ENGIN" +
+      "E_SUBSTITUTION\020\010\022\033\n\027NO_UNSIGNED_SUBTRACT" +
+      "ION\020\t\022\020\n\014NO_ZERO_DATE\020\n\022\023\n\017NO_ZERO_IN_DA" +
+      "TE\020\013\022\026\n\022ONLY_FULL_GROUP_BY\020\017\022\033\n\027PAD_CHAR" +
+      "_TO_FULL_LENGTH\020\020\022\023\n\017PIPES_AS_CONCAT\020\021\022\021" +
+      "\n\rREAL_AS_FLOAT\020\022\022\025\n\021STRICT_ALL_TABLES\020\023" +
+      "\022\027\n\023STRICT_TRANS_TABLES\020\024\022\034\n\030TIME_TRUNCA" +
+      "TE_FRACTIONAL\020\025\022\010\n\004ANSI\020\026\022\017\n\013TRADITIONAL" +
+      "\020\027\022\024\n\020NO_DIR_IN_CREATE\020\030\"t\n\nAuthPlugin\022\033" +
+      "\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NAT" +
+      "IVE_PASSWORD\020\001\022\031\n\025CACHING_SHA2_PASSWORD\020" +
+      "\002\022\023\n\017SHA256_PASSWORD\020\003\"x\n\024TransactionIso" +
+      "lation\022%\n!TRANSACTION_ISOLATION_UNSPECIF" +
+      "IED\020\000\022\022\n\016READ_COMMITTED\020\001\022\023\n\017REPEATABLE_" +
+      "READ\020\002\022\020\n\014SERIALIZABLE\020\003\"U\n\016BinlogRowIma" +
+      "ge\022 \n\034BINLOG_ROW_IMAGE_UNSPECIFIED\020\000\022\010\n\004" +
+      "FULL\020\001\022\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021Slave" +
+      "ParallelType\022#\n\037SLAVE_PARALLEL_TYPE_UNSP" +
+      "ECIFIED\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLOGICAL_CLOCK" +
+      "\020\002\"M\n\017LogSlowRateType\022\"\n\036LOG_SLOW_RATE_T" +
+      "YPE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\t\n\005QUERY\020" +
+      "\002\"\241\001\n\021LogSlowFilterType\022$\n LOG_SLOW_FILT" +
+      "ER_TYPE_UNSPECIFIED\020\000\022\r\n\tFULL_SCAN\020\001\022\r\n\t" +
+      "FULL_JOIN\020\002\022\r\n\tTMP_TABLE\020\003\022\025\n\021TMP_TABLE_" +
+      "ON_DISK\020\004\022\014\n\010FILESORT\020\005\022\024\n\020FILESORT_ON_D" +
+      "ISK\020\006\"\360\001\n\021MysqlConfigSet8_0\022J\n\020effective" +
+      "_config\030\001 \001(\01320.yandex.cloud.mdb.mysql.v" +
+      "1.config.MysqlConfig8_0\022E\n\013user_config\030\002" +
+      " \001(\01320.yandex.cloud.mdb.mysql.v1.config." +
+      "MysqlConfig8_0\022H\n\016default_config\030\003 \001(\01320" +
+      ".yandex.cloud.mdb.mysql.v1.config.MysqlC" +
+      "onfig8_0Br\n$yandex.cloud.api.mdb.mysql.v" +
+      "1.configZJgithub.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/mdb/mysql/v1/config;m" +
+      "ysqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16920,7 +18766,7 @@ public final class Mysql80 {
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig8_0_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig8_0_descriptor,
-        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "RegexpTimeLimit", "MdbPreserveBinlogBytes", "InteractiveTimeout", "WaitTimeout", "MdbOfflineModeEnableLag", "MdbOfflineModeDisableLag", "RangeOptimizerMaxMemSize", });
+        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "RegexpTimeLimit", "MdbPreserveBinlogBytes", "InteractiveTimeout", "WaitTimeout", "MdbOfflineModeEnableLag", "MdbOfflineModeDisableLag", "RangeOptimizerMaxMemSize", "SlowQueryLog", "SlowQueryLogAlwaysWriteTime", "LogSlowRateType", "LogSlowRateLimit", "LogSlowSpStatements", "LogSlowFilter", });
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet8_0_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet8_0_fieldAccessorTable = new

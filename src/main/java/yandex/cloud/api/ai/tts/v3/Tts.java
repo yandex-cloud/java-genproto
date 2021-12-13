@@ -9747,6 +9747,15 @@ public final class Tts {
      */
     yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType getLoudnessNormalizationType();
 
+    /**
+     * <pre>
+     * Optional. Automatically split long text to several utterances and bill accordingly. Some degradation in service quality is possible.
+     * </pre>
+     *
+     * <code>bool unsafe_mode = 7;</code>
+     */
+    boolean getUnsafeMode();
+
     public yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.UtteranceCase getUtteranceCase();
   }
   /**
@@ -9765,6 +9774,7 @@ public final class Tts {
       model_ = "";
       hints_ = java.util.Collections.emptyList();
       loudnessNormalizationType_ = 0;
+      unsafeMode_ = false;
     }
 
     @java.lang.Override
@@ -9843,6 +9853,11 @@ public final class Tts {
               int rawValue = input.readEnum();
 
               loudnessNormalizationType_ = rawValue;
+              break;
+            }
+            case 56: {
+
+              unsafeMode_ = input.readBool();
               break;
             }
             default: {
@@ -10276,6 +10291,19 @@ public final class Tts {
       return result == null ? yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType.UNRECOGNIZED : result;
     }
 
+    public static final int UNSAFE_MODE_FIELD_NUMBER = 7;
+    private boolean unsafeMode_;
+    /**
+     * <pre>
+     * Optional. Automatically split long text to several utterances and bill accordingly. Some degradation in service quality is possible.
+     * </pre>
+     *
+     * <code>bool unsafe_mode = 7;</code>
+     */
+    public boolean getUnsafeMode() {
+      return unsafeMode_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10308,6 +10336,9 @@ public final class Tts {
       if (loudnessNormalizationType_ != yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType.LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(6, loudnessNormalizationType_);
       }
+      if (unsafeMode_ != false) {
+        output.writeBool(7, unsafeMode_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10339,6 +10370,10 @@ public final class Tts {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, loudnessNormalizationType_);
       }
+      if (unsafeMode_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, unsafeMode_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -10365,6 +10400,8 @@ public final class Tts {
             .equals(other.getOutputAudioSpec());
       }
       result = result && loudnessNormalizationType_ == other.loudnessNormalizationType_;
+      result = result && (getUnsafeMode()
+          == other.getUnsafeMode());
       result = result && getUtteranceCase().equals(
           other.getUtteranceCase());
       if (!result) return false;
@@ -10403,6 +10440,9 @@ public final class Tts {
       }
       hash = (37 * hash) + LOUDNESS_NORMALIZATION_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + loudnessNormalizationType_;
+      hash = (37 * hash) + UNSAFE_MODE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUnsafeMode());
       switch (utteranceCase_) {
         case 2:
           hash = (37 * hash) + TEXT_FIELD_NUMBER;
@@ -10565,6 +10605,8 @@ public final class Tts {
         }
         loudnessNormalizationType_ = 0;
 
+        unsafeMode_ = false;
+
         utteranceCase_ = 0;
         utterance_ = null;
         return this;
@@ -10621,6 +10663,7 @@ public final class Tts {
           result.outputAudioSpec_ = outputAudioSpecBuilder_.build();
         }
         result.loudnessNormalizationType_ = loudnessNormalizationType_;
+        result.unsafeMode_ = unsafeMode_;
         result.bitField0_ = to_bitField0_;
         result.utteranceCase_ = utteranceCase_;
         onBuilt();
@@ -10706,6 +10749,9 @@ public final class Tts {
         }
         if (other.loudnessNormalizationType_ != 0) {
           setLoudnessNormalizationTypeValue(other.getLoudnessNormalizationTypeValue());
+        }
+        if (other.getUnsafeMode() != false) {
+          setUnsafeMode(other.getUnsafeMode());
         }
         switch (other.getUtteranceCase()) {
           case TEXT: {
@@ -11662,6 +11708,44 @@ public final class Tts {
         onChanged();
         return this;
       }
+
+      private boolean unsafeMode_ ;
+      /**
+       * <pre>
+       * Optional. Automatically split long text to several utterances and bill accordingly. Some degradation in service quality is possible.
+       * </pre>
+       *
+       * <code>bool unsafe_mode = 7;</code>
+       */
+      public boolean getUnsafeMode() {
+        return unsafeMode_;
+      }
+      /**
+       * <pre>
+       * Optional. Automatically split long text to several utterances and bill accordingly. Some degradation in service quality is possible.
+       * </pre>
+       *
+       * <code>bool unsafe_mode = 7;</code>
+       */
+      public Builder setUnsafeMode(boolean value) {
+        
+        unsafeMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Automatically split long text to several utterances and bill accordingly. Some degradation in service quality is possible.
+       * </pre>
+       *
+       * <code>bool unsafe_mode = 7;</code>
+       */
+      public Builder clearUnsafeMode() {
+        
+        unsafeMode_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -11817,7 +11901,7 @@ public final class Tts {
       "ints\022\017\n\005voice\030\001 \001(\tH\000\0229\n\016audio_template\030" +
       "\002 \001(\0132\037.speechkit.tts.v3.AudioTemplateH\000" +
       "\022\017\n\005speed\030\003 \001(\001H\000\022\020\n\006volume\030\004 \001(\001H\000B\006\n\004H" +
-      "int\"\267\003\n\031UtteranceSynthesisRequest\022\r\n\005mod" +
+      "int\"\314\003\n\031UtteranceSynthesisRequest\022\r\n\005mod" +
       "el\030\001 \001(\t\022\016\n\004text\030\002 \001(\tH\000\0227\n\rtext_templat" +
       "e\030\003 \001(\0132\036.speechkit.tts.v3.TextTemplateH" +
       "\000\022&\n\005hints\030\004 \003(\0132\027.speechkit.tts.v3.Hint" +
@@ -11825,12 +11909,13 @@ public final class Tts {
       ".tts.v3.AudioFormatOptions\022j\n\033loudness_n" +
       "ormalization_type\030\006 \001(\0162E.speechkit.tts." +
       "v3.UtteranceSynthesisRequest.LoudnessNor" +
-      "malizationType\"`\n\031LoudnessNormalizationT" +
-      "ype\022+\n\'LOUDNESS_NORMALIZATION_TYPE_UNSPE" +
-      "CIFIED\020\000\022\014\n\010MAX_PEAK\020\001\022\010\n\004LUFS\020\002B\013\n\tUtte" +
-      "ranceB\\\n\032yandex.cloud.api.ai.tts.v3Z>git" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/ai/tts/v3;ttsb\006proto3"
+      "malizationType\022\023\n\013unsafe_mode\030\007 \001(\010\"`\n\031L" +
+      "oudnessNormalizationType\022+\n\'LOUDNESS_NOR" +
+      "MALIZATION_TYPE_UNSPECIFIED\020\000\022\014\n\010MAX_PEA" +
+      "K\020\001\022\010\n\004LUFS\020\002B\013\n\tUtteranceB\\\n\032yandex.clo" +
+      "ud.api.ai.tts.v3Z>github.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/ai/tts/v3;tts" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11915,7 +12000,7 @@ public final class Tts {
     internal_static_speechkit_tts_v3_UtteranceSynthesisRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_tts_v3_UtteranceSynthesisRequest_descriptor,
-        new java.lang.String[] { "Model", "Text", "TextTemplate", "Hints", "OutputAudioSpec", "LoudnessNormalizationType", "Utterance", });
+        new java.lang.String[] { "Model", "Text", "TextTemplate", "Hints", "OutputAudioSpec", "LoudnessNormalizationType", "UnsafeMode", "Utterance", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
