@@ -2682,7 +2682,7 @@ public final class ResourceServiceOuterClass {
 
     /**
      * <pre>
-     * Specify the protocol schema to be used in communication with origin. 
+     * Specify the protocol schema to be used in communication with origin.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 5;</code>
@@ -2690,7 +2690,7 @@ public final class ResourceServiceOuterClass {
     int getOriginProtocolValue();
     /**
      * <pre>
-     * Specify the protocol schema to be used in communication with origin. 
+     * Specify the protocol schema to be used in communication with origin.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 5;</code>
@@ -2700,7 +2700,7 @@ public final class ResourceServiceOuterClass {
     /**
      * <pre>
      * Flag to create Resource either in active or disabled state.
-     * In active state Origins payload could be transmitted from CDN CNAME requests. 
+     * In active state Origins payload could be transmitted from CDN CNAME requests.
      * Default value: true
      * </pre>
      *
@@ -2710,7 +2710,7 @@ public final class ResourceServiceOuterClass {
     /**
      * <pre>
      * Flag to create Resource either in active or disabled state.
-     * In active state Origins payload could be transmitted from CDN CNAME requests. 
+     * In active state Origins payload could be transmitted from CDN CNAME requests.
      * Default value: true
      * </pre>
      *
@@ -2720,7 +2720,7 @@ public final class ResourceServiceOuterClass {
     /**
      * <pre>
      * Flag to create Resource either in active or disabled state.
-     * In active state Origins payload could be transmitted from CDN CNAME requests. 
+     * In active state Origins payload could be transmitted from CDN CNAME requests.
      * Default value: true
      * </pre>
      *
@@ -2950,7 +2950,7 @@ public final class ResourceServiceOuterClass {
 
       /**
        * <pre>
-       * Create new Origins group with single source, it's id will be 
+       * Create new Origins group with single source, it's id will be
        * returned in result.
        * </pre>
        *
@@ -2959,7 +2959,7 @@ public final class ResourceServiceOuterClass {
       java.lang.String getOriginSource();
       /**
        * <pre>
-       * Create new Origins group with single source, it's id will be 
+       * Create new Origins group with single source, it's id will be
        * returned in result.
        * </pre>
        *
@@ -2970,7 +2970,7 @@ public final class ResourceServiceOuterClass {
 
       /**
        * <pre>
-       * Set up resourse origin parameters.
+       * Set up resource origin parameters.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOriginParams origin_source_params = 3;</code>
@@ -2978,7 +2978,7 @@ public final class ResourceServiceOuterClass {
       boolean hasOriginSourceParams();
       /**
        * <pre>
-       * Set up resourse origin parameters.
+       * Set up resource origin parameters.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOriginParams origin_source_params = 3;</code>
@@ -2986,7 +2986,7 @@ public final class ResourceServiceOuterClass {
       yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ResourceOriginParams getOriginSourceParams();
       /**
        * <pre>
-       * Set up resourse origin parameters.
+       * Set up resource origin parameters.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOriginParams origin_source_params = 3;</code>
@@ -3149,7 +3149,7 @@ public final class ResourceServiceOuterClass {
       public static final int ORIGIN_SOURCE_FIELD_NUMBER = 2;
       /**
        * <pre>
-       * Create new Origins group with single source, it's id will be 
+       * Create new Origins group with single source, it's id will be
        * returned in result.
        * </pre>
        *
@@ -3174,7 +3174,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Create new Origins group with single source, it's id will be 
+       * Create new Origins group with single source, it's id will be
        * returned in result.
        * </pre>
        *
@@ -3202,7 +3202,7 @@ public final class ResourceServiceOuterClass {
       public static final int ORIGIN_SOURCE_PARAMS_FIELD_NUMBER = 3;
       /**
        * <pre>
-       * Set up resourse origin parameters.
+       * Set up resource origin parameters.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOriginParams origin_source_params = 3;</code>
@@ -3212,7 +3212,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Set up resourse origin parameters.
+       * Set up resource origin parameters.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOriginParams origin_source_params = 3;</code>
@@ -3225,7 +3225,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Set up resourse origin parameters.
+       * Set up resource origin parameters.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOriginParams origin_source_params = 3;</code>
@@ -3675,7 +3675,7 @@ public final class ResourceServiceOuterClass {
 
         /**
          * <pre>
-         * Create new Origins group with single source, it's id will be 
+         * Create new Origins group with single source, it's id will be
          * returned in result.
          * </pre>
          *
@@ -3700,7 +3700,7 @@ public final class ResourceServiceOuterClass {
         }
         /**
          * <pre>
-         * Create new Origins group with single source, it's id will be 
+         * Create new Origins group with single source, it's id will be
          * returned in result.
          * </pre>
          *
@@ -3726,7 +3726,7 @@ public final class ResourceServiceOuterClass {
         }
         /**
          * <pre>
-         * Create new Origins group with single source, it's id will be 
+         * Create new Origins group with single source, it's id will be
          * returned in result.
          * </pre>
          *
@@ -3744,7 +3744,7 @@ public final class ResourceServiceOuterClass {
         }
         /**
          * <pre>
-         * Create new Origins group with single source, it's id will be 
+         * Create new Origins group with single source, it's id will be
          * returned in result.
          * </pre>
          *
@@ -3760,7 +3760,7 @@ public final class ResourceServiceOuterClass {
         }
         /**
          * <pre>
-         * Create new Origins group with single source, it's id will be 
+         * Create new Origins group with single source, it's id will be
          * returned in result.
          * </pre>
          *
@@ -3782,7 +3782,7 @@ public final class ResourceServiceOuterClass {
             yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ResourceOriginParams, yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ResourceOriginParams.Builder, yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ResourceOriginParamsOrBuilder> originSourceParamsBuilder_;
         /**
          * <pre>
-         * Set up resourse origin parameters.
+         * Set up resource origin parameters.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOriginParams origin_source_params = 3;</code>
@@ -3792,7 +3792,7 @@ public final class ResourceServiceOuterClass {
         }
         /**
          * <pre>
-         * Set up resourse origin parameters.
+         * Set up resource origin parameters.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOriginParams origin_source_params = 3;</code>
@@ -3812,7 +3812,7 @@ public final class ResourceServiceOuterClass {
         }
         /**
          * <pre>
-         * Set up resourse origin parameters.
+         * Set up resource origin parameters.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOriginParams origin_source_params = 3;</code>
@@ -3832,7 +3832,7 @@ public final class ResourceServiceOuterClass {
         }
         /**
          * <pre>
-         * Set up resourse origin parameters.
+         * Set up resource origin parameters.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOriginParams origin_source_params = 3;</code>
@@ -3850,7 +3850,7 @@ public final class ResourceServiceOuterClass {
         }
         /**
          * <pre>
-         * Set up resourse origin parameters.
+         * Set up resource origin parameters.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOriginParams origin_source_params = 3;</code>
@@ -3876,7 +3876,7 @@ public final class ResourceServiceOuterClass {
         }
         /**
          * <pre>
-         * Set up resourse origin parameters.
+         * Set up resource origin parameters.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOriginParams origin_source_params = 3;</code>
@@ -3899,7 +3899,7 @@ public final class ResourceServiceOuterClass {
         }
         /**
          * <pre>
-         * Set up resourse origin parameters.
+         * Set up resource origin parameters.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOriginParams origin_source_params = 3;</code>
@@ -3909,7 +3909,7 @@ public final class ResourceServiceOuterClass {
         }
         /**
          * <pre>
-         * Set up resourse origin parameters.
+         * Set up resource origin parameters.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOriginParams origin_source_params = 3;</code>
@@ -3926,7 +3926,7 @@ public final class ResourceServiceOuterClass {
         }
         /**
          * <pre>
-         * Set up resourse origin parameters.
+         * Set up resource origin parameters.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOriginParams origin_source_params = 3;</code>
@@ -4156,7 +4156,7 @@ public final class ResourceServiceOuterClass {
     private int originProtocol_;
     /**
      * <pre>
-     * Specify the protocol schema to be used in communication with origin. 
+     * Specify the protocol schema to be used in communication with origin.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 5;</code>
@@ -4166,7 +4166,7 @@ public final class ResourceServiceOuterClass {
     }
     /**
      * <pre>
-     * Specify the protocol schema to be used in communication with origin. 
+     * Specify the protocol schema to be used in communication with origin.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 5;</code>
@@ -4182,7 +4182,7 @@ public final class ResourceServiceOuterClass {
     /**
      * <pre>
      * Flag to create Resource either in active or disabled state.
-     * In active state Origins payload could be transmitted from CDN CNAME requests. 
+     * In active state Origins payload could be transmitted from CDN CNAME requests.
      * Default value: true
      * </pre>
      *
@@ -4194,7 +4194,7 @@ public final class ResourceServiceOuterClass {
     /**
      * <pre>
      * Flag to create Resource either in active or disabled state.
-     * In active state Origins payload could be transmitted from CDN CNAME requests. 
+     * In active state Origins payload could be transmitted from CDN CNAME requests.
      * Default value: true
      * </pre>
      *
@@ -4206,7 +4206,7 @@ public final class ResourceServiceOuterClass {
     /**
      * <pre>
      * Flag to create Resource either in active or disabled state.
-     * In active state Origins payload could be transmitted from CDN CNAME requests. 
+     * In active state Origins payload could be transmitted from CDN CNAME requests.
      * Default value: true
      * </pre>
      *
@@ -5255,7 +5255,7 @@ public final class ResourceServiceOuterClass {
       private int originProtocol_ = 0;
       /**
        * <pre>
-       * Specify the protocol schema to be used in communication with origin. 
+       * Specify the protocol schema to be used in communication with origin.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 5;</code>
@@ -5265,7 +5265,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Specify the protocol schema to be used in communication with origin. 
+       * Specify the protocol schema to be used in communication with origin.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 5;</code>
@@ -5277,7 +5277,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Specify the protocol schema to be used in communication with origin. 
+       * Specify the protocol schema to be used in communication with origin.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 5;</code>
@@ -5289,7 +5289,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Specify the protocol schema to be used in communication with origin. 
+       * Specify the protocol schema to be used in communication with origin.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 5;</code>
@@ -5305,7 +5305,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Specify the protocol schema to be used in communication with origin. 
+       * Specify the protocol schema to be used in communication with origin.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 5;</code>
@@ -5323,7 +5323,7 @@ public final class ResourceServiceOuterClass {
       /**
        * <pre>
        * Flag to create Resource either in active or disabled state.
-       * In active state Origins payload could be transmitted from CDN CNAME requests. 
+       * In active state Origins payload could be transmitted from CDN CNAME requests.
        * Default value: true
        * </pre>
        *
@@ -5335,7 +5335,7 @@ public final class ResourceServiceOuterClass {
       /**
        * <pre>
        * Flag to create Resource either in active or disabled state.
-       * In active state Origins payload could be transmitted from CDN CNAME requests. 
+       * In active state Origins payload could be transmitted from CDN CNAME requests.
        * Default value: true
        * </pre>
        *
@@ -5351,7 +5351,7 @@ public final class ResourceServiceOuterClass {
       /**
        * <pre>
        * Flag to create Resource either in active or disabled state.
-       * In active state Origins payload could be transmitted from CDN CNAME requests. 
+       * In active state Origins payload could be transmitted from CDN CNAME requests.
        * Default value: true
        * </pre>
        *
@@ -5373,7 +5373,7 @@ public final class ResourceServiceOuterClass {
       /**
        * <pre>
        * Flag to create Resource either in active or disabled state.
-       * In active state Origins payload could be transmitted from CDN CNAME requests. 
+       * In active state Origins payload could be transmitted from CDN CNAME requests.
        * Default value: true
        * </pre>
        *
@@ -5393,7 +5393,7 @@ public final class ResourceServiceOuterClass {
       /**
        * <pre>
        * Flag to create Resource either in active or disabled state.
-       * In active state Origins payload could be transmitted from CDN CNAME requests. 
+       * In active state Origins payload could be transmitted from CDN CNAME requests.
        * Default value: true
        * </pre>
        *
@@ -5417,7 +5417,7 @@ public final class ResourceServiceOuterClass {
       /**
        * <pre>
        * Flag to create Resource either in active or disabled state.
-       * In active state Origins payload could be transmitted from CDN CNAME requests. 
+       * In active state Origins payload could be transmitted from CDN CNAME requests.
        * Default value: true
        * </pre>
        *
@@ -5437,7 +5437,7 @@ public final class ResourceServiceOuterClass {
       /**
        * <pre>
        * Flag to create Resource either in active or disabled state.
-       * In active state Origins payload could be transmitted from CDN CNAME requests. 
+       * In active state Origins payload could be transmitted from CDN CNAME requests.
        * Default value: true
        * </pre>
        *
@@ -5451,7 +5451,7 @@ public final class ResourceServiceOuterClass {
       /**
        * <pre>
        * Flag to create Resource either in active or disabled state.
-       * In active state Origins payload could be transmitted from CDN CNAME requests. 
+       * In active state Origins payload could be transmitted from CDN CNAME requests.
        * Default value: true
        * </pre>
        *
@@ -5468,7 +5468,7 @@ public final class ResourceServiceOuterClass {
       /**
        * <pre>
        * Flag to create Resource either in active or disabled state.
-       * In active state Origins payload could be transmitted from CDN CNAME requests. 
+       * In active state Origins payload could be transmitted from CDN CNAME requests.
        * Default value: true
        * </pre>
        *
@@ -5852,7 +5852,7 @@ public final class ResourceServiceOuterClass {
 
     /**
      * <pre>
-     * Sourse of the content.
+     * Source of the content.
      * </pre>
      *
      * <code>string source = 1;</code>
@@ -5860,7 +5860,7 @@ public final class ResourceServiceOuterClass {
     java.lang.String getSource();
     /**
      * <pre>
-     * Sourse of the content.
+     * Source of the content.
      * </pre>
      *
      * <code>string source = 1;</code>
@@ -5895,7 +5895,7 @@ public final class ResourceServiceOuterClass {
   }
   /**
    * <pre>
-   * A set of resourse origin parameters. 
+   * A set of resource origin parameters.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOriginParams}
@@ -5992,7 +5992,7 @@ public final class ResourceServiceOuterClass {
     private volatile java.lang.Object source_;
     /**
      * <pre>
-     * Sourse of the content.
+     * Source of the content.
      * </pre>
      *
      * <code>string source = 1;</code>
@@ -6011,7 +6011,7 @@ public final class ResourceServiceOuterClass {
     }
     /**
      * <pre>
-     * Sourse of the content.
+     * Source of the content.
      * </pre>
      *
      * <code>string source = 1;</code>
@@ -6236,7 +6236,7 @@ public final class ResourceServiceOuterClass {
     }
     /**
      * <pre>
-     * A set of resourse origin parameters. 
+     * A set of resource origin parameters.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOriginParams}
@@ -6403,7 +6403,7 @@ public final class ResourceServiceOuterClass {
       private java.lang.Object source_ = "";
       /**
        * <pre>
-       * Sourse of the content.
+       * Source of the content.
        * </pre>
        *
        * <code>string source = 1;</code>
@@ -6422,7 +6422,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Sourse of the content.
+       * Source of the content.
        * </pre>
        *
        * <code>string source = 1;</code>
@@ -6442,7 +6442,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Sourse of the content.
+       * Source of the content.
        * </pre>
        *
        * <code>string source = 1;</code>
@@ -6459,7 +6459,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Sourse of the content.
+       * Source of the content.
        * </pre>
        *
        * <code>string source = 1;</code>
@@ -6472,7 +6472,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Sourse of the content.
+       * Source of the content.
        * </pre>
        *
        * <code>string source = 1;</code>
@@ -7379,7 +7379,7 @@ public final class ResourceServiceOuterClass {
 
     /**
      * <pre>
-     * Specify the protocol schema to be used in communication with origin. 
+     * Specify the protocol schema to be used in communication with origin.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 5;</code>
@@ -7387,7 +7387,7 @@ public final class ResourceServiceOuterClass {
     int getOriginProtocolValue();
     /**
      * <pre>
-     * Specify the protocol schema to be used in communication with origin. 
+     * Specify the protocol schema to be used in communication with origin.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 5;</code>
@@ -7397,7 +7397,7 @@ public final class ResourceServiceOuterClass {
     /**
      * <pre>
      * Flag to create Resource either in active or disabled state.
-     * In active state Origins payload could be transmitted from CDN CNAME requests. 
+     * In active state Origins payload could be transmitted from CDN CNAME requests.
      * Default value: true
      * </pre>
      *
@@ -7407,7 +7407,7 @@ public final class ResourceServiceOuterClass {
     /**
      * <pre>
      * Flag to create Resource either in active or disabled state.
-     * In active state Origins payload could be transmitted from CDN CNAME requests. 
+     * In active state Origins payload could be transmitted from CDN CNAME requests.
      * Default value: true
      * </pre>
      *
@@ -7417,7 +7417,7 @@ public final class ResourceServiceOuterClass {
     /**
      * <pre>
      * Flag to create Resource either in active or disabled state.
-     * In active state Origins payload could be transmitted from CDN CNAME requests. 
+     * In active state Origins payload could be transmitted from CDN CNAME requests.
      * Default value: true
      * </pre>
      *
@@ -7745,7 +7745,7 @@ public final class ResourceServiceOuterClass {
     private int originProtocol_;
     /**
      * <pre>
-     * Specify the protocol schema to be used in communication with origin. 
+     * Specify the protocol schema to be used in communication with origin.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 5;</code>
@@ -7755,7 +7755,7 @@ public final class ResourceServiceOuterClass {
     }
     /**
      * <pre>
-     * Specify the protocol schema to be used in communication with origin. 
+     * Specify the protocol schema to be used in communication with origin.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 5;</code>
@@ -7771,7 +7771,7 @@ public final class ResourceServiceOuterClass {
     /**
      * <pre>
      * Flag to create Resource either in active or disabled state.
-     * In active state Origins payload could be transmitted from CDN CNAME requests. 
+     * In active state Origins payload could be transmitted from CDN CNAME requests.
      * Default value: true
      * </pre>
      *
@@ -7783,7 +7783,7 @@ public final class ResourceServiceOuterClass {
     /**
      * <pre>
      * Flag to create Resource either in active or disabled state.
-     * In active state Origins payload could be transmitted from CDN CNAME requests. 
+     * In active state Origins payload could be transmitted from CDN CNAME requests.
      * Default value: true
      * </pre>
      *
@@ -7795,7 +7795,7 @@ public final class ResourceServiceOuterClass {
     /**
      * <pre>
      * Flag to create Resource either in active or disabled state.
-     * In active state Origins payload could be transmitted from CDN CNAME requests. 
+     * In active state Origins payload could be transmitted from CDN CNAME requests.
      * Default value: true
      * </pre>
      *
@@ -8858,7 +8858,7 @@ public final class ResourceServiceOuterClass {
       private int originProtocol_ = 0;
       /**
        * <pre>
-       * Specify the protocol schema to be used in communication with origin. 
+       * Specify the protocol schema to be used in communication with origin.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 5;</code>
@@ -8868,7 +8868,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Specify the protocol schema to be used in communication with origin. 
+       * Specify the protocol schema to be used in communication with origin.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 5;</code>
@@ -8880,7 +8880,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Specify the protocol schema to be used in communication with origin. 
+       * Specify the protocol schema to be used in communication with origin.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 5;</code>
@@ -8892,7 +8892,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Specify the protocol schema to be used in communication with origin. 
+       * Specify the protocol schema to be used in communication with origin.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 5;</code>
@@ -8908,7 +8908,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Specify the protocol schema to be used in communication with origin. 
+       * Specify the protocol schema to be used in communication with origin.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginProtocol origin_protocol = 5;</code>
@@ -8926,7 +8926,7 @@ public final class ResourceServiceOuterClass {
       /**
        * <pre>
        * Flag to create Resource either in active or disabled state.
-       * In active state Origins payload could be transmitted from CDN CNAME requests. 
+       * In active state Origins payload could be transmitted from CDN CNAME requests.
        * Default value: true
        * </pre>
        *
@@ -8938,7 +8938,7 @@ public final class ResourceServiceOuterClass {
       /**
        * <pre>
        * Flag to create Resource either in active or disabled state.
-       * In active state Origins payload could be transmitted from CDN CNAME requests. 
+       * In active state Origins payload could be transmitted from CDN CNAME requests.
        * Default value: true
        * </pre>
        *
@@ -8954,7 +8954,7 @@ public final class ResourceServiceOuterClass {
       /**
        * <pre>
        * Flag to create Resource either in active or disabled state.
-       * In active state Origins payload could be transmitted from CDN CNAME requests. 
+       * In active state Origins payload could be transmitted from CDN CNAME requests.
        * Default value: true
        * </pre>
        *
@@ -8976,7 +8976,7 @@ public final class ResourceServiceOuterClass {
       /**
        * <pre>
        * Flag to create Resource either in active or disabled state.
-       * In active state Origins payload could be transmitted from CDN CNAME requests. 
+       * In active state Origins payload could be transmitted from CDN CNAME requests.
        * Default value: true
        * </pre>
        *
@@ -8996,7 +8996,7 @@ public final class ResourceServiceOuterClass {
       /**
        * <pre>
        * Flag to create Resource either in active or disabled state.
-       * In active state Origins payload could be transmitted from CDN CNAME requests. 
+       * In active state Origins payload could be transmitted from CDN CNAME requests.
        * Default value: true
        * </pre>
        *
@@ -9020,7 +9020,7 @@ public final class ResourceServiceOuterClass {
       /**
        * <pre>
        * Flag to create Resource either in active or disabled state.
-       * In active state Origins payload could be transmitted from CDN CNAME requests. 
+       * In active state Origins payload could be transmitted from CDN CNAME requests.
        * Default value: true
        * </pre>
        *
@@ -9040,7 +9040,7 @@ public final class ResourceServiceOuterClass {
       /**
        * <pre>
        * Flag to create Resource either in active or disabled state.
-       * In active state Origins payload could be transmitted from CDN CNAME requests. 
+       * In active state Origins payload could be transmitted from CDN CNAME requests.
        * Default value: true
        * </pre>
        *
@@ -9054,7 +9054,7 @@ public final class ResourceServiceOuterClass {
       /**
        * <pre>
        * Flag to create Resource either in active or disabled state.
-       * In active state Origins payload could be transmitted from CDN CNAME requests. 
+       * In active state Origins payload could be transmitted from CDN CNAME requests.
        * Default value: true
        * </pre>
        *
@@ -9071,7 +9071,7 @@ public final class ResourceServiceOuterClass {
       /**
        * <pre>
        * Flag to create Resource either in active or disabled state.
-       * In active state Origins payload could be transmitted from CDN CNAME requests. 
+       * In active state Origins payload could be transmitted from CDN CNAME requests.
        * Default value: true
        * </pre>
        *

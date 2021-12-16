@@ -4202,6 +4202,31 @@ public final class BackendGroupServiceOuterClass {
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroupOrBuilder getGrpcOrBuilder();
 
+    /**
+     * <pre>
+     * New list of Stream backends that the backend group will consist of.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
+     */
+    boolean hasStream();
+    /**
+     * <pre>
+     * New list of Stream backends that the backend group will consist of.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup getStream();
+    /**
+     * <pre>
+     * New list of Stream backends that the backend group will consist of.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroupOrBuilder getStreamOrBuilder();
+
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendGroupRequest.BackendCase getBackendCase();
   }
   /**
@@ -4318,6 +4343,20 @@ public final class BackendGroupServiceOuterClass {
               backendCase_ = 7;
               break;
             }
+            case 66: {
+              yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.Builder subBuilder = null;
+              if (backendCase_ == 8) {
+                subBuilder = ((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_).toBuilder();
+              }
+              backend_ =
+                  input.readMessage(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_);
+                backend_ = subBuilder.buildPartial();
+              }
+              backendCase_ = 8;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4369,6 +4408,7 @@ public final class BackendGroupServiceOuterClass {
         implements com.google.protobuf.Internal.EnumLite {
       HTTP(6),
       GRPC(7),
+      STREAM(8),
       BACKEND_NOT_SET(0);
       private final int value;
       private BackendCase(int value) {
@@ -4386,6 +4426,7 @@ public final class BackendGroupServiceOuterClass {
         switch (value) {
           case 6: return HTTP;
           case 7: return GRPC;
+          case 8: return STREAM;
           case 0: return BACKEND_NOT_SET;
           default: return null;
         }
@@ -4756,6 +4797,44 @@ public final class BackendGroupServiceOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup.getDefaultInstance();
     }
 
+    public static final int STREAM_FIELD_NUMBER = 8;
+    /**
+     * <pre>
+     * New list of Stream backends that the backend group will consist of.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
+     */
+    public boolean hasStream() {
+      return backendCase_ == 8;
+    }
+    /**
+     * <pre>
+     * New list of Stream backends that the backend group will consist of.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup getStream() {
+      if (backendCase_ == 8) {
+         return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * New list of Stream backends that the backend group will consist of.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroupOrBuilder getStreamOrBuilder() {
+      if (backendCase_ == 8) {
+         return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4793,6 +4872,9 @@ public final class BackendGroupServiceOuterClass {
       }
       if (backendCase_ == 7) {
         output.writeMessage(7, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup) backend_);
+      }
+      if (backendCase_ == 8) {
+        output.writeMessage(8, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_);
       }
       unknownFields.writeTo(output);
     }
@@ -4833,6 +4915,10 @@ public final class BackendGroupServiceOuterClass {
       if (backendCase_ == 7) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup) backend_);
+      }
+      if (backendCase_ == 8) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4875,6 +4961,10 @@ public final class BackendGroupServiceOuterClass {
           result = result && getGrpc()
               .equals(other.getGrpc());
           break;
+        case 8:
+          result = result && getStream()
+              .equals(other.getStream());
+          break;
         case 0:
         default:
       }
@@ -4911,6 +5001,10 @@ public final class BackendGroupServiceOuterClass {
         case 7:
           hash = (37 * hash) + GRPC_FIELD_NUMBER;
           hash = (53 * hash) + getGrpc().hashCode();
+          break;
+        case 8:
+          hash = (37 * hash) + STREAM_FIELD_NUMBER;
+          hash = (53 * hash) + getStream().hashCode();
           break;
         case 0:
         default:
@@ -5137,6 +5231,13 @@ public final class BackendGroupServiceOuterClass {
             result.backend_ = grpcBuilder_.build();
           }
         }
+        if (backendCase_ == 8) {
+          if (streamBuilder_ == null) {
+            result.backend_ = backend_;
+          } else {
+            result.backend_ = streamBuilder_.build();
+          }
+        }
         result.bitField0_ = to_bitField0_;
         result.backendCase_ = backendCase_;
         onBuilt();
@@ -5211,6 +5312,10 @@ public final class BackendGroupServiceOuterClass {
           }
           case GRPC: {
             mergeGrpc(other.getGrpc());
+            break;
+          }
+          case STREAM: {
+            mergeStream(other.getStream());
             break;
           }
           case BACKEND_NOT_SET: {
@@ -6228,6 +6333,178 @@ public final class BackendGroupServiceOuterClass {
         onChanged();;
         return grpcBuilder_;
       }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroupOrBuilder> streamBuilder_;
+      /**
+       * <pre>
+       * New list of Stream backends that the backend group will consist of.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
+       */
+      public boolean hasStream() {
+        return backendCase_ == 8;
+      }
+      /**
+       * <pre>
+       * New list of Stream backends that the backend group will consist of.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup getStream() {
+        if (streamBuilder_ == null) {
+          if (backendCase_ == 8) {
+            return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.getDefaultInstance();
+        } else {
+          if (backendCase_ == 8) {
+            return streamBuilder_.getMessage();
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * New list of Stream backends that the backend group will consist of.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
+       */
+      public Builder setStream(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup value) {
+        if (streamBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backend_ = value;
+          onChanged();
+        } else {
+          streamBuilder_.setMessage(value);
+        }
+        backendCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * New list of Stream backends that the backend group will consist of.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
+       */
+      public Builder setStream(
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.Builder builderForValue) {
+        if (streamBuilder_ == null) {
+          backend_ = builderForValue.build();
+          onChanged();
+        } else {
+          streamBuilder_.setMessage(builderForValue.build());
+        }
+        backendCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * New list of Stream backends that the backend group will consist of.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
+       */
+      public Builder mergeStream(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup value) {
+        if (streamBuilder_ == null) {
+          if (backendCase_ == 8 &&
+              backend_ != yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.getDefaultInstance()) {
+            backend_ = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.newBuilder((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            backend_ = value;
+          }
+          onChanged();
+        } else {
+          if (backendCase_ == 8) {
+            streamBuilder_.mergeFrom(value);
+          }
+          streamBuilder_.setMessage(value);
+        }
+        backendCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * New list of Stream backends that the backend group will consist of.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
+       */
+      public Builder clearStream() {
+        if (streamBuilder_ == null) {
+          if (backendCase_ == 8) {
+            backendCase_ = 0;
+            backend_ = null;
+            onChanged();
+          }
+        } else {
+          if (backendCase_ == 8) {
+            backendCase_ = 0;
+            backend_ = null;
+          }
+          streamBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New list of Stream backends that the backend group will consist of.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.Builder getStreamBuilder() {
+        return getStreamFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * New list of Stream backends that the backend group will consist of.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroupOrBuilder getStreamOrBuilder() {
+        if ((backendCase_ == 8) && (streamBuilder_ != null)) {
+          return streamBuilder_.getMessageOrBuilder();
+        } else {
+          if (backendCase_ == 8) {
+            return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * New list of Stream backends that the backend group will consist of.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroupOrBuilder> 
+          getStreamFieldBuilder() {
+        if (streamBuilder_ == null) {
+          if (!(backendCase_ == 8)) {
+            backend_ = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.getDefaultInstance();
+          }
+          streamBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroupOrBuilder>(
+                  (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_,
+                  getParentForChildren(),
+                  isClean());
+          backend_ = null;
+        }
+        backendCase_ = 8;
+        onChanged();;
+        return streamBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7038,6 +7315,31 @@ public final class BackendGroupServiceOuterClass {
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroupOrBuilder getGrpcOrBuilder();
 
+    /**
+     * <pre>
+     * List of Stream backends that the backend group consists of.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
+     */
+    boolean hasStream();
+    /**
+     * <pre>
+     * List of Stream backends that the backend group consists of.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup getStream();
+    /**
+     * <pre>
+     * List of Stream backends that the backend group consists of.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroupOrBuilder getStreamOrBuilder();
+
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.CreateBackendGroupRequest.BackendCase getBackendCase();
   }
   /**
@@ -7141,6 +7443,20 @@ public final class BackendGroupServiceOuterClass {
               backendCase_ = 6;
               break;
             }
+            case 58: {
+              yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.Builder subBuilder = null;
+              if (backendCase_ == 7) {
+                subBuilder = ((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_).toBuilder();
+              }
+              backend_ =
+                  input.readMessage(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_);
+                backend_ = subBuilder.buildPartial();
+              }
+              backendCase_ = 7;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -7192,6 +7508,7 @@ public final class BackendGroupServiceOuterClass {
         implements com.google.protobuf.Internal.EnumLite {
       HTTP(5),
       GRPC(6),
+      STREAM(7),
       BACKEND_NOT_SET(0);
       private final int value;
       private BackendCase(int value) {
@@ -7209,6 +7526,7 @@ public final class BackendGroupServiceOuterClass {
         switch (value) {
           case 5: return HTTP;
           case 6: return GRPC;
+          case 7: return STREAM;
           case 0: return BACKEND_NOT_SET;
           default: return null;
         }
@@ -7526,6 +7844,44 @@ public final class BackendGroupServiceOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup.getDefaultInstance();
     }
 
+    public static final int STREAM_FIELD_NUMBER = 7;
+    /**
+     * <pre>
+     * List of Stream backends that the backend group consists of.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
+     */
+    public boolean hasStream() {
+      return backendCase_ == 7;
+    }
+    /**
+     * <pre>
+     * List of Stream backends that the backend group consists of.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup getStream() {
+      if (backendCase_ == 7) {
+         return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * List of Stream backends that the backend group consists of.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroupOrBuilder getStreamOrBuilder() {
+      if (backendCase_ == 7) {
+         return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7560,6 +7916,9 @@ public final class BackendGroupServiceOuterClass {
       }
       if (backendCase_ == 6) {
         output.writeMessage(6, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup) backend_);
+      }
+      if (backendCase_ == 7) {
+        output.writeMessage(7, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_);
       }
       unknownFields.writeTo(output);
     }
@@ -7597,6 +7956,10 @@ public final class BackendGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup) backend_);
       }
+      if (backendCase_ == 7) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7633,6 +7996,10 @@ public final class BackendGroupServiceOuterClass {
           result = result && getGrpc()
               .equals(other.getGrpc());
           break;
+        case 7:
+          result = result && getStream()
+              .equals(other.getStream());
+          break;
         case 0:
         default:
       }
@@ -7665,6 +8032,10 @@ public final class BackendGroupServiceOuterClass {
         case 6:
           hash = (37 * hash) + GRPC_FIELD_NUMBER;
           hash = (53 * hash) + getGrpc().hashCode();
+          break;
+        case 7:
+          hash = (37 * hash) + STREAM_FIELD_NUMBER;
+          hash = (53 * hash) + getStream().hashCode();
           break;
         case 0:
         default:
@@ -7880,6 +8251,13 @@ public final class BackendGroupServiceOuterClass {
             result.backend_ = grpcBuilder_.build();
           }
         }
+        if (backendCase_ == 7) {
+          if (streamBuilder_ == null) {
+            result.backend_ = backend_;
+          } else {
+            result.backend_ = streamBuilder_.build();
+          }
+        }
         result.bitField0_ = to_bitField0_;
         result.backendCase_ = backendCase_;
         onBuilt();
@@ -7951,6 +8329,10 @@ public final class BackendGroupServiceOuterClass {
           }
           case GRPC: {
             mergeGrpc(other.getGrpc());
+            break;
+          }
+          case STREAM: {
+            mergeStream(other.getStream());
             break;
           }
           case BACKEND_NOT_SET: {
@@ -8779,6 +9161,178 @@ public final class BackendGroupServiceOuterClass {
         backendCase_ = 6;
         onChanged();;
         return grpcBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroupOrBuilder> streamBuilder_;
+      /**
+       * <pre>
+       * List of Stream backends that the backend group consists of.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
+       */
+      public boolean hasStream() {
+        return backendCase_ == 7;
+      }
+      /**
+       * <pre>
+       * List of Stream backends that the backend group consists of.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup getStream() {
+        if (streamBuilder_ == null) {
+          if (backendCase_ == 7) {
+            return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.getDefaultInstance();
+        } else {
+          if (backendCase_ == 7) {
+            return streamBuilder_.getMessage();
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * List of Stream backends that the backend group consists of.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
+       */
+      public Builder setStream(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup value) {
+        if (streamBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backend_ = value;
+          onChanged();
+        } else {
+          streamBuilder_.setMessage(value);
+        }
+        backendCase_ = 7;
+        return this;
+      }
+      /**
+       * <pre>
+       * List of Stream backends that the backend group consists of.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
+       */
+      public Builder setStream(
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.Builder builderForValue) {
+        if (streamBuilder_ == null) {
+          backend_ = builderForValue.build();
+          onChanged();
+        } else {
+          streamBuilder_.setMessage(builderForValue.build());
+        }
+        backendCase_ = 7;
+        return this;
+      }
+      /**
+       * <pre>
+       * List of Stream backends that the backend group consists of.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
+       */
+      public Builder mergeStream(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup value) {
+        if (streamBuilder_ == null) {
+          if (backendCase_ == 7 &&
+              backend_ != yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.getDefaultInstance()) {
+            backend_ = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.newBuilder((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            backend_ = value;
+          }
+          onChanged();
+        } else {
+          if (backendCase_ == 7) {
+            streamBuilder_.mergeFrom(value);
+          }
+          streamBuilder_.setMessage(value);
+        }
+        backendCase_ = 7;
+        return this;
+      }
+      /**
+       * <pre>
+       * List of Stream backends that the backend group consists of.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
+       */
+      public Builder clearStream() {
+        if (streamBuilder_ == null) {
+          if (backendCase_ == 7) {
+            backendCase_ = 0;
+            backend_ = null;
+            onChanged();
+          }
+        } else {
+          if (backendCase_ == 7) {
+            backendCase_ = 0;
+            backend_ = null;
+          }
+          streamBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of Stream backends that the backend group consists of.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.Builder getStreamBuilder() {
+        return getStreamFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * List of Stream backends that the backend group consists of.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroupOrBuilder getStreamOrBuilder() {
+        if ((backendCase_ == 7) && (streamBuilder_ != null)) {
+          return streamBuilder_.getMessageOrBuilder();
+        } else {
+          if (backendCase_ == 7) {
+            return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * List of Stream backends that the backend group consists of.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroupOrBuilder> 
+          getStreamFieldBuilder() {
+        if (streamBuilder_ == null) {
+          if (!(backendCase_ == 7)) {
+            backend_ = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.getDefaultInstance();
+          }
+          streamBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroupOrBuilder>(
+                  (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup) backend_,
+                  getParentForChildren(),
+                  isClean());
+          backend_ = null;
+        }
+        backendCase_ = 7;
+        onChanged();;
+        return streamBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -17806,7 +18360,7 @@ public final class BackendGroupServiceOuterClass {
       "\001(\t\";\n\031DeleteBackendGroupRequest\022\036\n\020back" +
       "end_group_id\030\001 \001(\tB\004\350\3071\001\"6\n\032DeleteBacken" +
       "dGroupMetadata\022\030\n\020backend_group_id\030\001 \001(\t" +
-      "\"\252\004\n\031UpdateBackendGroupRequest\022\036\n\020backen" +
+      "\"\361\004\n\031UpdateBackendGroupRequest\022\036\n\020backen" +
       "d_group_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 " +
       "\001(\0132\032.google.protobuf.FieldMask\0224\n\004name\030" +
       "\003 \001(\tB&\362\3071\"([a-z]([-a-z0-9]{0,61}[a-z0-9" +
@@ -17818,103 +18372,106 @@ public final class BackendGroupServiceOuterClass {
       "A\n\004http\030\006 \001(\01321.yandex.cloud.apploadbala" +
       "ncer.v1.HttpBackendGroupH\000\022A\n\004grpc\030\007 \001(\013" +
       "21.yandex.cloud.apploadbalancer.v1.GrpcB" +
-      "ackendGroupH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001B\017\n\007backend\022\004\300\3011\001\"6\n" +
-      "\032UpdateBackendGroupMetadata\022\030\n\020backend_g" +
-      "roup_id\030\001 \001(\t\"\354\003\n\031CreateBackendGroupRequ" +
-      "est\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\0224\n\004name\030\002 \001" +
-      "(\tB&\362\3071\"([a-z]([-a-z0-9]{0,61}[a-z0-9])?" +
-      ")?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\237\001\n\006l" +
-      "abels\030\004 \003(\0132F.yandex.cloud.apploadbalanc" +
-      "er.v1.CreateBackendGroupRequest.LabelsEn" +
-      "tryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*" +
-      "\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022A\n\004" +
-      "http\030\005 \001(\01321.yandex.cloud.apploadbalance" +
-      "r.v1.HttpBackendGroupH\000\022A\n\004grpc\030\006 \001(\01321." +
-      "yandex.cloud.apploadbalancer.v1.GrpcBack" +
-      "endGroupH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001B\t\n\007backend\"6\n\032CreateBa" +
+      "ackendGroupH\000\022E\n\006stream\030\010 \001(\01323.yandex.c" +
+      "loud.apploadbalancer.v1.StreamBackendGro" +
+      "upH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001B\017\n\007backend\022\004\300\3011\001\"6\n\032UpdateBa" +
       "ckendGroupMetadata\022\030\n\020backend_group_id\030\001" +
-      " \001(\t\"\202\002\n\021AddBackendRequest\022\036\n\020backend_gr" +
-      "oup_id\030\001 \001(\tB\004\350\3071\001\022<\n\004http\030\002 \001(\0132,.yande" +
-      "x.cloud.apploadbalancer.v1.HttpBackendH\000" +
-      "\022<\n\004grpc\030\003 \001(\0132,.yandex.cloud.apploadbal" +
-      "ancer.v1.GrpcBackendH\000\022@\n\006stream\030\005 \001(\0132." +
-      ".yandex.cloud.apploadbalancer.v1.StreamB" +
-      "ackendH\000B\017\n\007backend\022\004\300\3011\001\"D\n\022AddBackendM" +
-      "etadata\022\030\n\020backend_group_id\030\001 \001(\t\022\024\n\014bac" +
-      "kend_name\030\002 \001(\t\"\266\002\n\024UpdateBackendRequest" +
-      "\022\036\n\020backend_group_id\030\001 \001(\tB\004\350\3071\001\022/\n\013upda" +
-      "te_mask\030\002 \001(\0132\032.google.protobuf.FieldMas" +
-      "k\022<\n\004http\030\003 \001(\0132,.yandex.cloud.apploadba" +
-      "lancer.v1.HttpBackendH\000\022<\n\004grpc\030\004 \001(\0132,." +
-      "yandex.cloud.apploadbalancer.v1.GrpcBack" +
-      "endH\000\022@\n\006stream\030\005 \001(\0132..yandex.cloud.app" +
-      "loadbalancer.v1.StreamBackendH\000B\017\n\007backe" +
-      "nd\022\004\300\3011\001\"G\n\025UpdateBackendMetadata\022\030\n\020bac" +
-      "kend_group_id\030\001 \001(\t\022\024\n\014backend_name\030\002 \001(" +
-      "\t\"R\n\024RemoveBackendRequest\022\036\n\020backend_gro" +
-      "up_id\030\001 \001(\tB\004\350\3071\001\022\032\n\014backend_name\030\002 \001(\tB" +
-      "\004\350\3071\001\"G\n\025RemoveBackendMetadata\022\030\n\020backen" +
-      "d_group_id\030\001 \001(\t\022\024\n\014backend_name\030\002 \001(\t\"\211" +
-      "\001\n!ListBackendGroupOperationsRequest\022&\n\020" +
-      "backend_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\t" +
-      "page_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_toke" +
-      "n\030\003 \001(\tB\t\212\3101\005<=100\"t\n\"ListBackendGroupOp" +
-      "erationsResponse\0225\n\noperations\030\001 \003(\0132!.y" +
-      "andex.cloud.operation.Operation\022\027\n\017next_" +
-      "page_token\030\002 \001(\t2\361\016\n\023BackendGroupService" +
-      "\022\253\001\n\003Get\0227.yandex.cloud.apploadbalancer." +
-      "v1.GetBackendGroupRequest\032-.yandex.cloud" +
-      ".apploadbalancer.v1.BackendGroup\"<\202\323\344\223\0026" +
-      "\0224/apploadbalancer/v1/backendGroups/{bac" +
-      "kend_group_id}\022\250\001\n\004List\0229.yandex.cloud.a" +
-      "pploadbalancer.v1.ListBackendGroupsReque" +
-      "st\032:.yandex.cloud.apploadbalancer.v1.Lis" +
-      "tBackendGroupsResponse\")\202\323\344\223\002#\022!/appload" +
-      "balancer/v1/backendGroups\022\303\001\n\006Create\022:.y" +
-      "andex.cloud.apploadbalancer.v1.CreateBac" +
-      "kendGroupRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"Z\202\323\344\223\002&\"!/apploadbalancer/v1" +
-      "/backendGroups:\001*\262\322**\n\032CreateBackendGrou" +
-      "pMetadata\022\014BackendGroup\022\326\001\n\006Update\022:.yan" +
-      "dex.cloud.apploadbalancer.v1.UpdateBacke" +
-      "ndGroupRequest\032!.yandex.cloud.operation." +
-      "Operation\"m\202\323\344\223\002924/apploadbalancer/v1/b" +
-      "ackendGroups/{backend_group_id}:\001*\262\322**\n\032" +
-      "UpdateBackendGroupMetadata\022\014BackendGroup" +
-      "\022\334\001\n\006Delete\022:.yandex.cloud.apploadbalanc" +
-      "er.v1.DeleteBackendGroupRequest\032!.yandex" +
-      ".cloud.operation.Operation\"s\202\323\344\223\0026*4/app" +
-      "loadbalancer/v1/backendGroups/{backend_g" +
-      "roup_id}\262\322*3\n\032DeleteBackendGroupMetadata" +
-      "\022\025google.protobuf.Empty\022\325\001\n\nAddBackend\0222" +
-      ".yandex.cloud.apploadbalancer.v1.AddBack" +
-      "endRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"p\202\323\344\223\002D\"?/apploadbalancer/v1/backe" +
-      "ndGroups/{backend_group_id}:addBackend:\001" +
-      "*\262\322*\"\n\022AddBackendMetadata\022\014BackendGroup\022" +
-      "\341\001\n\rRemoveBackend\0225.yandex.cloud.appload" +
-      "balancer.v1.RemoveBackendRequest\032!.yande" +
-      "x.cloud.operation.Operation\"v\202\323\344\223\002G\"B/ap" +
+      " \001(\t\"\263\004\n\031CreateBackendGroupRequest\022\027\n\tfo" +
+      "lder_id\030\001 \001(\tB\004\350\3071\001\0224\n\004name\030\002 \001(\tB&\362\3071\"(" +
+      "[a-z]([-a-z0-9]{0,61}[a-z0-9])?)?\022\036\n\013des" +
+      "cription\030\003 \001(\tB\t\212\3101\005<=256\022\237\001\n\006labels\030\004 \003" +
+      "(\0132F.yandex.cloud.apploadbalancer.v1.Cre" +
+      "ateBackendGroupRequest.LabelsEntryBG\202\3101\004" +
+      "<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-6" +
+      "3\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022A\n\004http\030\005 \001(" +
+      "\01321.yandex.cloud.apploadbalancer.v1.Http" +
+      "BackendGroupH\000\022A\n\004grpc\030\006 \001(\01321.yandex.cl" +
+      "oud.apploadbalancer.v1.GrpcBackendGroupH" +
+      "\000\022E\n\006stream\030\007 \001(\01323.yandex.cloud.appload" +
+      "balancer.v1.StreamBackendGroupH\000\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B" +
+      "\t\n\007backend\"6\n\032CreateBackendGroupMetadata" +
+      "\022\030\n\020backend_group_id\030\001 \001(\t\"\202\002\n\021AddBacken" +
+      "dRequest\022\036\n\020backend_group_id\030\001 \001(\tB\004\350\3071\001" +
+      "\022<\n\004http\030\002 \001(\0132,.yandex.cloud.apploadbal" +
+      "ancer.v1.HttpBackendH\000\022<\n\004grpc\030\003 \001(\0132,.y" +
+      "andex.cloud.apploadbalancer.v1.GrpcBacke" +
+      "ndH\000\022@\n\006stream\030\005 \001(\0132..yandex.cloud.appl" +
+      "oadbalancer.v1.StreamBackendH\000B\017\n\007backen" +
+      "d\022\004\300\3011\001\"D\n\022AddBackendMetadata\022\030\n\020backend" +
+      "_group_id\030\001 \001(\t\022\024\n\014backend_name\030\002 \001(\t\"\266\002" +
+      "\n\024UpdateBackendRequest\022\036\n\020backend_group_" +
+      "id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.go" +
+      "ogle.protobuf.FieldMask\022<\n\004http\030\003 \001(\0132,." +
+      "yandex.cloud.apploadbalancer.v1.HttpBack" +
+      "endH\000\022<\n\004grpc\030\004 \001(\0132,.yandex.cloud.applo" +
+      "adbalancer.v1.GrpcBackendH\000\022@\n\006stream\030\005 " +
+      "\001(\0132..yandex.cloud.apploadbalancer.v1.St" +
+      "reamBackendH\000B\017\n\007backend\022\004\300\3011\001\"G\n\025Update" +
+      "BackendMetadata\022\030\n\020backend_group_id\030\001 \001(" +
+      "\t\022\024\n\014backend_name\030\002 \001(\t\"R\n\024RemoveBackend" +
+      "Request\022\036\n\020backend_group_id\030\001 \001(\tB\004\350\3071\001\022" +
+      "\032\n\014backend_name\030\002 \001(\tB\004\350\3071\001\"G\n\025RemoveBac" +
+      "kendMetadata\022\030\n\020backend_group_id\030\001 \001(\t\022\024" +
+      "\n\014backend_name\030\002 \001(\t\"\211\001\n!ListBackendGrou" +
+      "pOperationsRequest\022&\n\020backend_group_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
+      "\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
+      "\"t\n\"ListBackendGroupOperationsResponse\0225" +
+      "\n\noperations\030\001 \003(\0132!.yandex.cloud.operat" +
+      "ion.Operation\022\027\n\017next_page_token\030\002 \001(\t2\361" +
+      "\016\n\023BackendGroupService\022\253\001\n\003Get\0227.yandex." +
+      "cloud.apploadbalancer.v1.GetBackendGroup" +
+      "Request\032-.yandex.cloud.apploadbalancer.v" +
+      "1.BackendGroup\"<\202\323\344\223\0026\0224/apploadbalancer" +
+      "/v1/backendGroups/{backend_group_id}\022\250\001\n" +
+      "\004List\0229.yandex.cloud.apploadbalancer.v1." +
+      "ListBackendGroupsRequest\032:.yandex.cloud." +
+      "apploadbalancer.v1.ListBackendGroupsResp" +
+      "onse\")\202\323\344\223\002#\022!/apploadbalancer/v1/backen" +
+      "dGroups\022\303\001\n\006Create\022:.yandex.cloud.apploa" +
+      "dbalancer.v1.CreateBackendGroupRequest\032!" +
+      ".yandex.cloud.operation.Operation\"Z\202\323\344\223\002" +
+      "&\"!/apploadbalancer/v1/backendGroups:\001*\262" +
+      "\322**\n\032CreateBackendGroupMetadata\022\014Backend" +
+      "Group\022\326\001\n\006Update\022:.yandex.cloud.apploadb" +
+      "alancer.v1.UpdateBackendGroupRequest\032!.y" +
+      "andex.cloud.operation.Operation\"m\202\323\344\223\00292" +
+      "4/apploadbalancer/v1/backendGroups/{back" +
+      "end_group_id}:\001*\262\322**\n\032UpdateBackendGroup" +
+      "Metadata\022\014BackendGroup\022\334\001\n\006Delete\022:.yand" +
+      "ex.cloud.apploadbalancer.v1.DeleteBacken" +
+      "dGroupRequest\032!.yandex.cloud.operation.O" +
+      "peration\"s\202\323\344\223\0026*4/apploadbalancer/v1/ba" +
+      "ckendGroups/{backend_group_id}\262\322*3\n\032Dele" +
+      "teBackendGroupMetadata\022\025google.protobuf." +
+      "Empty\022\325\001\n\nAddBackend\0222.yandex.cloud.appl" +
+      "oadbalancer.v1.AddBackendRequest\032!.yande" +
+      "x.cloud.operation.Operation\"p\202\323\344\223\002D\"?/ap" +
       "ploadbalancer/v1/backendGroups/{backend_" +
-      "group_id}:removeBackend:\001*\262\322*%\n\025RemoveBa" +
-      "ckendMetadata\022\014BackendGroup\022\341\001\n\rUpdateBa" +
-      "ckend\0225.yandex.cloud.apploadbalancer.v1." +
-      "UpdateBackendRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"v\202\323\344\223\002G\"B/apploadbalance" +
-      "r/v1/backendGroups/{backend_group_id}:up" +
-      "dateBackend:\001*\262\322*%\n\025UpdateBackendMetadat" +
-      "a\022\014BackendGroup\022\342\001\n\016ListOperations\022B.yan" +
-      "dex.cloud.apploadbalancer.v1.ListBackend" +
-      "GroupOperationsRequest\032C.yandex.cloud.ap" +
-      "ploadbalancer.v1.ListBackendGroupOperati" +
-      "onsResponse\"G\202\323\344\223\002A\022?/apploadbalancer/v1" +
-      "/backendGroups/{backend_group_id}/operat" +
-      "ionsBz\n#yandex.cloud.api.apploadbalancer" +
-      ".v1ZSgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/apploadbalancer/v1;appload" +
-      "balancerb\006proto3"
+      "group_id}:addBackend:\001*\262\322*\"\n\022AddBackendM" +
+      "etadata\022\014BackendGroup\022\341\001\n\rRemoveBackend\022" +
+      "5.yandex.cloud.apploadbalancer.v1.Remove" +
+      "BackendRequest\032!.yandex.cloud.operation." +
+      "Operation\"v\202\323\344\223\002G\"B/apploadbalancer/v1/b" +
+      "ackendGroups/{backend_group_id}:removeBa" +
+      "ckend:\001*\262\322*%\n\025RemoveBackendMetadata\022\014Bac" +
+      "kendGroup\022\341\001\n\rUpdateBackend\0225.yandex.clo" +
+      "ud.apploadbalancer.v1.UpdateBackendReque" +
+      "st\032!.yandex.cloud.operation.Operation\"v\202" +
+      "\323\344\223\002G\"B/apploadbalancer/v1/backendGroups" +
+      "/{backend_group_id}:updateBackend:\001*\262\322*%" +
+      "\n\025UpdateBackendMetadata\022\014BackendGroup\022\342\001" +
+      "\n\016ListOperations\022B.yandex.cloud.apploadb" +
+      "alancer.v1.ListBackendGroupOperationsReq" +
+      "uest\032C.yandex.cloud.apploadbalancer.v1.L" +
+      "istBackendGroupOperationsResponse\"G\202\323\344\223\002" +
+      "A\022?/apploadbalancer/v1/backendGroups/{ba" +
+      "ckend_group_id}/operationsBz\n#yandex.clo" +
+      "ud.api.apploadbalancer.v1ZSgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/appl" +
+      "oadbalancer/v1;apploadbalancerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -17969,7 +18526,7 @@ public final class BackendGroupServiceOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateBackendGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_UpdateBackendGroupRequest_descriptor,
-        new java.lang.String[] { "BackendGroupId", "UpdateMask", "Name", "Description", "Labels", "Http", "Grpc", "Backend", });
+        new java.lang.String[] { "BackendGroupId", "UpdateMask", "Name", "Description", "Labels", "Http", "Grpc", "Stream", "Backend", });
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateBackendGroupRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_apploadbalancer_v1_UpdateBackendGroupRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateBackendGroupRequest_LabelsEntry_fieldAccessorTable = new
@@ -17987,7 +18544,7 @@ public final class BackendGroupServiceOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_CreateBackendGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_CreateBackendGroupRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Http", "Grpc", "Backend", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Http", "Grpc", "Stream", "Backend", });
     internal_static_yandex_cloud_apploadbalancer_v1_CreateBackendGroupRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_apploadbalancer_v1_CreateBackendGroupRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_apploadbalancer_v1_CreateBackendGroupRequest_LabelsEntry_fieldAccessorTable = new

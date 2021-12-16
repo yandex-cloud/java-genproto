@@ -329,7 +329,7 @@ public final class ResourceOuterClass {
 
   /**
    * <pre>
-   * A certificate type patameters.
+   * A certificate type parameters.
    * </pre>
    *
    * Protobuf enum {@code yandex.cloud.cdn.v1.SSLCertificateType}
@@ -354,7 +354,7 @@ public final class ResourceOuterClass {
     DONT_USE(1),
     /**
      * <pre>
-     * Works only if you have already pointed your domain name to the protected IP address in your DNS 
+     * Works only if you have already pointed your domain name to the protected IP address in your DNS
      * </pre>
      *
      * <code>LETS_ENCRYPT_GCORE = 2;</code>
@@ -389,7 +389,7 @@ public final class ResourceOuterClass {
     public static final int DONT_USE_VALUE = 1;
     /**
      * <pre>
-     * Works only if you have already pointed your domain name to the protected IP address in your DNS 
+     * Works only if you have already pointed your domain name to the protected IP address in your DNS
      * </pre>
      *
      * <code>LETS_ENCRYPT_GCORE = 2;</code>
@@ -481,7 +481,7 @@ public final class ResourceOuterClass {
 
   /**
    * <pre>
-   * A certificate status patameters.
+   * A certificate status parameters.
    * </pre>
    *
    * Protobuf enum {@code yandex.cloud.cdn.v1.SSLCertificateStatus}
@@ -4050,11 +4050,11 @@ public final class ResourceOuterClass {
     /**
      * <pre>
      * Using [Int64Option]. Set up a cache period for the end-users browser.
-     * Content will be cached due to origin settings. 
+     * Content will be cached due to origin settings.
      * If there are no cache settings on your origin, the content will not be cached.
-     * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308. 
+     * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308.
      * Other response codes will not be cached.
-     * The default value is 4 days. 
+     * The default value is 4 days.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
@@ -4063,11 +4063,11 @@ public final class ResourceOuterClass {
     /**
      * <pre>
      * Using [Int64Option]. Set up a cache period for the end-users browser.
-     * Content will be cached due to origin settings. 
+     * Content will be cached due to origin settings.
      * If there are no cache settings on your origin, the content will not be cached.
-     * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308. 
+     * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308.
      * Other response codes will not be cached.
-     * The default value is 4 days. 
+     * The default value is 4 days.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
@@ -4076,11 +4076,11 @@ public final class ResourceOuterClass {
     /**
      * <pre>
      * Using [Int64Option]. Set up a cache period for the end-users browser.
-     * Content will be cached due to origin settings. 
+     * Content will be cached due to origin settings.
      * If there are no cache settings on your origin, the content will not be cached.
-     * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308. 
+     * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308.
      * Other response codes will not be cached.
-     * The default value is 4 days. 
+     * The default value is 4 days.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
@@ -4140,7 +4140,7 @@ public final class ResourceOuterClass {
     /**
      * <pre>
      * Files larger than 10 MB will be requested and cached in parts (no larger than 10 MB each part). It reduces time to first byte.
-     * The origin must support HTTP Range requests. 
+     * The origin must support HTTP Range requests.
      * By default the option is disabled.
      * </pre>
      *
@@ -4150,7 +4150,7 @@ public final class ResourceOuterClass {
     /**
      * <pre>
      * Files larger than 10 MB will be requested and cached in parts (no larger than 10 MB each part). It reduces time to first byte.
-     * The origin must support HTTP Range requests. 
+     * The origin must support HTTP Range requests.
      * By default the option is disabled.
      * </pre>
      *
@@ -4160,7 +4160,7 @@ public final class ResourceOuterClass {
     /**
      * <pre>
      * Files larger than 10 MB will be requested and cached in parts (no larger than 10 MB each part). It reduces time to first byte.
-     * The origin must support HTTP Range requests. 
+     * The origin must support HTTP Range requests.
      * By default the option is disabled.
      * </pre>
      *
@@ -4270,8 +4270,8 @@ public final class ResourceOuterClass {
 
     /**
      * <pre>
-     * Parameter that lets browsers get access to selected resources from a domain 
-     * different to a domain from which the request is received. 
+     * Parameter that lets browsers get access to selected resources from a domain
+     * different to a domain from which the request is received.
      * [Read more](/docs/cdn/concepts/cors).
      * </pre>
      *
@@ -4280,8 +4280,8 @@ public final class ResourceOuterClass {
     boolean hasCors();
     /**
      * <pre>
-     * Parameter that lets browsers get access to selected resources from a domain 
-     * different to a domain from which the request is received. 
+     * Parameter that lets browsers get access to selected resources from a domain
+     * different to a domain from which the request is received.
      * [Read more](/docs/cdn/concepts/cors).
      * </pre>
      *
@@ -4290,8 +4290,8 @@ public final class ResourceOuterClass {
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getCors();
     /**
      * <pre>
-     * Parameter that lets browsers get access to selected resources from a domain 
-     * different to a domain from which the request is received. 
+     * Parameter that lets browsers get access to selected resources from a domain
+     * different to a domain from which the request is received.
      * [Read more](/docs/cdn/concepts/cors).
      * </pre>
      *
@@ -4329,10 +4329,10 @@ public final class ResourceOuterClass {
 
     /**
      * <pre>
-     * HTTP methods for your CDN content. By default the following methods 
+     * HTTP methods for your CDN content. By default the following methods
      * are allowed: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS.
-     * In case some methods are not allowed to the user, they will get the 405 
-     * (Method Not Allowed) response. If the method is not supported, 
+     * In case some methods are not allowed to the user, they will get the 405
+     * (Method Not Allowed) response. If the method is not supported,
      * the user gets the 501 (Not Implemented) response.
      * </pre>
      *
@@ -4341,10 +4341,10 @@ public final class ResourceOuterClass {
     boolean hasAllowedHttpMethods();
     /**
      * <pre>
-     * HTTP methods for your CDN content. By default the following methods 
+     * HTTP methods for your CDN content. By default the following methods
      * are allowed: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS.
-     * In case some methods are not allowed to the user, they will get the 405 
-     * (Method Not Allowed) response. If the method is not supported, 
+     * In case some methods are not allowed to the user, they will get the 405
+     * (Method Not Allowed) response. If the method is not supported,
      * the user gets the 501 (Not Implemented) response.
      * </pre>
      *
@@ -4353,10 +4353,10 @@ public final class ResourceOuterClass {
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getAllowedHttpMethods();
     /**
      * <pre>
-     * HTTP methods for your CDN content. By default the following methods 
+     * HTTP methods for your CDN content. By default the following methods
      * are allowed: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS.
-     * In case some methods are not allowed to the user, they will get the 405 
-     * (Method Not Allowed) response. If the method is not supported, 
+     * In case some methods are not allowed to the user, they will get the 405
+     * (Method Not Allowed) response. If the method is not supported,
      * the user gets the 501 (Not Implemented) response.
      * </pre>
      *
@@ -4418,7 +4418,7 @@ public final class ResourceOuterClass {
      * <pre>
      * Set up custom headers that CDN servers send in requests to origins.
      * The Header name field can contain letters (A-Z, a-z), numbers (0-9), dashes (-) and underscores (_).
-     * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-), 
+     * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-),
      * underscores (_), slashes (/), colons (:), equal (=), dots (.), and spaces.
      * </pre>
      *
@@ -4429,7 +4429,7 @@ public final class ResourceOuterClass {
      * <pre>
      * Set up custom headers that CDN servers send in requests to origins.
      * The Header name field can contain letters (A-Z, a-z), numbers (0-9), dashes (-) and underscores (_).
-     * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-), 
+     * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-),
      * underscores (_), slashes (/), colons (:), equal (=), dots (.), and spaces.
      * </pre>
      *
@@ -4440,7 +4440,7 @@ public final class ResourceOuterClass {
      * <pre>
      * Set up custom headers that CDN servers send in requests to origins.
      * The Header name field can contain letters (A-Z, a-z), numbers (0-9), dashes (-) and underscores (_).
-     * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-), 
+     * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-),
      * underscores (_), slashes (/), colons (:), equal (=), dots (.), and spaces.
      * </pre>
      *
@@ -4450,7 +4450,7 @@ public final class ResourceOuterClass {
 
     /**
      * <pre>
-     * Wildcard additional CNAME. 
+     * Wildcard additional CNAME.
      * If a resource has a wildcard additional CNAME, you can use your own certificate for content delivery via HTTPS. Read-only.
      * </pre>
      *
@@ -4459,7 +4459,7 @@ public final class ResourceOuterClass {
     boolean hasCustomServerName();
     /**
      * <pre>
-     * Wildcard additional CNAME. 
+     * Wildcard additional CNAME.
      * If a resource has a wildcard additional CNAME, you can use your own certificate for content delivery via HTTPS. Read-only.
      * </pre>
      *
@@ -4468,7 +4468,7 @@ public final class ResourceOuterClass {
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption getCustomServerName();
     /**
      * <pre>
-     * Wildcard additional CNAME. 
+     * Wildcard additional CNAME.
      * If a resource has a wildcard additional CNAME, you can use your own certificate for content delivery via HTTPS. Read-only.
      * </pre>
      *
@@ -4528,7 +4528,7 @@ public final class ResourceOuterClass {
   }
   /**
    * <pre>
-   * A major set of various resource options. 
+   * A major set of various resource options.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions}
@@ -4854,7 +4854,7 @@ public final class ResourceOuterClass {
 
       /**
        * <pre>
-       * True - the option is enabled and its [value] is applied to the resource. 
+       * True - the option is enabled and its [value] is applied to the resource.
        * False - the option is disabled and its default value is used for the resource.
        * </pre>
        *
@@ -4962,7 +4962,7 @@ public final class ResourceOuterClass {
       private boolean enabled_;
       /**
        * <pre>
-       * True - the option is enabled and its [value] is applied to the resource. 
+       * True - the option is enabled and its [value] is applied to the resource.
        * False - the option is disabled and its default value is used for the resource.
        * </pre>
        *
@@ -5314,7 +5314,7 @@ public final class ResourceOuterClass {
         private boolean enabled_ ;
         /**
          * <pre>
-         * True - the option is enabled and its [value] is applied to the resource. 
+         * True - the option is enabled and its [value] is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -5325,7 +5325,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * True - the option is enabled and its [value] is applied to the resource. 
+         * True - the option is enabled and its [value] is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -5339,7 +5339,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * True - the option is enabled and its [value] is applied to the resource. 
+         * True - the option is enabled and its [value] is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -5448,7 +5448,7 @@ public final class ResourceOuterClass {
 
       /**
        * <pre>
-       * True - the option is enabled and its [value] is applied to the resource. 
+       * True - the option is enabled and its [value] is applied to the resource.
        * False - the option is disabled and its default value is used for the resource.
        * </pre>
        *
@@ -5566,7 +5566,7 @@ public final class ResourceOuterClass {
       private boolean enabled_;
       /**
        * <pre>
-       * True - the option is enabled and its [value] is applied to the resource. 
+       * True - the option is enabled and its [value] is applied to the resource.
        * False - the option is disabled and its default value is used for the resource.
        * </pre>
        *
@@ -5946,7 +5946,7 @@ public final class ResourceOuterClass {
         private boolean enabled_ ;
         /**
          * <pre>
-         * True - the option is enabled and its [value] is applied to the resource. 
+         * True - the option is enabled and its [value] is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -5957,7 +5957,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * True - the option is enabled and its [value] is applied to the resource. 
+         * True - the option is enabled and its [value] is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -5971,7 +5971,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * True - the option is enabled and its [value] is applied to the resource. 
+         * True - the option is enabled and its [value] is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -6131,7 +6131,7 @@ public final class ResourceOuterClass {
 
       /**
        * <pre>
-       * True - the option is enabled and its [value] is applied to the resource. 
+       * True - the option is enabled and its [value] is applied to the resource.
        * False - the option is disabled and its default value is used for the resource.
        * </pre>
        *
@@ -6239,7 +6239,7 @@ public final class ResourceOuterClass {
       private boolean enabled_;
       /**
        * <pre>
-       * True - the option is enabled and its [value] is applied to the resource. 
+       * True - the option is enabled and its [value] is applied to the resource.
        * False - the option is disabled and its default value is used for the resource.
        * </pre>
        *
@@ -6591,7 +6591,7 @@ public final class ResourceOuterClass {
         private boolean enabled_ ;
         /**
          * <pre>
-         * True - the option is enabled and its [value] is applied to the resource. 
+         * True - the option is enabled and its [value] is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -6602,7 +6602,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * True - the option is enabled and its [value] is applied to the resource. 
+         * True - the option is enabled and its [value] is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -6616,7 +6616,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * True - the option is enabled and its [value] is applied to the resource. 
+         * True - the option is enabled and its [value] is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -6725,7 +6725,7 @@ public final class ResourceOuterClass {
 
       /**
        * <pre>
-       * True - the option is enabled and its [value] is applied to the resource. 
+       * True - the option is enabled and its [value] is applied to the resource.
        * False - the option is disabled and its default value is used for the resource.
        * </pre>
        *
@@ -6867,7 +6867,7 @@ public final class ResourceOuterClass {
       private boolean enabled_;
       /**
        * <pre>
-       * True - the option is enabled and its [value] is applied to the resource. 
+       * True - the option is enabled and its [value] is applied to the resource.
        * False - the option is disabled and its default value is used for the resource.
        * </pre>
        *
@@ -7271,7 +7271,7 @@ public final class ResourceOuterClass {
         private boolean enabled_ ;
         /**
          * <pre>
-         * True - the option is enabled and its [value] is applied to the resource. 
+         * True - the option is enabled and its [value] is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -7282,7 +7282,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * True - the option is enabled and its [value] is applied to the resource. 
+         * True - the option is enabled and its [value] is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -7296,7 +7296,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * True - the option is enabled and its [value] is applied to the resource. 
+         * True - the option is enabled and its [value] is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -7497,7 +7497,7 @@ public final class ResourceOuterClass {
 
       /**
        * <pre>
-       * True - the option is enabled and its [value] is applied to the resource. 
+       * True - the option is enabled and its [value] is applied to the resource.
        * False - the option is disabled and its default value is used for the resource.
        * </pre>
        *
@@ -7561,7 +7561,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * A set of the strings map parameters. 
+     * A set of the strings map parameters.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.StringsMapOption}
@@ -7670,7 +7670,7 @@ public final class ResourceOuterClass {
       private boolean enabled_;
       /**
        * <pre>
-       * True - the option is enabled and its [value] is applied to the resource. 
+       * True - the option is enabled and its [value] is applied to the resource.
        * False - the option is disabled and its default value is used for the resource.
        * </pre>
        *
@@ -7953,7 +7953,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * A set of the strings map parameters. 
+       * A set of the strings map parameters.
        * </pre>
        *
        * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.StringsMapOption}
@@ -8136,7 +8136,7 @@ public final class ResourceOuterClass {
         private boolean enabled_ ;
         /**
          * <pre>
-         * True - the option is enabled and its [value] is applied to the resource. 
+         * True - the option is enabled and its [value] is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -8147,7 +8147,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * True - the option is enabled and its [value] is applied to the resource. 
+         * True - the option is enabled and its [value] is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -8161,7 +8161,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * True - the option is enabled and its [value] is applied to the resource. 
+         * True - the option is enabled and its [value] is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -8383,7 +8383,7 @@ public final class ResourceOuterClass {
 
       /**
        * <pre>
-       * Caching time for a response with codes 200, 206, 301, 302. 
+       * Caching time for a response with codes 200, 206, 301, 302.
        * Responses with codes 4xx, 5xx will not be cached. Use `0s` disable to caching.
        * Use [custom_values] field to specify a custom caching time for a response with specific codes.
        * </pre>
@@ -8567,7 +8567,7 @@ public final class ResourceOuterClass {
       private long simpleValue_;
       /**
        * <pre>
-       * Caching time for a response with codes 200, 206, 301, 302. 
+       * Caching time for a response with codes 200, 206, 301, 302.
        * Responses with codes 4xx, 5xx will not be cached. Use `0s` disable to caching.
        * Use [custom_values] field to specify a custom caching time for a response with specific codes.
        * </pre>
@@ -9042,7 +9042,7 @@ public final class ResourceOuterClass {
         private long simpleValue_ ;
         /**
          * <pre>
-         * Caching time for a response with codes 200, 206, 301, 302. 
+         * Caching time for a response with codes 200, 206, 301, 302.
          * Responses with codes 4xx, 5xx will not be cached. Use `0s` disable to caching.
          * Use [custom_values] field to specify a custom caching time for a response with specific codes.
          * </pre>
@@ -9054,7 +9054,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Caching time for a response with codes 200, 206, 301, 302. 
+         * Caching time for a response with codes 200, 206, 301, 302.
          * Responses with codes 4xx, 5xx will not be cached. Use `0s` disable to caching.
          * Use [custom_values] field to specify a custom caching time for a response with specific codes.
          * </pre>
@@ -9069,7 +9069,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Caching time for a response with codes 200, 206, 301, 302. 
+         * Caching time for a response with codes 200, 206, 301, 302.
          * Responses with codes 4xx, 5xx will not be cached. Use `0s` disable to caching.
          * Use [custom_values] field to specify a custom caching time for a response with specific codes.
          * </pre>
@@ -9306,7 +9306,7 @@ public final class ResourceOuterClass {
 
       /**
        * <pre>
-       * True - the option is enabled and its `values_variant` is applied to the resource. 
+       * True - the option is enabled and its `values_variant` is applied to the resource.
        * False - the option is disabled and its default value is used for the resource.
        * </pre>
        *
@@ -9341,8 +9341,8 @@ public final class ResourceOuterClass {
 
       /**
        * <pre>
-       * Content will be cached according to origin cache settings. 
-       * The value applies for a response with codes 200, 201, 204, 206, 301, 302, 303, 304, 307, 308 
+       * Content will be cached according to origin cache settings.
+       * The value applies for a response with codes 200, 201, 204, 206, 301, 302, 303, 304, 307, 308
        * if an origin server does not have caching HTTP headers.
        * Responses with other codes will not be cached.
        * </pre>
@@ -9495,7 +9495,7 @@ public final class ResourceOuterClass {
       private boolean enabled_;
       /**
        * <pre>
-       * True - the option is enabled and its `values_variant` is applied to the resource. 
+       * True - the option is enabled and its `values_variant` is applied to the resource.
        * False - the option is disabled and its default value is used for the resource.
        * </pre>
        *
@@ -9546,8 +9546,8 @@ public final class ResourceOuterClass {
       public static final int DEFAULT_VALUE_FIELD_NUMBER = 3;
       /**
        * <pre>
-       * Content will be cached according to origin cache settings. 
-       * The value applies for a response with codes 200, 201, 204, 206, 301, 302, 303, 304, 307, 308 
+       * Content will be cached according to origin cache settings.
+       * The value applies for a response with codes 200, 201, 204, 206, 301, 302, 303, 304, 307, 308
        * if an origin server does not have caching HTTP headers.
        * Responses with other codes will not be cached.
        * </pre>
@@ -9957,7 +9957,7 @@ public final class ResourceOuterClass {
         private boolean enabled_ ;
         /**
          * <pre>
-         * True - the option is enabled and its `values_variant` is applied to the resource. 
+         * True - the option is enabled and its `values_variant` is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -9968,7 +9968,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * True - the option is enabled and its `values_variant` is applied to the resource. 
+         * True - the option is enabled and its `values_variant` is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -9982,7 +9982,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * True - the option is enabled and its `values_variant` is applied to the resource. 
+         * True - the option is enabled and its `values_variant` is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -10169,8 +10169,8 @@ public final class ResourceOuterClass {
 
         /**
          * <pre>
-         * Content will be cached according to origin cache settings. 
-         * The value applies for a response with codes 200, 201, 204, 206, 301, 302, 303, 304, 307, 308 
+         * Content will be cached according to origin cache settings.
+         * The value applies for a response with codes 200, 201, 204, 206, 301, 302, 303, 304, 307, 308
          * if an origin server does not have caching HTTP headers.
          * Responses with other codes will not be cached.
          * </pre>
@@ -10185,8 +10185,8 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Content will be cached according to origin cache settings. 
-         * The value applies for a response with codes 200, 201, 204, 206, 301, 302, 303, 304, 307, 308 
+         * Content will be cached according to origin cache settings.
+         * The value applies for a response with codes 200, 201, 204, 206, 301, 302, 303, 304, 307, 308
          * if an origin server does not have caching HTTP headers.
          * Responses with other codes will not be cached.
          * </pre>
@@ -10201,8 +10201,8 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Content will be cached according to origin cache settings. 
-         * The value applies for a response with codes 200, 201, 204, 206, 301, 302, 303, 304, 307, 308 
+         * Content will be cached according to origin cache settings.
+         * The value applies for a response with codes 200, 201, 204, 206, 301, 302, 303, 304, 307, 308
          * if an origin server does not have caching HTTP headers.
          * Responses with other codes will not be cached.
          * </pre>
@@ -10276,7 +10276,7 @@ public final class ResourceOuterClass {
 
       /**
        * <pre>
-       * True - the option is enabled and its [value] is applied to the resource. 
+       * True - the option is enabled and its [value] is applied to the resource.
        * False - the option is disabled and its default value is used for the resource.
        * </pre>
        *
@@ -11486,7 +11486,7 @@ public final class ResourceOuterClass {
       private boolean enabled_;
       /**
        * <pre>
-       * True - the option is enabled and its [value] is applied to the resource. 
+       * True - the option is enabled and its [value] is applied to the resource.
        * False - the option is disabled and its default value is used for the resource.
        * </pre>
        *
@@ -11952,7 +11952,7 @@ public final class ResourceOuterClass {
         private boolean enabled_ ;
         /**
          * <pre>
-         * True - the option is enabled and its [value] is applied to the resource. 
+         * True - the option is enabled and its [value] is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -11963,7 +11963,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * True - the option is enabled and its [value] is applied to the resource. 
+         * True - the option is enabled and its [value] is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -11977,7 +11977,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * True - the option is enabled and its [value] is applied to the resource. 
+         * True - the option is enabled and its [value] is applied to the resource.
          * False - the option is disabled and its default value is used for the resource.
          * </pre>
          *
@@ -12199,7 +12199,7 @@ public final class ResourceOuterClass {
 
       /**
        * <pre>
-       * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value. 
+       * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
@@ -12207,7 +12207,7 @@ public final class ResourceOuterClass {
       boolean hasIgnoreQueryString();
       /**
        * <pre>
-       * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value. 
+       * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
@@ -12215,7 +12215,7 @@ public final class ResourceOuterClass {
       yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getIgnoreQueryString();
       /**
        * <pre>
-       * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value. 
+       * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
@@ -12224,8 +12224,8 @@ public final class ResourceOuterClass {
 
       /**
        * <pre>
-       * Ignore All Except. 
-       * Files with the specified query parameters are cached as objects with different keys, 
+       * Ignore All Except.
+       * Files with the specified query parameters are cached as objects with different keys,
        * files with other parameters are cached as objects with the same key.
        * </pre>
        *
@@ -12234,8 +12234,8 @@ public final class ResourceOuterClass {
       boolean hasQueryParamsWhitelist();
       /**
        * <pre>
-       * Ignore All Except. 
-       * Files with the specified query parameters are cached as objects with different keys, 
+       * Ignore All Except.
+       * Files with the specified query parameters are cached as objects with different keys,
        * files with other parameters are cached as objects with the same key.
        * </pre>
        *
@@ -12244,8 +12244,8 @@ public final class ResourceOuterClass {
       yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getQueryParamsWhitelist();
       /**
        * <pre>
-       * Ignore All Except. 
-       * Files with the specified query parameters are cached as objects with different keys, 
+       * Ignore All Except.
+       * Files with the specified query parameters are cached as objects with different keys,
        * files with other parameters are cached as objects with the same key.
        * </pre>
        *
@@ -12255,7 +12255,7 @@ public final class ResourceOuterClass {
 
       /**
        * <pre>
-       * Ignore only. Files with the specified query parameters are cached as objects with the same key, 
+       * Ignore only. Files with the specified query parameters are cached as objects with the same key,
        * files with other parameters are cached as objects with different keys.
        * </pre>
        *
@@ -12264,7 +12264,7 @@ public final class ResourceOuterClass {
       boolean hasQueryParamsBlacklist();
       /**
        * <pre>
-       * Ignore only. Files with the specified query parameters are cached as objects with the same key, 
+       * Ignore only. Files with the specified query parameters are cached as objects with the same key,
        * files with other parameters are cached as objects with different keys.
        * </pre>
        *
@@ -12273,7 +12273,7 @@ public final class ResourceOuterClass {
       yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption getQueryParamsBlacklist();
       /**
        * <pre>
-       * Ignore only. Files with the specified query parameters are cached as objects with the same key, 
+       * Ignore only. Files with the specified query parameters are cached as objects with the same key,
        * files with other parameters are cached as objects with different keys.
        * </pre>
        *
@@ -12443,7 +12443,7 @@ public final class ResourceOuterClass {
       public static final int IGNORE_QUERY_STRING_FIELD_NUMBER = 1;
       /**
        * <pre>
-       * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value. 
+       * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
@@ -12453,7 +12453,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value. 
+       * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
@@ -12466,7 +12466,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value. 
+       * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
@@ -12481,8 +12481,8 @@ public final class ResourceOuterClass {
       public static final int QUERY_PARAMS_WHITELIST_FIELD_NUMBER = 2;
       /**
        * <pre>
-       * Ignore All Except. 
-       * Files with the specified query parameters are cached as objects with different keys, 
+       * Ignore All Except.
+       * Files with the specified query parameters are cached as objects with different keys,
        * files with other parameters are cached as objects with the same key.
        * </pre>
        *
@@ -12493,8 +12493,8 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Ignore All Except. 
-       * Files with the specified query parameters are cached as objects with different keys, 
+       * Ignore All Except.
+       * Files with the specified query parameters are cached as objects with different keys,
        * files with other parameters are cached as objects with the same key.
        * </pre>
        *
@@ -12508,8 +12508,8 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Ignore All Except. 
-       * Files with the specified query parameters are cached as objects with different keys, 
+       * Ignore All Except.
+       * Files with the specified query parameters are cached as objects with different keys,
        * files with other parameters are cached as objects with the same key.
        * </pre>
        *
@@ -12525,7 +12525,7 @@ public final class ResourceOuterClass {
       public static final int QUERY_PARAMS_BLACKLIST_FIELD_NUMBER = 3;
       /**
        * <pre>
-       * Ignore only. Files with the specified query parameters are cached as objects with the same key, 
+       * Ignore only. Files with the specified query parameters are cached as objects with the same key,
        * files with other parameters are cached as objects with different keys.
        * </pre>
        *
@@ -12536,7 +12536,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Ignore only. Files with the specified query parameters are cached as objects with the same key, 
+       * Ignore only. Files with the specified query parameters are cached as objects with the same key,
        * files with other parameters are cached as objects with different keys.
        * </pre>
        *
@@ -12550,7 +12550,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Ignore only. Files with the specified query parameters are cached as objects with the same key, 
+       * Ignore only. Files with the specified query parameters are cached as objects with the same key,
        * files with other parameters are cached as objects with different keys.
        * </pre>
        *
@@ -12969,7 +12969,7 @@ public final class ResourceOuterClass {
             yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder> ignoreQueryStringBuilder_;
         /**
          * <pre>
-         * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value. 
+         * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
@@ -12979,7 +12979,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value. 
+         * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
@@ -12999,7 +12999,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value. 
+         * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
@@ -13019,7 +13019,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value. 
+         * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
@@ -13037,7 +13037,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value. 
+         * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
@@ -13063,7 +13063,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value. 
+         * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
@@ -13086,7 +13086,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value. 
+         * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
@@ -13096,7 +13096,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value. 
+         * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
@@ -13113,7 +13113,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value. 
+         * Using [BoolOption]. Selected by default. Files with different query parameters are cached as objects with the same key regardless of the parameter value.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption ignore_query_string = 1;</code>
@@ -13141,8 +13141,8 @@ public final class ResourceOuterClass {
             yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOptionOrBuilder> queryParamsWhitelistBuilder_;
         /**
          * <pre>
-         * Ignore All Except. 
-         * Files with the specified query parameters are cached as objects with different keys, 
+         * Ignore All Except.
+         * Files with the specified query parameters are cached as objects with different keys,
          * files with other parameters are cached as objects with the same key.
          * </pre>
          *
@@ -13153,8 +13153,8 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Ignore All Except. 
-         * Files with the specified query parameters are cached as objects with different keys, 
+         * Ignore All Except.
+         * Files with the specified query parameters are cached as objects with different keys,
          * files with other parameters are cached as objects with the same key.
          * </pre>
          *
@@ -13175,8 +13175,8 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Ignore All Except. 
-         * Files with the specified query parameters are cached as objects with different keys, 
+         * Ignore All Except.
+         * Files with the specified query parameters are cached as objects with different keys,
          * files with other parameters are cached as objects with the same key.
          * </pre>
          *
@@ -13197,8 +13197,8 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Ignore All Except. 
-         * Files with the specified query parameters are cached as objects with different keys, 
+         * Ignore All Except.
+         * Files with the specified query parameters are cached as objects with different keys,
          * files with other parameters are cached as objects with the same key.
          * </pre>
          *
@@ -13217,8 +13217,8 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Ignore All Except. 
-         * Files with the specified query parameters are cached as objects with different keys, 
+         * Ignore All Except.
+         * Files with the specified query parameters are cached as objects with different keys,
          * files with other parameters are cached as objects with the same key.
          * </pre>
          *
@@ -13245,8 +13245,8 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Ignore All Except. 
-         * Files with the specified query parameters are cached as objects with different keys, 
+         * Ignore All Except.
+         * Files with the specified query parameters are cached as objects with different keys,
          * files with other parameters are cached as objects with the same key.
          * </pre>
          *
@@ -13270,8 +13270,8 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Ignore All Except. 
-         * Files with the specified query parameters are cached as objects with different keys, 
+         * Ignore All Except.
+         * Files with the specified query parameters are cached as objects with different keys,
          * files with other parameters are cached as objects with the same key.
          * </pre>
          *
@@ -13282,8 +13282,8 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Ignore All Except. 
-         * Files with the specified query parameters are cached as objects with different keys, 
+         * Ignore All Except.
+         * Files with the specified query parameters are cached as objects with different keys,
          * files with other parameters are cached as objects with the same key.
          * </pre>
          *
@@ -13301,8 +13301,8 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Ignore All Except. 
-         * Files with the specified query parameters are cached as objects with different keys, 
+         * Ignore All Except.
+         * Files with the specified query parameters are cached as objects with different keys,
          * files with other parameters are cached as objects with the same key.
          * </pre>
          *
@@ -13331,7 +13331,7 @@ public final class ResourceOuterClass {
             yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOptionOrBuilder> queryParamsBlacklistBuilder_;
         /**
          * <pre>
-         * Ignore only. Files with the specified query parameters are cached as objects with the same key, 
+         * Ignore only. Files with the specified query parameters are cached as objects with the same key,
          * files with other parameters are cached as objects with different keys.
          * </pre>
          *
@@ -13342,7 +13342,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Ignore only. Files with the specified query parameters are cached as objects with the same key, 
+         * Ignore only. Files with the specified query parameters are cached as objects with the same key,
          * files with other parameters are cached as objects with different keys.
          * </pre>
          *
@@ -13363,7 +13363,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Ignore only. Files with the specified query parameters are cached as objects with the same key, 
+         * Ignore only. Files with the specified query parameters are cached as objects with the same key,
          * files with other parameters are cached as objects with different keys.
          * </pre>
          *
@@ -13384,7 +13384,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Ignore only. Files with the specified query parameters are cached as objects with the same key, 
+         * Ignore only. Files with the specified query parameters are cached as objects with the same key,
          * files with other parameters are cached as objects with different keys.
          * </pre>
          *
@@ -13403,7 +13403,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Ignore only. Files with the specified query parameters are cached as objects with the same key, 
+         * Ignore only. Files with the specified query parameters are cached as objects with the same key,
          * files with other parameters are cached as objects with different keys.
          * </pre>
          *
@@ -13430,7 +13430,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Ignore only. Files with the specified query parameters are cached as objects with the same key, 
+         * Ignore only. Files with the specified query parameters are cached as objects with the same key,
          * files with other parameters are cached as objects with different keys.
          * </pre>
          *
@@ -13454,7 +13454,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Ignore only. Files with the specified query parameters are cached as objects with the same key, 
+         * Ignore only. Files with the specified query parameters are cached as objects with the same key,
          * files with other parameters are cached as objects with different keys.
          * </pre>
          *
@@ -13465,7 +13465,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Ignore only. Files with the specified query parameters are cached as objects with the same key, 
+         * Ignore only. Files with the specified query parameters are cached as objects with the same key,
          * files with other parameters are cached as objects with different keys.
          * </pre>
          *
@@ -13483,7 +13483,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Ignore only. Files with the specified query parameters are cached as objects with the same key, 
+         * Ignore only. Files with the specified query parameters are cached as objects with the same key,
          * files with other parameters are cached as objects with different keys.
          * </pre>
          *
@@ -13591,7 +13591,7 @@ public final class ResourceOuterClass {
 
       /**
        * <pre>
-       * Using [BoolOption]. Set up a redirect from HTTP to HTTPS. 
+       * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
@@ -13599,7 +13599,7 @@ public final class ResourceOuterClass {
       boolean hasRedirectHttpsToHttp();
       /**
        * <pre>
-       * Using [BoolOption]. Set up a redirect from HTTP to HTTPS. 
+       * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
@@ -13607,7 +13607,7 @@ public final class ResourceOuterClass {
       yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getRedirectHttpsToHttp();
       /**
        * <pre>
-       * Using [BoolOption]. Set up a redirect from HTTP to HTTPS. 
+       * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
@@ -13798,7 +13798,7 @@ public final class ResourceOuterClass {
       public static final int REDIRECT_HTTPS_TO_HTTP_FIELD_NUMBER = 2;
       /**
        * <pre>
-       * Using [BoolOption]. Set up a redirect from HTTP to HTTPS. 
+       * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
@@ -13808,7 +13808,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Using [BoolOption]. Set up a redirect from HTTP to HTTPS. 
+       * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
@@ -13821,7 +13821,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Using [BoolOption]. Set up a redirect from HTTP to HTTPS. 
+       * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
@@ -14385,7 +14385,7 @@ public final class ResourceOuterClass {
             yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder> redirectHttpsToHttpBuilder_;
         /**
          * <pre>
-         * Using [BoolOption]. Set up a redirect from HTTP to HTTPS. 
+         * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
@@ -14395,7 +14395,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Set up a redirect from HTTP to HTTPS. 
+         * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
@@ -14415,7 +14415,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Set up a redirect from HTTP to HTTPS. 
+         * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
@@ -14435,7 +14435,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Set up a redirect from HTTP to HTTPS. 
+         * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
@@ -14453,7 +14453,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Set up a redirect from HTTP to HTTPS. 
+         * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
@@ -14479,7 +14479,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Set up a redirect from HTTP to HTTPS. 
+         * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
@@ -14502,7 +14502,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Set up a redirect from HTTP to HTTPS. 
+         * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
@@ -14512,7 +14512,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Set up a redirect from HTTP to HTTPS. 
+         * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
@@ -14529,7 +14529,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Set up a redirect from HTTP to HTTPS. 
+         * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
@@ -14612,7 +14612,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Custom value for the Host header.
-       * Your server must be able to process requests with the chosen header. 
+       * Your server must be able to process requests with the chosen header.
        * Default value (if [StringOption.enabled] is `false`) is [Resource.cname].
        * </pre>
        *
@@ -14622,7 +14622,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Custom value for the Host header.
-       * Your server must be able to process requests with the chosen header. 
+       * Your server must be able to process requests with the chosen header.
        * Default value (if [StringOption.enabled] is `false`) is [Resource.cname].
        * </pre>
        *
@@ -14632,7 +14632,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Custom value for the Host header.
-       * Your server must be able to process requests with the chosen header. 
+       * Your server must be able to process requests with the chosen header.
        * Default value (if [StringOption.enabled] is `false`) is [Resource.cname].
        * </pre>
        *
@@ -14642,7 +14642,7 @@ public final class ResourceOuterClass {
 
       /**
        * <pre>
-       * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin 
+       * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin
        * the same Host header as was sent in the request to CDN server.
        * </pre>
        *
@@ -14651,7 +14651,7 @@ public final class ResourceOuterClass {
       boolean hasForwardHostHeader();
       /**
        * <pre>
-       * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin 
+       * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin
        * the same Host header as was sent in the request to CDN server.
        * </pre>
        *
@@ -14660,7 +14660,7 @@ public final class ResourceOuterClass {
       yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getForwardHostHeader();
       /**
        * <pre>
-       * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin 
+       * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin
        * the same Host header as was sent in the request to CDN server.
        * </pre>
        *
@@ -14815,7 +14815,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Custom value for the Host header.
-       * Your server must be able to process requests with the chosen header. 
+       * Your server must be able to process requests with the chosen header.
        * Default value (if [StringOption.enabled] is `false`) is [Resource.cname].
        * </pre>
        *
@@ -14827,7 +14827,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Custom value for the Host header.
-       * Your server must be able to process requests with the chosen header. 
+       * Your server must be able to process requests with the chosen header.
        * Default value (if [StringOption.enabled] is `false`) is [Resource.cname].
        * </pre>
        *
@@ -14842,7 +14842,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Custom value for the Host header.
-       * Your server must be able to process requests with the chosen header. 
+       * Your server must be able to process requests with the chosen header.
        * Default value (if [StringOption.enabled] is `false`) is [Resource.cname].
        * </pre>
        *
@@ -14858,7 +14858,7 @@ public final class ResourceOuterClass {
       public static final int FORWARD_HOST_HEADER_FIELD_NUMBER = 2;
       /**
        * <pre>
-       * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin 
+       * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin
        * the same Host header as was sent in the request to CDN server.
        * </pre>
        *
@@ -14869,7 +14869,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin 
+       * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin
        * the same Host header as was sent in the request to CDN server.
        * </pre>
        *
@@ -14883,7 +14883,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin 
+       * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin
        * the same Host header as was sent in the request to CDN server.
        * </pre>
        *
@@ -15277,7 +15277,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Custom value for the Host header.
-         * Your server must be able to process requests with the chosen header. 
+         * Your server must be able to process requests with the chosen header.
          * Default value (if [StringOption.enabled] is `false`) is [Resource.cname].
          * </pre>
          *
@@ -15289,7 +15289,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Custom value for the Host header.
-         * Your server must be able to process requests with the chosen header. 
+         * Your server must be able to process requests with the chosen header.
          * Default value (if [StringOption.enabled] is `false`) is [Resource.cname].
          * </pre>
          *
@@ -15311,7 +15311,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Custom value for the Host header.
-         * Your server must be able to process requests with the chosen header. 
+         * Your server must be able to process requests with the chosen header.
          * Default value (if [StringOption.enabled] is `false`) is [Resource.cname].
          * </pre>
          *
@@ -15333,7 +15333,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Custom value for the Host header.
-         * Your server must be able to process requests with the chosen header. 
+         * Your server must be able to process requests with the chosen header.
          * Default value (if [StringOption.enabled] is `false`) is [Resource.cname].
          * </pre>
          *
@@ -15353,7 +15353,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Custom value for the Host header.
-         * Your server must be able to process requests with the chosen header. 
+         * Your server must be able to process requests with the chosen header.
          * Default value (if [StringOption.enabled] is `false`) is [Resource.cname].
          * </pre>
          *
@@ -15381,7 +15381,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Custom value for the Host header.
-         * Your server must be able to process requests with the chosen header. 
+         * Your server must be able to process requests with the chosen header.
          * Default value (if [StringOption.enabled] is `false`) is [Resource.cname].
          * </pre>
          *
@@ -15406,7 +15406,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Custom value for the Host header.
-         * Your server must be able to process requests with the chosen header. 
+         * Your server must be able to process requests with the chosen header.
          * Default value (if [StringOption.enabled] is `false`) is [Resource.cname].
          * </pre>
          *
@@ -15418,7 +15418,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Custom value for the Host header.
-         * Your server must be able to process requests with the chosen header. 
+         * Your server must be able to process requests with the chosen header.
          * Default value (if [StringOption.enabled] is `false`) is [Resource.cname].
          * </pre>
          *
@@ -15437,7 +15437,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Custom value for the Host header.
-         * Your server must be able to process requests with the chosen header. 
+         * Your server must be able to process requests with the chosen header.
          * Default value (if [StringOption.enabled] is `false`) is [Resource.cname].
          * </pre>
          *
@@ -15466,7 +15466,7 @@ public final class ResourceOuterClass {
             yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder> forwardHostHeaderBuilder_;
         /**
          * <pre>
-         * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin 
+         * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin
          * the same Host header as was sent in the request to CDN server.
          * </pre>
          *
@@ -15477,7 +15477,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin 
+         * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin
          * the same Host header as was sent in the request to CDN server.
          * </pre>
          *
@@ -15498,7 +15498,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin 
+         * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin
          * the same Host header as was sent in the request to CDN server.
          * </pre>
          *
@@ -15519,7 +15519,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin 
+         * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin
          * the same Host header as was sent in the request to CDN server.
          * </pre>
          *
@@ -15538,7 +15538,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin 
+         * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin
          * the same Host header as was sent in the request to CDN server.
          * </pre>
          *
@@ -15565,7 +15565,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin 
+         * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin
          * the same Host header as was sent in the request to CDN server.
          * </pre>
          *
@@ -15589,7 +15589,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin 
+         * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin
          * the same Host header as was sent in the request to CDN server.
          * </pre>
          *
@@ -15600,7 +15600,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin 
+         * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin
          * the same Host header as was sent in the request to CDN server.
          * </pre>
          *
@@ -15618,7 +15618,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin 
+         * Using [BoolOption]. Choose the Forward Host header option if is important to send in the request to the Origin
          * the same Host header as was sent in the request to CDN server.
          * </pre>
          *
@@ -15702,7 +15702,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * The Fetch compressed option helps you to reduce
-       * the bandwidth between origin and CDN servers. 
+       * the bandwidth between origin and CDN servers.
        * Also, content delivery speed becomes higher because of reducing the time
        * for compressing files in a CDN.
        * </pre>
@@ -15713,7 +15713,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * The Fetch compressed option helps you to reduce
-       * the bandwidth between origin and CDN servers. 
+       * the bandwidth between origin and CDN servers.
        * Also, content delivery speed becomes higher because of reducing the time
        * for compressing files in a CDN.
        * </pre>
@@ -15724,7 +15724,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * The Fetch compressed option helps you to reduce
-       * the bandwidth between origin and CDN servers. 
+       * the bandwidth between origin and CDN servers.
        * Also, content delivery speed becomes higher because of reducing the time
        * for compressing files in a CDN.
        * </pre>
@@ -15793,7 +15793,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * A set of the compression variant parameters. 
+     * A set of the compression variant parameters.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.CompressionOptions}
@@ -15952,7 +15952,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * The Fetch compressed option helps you to reduce
-       * the bandwidth between origin and CDN servers. 
+       * the bandwidth between origin and CDN servers.
        * Also, content delivery speed becomes higher because of reducing the time
        * for compressing files in a CDN.
        * </pre>
@@ -15965,7 +15965,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * The Fetch compressed option helps you to reduce
-       * the bandwidth between origin and CDN servers. 
+       * the bandwidth between origin and CDN servers.
        * Also, content delivery speed becomes higher because of reducing the time
        * for compressing files in a CDN.
        * </pre>
@@ -15981,7 +15981,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * The Fetch compressed option helps you to reduce
-       * the bandwidth between origin and CDN servers. 
+       * the bandwidth between origin and CDN servers.
        * Also, content delivery speed becomes higher because of reducing the time
        * for compressing files in a CDN.
        * </pre>
@@ -16280,7 +16280,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * A set of the compression variant parameters. 
+       * A set of the compression variant parameters.
        * </pre>
        *
        * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.CompressionOptions}
@@ -16484,7 +16484,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * The Fetch compressed option helps you to reduce
-         * the bandwidth between origin and CDN servers. 
+         * the bandwidth between origin and CDN servers.
          * Also, content delivery speed becomes higher because of reducing the time
          * for compressing files in a CDN.
          * </pre>
@@ -16497,7 +16497,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * The Fetch compressed option helps you to reduce
-         * the bandwidth between origin and CDN servers. 
+         * the bandwidth between origin and CDN servers.
          * Also, content delivery speed becomes higher because of reducing the time
          * for compressing files in a CDN.
          * </pre>
@@ -16520,7 +16520,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * The Fetch compressed option helps you to reduce
-         * the bandwidth between origin and CDN servers. 
+         * the bandwidth between origin and CDN servers.
          * Also, content delivery speed becomes higher because of reducing the time
          * for compressing files in a CDN.
          * </pre>
@@ -16543,7 +16543,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * The Fetch compressed option helps you to reduce
-         * the bandwidth between origin and CDN servers. 
+         * the bandwidth between origin and CDN servers.
          * Also, content delivery speed becomes higher because of reducing the time
          * for compressing files in a CDN.
          * </pre>
@@ -16564,7 +16564,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * The Fetch compressed option helps you to reduce
-         * the bandwidth between origin and CDN servers. 
+         * the bandwidth between origin and CDN servers.
          * Also, content delivery speed becomes higher because of reducing the time
          * for compressing files in a CDN.
          * </pre>
@@ -16593,7 +16593,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * The Fetch compressed option helps you to reduce
-         * the bandwidth between origin and CDN servers. 
+         * the bandwidth between origin and CDN servers.
          * Also, content delivery speed becomes higher because of reducing the time
          * for compressing files in a CDN.
          * </pre>
@@ -16619,7 +16619,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * The Fetch compressed option helps you to reduce
-         * the bandwidth between origin and CDN servers. 
+         * the bandwidth between origin and CDN servers.
          * Also, content delivery speed becomes higher because of reducing the time
          * for compressing files in a CDN.
          * </pre>
@@ -16632,7 +16632,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * The Fetch compressed option helps you to reduce
-         * the bandwidth between origin and CDN servers. 
+         * the bandwidth between origin and CDN servers.
          * Also, content delivery speed becomes higher because of reducing the time
          * for compressing files in a CDN.
          * </pre>
@@ -16652,7 +16652,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * The Fetch compressed option helps you to reduce
-         * the bandwidth between origin and CDN servers. 
+         * the bandwidth between origin and CDN servers.
          * Also, content delivery speed becomes higher because of reducing the time
          * for compressing files in a CDN.
          * </pre>
@@ -17098,7 +17098,7 @@ public final class ResourceOuterClass {
 
       /**
        * <pre>
-       * True - the option is enabled and its [flag] is applied to the resource. 
+       * True - the option is enabled and its [flag] is applied to the resource.
        * False - the option is disabled and its default value of the [flag] is used for the resource.
        * </pre>
        *
@@ -17129,7 +17129,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Break flag is applied to the option by default.
-       * It is not shown in the field. 
+       * It is not shown in the field.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RewriteFlag flag = 3;</code>
@@ -17138,7 +17138,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Break flag is applied to the option by default.
-       * It is not shown in the field. 
+       * It is not shown in the field.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RewriteFlag flag = 3;</code>
@@ -17244,7 +17244,7 @@ public final class ResourceOuterClass {
       private boolean enabled_;
       /**
        * <pre>
-       * True - the option is enabled and its [flag] is applied to the resource. 
+       * True - the option is enabled and its [flag] is applied to the resource.
        * False - the option is disabled and its default value of the [flag] is used for the resource.
        * </pre>
        *
@@ -17303,7 +17303,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Break flag is applied to the option by default.
-       * It is not shown in the field. 
+       * It is not shown in the field.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RewriteFlag flag = 3;</code>
@@ -17314,7 +17314,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Break flag is applied to the option by default.
-       * It is not shown in the field. 
+       * It is not shown in the field.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.RewriteFlag flag = 3;</code>
@@ -17669,7 +17669,7 @@ public final class ResourceOuterClass {
         private boolean enabled_ ;
         /**
          * <pre>
-         * True - the option is enabled and its [flag] is applied to the resource. 
+         * True - the option is enabled and its [flag] is applied to the resource.
          * False - the option is disabled and its default value of the [flag] is used for the resource.
          * </pre>
          *
@@ -17680,7 +17680,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * True - the option is enabled and its [flag] is applied to the resource. 
+         * True - the option is enabled and its [flag] is applied to the resource.
          * False - the option is disabled and its default value of the [flag] is used for the resource.
          * </pre>
          *
@@ -17694,7 +17694,7 @@ public final class ResourceOuterClass {
         }
         /**
          * <pre>
-         * True - the option is enabled and its [flag] is applied to the resource. 
+         * True - the option is enabled and its [flag] is applied to the resource.
          * False - the option is disabled and its default value of the [flag] is used for the resource.
          * </pre>
          *
@@ -17805,7 +17805,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Break flag is applied to the option by default.
-         * It is not shown in the field. 
+         * It is not shown in the field.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.RewriteFlag flag = 3;</code>
@@ -17816,7 +17816,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Break flag is applied to the option by default.
-         * It is not shown in the field. 
+         * It is not shown in the field.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.RewriteFlag flag = 3;</code>
@@ -17829,7 +17829,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Break flag is applied to the option by default.
-         * It is not shown in the field. 
+         * It is not shown in the field.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.RewriteFlag flag = 3;</code>
@@ -17842,7 +17842,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Break flag is applied to the option by default.
-         * It is not shown in the field. 
+         * It is not shown in the field.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.RewriteFlag flag = 3;</code>
@@ -17859,7 +17859,7 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Break flag is applied to the option by default.
-         * It is not shown in the field. 
+         * It is not shown in the field.
          * </pre>
          *
          * <code>.yandex.cloud.cdn.v1.RewriteFlag flag = 3;</code>
@@ -17994,11 +17994,11 @@ public final class ResourceOuterClass {
     /**
      * <pre>
      * Using [Int64Option]. Set up a cache period for the end-users browser.
-     * Content will be cached due to origin settings. 
+     * Content will be cached due to origin settings.
      * If there are no cache settings on your origin, the content will not be cached.
-     * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308. 
+     * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308.
      * Other response codes will not be cached.
-     * The default value is 4 days. 
+     * The default value is 4 days.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
@@ -18009,11 +18009,11 @@ public final class ResourceOuterClass {
     /**
      * <pre>
      * Using [Int64Option]. Set up a cache period for the end-users browser.
-     * Content will be cached due to origin settings. 
+     * Content will be cached due to origin settings.
      * If there are no cache settings on your origin, the content will not be cached.
-     * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308. 
+     * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308.
      * Other response codes will not be cached.
-     * The default value is 4 days. 
+     * The default value is 4 days.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
@@ -18024,11 +18024,11 @@ public final class ResourceOuterClass {
     /**
      * <pre>
      * Using [Int64Option]. Set up a cache period for the end-users browser.
-     * Content will be cached due to origin settings. 
+     * Content will be cached due to origin settings.
      * If there are no cache settings on your origin, the content will not be cached.
-     * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308. 
+     * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308.
      * Other response codes will not be cached.
-     * The default value is 4 days. 
+     * The default value is 4 days.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
@@ -18108,7 +18108,7 @@ public final class ResourceOuterClass {
     /**
      * <pre>
      * Files larger than 10 MB will be requested and cached in parts (no larger than 10 MB each part). It reduces time to first byte.
-     * The origin must support HTTP Range requests. 
+     * The origin must support HTTP Range requests.
      * By default the option is disabled.
      * </pre>
      *
@@ -18120,7 +18120,7 @@ public final class ResourceOuterClass {
     /**
      * <pre>
      * Files larger than 10 MB will be requested and cached in parts (no larger than 10 MB each part). It reduces time to first byte.
-     * The origin must support HTTP Range requests. 
+     * The origin must support HTTP Range requests.
      * By default the option is disabled.
      * </pre>
      *
@@ -18132,7 +18132,7 @@ public final class ResourceOuterClass {
     /**
      * <pre>
      * Files larger than 10 MB will be requested and cached in parts (no larger than 10 MB each part). It reduces time to first byte.
-     * The origin must support HTTP Range requests. 
+     * The origin must support HTTP Range requests.
      * By default the option is disabled.
      * </pre>
      *
@@ -18278,8 +18278,8 @@ public final class ResourceOuterClass {
     private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption cors_;
     /**
      * <pre>
-     * Parameter that lets browsers get access to selected resources from a domain 
-     * different to a domain from which the request is received. 
+     * Parameter that lets browsers get access to selected resources from a domain
+     * different to a domain from which the request is received.
      * [Read more](/docs/cdn/concepts/cors).
      * </pre>
      *
@@ -18290,8 +18290,8 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * Parameter that lets browsers get access to selected resources from a domain 
-     * different to a domain from which the request is received. 
+     * Parameter that lets browsers get access to selected resources from a domain
+     * different to a domain from which the request is received.
      * [Read more](/docs/cdn/concepts/cors).
      * </pre>
      *
@@ -18302,8 +18302,8 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * Parameter that lets browsers get access to selected resources from a domain 
-     * different to a domain from which the request is received. 
+     * Parameter that lets browsers get access to selected resources from a domain
+     * different to a domain from which the request is received.
      * [Read more](/docs/cdn/concepts/cors).
      * </pre>
      *
@@ -18353,10 +18353,10 @@ public final class ResourceOuterClass {
     private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption allowedHttpMethods_;
     /**
      * <pre>
-     * HTTP methods for your CDN content. By default the following methods 
+     * HTTP methods for your CDN content. By default the following methods
      * are allowed: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS.
-     * In case some methods are not allowed to the user, they will get the 405 
-     * (Method Not Allowed) response. If the method is not supported, 
+     * In case some methods are not allowed to the user, they will get the 405
+     * (Method Not Allowed) response. If the method is not supported,
      * the user gets the 501 (Not Implemented) response.
      * </pre>
      *
@@ -18367,10 +18367,10 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * HTTP methods for your CDN content. By default the following methods 
+     * HTTP methods for your CDN content. By default the following methods
      * are allowed: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS.
-     * In case some methods are not allowed to the user, they will get the 405 
-     * (Method Not Allowed) response. If the method is not supported, 
+     * In case some methods are not allowed to the user, they will get the 405
+     * (Method Not Allowed) response. If the method is not supported,
      * the user gets the 501 (Not Implemented) response.
      * </pre>
      *
@@ -18381,10 +18381,10 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * HTTP methods for your CDN content. By default the following methods 
+     * HTTP methods for your CDN content. By default the following methods
      * are allowed: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS.
-     * In case some methods are not allowed to the user, they will get the 405 
-     * (Method Not Allowed) response. If the method is not supported, 
+     * In case some methods are not allowed to the user, they will get the 405
+     * (Method Not Allowed) response. If the method is not supported,
      * the user gets the 501 (Not Implemented) response.
      * </pre>
      *
@@ -18466,7 +18466,7 @@ public final class ResourceOuterClass {
      * <pre>
      * Set up custom headers that CDN servers send in requests to origins.
      * The Header name field can contain letters (A-Z, a-z), numbers (0-9), dashes (-) and underscores (_).
-     * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-), 
+     * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-),
      * underscores (_), slashes (/), colons (:), equal (=), dots (.), and spaces.
      * </pre>
      *
@@ -18479,7 +18479,7 @@ public final class ResourceOuterClass {
      * <pre>
      * Set up custom headers that CDN servers send in requests to origins.
      * The Header name field can contain letters (A-Z, a-z), numbers (0-9), dashes (-) and underscores (_).
-     * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-), 
+     * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-),
      * underscores (_), slashes (/), colons (:), equal (=), dots (.), and spaces.
      * </pre>
      *
@@ -18492,7 +18492,7 @@ public final class ResourceOuterClass {
      * <pre>
      * Set up custom headers that CDN servers send in requests to origins.
      * The Header name field can contain letters (A-Z, a-z), numbers (0-9), dashes (-) and underscores (_).
-     * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-), 
+     * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-),
      * underscores (_), slashes (/), colons (:), equal (=), dots (.), and spaces.
      * </pre>
      *
@@ -18506,7 +18506,7 @@ public final class ResourceOuterClass {
     private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption customServerName_;
     /**
      * <pre>
-     * Wildcard additional CNAME. 
+     * Wildcard additional CNAME.
      * If a resource has a wildcard additional CNAME, you can use your own certificate for content delivery via HTTPS. Read-only.
      * </pre>
      *
@@ -18517,7 +18517,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * Wildcard additional CNAME. 
+     * Wildcard additional CNAME.
      * If a resource has a wildcard additional CNAME, you can use your own certificate for content delivery via HTTPS. Read-only.
      * </pre>
      *
@@ -18528,7 +18528,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * Wildcard additional CNAME. 
+     * Wildcard additional CNAME.
      * If a resource has a wildcard additional CNAME, you can use your own certificate for content delivery via HTTPS. Read-only.
      * </pre>
      *
@@ -19055,7 +19055,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * A major set of various resource options. 
+     * A major set of various resource options.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions}
@@ -19776,11 +19776,11 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Using [Int64Option]. Set up a cache period for the end-users browser.
-       * Content will be cached due to origin settings. 
+       * Content will be cached due to origin settings.
        * If there are no cache settings on your origin, the content will not be cached.
-       * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308. 
+       * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308.
        * Other response codes will not be cached.
-       * The default value is 4 days. 
+       * The default value is 4 days.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
@@ -19791,11 +19791,11 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Using [Int64Option]. Set up a cache period for the end-users browser.
-       * Content will be cached due to origin settings. 
+       * Content will be cached due to origin settings.
        * If there are no cache settings on your origin, the content will not be cached.
-       * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308. 
+       * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308.
        * Other response codes will not be cached.
-       * The default value is 4 days. 
+       * The default value is 4 days.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
@@ -19810,11 +19810,11 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Using [Int64Option]. Set up a cache period for the end-users browser.
-       * Content will be cached due to origin settings. 
+       * Content will be cached due to origin settings.
        * If there are no cache settings on your origin, the content will not be cached.
-       * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308. 
+       * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308.
        * Other response codes will not be cached.
-       * The default value is 4 days. 
+       * The default value is 4 days.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
@@ -19835,11 +19835,11 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Using [Int64Option]. Set up a cache period for the end-users browser.
-       * Content will be cached due to origin settings. 
+       * Content will be cached due to origin settings.
        * If there are no cache settings on your origin, the content will not be cached.
-       * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308. 
+       * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308.
        * Other response codes will not be cached.
-       * The default value is 4 days. 
+       * The default value is 4 days.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
@@ -19858,11 +19858,11 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Using [Int64Option]. Set up a cache period for the end-users browser.
-       * Content will be cached due to origin settings. 
+       * Content will be cached due to origin settings.
        * If there are no cache settings on your origin, the content will not be cached.
-       * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308. 
+       * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308.
        * Other response codes will not be cached.
-       * The default value is 4 days. 
+       * The default value is 4 days.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
@@ -19885,11 +19885,11 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Using [Int64Option]. Set up a cache period for the end-users browser.
-       * Content will be cached due to origin settings. 
+       * Content will be cached due to origin settings.
        * If there are no cache settings on your origin, the content will not be cached.
-       * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308. 
+       * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308.
        * Other response codes will not be cached.
-       * The default value is 4 days. 
+       * The default value is 4 days.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
@@ -19908,11 +19908,11 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Using [Int64Option]. Set up a cache period for the end-users browser.
-       * Content will be cached due to origin settings. 
+       * Content will be cached due to origin settings.
        * If there are no cache settings on your origin, the content will not be cached.
-       * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308. 
+       * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308.
        * Other response codes will not be cached.
-       * The default value is 4 days. 
+       * The default value is 4 days.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
@@ -19925,11 +19925,11 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Using [Int64Option]. Set up a cache period for the end-users browser.
-       * Content will be cached due to origin settings. 
+       * Content will be cached due to origin settings.
        * If there are no cache settings on your origin, the content will not be cached.
-       * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308. 
+       * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308.
        * Other response codes will not be cached.
-       * The default value is 4 days. 
+       * The default value is 4 days.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
@@ -19945,11 +19945,11 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Using [Int64Option]. Set up a cache period for the end-users browser.
-       * Content will be cached due to origin settings. 
+       * Content will be cached due to origin settings.
        * If there are no cache settings on your origin, the content will not be cached.
-       * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308. 
+       * The list of HTTP response codes that can be cached in browsers: 200, 201, 204, 206, 301, 302, 303, 304, 307, 308.
        * Other response codes will not be cached.
-       * The default value is 4 days. 
+       * The default value is 4 days.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.ResourceOptions.Int64Option browser_cache_settings = 3;</code>
@@ -20280,7 +20280,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Files larger than 10 MB will be requested and cached in parts (no larger than 10 MB each part). It reduces time to first byte.
-       * The origin must support HTTP Range requests. 
+       * The origin must support HTTP Range requests.
        * By default the option is disabled.
        * </pre>
        *
@@ -20292,7 +20292,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Files larger than 10 MB will be requested and cached in parts (no larger than 10 MB each part). It reduces time to first byte.
-       * The origin must support HTTP Range requests. 
+       * The origin must support HTTP Range requests.
        * By default the option is disabled.
        * </pre>
        *
@@ -20308,7 +20308,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Files larger than 10 MB will be requested and cached in parts (no larger than 10 MB each part). It reduces time to first byte.
-       * The origin must support HTTP Range requests. 
+       * The origin must support HTTP Range requests.
        * By default the option is disabled.
        * </pre>
        *
@@ -20330,7 +20330,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Files larger than 10 MB will be requested and cached in parts (no larger than 10 MB each part). It reduces time to first byte.
-       * The origin must support HTTP Range requests. 
+       * The origin must support HTTP Range requests.
        * By default the option is disabled.
        * </pre>
        *
@@ -20350,7 +20350,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Files larger than 10 MB will be requested and cached in parts (no larger than 10 MB each part). It reduces time to first byte.
-       * The origin must support HTTP Range requests. 
+       * The origin must support HTTP Range requests.
        * By default the option is disabled.
        * </pre>
        *
@@ -20374,7 +20374,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Files larger than 10 MB will be requested and cached in parts (no larger than 10 MB each part). It reduces time to first byte.
-       * The origin must support HTTP Range requests. 
+       * The origin must support HTTP Range requests.
        * By default the option is disabled.
        * </pre>
        *
@@ -20394,7 +20394,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Files larger than 10 MB will be requested and cached in parts (no larger than 10 MB each part). It reduces time to first byte.
-       * The origin must support HTTP Range requests. 
+       * The origin must support HTTP Range requests.
        * By default the option is disabled.
        * </pre>
        *
@@ -20408,7 +20408,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Files larger than 10 MB will be requested and cached in parts (no larger than 10 MB each part). It reduces time to first byte.
-       * The origin must support HTTP Range requests. 
+       * The origin must support HTTP Range requests.
        * By default the option is disabled.
        * </pre>
        *
@@ -20425,7 +20425,7 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Files larger than 10 MB will be requested and cached in parts (no larger than 10 MB each part). It reduces time to first byte.
-       * The origin must support HTTP Range requests. 
+       * The origin must support HTTP Range requests.
        * By default the option is disabled.
        * </pre>
        *
@@ -21062,8 +21062,8 @@ public final class ResourceOuterClass {
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOptionOrBuilder> corsBuilder_;
       /**
        * <pre>
-       * Parameter that lets browsers get access to selected resources from a domain 
-       * different to a domain from which the request is received. 
+       * Parameter that lets browsers get access to selected resources from a domain
+       * different to a domain from which the request is received.
        * [Read more](/docs/cdn/concepts/cors).
        * </pre>
        *
@@ -21074,8 +21074,8 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Parameter that lets browsers get access to selected resources from a domain 
-       * different to a domain from which the request is received. 
+       * Parameter that lets browsers get access to selected resources from a domain
+       * different to a domain from which the request is received.
        * [Read more](/docs/cdn/concepts/cors).
        * </pre>
        *
@@ -21090,8 +21090,8 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Parameter that lets browsers get access to selected resources from a domain 
-       * different to a domain from which the request is received. 
+       * Parameter that lets browsers get access to selected resources from a domain
+       * different to a domain from which the request is received.
        * [Read more](/docs/cdn/concepts/cors).
        * </pre>
        *
@@ -21112,8 +21112,8 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Parameter that lets browsers get access to selected resources from a domain 
-       * different to a domain from which the request is received. 
+       * Parameter that lets browsers get access to selected resources from a domain
+       * different to a domain from which the request is received.
        * [Read more](/docs/cdn/concepts/cors).
        * </pre>
        *
@@ -21132,8 +21132,8 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Parameter that lets browsers get access to selected resources from a domain 
-       * different to a domain from which the request is received. 
+       * Parameter that lets browsers get access to selected resources from a domain
+       * different to a domain from which the request is received.
        * [Read more](/docs/cdn/concepts/cors).
        * </pre>
        *
@@ -21156,8 +21156,8 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Parameter that lets browsers get access to selected resources from a domain 
-       * different to a domain from which the request is received. 
+       * Parameter that lets browsers get access to selected resources from a domain
+       * different to a domain from which the request is received.
        * [Read more](/docs/cdn/concepts/cors).
        * </pre>
        *
@@ -21176,8 +21176,8 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Parameter that lets browsers get access to selected resources from a domain 
-       * different to a domain from which the request is received. 
+       * Parameter that lets browsers get access to selected resources from a domain
+       * different to a domain from which the request is received.
        * [Read more](/docs/cdn/concepts/cors).
        * </pre>
        *
@@ -21190,8 +21190,8 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Parameter that lets browsers get access to selected resources from a domain 
-       * different to a domain from which the request is received. 
+       * Parameter that lets browsers get access to selected resources from a domain
+       * different to a domain from which the request is received.
        * [Read more](/docs/cdn/concepts/cors).
        * </pre>
        *
@@ -21207,8 +21207,8 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Parameter that lets browsers get access to selected resources from a domain 
-       * different to a domain from which the request is received. 
+       * Parameter that lets browsers get access to selected resources from a domain
+       * different to a domain from which the request is received.
        * [Read more](/docs/cdn/concepts/cors).
        * </pre>
        *
@@ -21395,10 +21395,10 @@ public final class ResourceOuterClass {
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringsListOptionOrBuilder> allowedHttpMethodsBuilder_;
       /**
        * <pre>
-       * HTTP methods for your CDN content. By default the following methods 
+       * HTTP methods for your CDN content. By default the following methods
        * are allowed: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS.
-       * In case some methods are not allowed to the user, they will get the 405 
-       * (Method Not Allowed) response. If the method is not supported, 
+       * In case some methods are not allowed to the user, they will get the 405
+       * (Method Not Allowed) response. If the method is not supported,
        * the user gets the 501 (Not Implemented) response.
        * </pre>
        *
@@ -21409,10 +21409,10 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * HTTP methods for your CDN content. By default the following methods 
+       * HTTP methods for your CDN content. By default the following methods
        * are allowed: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS.
-       * In case some methods are not allowed to the user, they will get the 405 
-       * (Method Not Allowed) response. If the method is not supported, 
+       * In case some methods are not allowed to the user, they will get the 405
+       * (Method Not Allowed) response. If the method is not supported,
        * the user gets the 501 (Not Implemented) response.
        * </pre>
        *
@@ -21427,10 +21427,10 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * HTTP methods for your CDN content. By default the following methods 
+       * HTTP methods for your CDN content. By default the following methods
        * are allowed: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS.
-       * In case some methods are not allowed to the user, they will get the 405 
-       * (Method Not Allowed) response. If the method is not supported, 
+       * In case some methods are not allowed to the user, they will get the 405
+       * (Method Not Allowed) response. If the method is not supported,
        * the user gets the 501 (Not Implemented) response.
        * </pre>
        *
@@ -21451,10 +21451,10 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * HTTP methods for your CDN content. By default the following methods 
+       * HTTP methods for your CDN content. By default the following methods
        * are allowed: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS.
-       * In case some methods are not allowed to the user, they will get the 405 
-       * (Method Not Allowed) response. If the method is not supported, 
+       * In case some methods are not allowed to the user, they will get the 405
+       * (Method Not Allowed) response. If the method is not supported,
        * the user gets the 501 (Not Implemented) response.
        * </pre>
        *
@@ -21473,10 +21473,10 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * HTTP methods for your CDN content. By default the following methods 
+       * HTTP methods for your CDN content. By default the following methods
        * are allowed: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS.
-       * In case some methods are not allowed to the user, they will get the 405 
-       * (Method Not Allowed) response. If the method is not supported, 
+       * In case some methods are not allowed to the user, they will get the 405
+       * (Method Not Allowed) response. If the method is not supported,
        * the user gets the 501 (Not Implemented) response.
        * </pre>
        *
@@ -21499,10 +21499,10 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * HTTP methods for your CDN content. By default the following methods 
+       * HTTP methods for your CDN content. By default the following methods
        * are allowed: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS.
-       * In case some methods are not allowed to the user, they will get the 405 
-       * (Method Not Allowed) response. If the method is not supported, 
+       * In case some methods are not allowed to the user, they will get the 405
+       * (Method Not Allowed) response. If the method is not supported,
        * the user gets the 501 (Not Implemented) response.
        * </pre>
        *
@@ -21521,10 +21521,10 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * HTTP methods for your CDN content. By default the following methods 
+       * HTTP methods for your CDN content. By default the following methods
        * are allowed: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS.
-       * In case some methods are not allowed to the user, they will get the 405 
-       * (Method Not Allowed) response. If the method is not supported, 
+       * In case some methods are not allowed to the user, they will get the 405
+       * (Method Not Allowed) response. If the method is not supported,
        * the user gets the 501 (Not Implemented) response.
        * </pre>
        *
@@ -21537,10 +21537,10 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * HTTP methods for your CDN content. By default the following methods 
+       * HTTP methods for your CDN content. By default the following methods
        * are allowed: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS.
-       * In case some methods are not allowed to the user, they will get the 405 
-       * (Method Not Allowed) response. If the method is not supported, 
+       * In case some methods are not allowed to the user, they will get the 405
+       * (Method Not Allowed) response. If the method is not supported,
        * the user gets the 501 (Not Implemented) response.
        * </pre>
        *
@@ -21556,10 +21556,10 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * HTTP methods for your CDN content. By default the following methods 
+       * HTTP methods for your CDN content. By default the following methods
        * are allowed: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS.
-       * In case some methods are not allowed to the user, they will get the 405 
-       * (Method Not Allowed) response. If the method is not supported, 
+       * In case some methods are not allowed to the user, they will get the 405
+       * (Method Not Allowed) response. If the method is not supported,
        * the user gets the 501 (Not Implemented) response.
        * </pre>
        *
@@ -21892,7 +21892,7 @@ public final class ResourceOuterClass {
        * <pre>
        * Set up custom headers that CDN servers send in requests to origins.
        * The Header name field can contain letters (A-Z, a-z), numbers (0-9), dashes (-) and underscores (_).
-       * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-), 
+       * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-),
        * underscores (_), slashes (/), colons (:), equal (=), dots (.), and spaces.
        * </pre>
        *
@@ -21905,7 +21905,7 @@ public final class ResourceOuterClass {
        * <pre>
        * Set up custom headers that CDN servers send in requests to origins.
        * The Header name field can contain letters (A-Z, a-z), numbers (0-9), dashes (-) and underscores (_).
-       * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-), 
+       * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-),
        * underscores (_), slashes (/), colons (:), equal (=), dots (.), and spaces.
        * </pre>
        *
@@ -21922,7 +21922,7 @@ public final class ResourceOuterClass {
        * <pre>
        * Set up custom headers that CDN servers send in requests to origins.
        * The Header name field can contain letters (A-Z, a-z), numbers (0-9), dashes (-) and underscores (_).
-       * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-), 
+       * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-),
        * underscores (_), slashes (/), colons (:), equal (=), dots (.), and spaces.
        * </pre>
        *
@@ -21945,7 +21945,7 @@ public final class ResourceOuterClass {
        * <pre>
        * Set up custom headers that CDN servers send in requests to origins.
        * The Header name field can contain letters (A-Z, a-z), numbers (0-9), dashes (-) and underscores (_).
-       * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-), 
+       * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-),
        * underscores (_), slashes (/), colons (:), equal (=), dots (.), and spaces.
        * </pre>
        *
@@ -21966,7 +21966,7 @@ public final class ResourceOuterClass {
        * <pre>
        * Set up custom headers that CDN servers send in requests to origins.
        * The Header name field can contain letters (A-Z, a-z), numbers (0-9), dashes (-) and underscores (_).
-       * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-), 
+       * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-),
        * underscores (_), slashes (/), colons (:), equal (=), dots (.), and spaces.
        * </pre>
        *
@@ -21991,7 +21991,7 @@ public final class ResourceOuterClass {
        * <pre>
        * Set up custom headers that CDN servers send in requests to origins.
        * The Header name field can contain letters (A-Z, a-z), numbers (0-9), dashes (-) and underscores (_).
-       * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-), 
+       * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-),
        * underscores (_), slashes (/), colons (:), equal (=), dots (.), and spaces.
        * </pre>
        *
@@ -22012,7 +22012,7 @@ public final class ResourceOuterClass {
        * <pre>
        * Set up custom headers that CDN servers send in requests to origins.
        * The Header name field can contain letters (A-Z, a-z), numbers (0-9), dashes (-) and underscores (_).
-       * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-), 
+       * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-),
        * underscores (_), slashes (/), colons (:), equal (=), dots (.), and spaces.
        * </pre>
        *
@@ -22027,7 +22027,7 @@ public final class ResourceOuterClass {
        * <pre>
        * Set up custom headers that CDN servers send in requests to origins.
        * The Header name field can contain letters (A-Z, a-z), numbers (0-9), dashes (-) and underscores (_).
-       * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-), 
+       * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-),
        * underscores (_), slashes (/), colons (:), equal (=), dots (.), and spaces.
        * </pre>
        *
@@ -22045,7 +22045,7 @@ public final class ResourceOuterClass {
        * <pre>
        * Set up custom headers that CDN servers send in requests to origins.
        * The Header name field can contain letters (A-Z, a-z), numbers (0-9), dashes (-) and underscores (_).
-       * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-), 
+       * The Value field can contain letters (A-Z, a-z), numbers (0-9), dashes (-),
        * underscores (_), slashes (/), colons (:), equal (=), dots (.), and spaces.
        * </pre>
        *
@@ -22070,7 +22070,7 @@ public final class ResourceOuterClass {
           yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StringOptionOrBuilder> customServerNameBuilder_;
       /**
        * <pre>
-       * Wildcard additional CNAME. 
+       * Wildcard additional CNAME.
        * If a resource has a wildcard additional CNAME, you can use your own certificate for content delivery via HTTPS. Read-only.
        * </pre>
        *
@@ -22081,7 +22081,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Wildcard additional CNAME. 
+       * Wildcard additional CNAME.
        * If a resource has a wildcard additional CNAME, you can use your own certificate for content delivery via HTTPS. Read-only.
        * </pre>
        *
@@ -22096,7 +22096,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Wildcard additional CNAME. 
+       * Wildcard additional CNAME.
        * If a resource has a wildcard additional CNAME, you can use your own certificate for content delivery via HTTPS. Read-only.
        * </pre>
        *
@@ -22117,7 +22117,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Wildcard additional CNAME. 
+       * Wildcard additional CNAME.
        * If a resource has a wildcard additional CNAME, you can use your own certificate for content delivery via HTTPS. Read-only.
        * </pre>
        *
@@ -22136,7 +22136,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Wildcard additional CNAME. 
+       * Wildcard additional CNAME.
        * If a resource has a wildcard additional CNAME, you can use your own certificate for content delivery via HTTPS. Read-only.
        * </pre>
        *
@@ -22159,7 +22159,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Wildcard additional CNAME. 
+       * Wildcard additional CNAME.
        * If a resource has a wildcard additional CNAME, you can use your own certificate for content delivery via HTTPS. Read-only.
        * </pre>
        *
@@ -22178,7 +22178,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Wildcard additional CNAME. 
+       * Wildcard additional CNAME.
        * If a resource has a wildcard additional CNAME, you can use your own certificate for content delivery via HTTPS. Read-only.
        * </pre>
        *
@@ -22191,7 +22191,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Wildcard additional CNAME. 
+       * Wildcard additional CNAME.
        * If a resource has a wildcard additional CNAME, you can use your own certificate for content delivery via HTTPS. Read-only.
        * </pre>
        *
@@ -22207,7 +22207,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Wildcard additional CNAME. 
+       * Wildcard additional CNAME.
        * If a resource has a wildcard additional CNAME, you can use your own certificate for content delivery via HTTPS. Read-only.
        * </pre>
        *
@@ -22591,7 +22591,7 @@ public final class ResourceOuterClass {
 
     /**
      * <pre>
-     * Type of the sertificate.
+     * Type of the certificate.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
@@ -22599,7 +22599,7 @@ public final class ResourceOuterClass {
     int getTypeValue();
     /**
      * <pre>
-     * Type of the sertificate.
+     * Type of the certificate.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
@@ -22633,7 +22633,7 @@ public final class ResourceOuterClass {
   }
   /**
    * <pre>
-   * A set of the personal SSL certificate patameters. 
+   * A set of the personal SSL certificate parameters.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.cdn.v1.SSLTargetCertificate}
@@ -22730,7 +22730,7 @@ public final class ResourceOuterClass {
     private int type_;
     /**
      * <pre>
-     * Type of the sertificate.
+     * Type of the certificate.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
@@ -22740,7 +22740,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * Type of the sertificate.
+     * Type of the certificate.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
@@ -22957,7 +22957,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * A set of the personal SSL certificate patameters. 
+     * A set of the personal SSL certificate parameters.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.SSLTargetCertificate}
@@ -23123,7 +23123,7 @@ public final class ResourceOuterClass {
       private int type_ = 0;
       /**
        * <pre>
-       * Type of the sertificate.
+       * Type of the certificate.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
@@ -23133,7 +23133,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Type of the sertificate.
+       * Type of the certificate.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
@@ -23145,7 +23145,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Type of the sertificate.
+       * Type of the certificate.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
@@ -23157,7 +23157,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Type of the sertificate.
+       * Type of the certificate.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
@@ -23173,7 +23173,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Type of the sertificate.
+       * Type of the certificate.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
@@ -23396,7 +23396,7 @@ public final class ResourceOuterClass {
 
     /**
      * <pre>
-     * Type of the sertificate.
+     * Type of the certificate.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
@@ -23404,7 +23404,7 @@ public final class ResourceOuterClass {
     int getTypeValue();
     /**
      * <pre>
-     * Type of the sertificate.
+     * Type of the certificate.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
@@ -23413,7 +23413,7 @@ public final class ResourceOuterClass {
 
     /**
      * <pre>
-     * Active status. 
+     * Active status.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateStatus status = 2;</code>
@@ -23421,7 +23421,7 @@ public final class ResourceOuterClass {
     int getStatusValue();
     /**
      * <pre>
-     * Active status. 
+     * Active status.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateStatus status = 2;</code>
@@ -23455,7 +23455,7 @@ public final class ResourceOuterClass {
   }
   /**
    * <pre>
-   * A SSL sertificate patameters.
+   * A SSL certificate parameters.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.cdn.v1.SSLCertificate}
@@ -23559,7 +23559,7 @@ public final class ResourceOuterClass {
     private int type_;
     /**
      * <pre>
-     * Type of the sertificate.
+     * Type of the certificate.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
@@ -23569,7 +23569,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * Type of the sertificate.
+     * Type of the certificate.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
@@ -23584,7 +23584,7 @@ public final class ResourceOuterClass {
     private int status_;
     /**
      * <pre>
-     * Active status. 
+     * Active status.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateStatus status = 2;</code>
@@ -23594,7 +23594,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * Active status. 
+     * Active status.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.SSLCertificateStatus status = 2;</code>
@@ -23821,7 +23821,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * A SSL sertificate patameters.
+     * A SSL certificate parameters.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.SSLCertificate}
@@ -23993,7 +23993,7 @@ public final class ResourceOuterClass {
       private int type_ = 0;
       /**
        * <pre>
-       * Type of the sertificate.
+       * Type of the certificate.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
@@ -24003,7 +24003,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Type of the sertificate.
+       * Type of the certificate.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
@@ -24015,7 +24015,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Type of the sertificate.
+       * Type of the certificate.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
@@ -24027,7 +24027,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Type of the sertificate.
+       * Type of the certificate.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
@@ -24043,7 +24043,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Type of the sertificate.
+       * Type of the certificate.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateType type = 1;</code>
@@ -24058,7 +24058,7 @@ public final class ResourceOuterClass {
       private int status_ = 0;
       /**
        * <pre>
-       * Active status. 
+       * Active status.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateStatus status = 2;</code>
@@ -24068,7 +24068,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Active status. 
+       * Active status.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateStatus status = 2;</code>
@@ -24080,7 +24080,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Active status. 
+       * Active status.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateStatus status = 2;</code>
@@ -24092,7 +24092,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Active status. 
+       * Active status.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateStatus status = 2;</code>
@@ -24108,7 +24108,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Active status. 
+       * Active status.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.SSLCertificateStatus status = 2;</code>
@@ -24331,7 +24331,7 @@ public final class ResourceOuterClass {
 
     /**
      * <pre>
-     * Custom (add your SSL certificate by uploading the certificate 
+     * Custom (add your SSL certificate by uploading the certificate
      * in PEM format and your private key).
      * </pre>
      *
@@ -24340,7 +24340,7 @@ public final class ResourceOuterClass {
     boolean hasCm();
     /**
      * <pre>
-     * Custom (add your SSL certificate by uploading the certificate 
+     * Custom (add your SSL certificate by uploading the certificate
      * in PEM format and your private key).
      * </pre>
      *
@@ -24349,7 +24349,7 @@ public final class ResourceOuterClass {
     yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateCMData getCm();
     /**
      * <pre>
-     * Custom (add your SSL certificate by uploading the certificate 
+     * Custom (add your SSL certificate by uploading the certificate
      * in PEM format and your private key).
      * </pre>
      *
@@ -24361,7 +24361,7 @@ public final class ResourceOuterClass {
   }
   /**
    * <pre>
-   * A certificate data patameters.
+   * A certificate data parameters.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.cdn.v1.SSLCertificateData}
@@ -24487,7 +24487,7 @@ public final class ResourceOuterClass {
     public static final int CM_FIELD_NUMBER = 1;
     /**
      * <pre>
-     * Custom (add your SSL certificate by uploading the certificate 
+     * Custom (add your SSL certificate by uploading the certificate
      * in PEM format and your private key).
      * </pre>
      *
@@ -24498,7 +24498,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * Custom (add your SSL certificate by uploading the certificate 
+     * Custom (add your SSL certificate by uploading the certificate
      * in PEM format and your private key).
      * </pre>
      *
@@ -24512,7 +24512,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * Custom (add your SSL certificate by uploading the certificate 
+     * Custom (add your SSL certificate by uploading the certificate
      * in PEM format and your private key).
      * </pre>
      *
@@ -24698,7 +24698,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * A certificate data patameters.
+     * A certificate data parameters.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.SSLCertificateData}
@@ -24879,7 +24879,7 @@ public final class ResourceOuterClass {
           yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateCMData, yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateCMData.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.SSLCertificateCMDataOrBuilder> cmBuilder_;
       /**
        * <pre>
-       * Custom (add your SSL certificate by uploading the certificate 
+       * Custom (add your SSL certificate by uploading the certificate
        * in PEM format and your private key).
        * </pre>
        *
@@ -24890,7 +24890,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Custom (add your SSL certificate by uploading the certificate 
+       * Custom (add your SSL certificate by uploading the certificate
        * in PEM format and your private key).
        * </pre>
        *
@@ -24911,7 +24911,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Custom (add your SSL certificate by uploading the certificate 
+       * Custom (add your SSL certificate by uploading the certificate
        * in PEM format and your private key).
        * </pre>
        *
@@ -24932,7 +24932,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Custom (add your SSL certificate by uploading the certificate 
+       * Custom (add your SSL certificate by uploading the certificate
        * in PEM format and your private key).
        * </pre>
        *
@@ -24951,7 +24951,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Custom (add your SSL certificate by uploading the certificate 
+       * Custom (add your SSL certificate by uploading the certificate
        * in PEM format and your private key).
        * </pre>
        *
@@ -24978,7 +24978,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Custom (add your SSL certificate by uploading the certificate 
+       * Custom (add your SSL certificate by uploading the certificate
        * in PEM format and your private key).
        * </pre>
        *
@@ -25002,7 +25002,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Custom (add your SSL certificate by uploading the certificate 
+       * Custom (add your SSL certificate by uploading the certificate
        * in PEM format and your private key).
        * </pre>
        *
@@ -25013,7 +25013,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Custom (add your SSL certificate by uploading the certificate 
+       * Custom (add your SSL certificate by uploading the certificate
        * in PEM format and your private key).
        * </pre>
        *
@@ -25031,7 +25031,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Custom (add your SSL certificate by uploading the certificate 
+       * Custom (add your SSL certificate by uploading the certificate
        * in PEM format and your private key).
        * </pre>
        *
@@ -25114,7 +25114,7 @@ public final class ResourceOuterClass {
 
     /**
      * <pre>
-     * ID of the custom sertificate.
+     * ID of the custom certificate.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -25122,7 +25122,7 @@ public final class ResourceOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the custom sertificate.
+     * ID of the custom certificate.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -25132,7 +25132,7 @@ public final class ResourceOuterClass {
   }
   /**
    * <pre>
-   * A certificate data custom patameters.
+   * A certificate data custom parameters.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.cdn.v1.SSLCertificateCMData}
@@ -25216,7 +25216,7 @@ public final class ResourceOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the custom sertificate.
+     * ID of the custom certificate.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -25235,7 +25235,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * ID of the custom sertificate.
+     * ID of the custom certificate.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -25411,7 +25411,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * A certificate data custom patameters.
+     * A certificate data custom parameters.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.SSLCertificateCMData}
@@ -25564,7 +25564,7 @@ public final class ResourceOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the custom sertificate.
+       * ID of the custom certificate.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -25583,7 +25583,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * ID of the custom sertificate.
+       * ID of the custom certificate.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -25603,7 +25603,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * ID of the custom sertificate.
+       * ID of the custom certificate.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -25620,7 +25620,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * ID of the custom sertificate.
+       * ID of the custom certificate.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -25633,7 +25633,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * ID of the custom sertificate.
+       * ID of the custom certificate.
        * </pre>
        *
        * <code>string id = 1;</code>

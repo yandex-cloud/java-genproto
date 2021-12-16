@@ -8239,30 +8239,30 @@ public final class OriginGroupServiceOuterClass {
       "st\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\037\n\017o" +
       "rigin_group_id\030\002 \001(\003B\006\372\3071\002>0\"<\n\031DeleteOr" +
       "iginGroupMetadata\022\037\n\017origin_group_id\030\001 \001" +
-      "(\003B\006\372\3071\002>02\272\006\n\022OriginGroupService\022\204\001\n\003Ge" +
+      "(\003B\006\372\3071\002>02\265\006\n\022OriginGroupService\022\203\001\n\003Ge" +
       "t\022*.yandex.cloud.cdn.v1.GetOriginGroupRe" +
       "quest\032 .yandex.cloud.cdn.v1.OriginGroup\"" +
-      "/\202\323\344\223\002)\022\'/cdn/v1/origin_groups/{origin_g" +
-      "roup_id}\022\202\001\n\004List\022,.yandex.cloud.cdn.v1." +
-      "ListOriginGroupsRequest\032-.yandex.cloud.c" +
-      "dn.v1.ListOriginGroupsResponse\"\035\202\323\344\223\002\027\022\025" +
-      "/cdn/v1/origin_groups\022\250\001\n\006Create\022-.yande" +
-      "x.cloud.cdn.v1.CreateOriginGroupRequest\032" +
-      "!.yandex.cloud.operation.Operation\"L\202\323\344\223" +
-      "\002\032\"\025/cdn/v1/origin_groups:\001*\262\322*(\n\031Create" +
-      "OriginGroupMetadata\022\013OriginGroup\022\250\001\n\006Upd" +
-      "ate\022-.yandex.cloud.cdn.v1.UpdateOriginGr" +
-      "oupRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"L\202\323\344\223\002\0322\025/cdn/v1/origin_groups:\001*\262" +
-      "\322*(\n\031UpdateOriginGroupMetadata\022\013OriginGr" +
-      "oup\022\301\001\n\006Delete\022-.yandex.cloud.cdn.v1.Del" +
-      "eteOriginGroupRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"e\202\323\344\223\002)*\'/cdn/v1/origin" +
-      "_groups/{origin_group_id}\262\322*2\n\031DeleteOri" +
-      "ginGroupMetadata\022\025google.protobuf.EmptyB" +
-      "V\n\027yandex.cloud.api.cdn.v1Z;github.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/cdn" +
-      "/v1;cdnb\006proto3"
+      ".\202\323\344\223\002(\022&/cdn/v1/originGroups/{origin_gr" +
+      "oup_id}\022\201\001\n\004List\022,.yandex.cloud.cdn.v1.L" +
+      "istOriginGroupsRequest\032-.yandex.cloud.cd" +
+      "n.v1.ListOriginGroupsResponse\"\034\202\323\344\223\002\026\022\024/" +
+      "cdn/v1/originGroups\022\247\001\n\006Create\022-.yandex." +
+      "cloud.cdn.v1.CreateOriginGroupRequest\032!." +
+      "yandex.cloud.operation.Operation\"K\202\323\344\223\002\031" +
+      "\"\024/cdn/v1/originGroups:\001*\262\322*(\n\031CreateOri" +
+      "ginGroupMetadata\022\013OriginGroup\022\247\001\n\006Update" +
+      "\022-.yandex.cloud.cdn.v1.UpdateOriginGroup" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"K\202\323\344\223\002\0312\024/cdn/v1/originGroups:\001*\262\322*(\n" +
+      "\031UpdateOriginGroupMetadata\022\013OriginGroup\022" +
+      "\300\001\n\006Delete\022-.yandex.cloud.cdn.v1.DeleteO" +
+      "riginGroupRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"d\202\323\344\223\002(*&/cdn/v1/originGrou" +
+      "ps/{origin_group_id}\262\322*2\n\031DeleteOriginGr" +
+      "oupMetadata\022\025google.protobuf.EmptyBV\n\027ya" +
+      "ndex.cloud.api.cdn.v1Z;github.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/cdn/v1;c" +
+      "dnb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

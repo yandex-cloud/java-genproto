@@ -18727,7 +18727,7 @@ public final class SubnetServiceOuterClass {
       "\017\n\007address\030\001 \001(\t\0222\n\nip_version\030\002 \001(\0162\036.y" +
       "andex.cloud.vpc.v1.IpVersion\0225\n\nreferenc" +
       "es\030\003 \003(\0132!.yandex.cloud.reference.Refere" +
-      "nce2\260\014\n\rSubnetService\022n\n\003Get\022%.yandex.cl" +
+      "nce2\237\014\n\rSubnetService\022n\n\003Get\022%.yandex.cl" +
       "oud.vpc.v1.GetSubnetRequest\032\033.yandex.clo" +
       "ud.vpc.v1.Subnet\"#\202\323\344\223\002\035\022\033/vpc/v1/subnet" +
       "s/{subnet_id}\022r\n\004List\022\'.yandex.cloud.vpc" +
@@ -18741,35 +18741,34 @@ public final class SubnetServiceOuterClass {
       "ubnetRequest\032!.yandex.cloud.operation.Op" +
       "eration\"H\202\323\344\223\002 2\033/vpc/v1/subnets/{subnet" +
       "_id}:\001*\262\322*\036\n\024UpdateSubnetMetadata\022\006Subne" +
-      "t\022\304\001\n\rAddCidrBlocks\022/.yandex.cloud.vpc.v" +
+      "t\022\275\001\n\rAddCidrBlocks\022/.yandex.cloud.vpc.v" +
       "1.AddSubnetCidrBlocksRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"_\202\323\344\223\0020\"+/vpc/v1" +
+      "oud.operation.Operation\"X\202\323\344\223\0020\"+/vpc/v1" +
       "/subnets/{subnet_id}:add-cidr-blocks:\001*\262" +
-      "\322*%\n\033AddSubnetCidrBlocksMetadata\022\006Subnet" +
-      "\022\320\001\n\020RemoveCidrBlocks\0222.yandex.cloud.vpc" +
-      ".v1.RemoveSubnetCidrBlocksRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"e\202\323\344\223\0023\"./v" +
-      "pc/v1/subnets/{subnet_id}:remove-cidr-bl" +
-      "ocks:\001*\262\322*(\n\036RemoveSubnetCidrBlocksMetad" +
-      "ata\022\006Subnet\022\253\001\n\006Delete\022(.yandex.cloud.vp" +
-      "c.v1.DeleteSubnetRequest\032!.yandex.cloud." +
-      "operation.Operation\"T\202\323\344\223\002\035*\033/vpc/v1/sub" +
-      "nets/{subnet_id}\262\322*-\n\024DeleteSubnetMetada" +
-      "ta\022\025google.protobuf.Empty\022\245\001\n\016ListOperat" +
-      "ions\0220.yandex.cloud.vpc.v1.ListSubnetOpe" +
-      "rationsRequest\0321.yandex.cloud.vpc.v1.Lis" +
-      "tSubnetOperationsResponse\".\202\323\344\223\002(\022&/vpc/" +
-      "v1/subnets/{subnet_id}/operations\022\236\001\n\004Mo" +
-      "ve\022&.yandex.cloud.vpc.v1.MoveSubnetReque" +
-      "st\032!.yandex.cloud.operation.Operation\"K\202" +
-      "\323\344\223\002%\" /vpc/v1/subnets/{subnet_id}:move:" +
-      "\001*\262\322*\034\n\022MoveSubnetMetadata\022\006Subnet\022r\n\021Li" +
-      "stUsedAddresses\022-.yandex.cloud.vpc.v1.Li" +
-      "stUsedAddressesRequest\032..yandex.cloud.vp" +
-      "c.v1.ListUsedAddressesResponseBV\n\027yandex" +
-      ".cloud.api.vpc.v1Z;github.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/vpc/v1;vpcb\006" +
-      "proto3"
+      "\322*\036\n\024UpdateSubnetMetadata\022\006Subnet\022\306\001\n\020Re" +
+      "moveCidrBlocks\0222.yandex.cloud.vpc.v1.Rem" +
+      "oveSubnetCidrBlocksRequest\032!.yandex.clou" +
+      "d.operation.Operation\"[\202\323\344\223\0023\"./vpc/v1/s" +
+      "ubnets/{subnet_id}:remove-cidr-blocks:\001*" +
+      "\262\322*\036\n\024UpdateSubnetMetadata\022\006Subnet\022\253\001\n\006D" +
+      "elete\022(.yandex.cloud.vpc.v1.DeleteSubnet" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"T\202\323\344\223\002\035*\033/vpc/v1/subnets/{subnet_id}\262" +
+      "\322*-\n\024DeleteSubnetMetadata\022\025google.protob" +
+      "uf.Empty\022\245\001\n\016ListOperations\0220.yandex.clo" +
+      "ud.vpc.v1.ListSubnetOperationsRequest\0321." +
+      "yandex.cloud.vpc.v1.ListSubnetOperations" +
+      "Response\".\202\323\344\223\002(\022&/vpc/v1/subnets/{subne" +
+      "t_id}/operations\022\236\001\n\004Move\022&.yandex.cloud" +
+      ".vpc.v1.MoveSubnetRequest\032!.yandex.cloud" +
+      ".operation.Operation\"K\202\323\344\223\002%\" /vpc/v1/su" +
+      "bnets/{subnet_id}:move:\001*\262\322*\034\n\022MoveSubne" +
+      "tMetadata\022\006Subnet\022r\n\021ListUsedAddresses\022-" +
+      ".yandex.cloud.vpc.v1.ListUsedAddressesRe" +
+      "quest\032..yandex.cloud.vpc.v1.ListUsedAddr" +
+      "essesResponseBV\n\027yandex.cloud.api.vpc.v1" +
+      "Z;github.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/vpc/v1;vpcb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

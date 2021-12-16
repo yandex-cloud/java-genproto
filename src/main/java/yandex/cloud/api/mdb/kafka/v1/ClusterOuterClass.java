@@ -9570,7 +9570,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Volume of the storage available to a host, in bytes.
+     * Volume of the storage available to a host, in bytes. Must be greater than 2 * partition segment size in bytes * partitions count, so each partition can have one active segment file and one closed segment file that can be deleted.
      * </pre>
      *
      * <code>int64 disk_size = 2;</code>
@@ -9734,7 +9734,7 @@ public final class ClusterOuterClass {
     private long diskSize_;
     /**
      * <pre>
-     * Volume of the storage available to a host, in bytes.
+     * Volume of the storage available to a host, in bytes. Must be greater than 2 * partition segment size in bytes * partitions count, so each partition can have one active segment file and one closed segment file that can be deleted.
      * </pre>
      *
      * <code>int64 disk_size = 2;</code>
@@ -10220,7 +10220,7 @@ public final class ClusterOuterClass {
       private long diskSize_ ;
       /**
        * <pre>
-       * Volume of the storage available to a host, in bytes.
+       * Volume of the storage available to a host, in bytes. Must be greater than 2 * partition segment size in bytes * partitions count, so each partition can have one active segment file and one closed segment file that can be deleted.
        * </pre>
        *
        * <code>int64 disk_size = 2;</code>
@@ -10230,7 +10230,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Volume of the storage available to a host, in bytes.
+       * Volume of the storage available to a host, in bytes. Must be greater than 2 * partition segment size in bytes * partitions count, so each partition can have one active segment file and one closed segment file that can be deleted.
        * </pre>
        *
        * <code>int64 disk_size = 2;</code>
@@ -10243,7 +10243,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Volume of the storage available to a host, in bytes.
+       * Volume of the storage available to a host, in bytes. Must be greater than 2 * partition segment size in bytes * partitions count, so each partition can have one active segment file and one closed segment file that can be deleted.
        * </pre>
        *
        * <code>int64 disk_size = 2;</code>

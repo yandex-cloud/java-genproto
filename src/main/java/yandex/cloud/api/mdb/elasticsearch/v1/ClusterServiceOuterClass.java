@@ -38453,6 +38453,6957 @@ public final class ClusterServiceOuterClass {
 
   }
 
+  public interface RestoreClusterRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.elasticsearch.v1.RestoreClusterRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. ID of the backup to restore from.
+     * </pre>
+     *
+     * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getBackupId();
+    /**
+     * <pre>
+     * Required. ID of the backup to restore from.
+     * </pre>
+     *
+     * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getBackupIdBytes();
+
+    /**
+     * <pre>
+     * Name of the ElasticSearch cluster. The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the ElasticSearch cluster. The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Description of the ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description of the ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Custom labels for the ElasticSearch cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * For example, "project": "mvp" or "source": "dictionary".
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Custom labels for the ElasticSearch cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * For example, "project": "mvp" or "source": "dictionary".
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Custom labels for the ElasticSearch cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * For example, "project": "mvp" or "source": "dictionary".
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Custom labels for the ElasticSearch cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * For example, "project": "mvp" or "source": "dictionary".
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Custom labels for the ElasticSearch cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * For example, "project": "mvp" or "source": "dictionary".
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * Deployment environment of the ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.Cluster.Environment environment = 5;</code>
+     */
+    int getEnvironmentValue();
+    /**
+     * <pre>
+     * Deployment environment of the ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.Cluster.Environment environment = 5;</code>
+     */
+    yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.Cluster.Environment getEnvironment();
+
+    /**
+     * <pre>
+     * Configuration and resources for hosts that should be created for the ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
+     */
+    boolean hasConfigSpec();
+    /**
+     * <pre>
+     * Configuration and resources for hosts that should be created for the ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec getConfigSpec();
+    /**
+     * <pre>
+     * Configuration and resources for hosts that should be created for the ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecOrBuilder getConfigSpecOrBuilder();
+
+    /**
+     * <pre>
+     * Required. Configuration of ElasticSearch hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec> 
+        getHostSpecsList();
+    /**
+     * <pre>
+     * Required. Configuration of ElasticSearch hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec getHostSpecs(int index);
+    /**
+     * <pre>
+     * Required. Configuration of ElasticSearch hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    int getHostSpecsCount();
+    /**
+     * <pre>
+     * Required. Configuration of ElasticSearch hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    java.util.List<? extends yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpecOrBuilder> 
+        getHostSpecsOrBuilderList();
+    /**
+     * <pre>
+     * Required. Configuration of ElasticSearch hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpecOrBuilder getHostSpecsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * ID of the network to create the cluster in.
+     * </pre>
+     *
+     * <code>string network_id = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getNetworkId();
+    /**
+     * <pre>
+     * ID of the network to create the cluster in.
+     * </pre>
+     *
+     * <code>string network_id = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getNetworkIdBytes();
+
+    /**
+     * <pre>
+     * User security groups
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 11;</code>
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupIdsList();
+    /**
+     * <pre>
+     * User security groups
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 11;</code>
+     */
+    int getSecurityGroupIdsCount();
+    /**
+     * <pre>
+     * User security groups
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 11;</code>
+     */
+    java.lang.String getSecurityGroupIds(int index);
+    /**
+     * <pre>
+     * User security groups
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 11;</code>
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 12;</code>
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 12;</code>
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
+
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the cluster
+     * </pre>
+     *
+     * <code>bool deletion_protection = 13;</code>
+     */
+    boolean getDeletionProtection();
+
+    /**
+     * <pre>
+     * ID of the folder to create the ElasticSearch cluster in.
+     * </pre>
+     *
+     * <code>string folder_id = 14 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * ID of the folder to create the ElasticSearch cluster in.
+     * </pre>
+     *
+     * <code>string folder_id = 14 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.RestoreClusterRequest}
+   */
+  public  static final class RestoreClusterRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.RestoreClusterRequest)
+      RestoreClusterRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RestoreClusterRequest.newBuilder() to construct.
+    private RestoreClusterRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RestoreClusterRequest() {
+      backupId_ = "";
+      name_ = "";
+      description_ = "";
+      environment_ = 0;
+      hostSpecs_ = java.util.Collections.emptyList();
+      networkId_ = "";
+      securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      serviceAccountId_ = "";
+      deletionProtection_ = false;
+      folderId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RestoreClusterRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              backupId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000008;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+
+              environment_ = rawValue;
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.Builder subBuilder = null;
+              if (configSpec_ != null) {
+                subBuilder = configSpec_.toBuilder();
+              }
+              configSpec_ = input.readMessage(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(configSpec_);
+                configSpec_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                hostSpecs_ = new java.util.ArrayList<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec>();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              hostSpecs_.add(
+                  input.readMessage(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec.parser(), extensionRegistry));
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              networkId_ = s;
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+                securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000100;
+              }
+              securityGroupIds_.add(s);
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountId_ = s;
+              break;
+            }
+            case 104: {
+
+              deletionProtection_ = input.readBool();
+              break;
+            }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+          hostSpecs_ = java.util.Collections.unmodifiableList(hostSpecs_);
+        }
+        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterRequest_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 4:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest.class, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int BACKUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object backupId_;
+    /**
+     * <pre>
+     * Required. ID of the backup to restore from.
+     * </pre>
+     *
+     * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getBackupId() {
+      java.lang.Object ref = backupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        backupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. ID of the backup to restore from.
+     * </pre>
+     *
+     * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getBackupIdBytes() {
+      java.lang.Object ref = backupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        backupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the ElasticSearch cluster. The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the ElasticSearch cluster. The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Description of the ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description of the ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 4;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Custom labels for the ElasticSearch cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * For example, "project": "mvp" or "source": "dictionary".
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Custom labels for the ElasticSearch cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * For example, "project": "mvp" or "source": "dictionary".
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Custom labels for the ElasticSearch cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * For example, "project": "mvp" or "source": "dictionary".
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Custom labels for the ElasticSearch cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * For example, "project": "mvp" or "source": "dictionary".
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int ENVIRONMENT_FIELD_NUMBER = 5;
+    private int environment_;
+    /**
+     * <pre>
+     * Deployment environment of the ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.Cluster.Environment environment = 5;</code>
+     */
+    public int getEnvironmentValue() {
+      return environment_;
+    }
+    /**
+     * <pre>
+     * Deployment environment of the ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.Cluster.Environment environment = 5;</code>
+     */
+    public yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.Cluster.Environment getEnvironment() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.Cluster.Environment result = yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.Cluster.Environment.valueOf(environment_);
+      return result == null ? yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.Cluster.Environment.UNRECOGNIZED : result;
+    }
+
+    public static final int CONFIG_SPEC_FIELD_NUMBER = 6;
+    private yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec configSpec_;
+    /**
+     * <pre>
+     * Configuration and resources for hosts that should be created for the ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
+     */
+    public boolean hasConfigSpec() {
+      return configSpec_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration and resources for hosts that should be created for the ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
+     */
+    public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec getConfigSpec() {
+      return configSpec_ == null ? yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.getDefaultInstance() : configSpec_;
+    }
+    /**
+     * <pre>
+     * Configuration and resources for hosts that should be created for the ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
+     */
+    public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecOrBuilder getConfigSpecOrBuilder() {
+      return getConfigSpec();
+    }
+
+    public static final int HOST_SPECS_FIELD_NUMBER = 9;
+    private java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec> hostSpecs_;
+    /**
+     * <pre>
+     * Required. Configuration of ElasticSearch hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    public java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec> getHostSpecsList() {
+      return hostSpecs_;
+    }
+    /**
+     * <pre>
+     * Required. Configuration of ElasticSearch hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpecOrBuilder> 
+        getHostSpecsOrBuilderList() {
+      return hostSpecs_;
+    }
+    /**
+     * <pre>
+     * Required. Configuration of ElasticSearch hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    public int getHostSpecsCount() {
+      return hostSpecs_.size();
+    }
+    /**
+     * <pre>
+     * Required. Configuration of ElasticSearch hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec getHostSpecs(int index) {
+      return hostSpecs_.get(index);
+    }
+    /**
+     * <pre>
+     * Required. Configuration of ElasticSearch hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpecOrBuilder getHostSpecsOrBuilder(
+        int index) {
+      return hostSpecs_.get(index);
+    }
+
+    public static final int NETWORK_ID_FIELD_NUMBER = 10;
+    private volatile java.lang.Object networkId_;
+    /**
+     * <pre>
+     * ID of the network to create the cluster in.
+     * </pre>
+     *
+     * <code>string network_id = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getNetworkId() {
+      java.lang.Object ref = networkId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        networkId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the network to create the cluster in.
+     * </pre>
+     *
+     * <code>string network_id = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getNetworkIdBytes() {
+      java.lang.Object ref = networkId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        networkId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SECURITY_GROUP_IDS_FIELD_NUMBER = 11;
+    private com.google.protobuf.LazyStringList securityGroupIds_;
+    /**
+     * <pre>
+     * User security groups
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 11;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupIdsList() {
+      return securityGroupIds_;
+    }
+    /**
+     * <pre>
+     * User security groups
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 11;</code>
+     */
+    public int getSecurityGroupIdsCount() {
+      return securityGroupIds_.size();
+    }
+    /**
+     * <pre>
+     * User security groups
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 11;</code>
+     */
+    public java.lang.String getSecurityGroupIds(int index) {
+      return securityGroupIds_.get(index);
+    }
+    /**
+     * <pre>
+     * User security groups
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 11;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index) {
+      return securityGroupIds_.getByteString(index);
+    }
+
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 12;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 12;</code>
+     */
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 12;</code>
+     */
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 13;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the cluster
+     * </pre>
+     *
+     * <code>bool deletion_protection = 13;</code>
+     */
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 14;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * ID of the folder to create the ElasticSearch cluster in.
+     * </pre>
+     *
+     * <code>string folder_id = 14 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the folder to create the ElasticSearch cluster in.
+     * </pre>
+     *
+     * <code>string folder_id = 14 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getBackupIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, backupId_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          4);
+      if (environment_ != yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.Cluster.Environment.ENVIRONMENT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(5, environment_);
+      }
+      if (configSpec_ != null) {
+        output.writeMessage(6, getConfigSpec());
+      }
+      for (int i = 0; i < hostSpecs_.size(); i++) {
+        output.writeMessage(9, hostSpecs_.get(i));
+      }
+      if (!getNetworkIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, networkId_);
+      }
+      for (int i = 0; i < securityGroupIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, securityGroupIds_.getRaw(i));
+      }
+      if (!getServiceAccountIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, serviceAccountId_);
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(13, deletionProtection_);
+      }
+      if (!getFolderIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, folderId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getBackupIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, backupId_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, labels__);
+      }
+      if (environment_ != yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.Cluster.Environment.ENVIRONMENT_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, environment_);
+      }
+      if (configSpec_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getConfigSpec());
+      }
+      for (int i = 0; i < hostSpecs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, hostSpecs_.get(i));
+      }
+      if (!getNetworkIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, networkId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < securityGroupIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(securityGroupIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSecurityGroupIdsList().size();
+      }
+      if (!getServiceAccountIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, serviceAccountId_);
+      }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(13, deletionProtection_);
+      }
+      if (!getFolderIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, folderId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest other = (yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest) obj;
+
+      boolean result = true;
+      result = result && getBackupId()
+          .equals(other.getBackupId());
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getDescription()
+          .equals(other.getDescription());
+      result = result && internalGetLabels().equals(
+          other.internalGetLabels());
+      result = result && environment_ == other.environment_;
+      result = result && (hasConfigSpec() == other.hasConfigSpec());
+      if (hasConfigSpec()) {
+        result = result && getConfigSpec()
+            .equals(other.getConfigSpec());
+      }
+      result = result && getHostSpecsList()
+          .equals(other.getHostSpecsList());
+      result = result && getNetworkId()
+          .equals(other.getNetworkId());
+      result = result && getSecurityGroupIdsList()
+          .equals(other.getSecurityGroupIdsList());
+      result = result && getServiceAccountId()
+          .equals(other.getServiceAccountId());
+      result = result && (getDeletionProtection()
+          == other.getDeletionProtection());
+      result = result && getFolderId()
+          .equals(other.getFolderId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BACKUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getBackupId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      hash = (37 * hash) + ENVIRONMENT_FIELD_NUMBER;
+      hash = (53 * hash) + environment_;
+      if (hasConfigSpec()) {
+        hash = (37 * hash) + CONFIG_SPEC_FIELD_NUMBER;
+        hash = (53 * hash) + getConfigSpec().hashCode();
+      }
+      if (getHostSpecsCount() > 0) {
+        hash = (37 * hash) + HOST_SPECS_FIELD_NUMBER;
+        hash = (53 * hash) + getHostSpecsList().hashCode();
+      }
+      hash = (37 * hash) + NETWORK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNetworkId().hashCode();
+      if (getSecurityGroupIdsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
+      }
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.RestoreClusterRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.elasticsearch.v1.RestoreClusterRequest)
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterRequest_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest.class, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getHostSpecsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        backupId_ = "";
+
+        name_ = "";
+
+        description_ = "";
+
+        internalGetMutableLabels().clear();
+        environment_ = 0;
+
+        if (configSpecBuilder_ == null) {
+          configSpec_ = null;
+        } else {
+          configSpec_ = null;
+          configSpecBuilder_ = null;
+        }
+        if (hostSpecsBuilder_ == null) {
+          hostSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+        } else {
+          hostSpecsBuilder_.clear();
+        }
+        networkId_ = "";
+
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        serviceAccountId_ = "";
+
+        deletionProtection_ = false;
+
+        folderId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest build() {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest buildPartial() {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest result = new yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.backupId_ = backupId_;
+        result.name_ = name_;
+        result.description_ = description_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        result.environment_ = environment_;
+        if (configSpecBuilder_ == null) {
+          result.configSpec_ = configSpec_;
+        } else {
+          result.configSpec_ = configSpecBuilder_.build();
+        }
+        if (hostSpecsBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+            hostSpecs_ = java.util.Collections.unmodifiableList(hostSpecs_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.hostSpecs_ = hostSpecs_;
+        } else {
+          result.hostSpecs_ = hostSpecsBuilder_.build();
+        }
+        result.networkId_ = networkId_;
+        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000100);
+        }
+        result.securityGroupIds_ = securityGroupIds_;
+        result.serviceAccountId_ = serviceAccountId_;
+        result.deletionProtection_ = deletionProtection_;
+        result.folderId_ = folderId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest other) {
+        if (other == yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest.getDefaultInstance()) return this;
+        if (!other.getBackupId().isEmpty()) {
+          backupId_ = other.backupId_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
+        if (other.environment_ != 0) {
+          setEnvironmentValue(other.getEnvironmentValue());
+        }
+        if (other.hasConfigSpec()) {
+          mergeConfigSpec(other.getConfigSpec());
+        }
+        if (hostSpecsBuilder_ == null) {
+          if (!other.hostSpecs_.isEmpty()) {
+            if (hostSpecs_.isEmpty()) {
+              hostSpecs_ = other.hostSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureHostSpecsIsMutable();
+              hostSpecs_.addAll(other.hostSpecs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.hostSpecs_.isEmpty()) {
+            if (hostSpecsBuilder_.isEmpty()) {
+              hostSpecsBuilder_.dispose();
+              hostSpecsBuilder_ = null;
+              hostSpecs_ = other.hostSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              hostSpecsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getHostSpecsFieldBuilder() : null;
+            } else {
+              hostSpecsBuilder_.addAllMessages(other.hostSpecs_);
+            }
+          }
+        }
+        if (!other.getNetworkId().isEmpty()) {
+          networkId_ = other.networkId_;
+          onChanged();
+        }
+        if (!other.securityGroupIds_.isEmpty()) {
+          if (securityGroupIds_.isEmpty()) {
+            securityGroupIds_ = other.securityGroupIds_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+          } else {
+            ensureSecurityGroupIdsIsMutable();
+            securityGroupIds_.addAll(other.securityGroupIds_);
+          }
+          onChanged();
+        }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
+          onChanged();
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
+        }
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object backupId_ = "";
+      /**
+       * <pre>
+       * Required. ID of the backup to restore from.
+       * </pre>
+       *
+       * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getBackupId() {
+        java.lang.Object ref = backupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          backupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the backup to restore from.
+       * </pre>
+       *
+       * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getBackupIdBytes() {
+        java.lang.Object ref = backupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          backupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the backup to restore from.
+       * </pre>
+       *
+       * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setBackupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        backupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the backup to restore from.
+       * </pre>
+       *
+       * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearBackupId() {
+        
+        backupId_ = getDefaultInstance().getBackupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the backup to restore from.
+       * </pre>
+       *
+       * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setBackupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        backupId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the ElasticSearch cluster. The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the ElasticSearch cluster. The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the ElasticSearch cluster. The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the ElasticSearch cluster. The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the ElasticSearch cluster. The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description of the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Custom labels for the ElasticSearch cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * For example, "project": "mvp" or "source": "dictionary".
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Custom labels for the ElasticSearch cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * For example, "project": "mvp" or "source": "dictionary".
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Custom labels for the ElasticSearch cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * For example, "project": "mvp" or "source": "dictionary".
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Custom labels for the ElasticSearch cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * For example, "project": "mvp" or "source": "dictionary".
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Custom labels for the ElasticSearch cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * For example, "project": "mvp" or "source": "dictionary".
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Custom labels for the ElasticSearch cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * For example, "project": "mvp" or "source": "dictionary".
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Custom labels for the ElasticSearch cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * For example, "project": "mvp" or "source": "dictionary".
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private int environment_ = 0;
+      /**
+       * <pre>
+       * Deployment environment of the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.Cluster.Environment environment = 5;</code>
+       */
+      public int getEnvironmentValue() {
+        return environment_;
+      }
+      /**
+       * <pre>
+       * Deployment environment of the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.Cluster.Environment environment = 5;</code>
+       */
+      public Builder setEnvironmentValue(int value) {
+        environment_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deployment environment of the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.Cluster.Environment environment = 5;</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.Cluster.Environment getEnvironment() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.Cluster.Environment result = yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.Cluster.Environment.valueOf(environment_);
+        return result == null ? yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.Cluster.Environment.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Deployment environment of the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.Cluster.Environment environment = 5;</code>
+       */
+      public Builder setEnvironment(yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.Cluster.Environment value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        environment_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deployment environment of the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.Cluster.Environment environment = 5;</code>
+       */
+      public Builder clearEnvironment() {
+        
+        environment_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec configSpec_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.Builder, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecOrBuilder> configSpecBuilder_;
+      /**
+       * <pre>
+       * Configuration and resources for hosts that should be created for the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
+       */
+      public boolean hasConfigSpec() {
+        return configSpecBuilder_ != null || configSpec_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration and resources for hosts that should be created for the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec getConfigSpec() {
+        if (configSpecBuilder_ == null) {
+          return configSpec_ == null ? yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.getDefaultInstance() : configSpec_;
+        } else {
+          return configSpecBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resources for hosts that should be created for the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setConfigSpec(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec value) {
+        if (configSpecBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          configSpec_ = value;
+          onChanged();
+        } else {
+          configSpecBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resources for hosts that should be created for the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setConfigSpec(
+          yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.Builder builderForValue) {
+        if (configSpecBuilder_ == null) {
+          configSpec_ = builderForValue.build();
+          onChanged();
+        } else {
+          configSpecBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resources for hosts that should be created for the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergeConfigSpec(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec value) {
+        if (configSpecBuilder_ == null) {
+          if (configSpec_ != null) {
+            configSpec_ =
+              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.newBuilder(configSpec_).mergeFrom(value).buildPartial();
+          } else {
+            configSpec_ = value;
+          }
+          onChanged();
+        } else {
+          configSpecBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resources for hosts that should be created for the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearConfigSpec() {
+        if (configSpecBuilder_ == null) {
+          configSpec_ = null;
+          onChanged();
+        } else {
+          configSpec_ = null;
+          configSpecBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resources for hosts that should be created for the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.Builder getConfigSpecBuilder() {
+        
+        onChanged();
+        return getConfigSpecFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration and resources for hosts that should be created for the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecOrBuilder getConfigSpecOrBuilder() {
+        if (configSpecBuilder_ != null) {
+          return configSpecBuilder_.getMessageOrBuilder();
+        } else {
+          return configSpec_ == null ?
+              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.getDefaultInstance() : configSpec_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resources for hosts that should be created for the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.Builder, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecOrBuilder> 
+          getConfigSpecFieldBuilder() {
+        if (configSpecBuilder_ == null) {
+          configSpecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.Builder, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecOrBuilder>(
+                  getConfigSpec(),
+                  getParentForChildren(),
+                  isClean());
+          configSpec_ = null;
+        }
+        return configSpecBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec> hostSpecs_ =
+        java.util.Collections.emptyList();
+      private void ensureHostSpecsIsMutable() {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+          hostSpecs_ = new java.util.ArrayList<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec>(hostSpecs_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec.Builder, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpecOrBuilder> hostSpecsBuilder_;
+
+      /**
+       * <pre>
+       * Required. Configuration of ElasticSearch hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec> getHostSpecsList() {
+        if (hostSpecsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(hostSpecs_);
+        } else {
+          return hostSpecsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Required. Configuration of ElasticSearch hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public int getHostSpecsCount() {
+        if (hostSpecsBuilder_ == null) {
+          return hostSpecs_.size();
+        } else {
+          return hostSpecsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Required. Configuration of ElasticSearch hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec getHostSpecs(int index) {
+        if (hostSpecsBuilder_ == null) {
+          return hostSpecs_.get(index);
+        } else {
+          return hostSpecsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Required. Configuration of ElasticSearch hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder setHostSpecs(
+          int index, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec value) {
+        if (hostSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHostSpecsIsMutable();
+          hostSpecs_.set(index, value);
+          onChanged();
+        } else {
+          hostSpecsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Configuration of ElasticSearch hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder setHostSpecs(
+          int index, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec.Builder builderForValue) {
+        if (hostSpecsBuilder_ == null) {
+          ensureHostSpecsIsMutable();
+          hostSpecs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          hostSpecsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Configuration of ElasticSearch hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder addHostSpecs(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec value) {
+        if (hostSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHostSpecsIsMutable();
+          hostSpecs_.add(value);
+          onChanged();
+        } else {
+          hostSpecsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Configuration of ElasticSearch hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder addHostSpecs(
+          int index, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec value) {
+        if (hostSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHostSpecsIsMutable();
+          hostSpecs_.add(index, value);
+          onChanged();
+        } else {
+          hostSpecsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Configuration of ElasticSearch hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder addHostSpecs(
+          yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec.Builder builderForValue) {
+        if (hostSpecsBuilder_ == null) {
+          ensureHostSpecsIsMutable();
+          hostSpecs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          hostSpecsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Configuration of ElasticSearch hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder addHostSpecs(
+          int index, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec.Builder builderForValue) {
+        if (hostSpecsBuilder_ == null) {
+          ensureHostSpecsIsMutable();
+          hostSpecs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          hostSpecsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Configuration of ElasticSearch hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder addAllHostSpecs(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec> values) {
+        if (hostSpecsBuilder_ == null) {
+          ensureHostSpecsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, hostSpecs_);
+          onChanged();
+        } else {
+          hostSpecsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Configuration of ElasticSearch hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder clearHostSpecs() {
+        if (hostSpecsBuilder_ == null) {
+          hostSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          hostSpecsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Configuration of ElasticSearch hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder removeHostSpecs(int index) {
+        if (hostSpecsBuilder_ == null) {
+          ensureHostSpecsIsMutable();
+          hostSpecs_.remove(index);
+          onChanged();
+        } else {
+          hostSpecsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Configuration of ElasticSearch hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec.Builder getHostSpecsBuilder(
+          int index) {
+        return getHostSpecsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Required. Configuration of ElasticSearch hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpecOrBuilder getHostSpecsOrBuilder(
+          int index) {
+        if (hostSpecsBuilder_ == null) {
+          return hostSpecs_.get(index);  } else {
+          return hostSpecsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Required. Configuration of ElasticSearch hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpecOrBuilder> 
+           getHostSpecsOrBuilderList() {
+        if (hostSpecsBuilder_ != null) {
+          return hostSpecsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(hostSpecs_);
+        }
+      }
+      /**
+       * <pre>
+       * Required. Configuration of ElasticSearch hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec.Builder addHostSpecsBuilder() {
+        return getHostSpecsFieldBuilder().addBuilder(
+            yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Required. Configuration of ElasticSearch hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec.Builder addHostSpecsBuilder(
+          int index) {
+        return getHostSpecsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Required. Configuration of ElasticSearch hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.HostSpec host_specs = 9 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec.Builder> 
+           getHostSpecsBuilderList() {
+        return getHostSpecsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec.Builder, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpecOrBuilder> 
+          getHostSpecsFieldBuilder() {
+        if (hostSpecsBuilder_ == null) {
+          hostSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpec.Builder, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.HostSpecOrBuilder>(
+                  hostSpecs_,
+                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  getParentForChildren(),
+                  isClean());
+          hostSpecs_ = null;
+        }
+        return hostSpecsBuilder_;
+      }
+
+      private java.lang.Object networkId_ = "";
+      /**
+       * <pre>
+       * ID of the network to create the cluster in.
+       * </pre>
+       *
+       * <code>string network_id = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getNetworkId() {
+        java.lang.Object ref = networkId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          networkId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the network to create the cluster in.
+       * </pre>
+       *
+       * <code>string network_id = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getNetworkIdBytes() {
+        java.lang.Object ref = networkId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          networkId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the network to create the cluster in.
+       * </pre>
+       *
+       * <code>string network_id = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setNetworkId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        networkId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the network to create the cluster in.
+       * </pre>
+       *
+       * <code>string network_id = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearNetworkId() {
+        
+        networkId_ = getDefaultInstance().getNetworkId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the network to create the cluster in.
+       * </pre>
+       *
+       * <code>string network_id = 10 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setNetworkIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        networkId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupIdsIsMutable() {
+        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+          securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+      /**
+       * <pre>
+       * User security groups
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 11;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupIdsList() {
+        return securityGroupIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * User security groups
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 11;</code>
+       */
+      public int getSecurityGroupIdsCount() {
+        return securityGroupIds_.size();
+      }
+      /**
+       * <pre>
+       * User security groups
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 11;</code>
+       */
+      public java.lang.String getSecurityGroupIds(int index) {
+        return securityGroupIds_.get(index);
+      }
+      /**
+       * <pre>
+       * User security groups
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 11;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupIdsBytes(int index) {
+        return securityGroupIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * User security groups
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 11;</code>
+       */
+      public Builder setSecurityGroupIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User security groups
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 11;</code>
+       */
+      public Builder addSecurityGroupIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User security groups
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 11;</code>
+       */
+      public Builder addAllSecurityGroupIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroupIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User security groups
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 11;</code>
+       */
+      public Builder clearSecurityGroupIds() {
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User security groups
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 11;</code>
+       */
+      public Builder addSecurityGroupIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 12;</code>
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 12;</code>
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 12;</code>
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 12;</code>
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 12;</code>
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 13;</code>
+       */
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 13;</code>
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 13;</code>
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * ID of the folder to create the ElasticSearch cluster in.
+       * </pre>
+       *
+       * <code>string folder_id = 14 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder to create the ElasticSearch cluster in.
+       * </pre>
+       *
+       * <code>string folder_id = 14 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder to create the ElasticSearch cluster in.
+       * </pre>
+       *
+       * <code>string folder_id = 14 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder to create the ElasticSearch cluster in.
+       * </pre>
+       *
+       * <code>string folder_id = 14 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder to create the ElasticSearch cluster in.
+       * </pre>
+       *
+       * <code>string folder_id = 14 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.elasticsearch.v1.RestoreClusterRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.elasticsearch.v1.RestoreClusterRequest)
+    private static final yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest();
+    }
+
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RestoreClusterRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RestoreClusterRequest>() {
+      @java.lang.Override
+      public RestoreClusterRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RestoreClusterRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RestoreClusterRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RestoreClusterRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RestoreClusterMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.elasticsearch.v1.RestoreClusterMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. ID of the new ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * Required. ID of the new ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Required. ID of the backup used for recovery.
+     * </pre>
+     *
+     * <code>string backup_id = 2;</code>
+     */
+    java.lang.String getBackupId();
+    /**
+     * <pre>
+     * Required. ID of the backup used for recovery.
+     * </pre>
+     *
+     * <code>string backup_id = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getBackupIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.RestoreClusterMetadata}
+   */
+  public  static final class RestoreClusterMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.RestoreClusterMetadata)
+      RestoreClusterMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RestoreClusterMetadata.newBuilder() to construct.
+    private RestoreClusterMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RestoreClusterMetadata() {
+      clusterId_ = "";
+      backupId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RestoreClusterMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              backupId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata.class, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * Required. ID of the new ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. ID of the new ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BACKUP_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object backupId_;
+    /**
+     * <pre>
+     * Required. ID of the backup used for recovery.
+     * </pre>
+     *
+     * <code>string backup_id = 2;</code>
+     */
+    public java.lang.String getBackupId() {
+      java.lang.Object ref = backupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        backupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. ID of the backup used for recovery.
+     * </pre>
+     *
+     * <code>string backup_id = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getBackupIdBytes() {
+      java.lang.Object ref = backupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        backupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (!getBackupIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, backupId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (!getBackupIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, backupId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata other = (yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && getBackupId()
+          .equals(other.getBackupId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + BACKUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getBackupId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.RestoreClusterMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.elasticsearch.v1.RestoreClusterMetadata)
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata.class, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        backupId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata build() {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata buildPartial() {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata result = new yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata(this);
+        result.clusterId_ = clusterId_;
+        result.backupId_ = backupId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata) {
+          return mergeFrom((yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata other) {
+        if (other == yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.getBackupId().isEmpty()) {
+          backupId_ = other.backupId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * Required. ID of the new ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the new ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the new ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the new ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the new ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object backupId_ = "";
+      /**
+       * <pre>
+       * Required. ID of the backup used for recovery.
+       * </pre>
+       *
+       * <code>string backup_id = 2;</code>
+       */
+      public java.lang.String getBackupId() {
+        java.lang.Object ref = backupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          backupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the backup used for recovery.
+       * </pre>
+       *
+       * <code>string backup_id = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getBackupIdBytes() {
+        java.lang.Object ref = backupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          backupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the backup used for recovery.
+       * </pre>
+       *
+       * <code>string backup_id = 2;</code>
+       */
+      public Builder setBackupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        backupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the backup used for recovery.
+       * </pre>
+       *
+       * <code>string backup_id = 2;</code>
+       */
+      public Builder clearBackupId() {
+        
+        backupId_ = getDefaultInstance().getBackupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the backup used for recovery.
+       * </pre>
+       *
+       * <code>string backup_id = 2;</code>
+       */
+      public Builder setBackupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        backupId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.elasticsearch.v1.RestoreClusterMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.elasticsearch.v1.RestoreClusterMetadata)
+    private static final yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata();
+    }
+
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RestoreClusterMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<RestoreClusterMetadata>() {
+      @java.lang.Override
+      public RestoreClusterMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RestoreClusterMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RestoreClusterMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RestoreClusterMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.RestoreClusterMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BackupClusterRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.elasticsearch.v1.BackupClusterRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. ID of the ElasticSearch cluster to back up.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * Required. ID of the ElasticSearch cluster to back up.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.BackupClusterRequest}
+   */
+  public  static final class BackupClusterRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.BackupClusterRequest)
+      BackupClusterRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BackupClusterRequest.newBuilder() to construct.
+    private BackupClusterRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BackupClusterRequest() {
+      clusterId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BackupClusterRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_BackupClusterRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_BackupClusterRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest.class, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * Required. ID of the ElasticSearch cluster to back up.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. ID of the ElasticSearch cluster to back up.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest other = (yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.BackupClusterRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.elasticsearch.v1.BackupClusterRequest)
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_BackupClusterRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_BackupClusterRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest.class, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_BackupClusterRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest build() {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest buildPartial() {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest result = new yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest(this);
+        result.clusterId_ = clusterId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest other) {
+        if (other == yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * Required. ID of the ElasticSearch cluster to back up.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the ElasticSearch cluster to back up.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the ElasticSearch cluster to back up.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the ElasticSearch cluster to back up.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the ElasticSearch cluster to back up.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.elasticsearch.v1.BackupClusterRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.elasticsearch.v1.BackupClusterRequest)
+    private static final yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest();
+    }
+
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BackupClusterRequest>
+        PARSER = new com.google.protobuf.AbstractParser<BackupClusterRequest>() {
+      @java.lang.Override
+      public BackupClusterRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BackupClusterRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BackupClusterRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BackupClusterRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BackupClusterMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.elasticsearch.v1.BackupClusterMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.BackupClusterMetadata}
+   */
+  public  static final class BackupClusterMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.BackupClusterMetadata)
+      BackupClusterMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BackupClusterMetadata.newBuilder() to construct.
+    private BackupClusterMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BackupClusterMetadata() {
+      clusterId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BackupClusterMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_BackupClusterMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_BackupClusterMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata.class, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the ElasticSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata other = (yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.BackupClusterMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.elasticsearch.v1.BackupClusterMetadata)
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_BackupClusterMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_BackupClusterMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata.class, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_BackupClusterMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata build() {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata buildPartial() {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata result = new yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata(this);
+        result.clusterId_ = clusterId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata) {
+          return mergeFrom((yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata other) {
+        if (other == yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the ElasticSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.elasticsearch.v1.BackupClusterMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.elasticsearch.v1.BackupClusterMetadata)
+    private static final yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata();
+    }
+
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BackupClusterMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<BackupClusterMetadata>() {
+      @java.lang.Override
+      public BackupClusterMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BackupClusterMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BackupClusterMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BackupClusterMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.BackupClusterMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListClusterBackupsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.elasticsearch.v1.ListClusterBackupsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. ID of the Elasticsearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * Required. ID of the Elasticsearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than `page_size`, the service returns a `next_page_token` that can be used
+     * to get the next page of results in subsequent ListClusterBackups requests.
+     * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusterBackups
+     * request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusterBackups
+     * request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.ListClusterBackupsRequest}
+   */
+  public  static final class ListClusterBackupsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.ListClusterBackupsRequest)
+      ListClusterBackupsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListClusterBackupsRequest.newBuilder() to construct.
+    private ListClusterBackupsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListClusterBackupsRequest() {
+      clusterId_ = "";
+      pageSize_ = 0L;
+      pageToken_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListClusterBackupsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_ListClusterBackupsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_ListClusterBackupsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest.class, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * Required. ID of the Elasticsearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. ID of the Elasticsearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than `page_size`, the service returns a `next_page_token` that can be used
+     * to get the next page of results in subsequent ListClusterBackups requests.
+     * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     */
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusterBackups
+     * request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusterBackups
+     * request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!getPageTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!getPageTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest other = (yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && (getPageSize()
+          == other.getPageSize());
+      result = result && getPageToken()
+          .equals(other.getPageToken());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.ListClusterBackupsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.elasticsearch.v1.ListClusterBackupsRequest)
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_ListClusterBackupsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_ListClusterBackupsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest.class, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_ListClusterBackupsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest build() {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest buildPartial() {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest result = new yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest(this);
+        result.clusterId_ = clusterId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest other) {
+        if (other == yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * Required. ID of the Elasticsearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the Elasticsearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the Elasticsearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the Elasticsearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the Elasticsearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
+       * to get the next page of results in subsequent ListClusterBackups requests.
+       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       */
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
+       * to get the next page of results in subsequent ListClusterBackups requests.
+       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
+       * to get the next page of results in subsequent ListClusterBackups requests.
+       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusterBackups
+       * request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusterBackups
+       * request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusterBackups
+       * request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusterBackups
+       * request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusterBackups
+       * request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.elasticsearch.v1.ListClusterBackupsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.elasticsearch.v1.ListClusterBackupsRequest)
+    private static final yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest();
+    }
+
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListClusterBackupsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListClusterBackupsRequest>() {
+      @java.lang.Override
+      public ListClusterBackupsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListClusterBackupsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListClusterBackupsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListClusterBackupsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListClusterBackupsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.elasticsearch.v1.ListClusterBackupsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Requested list of backups.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup> 
+        getBackupsList();
+    /**
+     * <pre>
+     * Requested list of backups.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+     */
+    yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup getBackups(int index);
+    /**
+     * <pre>
+     * Requested list of backups.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+     */
+    int getBackupsCount();
+    /**
+     * <pre>
+     * Requested list of backups.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.BackupOrBuilder> 
+        getBackupsOrBuilderList();
+    /**
+     * <pre>
+     * Requested list of backups.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+     */
+    yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.BackupOrBuilder getBackupsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for ListClusterBackups requests,
+     * if the number of results is larger than `page_size` specified in the request.
+     * To get the next page, specify the value of `next_page_token` as a value for
+     * the `page_token` parameter in the next ListClusterBackups request. Subsequent ListClusterBackups
+     * requests will have their own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for ListClusterBackups requests,
+     * if the number of results is larger than `page_size` specified in the request.
+     * To get the next page, specify the value of `next_page_token` as a value for
+     * the `page_token` parameter in the next ListClusterBackups request. Subsequent ListClusterBackups
+     * requests will have their own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.ListClusterBackupsResponse}
+   */
+  public  static final class ListClusterBackupsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.ListClusterBackupsResponse)
+      ListClusterBackupsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListClusterBackupsResponse.newBuilder() to construct.
+    private ListClusterBackupsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListClusterBackupsResponse() {
+      backups_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListClusterBackupsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                backups_ = new java.util.ArrayList<yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              backups_.add(
+                  input.readMessage(yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          backups_ = java.util.Collections.unmodifiableList(backups_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_ListClusterBackupsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_ListClusterBackupsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse.class, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int BACKUPS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup> backups_;
+    /**
+     * <pre>
+     * Requested list of backups.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+     */
+    public java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup> getBackupsList() {
+      return backups_;
+    }
+    /**
+     * <pre>
+     * Requested list of backups.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.BackupOrBuilder> 
+        getBackupsOrBuilderList() {
+      return backups_;
+    }
+    /**
+     * <pre>
+     * Requested list of backups.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+     */
+    public int getBackupsCount() {
+      return backups_.size();
+    }
+    /**
+     * <pre>
+     * Requested list of backups.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+     */
+    public yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup getBackups(int index) {
+      return backups_.get(index);
+    }
+    /**
+     * <pre>
+     * Requested list of backups.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+     */
+    public yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.BackupOrBuilder getBackupsOrBuilder(
+        int index) {
+      return backups_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for ListClusterBackups requests,
+     * if the number of results is larger than `page_size` specified in the request.
+     * To get the next page, specify the value of `next_page_token` as a value for
+     * the `page_token` parameter in the next ListClusterBackups request. Subsequent ListClusterBackups
+     * requests will have their own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for ListClusterBackups requests,
+     * if the number of results is larger than `page_size` specified in the request.
+     * To get the next page, specify the value of `next_page_token` as a value for
+     * the `page_token` parameter in the next ListClusterBackups request. Subsequent ListClusterBackups
+     * requests will have their own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < backups_.size(); i++) {
+        output.writeMessage(1, backups_.get(i));
+      }
+      if (!getNextPageTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < backups_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, backups_.get(i));
+      }
+      if (!getNextPageTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse other = (yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse) obj;
+
+      boolean result = true;
+      result = result && getBackupsList()
+          .equals(other.getBackupsList());
+      result = result && getNextPageToken()
+          .equals(other.getNextPageToken());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getBackupsCount() > 0) {
+        hash = (37 * hash) + BACKUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getBackupsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.ListClusterBackupsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.elasticsearch.v1.ListClusterBackupsResponse)
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_ListClusterBackupsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_ListClusterBackupsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse.class, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBackupsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (backupsBuilder_ == null) {
+          backups_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          backupsBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_ListClusterBackupsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse build() {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse buildPartial() {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse result = new yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (backupsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            backups_ = java.util.Collections.unmodifiableList(backups_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.backups_ = backups_;
+        } else {
+          result.backups_ = backupsBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse) {
+          return mergeFrom((yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse other) {
+        if (other == yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse.getDefaultInstance()) return this;
+        if (backupsBuilder_ == null) {
+          if (!other.backups_.isEmpty()) {
+            if (backups_.isEmpty()) {
+              backups_ = other.backups_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureBackupsIsMutable();
+              backups_.addAll(other.backups_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.backups_.isEmpty()) {
+            if (backupsBuilder_.isEmpty()) {
+              backupsBuilder_.dispose();
+              backupsBuilder_ = null;
+              backups_ = other.backups_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              backupsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBackupsFieldBuilder() : null;
+            } else {
+              backupsBuilder_.addAllMessages(other.backups_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup> backups_ =
+        java.util.Collections.emptyList();
+      private void ensureBackupsIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          backups_ = new java.util.ArrayList<yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup>(backups_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup, yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup.Builder, yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.BackupOrBuilder> backupsBuilder_;
+
+      /**
+       * <pre>
+       * Requested list of backups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup> getBackupsList() {
+        if (backupsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(backups_);
+        } else {
+          return backupsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Requested list of backups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+       */
+      public int getBackupsCount() {
+        if (backupsBuilder_ == null) {
+          return backups_.size();
+        } else {
+          return backupsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Requested list of backups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup getBackups(int index) {
+        if (backupsBuilder_ == null) {
+          return backups_.get(index);
+        } else {
+          return backupsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Requested list of backups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+       */
+      public Builder setBackups(
+          int index, yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup value) {
+        if (backupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBackupsIsMutable();
+          backups_.set(index, value);
+          onChanged();
+        } else {
+          backupsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Requested list of backups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+       */
+      public Builder setBackups(
+          int index, yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup.Builder builderForValue) {
+        if (backupsBuilder_ == null) {
+          ensureBackupsIsMutable();
+          backups_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          backupsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Requested list of backups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+       */
+      public Builder addBackups(yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup value) {
+        if (backupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBackupsIsMutable();
+          backups_.add(value);
+          onChanged();
+        } else {
+          backupsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Requested list of backups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+       */
+      public Builder addBackups(
+          int index, yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup value) {
+        if (backupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBackupsIsMutable();
+          backups_.add(index, value);
+          onChanged();
+        } else {
+          backupsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Requested list of backups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+       */
+      public Builder addBackups(
+          yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup.Builder builderForValue) {
+        if (backupsBuilder_ == null) {
+          ensureBackupsIsMutable();
+          backups_.add(builderForValue.build());
+          onChanged();
+        } else {
+          backupsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Requested list of backups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+       */
+      public Builder addBackups(
+          int index, yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup.Builder builderForValue) {
+        if (backupsBuilder_ == null) {
+          ensureBackupsIsMutable();
+          backups_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          backupsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Requested list of backups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+       */
+      public Builder addAllBackups(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup> values) {
+        if (backupsBuilder_ == null) {
+          ensureBackupsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, backups_);
+          onChanged();
+        } else {
+          backupsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Requested list of backups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+       */
+      public Builder clearBackups() {
+        if (backupsBuilder_ == null) {
+          backups_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          backupsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Requested list of backups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+       */
+      public Builder removeBackups(int index) {
+        if (backupsBuilder_ == null) {
+          ensureBackupsIsMutable();
+          backups_.remove(index);
+          onChanged();
+        } else {
+          backupsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Requested list of backups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup.Builder getBackupsBuilder(
+          int index) {
+        return getBackupsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Requested list of backups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.BackupOrBuilder getBackupsOrBuilder(
+          int index) {
+        if (backupsBuilder_ == null) {
+          return backups_.get(index);  } else {
+          return backupsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Requested list of backups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.BackupOrBuilder> 
+           getBackupsOrBuilderList() {
+        if (backupsBuilder_ != null) {
+          return backupsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(backups_);
+        }
+      }
+      /**
+       * <pre>
+       * Requested list of backups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup.Builder addBackupsBuilder() {
+        return getBackupsFieldBuilder().addBuilder(
+            yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Requested list of backups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup.Builder addBackupsBuilder(
+          int index) {
+        return getBackupsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Requested list of backups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.Backup backups = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup.Builder> 
+           getBackupsBuilderList() {
+        return getBackupsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup, yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup.Builder, yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.BackupOrBuilder> 
+          getBackupsFieldBuilder() {
+        if (backupsBuilder_ == null) {
+          backupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup, yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.Backup.Builder, yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.BackupOrBuilder>(
+                  backups_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          backups_ = null;
+        }
+        return backupsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for ListClusterBackups requests,
+       * if the number of results is larger than `page_size` specified in the request.
+       * To get the next page, specify the value of `next_page_token` as a value for
+       * the `page_token` parameter in the next ListClusterBackups request. Subsequent ListClusterBackups
+       * requests will have their own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for ListClusterBackups requests,
+       * if the number of results is larger than `page_size` specified in the request.
+       * To get the next page, specify the value of `next_page_token` as a value for
+       * the `page_token` parameter in the next ListClusterBackups request. Subsequent ListClusterBackups
+       * requests will have their own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for ListClusterBackups requests,
+       * if the number of results is larger than `page_size` specified in the request.
+       * To get the next page, specify the value of `next_page_token` as a value for
+       * the `page_token` parameter in the next ListClusterBackups request. Subsequent ListClusterBackups
+       * requests will have their own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for ListClusterBackups requests,
+       * if the number of results is larger than `page_size` specified in the request.
+       * To get the next page, specify the value of `next_page_token` as a value for
+       * the `page_token` parameter in the next ListClusterBackups request. Subsequent ListClusterBackups
+       * requests will have their own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for ListClusterBackups requests,
+       * if the number of results is larger than `page_size` specified in the request.
+       * To get the next page, specify the value of `next_page_token` as a value for
+       * the `page_token` parameter in the next ListClusterBackups request. Subsequent ListClusterBackups
+       * requests will have their own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.elasticsearch.v1.ListClusterBackupsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.elasticsearch.v1.ListClusterBackupsResponse)
+    private static final yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse();
+    }
+
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListClusterBackupsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListClusterBackupsResponse>() {
+      @java.lang.Override
+      public ListClusterBackupsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListClusterBackupsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListClusterBackupsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListClusterBackupsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ListClusterBackupsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_elasticsearch_v1_GetClusterRequest_descriptor;
   private static final 
@@ -38648,6 +45599,41 @@ public final class ClusterServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_elasticsearch_v1_RescheduleMaintenanceMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_BackupClusterRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_elasticsearch_v1_BackupClusterRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_BackupClusterMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_elasticsearch_v1_BackupClusterMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_ListClusterBackupsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_elasticsearch_v1_ListClusterBackupsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_ListClusterBackupsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_elasticsearch_v1_ListClusterBackupsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -38664,161 +45650,190 @@ public final class ClusterServiceOuterClass {
       "ogle/protobuf/timestamp.proto\032 yandex/cl" +
       "oud/api/operation.proto\032\035yandex/cloud/va" +
       "lidation.proto\032&yandex/cloud/operation/o" +
-      "peration.proto\032/yandex/cloud/mdb/elastic" +
-      "search/v1/cluster.proto\032,yandex/cloud/md" +
-      "b/elasticsearch/v1/user.proto\032<yandex/cl" +
-      "oud/mdb/elasticsearch/v1/config/elastics" +
-      "earch.proto\0323yandex/cloud/mdb/elasticsea" +
-      "rch/v1/maintenance.proto\"5\n\021GetClusterRe" +
-      "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
-      "\220\001\n\023ListClustersRequest\022\037\n\tfolder_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
-      "\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032" +
-      "\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"m\n\024ListCluste" +
-      "rsResponse\022<\n\010clusters\030\001 \003(\0132*.yandex.cl" +
-      "oud.mdb.elasticsearch.v1.Cluster\022\027\n\017next" +
-      "_page_token\030\002 \001(\t\"\265\006\n\024CreateClusterReque" +
-      "st\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004n" +
-      "ame\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]" +
-      "*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\224\001\n\006la" +
-      "bels\030\004 \003(\0132C.yandex.cloud.mdb.elasticsea" +
-      "rch.v1.CreateClusterRequest.LabelsEntryB" +
-      "?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-" +
-      "63\262\3101\022\022\020[a-z][-_0-9a-z]*\022K\n\013environment\030" +
-      "\005 \001(\01626.yandex.cloud.mdb.elasticsearch.v" +
-      "1.Cluster.Environment\022H\n\013config_spec\030\006 \001" +
-      "(\0132-.yandex.cloud.mdb.elasticsearch.v1.C" +
-      "onfigSpecB\004\350\3071\001\022?\n\nuser_specs\030\010 \003(\0132+.ya" +
-      "ndex.cloud.mdb.elasticsearch.v1.UserSpec" +
-      "\022G\n\nhost_specs\030\t \003(\0132+.yandex.cloud.mdb." +
-      "elasticsearch.v1.HostSpecB\006\202\3101\002>0\022 \n\nnet" +
-      "work_id\030\n \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022security_" +
-      "group_ids\030\013 \003(\t\022\032\n\022service_account_id\030\014 " +
-      "\001(\t\022\033\n\023deletion_protection\030\r \001(\010\022P\n\022main" +
-      "tenance_window\030\016 \001(\01324.yandex.cloud.mdb." +
-      "elasticsearch.v1.MaintenanceWindow\032-\n\013La" +
-      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\"+\n\025CreateClusterMetadata\022\022\n\ncluster_id" +
-      "\030\001 \001(\t\"\352\004\n\024UpdateClusterRequest\022 \n\nclust" +
-      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask" +
-      "\030\002 \001(\0132\032.google.protobuf.FieldMask\022\036\n\013de" +
-      "scription\030\003 \001(\tB\t\212\3101\005<=256\022\224\001\n\006labels\030\004 " +
-      "\003(\0132C.yandex.cloud.mdb.elasticsearch.v1." +
-      "UpdateClusterRequest.LabelsEntryB?\202\3101\004<=" +
-      "64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022" +
-      "\020[a-z][-_0-9a-z]*\022H\n\013config_spec\030\005 \001(\01323" +
-      ".yandex.cloud.mdb.elasticsearch.v1.Confi" +
-      "gSpecUpdate\022(\n\004name\030\006 \001(\tB\032\212\3101\004<=63\362\3071\016[" +
-      "a-zA-Z0-9_-]*\022\032\n\022security_group_ids\030\007 \003(" +
-      "\t\022\032\n\022service_account_id\030\010 \001(\t\022\033\n\023deletio" +
-      "n_protection\030\t \001(\010\022P\n\022maintenance_window" +
-      "\030\n \001(\01324.yandex.cloud.mdb.elasticsearch." +
-      "v1.MaintenanceWindow\032-\n\013LabelsEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateClu" +
-      "sterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024Dele" +
-      "teClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\"+\n\025DeleteClusterMetadata\022\022\n\nc" +
-      "luster_id\030\001 \001(\t\"\320\003\n\026ListClusterLogsReque" +
-      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\r" +
-      "column_filter\030\002 \003(\t\022-\n\tfrom_time\030\003 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022+\n\007to_time\030\004 " +
-      "\001(\0132\032.google.protobuf.Timestamp\022\035\n\tpage_" +
-      "size\030\005 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\006 \001" +
-      "(\tB\t\212\3101\005<=100\022\036\n\026always_next_page_token\030" +
-      "\007 \001(\010\022\032\n\006filter\030\010 \001(\tB\n\212\3101\006<=1000\022[\n\014ser" +
-      "vice_type\030\t \001(\0162E.yandex.cloud.mdb.elast" +
-      "icsearch.v1.ListClusterLogsRequest.Servi" +
-      "ceType\"J\n\013ServiceType\022\034\n\030SERVICE_TYPE_UN" +
-      "SPECIFIED\020\000\022\021\n\rELASTICSEARCH\020\001\022\n\n\006KIBANA" +
-      "\020\002\"\266\001\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\022J\n\007message\030\002 \003(\013" +
-      "29.yandex.cloud.mdb.elasticsearch.v1.Log" +
-      "Record.MessageEntry\032.\n\014MessageEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"n\n\027ListClust" +
-      "erLogsResponse\022:\n\004logs\030\001 \003(\0132,.yandex.cl" +
-      "oud.mdb.elasticsearch.v1.LogRecord\022\027\n\017ne" +
-      "xt_page_token\030\002 \001(\t\"j\n\017StreamLogRecord\022<" +
-      "\n\006record\030\001 \001(\0132,.yandex.cloud.mdb.elasti" +
-      "csearch.v1.LogRecord\022\031\n\021next_record_toke" +
-      "n\030\002 \001(\t\"\227\003\n\030StreamClusterLogsRequest\022 \n\n" +
-      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn" +
-      "_filter\030\002 \003(\t\022-\n\tfrom_time\030\003 \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\022+\n\007to_time\030\004 \001(\0132\032." +
-      "google.protobuf.Timestamp\022\037\n\014record_toke" +
-      "n\030\005 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\006 \001(\tB\n\212\3101\006" +
-      "<=1000\022]\n\014service_type\030\007 \001(\0162G.yandex.cl" +
-      "oud.mdb.elasticsearch.v1.StreamClusterLo" +
-      "gsRequest.ServiceType\"J\n\013ServiceType\022\034\n\030" +
-      "SERVICE_TYPE_UNSPECIFIED\020\000\022\021\n\rELASTICSEA" +
-      "RCH\020\001\022\n\n\006KIBANA\020\002\"~\n\034ListClusterOperatio" +
-      "nsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npa" +
-      "ge_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListCluster" +
-      "OperationsResponse\0225\n\noperations\030\001 \003(\0132!" +
-      ".yandex.cloud.operation.Operation\022\027\n\017nex" +
-      "t_page_token\030\002 \001(\t\"y\n\027ListClusterHostsRe" +
+      "peration.proto\032.yandex/cloud/mdb/elastic" +
+      "search/v1/backup.proto\032/yandex/cloud/mdb" +
+      "/elasticsearch/v1/cluster.proto\032,yandex/" +
+      "cloud/mdb/elasticsearch/v1/user.proto\032<y" +
+      "andex/cloud/mdb/elasticsearch/v1/config/" +
+      "elasticsearch.proto\0323yandex/cloud/mdb/el" +
+      "asticsearch/v1/maintenance.proto\"5\n\021GetC" +
+      "lusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\"\220\001\n\023ListClustersRequest\022\037\n\tfolde" +
+      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
+      "\001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
+      "\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"m\n\024Li" +
+      "stClustersResponse\022<\n\010clusters\030\001 \003(\0132*.y" +
+      "andex.cloud.mdb.elasticsearch.v1.Cluster" +
+      "\022\027\n\017next_page_token\030\002 \001(\t\"\265\006\n\024CreateClus" +
+      "terRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA" +
+      "-Z0-9_-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=25" +
+      "6\022\224\001\n\006labels\030\004 \003(\0132C.yandex.cloud.mdb.el" +
+      "asticsearch.v1.CreateClusterRequest.Labe" +
+      "lsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*" +
+      "\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022K\n\013envi" +
+      "ronment\030\005 \001(\01626.yandex.cloud.mdb.elastic" +
+      "search.v1.Cluster.Environment\022H\n\013config_" +
+      "spec\030\006 \001(\0132-.yandex.cloud.mdb.elasticsea" +
+      "rch.v1.ConfigSpecB\004\350\3071\001\022?\n\nuser_specs\030\010 " +
+      "\003(\0132+.yandex.cloud.mdb.elasticsearch.v1." +
+      "UserSpec\022G\n\nhost_specs\030\t \003(\0132+.yandex.cl" +
+      "oud.mdb.elasticsearch.v1.HostSpecB\006\202\3101\002>" +
+      "0\022 \n\nnetwork_id\030\n \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022s" +
+      "ecurity_group_ids\030\013 \003(\t\022\032\n\022service_accou" +
+      "nt_id\030\014 \001(\t\022\033\n\023deletion_protection\030\r \001(\010" +
+      "\022P\n\022maintenance_window\030\016 \001(\01324.yandex.cl" +
+      "oud.mdb.elasticsearch.v1.MaintenanceWind" +
+      "ow\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\"+\n\025CreateClusterMetadata\022\022\n\ncl" +
+      "uster_id\030\001 \001(\t\"\352\004\n\024UpdateClusterRequest\022" +
+      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013upd" +
+      "ate_mask\030\002 \001(\0132\032.google.protobuf.FieldMa" +
+      "sk\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\224\001\n\006l" +
+      "abels\030\004 \003(\0132C.yandex.cloud.mdb.elasticse" +
+      "arch.v1.UpdateClusterRequest.LabelsEntry" +
+      "B?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041" +
+      "-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022H\n\013config_spec" +
+      "\030\005 \001(\01323.yandex.cloud.mdb.elasticsearch." +
+      "v1.ConfigSpecUpdate\022(\n\004name\030\006 \001(\tB\032\212\3101\004<" +
+      "=63\362\3071\016[a-zA-Z0-9_-]*\022\032\n\022security_group_" +
+      "ids\030\007 \003(\t\022\032\n\022service_account_id\030\010 \001(\t\022\033\n" +
+      "\023deletion_protection\030\t \001(\010\022P\n\022maintenanc" +
+      "e_window\030\n \001(\01324.yandex.cloud.mdb.elasti" +
+      "csearch.v1.MaintenanceWindow\032-\n\013LabelsEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025U" +
+      "pdateClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
+      "\"8\n\024DeleteClusterRequest\022 \n\ncluster_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteClusterMetad" +
+      "ata\022\022\n\ncluster_id\030\001 \001(\t\"\320\003\n\026ListClusterL" +
+      "ogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022-\n\tfrom_time" +
+      "\030\003 \001(\0132\032.google.protobuf.Timestamp\022+\n\007to" +
+      "_time\030\004 \001(\0132\032.google.protobuf.Timestamp\022" +
+      "\035\n\tpage_size\030\005 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_t" +
+      "oken\030\006 \001(\tB\t\212\3101\005<=100\022\036\n\026always_next_pag" +
+      "e_token\030\007 \001(\010\022\032\n\006filter\030\010 \001(\tB\n\212\3101\006<=100" +
+      "0\022[\n\014service_type\030\t \001(\0162E.yandex.cloud.m" +
+      "db.elasticsearch.v1.ListClusterLogsReque" +
+      "st.ServiceType\"J\n\013ServiceType\022\034\n\030SERVICE" +
+      "_TYPE_UNSPECIFIED\020\000\022\021\n\rELASTICSEARCH\020\001\022\n" +
+      "\n\006KIBANA\020\002\"\266\001\n\tLogRecord\022-\n\ttimestamp\030\001 " +
+      "\001(\0132\032.google.protobuf.Timestamp\022J\n\007messa" +
+      "ge\030\002 \003(\01329.yandex.cloud.mdb.elasticsearc" +
+      "h.v1.LogRecord.MessageEntry\032.\n\014MessageEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"n\n\027L" +
+      "istClusterLogsResponse\022:\n\004logs\030\001 \003(\0132,.y" +
+      "andex.cloud.mdb.elasticsearch.v1.LogReco" +
+      "rd\022\027\n\017next_page_token\030\002 \001(\t\"j\n\017StreamLog" +
+      "Record\022<\n\006record\030\001 \001(\0132,.yandex.cloud.md" +
+      "b.elasticsearch.v1.LogRecord\022\031\n\021next_rec" +
+      "ord_token\030\002 \001(\t\"\227\003\n\030StreamClusterLogsReq" +
+      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025" +
+      "\n\rcolumn_filter\030\002 \003(\t\022-\n\tfrom_time\030\003 \001(\013" +
+      "2\032.google.protobuf.Timestamp\022+\n\007to_time\030" +
+      "\004 \001(\0132\032.google.protobuf.Timestamp\022\037\n\014rec" +
+      "ord_token\030\005 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\006 \001" +
+      "(\tB\n\212\3101\006<=1000\022]\n\014service_type\030\007 \001(\0162G.y" +
+      "andex.cloud.mdb.elasticsearch.v1.StreamC" +
+      "lusterLogsRequest.ServiceType\"J\n\013Service" +
+      "Type\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\021\n\rEL" +
+      "ASTICSEARCH\020\001\022\n\n\006KIBANA\020\002\"~\n\034ListCluster" +
+      "OperationsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=10" +
+      "00\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035Lis" +
+      "tClusterOperationsResponse\0225\n\noperations" +
+      "\030\001 \003(\0132!.yandex.cloud.operation.Operatio" +
+      "n\022\027\n\017next_page_token\030\002 \001(\t\"y\n\027ListCluste" +
+      "rHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035" +
+      "\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"k\n\030ListClu" +
+      "sterHostsResponse\0226\n\005hosts\030\001 \003(\0132\'.yande" +
+      "x.cloud.mdb.elasticsearch.v1.Host\022\027\n\017nex" +
+      "t_page_token\030\002 \001(\t\"c\n\022MoveClusterRequest" +
+      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025de" +
+      "stination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
+      "b\n\023MoveClusterMetadata\022\022\n\ncluster_id\030\001 \001" +
+      "(\t\022\030\n\020source_folder_id\030\002 \001(\t\022\035\n\025destinat" +
+      "ion_folder_id\030\003 \001(\t\"7\n\023StartClusterReque" +
+      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024" +
+      "StartClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
+      "\"6\n\022StopClusterRequest\022 \n\ncluster_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopClusterMetadata\022" +
+      "\022\n\ncluster_id\030\001 \001(\t\"\316\001\n\010HostSpec\022\031\n\007zone" +
+      "_id\030\001 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\002 \001(\tB\010" +
+      "\212\3101\004<=50\022\030\n\020assign_public_ip\030\003 \001(\010\022@\n\004ty" +
+      "pe\030\004 \001(\0162,.yandex.cloud.mdb.elasticsearc" +
+      "h.v1.Host.TypeB\004\350\3071\001\022.\n\nshard_name\030\005 \001(\t" +
+      "B\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"\366\003\n\021Elastic" +
+      "searchSpec\022P\n\tdata_node\030\001 \001(\0132=.yandex.c" +
+      "loud.mdb.elasticsearch.v1.ElasticsearchS" +
+      "pec.DataNode\022T\n\013master_node\030\002 \001(\0132?.yand" +
+      "ex.cloud.mdb.elasticsearch.v1.Elasticsea" +
+      "rchSpec.MasterNode\022\031\n\007plugins\030\003 \003(\tB\010\212\3101" +
+      "\004<=50\032\316\001\n\010DataNode\022w\n\026elasticsearch_conf" +
+      "ig_7\030\001 \001(\0132>.yandex.cloud.mdb.elasticsea" +
+      "rch.v1.config.ElasticsearchConfig7H\000R\025el" +
+      "asticsearchConfig_7\022?\n\tresources\030\002 \001(\0132," +
+      ".yandex.cloud.mdb.elasticsearch.v1.Resou" +
+      "rcesB\010\n\006config\032M\n\nMasterNode\022?\n\tresource" +
+      "s\030\001 \001(\0132,.yandex.cloud.mdb.elasticsearch" +
+      ".v1.Resources\"\236\001\n\nConfigSpec\022\017\n\007version\030" +
+      "\001 \001(\t\022P\n\022elasticsearch_spec\030\002 \001(\01324.yand" +
+      "ex.cloud.mdb.elasticsearch.v1.Elasticsea" +
+      "rchSpec\022\017\n\007edition\030\003 \001(\t\022\034\n\016admin_passwo" +
+      "rd\030\004 \001(\tB\004\350\3071\001\"\236\001\n\020ConfigSpecUpdate\022\017\n\007v" +
+      "ersion\030\001 \001(\t\022P\n\022elasticsearch_spec\030\002 \001(\013" +
+      "24.yandex.cloud.mdb.elasticsearch.v1.Ela" +
+      "sticsearchSpec\022\017\n\007edition\030\003 \001(\t\022\026\n\016admin" +
+      "_password\030\004 \001(\t\"\203\001\n\026AddClusterHostsReque" +
+      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022G\n\n" +
+      "host_specs\030\002 \003(\0132+.yandex.cloud.mdb.elas" +
+      "ticsearch.v1.HostSpecB\006\202\3101\002>0\"A\n\027AddClus" +
+      "terHostsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\n" +
+      "host_names\030\002 \003(\t\"b\n\031DeleteClusterHostsRe" +
       "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_t" +
-      "oken\030\003 \001(\tB\t\212\3101\005<=100\"k\n\030ListClusterHost" +
-      "sResponse\0226\n\005hosts\030\001 \003(\0132\'.yandex.cloud." +
-      "mdb.elasticsearch.v1.Host\022\027\n\017next_page_t" +
-      "oken\030\002 \001(\t\"c\n\022MoveClusterRequest\022 \n\nclus" +
-      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destinatio" +
-      "n_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023MoveC" +
-      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020so" +
-      "urce_folder_id\030\002 \001(\t\022\035\n\025destination_fold" +
-      "er_id\030\003 \001(\t\"7\n\023StartClusterRequest\022 \n\ncl" +
-      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClu" +
-      "sterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022Stop" +
-      "ClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\")\n\023StopClusterMetadata\022\022\n\nclust" +
-      "er_id\030\001 \001(\t\"\316\001\n\010HostSpec\022\031\n\007zone_id\030\001 \001(" +
-      "\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<=50" +
-      "\022\030\n\020assign_public_ip\030\003 \001(\010\022@\n\004type\030\004 \001(\016" +
-      "2,.yandex.cloud.mdb.elasticsearch.v1.Hos" +
-      "t.TypeB\004\350\3071\001\022.\n\nshard_name\030\005 \001(\tB\032\212\3101\004<=" +
-      "63\362\3071\016[a-zA-Z0-9_-]*\"\366\003\n\021ElasticsearchSp" +
-      "ec\022P\n\tdata_node\030\001 \001(\0132=.yandex.cloud.mdb" +
-      ".elasticsearch.v1.ElasticsearchSpec.Data" +
-      "Node\022T\n\013master_node\030\002 \001(\0132?.yandex.cloud" +
-      ".mdb.elasticsearch.v1.ElasticsearchSpec." +
-      "MasterNode\022\031\n\007plugins\030\003 \003(\tB\010\212\3101\004<=50\032\316\001" +
-      "\n\010DataNode\022w\n\026elasticsearch_config_7\030\001 \001" +
-      "(\0132>.yandex.cloud.mdb.elasticsearch.v1.c" +
-      "onfig.ElasticsearchConfig7H\000R\025elasticsea" +
-      "rchConfig_7\022?\n\tresources\030\002 \001(\0132,.yandex." +
-      "cloud.mdb.elasticsearch.v1.ResourcesB\010\n\006" +
-      "config\032M\n\nMasterNode\022?\n\tresources\030\001 \001(\0132" +
-      ",.yandex.cloud.mdb.elasticsearch.v1.Reso" +
-      "urces\"\236\001\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022P\n" +
-      "\022elasticsearch_spec\030\002 \001(\01324.yandex.cloud" +
-      ".mdb.elasticsearch.v1.ElasticsearchSpec\022" +
-      "\017\n\007edition\030\003 \001(\t\022\034\n\016admin_password\030\004 \001(\t" +
-      "B\004\350\3071\001\"\236\001\n\020ConfigSpecUpdate\022\017\n\007version\030\001" +
-      " \001(\t\022P\n\022elasticsearch_spec\030\002 \001(\01324.yande" +
-      "x.cloud.mdb.elasticsearch.v1.Elasticsear" +
-      "chSpec\022\017\n\007edition\030\003 \001(\t\022\026\n\016admin_passwor" +
-      "d\030\004 \001(\t\"\203\001\n\026AddClusterHostsRequest\022 \n\ncl" +
-      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022G\n\nhost_spe" +
-      "cs\030\002 \003(\0132+.yandex.cloud.mdb.elasticsearc" +
-      "h.v1.HostSpecB\006\202\3101\002>0\"A\n\027AddClusterHosts" +
-      "Metadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_nam" +
-      "es\030\002 \003(\t\"b\n\031DeleteClusterHostsRequest\022 \n" +
-      "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost_" +
-      "names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\"D\n\032DeleteCl" +
-      "usterHostsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022" +
-      "\n\nhost_names\030\002 \003(\t\"\322\002\n\034RescheduleMainten" +
-      "anceRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022m\n\017reschedule_type\030\002 \001(\0162N.yandex." +
-      "cloud.mdb.elasticsearch.v1.RescheduleMai" +
-      "ntenanceRequest.RescheduleTypeB\004\350\3071\001\0221\n\r" +
-      "delayed_until\030\003 \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\"n\n\016RescheduleType\022\037\n\033RESCHEDULE_" +
-      "TYPE_UNSPECIFIED\020\000\022\r\n\tIMMEDIATE\020\001\022\031\n\025NEX" +
-      "T_AVAILABLE_WINDOW\020\002\022\021\n\rSPECIFIC_TIME\020\003\"" +
-      "f\n\035RescheduleMaintenanceMetadata\022\022\n\nclus" +
-      "ter_id\030\001 \001(\t\0221\n\rdelayed_until\030\004 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp2\206\030\n\016ClusterServi" +
+      "#\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\"D\n\032" +
+      "DeleteClusterHostsMetadata\022\022\n\ncluster_id" +
+      "\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\322\002\n\034Reschedul" +
+      "eMaintenanceRequest\022 \n\ncluster_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022m\n\017reschedule_type\030\002 \001(\0162N" +
+      ".yandex.cloud.mdb.elasticsearch.v1.Resch" +
+      "eduleMaintenanceRequest.RescheduleTypeB\004" +
+      "\350\3071\001\0221\n\rdelayed_until\030\003 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\"n\n\016RescheduleType\022\037\n\033RES" +
+      "CHEDULE_TYPE_UNSPECIFIED\020\000\022\r\n\tIMMEDIATE\020" +
+      "\001\022\031\n\025NEXT_AVAILABLE_WINDOW\020\002\022\021\n\rSPECIFIC" +
+      "_TIME\020\003\"f\n\035RescheduleMaintenanceMetadata" +
+      "\022\022\n\ncluster_id\030\001 \001(\t\0221\n\rdelayed_until\030\004 " +
+      "\001(\0132\032.google.protobuf.Timestamp\"\275\005\n\025Rest" +
+      "oreClusterRequest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\307" +
+      "1\001\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-" +
+      "Z0-9_-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256" +
+      "\022\225\001\n\006labels\030\004 \003(\0132D.yandex.cloud.mdb.ela" +
+      "sticsearch.v1.RestoreClusterRequest.Labe" +
+      "lsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*" +
+      "\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022K\n\013envi" +
+      "ronment\030\005 \001(\01626.yandex.cloud.mdb.elastic" +
+      "search.v1.Cluster.Environment\022H\n\013config_" +
+      "spec\030\006 \001(\0132-.yandex.cloud.mdb.elasticsea" +
+      "rch.v1.ConfigSpecB\004\350\3071\001\022G\n\nhost_specs\030\t " +
+      "\003(\0132+.yandex.cloud.mdb.elasticsearch.v1." +
+      "HostSpecB\006\202\3101\002>0\022 \n\nnetwork_id\030\n \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022\032\n\022security_group_ids\030\013 \003(\t\022\032" +
+      "\n\022service_account_id\030\014 \001(\t\022\033\n\023deletion_p" +
+      "rotection\030\r \001(\010\022\037\n\tfolder_id\030\016 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\"?\n\026RestoreClusterMetadat" +
+      "a\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t" +
+      "\"8\n\024BackupClusterRequest\022 \n\ncluster_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025BackupClusterMetad" +
+      "ata\022\022\n\ncluster_id\030\001 \001(\t\"{\n\031ListClusterBa" +
+      "ckupsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n" +
+      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"q\n\032ListClus" +
+      "terBackupsResponse\022:\n\007backups\030\001 \003(\0132).ya" +
+      "ndex.cloud.mdb.elasticsearch.v1.Backup\022\027" +
+      "\n\017next_page_token\030\002 \001(\t2\344\034\n\016ClusterServi" +
       "ce\022\240\001\n\003Get\0224.yandex.cloud.mdb.elasticsea" +
       "rch.v1.GetClusterRequest\032*.yandex.cloud." +
       "mdb.elasticsearch.v1.Cluster\"7\202\323\344\223\0021\022//m" +
@@ -38856,49 +45871,65 @@ public final class ClusterServiceOuterClass {
       "earch.v1.StopClusterRequest\032!.yandex.clo" +
       "ud.operation.Operation\"^\202\323\344\223\0026\"4/managed" +
       "-elasticsearch/v1/clusters/{cluster_id}:" +
-      "stop\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\277" +
-      "\001\n\010ListLogs\0229.yandex.cloud.mdb.elasticse" +
-      "arch.v1.ListClusterLogsRequest\032:.yandex." +
-      "cloud.mdb.elasticsearch.v1.ListClusterLo" +
-      "gsResponse\"<\202\323\344\223\0026\0224/managed-elasticsear" +
-      "ch/v1/clusters/{cluster_id}:logs\022\304\001\n\nStr" +
-      "eamLogs\022;.yandex.cloud.mdb.elasticsearch" +
-      ".v1.StreamClusterLogsRequest\0322.yandex.cl" +
-      "oud.mdb.elasticsearch.v1.StreamLogRecord" +
-      "\"C\202\323\344\223\002=\022;/managed-elasticsearch/v1/clus" +
-      "ters/{cluster_id}:stream_logs0\001\022\327\001\n\016List" +
-      "Operations\022?.yandex.cloud.mdb.elasticsea" +
-      "rch.v1.ListClusterOperationsRequest\032@.ya" +
-      "ndex.cloud.mdb.elasticsearch.v1.ListClus" +
-      "terOperationsResponse\"B\202\323\344\223\002<\022:/managed-" +
-      "elasticsearch/v1/clusters/{cluster_id}/o" +
-      "perations\022\303\001\n\tListHosts\022:.yandex.cloud.m" +
-      "db.elasticsearch.v1.ListClusterHostsRequ" +
-      "est\032;.yandex.cloud.mdb.elasticsearch.v1." +
-      "ListClusterHostsResponse\"=\202\323\344\223\0027\0225/manag" +
+      "stop\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\310" +
+      "\001\n\006Backup\0227.yandex.cloud.mdb.elasticsear" +
+      "ch.v1.BackupClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"b\202\323\344\223\0028\"6/managed-" +
+      "elasticsearch/v1/clusters/{cluster_id}:b" +
+      "ackup\262\322* \n\025BackupClusterMetadata\022\007Cluste" +
+      "r\022\313\001\n\013ListBackups\022<.yandex.cloud.mdb.ela" +
+      "sticsearch.v1.ListClusterBackupsRequest\032" +
+      "=.yandex.cloud.mdb.elasticsearch.v1.List" +
+      "ClusterBackupsResponse\"?\202\323\344\223\0029\0227/managed" +
+      "-elasticsearch/v1/clusters/{cluster_id}/" +
+      "backups\022\302\001\n\007Restore\0228.yandex.cloud.mdb.e" +
+      "lasticsearch.v1.RestoreClusterRequest\032!." +
+      "yandex.cloud.operation.Operation\"Z\202\323\344\223\002/" +
+      "\"*/managed-elasticsearch/v1/clusters:res" +
+      "tore:\001*\262\322*!\n\026RestoreClusterMetadata\022\007Clu" +
+      "ster\022\277\001\n\010ListLogs\0229.yandex.cloud.mdb.ela" +
+      "sticsearch.v1.ListClusterLogsRequest\032:.y" +
+      "andex.cloud.mdb.elasticsearch.v1.ListClu" +
+      "sterLogsResponse\"<\202\323\344\223\0026\0224/managed-elast" +
+      "icsearch/v1/clusters/{cluster_id}:logs\022\304" +
+      "\001\n\nStreamLogs\022;.yandex.cloud.mdb.elastic" +
+      "search.v1.StreamClusterLogsRequest\0322.yan" +
+      "dex.cloud.mdb.elasticsearch.v1.StreamLog" +
+      "Record\"C\202\323\344\223\002=\022;/managed-elasticsearch/v" +
+      "1/clusters/{cluster_id}:stream_logs0\001\022\327\001" +
+      "\n\016ListOperations\022?.yandex.cloud.mdb.elas" +
+      "ticsearch.v1.ListClusterOperationsReques" +
+      "t\032@.yandex.cloud.mdb.elasticsearch.v1.Li" +
+      "stClusterOperationsResponse\"B\202\323\344\223\002<\022:/ma" +
+      "naged-elasticsearch/v1/clusters/{cluster" +
+      "_id}/operations\022\303\001\n\tListHosts\022:.yandex.c" +
+      "loud.mdb.elasticsearch.v1.ListClusterHos" +
+      "tsRequest\032;.yandex.cloud.mdb.elasticsear" +
+      "ch.v1.ListClusterHostsResponse\"=\202\323\344\223\0027\0225" +
+      "/managed-elasticsearch/v1/clusters/{clus" +
+      "ter_id}/hosts\022\353\001\n\010AddHosts\0229.yandex.clou" +
+      "d.mdb.elasticsearch.v1.AddClusterHostsRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"\200\001\202\323\344\223\002F\"A/managed-elasticsearch/v1/clu" +
+      "sters/{cluster_id}/hosts:batchCreate:\001*\262" +
+      "\322*0\n\027AddClusterHostsMetadata\022\025google.pro" +
+      "tobuf.Empty\022\364\001\n\013DeleteHosts\022<.yandex.clo" +
+      "ud.mdb.elasticsearch.v1.DeleteClusterHos" +
+      "tsRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"\203\001\202\323\344\223\002F\"A/managed-elasticsearch/v1" +
+      "/clusters/{cluster_id}/hosts:batchDelete" +
+      ":\001*\262\322*3\n\032DeleteClusterHostsMetadata\022\025goo" +
+      "gle.protobuf.Empty\022\371\001\n\025RescheduleMainten" +
+      "ance\022?.yandex.cloud.mdb.elasticsearch.v1" +
+      ".RescheduleMaintenanceRequest\032!.yandex.c" +
+      "loud.operation.Operation\"|\202\323\344\223\002J\"E/manag" +
       "ed-elasticsearch/v1/clusters/{cluster_id" +
-      "}/hosts\022\353\001\n\010AddHosts\0229.yandex.cloud.mdb." +
-      "elasticsearch.v1.AddClusterHostsRequest\032" +
-      "!.yandex.cloud.operation.Operation\"\200\001\202\323\344" +
-      "\223\002F\"A/managed-elasticsearch/v1/clusters/" +
-      "{cluster_id}/hosts:batchCreate:\001*\262\322*0\n\027A" +
-      "ddClusterHostsMetadata\022\025google.protobuf." +
-      "Empty\022\364\001\n\013DeleteHosts\022<.yandex.cloud.mdb" +
-      ".elasticsearch.v1.DeleteClusterHostsRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"\203" +
-      "\001\202\323\344\223\002F\"A/managed-elasticsearch/v1/clust" +
-      "ers/{cluster_id}/hosts:batchDelete:\001*\262\322*" +
-      "3\n\032DeleteClusterHostsMetadata\022\025google.pr" +
-      "otobuf.Empty\022\371\001\n\025RescheduleMaintenance\022?" +
-      ".yandex.cloud.mdb.elasticsearch.v1.Resch" +
-      "eduleMaintenanceRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"|\202\323\344\223\002J\"E/managed-ela" +
-      "sticsearch/v1/clusters/{cluster_id}:resc" +
-      "heduleMaintenance:\001*\262\322*(\n\035RescheduleMain" +
-      "tenanceMetadata\022\007ClusterB|\n%yandex.cloud" +
-      ".api.mdb.elasticsearch.v1ZSgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/mdb/" +
-      "elasticsearch/v1;elasticsearchb\006proto3"
+      "}:rescheduleMaintenance:\001*\262\322*(\n\035Reschedu" +
+      "leMaintenanceMetadata\022\007ClusterB|\n%yandex" +
+      ".cloud.api.mdb.elasticsearch.v1ZSgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/mdb/elasticsearch/v1;elasticsearchb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -38917,6 +45948,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.getDescriptor(),
           yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.getDescriptor(),
           yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.getDescriptor(),
           yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.getDescriptor(),
@@ -39156,6 +46188,48 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_elasticsearch_v1_RescheduleMaintenanceMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "DelayedUntil", });
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterRequest_descriptor =
+      getDescriptor().getMessageTypes().get(34);
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterRequest_descriptor,
+        new java.lang.String[] { "BackupId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "HostSpecs", "NetworkId", "SecurityGroupIds", "ServiceAccountId", "DeletionProtection", "FolderId", });
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(35);
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_elasticsearch_v1_RestoreClusterMetadata_descriptor,
+        new java.lang.String[] { "ClusterId", "BackupId", });
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_BackupClusterRequest_descriptor =
+      getDescriptor().getMessageTypes().get(36);
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_BackupClusterRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_elasticsearch_v1_BackupClusterRequest_descriptor,
+        new java.lang.String[] { "ClusterId", });
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_BackupClusterMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(37);
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_BackupClusterMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_elasticsearch_v1_BackupClusterMetadata_descriptor,
+        new java.lang.String[] { "ClusterId", });
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_ListClusterBackupsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(38);
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_ListClusterBackupsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_elasticsearch_v1_ListClusterBackupsRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_ListClusterBackupsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(39);
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_ListClusterBackupsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_elasticsearch_v1_ListClusterBackupsResponse_descriptor,
+        new java.lang.String[] { "Backups", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -39174,6 +46248,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.mdb.elasticsearch.v1.BackupOuterClass.getDescriptor();
     yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.getDescriptor();
     yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.getDescriptor();
     yandex.cloud.api.mdb.elasticsearch.v1.config.Elasticsearch.getDescriptor();
