@@ -350,6 +350,38 @@ public final class ClusterServiceGrpc {
      return getListSegmentHostsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest,
+      yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse> getListLogsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListLogs",
+      requestType = yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.class,
+      responseType = yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest,
+      yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse> getListLogsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest, yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse> getListLogsMethod;
+    if ((getListLogsMethod = ClusterServiceGrpc.getListLogsMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getListLogsMethod = ClusterServiceGrpc.getListLogsMethod) == null) {
+          ClusterServiceGrpc.getListLogsMethod = getListLogsMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest, yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.mdb.greenplum.v1.ClusterService", "ListLogs"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListLogs"))
+                  .build();
+          }
+        }
+     }
+     return getListLogsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -482,6 +514,16 @@ public final class ClusterServiceGrpc {
       asyncUnimplementedUnaryCall(getListSegmentHostsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Retrieves logs for the specified Greenplum cluster.
+     * </pre>
+     */
+    public void listLogs(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getListLogsMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -554,6 +596,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest,
                 yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse>(
                   this, METHODID_LIST_SEGMENT_HOSTS)))
+          .addMethod(
+            getListLogsMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest,
+                yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse>(
+                  this, METHODID_LIST_LOGS)))
           .build();
     }
   }
@@ -690,6 +739,17 @@ public final class ClusterServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getListSegmentHostsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Retrieves logs for the specified Greenplum cluster.
+     * </pre>
+     */
+    public void listLogs(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getListLogsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -813,6 +873,16 @@ public final class ClusterServiceGrpc {
     public yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse listSegmentHosts(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListSegmentHostsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves logs for the specified Greenplum cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse listLogs(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getListLogsMethod(), getCallOptions(), request);
     }
   }
 
@@ -948,6 +1018,17 @@ public final class ClusterServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getListSegmentHostsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Retrieves logs for the specified Greenplum cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse> listLogs(
+        yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getListLogsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -960,6 +1041,7 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_LIST_OPERATIONS = 7;
   private static final int METHODID_LIST_MASTER_HOSTS = 8;
   private static final int METHODID_LIST_SEGMENT_HOSTS = 9;
+  private static final int METHODID_LIST_LOGS = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1017,6 +1099,10 @@ public final class ClusterServiceGrpc {
         case METHODID_LIST_SEGMENT_HOSTS:
           serviceImpl.listSegmentHosts((yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_LOGS:
+          serviceImpl.listLogs((yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1089,6 +1175,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getListOperationsMethod())
               .addMethod(getListMasterHostsMethod())
               .addMethod(getListSegmentHostsMethod())
+              .addMethod(getListLogsMethod())
               .build();
         }
       }

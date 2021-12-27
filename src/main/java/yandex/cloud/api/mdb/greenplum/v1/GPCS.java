@@ -20083,6 +20083,4387 @@ public final class GPCS {
 
   }
 
+  public interface ListClusterLogsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.ListClusterLogsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Requested log records.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord> 
+        getLogsList();
+    /**
+     * <pre>
+     * Requested log records.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord getLogs(int index);
+    /**
+     * <pre>
+     * Requested log records.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+     */
+    int getLogsCount();
+    /**
+     * <pre>
+     * Requested log records.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecordOrBuilder> 
+        getLogsOrBuilderList();
+    /**
+     * <pre>
+     * Requested log records.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecordOrBuilder getLogsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
+     * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
+     * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.ListClusterLogsResponse}
+   */
+  public  static final class ListClusterLogsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.ListClusterLogsResponse)
+      ListClusterLogsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListClusterLogsResponse.newBuilder() to construct.
+    private ListClusterLogsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListClusterLogsResponse() {
+      logs_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListClusterLogsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                logs_ = new java.util.ArrayList<yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              logs_.add(
+                  input.readMessage(yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          logs_ = java.util.Collections.unmodifiableList(logs_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.GPCS.internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterLogsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.GPCS.internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterLogsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse.class, yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int LOGS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord> logs_;
+    /**
+     * <pre>
+     * Requested log records.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+     */
+    public java.util.List<yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord> getLogsList() {
+      return logs_;
+    }
+    /**
+     * <pre>
+     * Requested log records.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecordOrBuilder> 
+        getLogsOrBuilderList() {
+      return logs_;
+    }
+    /**
+     * <pre>
+     * Requested log records.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+     */
+    public int getLogsCount() {
+      return logs_.size();
+    }
+    /**
+     * <pre>
+     * Requested log records.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+     */
+    public yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord getLogs(int index) {
+      return logs_.get(index);
+    }
+    /**
+     * <pre>
+     * Requested log records.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+     */
+    public yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecordOrBuilder getLogsOrBuilder(
+        int index) {
+      return logs_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
+     * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
+     * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < logs_.size(); i++) {
+        output.writeMessage(1, logs_.get(i));
+      }
+      if (!getNextPageTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < logs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, logs_.get(i));
+      }
+      if (!getNextPageTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse other = (yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse) obj;
+
+      boolean result = true;
+      result = result && getLogsList()
+          .equals(other.getLogsList());
+      result = result && getNextPageToken()
+          .equals(other.getNextPageToken());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getLogsCount() > 0) {
+        hash = (37 * hash) + LOGS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.ListClusterLogsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.ListClusterLogsResponse)
+        yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCS.internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterLogsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCS.internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterLogsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse.class, yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLogsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (logsBuilder_ == null) {
+          logs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          logsBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCS.internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterLogsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse build() {
+        yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse result = new yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (logsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            logs_ = java.util.Collections.unmodifiableList(logs_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.logs_ = logs_;
+        } else {
+          result.logs_ = logsBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse.getDefaultInstance()) return this;
+        if (logsBuilder_ == null) {
+          if (!other.logs_.isEmpty()) {
+            if (logs_.isEmpty()) {
+              logs_ = other.logs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureLogsIsMutable();
+              logs_.addAll(other.logs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.logs_.isEmpty()) {
+            if (logsBuilder_.isEmpty()) {
+              logsBuilder_.dispose();
+              logsBuilder_ = null;
+              logs_ = other.logs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              logsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLogsFieldBuilder() : null;
+            } else {
+              logsBuilder_.addAllMessages(other.logs_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord> logs_ =
+        java.util.Collections.emptyList();
+      private void ensureLogsIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          logs_ = new java.util.ArrayList<yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord>(logs_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord, yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord.Builder, yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecordOrBuilder> logsBuilder_;
+
+      /**
+       * <pre>
+       * Requested log records.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord> getLogsList() {
+        if (logsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(logs_);
+        } else {
+          return logsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Requested log records.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+       */
+      public int getLogsCount() {
+        if (logsBuilder_ == null) {
+          return logs_.size();
+        } else {
+          return logsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Requested log records.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord getLogs(int index) {
+        if (logsBuilder_ == null) {
+          return logs_.get(index);
+        } else {
+          return logsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Requested log records.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+       */
+      public Builder setLogs(
+          int index, yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord value) {
+        if (logsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLogsIsMutable();
+          logs_.set(index, value);
+          onChanged();
+        } else {
+          logsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Requested log records.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+       */
+      public Builder setLogs(
+          int index, yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord.Builder builderForValue) {
+        if (logsBuilder_ == null) {
+          ensureLogsIsMutable();
+          logs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          logsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Requested log records.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+       */
+      public Builder addLogs(yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord value) {
+        if (logsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLogsIsMutable();
+          logs_.add(value);
+          onChanged();
+        } else {
+          logsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Requested log records.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+       */
+      public Builder addLogs(
+          int index, yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord value) {
+        if (logsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLogsIsMutable();
+          logs_.add(index, value);
+          onChanged();
+        } else {
+          logsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Requested log records.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+       */
+      public Builder addLogs(
+          yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord.Builder builderForValue) {
+        if (logsBuilder_ == null) {
+          ensureLogsIsMutable();
+          logs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          logsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Requested log records.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+       */
+      public Builder addLogs(
+          int index, yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord.Builder builderForValue) {
+        if (logsBuilder_ == null) {
+          ensureLogsIsMutable();
+          logs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          logsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Requested log records.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+       */
+      public Builder addAllLogs(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord> values) {
+        if (logsBuilder_ == null) {
+          ensureLogsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, logs_);
+          onChanged();
+        } else {
+          logsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Requested log records.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+       */
+      public Builder clearLogs() {
+        if (logsBuilder_ == null) {
+          logs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          logsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Requested log records.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+       */
+      public Builder removeLogs(int index) {
+        if (logsBuilder_ == null) {
+          ensureLogsIsMutable();
+          logs_.remove(index);
+          onChanged();
+        } else {
+          logsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Requested log records.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord.Builder getLogsBuilder(
+          int index) {
+        return getLogsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Requested log records.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecordOrBuilder getLogsOrBuilder(
+          int index) {
+        if (logsBuilder_ == null) {
+          return logs_.get(index);  } else {
+          return logsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Requested log records.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecordOrBuilder> 
+           getLogsOrBuilderList() {
+        if (logsBuilder_ != null) {
+          return logsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(logs_);
+        }
+      }
+      /**
+       * <pre>
+       * Requested log records.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord.Builder addLogsBuilder() {
+        return getLogsFieldBuilder().addBuilder(
+            yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Requested log records.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord.Builder addLogsBuilder(
+          int index) {
+        return getLogsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Requested log records.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.LogRecord logs = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord.Builder> 
+           getLogsBuilderList() {
+        return getLogsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord, yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord.Builder, yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecordOrBuilder> 
+          getLogsFieldBuilder() {
+        if (logsBuilder_ == null) {
+          logsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord, yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord.Builder, yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecordOrBuilder>(
+                  logs_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          logs_ = null;
+        }
+        return logsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.ListClusterLogsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.ListClusterLogsResponse)
+    private static final yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListClusterLogsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListClusterLogsResponse>() {
+      @java.lang.Override
+      public ListClusterLogsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListClusterLogsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListClusterLogsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListClusterLogsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LogRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.LogRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 1;</code>
+     */
+    boolean hasTimestamp();
+    /**
+     * <pre>
+     * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 1;</code>
+     */
+    com.google.protobuf.Timestamp getTimestamp();
+    /**
+     * <pre>
+     * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 1;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
+
+    /**
+     * <pre>
+     * Contents of the log record.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; message = 2;</code>
+     */
+    int getMessageCount();
+    /**
+     * <pre>
+     * Contents of the log record.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; message = 2;</code>
+     */
+    boolean containsMessage(
+        java.lang.String key);
+    /**
+     * Use {@link #getMessageMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getMessage();
+    /**
+     * <pre>
+     * Contents of the log record.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; message = 2;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getMessageMap();
+    /**
+     * <pre>
+     * Contents of the log record.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; message = 2;</code>
+     */
+
+    java.lang.String getMessageOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Contents of the log record.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; message = 2;</code>
+     */
+
+    java.lang.String getMessageOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.LogRecord}
+   */
+  public  static final class LogRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.LogRecord)
+      LogRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LogRecord.newBuilder() to construct.
+    private LogRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LogRecord() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LogRecord(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (timestamp_ != null) {
+                subBuilder = timestamp_.toBuilder();
+              }
+              timestamp_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(timestamp_);
+                timestamp_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                message_ = com.google.protobuf.MapField.newMapField(
+                    MessageDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              message__ = input.readMessage(
+                  MessageDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              message_.getMutableMap().put(
+                  message__.getKey(), message__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.GPCS.internal_static_yandex_cloud_mdb_greenplum_v1_LogRecord_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetMessage();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.GPCS.internal_static_yandex_cloud_mdb_greenplum_v1_LogRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord.class, yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int TIMESTAMP_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp timestamp_;
+    /**
+     * <pre>
+     * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 1;</code>
+     */
+    public boolean hasTimestamp() {
+      return timestamp_ != null;
+    }
+    /**
+     * <pre>
+     * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 1;</code>
+     */
+    public com.google.protobuf.Timestamp getTimestamp() {
+      return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+    }
+    /**
+     * <pre>
+     * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 1;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
+      return getTimestamp();
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 2;
+    private static final class MessageDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.mdb.greenplum.v1.GPCS.internal_static_yandex_cloud_mdb_greenplum_v1_LogRecord_MessageEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> message_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetMessage() {
+      if (message_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MessageDefaultEntryHolder.defaultEntry);
+      }
+      return message_;
+    }
+
+    public int getMessageCount() {
+      return internalGetMessage().getMap().size();
+    }
+    /**
+     * <pre>
+     * Contents of the log record.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; message = 2;</code>
+     */
+
+    public boolean containsMessage(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetMessage().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMessageMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getMessage() {
+      return getMessageMap();
+    }
+    /**
+     * <pre>
+     * Contents of the log record.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; message = 2;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getMessageMap() {
+      return internalGetMessage().getMap();
+    }
+    /**
+     * <pre>
+     * Contents of the log record.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; message = 2;</code>
+     */
+
+    public java.lang.String getMessageOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetMessage().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Contents of the log record.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; message = 2;</code>
+     */
+
+    public java.lang.String getMessageOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetMessage().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (timestamp_ != null) {
+        output.writeMessage(1, getTimestamp());
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetMessage(),
+          MessageDefaultEntryHolder.defaultEntry,
+          2);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (timestamp_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTimestamp());
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetMessage().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        message__ = MessageDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, message__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord other = (yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord) obj;
+
+      boolean result = true;
+      result = result && (hasTimestamp() == other.hasTimestamp());
+      if (hasTimestamp()) {
+        result = result && getTimestamp()
+            .equals(other.getTimestamp());
+      }
+      result = result && internalGetMessage().equals(
+          other.internalGetMessage());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTimestamp()) {
+        hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+        hash = (53 * hash) + getTimestamp().hashCode();
+      }
+      if (!internalGetMessage().getMap().isEmpty()) {
+        hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMessage().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.LogRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.LogRecord)
+        yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCS.internal_static_yandex_cloud_mdb_greenplum_v1_LogRecord_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetMessage();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetMutableMessage();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCS.internal_static_yandex_cloud_mdb_greenplum_v1_LogRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord.class, yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (timestampBuilder_ == null) {
+          timestamp_ = null;
+        } else {
+          timestamp_ = null;
+          timestampBuilder_ = null;
+        }
+        internalGetMutableMessage().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCS.internal_static_yandex_cloud_mdb_greenplum_v1_LogRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord build() {
+        yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord result = new yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (timestampBuilder_ == null) {
+          result.timestamp_ = timestamp_;
+        } else {
+          result.timestamp_ = timestampBuilder_.build();
+        }
+        result.message_ = internalGetMessage();
+        result.message_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord.getDefaultInstance()) return this;
+        if (other.hasTimestamp()) {
+          mergeTimestamp(other.getTimestamp());
+        }
+        internalGetMutableMessage().mergeFrom(
+            other.internalGetMessage());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Timestamp timestamp_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
+      /**
+       * <pre>
+       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 1;</code>
+       */
+      public boolean hasTimestamp() {
+        return timestampBuilder_ != null || timestamp_ != null;
+      }
+      /**
+       * <pre>
+       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 1;</code>
+       */
+      public com.google.protobuf.Timestamp getTimestamp() {
+        if (timestampBuilder_ == null) {
+          return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+        } else {
+          return timestampBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 1;</code>
+       */
+      public Builder setTimestamp(com.google.protobuf.Timestamp value) {
+        if (timestampBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          timestamp_ = value;
+          onChanged();
+        } else {
+          timestampBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 1;</code>
+       */
+      public Builder setTimestamp(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (timestampBuilder_ == null) {
+          timestamp_ = builderForValue.build();
+          onChanged();
+        } else {
+          timestampBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 1;</code>
+       */
+      public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
+        if (timestampBuilder_ == null) {
+          if (timestamp_ != null) {
+            timestamp_ =
+              com.google.protobuf.Timestamp.newBuilder(timestamp_).mergeFrom(value).buildPartial();
+          } else {
+            timestamp_ = value;
+          }
+          onChanged();
+        } else {
+          timestampBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 1;</code>
+       */
+      public Builder clearTimestamp() {
+        if (timestampBuilder_ == null) {
+          timestamp_ = null;
+          onChanged();
+        } else {
+          timestamp_ = null;
+          timestampBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 1;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getTimestampBuilder() {
+        
+        onChanged();
+        return getTimestampFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 1;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
+        if (timestampBuilder_ != null) {
+          return timestampBuilder_.getMessageOrBuilder();
+        } else {
+          return timestamp_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+        }
+      }
+      /**
+       * <pre>
+       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getTimestampFieldBuilder() {
+        if (timestampBuilder_ == null) {
+          timestampBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getTimestamp(),
+                  getParentForChildren(),
+                  isClean());
+          timestamp_ = null;
+        }
+        return timestampBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> message_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMessage() {
+        if (message_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MessageDefaultEntryHolder.defaultEntry);
+        }
+        return message_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableMessage() {
+        onChanged();;
+        if (message_ == null) {
+          message_ = com.google.protobuf.MapField.newMapField(
+              MessageDefaultEntryHolder.defaultEntry);
+        }
+        if (!message_.isMutable()) {
+          message_ = message_.copy();
+        }
+        return message_;
+      }
+
+      public int getMessageCount() {
+        return internalGetMessage().getMap().size();
+      }
+      /**
+       * <pre>
+       * Contents of the log record.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; message = 2;</code>
+       */
+
+      public boolean containsMessage(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetMessage().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMessageMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getMessage() {
+        return getMessageMap();
+      }
+      /**
+       * <pre>
+       * Contents of the log record.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; message = 2;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getMessageMap() {
+        return internalGetMessage().getMap();
+      }
+      /**
+       * <pre>
+       * Contents of the log record.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; message = 2;</code>
+       */
+
+      public java.lang.String getMessageOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMessage().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Contents of the log record.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; message = 2;</code>
+       */
+
+      public java.lang.String getMessageOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMessage().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearMessage() {
+        internalGetMutableMessage().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Contents of the log record.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; message = 2;</code>
+       */
+
+      public Builder removeMessage(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableMessage().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableMessage() {
+        return internalGetMutableMessage().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Contents of the log record.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; message = 2;</code>
+       */
+      public Builder putMessage(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableMessage().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Contents of the log record.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; message = 2;</code>
+       */
+
+      public Builder putAllMessage(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableMessage().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.LogRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.LogRecord)
+    private static final yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LogRecord>
+        PARSER = new com.google.protobuf.AbstractParser<LogRecord>() {
+      @java.lang.Override
+      public LogRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LogRecord(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LogRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LogRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.GPCS.LogRecord getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListClusterLogsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.ListClusterLogsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Greenplum cluster to request logs for.
+     * To get the Greenplum cluster ID, use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the Greenplum cluster to request logs for.
+     * To get the Greenplum cluster ID, use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Columns from logs table to request.
+     * If no columns are specified, entire log records are returned.
+     * </pre>
+     *
+     * <code>repeated string column_filter = 2;</code>
+     */
+    java.util.List<java.lang.String>
+        getColumnFilterList();
+    /**
+     * <pre>
+     * Columns from logs table to request.
+     * If no columns are specified, entire log records are returned.
+     * </pre>
+     *
+     * <code>repeated string column_filter = 2;</code>
+     */
+    int getColumnFilterCount();
+    /**
+     * <pre>
+     * Columns from logs table to request.
+     * If no columns are specified, entire log records are returned.
+     * </pre>
+     *
+     * <code>repeated string column_filter = 2;</code>
+     */
+    java.lang.String getColumnFilter(int index);
+    /**
+     * <pre>
+     * Columns from logs table to request.
+     * If no columns are specified, entire log records are returned.
+     * </pre>
+     *
+     * <code>repeated string column_filter = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getColumnFilterBytes(int index);
+
+    /**
+     * <pre>
+     * Type of the service to request logs about.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ListClusterLogsRequest.ServiceType service_type = 3;</code>
+     */
+    int getServiceTypeValue();
+    /**
+     * <pre>
+     * Type of the service to request logs about.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ListClusterLogsRequest.ServiceType service_type = 3;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.ServiceType getServiceType();
+
+    /**
+     * <pre>
+     * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp from_time = 4;</code>
+     */
+    boolean hasFromTime();
+    /**
+     * <pre>
+     * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp from_time = 4;</code>
+     */
+    com.google.protobuf.Timestamp getFromTime();
+    /**
+     * <pre>
+     * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp from_time = 4;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getFromTimeOrBuilder();
+
+    /**
+     * <pre>
+     * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp to_time = 5;</code>
+     */
+    boolean hasToTime();
+    /**
+     * <pre>
+     * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp to_time = 5;</code>
+     */
+    com.google.protobuf.Timestamp getToTime();
+    /**
+     * <pre>
+     * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp to_time = 5;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getToTimeOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
+     * <code>int64 page_size = 6 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token.  To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token]
+     * returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token.  To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token]
+     * returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+
+    /**
+     * <pre>
+     * Always return `next_page_token`, even if current page is empty.
+     * </pre>
+     *
+     * <code>bool always_next_page_token = 8;</code>
+     */
+    boolean getAlwaysNextPageToken();
+
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
+     * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for GREENPLUM_POOLER service) fields.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+     * Examples of a filter:
+     * `message.hostname='node1.db.cloud.yandex.net'`
+     * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+     * </pre>
+     *
+     * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     */
+    java.lang.String getFilter();
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
+     * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for GREENPLUM_POOLER service) fields.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+     * Examples of a filter:
+     * `message.hostname='node1.db.cloud.yandex.net'`
+     * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+     * </pre>
+     *
+     * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     */
+    com.google.protobuf.ByteString
+        getFilterBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.ListClusterLogsRequest}
+   */
+  public  static final class ListClusterLogsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.ListClusterLogsRequest)
+      ListClusterLogsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListClusterLogsRequest.newBuilder() to construct.
+    private ListClusterLogsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListClusterLogsRequest() {
+      clusterId_ = "";
+      columnFilter_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      serviceType_ = 0;
+      pageSize_ = 0L;
+      pageToken_ = "";
+      alwaysNextPageToken_ = false;
+      filter_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListClusterLogsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                columnFilter_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              columnFilter_.add(s);
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              serviceType_ = rawValue;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (fromTime_ != null) {
+                subBuilder = fromTime_.toBuilder();
+              }
+              fromTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(fromTime_);
+                fromTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (toTime_ != null) {
+                subBuilder = toTime_.toBuilder();
+              }
+              toTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(toTime_);
+                toTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 48: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            case 64: {
+
+              alwaysNextPageToken_ = input.readBool();
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filter_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          columnFilter_ = columnFilter_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.GPCS.internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterLogsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.GPCS.internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterLogsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.class, yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.greenplum.v1.ListClusterLogsRequest.ServiceType}
+     */
+    public enum ServiceType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>SERVICE_TYPE_UNSPECIFIED = 0;</code>
+       */
+      SERVICE_TYPE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Logs of Greenplum activity.
+       * </pre>
+       *
+       * <code>GREENPLUM = 1;</code>
+       */
+      GREENPLUM(1),
+      /**
+       * <code>GREENPLUM_POOLER = 2;</code>
+       */
+      GREENPLUM_POOLER(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>SERVICE_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int SERVICE_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Logs of Greenplum activity.
+       * </pre>
+       *
+       * <code>GREENPLUM = 1;</code>
+       */
+      public static final int GREENPLUM_VALUE = 1;
+      /**
+       * <code>GREENPLUM_POOLER = 2;</code>
+       */
+      public static final int GREENPLUM_POOLER_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ServiceType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ServiceType forNumber(int value) {
+        switch (value) {
+          case 0: return SERVICE_TYPE_UNSPECIFIED;
+          case 1: return GREENPLUM;
+          case 2: return GREENPLUM_POOLER;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ServiceType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ServiceType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ServiceType>() {
+              public ServiceType findValueByNumber(int number) {
+                return ServiceType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final ServiceType[] VALUES = values();
+
+      public static ServiceType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ServiceType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.greenplum.v1.ListClusterLogsRequest.ServiceType)
+    }
+
+    private int bitField0_;
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the Greenplum cluster to request logs for.
+     * To get the Greenplum cluster ID, use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Greenplum cluster to request logs for.
+     * To get the Greenplum cluster ID, use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COLUMN_FILTER_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList columnFilter_;
+    /**
+     * <pre>
+     * Columns from logs table to request.
+     * If no columns are specified, entire log records are returned.
+     * </pre>
+     *
+     * <code>repeated string column_filter = 2;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getColumnFilterList() {
+      return columnFilter_;
+    }
+    /**
+     * <pre>
+     * Columns from logs table to request.
+     * If no columns are specified, entire log records are returned.
+     * </pre>
+     *
+     * <code>repeated string column_filter = 2;</code>
+     */
+    public int getColumnFilterCount() {
+      return columnFilter_.size();
+    }
+    /**
+     * <pre>
+     * Columns from logs table to request.
+     * If no columns are specified, entire log records are returned.
+     * </pre>
+     *
+     * <code>repeated string column_filter = 2;</code>
+     */
+    public java.lang.String getColumnFilter(int index) {
+      return columnFilter_.get(index);
+    }
+    /**
+     * <pre>
+     * Columns from logs table to request.
+     * If no columns are specified, entire log records are returned.
+     * </pre>
+     *
+     * <code>repeated string column_filter = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getColumnFilterBytes(int index) {
+      return columnFilter_.getByteString(index);
+    }
+
+    public static final int SERVICE_TYPE_FIELD_NUMBER = 3;
+    private int serviceType_;
+    /**
+     * <pre>
+     * Type of the service to request logs about.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ListClusterLogsRequest.ServiceType service_type = 3;</code>
+     */
+    public int getServiceTypeValue() {
+      return serviceType_;
+    }
+    /**
+     * <pre>
+     * Type of the service to request logs about.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ListClusterLogsRequest.ServiceType service_type = 3;</code>
+     */
+    public yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.ServiceType getServiceType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.ServiceType result = yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.ServiceType.valueOf(serviceType_);
+      return result == null ? yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.ServiceType.UNRECOGNIZED : result;
+    }
+
+    public static final int FROM_TIME_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp fromTime_;
+    /**
+     * <pre>
+     * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp from_time = 4;</code>
+     */
+    public boolean hasFromTime() {
+      return fromTime_ != null;
+    }
+    /**
+     * <pre>
+     * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp from_time = 4;</code>
+     */
+    public com.google.protobuf.Timestamp getFromTime() {
+      return fromTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : fromTime_;
+    }
+    /**
+     * <pre>
+     * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp from_time = 4;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getFromTimeOrBuilder() {
+      return getFromTime();
+    }
+
+    public static final int TO_TIME_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp toTime_;
+    /**
+     * <pre>
+     * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp to_time = 5;</code>
+     */
+    public boolean hasToTime() {
+      return toTime_ != null;
+    }
+    /**
+     * <pre>
+     * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp to_time = 5;</code>
+     */
+    public com.google.protobuf.Timestamp getToTime() {
+      return toTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : toTime_;
+    }
+    /**
+     * <pre>
+     * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp to_time = 5;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getToTimeOrBuilder() {
+      return getToTime();
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 6;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
+     * <code>int64 page_size = 6 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     */
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 7;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token.  To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token]
+     * returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token.  To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token]
+     * returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ALWAYS_NEXT_PAGE_TOKEN_FIELD_NUMBER = 8;
+    private boolean alwaysNextPageToken_;
+    /**
+     * <pre>
+     * Always return `next_page_token`, even if current page is empty.
+     * </pre>
+     *
+     * <code>bool always_next_page_token = 8;</code>
+     */
+    public boolean getAlwaysNextPageToken() {
+      return alwaysNextPageToken_;
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 9;
+    private volatile java.lang.Object filter_;
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
+     * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for GREENPLUM_POOLER service) fields.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+     * Examples of a filter:
+     * `message.hostname='node1.db.cloud.yandex.net'`
+     * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+     * </pre>
+     *
+     * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     */
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
+     * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for GREENPLUM_POOLER service) fields.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+     * Examples of a filter:
+     * `message.hostname='node1.db.cloud.yandex.net'`
+     * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+     * </pre>
+     *
+     * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      for (int i = 0; i < columnFilter_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, columnFilter_.getRaw(i));
+      }
+      if (serviceType_ != yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.ServiceType.SERVICE_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, serviceType_);
+      }
+      if (fromTime_ != null) {
+        output.writeMessage(4, getFromTime());
+      }
+      if (toTime_ != null) {
+        output.writeMessage(5, getToTime());
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(6, pageSize_);
+      }
+      if (!getPageTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, pageToken_);
+      }
+      if (alwaysNextPageToken_ != false) {
+        output.writeBool(8, alwaysNextPageToken_);
+      }
+      if (!getFilterBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, filter_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < columnFilter_.size(); i++) {
+          dataSize += computeStringSizeNoTag(columnFilter_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getColumnFilterList().size();
+      }
+      if (serviceType_ != yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.ServiceType.SERVICE_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, serviceType_);
+      }
+      if (fromTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getFromTime());
+      }
+      if (toTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getToTime());
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, pageSize_);
+      }
+      if (!getPageTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, pageToken_);
+      }
+      if (alwaysNextPageToken_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, alwaysNextPageToken_);
+      }
+      if (!getFilterBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, filter_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest other = (yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && getColumnFilterList()
+          .equals(other.getColumnFilterList());
+      result = result && serviceType_ == other.serviceType_;
+      result = result && (hasFromTime() == other.hasFromTime());
+      if (hasFromTime()) {
+        result = result && getFromTime()
+            .equals(other.getFromTime());
+      }
+      result = result && (hasToTime() == other.hasToTime());
+      if (hasToTime()) {
+        result = result && getToTime()
+            .equals(other.getToTime());
+      }
+      result = result && (getPageSize()
+          == other.getPageSize());
+      result = result && getPageToken()
+          .equals(other.getPageToken());
+      result = result && (getAlwaysNextPageToken()
+          == other.getAlwaysNextPageToken());
+      result = result && getFilter()
+          .equals(other.getFilter());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      if (getColumnFilterCount() > 0) {
+        hash = (37 * hash) + COLUMN_FILTER_FIELD_NUMBER;
+        hash = (53 * hash) + getColumnFilterList().hashCode();
+      }
+      hash = (37 * hash) + SERVICE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + serviceType_;
+      if (hasFromTime()) {
+        hash = (37 * hash) + FROM_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getFromTime().hashCode();
+      }
+      if (hasToTime()) {
+        hash = (37 * hash) + TO_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getToTime().hashCode();
+      }
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (37 * hash) + ALWAYS_NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAlwaysNextPageToken());
+      hash = (37 * hash) + FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getFilter().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.ListClusterLogsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.ListClusterLogsRequest)
+        yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCS.internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterLogsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCS.internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterLogsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.class, yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        columnFilter_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        serviceType_ = 0;
+
+        if (fromTimeBuilder_ == null) {
+          fromTime_ = null;
+        } else {
+          fromTime_ = null;
+          fromTimeBuilder_ = null;
+        }
+        if (toTimeBuilder_ == null) {
+          toTime_ = null;
+        } else {
+          toTime_ = null;
+          toTimeBuilder_ = null;
+        }
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        alwaysNextPageToken_ = false;
+
+        filter_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCS.internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterLogsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest build() {
+        yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest result = new yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.clusterId_ = clusterId_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          columnFilter_ = columnFilter_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.columnFilter_ = columnFilter_;
+        result.serviceType_ = serviceType_;
+        if (fromTimeBuilder_ == null) {
+          result.fromTime_ = fromTime_;
+        } else {
+          result.fromTime_ = fromTimeBuilder_.build();
+        }
+        if (toTimeBuilder_ == null) {
+          result.toTime_ = toTime_;
+        } else {
+          result.toTime_ = toTimeBuilder_.build();
+        }
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        result.alwaysNextPageToken_ = alwaysNextPageToken_;
+        result.filter_ = filter_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.columnFilter_.isEmpty()) {
+          if (columnFilter_.isEmpty()) {
+            columnFilter_ = other.columnFilter_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureColumnFilterIsMutable();
+            columnFilter_.addAll(other.columnFilter_);
+          }
+          onChanged();
+        }
+        if (other.serviceType_ != 0) {
+          setServiceTypeValue(other.getServiceTypeValue());
+        }
+        if (other.hasFromTime()) {
+          mergeFromTime(other.getFromTime());
+        }
+        if (other.hasToTime()) {
+          mergeToTime(other.getToTime());
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        if (other.getAlwaysNextPageToken() != false) {
+          setAlwaysNextPageToken(other.getAlwaysNextPageToken());
+        }
+        if (!other.getFilter().isEmpty()) {
+          filter_ = other.filter_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the Greenplum cluster to request logs for.
+       * To get the Greenplum cluster ID, use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Greenplum cluster to request logs for.
+       * To get the Greenplum cluster ID, use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Greenplum cluster to request logs for.
+       * To get the Greenplum cluster ID, use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Greenplum cluster to request logs for.
+       * To get the Greenplum cluster ID, use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Greenplum cluster to request logs for.
+       * To get the Greenplum cluster ID, use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList columnFilter_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureColumnFilterIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          columnFilter_ = new com.google.protobuf.LazyStringArrayList(columnFilter_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * Columns from logs table to request.
+       * If no columns are specified, entire log records are returned.
+       * </pre>
+       *
+       * <code>repeated string column_filter = 2;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getColumnFilterList() {
+        return columnFilter_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Columns from logs table to request.
+       * If no columns are specified, entire log records are returned.
+       * </pre>
+       *
+       * <code>repeated string column_filter = 2;</code>
+       */
+      public int getColumnFilterCount() {
+        return columnFilter_.size();
+      }
+      /**
+       * <pre>
+       * Columns from logs table to request.
+       * If no columns are specified, entire log records are returned.
+       * </pre>
+       *
+       * <code>repeated string column_filter = 2;</code>
+       */
+      public java.lang.String getColumnFilter(int index) {
+        return columnFilter_.get(index);
+      }
+      /**
+       * <pre>
+       * Columns from logs table to request.
+       * If no columns are specified, entire log records are returned.
+       * </pre>
+       *
+       * <code>repeated string column_filter = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getColumnFilterBytes(int index) {
+        return columnFilter_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Columns from logs table to request.
+       * If no columns are specified, entire log records are returned.
+       * </pre>
+       *
+       * <code>repeated string column_filter = 2;</code>
+       */
+      public Builder setColumnFilter(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureColumnFilterIsMutable();
+        columnFilter_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Columns from logs table to request.
+       * If no columns are specified, entire log records are returned.
+       * </pre>
+       *
+       * <code>repeated string column_filter = 2;</code>
+       */
+      public Builder addColumnFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureColumnFilterIsMutable();
+        columnFilter_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Columns from logs table to request.
+       * If no columns are specified, entire log records are returned.
+       * </pre>
+       *
+       * <code>repeated string column_filter = 2;</code>
+       */
+      public Builder addAllColumnFilter(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureColumnFilterIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, columnFilter_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Columns from logs table to request.
+       * If no columns are specified, entire log records are returned.
+       * </pre>
+       *
+       * <code>repeated string column_filter = 2;</code>
+       */
+      public Builder clearColumnFilter() {
+        columnFilter_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Columns from logs table to request.
+       * If no columns are specified, entire log records are returned.
+       * </pre>
+       *
+       * <code>repeated string column_filter = 2;</code>
+       */
+      public Builder addColumnFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureColumnFilterIsMutable();
+        columnFilter_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private int serviceType_ = 0;
+      /**
+       * <pre>
+       * Type of the service to request logs about.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ListClusterLogsRequest.ServiceType service_type = 3;</code>
+       */
+      public int getServiceTypeValue() {
+        return serviceType_;
+      }
+      /**
+       * <pre>
+       * Type of the service to request logs about.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ListClusterLogsRequest.ServiceType service_type = 3;</code>
+       */
+      public Builder setServiceTypeValue(int value) {
+        serviceType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of the service to request logs about.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ListClusterLogsRequest.ServiceType service_type = 3;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.ServiceType getServiceType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.ServiceType result = yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.ServiceType.valueOf(serviceType_);
+        return result == null ? yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.ServiceType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Type of the service to request logs about.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ListClusterLogsRequest.ServiceType service_type = 3;</code>
+       */
+      public Builder setServiceType(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.ServiceType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        serviceType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of the service to request logs about.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ListClusterLogsRequest.ServiceType service_type = 3;</code>
+       */
+      public Builder clearServiceType() {
+        
+        serviceType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp fromTime_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> fromTimeBuilder_;
+      /**
+       * <pre>
+       * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp from_time = 4;</code>
+       */
+      public boolean hasFromTime() {
+        return fromTimeBuilder_ != null || fromTime_ != null;
+      }
+      /**
+       * <pre>
+       * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp from_time = 4;</code>
+       */
+      public com.google.protobuf.Timestamp getFromTime() {
+        if (fromTimeBuilder_ == null) {
+          return fromTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : fromTime_;
+        } else {
+          return fromTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp from_time = 4;</code>
+       */
+      public Builder setFromTime(com.google.protobuf.Timestamp value) {
+        if (fromTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fromTime_ = value;
+          onChanged();
+        } else {
+          fromTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp from_time = 4;</code>
+       */
+      public Builder setFromTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (fromTimeBuilder_ == null) {
+          fromTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          fromTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp from_time = 4;</code>
+       */
+      public Builder mergeFromTime(com.google.protobuf.Timestamp value) {
+        if (fromTimeBuilder_ == null) {
+          if (fromTime_ != null) {
+            fromTime_ =
+              com.google.protobuf.Timestamp.newBuilder(fromTime_).mergeFrom(value).buildPartial();
+          } else {
+            fromTime_ = value;
+          }
+          onChanged();
+        } else {
+          fromTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp from_time = 4;</code>
+       */
+      public Builder clearFromTime() {
+        if (fromTimeBuilder_ == null) {
+          fromTime_ = null;
+          onChanged();
+        } else {
+          fromTime_ = null;
+          fromTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp from_time = 4;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getFromTimeBuilder() {
+        
+        onChanged();
+        return getFromTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp from_time = 4;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getFromTimeOrBuilder() {
+        if (fromTimeBuilder_ != null) {
+          return fromTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return fromTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : fromTime_;
+        }
+      }
+      /**
+       * <pre>
+       * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp from_time = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getFromTimeFieldBuilder() {
+        if (fromTimeBuilder_ == null) {
+          fromTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getFromTime(),
+                  getParentForChildren(),
+                  isClean());
+          fromTime_ = null;
+        }
+        return fromTimeBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp toTime_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> toTimeBuilder_;
+      /**
+       * <pre>
+       * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp to_time = 5;</code>
+       */
+      public boolean hasToTime() {
+        return toTimeBuilder_ != null || toTime_ != null;
+      }
+      /**
+       * <pre>
+       * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp to_time = 5;</code>
+       */
+      public com.google.protobuf.Timestamp getToTime() {
+        if (toTimeBuilder_ == null) {
+          return toTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : toTime_;
+        } else {
+          return toTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp to_time = 5;</code>
+       */
+      public Builder setToTime(com.google.protobuf.Timestamp value) {
+        if (toTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          toTime_ = value;
+          onChanged();
+        } else {
+          toTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp to_time = 5;</code>
+       */
+      public Builder setToTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (toTimeBuilder_ == null) {
+          toTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          toTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp to_time = 5;</code>
+       */
+      public Builder mergeToTime(com.google.protobuf.Timestamp value) {
+        if (toTimeBuilder_ == null) {
+          if (toTime_ != null) {
+            toTime_ =
+              com.google.protobuf.Timestamp.newBuilder(toTime_).mergeFrom(value).buildPartial();
+          } else {
+            toTime_ = value;
+          }
+          onChanged();
+        } else {
+          toTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp to_time = 5;</code>
+       */
+      public Builder clearToTime() {
+        if (toTimeBuilder_ == null) {
+          toTime_ = null;
+          onChanged();
+        } else {
+          toTime_ = null;
+          toTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp to_time = 5;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getToTimeBuilder() {
+        
+        onChanged();
+        return getToTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp to_time = 5;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getToTimeOrBuilder() {
+        if (toTimeBuilder_ != null) {
+          return toTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return toTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : toTime_;
+        }
+      }
+      /**
+       * <pre>
+       * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp to_time = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getToTimeFieldBuilder() {
+        if (toTimeBuilder_ == null) {
+          toTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getToTime(),
+                  getParentForChildren(),
+                  isClean());
+          toTime_ = null;
+        }
+        return toTimeBuilder_;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
+       * <code>int64 page_size = 6 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       */
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
+       * <code>int64 page_size = 6 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
+       * <code>int64 page_size = 6 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token.  To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token]
+       * returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token.  To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token]
+       * returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token.  To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token]
+       * returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token.  To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token]
+       * returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token.  To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token]
+       * returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean alwaysNextPageToken_ ;
+      /**
+       * <pre>
+       * Always return `next_page_token`, even if current page is empty.
+       * </pre>
+       *
+       * <code>bool always_next_page_token = 8;</code>
+       */
+      public boolean getAlwaysNextPageToken() {
+        return alwaysNextPageToken_;
+      }
+      /**
+       * <pre>
+       * Always return `next_page_token`, even if current page is empty.
+       * </pre>
+       *
+       * <code>bool always_next_page_token = 8;</code>
+       */
+      public Builder setAlwaysNextPageToken(boolean value) {
+        
+        alwaysNextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Always return `next_page_token`, even if current page is empty.
+       * </pre>
+       *
+       * <code>bool always_next_page_token = 8;</code>
+       */
+      public Builder clearAlwaysNextPageToken() {
+        
+        alwaysNextPageToken_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object filter_ = "";
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
+       * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for GREENPLUM_POOLER service) fields.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * Examples of a filter:
+       * `message.hostname='node1.db.cloud.yandex.net'`
+       * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+       * </pre>
+       *
+       * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       */
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
+       * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for GREENPLUM_POOLER service) fields.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * Examples of a filter:
+       * `message.hostname='node1.db.cloud.yandex.net'`
+       * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+       * </pre>
+       *
+       * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
+       * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for GREENPLUM_POOLER service) fields.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * Examples of a filter:
+       * `message.hostname='node1.db.cloud.yandex.net'`
+       * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+       * </pre>
+       *
+       * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       */
+      public Builder setFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
+       * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for GREENPLUM_POOLER service) fields.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * Examples of a filter:
+       * `message.hostname='node1.db.cloud.yandex.net'`
+       * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+       * </pre>
+       *
+       * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       */
+      public Builder clearFilter() {
+        
+        filter_ = getDefaultInstance().getFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
+       * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for GREENPLUM_POOLER service) fields.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * Examples of a filter:
+       * `message.hostname='node1.db.cloud.yandex.net'`
+       * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+       * </pre>
+       *
+       * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       */
+      public Builder setFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.ListClusterLogsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.ListClusterLogsRequest)
+    private static final yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListClusterLogsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListClusterLogsRequest>() {
+      @java.lang.Override
+      public ListClusterLogsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListClusterLogsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListClusterLogsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListClusterLogsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_greenplum_v1_GetClusterRequest_descriptor;
   private static final 
@@ -20188,6 +24569,26 @@ public final class GPCS {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_greenplum_v1_SegmentSubclusterConfigSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterLogsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterLogsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_LogRecord_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_LogRecord_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_LogRecord_MessageEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_LogRecord_MessageEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterLogsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterLogsRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -20200,146 +24601,170 @@ public final class GPCS {
       "\n3yandex/cloud/mdb/greenplum/v1/cluster_" +
       "service.proto\022\035yandex.cloud.mdb.greenplu" +
       "m.v1\032\034google/api/annotations.proto\032 goog" +
-      "le/protobuf/field_mask.proto\032 yandex/clo" +
-      "ud/api/operation.proto\032&yandex/cloud/ope" +
-      "ration/operation.proto\032\035yandex/cloud/val" +
-      "idation.proto\032+yandex/cloud/mdb/greenplu" +
-      "m/v1/cluster.proto\032/yandex/cloud/mdb/gre" +
-      "enplum/v1/maintenance.proto\032*yandex/clou" +
-      "d/mdb/greenplum/v1/config.proto\032(yandex/" +
-      "cloud/mdb/greenplum/v1/host.proto\"5\n\021Get" +
+      "le/protobuf/field_mask.proto\032\037google/pro" +
+      "tobuf/timestamp.proto\032 yandex/cloud/api/" +
+      "operation.proto\032&yandex/cloud/operation/" +
+      "operation.proto\032\035yandex/cloud/validation" +
+      ".proto\032+yandex/cloud/mdb/greenplum/v1/cl" +
+      "uster.proto\032/yandex/cloud/mdb/greenplum/" +
+      "v1/maintenance.proto\032*yandex/cloud/mdb/g" +
+      "reenplum/v1/config.proto\032(yandex/cloud/m" +
+      "db/greenplum/v1/host.proto\"5\n\021GetCluster" +
+      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\"\220\001\n\023ListClustersRequest\022\037\n\tfolder_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
+      "\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
+      "\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"i\n\024ListClus" +
+      "tersResponse\0228\n\010clusters\030\001 \003(\0132&.yandex." +
+      "cloud.mdb.greenplum.v1.Cluster\022\027\n\017next_p" +
+      "age_token\030\002 \001(\t\"\306\007\n\024CreateClusterRequest" +
+      "\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004nam" +
+      "e\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022" +
+      "\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\220\001\n\006labe" +
+      "ls\030\004 \003(\0132?.yandex.cloud.mdb.greenplum.v1" +
+      ".CreateClusterRequest.LabelsEntryB?\202\3101\004<" +
+      "=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022" +
+      "\022\020[a-z][-_0-9a-z]*\022M\n\013environment\030\005 \001(\0162" +
+      "2.yandex.cloud.mdb.greenplum.v1.Cluster." +
+      "EnvironmentB\004\350\3071\001\022>\n\006config\030\006 \001(\0132..yand" +
+      "ex.cloud.mdb.greenplum.v1.GreenplumConfi" +
+      "g\022P\n\rmaster_config\030\007 \001(\01329.yandex.cloud." +
+      "mdb.greenplum.v1.MasterSubclusterConfigS" +
+      "pec\022R\n\016segment_config\030\010 \001(\0132:.yandex.clo" +
+      "ud.mdb.greenplum.v1.SegmentSubclusterCon" +
+      "figSpec\022\031\n\021master_host_count\030\t \001(\003\022\027\n\017se" +
+      "gment_in_host\030\n \001(\003\022\032\n\022segment_host_coun" +
+      "t\030\013 \001(\003\022\021\n\tuser_name\030\014 \001(\t\022$\n\ruser_passw" +
+      "ord\030\r \001(\tB\r\350\3071\001\212\3101\0058-128\022 \n\nnetwork_id\030\016" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022security_group_ids" +
+      "\030\017 \003(\t\022\033\n\023deletion_protection\030\020 \001(\010\022\026\n\016h" +
+      "ost_group_ids\030\021 \003(\t\022L\n\022maintenance_windo" +
+      "w\030\023 \001(\01320.yandex.cloud.mdb.greenplum.v1." +
+      "MaintenanceWindow\032-\n\013LabelsEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateCluste" +
+      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\342\005\n\024Update" +
       "ClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\"\220\001\n\023ListClustersRequest\022\037\n\tfold" +
-      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002" +
-      " \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\310" +
-      "1\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"i\n\024L" +
-      "istClustersResponse\0228\n\010clusters\030\001 \003(\0132&." +
-      "yandex.cloud.mdb.greenplum.v1.Cluster\022\027\n" +
-      "\017next_page_token\030\002 \001(\t\"\306\007\n\024CreateCluster" +
-      "Request\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0" +
-      "-9_-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\220" +
-      "\001\n\006labels\030\004 \003(\0132?.yandex.cloud.mdb.green" +
-      "plum.v1.CreateClusterRequest.LabelsEntry" +
-      "B?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<" +
-      "=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022M\n\013environment" +
-      "\030\005 \001(\01622.yandex.cloud.mdb.greenplum.v1.C" +
-      "luster.EnvironmentB\004\350\3071\001\022>\n\006config\030\006 \001(\013" +
-      "2..yandex.cloud.mdb.greenplum.v1.Greenpl" +
-      "umConfig\022P\n\rmaster_config\030\007 \001(\01329.yandex" +
-      ".cloud.mdb.greenplum.v1.MasterSubcluster" +
-      "ConfigSpec\022R\n\016segment_config\030\010 \001(\0132:.yan" +
-      "dex.cloud.mdb.greenplum.v1.SegmentSubclu" +
-      "sterConfigSpec\022\031\n\021master_host_count\030\t \001(" +
-      "\003\022\027\n\017segment_in_host\030\n \001(\003\022\032\n\022segment_ho" +
-      "st_count\030\013 \001(\003\022\021\n\tuser_name\030\014 \001(\t\022$\n\ruse" +
-      "r_password\030\r \001(\tB\r\350\3071\001\212\3101\0058-128\022 \n\nnetwo" +
-      "rk_id\030\016 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022security_gr" +
-      "oup_ids\030\017 \003(\t\022\033\n\023deletion_protection\030\020 \001" +
-      "(\010\022\026\n\016host_group_ids\030\021 \003(\t\022L\n\022maintenanc" +
-      "e_window\030\023 \001(\01320.yandex.cloud.mdb.greenp" +
-      "lum.v1.MaintenanceWindow\032-\n\013LabelsEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025Creat" +
-      "eClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\342\005\n" +
-      "\024UpdateClusterRequest\022 \n\ncluster_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.g" +
-      "oogle.protobuf.FieldMask\022\036\n\013description\030" +
-      "\003 \001(\tB\t\212\3101\005<=256\022\220\001\n\006labels\030\004 \003(\0132?.yand" +
-      "ex.cloud.mdb.greenplum.v1.UpdateClusterR" +
-      "equest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013" +
-      "[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-" +
-      "z]*\022(\n\004name\030\005 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-" +
-      "9_-]*\022>\n\006config\030\006 \001(\0132..yandex.cloud.mdb" +
-      ".greenplum.v1.GreenplumConfig\022P\n\rmaster_" +
-      "config\030\007 \001(\01329.yandex.cloud.mdb.greenplu" +
-      "m.v1.MasterSubclusterConfigSpec\022R\n\016segme" +
-      "nt_config\030\010 \001(\0132:.yandex.cloud.mdb.green" +
-      "plum.v1.SegmentSubclusterConfigSpec\022L\n\022m" +
-      "aintenance_window\030\017 \001(\01320.yandex.cloud.m" +
-      "db.greenplum.v1.MaintenanceWindow\022\032\n\022sec" +
-      "urity_group_ids\030\021 \003(\t\022\033\n\023deletion_protec" +
-      "tion\030\022 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMetada" +
-      "ta\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024DeleteClusterR" +
-      "equest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\"+\n\025DeleteClusterMetadata\022\022\n\ncluster_id\030" +
-      "\001 \001(\t\"7\n\023StartClusterRequest\022 \n\ncluster_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterMe" +
-      "tadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopCluste" +
-      "rRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\")\n\023StopClusterMetadata\022\022\n\ncluster_id\030" +
-      "\001 \001(\t\"~\n\034ListClusterOperationsRequest\022 \n" +
-      "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_" +
-      "size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001" +
-      "(\tB\t\212\3101\005<=100\"o\n\035ListClusterOperationsRe" +
-      "sponse\0225\n\noperations\030\001 \003(\0132!.yandex.clou" +
-      "d.operation.Operation\022\027\n\017next_page_token" +
-      "\030\002 \001(\t\"y\n\027ListClusterHostsRequest\022 \n\nclu" +
-      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size" +
-      "\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t" +
-      "\212\3101\005<=100\"g\n\030ListClusterHostsResponse\0222\n" +
-      "\005hosts\030\001 \003(\0132#.yandex.cloud.mdb.greenplu" +
-      "m.v1.Host\022\027\n\017next_page_token\030\002 \001(\t\"\237\001\n\032M" +
-      "asterSubclusterConfigSpec\022;\n\tresources\030\001" +
-      " \001(\0132(.yandex.cloud.mdb.greenplum.v1.Res" +
-      "ources\022D\n\006config\030\002 \001(\01324.yandex.cloud.md" +
-      "b.greenplum.v1.GreenplumMasterConfig\"\241\001\n" +
-      "\033SegmentSubclusterConfigSpec\022;\n\tresource" +
-      "s\030\001 \001(\0132(.yandex.cloud.mdb.greenplum.v1." +
-      "Resources\022E\n\006config\030\002 \001(\01325.yandex.cloud" +
-      ".mdb.greenplum.v1.GreenplumSegmentConfig" +
-      "2\374\016\n\016ClusterService\022\230\001\n\003Get\0220.yandex.clo" +
-      "ud.mdb.greenplum.v1.GetClusterRequest\032&." +
-      "yandex.cloud.mdb.greenplum.v1.Cluster\"7\202" +
-      "\323\344\223\0021\022//mdb/managed-greenplum/v1/cluster" +
-      "s/{cluster_id}\022\233\001\n\004List\0222.yandex.cloud.m" +
-      "db.greenplum.v1.ListClustersRequest\0323.ya" +
-      "ndex.cloud.mdb.greenplum.v1.ListClusters" +
-      "Response\"*\202\323\344\223\002$\022\"/mdb/managed-greenplum" +
-      "/v1/clusters\022\263\001\n\006Create\0223.yandex.cloud.m" +
-      "db.greenplum.v1.CreateClusterRequest\032!.y" +
-      "andex.cloud.operation.Operation\"Q\202\323\344\223\002\'\"" +
-      "\"/mdb/managed-greenplum/v1/clusters:\001*\262\322" +
-      "* \n\025CreateClusterMetadata\022\007Cluster\022\300\001\n\006U" +
-      "pdate\0223.yandex.cloud.mdb.greenplum.v1.Up" +
-      "dateClusterRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"^\202\323\344\223\00242//mdb/managed-gree" +
-      "nplum/v1/clusters/{cluster_id}:\001*\262\322* \n\025U" +
-      "pdateClusterMetadata\022\007Cluster\022\313\001\n\006Delete" +
-      "\0223.yandex.cloud.mdb.greenplum.v1.DeleteC" +
-      "lusterRequest\032!.yandex.cloud.operation.O" +
-      "peration\"i\202\323\344\223\0021*//mdb/managed-greenplum" +
-      "/v1/clusters/{cluster_id}\262\322*.\n\025DeleteClu" +
-      "sterMetadata\022\025google.protobuf.Empty\022\300\001\n\005" +
-      "Start\0222.yandex.cloud.mdb.greenplum.v1.St" +
-      "artClusterRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"`\202\323\344\223\0027\"5/mdb/managed-green" +
-      "plum/v1/clusters/{cluster_id}:start\262\322*\037\n" +
-      "\024StartClusterMetadata\022\007Cluster\022\274\001\n\004Stop\022" +
-      "1.yandex.cloud.mdb.greenplum.v1.StopClus" +
-      "terRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"^\202\323\344\223\0026\"4/mdb/managed-greenplum/v1" +
-      "/clusters/{cluster_id}:stop\262\322*\036\n\023StopClu" +
-      "sterMetadata\022\007Cluster\022\317\001\n\016ListOperations" +
-      "\022;.yandex.cloud.mdb.greenplum.v1.ListClu" +
-      "sterOperationsRequest\032<.yandex.cloud.mdb" +
-      ".greenplum.v1.ListClusterOperationsRespo" +
-      "nse\"B\202\323\344\223\002<\022:/mdb/managed-greenplum/v1/c" +
-      "lusters/{cluster_id}/operations\022\310\001\n\017List" +
-      "MasterHosts\0226.yandex.cloud.mdb.greenplum" +
-      ".v1.ListClusterHostsRequest\0327.yandex.clo" +
-      "ud.mdb.greenplum.v1.ListClusterHostsResp" +
-      "onse\"D\202\323\344\223\002>\022</mdb/managed-greenplum/v1/" +
-      "clusters/{cluster_id}/master-hosts\022\312\001\n\020L" +
-      "istSegmentHosts\0226.yandex.cloud.mdb.green" +
-      "plum.v1.ListClusterHostsRequest\0327.yandex" +
-      ".cloud.mdb.greenplum.v1.ListClusterHosts" +
-      "Response\"E\202\323\344\223\002?\022=/mdb/managed-greenplum" +
-      "/v1/clusters/{cluster_id}/segment-hostsB" +
-      "v\n!yandex.cloud.api.mdb.greenplum.v1B\004GP" +
-      "CSZKgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/mdb/greenplum/v1;greenplumb" +
-      "\006proto3"
+      "\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.p" +
+      "rotobuf.FieldMask\022\036\n\013description\030\003 \001(\tB\t" +
+      "\212\3101\005<=256\022\220\001\n\006labels\030\004 \003(\0132?.yandex.clou" +
+      "d.mdb.greenplum.v1.UpdateClusterRequest." +
+      "LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a" +
+      "-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022(\n\004" +
+      "name\030\005 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022>" +
+      "\n\006config\030\006 \001(\0132..yandex.cloud.mdb.greenp" +
+      "lum.v1.GreenplumConfig\022P\n\rmaster_config\030" +
+      "\007 \001(\01329.yandex.cloud.mdb.greenplum.v1.Ma" +
+      "sterSubclusterConfigSpec\022R\n\016segment_conf" +
+      "ig\030\010 \001(\0132:.yandex.cloud.mdb.greenplum.v1" +
+      ".SegmentSubclusterConfigSpec\022L\n\022maintena" +
+      "nce_window\030\017 \001(\01320.yandex.cloud.mdb.gree" +
+      "nplum.v1.MaintenanceWindow\022\032\n\022security_g" +
+      "roup_ids\030\021 \003(\t\022\033\n\023deletion_protection\030\022 " +
+      "\001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMetadata\022\022\n\nc" +
+      "luster_id\030\001 \001(\t\"8\n\024DeleteClusterRequest\022" +
+      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025Del" +
+      "eteClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"7" +
+      "\n\023StartClusterRequest\022 \n\ncluster_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterMetadata\022" +
+      "\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopClusterReques" +
+      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023S" +
+      "topClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"~" +
+      "\n\034ListClusterOperationsRequest\022 \n\ncluste" +
+      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
+      "\001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
+      "\005<=100\"o\n\035ListClusterOperationsResponse\022" +
+      "5\n\noperations\030\001 \003(\0132!.yandex.cloud.opera" +
+      "tion.Operation\022\027\n\017next_page_token\030\002 \001(\t\"" +
+      "y\n\027ListClusterHostsRequest\022 \n\ncluster_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B" +
+      "\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
+      "00\"g\n\030ListClusterHostsResponse\0222\n\005hosts\030" +
+      "\001 \003(\0132#.yandex.cloud.mdb.greenplum.v1.Ho" +
+      "st\022\027\n\017next_page_token\030\002 \001(\t\"\237\001\n\032MasterSu" +
+      "bclusterConfigSpec\022;\n\tresources\030\001 \001(\0132(." +
+      "yandex.cloud.mdb.greenplum.v1.Resources\022" +
+      "D\n\006config\030\002 \001(\01324.yandex.cloud.mdb.green" +
+      "plum.v1.GreenplumMasterConfig\"\241\001\n\033Segmen" +
+      "tSubclusterConfigSpec\022;\n\tresources\030\001 \001(\013" +
+      "2(.yandex.cloud.mdb.greenplum.v1.Resourc" +
+      "es\022E\n\006config\030\002 \001(\01325.yandex.cloud.mdb.gr" +
+      "eenplum.v1.GreenplumSegmentConfig\"j\n\027Lis" +
+      "tClusterLogsResponse\0226\n\004logs\030\001 \003(\0132(.yan" +
+      "dex.cloud.mdb.greenplum.v1.LogRecord\022\027\n\017" +
+      "next_page_token\030\002 \001(\t\"\262\001\n\tLogRecord\022-\n\tt" +
+      "imestamp\030\001 \001(\0132\032.google.protobuf.Timesta" +
+      "mp\022F\n\007message\030\002 \003(\01325.yandex.cloud.mdb.g" +
+      "reenplum.v1.LogRecord.MessageEntry\032.\n\014Me" +
+      "ssageEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
+      "8\001\"\322\003\n\026ListClusterLogsRequest\022 \n\ncluster" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter" +
+      "\030\002 \003(\t\022W\n\014service_type\030\003 \001(\0162A.yandex.cl" +
+      "oud.mdb.greenplum.v1.ListClusterLogsRequ" +
+      "est.ServiceType\022-\n\tfrom_time\030\004 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\022+\n\007to_time\030\005 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022\035\n\tpage_size" +
+      "\030\006 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\007 \001(\tB\t" +
+      "\212\3101\005<=100\022\036\n\026always_next_page_token\030\010 \001(" +
+      "\010\022\032\n\006filter\030\t \001(\tB\n\212\3101\006<=1000\"P\n\013Service" +
+      "Type\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\r\n\tGR" +
+      "EENPLUM\020\001\022\024\n\020GREENPLUM_POOLER\020\0022\266\020\n\016Clus" +
+      "terService\022\230\001\n\003Get\0220.yandex.cloud.mdb.gr" +
+      "eenplum.v1.GetClusterRequest\032&.yandex.cl" +
+      "oud.mdb.greenplum.v1.Cluster\"7\202\323\344\223\0021\022//m" +
+      "db/managed-greenplum/v1/clusters/{cluste" +
+      "r_id}\022\233\001\n\004List\0222.yandex.cloud.mdb.greenp" +
+      "lum.v1.ListClustersRequest\0323.yandex.clou" +
+      "d.mdb.greenplum.v1.ListClustersResponse\"" +
+      "*\202\323\344\223\002$\022\"/mdb/managed-greenplum/v1/clust" +
+      "ers\022\263\001\n\006Create\0223.yandex.cloud.mdb.greenp" +
+      "lum.v1.CreateClusterRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"Q\202\323\344\223\002\'\"\"/mdb/man" +
+      "aged-greenplum/v1/clusters:\001*\262\322* \n\025Creat" +
+      "eClusterMetadata\022\007Cluster\022\300\001\n\006Update\0223.y" +
+      "andex.cloud.mdb.greenplum.v1.UpdateClust" +
+      "erRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"^\202\323\344\223\00242//mdb/managed-greenplum/v1/" +
+      "clusters/{cluster_id}:\001*\262\322* \n\025UpdateClus" +
+      "terMetadata\022\007Cluster\022\313\001\n\006Delete\0223.yandex" +
+      ".cloud.mdb.greenplum.v1.DeleteClusterReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "i\202\323\344\223\0021*//mdb/managed-greenplum/v1/clust" +
+      "ers/{cluster_id}\262\322*.\n\025DeleteClusterMetad" +
+      "ata\022\025google.protobuf.Empty\022\300\001\n\005Start\0222.y" +
+      "andex.cloud.mdb.greenplum.v1.StartCluste" +
+      "rRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"`\202\323\344\223\0027\"5/mdb/managed-greenplum/v1/c" +
+      "lusters/{cluster_id}:start\262\322*\037\n\024StartClu" +
+      "sterMetadata\022\007Cluster\022\274\001\n\004Stop\0221.yandex." +
+      "cloud.mdb.greenplum.v1.StopClusterReques" +
+      "t\032!.yandex.cloud.operation.Operation\"^\202\323" +
+      "\344\223\0026\"4/mdb/managed-greenplum/v1/clusters" +
+      "/{cluster_id}:stop\262\322*\036\n\023StopClusterMetad" +
+      "ata\022\007Cluster\022\317\001\n\016ListOperations\022;.yandex" +
+      ".cloud.mdb.greenplum.v1.ListClusterOpera" +
+      "tionsRequest\032<.yandex.cloud.mdb.greenplu" +
+      "m.v1.ListClusterOperationsResponse\"B\202\323\344\223" +
+      "\002<\022:/mdb/managed-greenplum/v1/clusters/{" +
+      "cluster_id}/operations\022\310\001\n\017ListMasterHos" +
+      "ts\0226.yandex.cloud.mdb.greenplum.v1.ListC" +
+      "lusterHostsRequest\0327.yandex.cloud.mdb.gr" +
+      "eenplum.v1.ListClusterHostsResponse\"D\202\323\344" +
+      "\223\002>\022</mdb/managed-greenplum/v1/clusters/" +
+      "{cluster_id}/master-hosts\022\312\001\n\020ListSegmen" +
+      "tHosts\0226.yandex.cloud.mdb.greenplum.v1.L" +
+      "istClusterHostsRequest\0327.yandex.cloud.md" +
+      "b.greenplum.v1.ListClusterHostsResponse\"" +
+      "E\202\323\344\223\002?\022=/mdb/managed-greenplum/v1/clust" +
+      "ers/{cluster_id}/segment-hosts\022\267\001\n\010ListL" +
+      "ogs\0225.yandex.cloud.mdb.greenplum.v1.List" +
+      "ClusterLogsRequest\0326.yandex.cloud.mdb.gr" +
+      "eenplum.v1.ListClusterLogsResponse\"<\202\323\344\223" +
+      "\0026\0224/mdb/managed-greenplum/v1/clusters/{" +
+      "cluster_id}:logsBv\n!yandex.cloud.api.mdb" +
+      ".greenplum.v1B\004GPCSZKgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/mdb/greenp" +
+      "lum/v1;greenplumb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -20354,6 +24779,7 @@ public final class GPCS {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
@@ -20488,6 +24914,30 @@ public final class GPCS {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_SegmentSubclusterConfigSpec_descriptor,
         new java.lang.String[] { "Resources", "Config", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterLogsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterLogsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterLogsResponse_descriptor,
+        new java.lang.String[] { "Logs", "NextPageToken", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_LogRecord_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_yandex_cloud_mdb_greenplum_v1_LogRecord_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_LogRecord_descriptor,
+        new java.lang.String[] { "Timestamp", "Message", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_LogRecord_MessageEntry_descriptor =
+      internal_static_yandex_cloud_mdb_greenplum_v1_LogRecord_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_mdb_greenplum_v1_LogRecord_MessageEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_LogRecord_MessageEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterLogsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterLogsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterLogsRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "ColumnFilter", "ServiceType", "FromTime", "ToTime", "PageSize", "PageToken", "AlwaysNextPageToken", "Filter", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -20502,6 +24952,7 @@ public final class GPCS {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
