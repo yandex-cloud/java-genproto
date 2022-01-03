@@ -47,7 +47,7 @@ public final class ImageProductUsageServiceOuterClass {
 
     /**
      * <pre>
-     * List of product usage records (up to 25 pet request).
+     * List of product usage records (up to 25 per request).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -56,7 +56,7 @@ public final class ImageProductUsageServiceOuterClass {
         getUsageRecordsList();
     /**
      * <pre>
-     * List of product usage records (up to 25 pet request).
+     * List of product usage records (up to 25 per request).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -64,7 +64,7 @@ public final class ImageProductUsageServiceOuterClass {
     yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.UsageRecord getUsageRecords(int index);
     /**
      * <pre>
-     * List of product usage records (up to 25 pet request).
+     * List of product usage records (up to 25 per request).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -72,7 +72,7 @@ public final class ImageProductUsageServiceOuterClass {
     int getUsageRecordsCount();
     /**
      * <pre>
-     * List of product usage records (up to 25 pet request).
+     * List of product usage records (up to 25 per request).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -81,7 +81,7 @@ public final class ImageProductUsageServiceOuterClass {
         getUsageRecordsOrBuilderList();
     /**
      * <pre>
-     * List of product usage records (up to 25 pet request).
+     * List of product usage records (up to 25 per request).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -246,7 +246,7 @@ public final class ImageProductUsageServiceOuterClass {
     private java.util.List<yandex.cloud.api.marketplace.v1.metering.UsageRecordOuterClass.UsageRecord> usageRecords_;
     /**
      * <pre>
-     * List of product usage records (up to 25 pet request).
+     * List of product usage records (up to 25 per request).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -256,7 +256,7 @@ public final class ImageProductUsageServiceOuterClass {
     }
     /**
      * <pre>
-     * List of product usage records (up to 25 pet request).
+     * List of product usage records (up to 25 per request).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -267,7 +267,7 @@ public final class ImageProductUsageServiceOuterClass {
     }
     /**
      * <pre>
-     * List of product usage records (up to 25 pet request).
+     * List of product usage records (up to 25 per request).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -277,7 +277,7 @@ public final class ImageProductUsageServiceOuterClass {
     }
     /**
      * <pre>
-     * List of product usage records (up to 25 pet request).
+     * List of product usage records (up to 25 per request).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -287,7 +287,7 @@ public final class ImageProductUsageServiceOuterClass {
     }
     /**
      * <pre>
-     * List of product usage records (up to 25 pet request).
+     * List of product usage records (up to 25 per request).
      * </pre>
      *
      * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -818,7 +818,7 @@ public final class ImageProductUsageServiceOuterClass {
 
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request).
+       * List of product usage records (up to 25 per request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -832,7 +832,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request).
+       * List of product usage records (up to 25 per request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -846,7 +846,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request).
+       * List of product usage records (up to 25 per request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -860,7 +860,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request).
+       * List of product usage records (up to 25 per request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -881,7 +881,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request).
+       * List of product usage records (up to 25 per request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -899,7 +899,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request).
+       * List of product usage records (up to 25 per request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -919,7 +919,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request).
+       * List of product usage records (up to 25 per request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -940,7 +940,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request).
+       * List of product usage records (up to 25 per request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -958,7 +958,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request).
+       * List of product usage records (up to 25 per request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -976,7 +976,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request).
+       * List of product usage records (up to 25 per request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -995,7 +995,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request).
+       * List of product usage records (up to 25 per request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -1012,7 +1012,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request).
+       * List of product usage records (up to 25 per request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -1029,7 +1029,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request).
+       * List of product usage records (up to 25 per request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -1040,7 +1040,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request).
+       * List of product usage records (up to 25 per request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -1054,7 +1054,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request).
+       * List of product usage records (up to 25 per request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -1069,7 +1069,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request).
+       * List of product usage records (up to 25 per request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -1080,7 +1080,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request).
+       * List of product usage records (up to 25 per request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
@@ -1092,7 +1092,7 @@ public final class ImageProductUsageServiceOuterClass {
       }
       /**
        * <pre>
-       * List of product usage records (up to 25 pet request).
+       * List of product usage records (up to 25 per request).
        * </pre>
        *
        * <code>repeated .yandex.cloud.marketplace.v1.metering.UsageRecord usage_records = 3 [(.yandex.cloud.size) = "1-25"];</code>
