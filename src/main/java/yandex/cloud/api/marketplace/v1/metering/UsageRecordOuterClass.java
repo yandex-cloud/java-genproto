@@ -38,7 +38,7 @@ public final class UsageRecordOuterClass {
 
     /**
      * <pre>
-     * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`.
+     * Consumed Marketplace SKU ID, linked to `UsageRecord.product_id`.
      * </pre>
      *
      * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -46,7 +46,7 @@ public final class UsageRecordOuterClass {
     java.lang.String getSkuId();
     /**
      * <pre>
-     * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`.
+     * Consumed Marketplace SKU ID, linked to `UsageRecord.product_id`.
      * </pre>
      *
      * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -56,7 +56,7 @@ public final class UsageRecordOuterClass {
 
     /**
      * <pre>
-     * Quantity of sku consumed, measured in `sku.usage_unit` units (e.g. bytes).
+     * Quantity of SKU consumed, measured in `sku.usage_unit` units (e.g. bytes).
      * </pre>
      *
      * <code>int64 quantity = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -238,7 +238,7 @@ public final class UsageRecordOuterClass {
     private volatile java.lang.Object skuId_;
     /**
      * <pre>
-     * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`.
+     * Consumed Marketplace SKU ID, linked to `UsageRecord.product_id`.
      * </pre>
      *
      * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -257,7 +257,7 @@ public final class UsageRecordOuterClass {
     }
     /**
      * <pre>
-     * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`.
+     * Consumed Marketplace SKU ID, linked to `UsageRecord.product_id`.
      * </pre>
      *
      * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -280,7 +280,7 @@ public final class UsageRecordOuterClass {
     private long quantity_;
     /**
      * <pre>
-     * Quantity of sku consumed, measured in `sku.usage_unit` units (e.g. bytes).
+     * Quantity of SKU consumed, measured in `sku.usage_unit` units (e.g. bytes).
      * </pre>
      *
      * <code>int64 quantity = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -782,7 +782,7 @@ public final class UsageRecordOuterClass {
       private java.lang.Object skuId_ = "";
       /**
        * <pre>
-       * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`.
+       * Consumed Marketplace SKU ID, linked to `UsageRecord.product_id`.
        * </pre>
        *
        * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -801,7 +801,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`.
+       * Consumed Marketplace SKU ID, linked to `UsageRecord.product_id`.
        * </pre>
        *
        * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -821,7 +821,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`.
+       * Consumed Marketplace SKU ID, linked to `UsageRecord.product_id`.
        * </pre>
        *
        * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -838,7 +838,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`.
+       * Consumed Marketplace SKU ID, linked to `UsageRecord.product_id`.
        * </pre>
        *
        * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -851,7 +851,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Consumed Marketplace SaaS Sku ID, linked to `UsageRecord.product_id`.
+       * Consumed Marketplace SKU ID, linked to `UsageRecord.product_id`.
        * </pre>
        *
        * <code>string sku_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -871,7 +871,7 @@ public final class UsageRecordOuterClass {
       private long quantity_ ;
       /**
        * <pre>
-       * Quantity of sku consumed, measured in `sku.usage_unit` units (e.g. bytes).
+       * Quantity of SKU consumed, measured in `sku.usage_unit` units (e.g. bytes).
        * </pre>
        *
        * <code>int64 quantity = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -881,7 +881,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Quantity of sku consumed, measured in `sku.usage_unit` units (e.g. bytes).
+       * Quantity of SKU consumed, measured in `sku.usage_unit` units (e.g. bytes).
        * </pre>
        *
        * <code>int64 quantity = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -894,7 +894,7 @@ public final class UsageRecordOuterClass {
       }
       /**
        * <pre>
-       * Quantity of sku consumed, measured in `sku.usage_unit` units (e.g. bytes).
+       * Quantity of SKU consumed, measured in `sku.usage_unit` units (e.g. bytes).
        * </pre>
        *
        * <code>int64 quantity = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
