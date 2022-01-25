@@ -4868,6 +4868,14 @@ public final class SttServiceOuterClass {
        * <code>OGG_OPUS = 2;</code>
        */
       OGG_OPUS(2),
+      /**
+       * <pre>
+       * transcription only
+       * </pre>
+       *
+       * <code>MP3 = 3;</code>
+       */
+      MP3(3),
       UNRECOGNIZED(-1),
       ;
 
@@ -4887,6 +4895,14 @@ public final class SttServiceOuterClass {
        * <code>OGG_OPUS = 2;</code>
        */
       public static final int OGG_OPUS_VALUE = 2;
+      /**
+       * <pre>
+       * transcription only
+       * </pre>
+       *
+       * <code>MP3 = 3;</code>
+       */
+      public static final int MP3_VALUE = 3;
 
 
       public final int getNumber() {
@@ -4910,6 +4926,7 @@ public final class SttServiceOuterClass {
           case 0: return AUDIO_ENCODING_UNSPECIFIED;
           case 1: return LINEAR16_PCM;
           case 2: return OGG_OPUS;
+          case 3: return MP3;
           default: return null;
         }
       }
@@ -9916,40 +9933,41 @@ public final class SttServiceOuterClass {
       "uri\030\002 \001(\tH\000B\016\n\014audio_source\"f\n\021Recogniti" +
       "onConfig\022>\n\rspecification\030\001 \001(\0132\'.yandex" +
       ".cloud.ai.stt.v2.RecognitionSpec\022\021\n\tfold" +
-      "er_id\030\002 \001(\t\"\361\002\n\017RecognitionSpec\022M\n\016audio" +
+      "er_id\030\002 \001(\t\"\372\002\n\017RecognitionSpec\022M\n\016audio" +
       "_encoding\030\001 \001(\01625.yandex.cloud.ai.stt.v2" +
       ".RecognitionSpec.AudioEncoding\022\031\n\021sample" +
       "_rate_hertz\030\002 \001(\003\022\025\n\rlanguage_code\030\003 \001(\t" +
       "\022\030\n\020profanity_filter\030\004 \001(\010\022\r\n\005model\030\005 \001(" +
       "\t\022\027\n\017partial_results\030\007 \001(\010\022\030\n\020single_utt" +
       "erance\030\010 \001(\010\022\033\n\023audio_channel_count\030\t \001(" +
-      "\003\022\023\n\013raw_results\030\n \001(\010\"O\n\rAudioEncoding\022" +
+      "\003\022\023\n\013raw_results\030\n \001(\010\"X\n\rAudioEncoding\022" +
       "\036\n\032AUDIO_ENCODING_UNSPECIFIED\020\000\022\020\n\014LINEA" +
-      "R16_PCM\020\001\022\014\n\010OGG_OPUS\020\002\"\215\001\n\026SpeechRecogn" +
-      "itionChunk\022J\n\014alternatives\030\001 \003(\01324.yande" +
-      "x.cloud.ai.stt.v2.SpeechRecognitionAlter" +
-      "native\022\r\n\005final\030\002 \001(\010\022\030\n\020end_of_utteranc" +
-      "e\030\003 \001(\010\"z\n\027SpeechRecognitionResult\022J\n\014al" +
-      "ternatives\030\001 \003(\01324.yandex.cloud.ai.stt.v" +
-      "2.SpeechRecognitionAlternative\022\023\n\013channe" +
-      "l_tag\030\002 \001(\003\"q\n\034SpeechRecognitionAlternat" +
-      "ive\022\014\n\004text\030\001 \001(\t\022\022\n\nconfidence\030\002 \001(\002\022/\n" +
-      "\005words\030\003 \003(\0132 .yandex.cloud.ai.stt.v2.Wo" +
-      "rdInfo\"\210\001\n\010WordInfo\022-\n\nstart_time\030\001 \001(\0132" +
-      "\031.google.protobuf.Duration\022+\n\010end_time\030\002" +
-      " \001(\0132\031.google.protobuf.Duration\022\014\n\004word\030" +
-      "\003 \001(\t\022\022\n\nconfidence\030\004 \001(\0022\333\002\n\nSttService" +
-      "\022\304\001\n\024LongRunningRecognize\0225.yandex.cloud" +
-      ".ai.stt.v2.LongRunningRecognitionRequest" +
-      "\032!.yandex.cloud.operation.Operation\"R\202\323\344" +
-      "\223\002(\"#/speech/stt/v2/longRunningRecognize" +
-      ":\001*\262\322* \022\036LongRunningRecognitionResponse\022" +
-      "\205\001\n\022StreamingRecognize\0223.yandex.cloud.ai" +
-      ".stt.v2.StreamingRecognitionRequest\0324.ya" +
-      "ndex.cloud.ai.stt.v2.StreamingRecognitio" +
-      "nResponse\"\000(\0010\001B\\\n\032yandex.cloud.api.ai.s" +
-      "tt.v2Z>github.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/ai/stt/v2;sttb\006proto3"
+      "R16_PCM\020\001\022\014\n\010OGG_OPUS\020\002\022\007\n\003MP3\020\003\"\215\001\n\026Spe" +
+      "echRecognitionChunk\022J\n\014alternatives\030\001 \003(" +
+      "\01324.yandex.cloud.ai.stt.v2.SpeechRecogni" +
+      "tionAlternative\022\r\n\005final\030\002 \001(\010\022\030\n\020end_of" +
+      "_utterance\030\003 \001(\010\"z\n\027SpeechRecognitionRes" +
+      "ult\022J\n\014alternatives\030\001 \003(\01324.yandex.cloud" +
+      ".ai.stt.v2.SpeechRecognitionAlternative\022" +
+      "\023\n\013channel_tag\030\002 \001(\003\"q\n\034SpeechRecognitio" +
+      "nAlternative\022\014\n\004text\030\001 \001(\t\022\022\n\nconfidence" +
+      "\030\002 \001(\002\022/\n\005words\030\003 \003(\0132 .yandex.cloud.ai." +
+      "stt.v2.WordInfo\"\210\001\n\010WordInfo\022-\n\nstart_ti" +
+      "me\030\001 \001(\0132\031.google.protobuf.Duration\022+\n\010e" +
+      "nd_time\030\002 \001(\0132\031.google.protobuf.Duration" +
+      "\022\014\n\004word\030\003 \001(\t\022\022\n\nconfidence\030\004 \001(\0022\333\002\n\nS" +
+      "ttService\022\304\001\n\024LongRunningRecognize\0225.yan" +
+      "dex.cloud.ai.stt.v2.LongRunningRecogniti" +
+      "onRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"R\202\323\344\223\002(\"#/speech/stt/v2/longRunning" +
+      "Recognize:\001*\262\322* \022\036LongRunningRecognition" +
+      "Response\022\205\001\n\022StreamingRecognize\0223.yandex" +
+      ".cloud.ai.stt.v2.StreamingRecognitionReq" +
+      "uest\0324.yandex.cloud.ai.stt.v2.StreamingR" +
+      "ecognitionResponse\"\000(\0010\001B\\\n\032yandex.cloud" +
+      ".api.ai.stt.v2Z>github.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/ai/stt/v2;sttb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

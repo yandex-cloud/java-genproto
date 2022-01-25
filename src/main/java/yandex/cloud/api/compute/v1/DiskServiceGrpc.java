@@ -222,6 +222,38 @@ public final class DiskServiceGrpc {
      return getListOperationsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Move",
+      requestType = yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod;
+    if ((getMoveMethod = DiskServiceGrpc.getMoveMethod) == null) {
+      synchronized (DiskServiceGrpc.class) {
+        if ((getMoveMethod = DiskServiceGrpc.getMoveMethod) == null) {
+          DiskServiceGrpc.getMoveMethod = getMoveMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.compute.v1.DiskService", "Move"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new DiskServiceMethodDescriptorSupplier("Move"))
+                  .build();
+          }
+        }
+     }
+     return getMoveMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -318,6 +350,16 @@ public final class DiskServiceGrpc {
       asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Moves disk between folders.
+     * </pre>
+     */
+    public void move(yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -362,6 +404,13 @@ public final class DiskServiceGrpc {
                 yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsRequest,
                 yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
+          .addMethod(
+            getMoveMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_MOVE)))
           .build();
     }
   }
@@ -458,6 +507,17 @@ public final class DiskServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Moves disk between folders.
+     * </pre>
+     */
+    public void move(yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getMoveMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -545,6 +605,16 @@ public final class DiskServiceGrpc {
     public yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsResponse listOperations(yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Moves disk between folders.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getMoveMethod(), getCallOptions(), request);
     }
   }
 
@@ -640,6 +710,17 @@ public final class DiskServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Moves disk between folders.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> move(
+        yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getMoveMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -648,6 +729,7 @@ public final class DiskServiceGrpc {
   private static final int METHODID_UPDATE = 3;
   private static final int METHODID_DELETE = 4;
   private static final int METHODID_LIST_OPERATIONS = 5;
+  private static final int METHODID_MOVE = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -689,6 +771,10 @@ public final class DiskServiceGrpc {
         case METHODID_LIST_OPERATIONS:
           serviceImpl.listOperations((yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskOperationsResponse>) responseObserver);
+          break;
+        case METHODID_MOVE:
+          serviceImpl.move((yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -757,6 +843,7 @@ public final class DiskServiceGrpc {
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getListOperationsMethod())
+              .addMethod(getMoveMethod())
               .build();
         }
       }

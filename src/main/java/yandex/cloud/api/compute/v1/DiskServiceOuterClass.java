@@ -11629,6 +11629,1697 @@ public final class DiskServiceOuterClass {
 
   }
 
+  public interface MoveDiskRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.MoveDiskRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the disk that is being moved.
+     * </pre>
+     *
+     * <code>string disk_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getDiskId();
+    /**
+     * <pre>
+     * ID of the disk that is being moved.
+     * </pre>
+     *
+     * <code>string disk_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getDiskIdBytes();
+
+    /**
+     * <pre>
+     * ID of the destination folder.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getDestinationFolderId();
+    /**
+     * <pre>
+     * ID of the destination folder.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getDestinationFolderIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.MoveDiskRequest}
+   */
+  public  static final class MoveDiskRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.MoveDiskRequest)
+      MoveDiskRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MoveDiskRequest.newBuilder() to construct.
+    private MoveDiskRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MoveDiskRequest() {
+      diskId_ = "";
+      destinationFolderId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MoveDiskRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              diskId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              destinationFolderId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.DiskServiceOuterClass.internal_static_yandex_cloud_compute_v1_MoveDiskRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.DiskServiceOuterClass.internal_static_yandex_cloud_compute_v1_MoveDiskRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest.class, yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest.Builder.class);
+    }
+
+    public static final int DISK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object diskId_;
+    /**
+     * <pre>
+     * ID of the disk that is being moved.
+     * </pre>
+     *
+     * <code>string disk_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getDiskId() {
+      java.lang.Object ref = diskId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        diskId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the disk that is being moved.
+     * </pre>
+     *
+     * <code>string disk_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getDiskIdBytes() {
+      java.lang.Object ref = diskId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        diskId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESTINATION_FOLDER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object destinationFolderId_;
+    /**
+     * <pre>
+     * ID of the destination folder.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getDestinationFolderId() {
+      java.lang.Object ref = destinationFolderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destinationFolderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the destination folder.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getDestinationFolderIdBytes() {
+      java.lang.Object ref = destinationFolderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destinationFolderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getDiskIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, diskId_);
+      }
+      if (!getDestinationFolderIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, destinationFolderId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getDiskIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, diskId_);
+      }
+      if (!getDestinationFolderIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, destinationFolderId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest other = (yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest) obj;
+
+      boolean result = true;
+      result = result && getDiskId()
+          .equals(other.getDiskId());
+      result = result && getDestinationFolderId()
+          .equals(other.getDestinationFolderId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DISK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDiskId().hashCode();
+      hash = (37 * hash) + DESTINATION_FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDestinationFolderId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.MoveDiskRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.MoveDiskRequest)
+        yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.DiskServiceOuterClass.internal_static_yandex_cloud_compute_v1_MoveDiskRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.DiskServiceOuterClass.internal_static_yandex_cloud_compute_v1_MoveDiskRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest.class, yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        diskId_ = "";
+
+        destinationFolderId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.DiskServiceOuterClass.internal_static_yandex_cloud_compute_v1_MoveDiskRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest build() {
+        yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest buildPartial() {
+        yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest result = new yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest(this);
+        result.diskId_ = diskId_;
+        result.destinationFolderId_ = destinationFolderId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest) {
+          return mergeFrom((yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest other) {
+        if (other == yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest.getDefaultInstance()) return this;
+        if (!other.getDiskId().isEmpty()) {
+          diskId_ = other.diskId_;
+          onChanged();
+        }
+        if (!other.getDestinationFolderId().isEmpty()) {
+          destinationFolderId_ = other.destinationFolderId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object diskId_ = "";
+      /**
+       * <pre>
+       * ID of the disk that is being moved.
+       * </pre>
+       *
+       * <code>string disk_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getDiskId() {
+        java.lang.Object ref = diskId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          diskId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the disk that is being moved.
+       * </pre>
+       *
+       * <code>string disk_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getDiskIdBytes() {
+        java.lang.Object ref = diskId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          diskId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the disk that is being moved.
+       * </pre>
+       *
+       * <code>string disk_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setDiskId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        diskId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the disk that is being moved.
+       * </pre>
+       *
+       * <code>string disk_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearDiskId() {
+        
+        diskId_ = getDefaultInstance().getDiskId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the disk that is being moved.
+       * </pre>
+       *
+       * <code>string disk_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setDiskIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        diskId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object destinationFolderId_ = "";
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getDestinationFolderId() {
+        java.lang.Object ref = destinationFolderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          destinationFolderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getDestinationFolderIdBytes() {
+        java.lang.Object ref = destinationFolderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          destinationFolderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setDestinationFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        destinationFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearDestinationFolderId() {
+        
+        destinationFolderId_ = getDefaultInstance().getDestinationFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setDestinationFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        destinationFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.MoveDiskRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.MoveDiskRequest)
+    private static final yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest();
+    }
+
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MoveDiskRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MoveDiskRequest>() {
+      @java.lang.Override
+      public MoveDiskRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MoveDiskRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MoveDiskRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MoveDiskRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MoveDiskMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.MoveDiskMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the disk that is being moved.
+     * </pre>
+     *
+     * <code>string disk_id = 1;</code>
+     */
+    java.lang.String getDiskId();
+    /**
+     * <pre>
+     * ID of the disk that is being moved.
+     * </pre>
+     *
+     * <code>string disk_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getDiskIdBytes();
+
+    /**
+     * <pre>
+     * ID of the source folder.
+     * </pre>
+     *
+     * <code>string source_folder_id = 2;</code>
+     */
+    java.lang.String getSourceFolderId();
+    /**
+     * <pre>
+     * ID of the source folder.
+     * </pre>
+     *
+     * <code>string source_folder_id = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getSourceFolderIdBytes();
+
+    /**
+     * <pre>
+     * ID of the destination folder.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 3;</code>
+     */
+    java.lang.String getDestinationFolderId();
+    /**
+     * <pre>
+     * ID of the destination folder.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getDestinationFolderIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.MoveDiskMetadata}
+   */
+  public  static final class MoveDiskMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.MoveDiskMetadata)
+      MoveDiskMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MoveDiskMetadata.newBuilder() to construct.
+    private MoveDiskMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MoveDiskMetadata() {
+      diskId_ = "";
+      sourceFolderId_ = "";
+      destinationFolderId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MoveDiskMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              diskId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              sourceFolderId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              destinationFolderId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.DiskServiceOuterClass.internal_static_yandex_cloud_compute_v1_MoveDiskMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.DiskServiceOuterClass.internal_static_yandex_cloud_compute_v1_MoveDiskMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata.class, yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata.Builder.class);
+    }
+
+    public static final int DISK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object diskId_;
+    /**
+     * <pre>
+     * ID of the disk that is being moved.
+     * </pre>
+     *
+     * <code>string disk_id = 1;</code>
+     */
+    public java.lang.String getDiskId() {
+      java.lang.Object ref = diskId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        diskId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the disk that is being moved.
+     * </pre>
+     *
+     * <code>string disk_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDiskIdBytes() {
+      java.lang.Object ref = diskId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        diskId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SOURCE_FOLDER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object sourceFolderId_;
+    /**
+     * <pre>
+     * ID of the source folder.
+     * </pre>
+     *
+     * <code>string source_folder_id = 2;</code>
+     */
+    public java.lang.String getSourceFolderId() {
+      java.lang.Object ref = sourceFolderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sourceFolderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the source folder.
+     * </pre>
+     *
+     * <code>string source_folder_id = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSourceFolderIdBytes() {
+      java.lang.Object ref = sourceFolderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sourceFolderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESTINATION_FOLDER_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object destinationFolderId_;
+    /**
+     * <pre>
+     * ID of the destination folder.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 3;</code>
+     */
+    public java.lang.String getDestinationFolderId() {
+      java.lang.Object ref = destinationFolderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destinationFolderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the destination folder.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDestinationFolderIdBytes() {
+      java.lang.Object ref = destinationFolderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destinationFolderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getDiskIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, diskId_);
+      }
+      if (!getSourceFolderIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sourceFolderId_);
+      }
+      if (!getDestinationFolderIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, destinationFolderId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getDiskIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, diskId_);
+      }
+      if (!getSourceFolderIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sourceFolderId_);
+      }
+      if (!getDestinationFolderIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, destinationFolderId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata other = (yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata) obj;
+
+      boolean result = true;
+      result = result && getDiskId()
+          .equals(other.getDiskId());
+      result = result && getSourceFolderId()
+          .equals(other.getSourceFolderId());
+      result = result && getDestinationFolderId()
+          .equals(other.getDestinationFolderId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DISK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDiskId().hashCode();
+      hash = (37 * hash) + SOURCE_FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSourceFolderId().hashCode();
+      hash = (37 * hash) + DESTINATION_FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDestinationFolderId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.MoveDiskMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.MoveDiskMetadata)
+        yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.DiskServiceOuterClass.internal_static_yandex_cloud_compute_v1_MoveDiskMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.DiskServiceOuterClass.internal_static_yandex_cloud_compute_v1_MoveDiskMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata.class, yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        diskId_ = "";
+
+        sourceFolderId_ = "";
+
+        destinationFolderId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.DiskServiceOuterClass.internal_static_yandex_cloud_compute_v1_MoveDiskMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata build() {
+        yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata buildPartial() {
+        yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata result = new yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata(this);
+        result.diskId_ = diskId_;
+        result.sourceFolderId_ = sourceFolderId_;
+        result.destinationFolderId_ = destinationFolderId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata) {
+          return mergeFrom((yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata other) {
+        if (other == yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata.getDefaultInstance()) return this;
+        if (!other.getDiskId().isEmpty()) {
+          diskId_ = other.diskId_;
+          onChanged();
+        }
+        if (!other.getSourceFolderId().isEmpty()) {
+          sourceFolderId_ = other.sourceFolderId_;
+          onChanged();
+        }
+        if (!other.getDestinationFolderId().isEmpty()) {
+          destinationFolderId_ = other.destinationFolderId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object diskId_ = "";
+      /**
+       * <pre>
+       * ID of the disk that is being moved.
+       * </pre>
+       *
+       * <code>string disk_id = 1;</code>
+       */
+      public java.lang.String getDiskId() {
+        java.lang.Object ref = diskId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          diskId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the disk that is being moved.
+       * </pre>
+       *
+       * <code>string disk_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDiskIdBytes() {
+        java.lang.Object ref = diskId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          diskId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the disk that is being moved.
+       * </pre>
+       *
+       * <code>string disk_id = 1;</code>
+       */
+      public Builder setDiskId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        diskId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the disk that is being moved.
+       * </pre>
+       *
+       * <code>string disk_id = 1;</code>
+       */
+      public Builder clearDiskId() {
+        
+        diskId_ = getDefaultInstance().getDiskId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the disk that is being moved.
+       * </pre>
+       *
+       * <code>string disk_id = 1;</code>
+       */
+      public Builder setDiskIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        diskId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sourceFolderId_ = "";
+      /**
+       * <pre>
+       * ID of the source folder.
+       * </pre>
+       *
+       * <code>string source_folder_id = 2;</code>
+       */
+      public java.lang.String getSourceFolderId() {
+        java.lang.Object ref = sourceFolderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sourceFolderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the source folder.
+       * </pre>
+       *
+       * <code>string source_folder_id = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSourceFolderIdBytes() {
+        java.lang.Object ref = sourceFolderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sourceFolderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the source folder.
+       * </pre>
+       *
+       * <code>string source_folder_id = 2;</code>
+       */
+      public Builder setSourceFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sourceFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the source folder.
+       * </pre>
+       *
+       * <code>string source_folder_id = 2;</code>
+       */
+      public Builder clearSourceFolderId() {
+        
+        sourceFolderId_ = getDefaultInstance().getSourceFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the source folder.
+       * </pre>
+       *
+       * <code>string source_folder_id = 2;</code>
+       */
+      public Builder setSourceFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sourceFolderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object destinationFolderId_ = "";
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 3;</code>
+       */
+      public java.lang.String getDestinationFolderId() {
+        java.lang.Object ref = destinationFolderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          destinationFolderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDestinationFolderIdBytes() {
+        java.lang.Object ref = destinationFolderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          destinationFolderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 3;</code>
+       */
+      public Builder setDestinationFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        destinationFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 3;</code>
+       */
+      public Builder clearDestinationFolderId() {
+        
+        destinationFolderId_ = getDefaultInstance().getDestinationFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 3;</code>
+       */
+      public Builder setDestinationFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        destinationFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.MoveDiskMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.MoveDiskMetadata)
+    private static final yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata();
+    }
+
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MoveDiskMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<MoveDiskMetadata>() {
+      @java.lang.Override
+      public MoveDiskMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MoveDiskMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MoveDiskMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MoveDiskMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_GetDiskRequest_descriptor;
   private static final 
@@ -11694,6 +13385,16 @@ public final class DiskServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_ListDiskOperationsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_MoveDiskRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_MoveDiskRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_MoveDiskMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_MoveDiskMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -11754,33 +13455,41 @@ public final class DiskServiceOuterClass {
       "00\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"l\n\032Lis" +
       "tDiskOperationsResponse\0225\n\noperations\030\001 " +
       "\003(\0132!.yandex.cloud.operation.Operation\022\027" +
-      "\n\017next_page_token\030\002 \001(\t2\213\007\n\013DiskService\022" +
-      "r\n\003Get\022\'.yandex.cloud.compute.v1.GetDisk" +
-      "Request\032\035.yandex.cloud.compute.v1.Disk\"#" +
-      "\202\323\344\223\002\035\022\033/compute/v1/disks/{disk_id}\022x\n\004L" +
-      "ist\022).yandex.cloud.compute.v1.ListDisksR" +
-      "equest\032*.yandex.cloud.compute.v1.ListDis" +
-      "ksResponse\"\031\202\323\344\223\002\023\022\021/compute/v1/disks\022\223\001" +
-      "\n\006Create\022*.yandex.cloud.compute.v1.Creat" +
-      "eDiskRequest\032!.yandex.cloud.operation.Op" +
-      "eration\":\202\323\344\223\002\026\"\021/compute/v1/disks:\001*\262\322*" +
-      "\032\n\022CreateDiskMetadata\022\004Disk\022\235\001\n\006Update\022*" +
-      ".yandex.cloud.compute.v1.UpdateDiskReque" +
-      "st\032!.yandex.cloud.operation.Operation\"D\202" +
-      "\323\344\223\002 2\033/compute/v1/disks/{disk_id}:\001*\262\322*" +
-      "\032\n\022UpdateDiskMetadata\022\004Disk\022\253\001\n\006Delete\022*" +
-      ".yandex.cloud.compute.v1.DeleteDiskReque" +
-      "st\032!.yandex.cloud.operation.Operation\"R\202" +
-      "\323\344\223\002\035*\033/compute/v1/disks/{disk_id}\262\322*+\n\022" +
-      "DeleteDiskMetadata\022\025google.protobuf.Empt" +
-      "y\022\251\001\n\016ListOperations\0222.yandex.cloud.comp" +
-      "ute.v1.ListDiskOperationsRequest\0323.yande" +
-      "x.cloud.compute.v1.ListDiskOperationsRes" +
-      "ponse\".\202\323\344\223\002(\022&/compute/v1/disks/{disk_i" +
-      "d}/operationsBb\n\033yandex.cloud.api.comput" +
-      "e.v1ZCgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/compute/v1;computeb\006proto" +
-      "3"
+      "\n\017next_page_token\030\002 \001(\t\"]\n\017MoveDiskReque" +
+      "st\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025des" +
+      "tination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\\" +
+      "\n\020MoveDiskMetadata\022\017\n\007disk_id\030\001 \001(\t\022\030\n\020s" +
+      "ource_folder_id\030\002 \001(\t\022\035\n\025destination_fol" +
+      "der_id\030\003 \001(\t2\252\010\n\013DiskService\022r\n\003Get\022\'.ya" +
+      "ndex.cloud.compute.v1.GetDiskRequest\032\035.y" +
+      "andex.cloud.compute.v1.Disk\"#\202\323\344\223\002\035\022\033/co" +
+      "mpute/v1/disks/{disk_id}\022x\n\004List\022).yande" +
+      "x.cloud.compute.v1.ListDisksRequest\032*.ya" +
+      "ndex.cloud.compute.v1.ListDisksResponse\"" +
+      "\031\202\323\344\223\002\023\022\021/compute/v1/disks\022\223\001\n\006Create\022*." +
+      "yandex.cloud.compute.v1.CreateDiskReques" +
+      "t\032!.yandex.cloud.operation.Operation\":\202\323" +
+      "\344\223\002\026\"\021/compute/v1/disks:\001*\262\322*\032\n\022CreateDi" +
+      "skMetadata\022\004Disk\022\235\001\n\006Update\022*.yandex.clo" +
+      "ud.compute.v1.UpdateDiskRequest\032!.yandex" +
+      ".cloud.operation.Operation\"D\202\323\344\223\002 2\033/com" +
+      "pute/v1/disks/{disk_id}:\001*\262\322*\032\n\022UpdateDi" +
+      "skMetadata\022\004Disk\022\253\001\n\006Delete\022*.yandex.clo" +
+      "ud.compute.v1.DeleteDiskRequest\032!.yandex" +
+      ".cloud.operation.Operation\"R\202\323\344\223\002\035*\033/com" +
+      "pute/v1/disks/{disk_id}\262\322*+\n\022DeleteDiskM" +
+      "etadata\022\025google.protobuf.Empty\022\251\001\n\016ListO" +
+      "perations\0222.yandex.cloud.compute.v1.List" +
+      "DiskOperationsRequest\0323.yandex.cloud.com" +
+      "pute.v1.ListDiskOperationsResponse\".\202\323\344\223" +
+      "\002(\022&/compute/v1/disks/{disk_id}/operatio" +
+      "ns\022\234\001\n\004Move\022(.yandex.cloud.compute.v1.Mo" +
+      "veDiskRequest\032!.yandex.cloud.operation.O" +
+      "peration\"G\202\323\344\223\002%\" /compute/v1/disks/{dis" +
+      "k_id}:move:\001*\262\322*\030\n\020MoveDiskMetadata\022\004Dis" +
+      "kBb\n\033yandex.cloud.api.compute.v1ZCgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/compute/v1;computeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11878,6 +13587,18 @@ public final class DiskServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_ListDiskOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
+    internal_static_yandex_cloud_compute_v1_MoveDiskRequest_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_compute_v1_MoveDiskRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_MoveDiskRequest_descriptor,
+        new java.lang.String[] { "DiskId", "DestinationFolderId", });
+    internal_static_yandex_cloud_compute_v1_MoveDiskMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_compute_v1_MoveDiskMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_MoveDiskMetadata_descriptor,
+        new java.lang.String[] { "DiskId", "SourceFolderId", "DestinationFolderId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

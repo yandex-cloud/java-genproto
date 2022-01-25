@@ -18209,6 +18209,24 @@ public final class ClusterOuterClass {
      * <code>bool serverless = 4;</code>
      */
     boolean getServerless();
+
+    /**
+     * <pre>
+     * Allow access for DataTransfer
+     * </pre>
+     *
+     * <code>bool data_transfer = 5;</code>
+     */
+    boolean getDataTransfer();
+
+    /**
+     * <pre>
+     * Allow access for YandexQuery
+     * </pre>
+     *
+     * <code>bool yandex_query = 6;</code>
+     */
+    boolean getYandexQuery();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.Access}
@@ -18227,6 +18245,8 @@ public final class ClusterOuterClass {
       webSql_ = false;
       metrika_ = false;
       serverless_ = false;
+      dataTransfer_ = false;
+      yandexQuery_ = false;
     }
 
     @java.lang.Override
@@ -18271,6 +18291,16 @@ public final class ClusterOuterClass {
             case 32: {
 
               serverless_ = input.readBool();
+              break;
+            }
+            case 40: {
+
+              dataTransfer_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              yandexQuery_ = input.readBool();
               break;
             }
             default: {
@@ -18359,6 +18389,32 @@ public final class ClusterOuterClass {
       return serverless_;
     }
 
+    public static final int DATA_TRANSFER_FIELD_NUMBER = 5;
+    private boolean dataTransfer_;
+    /**
+     * <pre>
+     * Allow access for DataTransfer
+     * </pre>
+     *
+     * <code>bool data_transfer = 5;</code>
+     */
+    public boolean getDataTransfer() {
+      return dataTransfer_;
+    }
+
+    public static final int YANDEX_QUERY_FIELD_NUMBER = 6;
+    private boolean yandexQuery_;
+    /**
+     * <pre>
+     * Allow access for YandexQuery
+     * </pre>
+     *
+     * <code>bool yandex_query = 6;</code>
+     */
+    public boolean getYandexQuery() {
+      return yandexQuery_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -18385,6 +18441,12 @@ public final class ClusterOuterClass {
       if (serverless_ != false) {
         output.writeBool(4, serverless_);
       }
+      if (dataTransfer_ != false) {
+        output.writeBool(5, dataTransfer_);
+      }
+      if (yandexQuery_ != false) {
+        output.writeBool(6, yandexQuery_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -18410,6 +18472,14 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, serverless_);
       }
+      if (dataTransfer_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, dataTransfer_);
+      }
+      if (yandexQuery_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, yandexQuery_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -18434,6 +18504,10 @@ public final class ClusterOuterClass {
           == other.getMetrika());
       result = result && (getServerless()
           == other.getServerless());
+      result = result && (getDataTransfer()
+          == other.getDataTransfer());
+      result = result && (getYandexQuery()
+          == other.getYandexQuery());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -18457,6 +18531,12 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + SERVERLESS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getServerless());
+      hash = (37 * hash) + DATA_TRANSFER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDataTransfer());
+      hash = (37 * hash) + YANDEX_QUERY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getYandexQuery());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -18598,6 +18678,10 @@ public final class ClusterOuterClass {
 
         serverless_ = false;
 
+        dataTransfer_ = false;
+
+        yandexQuery_ = false;
+
         return this;
       }
 
@@ -18628,6 +18712,8 @@ public final class ClusterOuterClass {
         result.webSql_ = webSql_;
         result.metrika_ = metrika_;
         result.serverless_ = serverless_;
+        result.dataTransfer_ = dataTransfer_;
+        result.yandexQuery_ = yandexQuery_;
         onBuilt();
         return result;
       }
@@ -18687,6 +18773,12 @@ public final class ClusterOuterClass {
         }
         if (other.getServerless() != false) {
           setServerless(other.getServerless());
+        }
+        if (other.getDataTransfer() != false) {
+          setDataTransfer(other.getDataTransfer());
+        }
+        if (other.getYandexQuery() != false) {
+          setYandexQuery(other.getYandexQuery());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -18871,6 +18963,82 @@ public final class ClusterOuterClass {
       public Builder clearServerless() {
         
         serverless_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean dataTransfer_ ;
+      /**
+       * <pre>
+       * Allow access for DataTransfer
+       * </pre>
+       *
+       * <code>bool data_transfer = 5;</code>
+       */
+      public boolean getDataTransfer() {
+        return dataTransfer_;
+      }
+      /**
+       * <pre>
+       * Allow access for DataTransfer
+       * </pre>
+       *
+       * <code>bool data_transfer = 5;</code>
+       */
+      public Builder setDataTransfer(boolean value) {
+        
+        dataTransfer_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Allow access for DataTransfer
+       * </pre>
+       *
+       * <code>bool data_transfer = 5;</code>
+       */
+      public Builder clearDataTransfer() {
+        
+        dataTransfer_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean yandexQuery_ ;
+      /**
+       * <pre>
+       * Allow access for YandexQuery
+       * </pre>
+       *
+       * <code>bool yandex_query = 6;</code>
+       */
+      public boolean getYandexQuery() {
+        return yandexQuery_;
+      }
+      /**
+       * <pre>
+       * Allow access for YandexQuery
+       * </pre>
+       *
+       * <code>bool yandex_query = 6;</code>
+       */
+      public Builder setYandexQuery(boolean value) {
+        
+        yandexQuery_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Allow access for YandexQuery
+       * </pre>
+       *
+       * <code>bool yandex_query = 6;</code>
+       */
+      public Builder clearYandexQuery() {
+        
+        yandexQuery_ = false;
         onChanged();
         return this;
       }
@@ -19595,13 +19763,14 @@ public final class ClusterOuterClass {
       "OOKEEPER\020\002\"*\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALI" +
       "VE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resource_" +
       "preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014di" +
-      "sk_type_id\030\003 \001(\t\"Q\n\006Access\022\021\n\tdata_lens\030" +
+      "sk_type_id\030\003 \001(\t\"~\n\006Access\022\021\n\tdata_lens\030" +
       "\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\017\n\007metrika\030\003 \001(\010\022" +
-      "\022\n\nserverless\030\004 \001(\010\"\037\n\014CloudStorage\022\017\n\007e" +
-      "nabled\030\001 \001(\010Bs\n\"yandex.cloud.api.mdb.cli" +
-      "ckhouse.v1ZMgithub.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/mdb/clickhouse/v1;c" +
-      "lickhouseb\006proto3"
+      "\022\n\nserverless\030\004 \001(\010\022\025\n\rdata_transfer\030\005 \001" +
+      "(\010\022\024\n\014yandex_query\030\006 \001(\010\"\037\n\014CloudStorage" +
+      "\022\017\n\007enabled\030\001 \001(\010Bs\n\"yandex.cloud.api.md" +
+      "b.clickhouse.v1ZMgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/mdb/clickhouse" +
+      "/v1;clickhouseb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -19703,7 +19872,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_Access_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_Access_descriptor,
-        new java.lang.String[] { "DataLens", "WebSql", "Metrika", "Serverless", });
+        new java.lang.String[] { "DataLens", "WebSql", "Metrika", "Serverless", "DataTransfer", "YandexQuery", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_CloudStorage_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_mdb_clickhouse_v1_CloudStorage_fieldAccessorTable = new

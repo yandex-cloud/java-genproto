@@ -2934,6 +2934,31 @@ public final class ApigatewayService {
     com.google.protobuf.ByteString
         getOpenapiSpecBytes();
 
+    /**
+     * <pre>
+     * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+     */
+    boolean hasConnectivity();
+    /**
+     * <pre>
+     * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+     */
+    yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity getConnectivity();
+    /**
+     * <pre>
+     * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+     */
+    yandex.cloud.api.serverless.apigateway.v1.Apigateway.ConnectivityOrBuilder getConnectivityOrBuilder();
+
     public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.CreateApiGatewayRequest.SpecCase getSpecCase();
   }
   /**
@@ -3013,6 +3038,19 @@ public final class ApigatewayService {
               java.lang.String s = input.readStringRequireUtf8();
               specCase_ = 5;
               spec_ = s;
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.Builder subBuilder = null;
+              if (connectivity_ != null) {
+                subBuilder = connectivity_.toBuilder();
+              }
+              connectivity_ = input.readMessage(yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(connectivity_);
+                connectivity_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -3369,6 +3407,39 @@ public final class ApigatewayService {
       }
     }
 
+    public static final int CONNECTIVITY_FIELD_NUMBER = 6;
+    private yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity connectivity_;
+    /**
+     * <pre>
+     * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+     */
+    public boolean hasConnectivity() {
+      return connectivity_ != null;
+    }
+    /**
+     * <pre>
+     * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+     */
+    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity getConnectivity() {
+      return connectivity_ == null ? yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.getDefaultInstance() : connectivity_;
+    }
+    /**
+     * <pre>
+     * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+     */
+    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.ConnectivityOrBuilder getConnectivityOrBuilder() {
+      return getConnectivity();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3401,6 +3472,9 @@ public final class ApigatewayService {
       if (specCase_ == 5) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, spec_);
       }
+      if (connectivity_ != null) {
+        output.writeMessage(6, getConnectivity());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3432,6 +3506,10 @@ public final class ApigatewayService {
       if (specCase_ == 5) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, spec_);
       }
+      if (connectivity_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getConnectivity());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3456,6 +3534,11 @@ public final class ApigatewayService {
           .equals(other.getDescription());
       result = result && internalGetLabels().equals(
           other.internalGetLabels());
+      result = result && (hasConnectivity() == other.hasConnectivity());
+      if (hasConnectivity()) {
+        result = result && getConnectivity()
+            .equals(other.getConnectivity());
+      }
       result = result && getSpecCase().equals(
           other.getSpecCase());
       if (!result) return false;
@@ -3487,6 +3570,10 @@ public final class ApigatewayService {
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      if (hasConnectivity()) {
+        hash = (37 * hash) + CONNECTIVITY_FIELD_NUMBER;
+        hash = (53 * hash) + getConnectivity().hashCode();
       }
       switch (specCase_) {
         case 5:
@@ -3658,6 +3745,12 @@ public final class ApigatewayService {
         description_ = "";
 
         internalGetMutableLabels().clear();
+        if (connectivityBuilder_ == null) {
+          connectivity_ = null;
+        } else {
+          connectivity_ = null;
+          connectivityBuilder_ = null;
+        }
         specCase_ = 0;
         spec_ = null;
         return this;
@@ -3695,6 +3788,11 @@ public final class ApigatewayService {
         result.labels_.makeImmutable();
         if (specCase_ == 5) {
           result.spec_ = spec_;
+        }
+        if (connectivityBuilder_ == null) {
+          result.connectivity_ = connectivity_;
+        } else {
+          result.connectivity_ = connectivityBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         result.specCase_ = specCase_;
@@ -3760,6 +3858,9 @@ public final class ApigatewayService {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (other.hasConnectivity()) {
+          mergeConnectivity(other.getConnectivity());
+        }
         switch (other.getSpecCase()) {
           case OPENAPI_SPEC: {
             specCase_ = 5;
@@ -4343,6 +4444,159 @@ public final class ApigatewayService {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity connectivity_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity, yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.ConnectivityOrBuilder> connectivityBuilder_;
+      /**
+       * <pre>
+       * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+       */
+      public boolean hasConnectivity() {
+        return connectivityBuilder_ != null || connectivity_ != null;
+      }
+      /**
+       * <pre>
+       * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+       */
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity getConnectivity() {
+        if (connectivityBuilder_ == null) {
+          return connectivity_ == null ? yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.getDefaultInstance() : connectivity_;
+        } else {
+          return connectivityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+       */
+      public Builder setConnectivity(yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity value) {
+        if (connectivityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          connectivity_ = value;
+          onChanged();
+        } else {
+          connectivityBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+       */
+      public Builder setConnectivity(
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.Builder builderForValue) {
+        if (connectivityBuilder_ == null) {
+          connectivity_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectivityBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+       */
+      public Builder mergeConnectivity(yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity value) {
+        if (connectivityBuilder_ == null) {
+          if (connectivity_ != null) {
+            connectivity_ =
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.newBuilder(connectivity_).mergeFrom(value).buildPartial();
+          } else {
+            connectivity_ = value;
+          }
+          onChanged();
+        } else {
+          connectivityBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+       */
+      public Builder clearConnectivity() {
+        if (connectivityBuilder_ == null) {
+          connectivity_ = null;
+          onChanged();
+        } else {
+          connectivity_ = null;
+          connectivityBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+       */
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.Builder getConnectivityBuilder() {
+        
+        onChanged();
+        return getConnectivityFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+       */
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.ConnectivityOrBuilder getConnectivityOrBuilder() {
+        if (connectivityBuilder_ != null) {
+          return connectivityBuilder_.getMessageOrBuilder();
+        } else {
+          return connectivity_ == null ?
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.getDefaultInstance() : connectivity_;
+        }
+      }
+      /**
+       * <pre>
+       * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity, yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.ConnectivityOrBuilder> 
+          getConnectivityFieldBuilder() {
+        if (connectivityBuilder_ == null) {
+          connectivityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity, yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.ConnectivityOrBuilder>(
+                  getConnectivity(),
+                  getParentForChildren(),
+                  isClean());
+          connectivity_ = null;
+        }
+        return connectivityBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4565,6 +4819,31 @@ public final class ApigatewayService {
     com.google.protobuf.ByteString
         getOpenapiSpecBytes();
 
+    /**
+     * <pre>
+     * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+     */
+    boolean hasConnectivity();
+    /**
+     * <pre>
+     * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+     */
+    yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity getConnectivity();
+    /**
+     * <pre>
+     * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+     */
+    yandex.cloud.api.serverless.apigateway.v1.Apigateway.ConnectivityOrBuilder getConnectivityOrBuilder();
+
     public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.UpdateApiGatewayRequest.SpecCase getSpecCase();
   }
   /**
@@ -4657,6 +4936,19 @@ public final class ApigatewayService {
               java.lang.String s = input.readStringRequireUtf8();
               specCase_ = 6;
               spec_ = s;
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.Builder subBuilder = null;
+              if (connectivity_ != null) {
+                subBuilder = connectivity_.toBuilder();
+              }
+              connectivity_ = input.readMessage(yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(connectivity_);
+                connectivity_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -5054,6 +5346,39 @@ public final class ApigatewayService {
       }
     }
 
+    public static final int CONNECTIVITY_FIELD_NUMBER = 7;
+    private yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity connectivity_;
+    /**
+     * <pre>
+     * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+     */
+    public boolean hasConnectivity() {
+      return connectivity_ != null;
+    }
+    /**
+     * <pre>
+     * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+     */
+    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity getConnectivity() {
+      return connectivity_ == null ? yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.getDefaultInstance() : connectivity_;
+    }
+    /**
+     * <pre>
+     * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+     */
+    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.ConnectivityOrBuilder getConnectivityOrBuilder() {
+      return getConnectivity();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5088,6 +5413,9 @@ public final class ApigatewayService {
           5);
       if (specCase_ == 6) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, spec_);
+      }
+      if (connectivity_ != null) {
+        output.writeMessage(7, getConnectivity());
       }
       unknownFields.writeTo(output);
     }
@@ -5124,6 +5452,10 @@ public final class ApigatewayService {
       if (specCase_ == 6) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, spec_);
       }
+      if (connectivity_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getConnectivity());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5153,6 +5485,11 @@ public final class ApigatewayService {
           .equals(other.getDescription());
       result = result && internalGetLabels().equals(
           other.internalGetLabels());
+      result = result && (hasConnectivity() == other.hasConnectivity());
+      if (hasConnectivity()) {
+        result = result && getConnectivity()
+            .equals(other.getConnectivity());
+      }
       result = result && getSpecCase().equals(
           other.getSpecCase());
       if (!result) return false;
@@ -5188,6 +5525,10 @@ public final class ApigatewayService {
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      if (hasConnectivity()) {
+        hash = (37 * hash) + CONNECTIVITY_FIELD_NUMBER;
+        hash = (53 * hash) + getConnectivity().hashCode();
       }
       switch (specCase_) {
         case 6:
@@ -5365,6 +5706,12 @@ public final class ApigatewayService {
         description_ = "";
 
         internalGetMutableLabels().clear();
+        if (connectivityBuilder_ == null) {
+          connectivity_ = null;
+        } else {
+          connectivity_ = null;
+          connectivityBuilder_ = null;
+        }
         specCase_ = 0;
         spec_ = null;
         return this;
@@ -5407,6 +5754,11 @@ public final class ApigatewayService {
         result.labels_.makeImmutable();
         if (specCase_ == 6) {
           result.spec_ = spec_;
+        }
+        if (connectivityBuilder_ == null) {
+          result.connectivity_ = connectivity_;
+        } else {
+          result.connectivity_ = connectivityBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         result.specCase_ = specCase_;
@@ -5475,6 +5827,9 @@ public final class ApigatewayService {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (other.hasConnectivity()) {
+          mergeConnectivity(other.getConnectivity());
+        }
         switch (other.getSpecCase()) {
           case OPENAPI_SPEC: {
             specCase_ = 6;
@@ -6224,6 +6579,159 @@ public final class ApigatewayService {
         spec_ = value;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity connectivity_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity, yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.ConnectivityOrBuilder> connectivityBuilder_;
+      /**
+       * <pre>
+       * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+       */
+      public boolean hasConnectivity() {
+        return connectivityBuilder_ != null || connectivity_ != null;
+      }
+      /**
+       * <pre>
+       * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+       */
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity getConnectivity() {
+        if (connectivityBuilder_ == null) {
+          return connectivity_ == null ? yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.getDefaultInstance() : connectivity_;
+        } else {
+          return connectivityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+       */
+      public Builder setConnectivity(yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity value) {
+        if (connectivityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          connectivity_ = value;
+          onChanged();
+        } else {
+          connectivityBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+       */
+      public Builder setConnectivity(
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.Builder builderForValue) {
+        if (connectivityBuilder_ == null) {
+          connectivity_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectivityBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+       */
+      public Builder mergeConnectivity(yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity value) {
+        if (connectivityBuilder_ == null) {
+          if (connectivity_ != null) {
+            connectivity_ =
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.newBuilder(connectivity_).mergeFrom(value).buildPartial();
+          } else {
+            connectivity_ = value;
+          }
+          onChanged();
+        } else {
+          connectivityBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+       */
+      public Builder clearConnectivity() {
+        if (connectivityBuilder_ == null) {
+          connectivity_ = null;
+          onChanged();
+        } else {
+          connectivity_ = null;
+          connectivityBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+       */
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.Builder getConnectivityBuilder() {
+        
+        onChanged();
+        return getConnectivityFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+       */
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.ConnectivityOrBuilder getConnectivityOrBuilder() {
+        if (connectivityBuilder_ != null) {
+          return connectivityBuilder_.getMessageOrBuilder();
+        } else {
+          return connectivity_ == null ?
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.getDefaultInstance() : connectivity_;
+        }
+      }
+      /**
+       * <pre>
+       * Gateway connectivity. If specified the gateway will be attached to specified network/subnet(s).
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Connectivity connectivity = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity, yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.ConnectivityOrBuilder> 
+          getConnectivityFieldBuilder() {
+        if (connectivityBuilder_ == null) {
+          connectivityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity, yandex.cloud.api.serverless.apigateway.v1.Apigateway.Connectivity.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.ConnectivityOrBuilder>(
+                  getConnectivity(),
+                  getParentForChildren(),
+                  isClean());
+          connectivity_ = null;
+        }
+        return connectivityBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -15551,7 +16059,7 @@ public final class ApigatewayService {
       "\t\"z\n\026ListApiGatewayResponse\022G\n\014api_gatew" +
       "ays\030\001 \003(\01321.yandex.cloud.serverless.apig" +
       "ateway.v1.ApiGateway\022\027\n\017next_page_token\030" +
-      "\002 \001(\t\"\201\003\n\027CreateApiGatewayRequest\022\027\n\tfol" +
+      "\002 \001(\t\"\314\003\n\027CreateApiGatewayRequest\022\027\n\tfol" +
       "der_id\030\001 \001(\tB\004\350\3071\001\0222\n\004name\030\002 \001(\tB$\362\3071 |[" +
       "a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descri" +
       "ption\030\003 \001(\tB\t\212\3101\005<=256\022\243\001\n\006labels\030\004 \003(\0132" +
@@ -15559,111 +16067,115 @@ public final class ApigatewayService {
       "CreateApiGatewayRequest.LabelsEntryBG\202\3101" +
       "\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-" +
       "63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\026\n\014openapi_" +
-      "spec\030\005 \001(\tH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\004spec\022\004\300\3011\001\"\267\003\n\027Up" +
-      "dateApiGatewayRequest\022\034\n\016api_gateway_id\030" +
-      "\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.googl" +
-      "e.protobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 " +
-      "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013desc" +
-      "ription\030\004 \001(\tB\t\212\3101\005<=256\022\243\001\n\006labels\030\005 \003(" +
-      "\0132J.yandex.cloud.serverless.apigateway.v" +
-      "1.UpdateApiGatewayRequest.LabelsEntryBG\202" +
-      "\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\004" +
-      "1-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\026\n\014openap" +
-      "i_spec\030\006 \001(\tH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\004spec\022\004\300\3011\001\"7\n\027D" +
-      "eleteApiGatewayRequest\022\034\n\016api_gateway_id" +
-      "\030\001 \001(\tB\004\350\3071\001\"I\n\020AddDomainRequest\022\034\n\016api_" +
-      "gateway_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tdomain_id\030\002 \001(" +
-      "\tB\004\350\3071\001\"L\n\023RemoveDomainRequest\022\034\n\016api_ga" +
-      "teway_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tdomain_id\030\002 \001(\tB" +
-      "\004\350\3071\001\"2\n\030CreateApiGatewayMetadata\022\026\n\016api" +
-      "_gateway_id\030\001 \001(\t\"2\n\030UpdateApiGatewayMet" +
-      "adata\022\026\n\016api_gateway_id\030\001 \001(\t\"2\n\030DeleteA" +
-      "piGatewayMetadata\022\026\n\016api_gateway_id\030\001 \001(" +
-      "\t\">\n\021AddDomainMetadata\022\026\n\016api_gateway_id" +
-      "\030\001 \001(\t\022\021\n\tdomain_id\030\002 \001(\t\"A\n\024RemoveDomai" +
-      "nMetadata\022\026\n\016api_gateway_id\030\001 \001(\t\022\021\n\tdom" +
-      "ain_id\030\002 \001(\t\"\217\001\n\025ListOperationsRequest\022\034" +
-      "\n\016api_gateway_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_siz" +
-      "e\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB" +
-      "\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"h" +
-      "\n\026ListOperationsResponse\0225\n\noperations\030\001" +
-      " \003(\0132!.yandex.cloud.operation.Operation\022" +
-      "\027\n\017next_page_token\030\002 \001(\t\"\300\001\n\025GetOpenapiS" +
-      "pecRequest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\3071\001" +
-      "\022S\n\006format\030\002 \001(\0162C.yandex.cloud.serverle" +
-      "ss.apigateway.v1.GetOpenapiSpecRequest.F" +
-      "ormat\"4\n\006Format\022\026\n\022FORMAT_UNSPECIFIED\020\000\022" +
-      "\010\n\004JSON\020\001\022\010\n\004YAML\020\002\"F\n\026GetOpenapiSpecRes" +
-      "ponse\022\026\n\016api_gateway_id\030\001 \001(\t\022\024\n\014openapi" +
-      "_spec\030\002 \001(\t2\332\023\n\021ApiGatewayService\022\253\001\n\003Ge" +
-      "t\022;.yandex.cloud.serverless.apigateway.v" +
-      "1.GetApiGatewayRequest\0321.yandex.cloud.se" +
-      "rverless.apigateway.v1.ApiGateway\"4\202\323\344\223\002" +
-      ".\022,/apigateways/v1/apigateways/{api_gate" +
-      "way_id}\022\250\001\n\004List\022<.yandex.cloud.serverle" +
-      "ss.apigateway.v1.ListApiGatewayRequest\032=" +
-      ".yandex.cloud.serverless.apigateway.v1.L" +
-      "istApiGatewayResponse\"#\202\323\344\223\002\035\022\033/apigatew" +
-      "ays/v1/apigateways\022\275\001\n\006Create\022>.yandex.c" +
-      "loud.serverless.apigateway.v1.CreateApiG" +
-      "atewayRequest\032!.yandex.cloud.operation.O" +
-      "peration\"P\202\323\344\223\002 \"\033/apigateways/v1/apigat" +
-      "eways:\001*\262\322*&\n\030CreateApiGatewayMetadata\022\n" +
-      "ApiGateway\022\316\001\n\006Update\022>.yandex.cloud.ser" +
-      "verless.apigateway.v1.UpdateApiGatewayRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"a\202\323\344\223\00212,/apigateways/v1/apigateways/{a" +
-      "pi_gateway_id}:\001*\262\322*&\n\030UpdateApiGatewayM" +
-      "etadata\022\nApiGateway\022\326\001\n\006Delete\022>.yandex." +
-      "cloud.serverless.apigateway.v1.DeleteApi" +
-      "GatewayRequest\032!.yandex.cloud.operation." +
-      "Operation\"i\202\323\344\223\002.*,/apigateways/v1/apiga" +
-      "teways/{api_gateway_id}\262\322*1\n\030DeleteApiGa" +
-      "tewayMetadata\022\025google.protobuf.Empty\022\330\001\n" +
-      "\tAddDomain\0227.yandex.cloud.serverless.api" +
-      "gateway.v1.AddDomainRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"o\202\323\344\223\002;\"6/apigate" +
-      "ways/v1/apigateways/{api_gateway_id}:add" +
-      "Domain:\001*\262\322**\n\021AddDomainMetadata\022\025google" +
-      ".protobuf.Empty\022\344\001\n\014RemoveDomain\022:.yande" +
-      "x.cloud.serverless.apigateway.v1.RemoveD" +
-      "omainRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"u\202\323\344\223\002>\"9/apigateways/v1/apigate" +
-      "ways/{api_gateway_id}:removeDomain:\001*\262\322*" +
-      "-\n\024RemoveDomainMetadata\022\025google.protobuf" +
-      ".Empty\022\310\001\n\016GetOpenapiSpec\022<.yandex.cloud" +
-      ".serverless.apigateway.v1.GetOpenapiSpec" +
-      "Request\032=.yandex.cloud.serverless.apigat" +
-      "eway.v1.GetOpenapiSpecResponse\"9\202\323\344\223\0023\0221" +
+      "spec\030\005 \001(\tH\000\022I\n\014connectivity\030\006 \001(\01323.yan" +
+      "dex.cloud.serverless.apigateway.v1.Conne" +
+      "ctivity\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001B\014\n\004spec\022\004\300\3011\001\"\202\004\n\027UpdateA" +
+      "piGatewayRequest\022\034\n\016api_gateway_id\030\001 \001(\t" +
+      "B\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.google.pro" +
+      "tobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z" +
+      "]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descripti" +
+      "on\030\004 \001(\tB\t\212\3101\005<=256\022\243\001\n\006labels\030\005 \003(\0132J.y" +
+      "andex.cloud.serverless.apigateway.v1.Upd" +
+      "ateApiGatewayRequest.LabelsEntryBG\202\3101\004<=" +
+      "64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262" +
+      "\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\026\n\014openapi_spe" +
+      "c\030\006 \001(\tH\000\022I\n\014connectivity\030\007 \001(\01323.yandex" +
+      ".cloud.serverless.apigateway.v1.Connecti" +
+      "vity\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001B\014\n\004spec\022\004\300\3011\001\"7\n\027DeleteApiGa" +
+      "tewayRequest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\307" +
+      "1\001\"I\n\020AddDomainRequest\022\034\n\016api_gateway_id" +
+      "\030\001 \001(\tB\004\350\3071\001\022\027\n\tdomain_id\030\002 \001(\tB\004\350\3071\001\"L\n" +
+      "\023RemoveDomainRequest\022\034\n\016api_gateway_id\030\001" +
+      " \001(\tB\004\350\3071\001\022\027\n\tdomain_id\030\002 \001(\tB\004\350\3071\001\"2\n\030C" +
+      "reateApiGatewayMetadata\022\026\n\016api_gateway_i" +
+      "d\030\001 \001(\t\"2\n\030UpdateApiGatewayMetadata\022\026\n\016a" +
+      "pi_gateway_id\030\001 \001(\t\"2\n\030DeleteApiGatewayM" +
+      "etadata\022\026\n\016api_gateway_id\030\001 \001(\t\">\n\021AddDo" +
+      "mainMetadata\022\026\n\016api_gateway_id\030\001 \001(\t\022\021\n\t" +
+      "domain_id\030\002 \001(\t\"A\n\024RemoveDomainMetadata\022" +
+      "\026\n\016api_gateway_id\030\001 \001(\t\022\021\n\tdomain_id\030\002 \001" +
+      "(\t\"\217\001\n\025ListOperationsRequest\022\034\n\016api_gate" +
+      "way_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
+      "\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
+      "\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"h\n\026ListOper" +
+      "ationsResponse\0225\n\noperations\030\001 \003(\0132!.yan" +
+      "dex.cloud.operation.Operation\022\027\n\017next_pa" +
+      "ge_token\030\002 \001(\t\"\300\001\n\025GetOpenapiSpecRequest" +
+      "\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\3071\001\022S\n\006format" +
+      "\030\002 \001(\0162C.yandex.cloud.serverless.apigate" +
+      "way.v1.GetOpenapiSpecRequest.Format\"4\n\006F" +
+      "ormat\022\026\n\022FORMAT_UNSPECIFIED\020\000\022\010\n\004JSON\020\001\022" +
+      "\010\n\004YAML\020\002\"F\n\026GetOpenapiSpecResponse\022\026\n\016a" +
+      "pi_gateway_id\030\001 \001(\t\022\024\n\014openapi_spec\030\002 \001(" +
+      "\t2\332\023\n\021ApiGatewayService\022\253\001\n\003Get\022;.yandex" +
+      ".cloud.serverless.apigateway.v1.GetApiGa" +
+      "tewayRequest\0321.yandex.cloud.serverless.a" +
+      "pigateway.v1.ApiGateway\"4\202\323\344\223\002.\022,/apigat" +
+      "eways/v1/apigateways/{api_gateway_id}\022\250\001" +
+      "\n\004List\022<.yandex.cloud.serverless.apigate" +
+      "way.v1.ListApiGatewayRequest\032=.yandex.cl" +
+      "oud.serverless.apigateway.v1.ListApiGate" +
+      "wayResponse\"#\202\323\344\223\002\035\022\033/apigateways/v1/api" +
+      "gateways\022\275\001\n\006Create\022>.yandex.cloud.serve" +
+      "rless.apigateway.v1.CreateApiGatewayRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"P" +
+      "\202\323\344\223\002 \"\033/apigateways/v1/apigateways:\001*\262\322" +
+      "*&\n\030CreateApiGatewayMetadata\022\nApiGateway" +
+      "\022\316\001\n\006Update\022>.yandex.cloud.serverless.ap" +
+      "igateway.v1.UpdateApiGatewayRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"a\202\323\344\223\00212," +
       "/apigateways/v1/apigateways/{api_gateway" +
-      "_id}:spec\022\316\001\n\016ListOperations\022<.yandex.cl" +
-      "oud.serverless.apigateway.v1.ListOperati" +
-      "onsRequest\032=.yandex.cloud.serverless.api" +
-      "gateway.v1.ListOperationsResponse\"?\202\323\344\223\002" +
-      "9\0227/apigateways/v1/apigateways/{api_gate" +
-      "way_id}/operations\022\273\001\n\022ListAccessBinding" +
-      "s\022..yandex.cloud.access.ListAccessBindin" +
-      "gsRequest\032/.yandex.cloud.access.ListAcce" +
-      "ssBindingsResponse\"D\202\323\344\223\002>\022</apigateways" +
-      "/v1/apigateways/{resource_id}:listAccess" +
-      "Bindings\022\353\001\n\021SetAccessBindings\022-.yandex." +
-      "cloud.access.SetAccessBindingsRequest\032!." +
-      "yandex.cloud.operation.Operation\"\203\001\202\323\344\223\002" +
-      "@\";/apigateways/v1/apigateways/{resource" +
-      "_id}:setAccessBindings:\001*\262\322*9\n access.Se" +
-      "tAccessBindingsMetadata\022\025google.protobuf" +
-      ".Empty\022\367\001\n\024UpdateAccessBindings\0220.yandex" +
-      ".cloud.access.UpdateAccessBindingsReques" +
-      "t\032!.yandex.cloud.operation.Operation\"\211\001\202" +
-      "\323\344\223\002C2>/apigateways/v1/apigateways/{reso" +
-      "urce_id}:updateAccessBindings:\001*\262\322*<\n#ac" +
-      "cess.UpdateAccessBindingsMetadata\022\025googl" +
-      "e.protobuf.EmptyB\201\001\n)yandex.cloud.api.se" +
-      "rverless.apigateway.v1ZTgithub.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/serverl" +
-      "ess/apigateway/v1;apigatewayb\006proto3"
+      "_id}:\001*\262\322*&\n\030UpdateApiGatewayMetadata\022\nA" +
+      "piGateway\022\326\001\n\006Delete\022>.yandex.cloud.serv" +
+      "erless.apigateway.v1.DeleteApiGatewayReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "i\202\323\344\223\002.*,/apigateways/v1/apigateways/{ap" +
+      "i_gateway_id}\262\322*1\n\030DeleteApiGatewayMetad" +
+      "ata\022\025google.protobuf.Empty\022\330\001\n\tAddDomain" +
+      "\0227.yandex.cloud.serverless.apigateway.v1" +
+      ".AddDomainRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"o\202\323\344\223\002;\"6/apigateways/v1/ap" +
+      "igateways/{api_gateway_id}:addDomain:\001*\262" +
+      "\322**\n\021AddDomainMetadata\022\025google.protobuf." +
+      "Empty\022\344\001\n\014RemoveDomain\022:.yandex.cloud.se" +
+      "rverless.apigateway.v1.RemoveDomainReque" +
+      "st\032!.yandex.cloud.operation.Operation\"u\202" +
+      "\323\344\223\002>\"9/apigateways/v1/apigateways/{api_" +
+      "gateway_id}:removeDomain:\001*\262\322*-\n\024RemoveD" +
+      "omainMetadata\022\025google.protobuf.Empty\022\310\001\n" +
+      "\016GetOpenapiSpec\022<.yandex.cloud.serverles" +
+      "s.apigateway.v1.GetOpenapiSpecRequest\032=." +
+      "yandex.cloud.serverless.apigateway.v1.Ge" +
+      "tOpenapiSpecResponse\"9\202\323\344\223\0023\0221/apigatewa" +
+      "ys/v1/apigateways/{api_gateway_id}:spec\022" +
+      "\316\001\n\016ListOperations\022<.yandex.cloud.server" +
+      "less.apigateway.v1.ListOperationsRequest" +
+      "\032=.yandex.cloud.serverless.apigateway.v1" +
+      ".ListOperationsResponse\"?\202\323\344\223\0029\0227/apigat" +
+      "eways/v1/apigateways/{api_gateway_id}/op" +
+      "erations\022\273\001\n\022ListAccessBindings\022..yandex" +
+      ".cloud.access.ListAccessBindingsRequest\032" +
+      "/.yandex.cloud.access.ListAccessBindings" +
+      "Response\"D\202\323\344\223\002>\022</apigateways/v1/apigat" +
+      "eways/{resource_id}:listAccessBindings\022\353" +
+      "\001\n\021SetAccessBindings\022-.yandex.cloud.acce" +
+      "ss.SetAccessBindingsRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"\203\001\202\323\344\223\002@\";/apigat" +
+      "eways/v1/apigateways/{resource_id}:setAc" +
+      "cessBindings:\001*\262\322*9\n access.SetAccessBin" +
+      "dingsMetadata\022\025google.protobuf.Empty\022\367\001\n" +
+      "\024UpdateAccessBindings\0220.yandex.cloud.acc" +
+      "ess.UpdateAccessBindingsRequest\032!.yandex" +
+      ".cloud.operation.Operation\"\211\001\202\323\344\223\002C2>/ap" +
+      "igateways/v1/apigateways/{resource_id}:u" +
+      "pdateAccessBindings:\001*\262\322*<\n#access.Updat" +
+      "eAccessBindingsMetadata\022\025google.protobuf" +
+      ".EmptyB\201\001\n)yandex.cloud.api.serverless.a" +
+      "pigateway.v1ZTgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/serverless/apigat" +
+      "eway/v1;apigatewayb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15707,7 +16219,7 @@ public final class ApigatewayService {
     internal_static_yandex_cloud_serverless_apigateway_v1_CreateApiGatewayRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_apigateway_v1_CreateApiGatewayRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "OpenapiSpec", "Spec", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "OpenapiSpec", "Connectivity", "Spec", });
     internal_static_yandex_cloud_serverless_apigateway_v1_CreateApiGatewayRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_apigateway_v1_CreateApiGatewayRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_apigateway_v1_CreateApiGatewayRequest_LabelsEntry_fieldAccessorTable = new
@@ -15719,7 +16231,7 @@ public final class ApigatewayService {
     internal_static_yandex_cloud_serverless_apigateway_v1_UpdateApiGatewayRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_apigateway_v1_UpdateApiGatewayRequest_descriptor,
-        new java.lang.String[] { "ApiGatewayId", "UpdateMask", "Name", "Description", "Labels", "OpenapiSpec", "Spec", });
+        new java.lang.String[] { "ApiGatewayId", "UpdateMask", "Name", "Description", "Labels", "OpenapiSpec", "Connectivity", "Spec", });
     internal_static_yandex_cloud_serverless_apigateway_v1_UpdateApiGatewayRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_apigateway_v1_UpdateApiGatewayRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_apigateway_v1_UpdateApiGatewayRequest_LabelsEntry_fieldAccessorTable = new

@@ -2795,6 +2795,50 @@ public final class FunctionOuterClass {
 
     java.lang.String getNamedServiceAccountsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * Lockbox secrets to be used by the version
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+     */
+    java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret> 
+        getSecretsList();
+    /**
+     * <pre>
+     * Lockbox secrets to be used by the version
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+     */
+    yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret getSecrets(int index);
+    /**
+     * <pre>
+     * Lockbox secrets to be used by the version
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+     */
+    int getSecretsCount();
+    /**
+     * <pre>
+     * Lockbox secrets to be used by the version
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.SecretOrBuilder> 
+        getSecretsOrBuilderList();
+    /**
+     * <pre>
+     * Lockbox secrets to be used by the version
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+     */
+    yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.SecretOrBuilder getSecretsOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -2823,6 +2867,7 @@ public final class FunctionOuterClass {
       status_ = 0;
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       logGroupId_ = "";
+      secrets_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -2989,6 +3034,15 @@ public final class FunctionOuterClass {
                   namedServiceAccounts__.getKey(), namedServiceAccounts__.getValue());
               break;
             }
+            case 154: {
+              if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+                secrets_ = new java.util.ArrayList<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret>();
+                mutable_bitField0_ |= 0x00010000;
+              }
+              secrets_.add(
+                  input.readMessage(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3006,6 +3060,9 @@ public final class FunctionOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
           tags_ = tags_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+          secrets_ = java.util.Collections.unmodifiableList(secrets_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -3862,6 +3919,61 @@ public final class FunctionOuterClass {
       return map.get(key);
     }
 
+    public static final int SECRETS_FIELD_NUMBER = 19;
+    private java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret> secrets_;
+    /**
+     * <pre>
+     * Lockbox secrets to be used by the version
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+     */
+    public java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret> getSecretsList() {
+      return secrets_;
+    }
+    /**
+     * <pre>
+     * Lockbox secrets to be used by the version
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.SecretOrBuilder> 
+        getSecretsOrBuilderList() {
+      return secrets_;
+    }
+    /**
+     * <pre>
+     * Lockbox secrets to be used by the version
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+     */
+    public int getSecretsCount() {
+      return secrets_.size();
+    }
+    /**
+     * <pre>
+     * Lockbox secrets to be used by the version
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+     */
+    public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret getSecrets(int index) {
+      return secrets_.get(index);
+    }
+    /**
+     * <pre>
+     * Lockbox secrets to be used by the version
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+     */
+    public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.SecretOrBuilder getSecretsOrBuilder(
+        int index) {
+      return secrets_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3930,6 +4042,9 @@ public final class FunctionOuterClass {
           internalGetNamedServiceAccounts(),
           NamedServiceAccountsDefaultEntryHolder.defaultEntry,
           18);
+      for (int i = 0; i < secrets_.size(); i++) {
+        output.writeMessage(19, secrets_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4012,6 +4127,10 @@ public final class FunctionOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(18, namedServiceAccounts__);
       }
+      for (int i = 0; i < secrets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, secrets_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4071,6 +4190,8 @@ public final class FunctionOuterClass {
       }
       result = result && internalGetNamedServiceAccounts().equals(
           other.internalGetNamedServiceAccounts());
+      result = result && getSecretsList()
+          .equals(other.getSecretsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -4128,6 +4249,10 @@ public final class FunctionOuterClass {
       if (!internalGetNamedServiceAccounts().getMap().isEmpty()) {
         hash = (37 * hash) + NAMED_SERVICE_ACCOUNTS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetNamedServiceAccounts().hashCode();
+      }
+      if (getSecretsCount() > 0) {
+        hash = (37 * hash) + SECRETS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecretsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4287,6 +4412,7 @@ public final class FunctionOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getSecretsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -4338,6 +4464,12 @@ public final class FunctionOuterClass {
           connectivityBuilder_ = null;
         }
         internalGetMutableNamedServiceAccounts().clear();
+        if (secretsBuilder_ == null) {
+          secrets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00010000);
+        } else {
+          secretsBuilder_.clear();
+        }
         return this;
       }
 
@@ -4404,6 +4536,15 @@ public final class FunctionOuterClass {
         }
         result.namedServiceAccounts_ = internalGetNamedServiceAccounts();
         result.namedServiceAccounts_.makeImmutable();
+        if (secretsBuilder_ == null) {
+          if (((bitField0_ & 0x00010000) == 0x00010000)) {
+            secrets_ = java.util.Collections.unmodifiableList(secrets_);
+            bitField0_ = (bitField0_ & ~0x00010000);
+          }
+          result.secrets_ = secrets_;
+        } else {
+          result.secrets_ = secretsBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4513,6 +4654,32 @@ public final class FunctionOuterClass {
         }
         internalGetMutableNamedServiceAccounts().mergeFrom(
             other.internalGetNamedServiceAccounts());
+        if (secretsBuilder_ == null) {
+          if (!other.secrets_.isEmpty()) {
+            if (secrets_.isEmpty()) {
+              secrets_ = other.secrets_;
+              bitField0_ = (bitField0_ & ~0x00010000);
+            } else {
+              ensureSecretsIsMutable();
+              secrets_.addAll(other.secrets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.secrets_.isEmpty()) {
+            if (secretsBuilder_.isEmpty()) {
+              secretsBuilder_.dispose();
+              secretsBuilder_ = null;
+              secrets_ = other.secrets_;
+              bitField0_ = (bitField0_ & ~0x00010000);
+              secretsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSecretsFieldBuilder() : null;
+            } else {
+              secretsBuilder_.addAllMessages(other.secrets_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -6330,6 +6497,318 @@ public final class FunctionOuterClass {
         internalGetMutableNamedServiceAccounts().getMutableMap()
             .putAll(values);
         return this;
+      }
+
+      private java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret> secrets_ =
+        java.util.Collections.emptyList();
+      private void ensureSecretsIsMutable() {
+        if (!((bitField0_ & 0x00010000) == 0x00010000)) {
+          secrets_ = new java.util.ArrayList<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret>(secrets_);
+          bitField0_ |= 0x00010000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.SecretOrBuilder> secretsBuilder_;
+
+      /**
+       * <pre>
+       * Lockbox secrets to be used by the version
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+       */
+      public java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret> getSecretsList() {
+        if (secretsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(secrets_);
+        } else {
+          return secretsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Lockbox secrets to be used by the version
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+       */
+      public int getSecretsCount() {
+        if (secretsBuilder_ == null) {
+          return secrets_.size();
+        } else {
+          return secretsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Lockbox secrets to be used by the version
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+       */
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret getSecrets(int index) {
+        if (secretsBuilder_ == null) {
+          return secrets_.get(index);
+        } else {
+          return secretsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Lockbox secrets to be used by the version
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+       */
+      public Builder setSecrets(
+          int index, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret value) {
+        if (secretsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSecretsIsMutable();
+          secrets_.set(index, value);
+          onChanged();
+        } else {
+          secretsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Lockbox secrets to be used by the version
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+       */
+      public Builder setSecrets(
+          int index, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.Builder builderForValue) {
+        if (secretsBuilder_ == null) {
+          ensureSecretsIsMutable();
+          secrets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          secretsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Lockbox secrets to be used by the version
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+       */
+      public Builder addSecrets(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret value) {
+        if (secretsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSecretsIsMutable();
+          secrets_.add(value);
+          onChanged();
+        } else {
+          secretsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Lockbox secrets to be used by the version
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+       */
+      public Builder addSecrets(
+          int index, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret value) {
+        if (secretsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSecretsIsMutable();
+          secrets_.add(index, value);
+          onChanged();
+        } else {
+          secretsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Lockbox secrets to be used by the version
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+       */
+      public Builder addSecrets(
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.Builder builderForValue) {
+        if (secretsBuilder_ == null) {
+          ensureSecretsIsMutable();
+          secrets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          secretsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Lockbox secrets to be used by the version
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+       */
+      public Builder addSecrets(
+          int index, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.Builder builderForValue) {
+        if (secretsBuilder_ == null) {
+          ensureSecretsIsMutable();
+          secrets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          secretsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Lockbox secrets to be used by the version
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+       */
+      public Builder addAllSecrets(
+          java.lang.Iterable<? extends yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret> values) {
+        if (secretsBuilder_ == null) {
+          ensureSecretsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, secrets_);
+          onChanged();
+        } else {
+          secretsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Lockbox secrets to be used by the version
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+       */
+      public Builder clearSecrets() {
+        if (secretsBuilder_ == null) {
+          secrets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00010000);
+          onChanged();
+        } else {
+          secretsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Lockbox secrets to be used by the version
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+       */
+      public Builder removeSecrets(int index) {
+        if (secretsBuilder_ == null) {
+          ensureSecretsIsMutable();
+          secrets_.remove(index);
+          onChanged();
+        } else {
+          secretsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Lockbox secrets to be used by the version
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+       */
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.Builder getSecretsBuilder(
+          int index) {
+        return getSecretsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Lockbox secrets to be used by the version
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+       */
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.SecretOrBuilder getSecretsOrBuilder(
+          int index) {
+        if (secretsBuilder_ == null) {
+          return secrets_.get(index);  } else {
+          return secretsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Lockbox secrets to be used by the version
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.SecretOrBuilder> 
+           getSecretsOrBuilderList() {
+        if (secretsBuilder_ != null) {
+          return secretsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(secrets_);
+        }
+      }
+      /**
+       * <pre>
+       * Lockbox secrets to be used by the version
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+       */
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.Builder addSecretsBuilder() {
+        return getSecretsFieldBuilder().addBuilder(
+            yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Lockbox secrets to be used by the version
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+       */
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.Builder addSecretsBuilder(
+          int index) {
+        return getSecretsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Lockbox secrets to be used by the version
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
+       */
+      public java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.Builder> 
+           getSecretsBuilderList() {
+        return getSecretsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.SecretOrBuilder> 
+          getSecretsFieldBuilder() {
+        if (secretsBuilder_ == null) {
+          secretsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.SecretOrBuilder>(
+                  secrets_,
+                  ((bitField0_ & 0x00010000) == 0x00010000),
+                  getParentForChildren(),
+                  isClean());
+          secrets_ = null;
+        }
+        return secretsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10245,6 +10724,1216 @@ public final class FunctionOuterClass {
 
   }
 
+  public interface SecretOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.functions.v1.Secret)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of lockbox secret
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * ID of lockbox secret
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * ID of secret version
+     * </pre>
+     *
+     * <code>string version_id = 2;</code>
+     */
+    java.lang.String getVersionId();
+    /**
+     * <pre>
+     * ID of secret version
+     * </pre>
+     *
+     * <code>string version_id = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getVersionIdBytes();
+
+    /**
+     * <pre>
+     * Key in secret's payload, which value to be delivered into function environment
+     * </pre>
+     *
+     * <code>string key = 3;</code>
+     */
+    java.lang.String getKey();
+    /**
+     * <pre>
+     * Key in secret's payload, which value to be delivered into function environment
+     * </pre>
+     *
+     * <code>string key = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <pre>
+     * environment variable in which secret's value to be delivered
+     * </pre>
+     *
+     * <code>string environment_variable = 4;</code>
+     */
+    java.lang.String getEnvironmentVariable();
+    /**
+     * <pre>
+     * environment variable in which secret's value to be delivered
+     * </pre>
+     *
+     * <code>string environment_variable = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getEnvironmentVariableBytes();
+
+    public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.ReferenceCase getReferenceCase();
+  }
+  /**
+   * <pre>
+   * Secret for serverless function
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.serverless.functions.v1.Secret}
+   */
+  public  static final class Secret extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.Secret)
+      SecretOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Secret.newBuilder() to construct.
+    private Secret(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Secret() {
+      id_ = "";
+      versionId_ = "";
+      key_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Secret(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              versionId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              key_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              referenceCase_ = 4;
+              reference_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Secret_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Secret_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.class, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.Builder.class);
+    }
+
+    private int referenceCase_ = 0;
+    private java.lang.Object reference_;
+    public enum ReferenceCase
+        implements com.google.protobuf.Internal.EnumLite {
+      ENVIRONMENT_VARIABLE(4),
+      REFERENCE_NOT_SET(0);
+      private final int value;
+      private ReferenceCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ReferenceCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ReferenceCase forNumber(int value) {
+        switch (value) {
+          case 4: return ENVIRONMENT_VARIABLE;
+          case 0: return REFERENCE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ReferenceCase
+    getReferenceCase() {
+      return ReferenceCase.forNumber(
+          referenceCase_);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * ID of lockbox secret
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of lockbox secret
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VERSION_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object versionId_;
+    /**
+     * <pre>
+     * ID of secret version
+     * </pre>
+     *
+     * <code>string version_id = 2;</code>
+     */
+    public java.lang.String getVersionId() {
+      java.lang.Object ref = versionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        versionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of secret version
+     * </pre>
+     *
+     * <code>string version_id = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getVersionIdBytes() {
+      java.lang.Object ref = versionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        versionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KEY_FIELD_NUMBER = 3;
+    private volatile java.lang.Object key_;
+    /**
+     * <pre>
+     * Key in secret's payload, which value to be delivered into function environment
+     * </pre>
+     *
+     * <code>string key = 3;</code>
+     */
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Key in secret's payload, which value to be delivered into function environment
+     * </pre>
+     *
+     * <code>string key = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENVIRONMENT_VARIABLE_FIELD_NUMBER = 4;
+    /**
+     * <pre>
+     * environment variable in which secret's value to be delivered
+     * </pre>
+     *
+     * <code>string environment_variable = 4;</code>
+     */
+    public java.lang.String getEnvironmentVariable() {
+      java.lang.Object ref = "";
+      if (referenceCase_ == 4) {
+        ref = reference_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (referenceCase_ == 4) {
+          reference_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * environment variable in which secret's value to be delivered
+     * </pre>
+     *
+     * <code>string environment_variable = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getEnvironmentVariableBytes() {
+      java.lang.Object ref = "";
+      if (referenceCase_ == 4) {
+        ref = reference_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (referenceCase_ == 4) {
+          reference_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!getVersionIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, versionId_);
+      }
+      if (!getKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, key_);
+      }
+      if (referenceCase_ == 4) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, reference_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!getVersionIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, versionId_);
+      }
+      if (!getKeyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, key_);
+      }
+      if (referenceCase_ == 4) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, reference_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret other = (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret) obj;
+
+      boolean result = true;
+      result = result && getId()
+          .equals(other.getId());
+      result = result && getVersionId()
+          .equals(other.getVersionId());
+      result = result && getKey()
+          .equals(other.getKey());
+      result = result && getReferenceCase().equals(
+          other.getReferenceCase());
+      if (!result) return false;
+      switch (referenceCase_) {
+        case 4:
+          result = result && getEnvironmentVariable()
+              .equals(other.getEnvironmentVariable());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + VERSION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getVersionId().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      switch (referenceCase_) {
+        case 4:
+          hash = (37 * hash) + ENVIRONMENT_VARIABLE_FIELD_NUMBER;
+          hash = (53 * hash) + getEnvironmentVariable().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Secret for serverless function
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.serverless.functions.v1.Secret}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.functions.v1.Secret)
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.SecretOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Secret_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Secret_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.class, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        versionId_ = "";
+
+        key_ = "";
+
+        referenceCase_ = 0;
+        reference_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Secret_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret build() {
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret buildPartial() {
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret result = new yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret(this);
+        result.id_ = id_;
+        result.versionId_ = versionId_;
+        result.key_ = key_;
+        if (referenceCase_ == 4) {
+          result.reference_ = reference_;
+        }
+        result.referenceCase_ = referenceCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret) {
+          return mergeFrom((yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret other) {
+        if (other == yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getVersionId().isEmpty()) {
+          versionId_ = other.versionId_;
+          onChanged();
+        }
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          onChanged();
+        }
+        switch (other.getReferenceCase()) {
+          case ENVIRONMENT_VARIABLE: {
+            referenceCase_ = 4;
+            reference_ = other.reference_;
+            onChanged();
+            break;
+          }
+          case REFERENCE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int referenceCase_ = 0;
+      private java.lang.Object reference_;
+      public ReferenceCase
+          getReferenceCase() {
+        return ReferenceCase.forNumber(
+            referenceCase_);
+      }
+
+      public Builder clearReference() {
+        referenceCase_ = 0;
+        reference_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * ID of lockbox secret
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of lockbox secret
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of lockbox secret
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of lockbox secret
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of lockbox secret
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object versionId_ = "";
+      /**
+       * <pre>
+       * ID of secret version
+       * </pre>
+       *
+       * <code>string version_id = 2;</code>
+       */
+      public java.lang.String getVersionId() {
+        java.lang.Object ref = versionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          versionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of secret version
+       * </pre>
+       *
+       * <code>string version_id = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getVersionIdBytes() {
+        java.lang.Object ref = versionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          versionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of secret version
+       * </pre>
+       *
+       * <code>string version_id = 2;</code>
+       */
+      public Builder setVersionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        versionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of secret version
+       * </pre>
+       *
+       * <code>string version_id = 2;</code>
+       */
+      public Builder clearVersionId() {
+        
+        versionId_ = getDefaultInstance().getVersionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of secret version
+       * </pre>
+       *
+       * <code>string version_id = 2;</code>
+       */
+      public Builder setVersionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        versionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object key_ = "";
+      /**
+       * <pre>
+       * Key in secret's payload, which value to be delivered into function environment
+       * </pre>
+       *
+       * <code>string key = 3;</code>
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Key in secret's payload, which value to be delivered into function environment
+       * </pre>
+       *
+       * <code>string key = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Key in secret's payload, which value to be delivered into function environment
+       * </pre>
+       *
+       * <code>string key = 3;</code>
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        key_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Key in secret's payload, which value to be delivered into function environment
+       * </pre>
+       *
+       * <code>string key = 3;</code>
+       */
+      public Builder clearKey() {
+        
+        key_ = getDefaultInstance().getKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Key in secret's payload, which value to be delivered into function environment
+       * </pre>
+       *
+       * <code>string key = 3;</code>
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        key_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * environment variable in which secret's value to be delivered
+       * </pre>
+       *
+       * <code>string environment_variable = 4;</code>
+       */
+      public java.lang.String getEnvironmentVariable() {
+        java.lang.Object ref = "";
+        if (referenceCase_ == 4) {
+          ref = reference_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (referenceCase_ == 4) {
+            reference_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * environment variable in which secret's value to be delivered
+       * </pre>
+       *
+       * <code>string environment_variable = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getEnvironmentVariableBytes() {
+        java.lang.Object ref = "";
+        if (referenceCase_ == 4) {
+          ref = reference_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (referenceCase_ == 4) {
+            reference_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * environment variable in which secret's value to be delivered
+       * </pre>
+       *
+       * <code>string environment_variable = 4;</code>
+       */
+      public Builder setEnvironmentVariable(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  referenceCase_ = 4;
+        reference_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * environment variable in which secret's value to be delivered
+       * </pre>
+       *
+       * <code>string environment_variable = 4;</code>
+       */
+      public Builder clearEnvironmentVariable() {
+        if (referenceCase_ == 4) {
+          referenceCase_ = 0;
+          reference_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * environment variable in which secret's value to be delivered
+       * </pre>
+       *
+       * <code>string environment_variable = 4;</code>
+       */
+      public Builder setEnvironmentVariableBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        referenceCase_ = 4;
+        reference_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.functions.v1.Secret)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.functions.v1.Secret)
+    private static final yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret();
+    }
+
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Secret>
+        PARSER = new com.google.protobuf.AbstractParser<Secret>() {
+      @java.lang.Override
+      public Secret parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Secret(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Secret> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Secret> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_functions_v1_Function_descriptor;
   private static final 
@@ -10290,6 +11979,11 @@ public final class FunctionOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_functions_v1_ScalingPolicy_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_functions_v1_Secret_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_functions_v1_Secret_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -10315,7 +12009,7 @@ public final class FunctionOuterClass {
       ".v1.Function.Status\032-\n\013LabelsEntry\022\013\n\003ke" +
       "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"S\n\006Status\022\026\n\022" +
       "STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006AC" +
-      "TIVE\020\002\022\014\n\010DELETING\020\003\022\t\n\005ERROR\020\004\"\350\006\n\007Vers" +
+      "TIVE\020\002\022\014\n\010DELETING\020\003\022\t\n\005ERROR\020\004\"\247\007\n\007Vers" +
       "ion\022\n\n\002id\030\001 \001(\t\022\023\n\013function_id\030\002 \001(\t\022\036\n\013" +
       "description\030\003 \001(\tB\t\212\3101\0050-256\022.\n\ncreated_" +
       "at\030\005 \001(\0132\032.google.protobuf.Timestamp\022\017\n\007" +
@@ -10333,25 +12027,30 @@ public final class FunctionOuterClass {
       "ss.functions.v1.Connectivity\022g\n\026named_se" +
       "rvice_accounts\030\022 \003(\0132G.yandex.cloud.serv" +
       "erless.functions.v1.Version.NamedService" +
-      "AccountsEntry\0322\n\020EnvironmentEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032;\n\031NamedServic" +
-      "eAccountsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\":\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000" +
-      "\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\"5\n\tResources\022" +
-      "(\n\006memory\030\001 \001(\003B\030\372\3071\024134217728-214748364" +
-      "8\"O\n\007Package\022\031\n\013bucket_name\030\001 \001(\tB\004\350\3071\001\022" +
-      "\031\n\013object_name\030\002 \001(\tB\004\350\3071\001\022\016\n\006sha256\030\003 \001" +
-      "(\t\"5\n\014Connectivity\022\022\n\nnetwork_id\030\001 \001(\t\022\021" +
-      "\n\tsubnet_id\030\002 \003(\t\"\362\001\n\rScalingPolicy\022\023\n\013f" +
-      "unction_id\030\001 \001(\t\022\013\n\003tag\030\002 \001(\t\022.\n\ncreated" +
-      "_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022/\n" +
-      "\013modified_at\030\004 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\022#\n\033provisioned_instances_count\030\006 " +
-      "\001(\003\022\034\n\024zone_instances_limit\030\007 \001(\003\022\033\n\023zon" +
-      "e_requests_limit\030\010 \001(\003B~\n(yandex.cloud.a" +
-      "pi.serverless.functions.v1ZRgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/ser" +
-      "verless/functions/v1;functionsb\006proto3"
+      "AccountsEntry\022=\n\007secrets\030\023 \003(\0132,.yandex." +
+      "cloud.serverless.functions.v1.Secret\0322\n\020" +
+      "EnvironmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\032;\n\031NamedServiceAccountsEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\":\n\006Status\022" +
+      "\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n" +
+      "\006ACTIVE\020\002\"5\n\tResources\022(\n\006memory\030\001 \001(\003B\030" +
+      "\372\3071\024134217728-2147483648\"O\n\007Package\022\031\n\013b" +
+      "ucket_name\030\001 \001(\tB\004\350\3071\001\022\031\n\013object_name\030\002 " +
+      "\001(\tB\004\350\3071\001\022\016\n\006sha256\030\003 \001(\t\"5\n\014Connectivit" +
+      "y\022\022\n\nnetwork_id\030\001 \001(\t\022\021\n\tsubnet_id\030\002 \003(\t" +
+      "\"\362\001\n\rScalingPolicy\022\023\n\013function_id\030\001 \001(\t\022" +
+      "\013\n\003tag\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\022/\n\013modified_at\030\004 \001(" +
+      "\0132\032.google.protobuf.Timestamp\022#\n\033provisi" +
+      "oned_instances_count\030\006 \001(\003\022\034\n\024zone_insta" +
+      "nces_limit\030\007 \001(\003\022\033\n\023zone_requests_limit\030" +
+      "\010 \001(\003\"b\n\006Secret\022\n\n\002id\030\001 \001(\t\022\022\n\nversion_i" +
+      "d\030\002 \001(\t\022\013\n\003key\030\003 \001(\t\022\036\n\024environment_vari" +
+      "able\030\004 \001(\tH\000B\013\n\treferenceB~\n(yandex.clou" +
+      "d.api.serverless.functions.v1ZRgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "serverless/functions/v1;functionsb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10385,7 +12084,7 @@ public final class FunctionOuterClass {
     internal_static_yandex_cloud_serverless_functions_v1_Version_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_Version_descriptor,
-        new java.lang.String[] { "Id", "FunctionId", "Description", "CreatedAt", "Runtime", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "ImageSize", "Status", "Tags", "LogGroupId", "Environment", "Connectivity", "NamedServiceAccounts", });
+        new java.lang.String[] { "Id", "FunctionId", "Description", "CreatedAt", "Runtime", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "ImageSize", "Status", "Tags", "LogGroupId", "Environment", "Connectivity", "NamedServiceAccounts", "Secrets", });
     internal_static_yandex_cloud_serverless_functions_v1_Version_EnvironmentEntry_descriptor =
       internal_static_yandex_cloud_serverless_functions_v1_Version_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_functions_v1_Version_EnvironmentEntry_fieldAccessorTable = new
@@ -10422,6 +12121,12 @@ public final class FunctionOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_ScalingPolicy_descriptor,
         new java.lang.String[] { "FunctionId", "Tag", "CreatedAt", "ModifiedAt", "ProvisionedInstancesCount", "ZoneInstancesLimit", "ZoneRequestsLimit", });
+    internal_static_yandex_cloud_serverless_functions_v1_Secret_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_serverless_functions_v1_Secret_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_functions_v1_Secret_descriptor,
+        new java.lang.String[] { "Id", "VersionId", "Key", "EnvironmentVariable", "Reference", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

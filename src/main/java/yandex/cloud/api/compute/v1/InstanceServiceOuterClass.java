@@ -45430,6 +45430,1697 @@ public final class InstanceServiceOuterClass {
 
   }
 
+  public interface MoveInstanceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.MoveInstanceRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the instance that is being moved.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getInstanceId();
+    /**
+     * <pre>
+     * ID of the instance that is being moved.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getInstanceIdBytes();
+
+    /**
+     * <pre>
+     * ID of the destination folder.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getDestinationFolderId();
+    /**
+     * <pre>
+     * ID of the destination folder.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getDestinationFolderIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.MoveInstanceRequest}
+   */
+  public  static final class MoveInstanceRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.MoveInstanceRequest)
+      MoveInstanceRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MoveInstanceRequest.newBuilder() to construct.
+    private MoveInstanceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MoveInstanceRequest() {
+      instanceId_ = "";
+      destinationFolderId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MoveInstanceRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              destinationFolderId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_MoveInstanceRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_MoveInstanceRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest.Builder.class);
+    }
+
+    public static final int INSTANCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceId_;
+    /**
+     * <pre>
+     * ID of the instance that is being moved.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getInstanceId() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the instance that is being moved.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getInstanceIdBytes() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESTINATION_FOLDER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object destinationFolderId_;
+    /**
+     * <pre>
+     * ID of the destination folder.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getDestinationFolderId() {
+      java.lang.Object ref = destinationFolderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destinationFolderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the destination folder.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getDestinationFolderIdBytes() {
+      java.lang.Object ref = destinationFolderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destinationFolderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getInstanceIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceId_);
+      }
+      if (!getDestinationFolderIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, destinationFolderId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getInstanceIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceId_);
+      }
+      if (!getDestinationFolderIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, destinationFolderId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest other = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest) obj;
+
+      boolean result = true;
+      result = result && getInstanceId()
+          .equals(other.getInstanceId());
+      result = result && getDestinationFolderId()
+          .equals(other.getDestinationFolderId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceId().hashCode();
+      hash = (37 * hash) + DESTINATION_FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDestinationFolderId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.MoveInstanceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.MoveInstanceRequest)
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_MoveInstanceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_MoveInstanceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceId_ = "";
+
+        destinationFolderId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_MoveInstanceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest build() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest buildPartial() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest result = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest(this);
+        result.instanceId_ = instanceId_;
+        result.destinationFolderId_ = destinationFolderId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest) {
+          return mergeFrom((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest other) {
+        if (other == yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest.getDefaultInstance()) return this;
+        if (!other.getInstanceId().isEmpty()) {
+          instanceId_ = other.instanceId_;
+          onChanged();
+        }
+        if (!other.getDestinationFolderId().isEmpty()) {
+          destinationFolderId_ = other.destinationFolderId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object instanceId_ = "";
+      /**
+       * <pre>
+       * ID of the instance that is being moved.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getInstanceId() {
+        java.lang.Object ref = instanceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance that is being moved.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getInstanceIdBytes() {
+        java.lang.Object ref = instanceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance that is being moved.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setInstanceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance that is being moved.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearInstanceId() {
+        
+        instanceId_ = getDefaultInstance().getInstanceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance that is being moved.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setInstanceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object destinationFolderId_ = "";
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getDestinationFolderId() {
+        java.lang.Object ref = destinationFolderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          destinationFolderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getDestinationFolderIdBytes() {
+        java.lang.Object ref = destinationFolderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          destinationFolderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setDestinationFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        destinationFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearDestinationFolderId() {
+        
+        destinationFolderId_ = getDefaultInstance().getDestinationFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setDestinationFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        destinationFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.MoveInstanceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.MoveInstanceRequest)
+    private static final yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest();
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MoveInstanceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MoveInstanceRequest>() {
+      @java.lang.Override
+      public MoveInstanceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MoveInstanceRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MoveInstanceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MoveInstanceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MoveInstanceMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.MoveInstanceMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the instance that is being moved.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     */
+    java.lang.String getInstanceId();
+    /**
+     * <pre>
+     * ID of the instance that is being moved.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getInstanceIdBytes();
+
+    /**
+     * <pre>
+     * ID of the source folder.
+     * </pre>
+     *
+     * <code>string source_folder_id = 2;</code>
+     */
+    java.lang.String getSourceFolderId();
+    /**
+     * <pre>
+     * ID of the source folder.
+     * </pre>
+     *
+     * <code>string source_folder_id = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getSourceFolderIdBytes();
+
+    /**
+     * <pre>
+     * ID of the destination folder.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 3;</code>
+     */
+    java.lang.String getDestinationFolderId();
+    /**
+     * <pre>
+     * ID of the destination folder.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getDestinationFolderIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.MoveInstanceMetadata}
+   */
+  public  static final class MoveInstanceMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.MoveInstanceMetadata)
+      MoveInstanceMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MoveInstanceMetadata.newBuilder() to construct.
+    private MoveInstanceMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MoveInstanceMetadata() {
+      instanceId_ = "";
+      sourceFolderId_ = "";
+      destinationFolderId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MoveInstanceMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              sourceFolderId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              destinationFolderId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_MoveInstanceMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_MoveInstanceMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata.Builder.class);
+    }
+
+    public static final int INSTANCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceId_;
+    /**
+     * <pre>
+     * ID of the instance that is being moved.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     */
+    public java.lang.String getInstanceId() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the instance that is being moved.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getInstanceIdBytes() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SOURCE_FOLDER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object sourceFolderId_;
+    /**
+     * <pre>
+     * ID of the source folder.
+     * </pre>
+     *
+     * <code>string source_folder_id = 2;</code>
+     */
+    public java.lang.String getSourceFolderId() {
+      java.lang.Object ref = sourceFolderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sourceFolderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the source folder.
+     * </pre>
+     *
+     * <code>string source_folder_id = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSourceFolderIdBytes() {
+      java.lang.Object ref = sourceFolderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sourceFolderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESTINATION_FOLDER_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object destinationFolderId_;
+    /**
+     * <pre>
+     * ID of the destination folder.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 3;</code>
+     */
+    public java.lang.String getDestinationFolderId() {
+      java.lang.Object ref = destinationFolderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destinationFolderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the destination folder.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDestinationFolderIdBytes() {
+      java.lang.Object ref = destinationFolderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destinationFolderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getInstanceIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceId_);
+      }
+      if (!getSourceFolderIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sourceFolderId_);
+      }
+      if (!getDestinationFolderIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, destinationFolderId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getInstanceIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceId_);
+      }
+      if (!getSourceFolderIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sourceFolderId_);
+      }
+      if (!getDestinationFolderIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, destinationFolderId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata other = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata) obj;
+
+      boolean result = true;
+      result = result && getInstanceId()
+          .equals(other.getInstanceId());
+      result = result && getSourceFolderId()
+          .equals(other.getSourceFolderId());
+      result = result && getDestinationFolderId()
+          .equals(other.getDestinationFolderId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceId().hashCode();
+      hash = (37 * hash) + SOURCE_FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSourceFolderId().hashCode();
+      hash = (37 * hash) + DESTINATION_FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDestinationFolderId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.MoveInstanceMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.MoveInstanceMetadata)
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_MoveInstanceMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_MoveInstanceMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceId_ = "";
+
+        sourceFolderId_ = "";
+
+        destinationFolderId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_MoveInstanceMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata build() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata buildPartial() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata result = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata(this);
+        result.instanceId_ = instanceId_;
+        result.sourceFolderId_ = sourceFolderId_;
+        result.destinationFolderId_ = destinationFolderId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata) {
+          return mergeFrom((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata other) {
+        if (other == yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata.getDefaultInstance()) return this;
+        if (!other.getInstanceId().isEmpty()) {
+          instanceId_ = other.instanceId_;
+          onChanged();
+        }
+        if (!other.getSourceFolderId().isEmpty()) {
+          sourceFolderId_ = other.sourceFolderId_;
+          onChanged();
+        }
+        if (!other.getDestinationFolderId().isEmpty()) {
+          destinationFolderId_ = other.destinationFolderId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object instanceId_ = "";
+      /**
+       * <pre>
+       * ID of the instance that is being moved.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       */
+      public java.lang.String getInstanceId() {
+        java.lang.Object ref = instanceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance that is being moved.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getInstanceIdBytes() {
+        java.lang.Object ref = instanceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance that is being moved.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       */
+      public Builder setInstanceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance that is being moved.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       */
+      public Builder clearInstanceId() {
+        
+        instanceId_ = getDefaultInstance().getInstanceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance that is being moved.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       */
+      public Builder setInstanceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sourceFolderId_ = "";
+      /**
+       * <pre>
+       * ID of the source folder.
+       * </pre>
+       *
+       * <code>string source_folder_id = 2;</code>
+       */
+      public java.lang.String getSourceFolderId() {
+        java.lang.Object ref = sourceFolderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sourceFolderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the source folder.
+       * </pre>
+       *
+       * <code>string source_folder_id = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSourceFolderIdBytes() {
+        java.lang.Object ref = sourceFolderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sourceFolderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the source folder.
+       * </pre>
+       *
+       * <code>string source_folder_id = 2;</code>
+       */
+      public Builder setSourceFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sourceFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the source folder.
+       * </pre>
+       *
+       * <code>string source_folder_id = 2;</code>
+       */
+      public Builder clearSourceFolderId() {
+        
+        sourceFolderId_ = getDefaultInstance().getSourceFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the source folder.
+       * </pre>
+       *
+       * <code>string source_folder_id = 2;</code>
+       */
+      public Builder setSourceFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sourceFolderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object destinationFolderId_ = "";
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 3;</code>
+       */
+      public java.lang.String getDestinationFolderId() {
+        java.lang.Object ref = destinationFolderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          destinationFolderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDestinationFolderIdBytes() {
+        java.lang.Object ref = destinationFolderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          destinationFolderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 3;</code>
+       */
+      public Builder setDestinationFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        destinationFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 3;</code>
+       */
+      public Builder clearDestinationFolderId() {
+        
+        destinationFolderId_ = getDefaultInstance().getDestinationFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 3;</code>
+       */
+      public Builder setDestinationFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        destinationFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.MoveInstanceMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.MoveInstanceMetadata)
+    private static final yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata();
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MoveInstanceMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<MoveInstanceMetadata>() {
+      @java.lang.Override
+      public MoveInstanceMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MoveInstanceMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MoveInstanceMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MoveInstanceMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_GetInstanceRequest_descriptor;
   private static final 
@@ -45670,6 +47361,16 @@ public final class InstanceServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_DnsRecordSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_MoveInstanceRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_MoveInstanceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_MoveInstanceMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_MoveInstanceMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -45865,100 +47566,109 @@ public final class InstanceServiceOuterClass {
       "ndex.cloud.compute.v1.DnsRecordSpec\"_\n\rD" +
       "nsRecordSpec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_" +
       "zone_id\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022" +
-      "\013\n\003ptr\030\004 \001(\010*#\n\014InstanceView\022\t\n\005BASIC\020\000\022" +
-      "\010\n\004FULL\020\0012\360\033\n\017InstanceService\022\202\001\n\003Get\022+." +
-      "yandex.cloud.compute.v1.GetInstanceReque" +
-      "st\032!.yandex.cloud.compute.v1.Instance\"+\202" +
-      "\323\344\223\002%\022#/compute/v1/instances/{instance_i" +
-      "d}\022\204\001\n\004List\022-.yandex.cloud.compute.v1.Li" +
-      "stInstancesRequest\032..yandex.cloud.comput" +
-      "e.v1.ListInstancesResponse\"\035\202\323\344\223\002\027\022\025/com" +
-      "pute/v1/instances\022\243\001\n\006Create\022..yandex.cl" +
-      "oud.compute.v1.CreateInstanceRequest\032!.y" +
-      "andex.cloud.operation.Operation\"F\202\323\344\223\002\032\"" +
-      "\025/compute/v1/instances:\001*\262\322*\"\n\026CreateIns" +
-      "tanceMetadata\022\010Instance\022\261\001\n\006Update\022..yan" +
-      "dex.cloud.compute.v1.UpdateInstanceReque" +
-      "st\032!.yandex.cloud.operation.Operation\"T\202" +
-      "\323\344\223\002(2#/compute/v1/instances/{instance_i" +
-      "d}:\001*\262\322*\"\n\026UpdateInstanceMetadata\022\010Insta" +
-      "nce\022\273\001\n\006Delete\022..yandex.cloud.compute.v1" +
-      ".DeleteInstanceRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"^\202\323\344\223\002%*#/compute/v1/i" +
-      "nstances/{instance_id}\262\322*/\n\026DeleteInstan" +
-      "ceMetadata\022\025google.protobuf.Empty\022\330\001\n\016Up" +
-      "dateMetadata\0226.yandex.cloud.compute.v1.U" +
-      "pdateInstanceMetadataRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"k\202\323\344\223\0027\"2/comput" +
-      "e/v1/instances/{instance_id}/updateMetad" +
-      "ata:\001*\262\322**\n\036UpdateInstanceMetadataMetada" +
-      "ta\022\010Instance\022\316\001\n\023GetSerialPortOutput\022;.y" +
-      "andex.cloud.compute.v1.GetInstanceSerial" +
-      "PortOutputRequest\032<.yandex.cloud.compute" +
-      ".v1.GetInstanceSerialPortOutputResponse\"" +
-      "<\202\323\344\223\0026\0224/compute/v1/instances/{instance" +
-      "_id}:serialPortOutput\022\272\001\n\004Stop\022,.yandex." +
-      "cloud.compute.v1.StopInstanceRequest\032!.y" +
-      "andex.cloud.operation.Operation\"a\202\323\344\223\002*\"" +
-      "(/compute/v1/instances/{instance_id}:sto" +
-      "p\262\322*-\n\024StopInstanceMetadata\022\025google.prot" +
-      "obuf.Empty\022\261\001\n\005Start\022-.yandex.cloud.comp" +
-      "ute.v1.StartInstanceRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"V\202\323\344\223\002+\")/compute" +
-      "/v1/instances/{instance_id}:start\262\322*!\n\025S" +
-      "tartInstanceMetadata\022\010Instance\022\306\001\n\007Resta" +
-      "rt\022/.yandex.cloud.compute.v1.RestartInst" +
-      "anceRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"g\202\323\344\223\002-\"+/compute/v1/instances/{i" +
-      "nstance_id}:restart\262\322*0\n\027RestartInstance" +
-      "Metadata\022\025google.protobuf.Empty\022\310\001\n\nAtta" +
-      "chDisk\0222.yandex.cloud.compute.v1.AttachI" +
-      "nstanceDiskRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"c\202\323\344\223\0023\"./compute/v1/insta" +
-      "nces/{instance_id}:attachDisk:\001*\262\322*&\n\032At" +
-      "tachInstanceDiskMetadata\022\010Instance\022\310\001\n\nD" +
-      "etachDisk\0222.yandex.cloud.compute.v1.Deta" +
-      "chInstanceDiskRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"c\202\323\344\223\0023\"./compute/v1/in" +
-      "stances/{instance_id}:detachDisk:\001*\262\322*&\n" +
-      "\032DetachInstanceDiskMetadata\022\010Instance\022\340\001" +
-      "\n\020AttachFilesystem\0228.yandex.cloud.comput" +
-      "e.v1.AttachInstanceFilesystemRequest\032!.y" +
-      "andex.cloud.operation.Operation\"o\202\323\344\223\0029\"" +
-      "4/compute/v1/instances/{instance_id}:att" +
-      "achFilesystem:\001*\262\322*,\n AttachInstanceFile" +
-      "systemMetadata\022\010Instance\022\340\001\n\020DetachFiles" +
-      "ystem\0228.yandex.cloud.compute.v1.DetachIn" +
-      "stanceFilesystemRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"o\202\323\344\223\0029\"4/compute/v1/" +
-      "instances/{instance_id}:detachFilesystem" +
-      ":\001*\262\322*,\n DetachInstanceFilesystemMetadat" +
-      "a\022\010Instance\022\330\001\n\016AddOneToOneNat\0226.yandex." +
-      "cloud.compute.v1.AddInstanceOneToOneNatR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"k\202\323\344\223\0027\"2/compute/v1/instances/{instan" +
-      "ce_id}/addOneToOneNat:\001*\262\322**\n\036AddInstanc" +
-      "eOneToOneNatMetadata\022\010Instance\022\344\001\n\021Remov" +
-      "eOneToOneNat\0229.yandex.cloud.compute.v1.R" +
-      "emoveInstanceOneToOneNatRequest\032!.yandex" +
-      ".cloud.operation.Operation\"q\202\323\344\223\002:\"5/com" +
-      "pute/v1/instances/{instance_id}/removeOn" +
-      "eToOneNat:\001*\262\322*-\n!RemoveInstanceOneToOne" +
-      "NatMetadata\022\010Instance\022\370\001\n\026UpdateNetworkI" +
-      "nterface\022>.yandex.cloud.compute.v1.Updat" +
-      "eInstanceNetworkInterfaceRequest\032!.yande" +
-      "x.cloud.operation.Operation\"{\202\323\344\223\002?2:/co" +
-      "mpute/v1/instances/{instance_id}/updateN" +
-      "etworkInterface:\001*\262\322*2\n&UpdateInstanceNe" +
-      "tworkInterfaceMetadata\022\010Instance\022\271\001\n\016Lis" +
-      "tOperations\0226.yandex.cloud.compute.v1.Li" +
-      "stInstanceOperationsRequest\0327.yandex.clo" +
-      "ud.compute.v1.ListInstanceOperationsResp" +
-      "onse\"6\202\323\344\223\0020\022./compute/v1/instances/{ins" +
-      "tance_id}/operationsBb\n\033yandex.cloud.api" +
-      ".compute.v1ZCgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/compute/v1;compute" +
-      "b\006proto3"
+      "\013\n\003ptr\030\004 \001(\010\"e\n\023MoveInstanceRequest\022!\n\013i" +
+      "nstance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destin" +
+      "ation_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"d\n\024M" +
+      "oveInstanceMetadata\022\023\n\013instance_id\030\001 \001(\t" +
+      "\022\030\n\020source_folder_id\030\002 \001(\t\022\035\n\025destinatio" +
+      "n_folder_id\030\003 \001(\t*#\n\014InstanceView\022\t\n\005BAS" +
+      "IC\020\000\022\010\n\004FULL\020\0012\243\035\n\017InstanceService\022\202\001\n\003G" +
+      "et\022+.yandex.cloud.compute.v1.GetInstance" +
+      "Request\032!.yandex.cloud.compute.v1.Instan" +
+      "ce\"+\202\323\344\223\002%\022#/compute/v1/instances/{insta" +
+      "nce_id}\022\204\001\n\004List\022-.yandex.cloud.compute." +
+      "v1.ListInstancesRequest\032..yandex.cloud.c" +
+      "ompute.v1.ListInstancesResponse\"\035\202\323\344\223\002\027\022" +
+      "\025/compute/v1/instances\022\243\001\n\006Create\022..yand" +
+      "ex.cloud.compute.v1.CreateInstanceReques" +
+      "t\032!.yandex.cloud.operation.Operation\"F\202\323" +
+      "\344\223\002\032\"\025/compute/v1/instances:\001*\262\322*\"\n\026Crea" +
+      "teInstanceMetadata\022\010Instance\022\261\001\n\006Update\022" +
+      "..yandex.cloud.compute.v1.UpdateInstance" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"T\202\323\344\223\002(2#/compute/v1/instances/{insta" +
+      "nce_id}:\001*\262\322*\"\n\026UpdateInstanceMetadata\022\010" +
+      "Instance\022\273\001\n\006Delete\022..yandex.cloud.compu" +
+      "te.v1.DeleteInstanceRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"^\202\323\344\223\002%*#/compute" +
+      "/v1/instances/{instance_id}\262\322*/\n\026DeleteI" +
+      "nstanceMetadata\022\025google.protobuf.Empty\022\330" +
+      "\001\n\016UpdateMetadata\0226.yandex.cloud.compute" +
+      ".v1.UpdateInstanceMetadataRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"k\202\323\344\223\0027\"2/c" +
+      "ompute/v1/instances/{instance_id}/update" +
+      "Metadata:\001*\262\322**\n\036UpdateInstanceMetadataM" +
+      "etadata\022\010Instance\022\316\001\n\023GetSerialPortOutpu" +
+      "t\022;.yandex.cloud.compute.v1.GetInstanceS" +
+      "erialPortOutputRequest\032<.yandex.cloud.co" +
+      "mpute.v1.GetInstanceSerialPortOutputResp" +
+      "onse\"<\202\323\344\223\0026\0224/compute/v1/instances/{ins" +
+      "tance_id}:serialPortOutput\022\272\001\n\004Stop\022,.ya" +
+      "ndex.cloud.compute.v1.StopInstanceReques" +
+      "t\032!.yandex.cloud.operation.Operation\"a\202\323" +
+      "\344\223\002*\"(/compute/v1/instances/{instance_id" +
+      "}:stop\262\322*-\n\024StopInstanceMetadata\022\025google" +
+      ".protobuf.Empty\022\261\001\n\005Start\022-.yandex.cloud" +
+      ".compute.v1.StartInstanceRequest\032!.yande" +
+      "x.cloud.operation.Operation\"V\202\323\344\223\002+\")/co" +
+      "mpute/v1/instances/{instance_id}:start\262\322" +
+      "*!\n\025StartInstanceMetadata\022\010Instance\022\306\001\n\007" +
+      "Restart\022/.yandex.cloud.compute.v1.Restar" +
+      "tInstanceRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"g\202\323\344\223\002-\"+/compute/v1/instanc" +
+      "es/{instance_id}:restart\262\322*0\n\027RestartIns" +
+      "tanceMetadata\022\025google.protobuf.Empty\022\310\001\n" +
+      "\nAttachDisk\0222.yandex.cloud.compute.v1.At" +
+      "tachInstanceDiskRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"c\202\323\344\223\0023\"./compute/v1/" +
+      "instances/{instance_id}:attachDisk:\001*\262\322*" +
+      "&\n\032AttachInstanceDiskMetadata\022\010Instance\022" +
+      "\310\001\n\nDetachDisk\0222.yandex.cloud.compute.v1" +
+      ".DetachInstanceDiskRequest\032!.yandex.clou" +
+      "d.operation.Operation\"c\202\323\344\223\0023\"./compute/" +
+      "v1/instances/{instance_id}:detachDisk:\001*" +
+      "\262\322*&\n\032DetachInstanceDiskMetadata\022\010Instan" +
+      "ce\022\340\001\n\020AttachFilesystem\0228.yandex.cloud.c" +
+      "ompute.v1.AttachInstanceFilesystemReques" +
+      "t\032!.yandex.cloud.operation.Operation\"o\202\323" +
+      "\344\223\0029\"4/compute/v1/instances/{instance_id" +
+      "}:attachFilesystem:\001*\262\322*,\n AttachInstanc" +
+      "eFilesystemMetadata\022\010Instance\022\340\001\n\020Detach" +
+      "Filesystem\0228.yandex.cloud.compute.v1.Det" +
+      "achInstanceFilesystemRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"o\202\323\344\223\0029\"4/comput" +
+      "e/v1/instances/{instance_id}:detachFiles" +
+      "ystem:\001*\262\322*,\n DetachInstanceFilesystemMe" +
+      "tadata\022\010Instance\022\330\001\n\016AddOneToOneNat\0226.ya" +
+      "ndex.cloud.compute.v1.AddInstanceOneToOn" +
+      "eNatRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"k\202\323\344\223\0027\"2/compute/v1/instances/{i" +
+      "nstance_id}/addOneToOneNat:\001*\262\322**\n\036AddIn" +
+      "stanceOneToOneNatMetadata\022\010Instance\022\344\001\n\021" +
+      "RemoveOneToOneNat\0229.yandex.cloud.compute" +
+      ".v1.RemoveInstanceOneToOneNatRequest\032!.y" +
+      "andex.cloud.operation.Operation\"q\202\323\344\223\002:\"" +
+      "5/compute/v1/instances/{instance_id}/rem" +
+      "oveOneToOneNat:\001*\262\322*-\n!RemoveInstanceOne" +
+      "ToOneNatMetadata\022\010Instance\022\370\001\n\026UpdateNet" +
+      "workInterface\022>.yandex.cloud.compute.v1." +
+      "UpdateInstanceNetworkInterfaceRequest\032!." +
+      "yandex.cloud.operation.Operation\"{\202\323\344\223\002?" +
+      "2:/compute/v1/instances/{instance_id}/up" +
+      "dateNetworkInterface:\001*\262\322*2\n&UpdateInsta" +
+      "nceNetworkInterfaceMetadata\022\010Instance\022\271\001" +
+      "\n\016ListOperations\0226.yandex.cloud.compute." +
+      "v1.ListInstanceOperationsRequest\0327.yande" +
+      "x.cloud.compute.v1.ListInstanceOperation" +
+      "sResponse\"6\202\323\344\223\0020\022./compute/v1/instances" +
+      "/{instance_id}/operations\022\260\001\n\004Move\022,.yan" +
+      "dex.cloud.compute.v1.MoveInstanceRequest" +
+      "\032!.yandex.cloud.operation.Operation\"W\202\323\344" +
+      "\223\002-\"(/compute/v1/instances/{instance_id}" +
+      ":move:\001*\262\322* \n\024MoveInstanceMetadata\022\010Inst" +
+      "anceBb\n\033yandex.cloud.api.compute.v1ZCgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/compute/v1;computeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -46267,6 +47977,18 @@ public final class InstanceServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_DnsRecordSpec_descriptor,
         new java.lang.String[] { "Fqdn", "DnsZoneId", "Ttl", "Ptr", });
+    internal_static_yandex_cloud_compute_v1_MoveInstanceRequest_descriptor =
+      getDescriptor().getMessageTypes().get(42);
+    internal_static_yandex_cloud_compute_v1_MoveInstanceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_MoveInstanceRequest_descriptor,
+        new java.lang.String[] { "InstanceId", "DestinationFolderId", });
+    internal_static_yandex_cloud_compute_v1_MoveInstanceMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(43);
+    internal_static_yandex_cloud_compute_v1_MoveInstanceMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_MoveInstanceMetadata_descriptor,
+        new java.lang.String[] { "InstanceId", "SourceFolderId", "DestinationFolderId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
