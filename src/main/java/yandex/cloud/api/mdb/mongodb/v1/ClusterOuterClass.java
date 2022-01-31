@@ -5445,7 +5445,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4_enterprise`, `5.0`, `5.0_enterprise`.
+     * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -5453,7 +5453,7 @@ public final class ClusterOuterClass {
     java.lang.String getVersion();
     /**
      * <pre>
-     * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4_enterprise`, `5.0`, `5.0_enterprise`.
+     * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -6017,7 +6017,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object version_;
     /**
      * <pre>
-     * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4_enterprise`, `5.0`, `5.0_enterprise`.
+     * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -6036,7 +6036,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4_enterprise`, `5.0`, `5.0_enterprise`.
+     * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -7103,7 +7103,7 @@ public final class ClusterOuterClass {
       private java.lang.Object version_ = "";
       /**
        * <pre>
-       * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4_enterprise`, `5.0`, `5.0_enterprise`.
+       * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -7122,7 +7122,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4_enterprise`, `5.0`, `5.0_enterprise`.
+       * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -7142,7 +7142,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4_enterprise`, `5.0`, `5.0_enterprise`.
+       * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -7159,7 +7159,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4_enterprise`, `5.0`, `5.0_enterprise`.
+       * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -7172,7 +7172,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4_enterprise`, `5.0`, `5.0_enterprise`.
+       * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
        * </pre>
        *
        * <code>string version = 1;</code>

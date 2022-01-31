@@ -93238,7 +93238,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Version of MongoDB used in the cluster. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `5.0`.
+     * Version of MongoDB used in the cluster. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -93246,7 +93246,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getVersion();
     /**
      * <pre>
-     * Version of MongoDB used in the cluster. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `5.0`.
+     * Version of MongoDB used in the cluster. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -93810,7 +93810,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object version_;
     /**
      * <pre>
-     * Version of MongoDB used in the cluster. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `5.0`.
+     * Version of MongoDB used in the cluster. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -93829,7 +93829,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Version of MongoDB used in the cluster. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `5.0`.
+     * Version of MongoDB used in the cluster. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -94896,7 +94896,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object version_ = "";
       /**
        * <pre>
-       * Version of MongoDB used in the cluster. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `5.0`.
+       * Version of MongoDB used in the cluster. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -94915,7 +94915,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Version of MongoDB used in the cluster. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `5.0`.
+       * Version of MongoDB used in the cluster. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -94935,7 +94935,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Version of MongoDB used in the cluster. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `5.0`.
+       * Version of MongoDB used in the cluster. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -94952,7 +94952,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Version of MongoDB used in the cluster. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `5.0`.
+       * Version of MongoDB used in the cluster. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -94965,7 +94965,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Version of MongoDB used in the cluster. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `5.0`.
+       * Version of MongoDB used in the cluster. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
        * </pre>
        *
        * <code>string version = 1;</code>

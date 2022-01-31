@@ -42235,7 +42235,7 @@ public final class ClusterServiceOuterClass {
      * Host backup priority
      * </pre>
      *
-     * <code>int64 backup_priority = 4;</code>
+     * <code>int64 backup_priority = 4 [(.yandex.cloud.value) = "0-100"];</code>
      */
     long getBackupPriority();
 
@@ -42247,6 +42247,15 @@ public final class ClusterServiceOuterClass {
      * <code>bool assign_public_ip = 5;</code>
      */
     boolean getAssignPublicIp();
+
+    /**
+     * <pre>
+     * Host master promotion priority
+     * </pre>
+     *
+     * <code>int64 priority = 6 [(.yandex.cloud.value) = "0-100"];</code>
+     */
+    long getPriority();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.UpdateHostSpec}
@@ -42265,6 +42274,7 @@ public final class ClusterServiceOuterClass {
       replicationSource_ = "";
       backupPriority_ = 0L;
       assignPublicIp_ = false;
+      priority_ = 0L;
     }
 
     @java.lang.Override
@@ -42324,6 +42334,11 @@ public final class ClusterServiceOuterClass {
             case 40: {
 
               assignPublicIp_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              priority_ = input.readInt64();
               break;
             }
             default: {
@@ -42486,7 +42501,7 @@ public final class ClusterServiceOuterClass {
      * Host backup priority
      * </pre>
      *
-     * <code>int64 backup_priority = 4;</code>
+     * <code>int64 backup_priority = 4 [(.yandex.cloud.value) = "0-100"];</code>
      */
     public long getBackupPriority() {
       return backupPriority_;
@@ -42503,6 +42518,19 @@ public final class ClusterServiceOuterClass {
      */
     public boolean getAssignPublicIp() {
       return assignPublicIp_;
+    }
+
+    public static final int PRIORITY_FIELD_NUMBER = 6;
+    private long priority_;
+    /**
+     * <pre>
+     * Host master promotion priority
+     * </pre>
+     *
+     * <code>int64 priority = 6 [(.yandex.cloud.value) = "0-100"];</code>
+     */
+    public long getPriority() {
+      return priority_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -42534,6 +42562,9 @@ public final class ClusterServiceOuterClass {
       if (assignPublicIp_ != false) {
         output.writeBool(5, assignPublicIp_);
       }
+      if (priority_ != 0L) {
+        output.writeInt64(6, priority_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -42560,6 +42591,10 @@ public final class ClusterServiceOuterClass {
       if (assignPublicIp_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, assignPublicIp_);
+      }
+      if (priority_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, priority_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -42590,6 +42625,8 @@ public final class ClusterServiceOuterClass {
           == other.getBackupPriority());
       result = result && (getAssignPublicIp()
           == other.getAssignPublicIp());
+      result = result && (getPriority()
+          == other.getPriority());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -42615,6 +42652,9 @@ public final class ClusterServiceOuterClass {
       hash = (37 * hash) + ASSIGN_PUBLIC_IP_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getAssignPublicIp());
+      hash = (37 * hash) + PRIORITY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPriority());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -42762,6 +42802,8 @@ public final class ClusterServiceOuterClass {
 
         assignPublicIp_ = false;
 
+        priority_ = 0L;
+
         return this;
       }
 
@@ -42797,6 +42839,7 @@ public final class ClusterServiceOuterClass {
         }
         result.backupPriority_ = backupPriority_;
         result.assignPublicIp_ = assignPublicIp_;
+        result.priority_ = priority_;
         onBuilt();
         return result;
       }
@@ -42861,6 +42904,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.getAssignPublicIp() != false) {
           setAssignPublicIp(other.getAssignPublicIp());
+        }
+        if (other.getPriority() != 0L) {
+          setPriority(other.getPriority());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -43238,7 +43284,7 @@ public final class ClusterServiceOuterClass {
        * Host backup priority
        * </pre>
        *
-       * <code>int64 backup_priority = 4;</code>
+       * <code>int64 backup_priority = 4 [(.yandex.cloud.value) = "0-100"];</code>
        */
       public long getBackupPriority() {
         return backupPriority_;
@@ -43248,7 +43294,7 @@ public final class ClusterServiceOuterClass {
        * Host backup priority
        * </pre>
        *
-       * <code>int64 backup_priority = 4;</code>
+       * <code>int64 backup_priority = 4 [(.yandex.cloud.value) = "0-100"];</code>
        */
       public Builder setBackupPriority(long value) {
         
@@ -43261,7 +43307,7 @@ public final class ClusterServiceOuterClass {
        * Host backup priority
        * </pre>
        *
-       * <code>int64 backup_priority = 4;</code>
+       * <code>int64 backup_priority = 4 [(.yandex.cloud.value) = "0-100"];</code>
        */
       public Builder clearBackupPriority() {
         
@@ -43304,6 +43350,44 @@ public final class ClusterServiceOuterClass {
       public Builder clearAssignPublicIp() {
         
         assignPublicIp_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long priority_ ;
+      /**
+       * <pre>
+       * Host master promotion priority
+       * </pre>
+       *
+       * <code>int64 priority = 6 [(.yandex.cloud.value) = "0-100"];</code>
+       */
+      public long getPriority() {
+        return priority_;
+      }
+      /**
+       * <pre>
+       * Host master promotion priority
+       * </pre>
+       *
+       * <code>int64 priority = 6 [(.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder setPriority(long value) {
+        
+        priority_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host master promotion priority
+       * </pre>
+       *
+       * <code>int64 priority = 6 [(.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder clearPriority() {
+        
+        priority_ = 0L;
         onChanged();
         return this;
       }
@@ -43443,9 +43527,18 @@ public final class ClusterServiceOuterClass {
      * Host backup priority
      * </pre>
      *
-     * <code>int64 backup_priority = 5;</code>
+     * <code>int64 backup_priority = 5 [(.yandex.cloud.value) = "0-100"];</code>
      */
     long getBackupPriority();
+
+    /**
+     * <pre>
+     * Host master promotion priority
+     * </pre>
+     *
+     * <code>int64 priority = 6 [(.yandex.cloud.value) = "0-100"];</code>
+     */
+    long getPriority();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.HostSpec}
@@ -43465,6 +43558,7 @@ public final class ClusterServiceOuterClass {
       assignPublicIp_ = false;
       replicationSource_ = "";
       backupPriority_ = 0L;
+      priority_ = 0L;
     }
 
     @java.lang.Override
@@ -43517,6 +43611,11 @@ public final class ClusterServiceOuterClass {
             case 40: {
 
               backupPriority_ = input.readInt64();
+              break;
+            }
+            case 48: {
+
+              priority_ = input.readInt64();
               break;
             }
             default: {
@@ -43708,10 +43807,23 @@ public final class ClusterServiceOuterClass {
      * Host backup priority
      * </pre>
      *
-     * <code>int64 backup_priority = 5;</code>
+     * <code>int64 backup_priority = 5 [(.yandex.cloud.value) = "0-100"];</code>
      */
     public long getBackupPriority() {
       return backupPriority_;
+    }
+
+    public static final int PRIORITY_FIELD_NUMBER = 6;
+    private long priority_;
+    /**
+     * <pre>
+     * Host master promotion priority
+     * </pre>
+     *
+     * <code>int64 priority = 6 [(.yandex.cloud.value) = "0-100"];</code>
+     */
+    public long getPriority() {
+      return priority_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -43743,6 +43855,9 @@ public final class ClusterServiceOuterClass {
       if (backupPriority_ != 0L) {
         output.writeInt64(5, backupPriority_);
       }
+      if (priority_ != 0L) {
+        output.writeInt64(6, priority_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -43768,6 +43883,10 @@ public final class ClusterServiceOuterClass {
       if (backupPriority_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, backupPriority_);
+      }
+      if (priority_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, priority_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -43795,6 +43914,8 @@ public final class ClusterServiceOuterClass {
           .equals(other.getReplicationSource());
       result = result && (getBackupPriority()
           == other.getBackupPriority());
+      result = result && (getPriority()
+          == other.getPriority());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -43818,6 +43939,9 @@ public final class ClusterServiceOuterClass {
       hash = (37 * hash) + BACKUP_PRIORITY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getBackupPriority());
+      hash = (37 * hash) + PRIORITY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPriority());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -43961,6 +44085,8 @@ public final class ClusterServiceOuterClass {
 
         backupPriority_ = 0L;
 
+        priority_ = 0L;
+
         return this;
       }
 
@@ -43992,6 +44118,7 @@ public final class ClusterServiceOuterClass {
         result.assignPublicIp_ = assignPublicIp_;
         result.replicationSource_ = replicationSource_;
         result.backupPriority_ = backupPriority_;
+        result.priority_ = priority_;
         onBuilt();
         return result;
       }
@@ -44057,6 +44184,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.getBackupPriority() != 0L) {
           setBackupPriority(other.getBackupPriority());
+        }
+        if (other.getPriority() != 0L) {
+          setPriority(other.getPriority());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -44428,7 +44558,7 @@ public final class ClusterServiceOuterClass {
        * Host backup priority
        * </pre>
        *
-       * <code>int64 backup_priority = 5;</code>
+       * <code>int64 backup_priority = 5 [(.yandex.cloud.value) = "0-100"];</code>
        */
       public long getBackupPriority() {
         return backupPriority_;
@@ -44438,7 +44568,7 @@ public final class ClusterServiceOuterClass {
        * Host backup priority
        * </pre>
        *
-       * <code>int64 backup_priority = 5;</code>
+       * <code>int64 backup_priority = 5 [(.yandex.cloud.value) = "0-100"];</code>
        */
       public Builder setBackupPriority(long value) {
         
@@ -44451,11 +44581,49 @@ public final class ClusterServiceOuterClass {
        * Host backup priority
        * </pre>
        *
-       * <code>int64 backup_priority = 5;</code>
+       * <code>int64 backup_priority = 5 [(.yandex.cloud.value) = "0-100"];</code>
        */
       public Builder clearBackupPriority() {
         
         backupPriority_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long priority_ ;
+      /**
+       * <pre>
+       * Host master promotion priority
+       * </pre>
+       *
+       * <code>int64 priority = 6 [(.yandex.cloud.value) = "0-100"];</code>
+       */
+      public long getPriority() {
+        return priority_;
+      }
+      /**
+       * <pre>
+       * Host master promotion priority
+       * </pre>
+       *
+       * <code>int64 priority = 6 [(.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder setPriority(long value) {
+        
+        priority_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host master promotion priority
+       * </pre>
+       *
+       * <code>int64 priority = 6 [(.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder clearPriority() {
+        
+        priority_ = 0L;
         onChanged();
         return this;
       }
@@ -46923,15 +47091,17 @@ public final class ClusterServiceOuterClass {
       "<=50\022L\n\021update_host_specs\030\002 \003(\0132).yandex" +
       ".cloud.mdb.mysql.v1.UpdateHostSpecB\006\202\3101\002" +
       ">0\"D\n\032UpdateClusterHostsMetadata\022\022\n\nclus" +
-      "ter_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\251\001\n\016Upd" +
+      "ter_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\321\001\n\016Upd" +
       "ateHostSpec\022\027\n\thost_name\030\001 \001(\tB\004\350\3071\001\022\032\n\022" +
       "replication_source\030\002 \001(\t\022/\n\013update_mask\030" +
-      "\003 \001(\0132\032.google.protobuf.FieldMask\022\027\n\017bac" +
-      "kup_priority\030\004 \001(\003\022\030\n\020assign_public_ip\030\005" +
-      " \001(\010\"\221\001\n\010HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004" +
+      "\003 \001(\0132\032.google.protobuf.FieldMask\022\"\n\017bac" +
+      "kup_priority\030\004 \001(\003B\t\372\3071\0050-100\022\030\n\020assign_" +
+      "public_ip\030\005 \001(\010\022\033\n\010priority\030\006 \001(\003B\t\372\3071\0050" +
+      "-100\"\271\001\n\010HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004" +
       "<=50\022\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020ass" +
       "ign_public_ip\030\003 \001(\010\022\032\n\022replication_sourc" +
-      "e\030\004 \001(\t\022\027\n\017backup_priority\030\005 \001(\003\"\214\003\n\nCon" +
+      "e\030\004 \001(\t\022\"\n\017backup_priority\030\005 \001(\003B\t\372\3071\0050-" +
+      "100\022\033\n\010priority\030\006 \001(\003B\t\372\3071\0050-100\"\214\003\n\nCon" +
       "figSpec\022\017\n\007version\030\001 \001(\t\022]\n\020mysql_config" +
       "_5_7\030\002 \001(\01320.yandex.cloud.mdb.mysql.v1.c" +
       "onfig.MysqlConfig5_7H\000R\017mysqlConfig_5_7\022" +
@@ -47336,13 +47506,13 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_mysql_v1_UpdateHostSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_UpdateHostSpec_descriptor,
-        new java.lang.String[] { "HostName", "ReplicationSource", "UpdateMask", "BackupPriority", "AssignPublicIp", });
+        new java.lang.String[] { "HostName", "ReplicationSource", "UpdateMask", "BackupPriority", "AssignPublicIp", "Priority", });
     internal_static_yandex_cloud_mdb_mysql_v1_HostSpec_descriptor =
       getDescriptor().getMessageTypes().get(41);
     internal_static_yandex_cloud_mdb_mysql_v1_HostSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_HostSpec_descriptor,
-        new java.lang.String[] { "ZoneId", "SubnetId", "AssignPublicIp", "ReplicationSource", "BackupPriority", });
+        new java.lang.String[] { "ZoneId", "SubnetId", "AssignPublicIp", "ReplicationSource", "BackupPriority", "Priority", });
     internal_static_yandex_cloud_mdb_mysql_v1_ConfigSpec_descriptor =
       getDescriptor().getMessageTypes().get(42);
     internal_static_yandex_cloud_mdb_mysql_v1_ConfigSpec_fieldAccessorTable = new

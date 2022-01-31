@@ -6872,7 +6872,7 @@ public final class FunctionOuterClass {
      * Amount of memory available to the version, specified in bytes.
      * </pre>
      *
-     * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-2147483648"];</code>
+     * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
      */
     long getMemory();
   }
@@ -6964,7 +6964,7 @@ public final class FunctionOuterClass {
      * Amount of memory available to the version, specified in bytes.
      * </pre>
      *
-     * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-2147483648"];</code>
+     * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
      */
     public long getMemory() {
       return memory_;
@@ -7284,7 +7284,7 @@ public final class FunctionOuterClass {
        * Amount of memory available to the version, specified in bytes.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-2147483648"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
        */
       public long getMemory() {
         return memory_;
@@ -7294,7 +7294,7 @@ public final class FunctionOuterClass {
        * Amount of memory available to the version, specified in bytes.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-2147483648"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
        */
       public Builder setMemory(long value) {
         
@@ -7307,7 +7307,7 @@ public final class FunctionOuterClass {
        * Amount of memory available to the version, specified in bytes.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-2147483648"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
        */
       public Builder clearMemory() {
         
@@ -12034,7 +12034,7 @@ public final class FunctionOuterClass {
       "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\":\n\006Status\022" +
       "\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n" +
       "\006ACTIVE\020\002\"5\n\tResources\022(\n\006memory\030\001 \001(\003B\030" +
-      "\372\3071\024134217728-2147483648\"O\n\007Package\022\031\n\013b" +
+      "\372\3071\024134217728-4294967296\"O\n\007Package\022\031\n\013b" +
       "ucket_name\030\001 \001(\tB\004\350\3071\001\022\031\n\013object_name\030\002 " +
       "\001(\tB\004\350\3071\001\022\016\n\006sha256\030\003 \001(\t\"5\n\014Connectivit" +
       "y\022\022\n\nnetwork_id\030\001 \001(\t\022\021\n\tsubnet_id\030\002 \003(\t" +

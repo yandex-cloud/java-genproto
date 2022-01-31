@@ -4718,6 +4718,15 @@ public final class SttServiceOuterClass {
      * <code>bool raw_results = 10;</code>
      */
     boolean getRawResults();
+
+    /**
+     * <pre>
+     * Rewrite text in literature style (default: false)
+     * </pre>
+     *
+     * <code>bool literature_text = 11;</code>
+     */
+    boolean getLiteratureText();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.stt.v2.RecognitionSpec}
@@ -4741,6 +4750,7 @@ public final class SttServiceOuterClass {
       singleUtterance_ = false;
       audioChannelCount_ = 0L;
       rawResults_ = false;
+      literatureText_ = false;
     }
 
     @java.lang.Override
@@ -4813,6 +4823,11 @@ public final class SttServiceOuterClass {
             case 80: {
 
               rawResults_ = input.readBool();
+              break;
+            }
+            case 88: {
+
+              literatureText_ = input.readBool();
               break;
             }
             default: {
@@ -5144,6 +5159,19 @@ public final class SttServiceOuterClass {
       return rawResults_;
     }
 
+    public static final int LITERATURE_TEXT_FIELD_NUMBER = 11;
+    private boolean literatureText_;
+    /**
+     * <pre>
+     * Rewrite text in literature style (default: false)
+     * </pre>
+     *
+     * <code>bool literature_text = 11;</code>
+     */
+    public boolean getLiteratureText() {
+      return literatureText_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5184,6 +5212,9 @@ public final class SttServiceOuterClass {
       }
       if (rawResults_ != false) {
         output.writeBool(10, rawResults_);
+      }
+      if (literatureText_ != false) {
+        output.writeBool(11, literatureText_);
       }
       unknownFields.writeTo(output);
     }
@@ -5228,6 +5259,10 @@ public final class SttServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(10, rawResults_);
       }
+      if (literatureText_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, literatureText_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5261,6 +5296,8 @@ public final class SttServiceOuterClass {
           == other.getAudioChannelCount());
       result = result && (getRawResults()
           == other.getRawResults());
+      result = result && (getLiteratureText()
+          == other.getLiteratureText());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5296,6 +5333,9 @@ public final class SttServiceOuterClass {
       hash = (37 * hash) + RAW_RESULTS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getRawResults());
+      hash = (37 * hash) + LITERATURE_TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getLiteratureText());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5447,6 +5487,8 @@ public final class SttServiceOuterClass {
 
         rawResults_ = false;
 
+        literatureText_ = false;
+
         return this;
       }
 
@@ -5482,6 +5524,7 @@ public final class SttServiceOuterClass {
         result.singleUtterance_ = singleUtterance_;
         result.audioChannelCount_ = audioChannelCount_;
         result.rawResults_ = rawResults_;
+        result.literatureText_ = literatureText_;
         onBuilt();
         return result;
       }
@@ -5558,6 +5601,9 @@ public final class SttServiceOuterClass {
         }
         if (other.getRawResults() != false) {
           setRawResults(other.getRawResults());
+        }
+        if (other.getLiteratureText() != false) {
+          setLiteratureText(other.getLiteratureText());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5997,6 +6043,44 @@ public final class SttServiceOuterClass {
       public Builder clearRawResults() {
         
         rawResults_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean literatureText_ ;
+      /**
+       * <pre>
+       * Rewrite text in literature style (default: false)
+       * </pre>
+       *
+       * <code>bool literature_text = 11;</code>
+       */
+      public boolean getLiteratureText() {
+        return literatureText_;
+      }
+      /**
+       * <pre>
+       * Rewrite text in literature style (default: false)
+       * </pre>
+       *
+       * <code>bool literature_text = 11;</code>
+       */
+      public Builder setLiteratureText(boolean value) {
+        
+        literatureText_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Rewrite text in literature style (default: false)
+       * </pre>
+       *
+       * <code>bool literature_text = 11;</code>
+       */
+      public Builder clearLiteratureText() {
+        
+        literatureText_ = false;
         onChanged();
         return this;
       }
@@ -9933,41 +10017,41 @@ public final class SttServiceOuterClass {
       "uri\030\002 \001(\tH\000B\016\n\014audio_source\"f\n\021Recogniti" +
       "onConfig\022>\n\rspecification\030\001 \001(\0132\'.yandex" +
       ".cloud.ai.stt.v2.RecognitionSpec\022\021\n\tfold" +
-      "er_id\030\002 \001(\t\"\372\002\n\017RecognitionSpec\022M\n\016audio" +
+      "er_id\030\002 \001(\t\"\223\003\n\017RecognitionSpec\022M\n\016audio" +
       "_encoding\030\001 \001(\01625.yandex.cloud.ai.stt.v2" +
       ".RecognitionSpec.AudioEncoding\022\031\n\021sample" +
       "_rate_hertz\030\002 \001(\003\022\025\n\rlanguage_code\030\003 \001(\t" +
       "\022\030\n\020profanity_filter\030\004 \001(\010\022\r\n\005model\030\005 \001(" +
       "\t\022\027\n\017partial_results\030\007 \001(\010\022\030\n\020single_utt" +
       "erance\030\010 \001(\010\022\033\n\023audio_channel_count\030\t \001(" +
-      "\003\022\023\n\013raw_results\030\n \001(\010\"X\n\rAudioEncoding\022" +
-      "\036\n\032AUDIO_ENCODING_UNSPECIFIED\020\000\022\020\n\014LINEA" +
-      "R16_PCM\020\001\022\014\n\010OGG_OPUS\020\002\022\007\n\003MP3\020\003\"\215\001\n\026Spe" +
-      "echRecognitionChunk\022J\n\014alternatives\030\001 \003(" +
-      "\01324.yandex.cloud.ai.stt.v2.SpeechRecogni" +
-      "tionAlternative\022\r\n\005final\030\002 \001(\010\022\030\n\020end_of" +
-      "_utterance\030\003 \001(\010\"z\n\027SpeechRecognitionRes" +
-      "ult\022J\n\014alternatives\030\001 \003(\01324.yandex.cloud" +
-      ".ai.stt.v2.SpeechRecognitionAlternative\022" +
-      "\023\n\013channel_tag\030\002 \001(\003\"q\n\034SpeechRecognitio" +
-      "nAlternative\022\014\n\004text\030\001 \001(\t\022\022\n\nconfidence" +
-      "\030\002 \001(\002\022/\n\005words\030\003 \003(\0132 .yandex.cloud.ai." +
-      "stt.v2.WordInfo\"\210\001\n\010WordInfo\022-\n\nstart_ti" +
-      "me\030\001 \001(\0132\031.google.protobuf.Duration\022+\n\010e" +
-      "nd_time\030\002 \001(\0132\031.google.protobuf.Duration" +
-      "\022\014\n\004word\030\003 \001(\t\022\022\n\nconfidence\030\004 \001(\0022\333\002\n\nS" +
-      "ttService\022\304\001\n\024LongRunningRecognize\0225.yan" +
-      "dex.cloud.ai.stt.v2.LongRunningRecogniti" +
-      "onRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"R\202\323\344\223\002(\"#/speech/stt/v2/longRunning" +
-      "Recognize:\001*\262\322* \022\036LongRunningRecognition" +
-      "Response\022\205\001\n\022StreamingRecognize\0223.yandex" +
-      ".cloud.ai.stt.v2.StreamingRecognitionReq" +
-      "uest\0324.yandex.cloud.ai.stt.v2.StreamingR" +
-      "ecognitionResponse\"\000(\0010\001B\\\n\032yandex.cloud" +
-      ".api.ai.stt.v2Z>github.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/ai/stt/v2;sttb\006" +
-      "proto3"
+      "\003\022\023\n\013raw_results\030\n \001(\010\022\027\n\017literature_tex" +
+      "t\030\013 \001(\010\"X\n\rAudioEncoding\022\036\n\032AUDIO_ENCODI" +
+      "NG_UNSPECIFIED\020\000\022\020\n\014LINEAR16_PCM\020\001\022\014\n\010OG" +
+      "G_OPUS\020\002\022\007\n\003MP3\020\003\"\215\001\n\026SpeechRecognitionC" +
+      "hunk\022J\n\014alternatives\030\001 \003(\01324.yandex.clou" +
+      "d.ai.stt.v2.SpeechRecognitionAlternative" +
+      "\022\r\n\005final\030\002 \001(\010\022\030\n\020end_of_utterance\030\003 \001(" +
+      "\010\"z\n\027SpeechRecognitionResult\022J\n\014alternat" +
+      "ives\030\001 \003(\01324.yandex.cloud.ai.stt.v2.Spee" +
+      "chRecognitionAlternative\022\023\n\013channel_tag\030" +
+      "\002 \001(\003\"q\n\034SpeechRecognitionAlternative\022\014\n" +
+      "\004text\030\001 \001(\t\022\022\n\nconfidence\030\002 \001(\002\022/\n\005words" +
+      "\030\003 \003(\0132 .yandex.cloud.ai.stt.v2.WordInfo" +
+      "\"\210\001\n\010WordInfo\022-\n\nstart_time\030\001 \001(\0132\031.goog" +
+      "le.protobuf.Duration\022+\n\010end_time\030\002 \001(\0132\031" +
+      ".google.protobuf.Duration\022\014\n\004word\030\003 \001(\t\022" +
+      "\022\n\nconfidence\030\004 \001(\0022\333\002\n\nSttService\022\304\001\n\024L" +
+      "ongRunningRecognize\0225.yandex.cloud.ai.st" +
+      "t.v2.LongRunningRecognitionRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"R\202\323\344\223\002(\"#/" +
+      "speech/stt/v2/longRunningRecognize:\001*\262\322*" +
+      " \022\036LongRunningRecognitionResponse\022\205\001\n\022St" +
+      "reamingRecognize\0223.yandex.cloud.ai.stt.v" +
+      "2.StreamingRecognitionRequest\0324.yandex.c" +
+      "loud.ai.stt.v2.StreamingRecognitionRespo" +
+      "nse\"\000(\0010\001B\\\n\032yandex.cloud.api.ai.stt.v2Z" +
+      ">github.com/yandex-cloud/go-genproto/yan" +
+      "dex/cloud/ai/stt/v2;sttb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10026,7 +10110,7 @@ public final class SttServiceOuterClass {
     internal_static_yandex_cloud_ai_stt_v2_RecognitionSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_stt_v2_RecognitionSpec_descriptor,
-        new java.lang.String[] { "AudioEncoding", "SampleRateHertz", "LanguageCode", "ProfanityFilter", "Model", "PartialResults", "SingleUtterance", "AudioChannelCount", "RawResults", });
+        new java.lang.String[] { "AudioEncoding", "SampleRateHertz", "LanguageCode", "ProfanityFilter", "Model", "PartialResults", "SingleUtterance", "AudioChannelCount", "RawResults", "LiteratureText", });
     internal_static_yandex_cloud_ai_stt_v2_SpeechRecognitionChunk_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_ai_stt_v2_SpeechRecognitionChunk_fieldAccessorTable = new

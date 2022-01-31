@@ -3,8 +3,8 @@
 
 package yandex.cloud.api.mdb.greenplum.v1;
 
-public final class GPH {
-  private GPH() {}
+public final class HostOuterClass {
+  private HostOuterClass() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -20,7 +20,7 @@ public final class GPH {
 
     /**
      * <pre>
-     * Name of the Greenplum host. The host name is assigned by MDB at creation time, and cannot be changed.
+     * Name of the Greenplum® host. The host name is assigned by Yandex.Cloud at creation time and cannot be changed.
      * 1-63 characters long.
      * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
      * </pre>
@@ -30,7 +30,7 @@ public final class GPH {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the Greenplum host. The host name is assigned by MDB at creation time, and cannot be changed.
+     * Name of the Greenplum® host. The host name is assigned by Yandex.Cloud at creation time and cannot be changed.
      * 1-63 characters long.
      * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
      * </pre>
@@ -42,7 +42,7 @@ public final class GPH {
 
     /**
      * <pre>
-     * ID of the Greenplum cluster. The ID is assigned by MDB at creation time.
+     * ID of the Greenplum® cluster. The ID is assigned by Yandex.Cloud at creation time.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -50,7 +50,7 @@ public final class GPH {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Greenplum cluster. The ID is assigned by MDB at creation time.
+     * ID of the Greenplum® cluster. The ID is assigned by Yandex.Cloud at creation time.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -60,7 +60,7 @@ public final class GPH {
 
     /**
      * <pre>
-     * ID of the availability zone where the Greenplum host resides.
+     * ID of the availability zone the Greenplum® host belongs to.
      * </pre>
      *
      * <code>string zone_id = 3;</code>
@@ -68,7 +68,7 @@ public final class GPH {
     java.lang.String getZoneId();
     /**
      * <pre>
-     * ID of the availability zone where the Greenplum host resides.
+     * ID of the availability zone the Greenplum® host belongs to.
      * </pre>
      *
      * <code>string zone_id = 3;</code>
@@ -91,11 +91,11 @@ public final class GPH {
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
      */
-    yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Type getType();
+    yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type getType();
 
     /**
      * <pre>
-     * Resources allocated to the Greenplum host.
+     * Resources allocated to the Greenplum® host.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
@@ -103,20 +103,20 @@ public final class GPH {
     boolean hasResources();
     /**
      * <pre>
-     * Resources allocated to the Greenplum host.
+     * Resources allocated to the Greenplum® host.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
      */
-    yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources getResources();
+    yandex.cloud.api.mdb.greenplum.v1.Config.Resources getResources();
     /**
      * <pre>
-     * Resources allocated to the Greenplum host.
+     * Resources allocated to the Greenplum® host.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
      */
-    yandex.cloud.api.mdb.greenplum.v1.GPCF.ResourcesOrBuilder getResourcesOrBuilder();
+    yandex.cloud.api.mdb.greenplum.v1.Config.ResourcesOrBuilder getResourcesOrBuilder();
 
     /**
      * <pre>
@@ -133,7 +133,7 @@ public final class GPH {
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
      */
-    yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Health getHealth();
+    yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health getHealth();
 
     /**
      * <pre>
@@ -155,7 +155,7 @@ public final class GPH {
 
     /**
      * <pre>
-     * Flag showing public IP assignment status to this host.
+     * Whether or not a public IP is assigned to the host.
      * </pre>
      *
      * <code>bool assign_public_ip = 8;</code>
@@ -163,6 +163,10 @@ public final class GPH {
     boolean getAssignPublicIp();
   }
   /**
+   * <pre>
+   * A Greenplum® cluster host resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.Host}
    */
   public  static final class Host extends
@@ -233,11 +237,11 @@ public final class GPH {
               break;
             }
             case 42: {
-              yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources.Builder subBuilder = null;
+              yandex.cloud.api.mdb.greenplum.v1.Config.Resources.Builder subBuilder = null;
               if (resources_ != null) {
                 subBuilder = resources_.toBuilder();
               }
-              resources_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources.parser(), extensionRegistry);
+              resources_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Config.Resources.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(resources_);
                 resources_ = subBuilder.buildPartial();
@@ -283,29 +287,37 @@ public final class GPH {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.mdb.greenplum.v1.GPH.internal_static_yandex_cloud_mdb_greenplum_v1_Host_descriptor;
+      return yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.internal_static_yandex_cloud_mdb_greenplum_v1_Host_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.mdb.greenplum.v1.GPH.internal_static_yandex_cloud_mdb_greenplum_v1_Host_fieldAccessorTable
+      return yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.internal_static_yandex_cloud_mdb_greenplum_v1_Host_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.mdb.greenplum.v1.GPH.Host.class, yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Builder.class);
+              yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.class, yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Builder.class);
     }
 
     /**
+     * <pre>
+     * Type of the host.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.mdb.greenplum.v1.Host.Type}
      */
     public enum Type
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * The type is not specified.
+       * </pre>
+       *
        * <code>TYPE_UNSPECIFIED = 0;</code>
        */
       TYPE_UNSPECIFIED(0),
       /**
        * <pre>
-       * Greenplum master host.
+       * A Greenplum® master host.
        * </pre>
        *
        * <code>MASTER = 1;</code>
@@ -313,7 +325,7 @@ public final class GPH {
       MASTER(1),
       /**
        * <pre>
-       * Greenplum master host.
+       * A Greenplum® master replica host.
        * </pre>
        *
        * <code>REPLICA = 2;</code>
@@ -321,7 +333,7 @@ public final class GPH {
       REPLICA(2),
       /**
        * <pre>
-       * Greenplum segment host.
+       * A Greenplum® segment host.
        * </pre>
        *
        * <code>SEGMENT = 3;</code>
@@ -331,12 +343,16 @@ public final class GPH {
       ;
 
       /**
+       * <pre>
+       * The type is not specified.
+       * </pre>
+       *
        * <code>TYPE_UNSPECIFIED = 0;</code>
        */
       public static final int TYPE_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * Greenplum master host.
+       * A Greenplum® master host.
        * </pre>
        *
        * <code>MASTER = 1;</code>
@@ -344,7 +360,7 @@ public final class GPH {
       public static final int MASTER_VALUE = 1;
       /**
        * <pre>
-       * Greenplum master host.
+       * A Greenplum® master replica host.
        * </pre>
        *
        * <code>REPLICA = 2;</code>
@@ -352,7 +368,7 @@ public final class GPH {
       public static final int REPLICA_VALUE = 2;
       /**
        * <pre>
-       * Greenplum segment host.
+       * A Greenplum® segment host.
        * </pre>
        *
        * <code>SEGMENT = 3;</code>
@@ -408,7 +424,7 @@ public final class GPH {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPH.Host.getDescriptor().getEnumTypes().get(0);
+        return yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final Type[] VALUES = values();
@@ -435,6 +451,10 @@ public final class GPH {
     }
 
     /**
+     * <pre>
+     * Status code of the aggregated health of the host.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.mdb.greenplum.v1.Host.Health}
      */
     public enum Health
@@ -457,7 +477,7 @@ public final class GPH {
       ALIVE(1),
       /**
        * <pre>
-       * The host is inoperable, and cannot perform any of its essential functions.
+       * The host is inoperable and cannot perform any of its essential functions.
        * </pre>
        *
        * <code>DEAD = 2;</code>
@@ -473,7 +493,7 @@ public final class GPH {
       DEGRADED(3),
       /**
        * <pre>
-       * One or more segments are not in prefer role.
+       * One or more segments are not in preferred role.
        * </pre>
        *
        * <code>UNBALANCED = 4;</code>
@@ -500,7 +520,7 @@ public final class GPH {
       public static final int ALIVE_VALUE = 1;
       /**
        * <pre>
-       * The host is inoperable, and cannot perform any of its essential functions.
+       * The host is inoperable and cannot perform any of its essential functions.
        * </pre>
        *
        * <code>DEAD = 2;</code>
@@ -516,7 +536,7 @@ public final class GPH {
       public static final int DEGRADED_VALUE = 3;
       /**
        * <pre>
-       * One or more segments are not in prefer role.
+       * One or more segments are not in preferred role.
        * </pre>
        *
        * <code>UNBALANCED = 4;</code>
@@ -573,7 +593,7 @@ public final class GPH {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPH.Host.getDescriptor().getEnumTypes().get(1);
+        return yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.getDescriptor().getEnumTypes().get(1);
       }
 
       private static final Health[] VALUES = values();
@@ -603,7 +623,7 @@ public final class GPH {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the Greenplum host. The host name is assigned by MDB at creation time, and cannot be changed.
+     * Name of the Greenplum® host. The host name is assigned by Yandex.Cloud at creation time and cannot be changed.
      * 1-63 characters long.
      * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
      * </pre>
@@ -624,7 +644,7 @@ public final class GPH {
     }
     /**
      * <pre>
-     * Name of the Greenplum host. The host name is assigned by MDB at creation time, and cannot be changed.
+     * Name of the Greenplum® host. The host name is assigned by Yandex.Cloud at creation time and cannot be changed.
      * 1-63 characters long.
      * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
      * </pre>
@@ -649,7 +669,7 @@ public final class GPH {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Greenplum cluster. The ID is assigned by MDB at creation time.
+     * ID of the Greenplum® cluster. The ID is assigned by Yandex.Cloud at creation time.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -668,7 +688,7 @@ public final class GPH {
     }
     /**
      * <pre>
-     * ID of the Greenplum cluster. The ID is assigned by MDB at creation time.
+     * ID of the Greenplum® cluster. The ID is assigned by Yandex.Cloud at creation time.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -691,7 +711,7 @@ public final class GPH {
     private volatile java.lang.Object zoneId_;
     /**
      * <pre>
-     * ID of the availability zone where the Greenplum host resides.
+     * ID of the availability zone the Greenplum® host belongs to.
      * </pre>
      *
      * <code>string zone_id = 3;</code>
@@ -710,7 +730,7 @@ public final class GPH {
     }
     /**
      * <pre>
-     * ID of the availability zone where the Greenplum host resides.
+     * ID of the availability zone the Greenplum® host belongs to.
      * </pre>
      *
      * <code>string zone_id = 3;</code>
@@ -748,17 +768,17 @@ public final class GPH {
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
      */
-    public yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Type getType() {
+    public yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type getType() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Type result = yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Type.valueOf(type_);
-      return result == null ? yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Type.UNRECOGNIZED : result;
+      yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type result = yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type.valueOf(type_);
+      return result == null ? yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type.UNRECOGNIZED : result;
     }
 
     public static final int RESOURCES_FIELD_NUMBER = 5;
-    private yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources resources_;
+    private yandex.cloud.api.mdb.greenplum.v1.Config.Resources resources_;
     /**
      * <pre>
-     * Resources allocated to the Greenplum host.
+     * Resources allocated to the Greenplum® host.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
@@ -768,22 +788,22 @@ public final class GPH {
     }
     /**
      * <pre>
-     * Resources allocated to the Greenplum host.
+     * Resources allocated to the Greenplum® host.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
      */
-    public yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources getResources() {
-      return resources_ == null ? yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources.getDefaultInstance() : resources_;
+    public yandex.cloud.api.mdb.greenplum.v1.Config.Resources getResources() {
+      return resources_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.Resources.getDefaultInstance() : resources_;
     }
     /**
      * <pre>
-     * Resources allocated to the Greenplum host.
+     * Resources allocated to the Greenplum® host.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
      */
-    public yandex.cloud.api.mdb.greenplum.v1.GPCF.ResourcesOrBuilder getResourcesOrBuilder() {
+    public yandex.cloud.api.mdb.greenplum.v1.Config.ResourcesOrBuilder getResourcesOrBuilder() {
       return getResources();
     }
 
@@ -806,10 +826,10 @@ public final class GPH {
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
      */
-    public yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Health getHealth() {
+    public yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health getHealth() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Health result = yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Health.valueOf(health_);
-      return result == null ? yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Health.UNRECOGNIZED : result;
+      yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health result = yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health.valueOf(health_);
+      return result == null ? yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health.UNRECOGNIZED : result;
     }
 
     public static final int SUBNET_ID_FIELD_NUMBER = 7;
@@ -858,7 +878,7 @@ public final class GPH {
     private boolean assignPublicIp_;
     /**
      * <pre>
-     * Flag showing public IP assignment status to this host.
+     * Whether or not a public IP is assigned to the host.
      * </pre>
      *
      * <code>bool assign_public_ip = 8;</code>
@@ -890,13 +910,13 @@ public final class GPH {
       if (!getZoneIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, zoneId_);
       }
-      if (type_ != yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Type.TYPE_UNSPECIFIED.getNumber()) {
+      if (type_ != yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type.TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(4, type_);
       }
       if (resources_ != null) {
         output.writeMessage(5, getResources());
       }
-      if (health_ != yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Health.UNKNOWN.getNumber()) {
+      if (health_ != yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health.UNKNOWN.getNumber()) {
         output.writeEnum(6, health_);
       }
       if (!getSubnetIdBytes().isEmpty()) {
@@ -923,7 +943,7 @@ public final class GPH {
       if (!getZoneIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, zoneId_);
       }
-      if (type_ != yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Type.TYPE_UNSPECIFIED.getNumber()) {
+      if (type_ != yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type.TYPE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, type_);
       }
@@ -931,7 +951,7 @@ public final class GPH {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getResources());
       }
-      if (health_ != yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Health.UNKNOWN.getNumber()) {
+      if (health_ != yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health.UNKNOWN.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, health_);
       }
@@ -952,10 +972,10 @@ public final class GPH {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.GPH.Host)) {
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.mdb.greenplum.v1.GPH.Host other = (yandex.cloud.api.mdb.greenplum.v1.GPH.Host) obj;
+      yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host other = (yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host) obj;
 
       boolean result = true;
       result = result && getName()
@@ -1010,69 +1030,69 @@ public final class GPH {
       return hash;
     }
 
-    public static yandex.cloud.api.mdb.greenplum.v1.GPH.Host parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPH.Host parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPH.Host parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPH.Host parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPH.Host parseFrom(byte[] data)
+    public static yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPH.Host parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPH.Host parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPH.Host parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPH.Host parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPH.Host parseDelimitedFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPH.Host parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPH.Host parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1085,7 +1105,7 @@ public final class GPH {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.GPH.Host prototype) {
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1101,26 +1121,30 @@ public final class GPH {
       return builder;
     }
     /**
+     * <pre>
+     * A Greenplum® cluster host resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.Host}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.Host)
-        yandex.cloud.api.mdb.greenplum.v1.GPH.HostOrBuilder {
+        yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.HostOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPH.internal_static_yandex_cloud_mdb_greenplum_v1_Host_descriptor;
+        return yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.internal_static_yandex_cloud_mdb_greenplum_v1_Host_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPH.internal_static_yandex_cloud_mdb_greenplum_v1_Host_fieldAccessorTable
+        return yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.internal_static_yandex_cloud_mdb_greenplum_v1_Host_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.mdb.greenplum.v1.GPH.Host.class, yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Builder.class);
+                yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.class, yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.mdb.greenplum.v1.GPH.Host.newBuilder()
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1164,17 +1188,17 @@ public final class GPH {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPH.internal_static_yandex_cloud_mdb_greenplum_v1_Host_descriptor;
+        return yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.internal_static_yandex_cloud_mdb_greenplum_v1_Host_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.mdb.greenplum.v1.GPH.Host getDefaultInstanceForType() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPH.Host.getDefaultInstance();
+      public yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.mdb.greenplum.v1.GPH.Host build() {
-        yandex.cloud.api.mdb.greenplum.v1.GPH.Host result = buildPartial();
+      public yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host build() {
+        yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1182,8 +1206,8 @@ public final class GPH {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.mdb.greenplum.v1.GPH.Host buildPartial() {
-        yandex.cloud.api.mdb.greenplum.v1.GPH.Host result = new yandex.cloud.api.mdb.greenplum.v1.GPH.Host(this);
+      public yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host result = new yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host(this);
         result.name_ = name_;
         result.clusterId_ = clusterId_;
         result.zoneId_ = zoneId_;
@@ -1234,16 +1258,16 @@ public final class GPH {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.GPH.Host) {
-          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.GPH.Host)other);
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.GPH.Host other) {
-        if (other == yandex.cloud.api.mdb.greenplum.v1.GPH.Host.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
@@ -1287,11 +1311,11 @@ public final class GPH {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.mdb.greenplum.v1.GPH.Host parsedMessage = null;
+        yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.GPH.Host) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1304,7 +1328,7 @@ public final class GPH {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the Greenplum host. The host name is assigned by MDB at creation time, and cannot be changed.
+       * Name of the Greenplum® host. The host name is assigned by Yandex.Cloud at creation time and cannot be changed.
        * 1-63 characters long.
        * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
        * </pre>
@@ -1325,7 +1349,7 @@ public final class GPH {
       }
       /**
        * <pre>
-       * Name of the Greenplum host. The host name is assigned by MDB at creation time, and cannot be changed.
+       * Name of the Greenplum® host. The host name is assigned by Yandex.Cloud at creation time and cannot be changed.
        * 1-63 characters long.
        * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
        * </pre>
@@ -1347,7 +1371,7 @@ public final class GPH {
       }
       /**
        * <pre>
-       * Name of the Greenplum host. The host name is assigned by MDB at creation time, and cannot be changed.
+       * Name of the Greenplum® host. The host name is assigned by Yandex.Cloud at creation time and cannot be changed.
        * 1-63 characters long.
        * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
        * </pre>
@@ -1366,7 +1390,7 @@ public final class GPH {
       }
       /**
        * <pre>
-       * Name of the Greenplum host. The host name is assigned by MDB at creation time, and cannot be changed.
+       * Name of the Greenplum® host. The host name is assigned by Yandex.Cloud at creation time and cannot be changed.
        * 1-63 characters long.
        * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
        * </pre>
@@ -1381,7 +1405,7 @@ public final class GPH {
       }
       /**
        * <pre>
-       * Name of the Greenplum host. The host name is assigned by MDB at creation time, and cannot be changed.
+       * Name of the Greenplum® host. The host name is assigned by Yandex.Cloud at creation time and cannot be changed.
        * 1-63 characters long.
        * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
        * </pre>
@@ -1403,7 +1427,7 @@ public final class GPH {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Greenplum cluster. The ID is assigned by MDB at creation time.
+       * ID of the Greenplum® cluster. The ID is assigned by Yandex.Cloud at creation time.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1422,7 +1446,7 @@ public final class GPH {
       }
       /**
        * <pre>
-       * ID of the Greenplum cluster. The ID is assigned by MDB at creation time.
+       * ID of the Greenplum® cluster. The ID is assigned by Yandex.Cloud at creation time.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1442,7 +1466,7 @@ public final class GPH {
       }
       /**
        * <pre>
-       * ID of the Greenplum cluster. The ID is assigned by MDB at creation time.
+       * ID of the Greenplum® cluster. The ID is assigned by Yandex.Cloud at creation time.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1459,7 +1483,7 @@ public final class GPH {
       }
       /**
        * <pre>
-       * ID of the Greenplum cluster. The ID is assigned by MDB at creation time.
+       * ID of the Greenplum® cluster. The ID is assigned by Yandex.Cloud at creation time.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1472,7 +1496,7 @@ public final class GPH {
       }
       /**
        * <pre>
-       * ID of the Greenplum cluster. The ID is assigned by MDB at creation time.
+       * ID of the Greenplum® cluster. The ID is assigned by Yandex.Cloud at creation time.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1492,7 +1516,7 @@ public final class GPH {
       private java.lang.Object zoneId_ = "";
       /**
        * <pre>
-       * ID of the availability zone where the Greenplum host resides.
+       * ID of the availability zone the Greenplum® host belongs to.
        * </pre>
        *
        * <code>string zone_id = 3;</code>
@@ -1511,7 +1535,7 @@ public final class GPH {
       }
       /**
        * <pre>
-       * ID of the availability zone where the Greenplum host resides.
+       * ID of the availability zone the Greenplum® host belongs to.
        * </pre>
        *
        * <code>string zone_id = 3;</code>
@@ -1531,7 +1555,7 @@ public final class GPH {
       }
       /**
        * <pre>
-       * ID of the availability zone where the Greenplum host resides.
+       * ID of the availability zone the Greenplum® host belongs to.
        * </pre>
        *
        * <code>string zone_id = 3;</code>
@@ -1548,7 +1572,7 @@ public final class GPH {
       }
       /**
        * <pre>
-       * ID of the availability zone where the Greenplum host resides.
+       * ID of the availability zone the Greenplum® host belongs to.
        * </pre>
        *
        * <code>string zone_id = 3;</code>
@@ -1561,7 +1585,7 @@ public final class GPH {
       }
       /**
        * <pre>
-       * ID of the availability zone where the Greenplum host resides.
+       * ID of the availability zone the Greenplum® host belongs to.
        * </pre>
        *
        * <code>string zone_id = 3;</code>
@@ -1608,10 +1632,10 @@ public final class GPH {
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
        */
-      public yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Type getType() {
+      public yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type getType() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Type result = yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Type.valueOf(type_);
-        return result == null ? yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Type.UNRECOGNIZED : result;
+        yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type result = yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type.valueOf(type_);
+        return result == null ? yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -1620,7 +1644,7 @@ public final class GPH {
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
        */
-      public Builder setType(yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Type value) {
+      public Builder setType(yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Type value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -1643,12 +1667,12 @@ public final class GPH {
         return this;
       }
 
-      private yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources resources_ = null;
+      private yandex.cloud.api.mdb.greenplum.v1.Config.Resources resources_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources, yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources.Builder, yandex.cloud.api.mdb.greenplum.v1.GPCF.ResourcesOrBuilder> resourcesBuilder_;
+          yandex.cloud.api.mdb.greenplum.v1.Config.Resources, yandex.cloud.api.mdb.greenplum.v1.Config.Resources.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.ResourcesOrBuilder> resourcesBuilder_;
       /**
        * <pre>
-       * Resources allocated to the Greenplum host.
+       * Resources allocated to the Greenplum® host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
@@ -1658,26 +1682,26 @@ public final class GPH {
       }
       /**
        * <pre>
-       * Resources allocated to the Greenplum host.
+       * Resources allocated to the Greenplum® host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
        */
-      public yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources getResources() {
+      public yandex.cloud.api.mdb.greenplum.v1.Config.Resources getResources() {
         if (resourcesBuilder_ == null) {
-          return resources_ == null ? yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources.getDefaultInstance() : resources_;
+          return resources_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.Resources.getDefaultInstance() : resources_;
         } else {
           return resourcesBuilder_.getMessage();
         }
       }
       /**
        * <pre>
-       * Resources allocated to the Greenplum host.
+       * Resources allocated to the Greenplum® host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
        */
-      public Builder setResources(yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources value) {
+      public Builder setResources(yandex.cloud.api.mdb.greenplum.v1.Config.Resources value) {
         if (resourcesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1692,13 +1716,13 @@ public final class GPH {
       }
       /**
        * <pre>
-       * Resources allocated to the Greenplum host.
+       * Resources allocated to the Greenplum® host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
        */
       public Builder setResources(
-          yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources.Builder builderForValue) {
+          yandex.cloud.api.mdb.greenplum.v1.Config.Resources.Builder builderForValue) {
         if (resourcesBuilder_ == null) {
           resources_ = builderForValue.build();
           onChanged();
@@ -1710,16 +1734,16 @@ public final class GPH {
       }
       /**
        * <pre>
-       * Resources allocated to the Greenplum host.
+       * Resources allocated to the Greenplum® host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
        */
-      public Builder mergeResources(yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources value) {
+      public Builder mergeResources(yandex.cloud.api.mdb.greenplum.v1.Config.Resources value) {
         if (resourcesBuilder_ == null) {
           if (resources_ != null) {
             resources_ =
-              yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources.newBuilder(resources_).mergeFrom(value).buildPartial();
+              yandex.cloud.api.mdb.greenplum.v1.Config.Resources.newBuilder(resources_).mergeFrom(value).buildPartial();
           } else {
             resources_ = value;
           }
@@ -1732,7 +1756,7 @@ public final class GPH {
       }
       /**
        * <pre>
-       * Resources allocated to the Greenplum host.
+       * Resources allocated to the Greenplum® host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
@@ -1750,44 +1774,44 @@ public final class GPH {
       }
       /**
        * <pre>
-       * Resources allocated to the Greenplum host.
+       * Resources allocated to the Greenplum® host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
        */
-      public yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources.Builder getResourcesBuilder() {
+      public yandex.cloud.api.mdb.greenplum.v1.Config.Resources.Builder getResourcesBuilder() {
         
         onChanged();
         return getResourcesFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Resources allocated to the Greenplum host.
+       * Resources allocated to the Greenplum® host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
        */
-      public yandex.cloud.api.mdb.greenplum.v1.GPCF.ResourcesOrBuilder getResourcesOrBuilder() {
+      public yandex.cloud.api.mdb.greenplum.v1.Config.ResourcesOrBuilder getResourcesOrBuilder() {
         if (resourcesBuilder_ != null) {
           return resourcesBuilder_.getMessageOrBuilder();
         } else {
           return resources_ == null ?
-              yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources.getDefaultInstance() : resources_;
+              yandex.cloud.api.mdb.greenplum.v1.Config.Resources.getDefaultInstance() : resources_;
         }
       }
       /**
        * <pre>
-       * Resources allocated to the Greenplum host.
+       * Resources allocated to the Greenplum® host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Resources resources = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources, yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources.Builder, yandex.cloud.api.mdb.greenplum.v1.GPCF.ResourcesOrBuilder> 
+          yandex.cloud.api.mdb.greenplum.v1.Config.Resources, yandex.cloud.api.mdb.greenplum.v1.Config.Resources.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.ResourcesOrBuilder> 
           getResourcesFieldBuilder() {
         if (resourcesBuilder_ == null) {
           resourcesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources, yandex.cloud.api.mdb.greenplum.v1.GPCF.Resources.Builder, yandex.cloud.api.mdb.greenplum.v1.GPCF.ResourcesOrBuilder>(
+              yandex.cloud.api.mdb.greenplum.v1.Config.Resources, yandex.cloud.api.mdb.greenplum.v1.Config.Resources.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.ResourcesOrBuilder>(
                   getResources(),
                   getParentForChildren(),
                   isClean());
@@ -1826,10 +1850,10 @@ public final class GPH {
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
        */
-      public yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Health getHealth() {
+      public yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health getHealth() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Health result = yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Health.valueOf(health_);
-        return result == null ? yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Health.UNRECOGNIZED : result;
+        yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health result = yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health.valueOf(health_);
+        return result == null ? yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -1838,7 +1862,7 @@ public final class GPH {
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
        */
-      public Builder setHealth(yandex.cloud.api.mdb.greenplum.v1.GPH.Host.Health value) {
+      public Builder setHealth(yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host.Health value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -1953,7 +1977,7 @@ public final class GPH {
       private boolean assignPublicIp_ ;
       /**
        * <pre>
-       * Flag showing public IP assignment status to this host.
+       * Whether or not a public IP is assigned to the host.
        * </pre>
        *
        * <code>bool assign_public_ip = 8;</code>
@@ -1963,7 +1987,7 @@ public final class GPH {
       }
       /**
        * <pre>
-       * Flag showing public IP assignment status to this host.
+       * Whether or not a public IP is assigned to the host.
        * </pre>
        *
        * <code>bool assign_public_ip = 8;</code>
@@ -1976,7 +2000,7 @@ public final class GPH {
       }
       /**
        * <pre>
-       * Flag showing public IP assignment status to this host.
+       * Whether or not a public IP is assigned to the host.
        * </pre>
        *
        * <code>bool assign_public_ip = 8;</code>
@@ -2004,12 +2028,12 @@ public final class GPH {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.Host)
-    private static final yandex.cloud.api.mdb.greenplum.v1.GPH.Host DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.GPH.Host();
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host();
     }
 
-    public static yandex.cloud.api.mdb.greenplum.v1.GPH.Host getDefaultInstance() {
+    public static yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2034,7 +2058,7 @@ public final class GPH {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.mdb.greenplum.v1.GPH.Host getDefaultInstanceForType() {
+    public yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.Host getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2068,10 +2092,10 @@ public final class GPH {
       " \001(\010\"B\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006MA" +
       "STER\020\001\022\013\n\007REPLICA\020\002\022\013\n\007SEGMENT\020\003\"H\n\006Heal" +
       "th\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010" +
-      "DEGRADED\020\003\022\016\n\nUNBALANCED\020\004Bu\n!yandex.clo" +
-      "ud.api.mdb.greenplum.v1B\003GPHZKgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/m" +
-      "db/greenplum/v1;greenplumb\006proto3"
+      "DEGRADED\020\003\022\016\n\nUNBALANCED\020\004Bp\n!yandex.clo" +
+      "ud.api.mdb.greenplum.v1ZKgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/mdb/gr" +
+      "eenplum/v1;greenplumb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2084,7 +2108,7 @@ public final class GPH {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          yandex.cloud.api.mdb.greenplum.v1.GPCF.getDescriptor(),
+          yandex.cloud.api.mdb.greenplum.v1.Config.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_mdb_greenplum_v1_Host_descriptor =
@@ -2099,7 +2123,7 @@ public final class GPH {
     registry.add(yandex.cloud.api.Validation.required);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    yandex.cloud.api.mdb.greenplum.v1.GPCF.getDescriptor();
+    yandex.cloud.api.mdb.greenplum.v1.Config.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

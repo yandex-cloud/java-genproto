@@ -17,7 +17,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * A set of methods for managing Greenplum clusters.
+ * A set of methods for managing Greenplum® clusters.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -30,30 +30,30 @@ public final class ClusterServiceGrpc {
   public static final String SERVICE_NAME = "yandex.cloud.mdb.greenplum.v1.ClusterService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.GetClusterRequest,
-      yandex.cloud.api.mdb.greenplum.v1.GPC.Cluster> getGetMethod;
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.GetClusterRequest,
+      yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.Cluster> getGetMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Get",
-      requestType = yandex.cloud.api.mdb.greenplum.v1.GPCS.GetClusterRequest.class,
-      responseType = yandex.cloud.api.mdb.greenplum.v1.GPC.Cluster.class,
+      requestType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.GetClusterRequest.class,
+      responseType = yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.Cluster.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.GetClusterRequest,
-      yandex.cloud.api.mdb.greenplum.v1.GPC.Cluster> getGetMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.GetClusterRequest, yandex.cloud.api.mdb.greenplum.v1.GPC.Cluster> getGetMethod;
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.GetClusterRequest,
+      yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.Cluster> getGetMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.GetClusterRequest, yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.Cluster> getGetMethod;
     if ((getGetMethod = ClusterServiceGrpc.getGetMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getGetMethod = ClusterServiceGrpc.getGetMethod) == null) {
           ClusterServiceGrpc.getGetMethod = getGetMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.GPCS.GetClusterRequest, yandex.cloud.api.mdb.greenplum.v1.GPC.Cluster>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.GetClusterRequest, yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.Cluster>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "yandex.cloud.mdb.greenplum.v1.ClusterService", "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.greenplum.v1.GPCS.GetClusterRequest.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.GetClusterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.greenplum.v1.GPC.Cluster.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.Cluster.getDefaultInstance()))
                   .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Get"))
                   .build();
           }
@@ -62,30 +62,30 @@ public final class ClusterServiceGrpc {
      return getGetMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersRequest,
-      yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersResponse> getListMethod;
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersRequest,
+      yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersResponse> getListMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "List",
-      requestType = yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersRequest.class,
-      responseType = yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersResponse.class,
+      requestType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersRequest.class,
+      responseType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersRequest,
-      yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersResponse> getListMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersRequest, yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersResponse> getListMethod;
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersRequest,
+      yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersResponse> getListMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersRequest, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersResponse> getListMethod;
     if ((getListMethod = ClusterServiceGrpc.getListMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getListMethod = ClusterServiceGrpc.getListMethod) == null) {
           ClusterServiceGrpc.getListMethod = getListMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersRequest, yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersResponse>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersRequest, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "yandex.cloud.mdb.greenplum.v1.ClusterService", "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersRequest.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersResponse.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("List"))
                   .build();
           }
@@ -94,28 +94,28 @@ public final class ClusterServiceGrpc {
      return getListMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.CreateClusterRequest,
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.CreateClusterRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Create",
-      requestType = yandex.cloud.api.mdb.greenplum.v1.GPCS.CreateClusterRequest.class,
+      requestType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.CreateClusterRequest.class,
       responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.CreateClusterRequest,
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.CreateClusterRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.CreateClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.CreateClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
     if ((getCreateMethod = ClusterServiceGrpc.getCreateMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getCreateMethod = ClusterServiceGrpc.getCreateMethod) == null) {
           ClusterServiceGrpc.getCreateMethod = getCreateMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.GPCS.CreateClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.CreateClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "yandex.cloud.mdb.greenplum.v1.ClusterService", "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.greenplum.v1.GPCS.CreateClusterRequest.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.CreateClusterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
                   .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Create"))
@@ -126,28 +126,28 @@ public final class ClusterServiceGrpc {
      return getCreateMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest,
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.UpdateClusterRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Update",
-      requestType = yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest.class,
+      requestType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.UpdateClusterRequest.class,
       responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest,
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.UpdateClusterRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateMethod;
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.UpdateClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateMethod;
     if ((getUpdateMethod = ClusterServiceGrpc.getUpdateMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getUpdateMethod = ClusterServiceGrpc.getUpdateMethod) == null) {
           ClusterServiceGrpc.getUpdateMethod = getUpdateMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.UpdateClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "yandex.cloud.mdb.greenplum.v1.ClusterService", "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.UpdateClusterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
                   .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Update"))
@@ -158,28 +158,28 @@ public final class ClusterServiceGrpc {
      return getUpdateMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.DeleteClusterRequest,
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.DeleteClusterRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Delete",
-      requestType = yandex.cloud.api.mdb.greenplum.v1.GPCS.DeleteClusterRequest.class,
+      requestType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.DeleteClusterRequest.class,
       responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.DeleteClusterRequest,
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.DeleteClusterRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.DeleteClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.DeleteClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
     if ((getDeleteMethod = ClusterServiceGrpc.getDeleteMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getDeleteMethod = ClusterServiceGrpc.getDeleteMethod) == null) {
           ClusterServiceGrpc.getDeleteMethod = getDeleteMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.GPCS.DeleteClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.DeleteClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "yandex.cloud.mdb.greenplum.v1.ClusterService", "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.greenplum.v1.GPCS.DeleteClusterRequest.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.DeleteClusterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
                   .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Delete"))
@@ -190,28 +190,28 @@ public final class ClusterServiceGrpc {
      return getDeleteMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.StartClusterRequest,
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StartClusterRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getStartMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Start",
-      requestType = yandex.cloud.api.mdb.greenplum.v1.GPCS.StartClusterRequest.class,
+      requestType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StartClusterRequest.class,
       responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.StartClusterRequest,
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StartClusterRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getStartMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.StartClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getStartMethod;
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StartClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getStartMethod;
     if ((getStartMethod = ClusterServiceGrpc.getStartMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getStartMethod = ClusterServiceGrpc.getStartMethod) == null) {
           ClusterServiceGrpc.getStartMethod = getStartMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.GPCS.StartClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StartClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "yandex.cloud.mdb.greenplum.v1.ClusterService", "Start"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.greenplum.v1.GPCS.StartClusterRequest.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StartClusterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
                   .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Start"))
@@ -222,28 +222,28 @@ public final class ClusterServiceGrpc {
      return getStartMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.StopClusterRequest,
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StopClusterRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getStopMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Stop",
-      requestType = yandex.cloud.api.mdb.greenplum.v1.GPCS.StopClusterRequest.class,
+      requestType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StopClusterRequest.class,
       responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.StopClusterRequest,
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StopClusterRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getStopMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.StopClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getStopMethod;
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StopClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getStopMethod;
     if ((getStopMethod = ClusterServiceGrpc.getStopMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getStopMethod = ClusterServiceGrpc.getStopMethod) == null) {
           ClusterServiceGrpc.getStopMethod = getStopMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.GPCS.StopClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StopClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "yandex.cloud.mdb.greenplum.v1.ClusterService", "Stop"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.greenplum.v1.GPCS.StopClusterRequest.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StopClusterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
                   .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Stop"))
@@ -254,30 +254,30 @@ public final class ClusterServiceGrpc {
      return getStopMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsRequest,
-      yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsResponse> getListOperationsMethod;
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsRequest,
+      yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> getListOperationsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "ListOperations",
-      requestType = yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsRequest.class,
-      responseType = yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsResponse.class,
+      requestType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsRequest.class,
+      responseType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsRequest,
-      yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsResponse> getListOperationsMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsRequest, yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsResponse> getListOperationsMethod;
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsRequest,
+      yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> getListOperationsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsRequest, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> getListOperationsMethod;
     if ((getListOperationsMethod = ClusterServiceGrpc.getListOperationsMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getListOperationsMethod = ClusterServiceGrpc.getListOperationsMethod) == null) {
           ClusterServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsRequest, yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsResponse>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsRequest, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "yandex.cloud.mdb.greenplum.v1.ClusterService", "ListOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsRequest.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsResponse.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListOperations"))
                   .build();
           }
@@ -286,30 +286,30 @@ public final class ClusterServiceGrpc {
      return getListOperationsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest,
-      yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse> getListMasterHostsMethod;
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest,
+      yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse> getListMasterHostsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "ListMasterHosts",
-      requestType = yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest.class,
-      responseType = yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse.class,
+      requestType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest.class,
+      responseType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest,
-      yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse> getListMasterHostsMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest, yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse> getListMasterHostsMethod;
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest,
+      yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse> getListMasterHostsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse> getListMasterHostsMethod;
     if ((getListMasterHostsMethod = ClusterServiceGrpc.getListMasterHostsMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getListMasterHostsMethod = ClusterServiceGrpc.getListMasterHostsMethod) == null) {
           ClusterServiceGrpc.getListMasterHostsMethod = getListMasterHostsMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest, yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "yandex.cloud.mdb.greenplum.v1.ClusterService", "ListMasterHosts"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListMasterHosts"))
                   .build();
           }
@@ -318,30 +318,30 @@ public final class ClusterServiceGrpc {
      return getListMasterHostsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest,
-      yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse> getListSegmentHostsMethod;
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest,
+      yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse> getListSegmentHostsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "ListSegmentHosts",
-      requestType = yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest.class,
-      responseType = yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse.class,
+      requestType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest.class,
+      responseType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest,
-      yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse> getListSegmentHostsMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest, yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse> getListSegmentHostsMethod;
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest,
+      yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse> getListSegmentHostsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse> getListSegmentHostsMethod;
     if ((getListSegmentHostsMethod = ClusterServiceGrpc.getListSegmentHostsMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getListSegmentHostsMethod = ClusterServiceGrpc.getListSegmentHostsMethod) == null) {
           ClusterServiceGrpc.getListSegmentHostsMethod = getListSegmentHostsMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest, yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "yandex.cloud.mdb.greenplum.v1.ClusterService", "ListSegmentHosts"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListSegmentHosts"))
                   .build();
           }
@@ -350,30 +350,30 @@ public final class ClusterServiceGrpc {
      return getListSegmentHostsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest,
-      yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse> getListLogsMethod;
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsRequest,
+      yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsResponse> getListLogsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "ListLogs",
-      requestType = yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.class,
-      responseType = yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse.class,
+      requestType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsRequest.class,
+      responseType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest,
-      yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse> getListLogsMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest, yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse> getListLogsMethod;
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsRequest,
+      yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsResponse> getListLogsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsRequest, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsResponse> getListLogsMethod;
     if ((getListLogsMethod = ClusterServiceGrpc.getListLogsMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getListLogsMethod = ClusterServiceGrpc.getListLogsMethod) == null) {
           ClusterServiceGrpc.getListLogsMethod = getListLogsMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest, yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsRequest, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "yandex.cloud.mdb.greenplum.v1.ClusterService", "ListLogs"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListLogs"))
                   .build();
           }
@@ -407,79 +407,78 @@ public final class ClusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Greenplum clusters.
+   * A set of methods for managing Greenplum® clusters.
    * </pre>
    */
   public static abstract class ClusterServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Returns the specified Greenplum cluster.
-     * To get the list of available Greenplum clusters, make a [List] request.
+     * Returns the specified Greenplum® cluster.
+     * To get the list of available Greenplum® clusters, make a [List] request.
      * </pre>
      */
-    public void get(yandex.cloud.api.mdb.greenplum.v1.GPCS.GetClusterRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPC.Cluster> responseObserver) {
+    public void get(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.GetClusterRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.Cluster> responseObserver) {
       asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
      * <pre>
-     * Retrieves a list of Greenplum clusters that belong
-     * to the specified folder.
+     * Retrieves a list of Greenplum® clusters that belong to the specified folder.
      * </pre>
      */
-    public void list(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersResponse> responseObserver) {
+    public void list(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
      * <pre>
-     * Creates a Greenplum cluster in the specified folder.
+     * Creates a Greenplum® cluster in the specified folder.
      * </pre>
      */
-    public void create(yandex.cloud.api.mdb.greenplum.v1.GPCS.CreateClusterRequest request,
+    public void create(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.CreateClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
      * <pre>
-     * Updates the specified Greenplum cluster.
+     * Updates the specified Greenplum® cluster.
      * </pre>
      */
-    public void update(yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest request,
+    public void update(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.UpdateClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
      * <pre>
-     * Deletes the specified Greenplum cluster.
+     * Deletes the specified Greenplum® cluster.
      * </pre>
      */
-    public void delete(yandex.cloud.api.mdb.greenplum.v1.GPCS.DeleteClusterRequest request,
+    public void delete(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.DeleteClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
      * <pre>
-     * Starts the specified Greenplum cluster.
+     * Starts the specified Greenplum® cluster.
      * </pre>
      */
-    public void start(yandex.cloud.api.mdb.greenplum.v1.GPCS.StartClusterRequest request,
+    public void start(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StartClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getStartMethod(), responseObserver);
     }
 
     /**
      * <pre>
-     * Stops the specified Greenplum cluster.
+     * Stops the specified Greenplum® cluster.
      * </pre>
      */
-    public void stop(yandex.cloud.api.mdb.greenplum.v1.GPCS.StopClusterRequest request,
+    public void stop(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StopClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getStopMethod(), responseObserver);
     }
@@ -489,8 +488,8 @@ public final class ClusterServiceGrpc {
      * Retrieves the list of Operation resources for the specified cluster.
      * </pre>
      */
-    public void listOperations(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsResponse> responseObserver) {
+    public void listOperations(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
@@ -499,8 +498,8 @@ public final class ClusterServiceGrpc {
      * Retrieves a list of master hosts for the specified cluster.
      * </pre>
      */
-    public void listMasterHosts(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse> responseObserver) {
+    public void listMasterHosts(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getListMasterHostsMethod(), responseObserver);
     }
 
@@ -509,18 +508,18 @@ public final class ClusterServiceGrpc {
      * Retrieves a list of segment hosts for the specified cluster.
      * </pre>
      */
-    public void listSegmentHosts(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse> responseObserver) {
+    public void listSegmentHosts(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getListSegmentHostsMethod(), responseObserver);
     }
 
     /**
      * <pre>
-     * Retrieves logs for the specified Greenplum cluster.
+     * Retrieves logs for the specified Greenplum® cluster.
      * </pre>
      */
-    public void listLogs(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse> responseObserver) {
+    public void listLogs(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getListLogsMethod(), responseObserver);
     }
 
@@ -530,78 +529,78 @@ public final class ClusterServiceGrpc {
             getGetMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.api.mdb.greenplum.v1.GPCS.GetClusterRequest,
-                yandex.cloud.api.mdb.greenplum.v1.GPC.Cluster>(
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.GetClusterRequest,
+                yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.Cluster>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersRequest,
-                yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersResponse>(
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersRequest,
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.api.mdb.greenplum.v1.GPCS.CreateClusterRequest,
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.CreateClusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest,
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.UpdateClusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.api.mdb.greenplum.v1.GPCS.DeleteClusterRequest,
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.DeleteClusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
           .addMethod(
             getStartMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.api.mdb.greenplum.v1.GPCS.StartClusterRequest,
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StartClusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_START)))
           .addMethod(
             getStopMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.api.mdb.greenplum.v1.GPCS.StopClusterRequest,
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StopClusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_STOP)))
           .addMethod(
             getListOperationsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsRequest,
-                yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsResponse>(
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsRequest,
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
           .addMethod(
             getListMasterHostsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest,
-                yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse>(
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest,
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse>(
                   this, METHODID_LIST_MASTER_HOSTS)))
           .addMethod(
             getListSegmentHostsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest,
-                yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse>(
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest,
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse>(
                   this, METHODID_LIST_SEGMENT_HOSTS)))
           .addMethod(
             getListLogsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest,
-                yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse>(
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsRequest,
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsResponse>(
                   this, METHODID_LIST_LOGS)))
           .build();
     }
@@ -609,7 +608,7 @@ public final class ClusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Greenplum clusters.
+   * A set of methods for managing Greenplum® clusters.
    * </pre>
    */
   public static final class ClusterServiceStub extends io.grpc.stub.AbstractStub<ClusterServiceStub> {
@@ -630,34 +629,33 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Greenplum cluster.
-     * To get the list of available Greenplum clusters, make a [List] request.
+     * Returns the specified Greenplum® cluster.
+     * To get the list of available Greenplum® clusters, make a [List] request.
      * </pre>
      */
-    public void get(yandex.cloud.api.mdb.greenplum.v1.GPCS.GetClusterRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPC.Cluster> responseObserver) {
+    public void get(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.GetClusterRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.Cluster> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      * <pre>
-     * Retrieves a list of Greenplum clusters that belong
-     * to the specified folder.
+     * Retrieves a list of Greenplum® clusters that belong to the specified folder.
      * </pre>
      */
-    public void list(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersResponse> responseObserver) {
+    public void list(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      * <pre>
-     * Creates a Greenplum cluster in the specified folder.
+     * Creates a Greenplum® cluster in the specified folder.
      * </pre>
      */
-    public void create(yandex.cloud.api.mdb.greenplum.v1.GPCS.CreateClusterRequest request,
+    public void create(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.CreateClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
@@ -665,10 +663,10 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Updates the specified Greenplum cluster.
+     * Updates the specified Greenplum® cluster.
      * </pre>
      */
-    public void update(yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest request,
+    public void update(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.UpdateClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
@@ -676,10 +674,10 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified Greenplum cluster.
+     * Deletes the specified Greenplum® cluster.
      * </pre>
      */
-    public void delete(yandex.cloud.api.mdb.greenplum.v1.GPCS.DeleteClusterRequest request,
+    public void delete(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.DeleteClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
@@ -687,10 +685,10 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Starts the specified Greenplum cluster.
+     * Starts the specified Greenplum® cluster.
      * </pre>
      */
-    public void start(yandex.cloud.api.mdb.greenplum.v1.GPCS.StartClusterRequest request,
+    public void start(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StartClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getStartMethod(), getCallOptions()), request, responseObserver);
@@ -698,10 +696,10 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Stops the specified Greenplum cluster.
+     * Stops the specified Greenplum® cluster.
      * </pre>
      */
-    public void stop(yandex.cloud.api.mdb.greenplum.v1.GPCS.StopClusterRequest request,
+    public void stop(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StopClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getStopMethod(), getCallOptions()), request, responseObserver);
@@ -712,8 +710,8 @@ public final class ClusterServiceGrpc {
      * Retrieves the list of Operation resources for the specified cluster.
      * </pre>
      */
-    public void listOperations(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsResponse> responseObserver) {
+    public void listOperations(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
@@ -723,8 +721,8 @@ public final class ClusterServiceGrpc {
      * Retrieves a list of master hosts for the specified cluster.
      * </pre>
      */
-    public void listMasterHosts(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse> responseObserver) {
+    public void listMasterHosts(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getListMasterHostsMethod(), getCallOptions()), request, responseObserver);
     }
@@ -734,19 +732,19 @@ public final class ClusterServiceGrpc {
      * Retrieves a list of segment hosts for the specified cluster.
      * </pre>
      */
-    public void listSegmentHosts(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse> responseObserver) {
+    public void listSegmentHosts(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getListSegmentHostsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      * <pre>
-     * Retrieves logs for the specified Greenplum cluster.
+     * Retrieves logs for the specified Greenplum® cluster.
      * </pre>
      */
-    public void listLogs(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse> responseObserver) {
+    public void listLogs(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getListLogsMethod(), getCallOptions()), request, responseObserver);
     }
@@ -754,7 +752,7 @@ public final class ClusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Greenplum clusters.
+   * A set of methods for managing Greenplum® clusters.
    * </pre>
    */
   public static final class ClusterServiceBlockingStub extends io.grpc.stub.AbstractStub<ClusterServiceBlockingStub> {
@@ -775,72 +773,71 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Greenplum cluster.
-     * To get the list of available Greenplum clusters, make a [List] request.
+     * Returns the specified Greenplum® cluster.
+     * To get the list of available Greenplum® clusters, make a [List] request.
      * </pre>
      */
-    public yandex.cloud.api.mdb.greenplum.v1.GPC.Cluster get(yandex.cloud.api.mdb.greenplum.v1.GPCS.GetClusterRequest request) {
+    public yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.Cluster get(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.GetClusterRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
     /**
      * <pre>
-     * Retrieves a list of Greenplum clusters that belong
-     * to the specified folder.
+     * Retrieves a list of Greenplum® clusters that belong to the specified folder.
      * </pre>
      */
-    public yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersResponse list(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersRequest request) {
+    public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersResponse list(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersRequest request) {
       return blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
     /**
      * <pre>
-     * Creates a Greenplum cluster in the specified folder.
+     * Creates a Greenplum® cluster in the specified folder.
      * </pre>
      */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.mdb.greenplum.v1.GPCS.CreateClusterRequest request) {
+    public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.CreateClusterRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
     /**
      * <pre>
-     * Updates the specified Greenplum cluster.
+     * Updates the specified Greenplum® cluster.
      * </pre>
      */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest request) {
+    public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.UpdateClusterRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
     /**
      * <pre>
-     * Deletes the specified Greenplum cluster.
+     * Deletes the specified Greenplum® cluster.
      * </pre>
      */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.mdb.greenplum.v1.GPCS.DeleteClusterRequest request) {
+    public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.DeleteClusterRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
     /**
      * <pre>
-     * Starts the specified Greenplum cluster.
+     * Starts the specified Greenplum® cluster.
      * </pre>
      */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation start(yandex.cloud.api.mdb.greenplum.v1.GPCS.StartClusterRequest request) {
+    public yandex.cloud.api.operation.OperationOuterClass.Operation start(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StartClusterRequest request) {
       return blockingUnaryCall(
           getChannel(), getStartMethod(), getCallOptions(), request);
     }
 
     /**
      * <pre>
-     * Stops the specified Greenplum cluster.
+     * Stops the specified Greenplum® cluster.
      * </pre>
      */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation stop(yandex.cloud.api.mdb.greenplum.v1.GPCS.StopClusterRequest request) {
+    public yandex.cloud.api.operation.OperationOuterClass.Operation stop(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StopClusterRequest request) {
       return blockingUnaryCall(
           getChannel(), getStopMethod(), getCallOptions(), request);
     }
@@ -850,7 +847,7 @@ public final class ClusterServiceGrpc {
      * Retrieves the list of Operation resources for the specified cluster.
      * </pre>
      */
-    public yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsResponse listOperations(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsRequest request) {
+    public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsResponse listOperations(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
@@ -860,7 +857,7 @@ public final class ClusterServiceGrpc {
      * Retrieves a list of master hosts for the specified cluster.
      * </pre>
      */
-    public yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse listMasterHosts(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest request) {
+    public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse listMasterHosts(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListMasterHostsMethod(), getCallOptions(), request);
     }
@@ -870,17 +867,17 @@ public final class ClusterServiceGrpc {
      * Retrieves a list of segment hosts for the specified cluster.
      * </pre>
      */
-    public yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse listSegmentHosts(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest request) {
+    public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse listSegmentHosts(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListSegmentHostsMethod(), getCallOptions(), request);
     }
 
     /**
      * <pre>
-     * Retrieves logs for the specified Greenplum cluster.
+     * Retrieves logs for the specified Greenplum® cluster.
      * </pre>
      */
-    public yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse listLogs(yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest request) {
+    public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsResponse listLogs(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListLogsMethod(), getCallOptions(), request);
     }
@@ -888,7 +885,7 @@ public final class ClusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Greenplum clusters.
+   * A set of methods for managing Greenplum® clusters.
    * </pre>
    */
   public static final class ClusterServiceFutureStub extends io.grpc.stub.AbstractStub<ClusterServiceFutureStub> {
@@ -909,79 +906,78 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Greenplum cluster.
-     * To get the list of available Greenplum clusters, make a [List] request.
+     * Returns the specified Greenplum® cluster.
+     * To get the list of available Greenplum® clusters, make a [List] request.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.greenplum.v1.GPC.Cluster> get(
-        yandex.cloud.api.mdb.greenplum.v1.GPCS.GetClusterRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.Cluster> get(
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.GetClusterRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
     /**
      * <pre>
-     * Retrieves a list of Greenplum clusters that belong
-     * to the specified folder.
+     * Retrieves a list of Greenplum® clusters that belong to the specified folder.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersResponse> list(
-        yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersResponse> list(
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
     /**
      * <pre>
-     * Creates a Greenplum cluster in the specified folder.
+     * Creates a Greenplum® cluster in the specified folder.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
-        yandex.cloud.api.mdb.greenplum.v1.GPCS.CreateClusterRequest request) {
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.CreateClusterRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
     /**
      * <pre>
-     * Updates the specified Greenplum cluster.
+     * Updates the specified Greenplum® cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
-        yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest request) {
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.UpdateClusterRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
     /**
      * <pre>
-     * Deletes the specified Greenplum cluster.
+     * Deletes the specified Greenplum® cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
-        yandex.cloud.api.mdb.greenplum.v1.GPCS.DeleteClusterRequest request) {
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.DeleteClusterRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
     /**
      * <pre>
-     * Starts the specified Greenplum cluster.
+     * Starts the specified Greenplum® cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> start(
-        yandex.cloud.api.mdb.greenplum.v1.GPCS.StartClusterRequest request) {
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StartClusterRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getStartMethod(), getCallOptions()), request);
     }
 
     /**
      * <pre>
-     * Stops the specified Greenplum cluster.
+     * Stops the specified Greenplum® cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> stop(
-        yandex.cloud.api.mdb.greenplum.v1.GPCS.StopClusterRequest request) {
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StopClusterRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getStopMethod(), getCallOptions()), request);
     }
@@ -991,8 +987,8 @@ public final class ClusterServiceGrpc {
      * Retrieves the list of Operation resources for the specified cluster.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsResponse> listOperations(
-        yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> listOperations(
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
@@ -1002,8 +998,8 @@ public final class ClusterServiceGrpc {
      * Retrieves a list of master hosts for the specified cluster.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse> listMasterHosts(
-        yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse> listMasterHosts(
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getListMasterHostsMethod(), getCallOptions()), request);
     }
@@ -1013,19 +1009,19 @@ public final class ClusterServiceGrpc {
      * Retrieves a list of segment hosts for the specified cluster.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse> listSegmentHosts(
-        yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse> listSegmentHosts(
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getListSegmentHostsMethod(), getCallOptions()), request);
     }
 
     /**
      * <pre>
-     * Retrieves logs for the specified Greenplum cluster.
+     * Retrieves logs for the specified Greenplum® cluster.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse> listLogs(
-        yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsResponse> listLogs(
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getListLogsMethod(), getCallOptions()), request);
     }
@@ -1061,48 +1057,48 @@ public final class ClusterServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET:
-          serviceImpl.get((yandex.cloud.api.mdb.greenplum.v1.GPCS.GetClusterRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPC.Cluster>) responseObserver);
+          serviceImpl.get((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.GetClusterRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.Cluster>) responseObserver);
           break;
         case METHODID_LIST:
-          serviceImpl.list((yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClustersResponse>) responseObserver);
+          serviceImpl.list((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClustersResponse>) responseObserver);
           break;
         case METHODID_CREATE:
-          serviceImpl.create((yandex.cloud.api.mdb.greenplum.v1.GPCS.CreateClusterRequest) request,
+          serviceImpl.create((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.CreateClusterRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_UPDATE:
-          serviceImpl.update((yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest) request,
+          serviceImpl.update((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.UpdateClusterRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_DELETE:
-          serviceImpl.delete((yandex.cloud.api.mdb.greenplum.v1.GPCS.DeleteClusterRequest) request,
+          serviceImpl.delete((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.DeleteClusterRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_START:
-          serviceImpl.start((yandex.cloud.api.mdb.greenplum.v1.GPCS.StartClusterRequest) request,
+          serviceImpl.start((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StartClusterRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_STOP:
-          serviceImpl.stop((yandex.cloud.api.mdb.greenplum.v1.GPCS.StopClusterRequest) request,
+          serviceImpl.stop((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StopClusterRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_LIST_OPERATIONS:
-          serviceImpl.listOperations((yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterOperationsResponse>) responseObserver);
+          serviceImpl.listOperations((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsResponse>) responseObserver);
           break;
         case METHODID_LIST_MASTER_HOSTS:
-          serviceImpl.listMasterHosts((yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse>) responseObserver);
+          serviceImpl.listMasterHosts((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse>) responseObserver);
           break;
         case METHODID_LIST_SEGMENT_HOSTS:
-          serviceImpl.listSegmentHosts((yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterHostsResponse>) responseObserver);
+          serviceImpl.listSegmentHosts((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterHostsResponse>) responseObserver);
           break;
         case METHODID_LIST_LOGS:
-          serviceImpl.listLogs((yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.GPCS.ListClusterLogsResponse>) responseObserver);
+          serviceImpl.listLogs((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1126,7 +1122,7 @@ public final class ClusterServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return yandex.cloud.api.mdb.greenplum.v1.GPCS.getDescriptor();
+      return yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.getDescriptor();
     }
 
     @java.lang.Override

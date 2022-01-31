@@ -3,8 +3,8 @@
 
 package yandex.cloud.api.mdb.greenplum.v1;
 
-public final class GPMONT {
-  private GPMONT() {}
+public final class Maintenance {
+  private Maintenance() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -19,34 +19,62 @@ public final class GPMONT {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * An any-time maintenance window.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
     boolean hasAnytime();
     /**
+     * <pre>
+     * An any-time maintenance window.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
-    yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow getAnytime();
+    yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow getAnytime();
     /**
+     * <pre>
+     * An any-time maintenance window.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
-    yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindowOrBuilder getAnytimeOrBuilder();
+    yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindowOrBuilder getAnytimeOrBuilder();
 
     /**
+     * <pre>
+     * A weekly maintenance window.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
      */
     boolean hasWeeklyMaintenanceWindow();
     /**
+     * <pre>
+     * A weekly maintenance window.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
      */
-    yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow getWeeklyMaintenanceWindow();
+    yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow getWeeklyMaintenanceWindow();
     /**
+     * <pre>
+     * A weekly maintenance window.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
      */
-    yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindowOrBuilder getWeeklyMaintenanceWindowOrBuilder();
+    yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindowOrBuilder getWeeklyMaintenanceWindowOrBuilder();
 
-    public yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow.PolicyCase getPolicyCase();
+    public yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow.PolicyCase getPolicyCase();
   }
   /**
+   * <pre>
+   * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.MaintenanceWindow}
    */
   public  static final class MaintenanceWindow extends
@@ -86,28 +114,28 @@ public final class GPMONT {
               done = true;
               break;
             case 10: {
-              yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.Builder subBuilder = null;
+              yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.Builder subBuilder = null;
               if (policyCase_ == 1) {
-                subBuilder = ((yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow) policy_).toBuilder();
+                subBuilder = ((yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow) policy_).toBuilder();
               }
               policy_ =
-                  input.readMessage(yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.parser(), extensionRegistry);
+                  input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow) policy_);
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow) policy_);
                 policy_ = subBuilder.buildPartial();
               }
               policyCase_ = 1;
               break;
             }
             case 18: {
-              yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.Builder subBuilder = null;
+              yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.Builder subBuilder = null;
               if (policyCase_ == 2) {
-                subBuilder = ((yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow) policy_).toBuilder();
+                subBuilder = ((yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow) policy_).toBuilder();
               }
               policy_ =
-                  input.readMessage(yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.parser(), extensionRegistry);
+                  input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow) policy_);
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow) policy_);
                 policy_ = subBuilder.buildPartial();
               }
               policyCase_ = 2;
@@ -134,15 +162,15 @@ public final class GPMONT {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.mdb.greenplum.v1.GPMONT.internal_static_yandex_cloud_mdb_greenplum_v1_MaintenanceWindow_descriptor;
+      return yandex.cloud.api.mdb.greenplum.v1.Maintenance.internal_static_yandex_cloud_mdb_greenplum_v1_MaintenanceWindow_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.mdb.greenplum.v1.GPMONT.internal_static_yandex_cloud_mdb_greenplum_v1_MaintenanceWindow_fieldAccessorTable
+      return yandex.cloud.api.mdb.greenplum.v1.Maintenance.internal_static_yandex_cloud_mdb_greenplum_v1_MaintenanceWindow_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow.class, yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow.Builder.class);
+              yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow.class, yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow.Builder.class);
     }
 
     private int policyCase_ = 0;
@@ -185,54 +213,78 @@ public final class GPMONT {
 
     public static final int ANYTIME_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * An any-time maintenance window.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
     public boolean hasAnytime() {
       return policyCase_ == 1;
     }
     /**
+     * <pre>
+     * An any-time maintenance window.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
-    public yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow getAnytime() {
+    public yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow getAnytime() {
       if (policyCase_ == 1) {
-         return (yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow) policy_;
+         return (yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow) policy_;
       }
-      return yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.getDefaultInstance();
+      return yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.getDefaultInstance();
     }
     /**
+     * <pre>
+     * An any-time maintenance window.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
-    public yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindowOrBuilder getAnytimeOrBuilder() {
+    public yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindowOrBuilder getAnytimeOrBuilder() {
       if (policyCase_ == 1) {
-         return (yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow) policy_;
+         return (yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow) policy_;
       }
-      return yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.getDefaultInstance();
+      return yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.getDefaultInstance();
     }
 
     public static final int WEEKLY_MAINTENANCE_WINDOW_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * A weekly maintenance window.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
      */
     public boolean hasWeeklyMaintenanceWindow() {
       return policyCase_ == 2;
     }
     /**
+     * <pre>
+     * A weekly maintenance window.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
      */
-    public yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow getWeeklyMaintenanceWindow() {
+    public yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow getWeeklyMaintenanceWindow() {
       if (policyCase_ == 2) {
-         return (yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow) policy_;
+         return (yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow) policy_;
       }
-      return yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.getDefaultInstance();
+      return yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.getDefaultInstance();
     }
     /**
+     * <pre>
+     * A weekly maintenance window.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
      */
-    public yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindowOrBuilder getWeeklyMaintenanceWindowOrBuilder() {
+    public yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindowOrBuilder getWeeklyMaintenanceWindowOrBuilder() {
       if (policyCase_ == 2) {
-         return (yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow) policy_;
+         return (yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow) policy_;
       }
-      return yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.getDefaultInstance();
+      return yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -250,10 +302,10 @@ public final class GPMONT {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (policyCase_ == 1) {
-        output.writeMessage(1, (yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow) policy_);
+        output.writeMessage(1, (yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow) policy_);
       }
       if (policyCase_ == 2) {
-        output.writeMessage(2, (yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow) policy_);
+        output.writeMessage(2, (yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow) policy_);
       }
       unknownFields.writeTo(output);
     }
@@ -266,11 +318,11 @@ public final class GPMONT {
       size = 0;
       if (policyCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow) policy_);
+          .computeMessageSize(1, (yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow) policy_);
       }
       if (policyCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow) policy_);
+          .computeMessageSize(2, (yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow) policy_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -282,10 +334,10 @@ public final class GPMONT {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow)) {
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow other = (yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow) obj;
+      yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow other = (yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow) obj;
 
       boolean result = true;
       result = result && getPolicyCase().equals(
@@ -331,69 +383,69 @@ public final class GPMONT {
       return hash;
     }
 
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow parseFrom(byte[] data)
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow parseDelimitedFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -406,7 +458,7 @@ public final class GPMONT {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow prototype) {
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -422,26 +474,30 @@ public final class GPMONT {
       return builder;
     }
     /**
+     * <pre>
+     * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.MaintenanceWindow}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.MaintenanceWindow)
-        yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindowOrBuilder {
+        yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindowOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPMONT.internal_static_yandex_cloud_mdb_greenplum_v1_MaintenanceWindow_descriptor;
+        return yandex.cloud.api.mdb.greenplum.v1.Maintenance.internal_static_yandex_cloud_mdb_greenplum_v1_MaintenanceWindow_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPMONT.internal_static_yandex_cloud_mdb_greenplum_v1_MaintenanceWindow_fieldAccessorTable
+        return yandex.cloud.api.mdb.greenplum.v1.Maintenance.internal_static_yandex_cloud_mdb_greenplum_v1_MaintenanceWindow_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow.class, yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow.Builder.class);
+                yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow.class, yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow.newBuilder()
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -467,17 +523,17 @@ public final class GPMONT {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPMONT.internal_static_yandex_cloud_mdb_greenplum_v1_MaintenanceWindow_descriptor;
+        return yandex.cloud.api.mdb.greenplum.v1.Maintenance.internal_static_yandex_cloud_mdb_greenplum_v1_MaintenanceWindow_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow getDefaultInstanceForType() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow.getDefaultInstance();
+      public yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow build() {
-        yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow result = buildPartial();
+      public yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow build() {
+        yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -485,8 +541,8 @@ public final class GPMONT {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow buildPartial() {
-        yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow result = new yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow(this);
+      public yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow result = new yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow(this);
         if (policyCase_ == 1) {
           if (anytimeBuilder_ == null) {
             result.policy_ = policy_;
@@ -540,16 +596,16 @@ public final class GPMONT {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow) {
-          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow)other);
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow other) {
-        if (other == yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow.getDefaultInstance()) return this;
         switch (other.getPolicyCase()) {
           case ANYTIME: {
             mergeAnytime(other.getAnytime());
@@ -578,11 +634,11 @@ public final class GPMONT {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow parsedMessage = null;
+        yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -608,33 +664,45 @@ public final class GPMONT {
 
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow, yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.Builder, yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindowOrBuilder> anytimeBuilder_;
+          yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow, yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.Builder, yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindowOrBuilder> anytimeBuilder_;
       /**
+       * <pre>
+       * An any-time maintenance window.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public boolean hasAnytime() {
         return policyCase_ == 1;
       }
       /**
+       * <pre>
+       * An any-time maintenance window.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
-      public yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow getAnytime() {
+      public yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow getAnytime() {
         if (anytimeBuilder_ == null) {
           if (policyCase_ == 1) {
-            return (yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow) policy_;
+            return (yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow) policy_;
           }
-          return yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.getDefaultInstance();
+          return yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.getDefaultInstance();
         } else {
           if (policyCase_ == 1) {
             return anytimeBuilder_.getMessage();
           }
-          return yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.getDefaultInstance();
+          return yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.getDefaultInstance();
         }
       }
       /**
+       * <pre>
+       * An any-time maintenance window.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
-      public Builder setAnytime(yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow value) {
+      public Builder setAnytime(yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow value) {
         if (anytimeBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -648,10 +716,14 @@ public final class GPMONT {
         return this;
       }
       /**
+       * <pre>
+       * An any-time maintenance window.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public Builder setAnytime(
-          yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.Builder builderForValue) {
+          yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.Builder builderForValue) {
         if (anytimeBuilder_ == null) {
           policy_ = builderForValue.build();
           onChanged();
@@ -662,13 +734,17 @@ public final class GPMONT {
         return this;
       }
       /**
+       * <pre>
+       * An any-time maintenance window.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
-      public Builder mergeAnytime(yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow value) {
+      public Builder mergeAnytime(yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow value) {
         if (anytimeBuilder_ == null) {
           if (policyCase_ == 1 &&
-              policy_ != yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.getDefaultInstance()) {
-            policy_ = yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.newBuilder((yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow) policy_)
+              policy_ != yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.getDefaultInstance()) {
+            policy_ = yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.newBuilder((yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow) policy_)
                 .mergeFrom(value).buildPartial();
           } else {
             policy_ = value;
@@ -684,6 +760,10 @@ public final class GPMONT {
         return this;
       }
       /**
+       * <pre>
+       * An any-time maintenance window.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public Builder clearAnytime() {
@@ -703,37 +783,49 @@ public final class GPMONT {
         return this;
       }
       /**
+       * <pre>
+       * An any-time maintenance window.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
-      public yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.Builder getAnytimeBuilder() {
+      public yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.Builder getAnytimeBuilder() {
         return getAnytimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * An any-time maintenance window.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
-      public yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindowOrBuilder getAnytimeOrBuilder() {
+      public yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindowOrBuilder getAnytimeOrBuilder() {
         if ((policyCase_ == 1) && (anytimeBuilder_ != null)) {
           return anytimeBuilder_.getMessageOrBuilder();
         } else {
           if (policyCase_ == 1) {
-            return (yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow) policy_;
+            return (yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow) policy_;
           }
-          return yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.getDefaultInstance();
+          return yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.getDefaultInstance();
         }
       }
       /**
+       * <pre>
+       * An any-time maintenance window.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow, yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.Builder, yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindowOrBuilder> 
+          yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow, yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.Builder, yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindowOrBuilder> 
           getAnytimeFieldBuilder() {
         if (anytimeBuilder_ == null) {
           if (!(policyCase_ == 1)) {
-            policy_ = yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.getDefaultInstance();
+            policy_ = yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.getDefaultInstance();
           }
           anytimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow, yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.Builder, yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindowOrBuilder>(
-                  (yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow) policy_,
+              yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow, yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.Builder, yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindowOrBuilder>(
+                  (yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow) policy_,
                   getParentForChildren(),
                   isClean());
           policy_ = null;
@@ -744,33 +836,45 @@ public final class GPMONT {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow, yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.Builder, yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindowOrBuilder> weeklyMaintenanceWindowBuilder_;
+          yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow, yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.Builder, yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindowOrBuilder> weeklyMaintenanceWindowBuilder_;
       /**
+       * <pre>
+       * A weekly maintenance window.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
       public boolean hasWeeklyMaintenanceWindow() {
         return policyCase_ == 2;
       }
       /**
+       * <pre>
+       * A weekly maintenance window.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
-      public yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow getWeeklyMaintenanceWindow() {
+      public yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow getWeeklyMaintenanceWindow() {
         if (weeklyMaintenanceWindowBuilder_ == null) {
           if (policyCase_ == 2) {
-            return (yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow) policy_;
+            return (yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow) policy_;
           }
-          return yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.getDefaultInstance();
+          return yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.getDefaultInstance();
         } else {
           if (policyCase_ == 2) {
             return weeklyMaintenanceWindowBuilder_.getMessage();
           }
-          return yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.getDefaultInstance();
+          return yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.getDefaultInstance();
         }
       }
       /**
+       * <pre>
+       * A weekly maintenance window.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
-      public Builder setWeeklyMaintenanceWindow(yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow value) {
+      public Builder setWeeklyMaintenanceWindow(yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow value) {
         if (weeklyMaintenanceWindowBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -784,10 +888,14 @@ public final class GPMONT {
         return this;
       }
       /**
+       * <pre>
+       * A weekly maintenance window.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
       public Builder setWeeklyMaintenanceWindow(
-          yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.Builder builderForValue) {
+          yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.Builder builderForValue) {
         if (weeklyMaintenanceWindowBuilder_ == null) {
           policy_ = builderForValue.build();
           onChanged();
@@ -798,13 +906,17 @@ public final class GPMONT {
         return this;
       }
       /**
+       * <pre>
+       * A weekly maintenance window.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
-      public Builder mergeWeeklyMaintenanceWindow(yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow value) {
+      public Builder mergeWeeklyMaintenanceWindow(yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow value) {
         if (weeklyMaintenanceWindowBuilder_ == null) {
           if (policyCase_ == 2 &&
-              policy_ != yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.getDefaultInstance()) {
-            policy_ = yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.newBuilder((yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow) policy_)
+              policy_ != yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.getDefaultInstance()) {
+            policy_ = yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.newBuilder((yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow) policy_)
                 .mergeFrom(value).buildPartial();
           } else {
             policy_ = value;
@@ -820,6 +932,10 @@ public final class GPMONT {
         return this;
       }
       /**
+       * <pre>
+       * A weekly maintenance window.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
       public Builder clearWeeklyMaintenanceWindow() {
@@ -839,37 +955,49 @@ public final class GPMONT {
         return this;
       }
       /**
+       * <pre>
+       * A weekly maintenance window.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
-      public yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.Builder getWeeklyMaintenanceWindowBuilder() {
+      public yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.Builder getWeeklyMaintenanceWindowBuilder() {
         return getWeeklyMaintenanceWindowFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * A weekly maintenance window.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
-      public yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindowOrBuilder getWeeklyMaintenanceWindowOrBuilder() {
+      public yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindowOrBuilder getWeeklyMaintenanceWindowOrBuilder() {
         if ((policyCase_ == 2) && (weeklyMaintenanceWindowBuilder_ != null)) {
           return weeklyMaintenanceWindowBuilder_.getMessageOrBuilder();
         } else {
           if (policyCase_ == 2) {
-            return (yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow) policy_;
+            return (yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow) policy_;
           }
-          return yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.getDefaultInstance();
+          return yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.getDefaultInstance();
         }
       }
       /**
+       * <pre>
+       * A weekly maintenance window.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow, yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.Builder, yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindowOrBuilder> 
+          yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow, yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.Builder, yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindowOrBuilder> 
           getWeeklyMaintenanceWindowFieldBuilder() {
         if (weeklyMaintenanceWindowBuilder_ == null) {
           if (!(policyCase_ == 2)) {
-            policy_ = yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.getDefaultInstance();
+            policy_ = yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.getDefaultInstance();
           }
           weeklyMaintenanceWindowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow, yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.Builder, yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindowOrBuilder>(
-                  (yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow) policy_,
+              yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow, yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.Builder, yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindowOrBuilder>(
+                  (yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow) policy_,
                   getParentForChildren(),
                   isClean());
           policy_ = null;
@@ -895,12 +1023,12 @@ public final class GPMONT {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.MaintenanceWindow)
-    private static final yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow();
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow();
     }
 
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow getDefaultInstance() {
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -925,7 +1053,7 @@ public final class GPMONT {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceWindow getDefaultInstanceForType() {
+    public yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -936,6 +1064,10 @@ public final class GPMONT {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * An any-time maintenance window.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.AnytimeMaintenanceWindow}
    */
   public  static final class AnytimeMaintenanceWindow extends
@@ -994,15 +1126,15 @@ public final class GPMONT {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.mdb.greenplum.v1.GPMONT.internal_static_yandex_cloud_mdb_greenplum_v1_AnytimeMaintenanceWindow_descriptor;
+      return yandex.cloud.api.mdb.greenplum.v1.Maintenance.internal_static_yandex_cloud_mdb_greenplum_v1_AnytimeMaintenanceWindow_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.mdb.greenplum.v1.GPMONT.internal_static_yandex_cloud_mdb_greenplum_v1_AnytimeMaintenanceWindow_fieldAccessorTable
+      return yandex.cloud.api.mdb.greenplum.v1.Maintenance.internal_static_yandex_cloud_mdb_greenplum_v1_AnytimeMaintenanceWindow_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.class, yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.Builder.class);
+              yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.class, yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1038,10 +1170,10 @@ public final class GPMONT {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow)) {
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow other = (yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow) obj;
+      yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow other = (yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow) obj;
 
       boolean result = true;
       result = result && unknownFields.equals(other.unknownFields);
@@ -1060,69 +1192,69 @@ public final class GPMONT {
       return hash;
     }
 
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow parseFrom(byte[] data)
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow parseDelimitedFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1135,7 +1267,7 @@ public final class GPMONT {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow prototype) {
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1151,26 +1283,30 @@ public final class GPMONT {
       return builder;
     }
     /**
+     * <pre>
+     * An any-time maintenance window.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.AnytimeMaintenanceWindow}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.AnytimeMaintenanceWindow)
-        yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindowOrBuilder {
+        yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindowOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPMONT.internal_static_yandex_cloud_mdb_greenplum_v1_AnytimeMaintenanceWindow_descriptor;
+        return yandex.cloud.api.mdb.greenplum.v1.Maintenance.internal_static_yandex_cloud_mdb_greenplum_v1_AnytimeMaintenanceWindow_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPMONT.internal_static_yandex_cloud_mdb_greenplum_v1_AnytimeMaintenanceWindow_fieldAccessorTable
+        return yandex.cloud.api.mdb.greenplum.v1.Maintenance.internal_static_yandex_cloud_mdb_greenplum_v1_AnytimeMaintenanceWindow_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.class, yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.Builder.class);
+                yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.class, yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.newBuilder()
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1194,17 +1330,17 @@ public final class GPMONT {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPMONT.internal_static_yandex_cloud_mdb_greenplum_v1_AnytimeMaintenanceWindow_descriptor;
+        return yandex.cloud.api.mdb.greenplum.v1.Maintenance.internal_static_yandex_cloud_mdb_greenplum_v1_AnytimeMaintenanceWindow_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow getDefaultInstanceForType() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.getDefaultInstance();
+      public yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow build() {
-        yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow result = buildPartial();
+      public yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow build() {
+        yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1212,8 +1348,8 @@ public final class GPMONT {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow buildPartial() {
-        yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow result = new yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow(this);
+      public yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow result = new yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow(this);
         onBuilt();
         return result;
       }
@@ -1252,16 +1388,16 @@ public final class GPMONT {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow) {
-          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow)other);
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow other) {
-        if (other == yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1277,11 +1413,11 @@ public final class GPMONT {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow parsedMessage = null;
+        yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1307,12 +1443,12 @@ public final class GPMONT {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.AnytimeMaintenanceWindow)
-    private static final yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow();
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow();
     }
 
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow getDefaultInstance() {
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1337,7 +1473,7 @@ public final class GPMONT {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.mdb.greenplum.v1.GPMONT.AnytimeMaintenanceWindow getDefaultInstanceForType() {
+    public yandex.cloud.api.mdb.greenplum.v1.Maintenance.AnytimeMaintenanceWindow getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1348,17 +1484,25 @@ public final class GPMONT {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Day of the week.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
      */
     int getDayValue();
     /**
+     * <pre>
+     * Day of the week.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
      */
-    yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.WeekDay getDay();
+    yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.WeekDay getDay();
 
     /**
      * <pre>
-     * Hour of the day in UTC.
+     * Hour of the day in the UTC timezone.
      * </pre>
      *
      * <code>int64 hour = 2 [(.yandex.cloud.value) = "1-24"];</code>
@@ -1366,6 +1510,10 @@ public final class GPMONT {
     long getHour();
   }
   /**
+   * <pre>
+   * A weekly maintenance window.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow}
    */
   public  static final class WeeklyMaintenanceWindow extends
@@ -1438,15 +1586,15 @@ public final class GPMONT {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.mdb.greenplum.v1.GPMONT.internal_static_yandex_cloud_mdb_greenplum_v1_WeeklyMaintenanceWindow_descriptor;
+      return yandex.cloud.api.mdb.greenplum.v1.Maintenance.internal_static_yandex_cloud_mdb_greenplum_v1_WeeklyMaintenanceWindow_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.mdb.greenplum.v1.GPMONT.internal_static_yandex_cloud_mdb_greenplum_v1_WeeklyMaintenanceWindow_fieldAccessorTable
+      return yandex.cloud.api.mdb.greenplum.v1.Maintenance.internal_static_yandex_cloud_mdb_greenplum_v1_WeeklyMaintenanceWindow_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.class, yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.Builder.class);
+              yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.class, yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.Builder.class);
     }
 
     /**
@@ -1575,7 +1723,7 @@ public final class GPMONT {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.getDescriptor().getEnumTypes().get(0);
+        return yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final WeekDay[] VALUES = values();
@@ -1604,25 +1752,33 @@ public final class GPMONT {
     public static final int DAY_FIELD_NUMBER = 1;
     private int day_;
     /**
+     * <pre>
+     * Day of the week.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
      */
     public int getDayValue() {
       return day_;
     }
     /**
+     * <pre>
+     * Day of the week.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
      */
-    public yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.WeekDay getDay() {
+    public yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.WeekDay getDay() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.WeekDay result = yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.WeekDay.valueOf(day_);
-      return result == null ? yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.WeekDay.UNRECOGNIZED : result;
+      yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.WeekDay result = yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.WeekDay.valueOf(day_);
+      return result == null ? yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.WeekDay.UNRECOGNIZED : result;
     }
 
     public static final int HOUR_FIELD_NUMBER = 2;
     private long hour_;
     /**
      * <pre>
-     * Hour of the day in UTC.
+     * Hour of the day in the UTC timezone.
      * </pre>
      *
      * <code>int64 hour = 2 [(.yandex.cloud.value) = "1-24"];</code>
@@ -1645,7 +1801,7 @@ public final class GPMONT {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (day_ != yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.WeekDay.WEEK_DAY_UNSPECIFIED.getNumber()) {
+      if (day_ != yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.WeekDay.WEEK_DAY_UNSPECIFIED.getNumber()) {
         output.writeEnum(1, day_);
       }
       if (hour_ != 0L) {
@@ -1660,7 +1816,7 @@ public final class GPMONT {
       if (size != -1) return size;
 
       size = 0;
-      if (day_ != yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.WeekDay.WEEK_DAY_UNSPECIFIED.getNumber()) {
+      if (day_ != yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.WeekDay.WEEK_DAY_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, day_);
       }
@@ -1678,10 +1834,10 @@ public final class GPMONT {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow)) {
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow other = (yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow) obj;
+      yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow other = (yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow) obj;
 
       boolean result = true;
       result = result && day_ == other.day_;
@@ -1708,69 +1864,69 @@ public final class GPMONT {
       return hash;
     }
 
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow parseFrom(byte[] data)
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow parseDelimitedFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1783,7 +1939,7 @@ public final class GPMONT {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow prototype) {
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1799,26 +1955,30 @@ public final class GPMONT {
       return builder;
     }
     /**
+     * <pre>
+     * A weekly maintenance window.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow)
-        yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindowOrBuilder {
+        yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindowOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPMONT.internal_static_yandex_cloud_mdb_greenplum_v1_WeeklyMaintenanceWindow_descriptor;
+        return yandex.cloud.api.mdb.greenplum.v1.Maintenance.internal_static_yandex_cloud_mdb_greenplum_v1_WeeklyMaintenanceWindow_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPMONT.internal_static_yandex_cloud_mdb_greenplum_v1_WeeklyMaintenanceWindow_fieldAccessorTable
+        return yandex.cloud.api.mdb.greenplum.v1.Maintenance.internal_static_yandex_cloud_mdb_greenplum_v1_WeeklyMaintenanceWindow_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.class, yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.Builder.class);
+                yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.class, yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.newBuilder()
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1846,17 +2006,17 @@ public final class GPMONT {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPMONT.internal_static_yandex_cloud_mdb_greenplum_v1_WeeklyMaintenanceWindow_descriptor;
+        return yandex.cloud.api.mdb.greenplum.v1.Maintenance.internal_static_yandex_cloud_mdb_greenplum_v1_WeeklyMaintenanceWindow_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow getDefaultInstanceForType() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.getDefaultInstance();
+      public yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow build() {
-        yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow result = buildPartial();
+      public yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow build() {
+        yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1864,8 +2024,8 @@ public final class GPMONT {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow buildPartial() {
-        yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow result = new yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow(this);
+      public yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow result = new yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow(this);
         result.day_ = day_;
         result.hour_ = hour_;
         onBuilt();
@@ -1906,16 +2066,16 @@ public final class GPMONT {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow) {
-          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow)other);
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow other) {
-        if (other == yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.getDefaultInstance()) return this;
         if (other.day_ != 0) {
           setDayValue(other.getDayValue());
         }
@@ -1937,11 +2097,11 @@ public final class GPMONT {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow parsedMessage = null;
+        yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1953,12 +2113,20 @@ public final class GPMONT {
 
       private int day_ = 0;
       /**
+       * <pre>
+       * Day of the week.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
        */
       public int getDayValue() {
         return day_;
       }
       /**
+       * <pre>
+       * Day of the week.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
        */
       public Builder setDayValue(int value) {
@@ -1967,17 +2135,25 @@ public final class GPMONT {
         return this;
       }
       /**
+       * <pre>
+       * Day of the week.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
        */
-      public yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.WeekDay getDay() {
+      public yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.WeekDay getDay() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.WeekDay result = yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.WeekDay.valueOf(day_);
-        return result == null ? yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.WeekDay.UNRECOGNIZED : result;
+        yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.WeekDay result = yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.WeekDay.valueOf(day_);
+        return result == null ? yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.WeekDay.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Day of the week.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
        */
-      public Builder setDay(yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow.WeekDay value) {
+      public Builder setDay(yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow.WeekDay value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -1987,6 +2163,10 @@ public final class GPMONT {
         return this;
       }
       /**
+       * <pre>
+       * Day of the week.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
        */
       public Builder clearDay() {
@@ -1999,7 +2179,7 @@ public final class GPMONT {
       private long hour_ ;
       /**
        * <pre>
-       * Hour of the day in UTC.
+       * Hour of the day in the UTC timezone.
        * </pre>
        *
        * <code>int64 hour = 2 [(.yandex.cloud.value) = "1-24"];</code>
@@ -2009,7 +2189,7 @@ public final class GPMONT {
       }
       /**
        * <pre>
-       * Hour of the day in UTC.
+       * Hour of the day in the UTC timezone.
        * </pre>
        *
        * <code>int64 hour = 2 [(.yandex.cloud.value) = "1-24"];</code>
@@ -2022,7 +2202,7 @@ public final class GPMONT {
       }
       /**
        * <pre>
-       * Hour of the day in UTC.
+       * Hour of the day in the UTC timezone.
        * </pre>
        *
        * <code>int64 hour = 2 [(.yandex.cloud.value) = "1-24"];</code>
@@ -2050,12 +2230,12 @@ public final class GPMONT {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.WeeklyMaintenanceWindow)
-    private static final yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow();
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow();
     }
 
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow getDefaultInstance() {
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2080,7 +2260,7 @@ public final class GPMONT {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.mdb.greenplum.v1.GPMONT.WeeklyMaintenanceWindow getDefaultInstanceForType() {
+    public yandex.cloud.api.mdb.greenplum.v1.Maintenance.WeeklyMaintenanceWindow getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2091,29 +2271,53 @@ public final class GPMONT {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The description of the operation, 1-256 characters long.
+     * </pre>
+     *
      * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getInfo();
     /**
+     * <pre>
+     * The description of the operation, 1-256 characters long.
+     * </pre>
+     *
      * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getInfoBytes();
 
     /**
+     * <pre>
+     * Delay time for the maintenance operation.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      */
     boolean hasDelayedUntil();
     /**
+     * <pre>
+     * Delay time for the maintenance operation.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      */
     com.google.protobuf.Timestamp getDelayedUntil();
     /**
+     * <pre>
+     * Delay time for the maintenance operation.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      */
     com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder();
   }
   /**
+   * <pre>
+   * The operation to perform during maintenance.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.MaintenanceOperation}
    */
   public  static final class MaintenanceOperation extends
@@ -2193,20 +2397,24 @@ public final class GPMONT {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.mdb.greenplum.v1.GPMONT.internal_static_yandex_cloud_mdb_greenplum_v1_MaintenanceOperation_descriptor;
+      return yandex.cloud.api.mdb.greenplum.v1.Maintenance.internal_static_yandex_cloud_mdb_greenplum_v1_MaintenanceOperation_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.mdb.greenplum.v1.GPMONT.internal_static_yandex_cloud_mdb_greenplum_v1_MaintenanceOperation_fieldAccessorTable
+      return yandex.cloud.api.mdb.greenplum.v1.Maintenance.internal_static_yandex_cloud_mdb_greenplum_v1_MaintenanceOperation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation.class, yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation.Builder.class);
+              yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation.class, yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation.Builder.class);
     }
 
     public static final int INFO_FIELD_NUMBER = 1;
     private volatile java.lang.Object info_;
     /**
+     * <pre>
+     * The description of the operation, 1-256 characters long.
+     * </pre>
+     *
      * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getInfo() {
@@ -2222,6 +2430,10 @@ public final class GPMONT {
       }
     }
     /**
+     * <pre>
+     * The description of the operation, 1-256 characters long.
+     * </pre>
+     *
      * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -2241,18 +2453,30 @@ public final class GPMONT {
     public static final int DELAYED_UNTIL_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp delayedUntil_;
     /**
+     * <pre>
+     * Delay time for the maintenance operation.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      */
     public boolean hasDelayedUntil() {
       return delayedUntil_ != null;
     }
     /**
+     * <pre>
+     * Delay time for the maintenance operation.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      */
     public com.google.protobuf.Timestamp getDelayedUntil() {
       return delayedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
     }
     /**
+     * <pre>
+     * Delay time for the maintenance operation.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
@@ -2305,10 +2529,10 @@ public final class GPMONT {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation)) {
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation other = (yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation) obj;
+      yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation other = (yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation) obj;
 
       boolean result = true;
       result = result && getInfo()
@@ -2340,69 +2564,69 @@ public final class GPMONT {
       return hash;
     }
 
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation parseFrom(byte[] data)
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation parseDelimitedFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation parseFrom(
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2415,7 +2639,7 @@ public final class GPMONT {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation prototype) {
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2431,26 +2655,30 @@ public final class GPMONT {
       return builder;
     }
     /**
+     * <pre>
+     * The operation to perform during maintenance.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.MaintenanceOperation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.MaintenanceOperation)
-        yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperationOrBuilder {
+        yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPMONT.internal_static_yandex_cloud_mdb_greenplum_v1_MaintenanceOperation_descriptor;
+        return yandex.cloud.api.mdb.greenplum.v1.Maintenance.internal_static_yandex_cloud_mdb_greenplum_v1_MaintenanceOperation_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPMONT.internal_static_yandex_cloud_mdb_greenplum_v1_MaintenanceOperation_fieldAccessorTable
+        return yandex.cloud.api.mdb.greenplum.v1.Maintenance.internal_static_yandex_cloud_mdb_greenplum_v1_MaintenanceOperation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation.class, yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation.Builder.class);
+                yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation.class, yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation.newBuilder()
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2482,17 +2710,17 @@ public final class GPMONT {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPMONT.internal_static_yandex_cloud_mdb_greenplum_v1_MaintenanceOperation_descriptor;
+        return yandex.cloud.api.mdb.greenplum.v1.Maintenance.internal_static_yandex_cloud_mdb_greenplum_v1_MaintenanceOperation_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation getDefaultInstanceForType() {
-        return yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation.getDefaultInstance();
+      public yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation build() {
-        yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation result = buildPartial();
+      public yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation build() {
+        yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2500,8 +2728,8 @@ public final class GPMONT {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation buildPartial() {
-        yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation result = new yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation(this);
+      public yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation result = new yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation(this);
         result.info_ = info_;
         if (delayedUntilBuilder_ == null) {
           result.delayedUntil_ = delayedUntil_;
@@ -2546,16 +2774,16 @@ public final class GPMONT {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation) {
-          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation)other);
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation other) {
-        if (other == yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation.getDefaultInstance()) return this;
         if (!other.getInfo().isEmpty()) {
           info_ = other.info_;
           onChanged();
@@ -2578,11 +2806,11 @@ public final class GPMONT {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation parsedMessage = null;
+        yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2594,6 +2822,10 @@ public final class GPMONT {
 
       private java.lang.Object info_ = "";
       /**
+       * <pre>
+       * The description of the operation, 1-256 characters long.
+       * </pre>
+       *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getInfo() {
@@ -2609,6 +2841,10 @@ public final class GPMONT {
         }
       }
       /**
+       * <pre>
+       * The description of the operation, 1-256 characters long.
+       * </pre>
+       *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -2625,6 +2861,10 @@ public final class GPMONT {
         }
       }
       /**
+       * <pre>
+       * The description of the operation, 1-256 characters long.
+       * </pre>
+       *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setInfo(
@@ -2638,6 +2878,10 @@ public final class GPMONT {
         return this;
       }
       /**
+       * <pre>
+       * The description of the operation, 1-256 characters long.
+       * </pre>
+       *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearInfo() {
@@ -2647,6 +2891,10 @@ public final class GPMONT {
         return this;
       }
       /**
+       * <pre>
+       * The description of the operation, 1-256 characters long.
+       * </pre>
+       *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setInfoBytes(
@@ -2665,12 +2913,20 @@ public final class GPMONT {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> delayedUntilBuilder_;
       /**
+       * <pre>
+       * Delay time for the maintenance operation.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public boolean hasDelayedUntil() {
         return delayedUntilBuilder_ != null || delayedUntil_ != null;
       }
       /**
+       * <pre>
+       * Delay time for the maintenance operation.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public com.google.protobuf.Timestamp getDelayedUntil() {
@@ -2681,6 +2937,10 @@ public final class GPMONT {
         }
       }
       /**
+       * <pre>
+       * Delay time for the maintenance operation.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public Builder setDelayedUntil(com.google.protobuf.Timestamp value) {
@@ -2697,6 +2957,10 @@ public final class GPMONT {
         return this;
       }
       /**
+       * <pre>
+       * Delay time for the maintenance operation.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public Builder setDelayedUntil(
@@ -2711,6 +2975,10 @@ public final class GPMONT {
         return this;
       }
       /**
+       * <pre>
+       * Delay time for the maintenance operation.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public Builder mergeDelayedUntil(com.google.protobuf.Timestamp value) {
@@ -2729,6 +2997,10 @@ public final class GPMONT {
         return this;
       }
       /**
+       * <pre>
+       * Delay time for the maintenance operation.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public Builder clearDelayedUntil() {
@@ -2743,6 +3015,10 @@ public final class GPMONT {
         return this;
       }
       /**
+       * <pre>
+       * Delay time for the maintenance operation.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public com.google.protobuf.Timestamp.Builder getDelayedUntilBuilder() {
@@ -2751,6 +3027,10 @@ public final class GPMONT {
         return getDelayedUntilFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Delay time for the maintenance operation.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
@@ -2762,6 +3042,10 @@ public final class GPMONT {
         }
       }
       /**
+       * <pre>
+       * Delay time for the maintenance operation.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2794,12 +3078,12 @@ public final class GPMONT {
     }
 
     // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.MaintenanceOperation)
-    private static final yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation DEFAULT_INSTANCE;
+    private static final yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation();
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation();
     }
 
-    public static yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation getDefaultInstance() {
+    public static yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2824,7 +3108,7 @@ public final class GPMONT {
     }
 
     @java.lang.Override
-    public yandex.cloud.api.mdb.greenplum.v1.GPMONT.MaintenanceOperation getDefaultInstanceForType() {
+    public yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceOperation getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2876,10 +3160,10 @@ public final class GPMONT {
       "E\020\002\022\007\n\003WED\020\003\022\007\n\003THU\020\004\022\007\n\003FRI\020\005\022\007\n\003SAT\020\006\022" +
       "\007\n\003SUN\020\007\"b\n\024MaintenanceOperation\022\027\n\004info" +
       "\030\001 \001(\tB\t\212\3101\005<=256\0221\n\rdelayed_until\030\002 \001(\013" +
-      "2\032.google.protobuf.TimestampBx\n!yandex.c" +
-      "loud.api.mdb.greenplum.v1B\006GPMONTZKgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/mdb/greenplum/v1;greenplumb\006proto3"
+      "2\032.google.protobuf.TimestampBp\n!yandex.c" +
+      "loud.api.mdb.greenplum.v1ZKgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/mdb/" +
+      "greenplum/v1;greenplumb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

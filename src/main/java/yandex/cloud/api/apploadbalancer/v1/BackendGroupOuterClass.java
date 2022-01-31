@@ -56,14 +56,14 @@ public final class BackendGroupOuterClass {
     LEAST_REQUEST(2),
     /**
      * <pre>
-     * Maglev hashing load balancing mode, used only if session affinity is working for the backend group.
+     * Maglev hashing load balancing mode.
      * Each endpoint is hashed, and a hash table with 65537 rows is filled accordingly, so that every endpoint occupies
-     * the same amount of rows. An attribute of each request, specified in session affinity configuration of the backend
-     * group, is also hashed by the same function. The row with the same number as the resulting value is looked up in the
-     * table to determine the endpoint that receives the request.
-     * If session affinity is not working for the backend group (i.e. it is not configured or the group contains more
-     * than one backend with positive weight), endpoints for backends with `MAGLEV_HASH` load balancing mode are picked at
-     * `RANDOM` instead.
+     * the same amount of rows. An attribute of each request is also hashed by the same function (if session affinity is
+     * enabled for the backend group, the attribute to hash is specified in session affinity configuration). The row
+     * with the same number as the resulting value is looked up in the table to determine the endpoint that receives
+     * the request.
+     * If the backend group with session affinity enabled contains more than one backend with positive weight, endpoints
+     * for backends with `MAGLEV_HASH` load balancing mode are picked at `RANDOM` instead.
      * </pre>
      *
      * <code>MAGLEV_HASH = 3;</code>
@@ -103,14 +103,14 @@ public final class BackendGroupOuterClass {
     public static final int LEAST_REQUEST_VALUE = 2;
     /**
      * <pre>
-     * Maglev hashing load balancing mode, used only if session affinity is working for the backend group.
+     * Maglev hashing load balancing mode.
      * Each endpoint is hashed, and a hash table with 65537 rows is filled accordingly, so that every endpoint occupies
-     * the same amount of rows. An attribute of each request, specified in session affinity configuration of the backend
-     * group, is also hashed by the same function. The row with the same number as the resulting value is looked up in the
-     * table to determine the endpoint that receives the request.
-     * If session affinity is not working for the backend group (i.e. it is not configured or the group contains more
-     * than one backend with positive weight), endpoints for backends with `MAGLEV_HASH` load balancing mode are picked at
-     * `RANDOM` instead.
+     * the same amount of rows. An attribute of each request is also hashed by the same function (if session affinity is
+     * enabled for the backend group, the attribute to hash is specified in session affinity configuration). The row
+     * with the same number as the resulting value is looked up in the table to determine the endpoint that receives
+     * the request.
+     * If the backend group with session affinity enabled contains more than one backend with positive weight, endpoints
+     * for backends with `MAGLEV_HASH` load balancing mode are picked at `RANDOM` instead.
      * </pre>
      *
      * <code>MAGLEV_HASH = 3;</code>
@@ -8210,9 +8210,10 @@ public final class BackendGroupOuterClass {
 
     /**
      * <pre>
-     * Maximum age of cookies that are generated for sessions (persistent cookies).
-     * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+     * Maximum age of cookies that are generated for sessions.
+     * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
      * on client restarts.
+     * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8220,9 +8221,10 @@ public final class BackendGroupOuterClass {
     boolean hasTtl();
     /**
      * <pre>
-     * Maximum age of cookies that are generated for sessions (persistent cookies).
-     * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+     * Maximum age of cookies that are generated for sessions.
+     * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
      * on client restarts.
+     * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8230,9 +8232,10 @@ public final class BackendGroupOuterClass {
     com.google.protobuf.Duration getTtl();
     /**
      * <pre>
-     * Maximum age of cookies that are generated for sessions (persistent cookies).
-     * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+     * Maximum age of cookies that are generated for sessions.
+     * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
      * on client restarts.
+     * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8380,9 +8383,10 @@ public final class BackendGroupOuterClass {
     private com.google.protobuf.Duration ttl_;
     /**
      * <pre>
-     * Maximum age of cookies that are generated for sessions (persistent cookies).
-     * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+     * Maximum age of cookies that are generated for sessions.
+     * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
      * on client restarts.
+     * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8392,9 +8396,10 @@ public final class BackendGroupOuterClass {
     }
     /**
      * <pre>
-     * Maximum age of cookies that are generated for sessions (persistent cookies).
-     * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+     * Maximum age of cookies that are generated for sessions.
+     * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
      * on client restarts.
+     * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8404,9 +8409,10 @@ public final class BackendGroupOuterClass {
     }
     /**
      * <pre>
-     * Maximum age of cookies that are generated for sessions (persistent cookies).
-     * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+     * Maximum age of cookies that are generated for sessions.
+     * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
      * on client restarts.
+     * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8846,9 +8852,10 @@ public final class BackendGroupOuterClass {
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> ttlBuilder_;
       /**
        * <pre>
-       * Maximum age of cookies that are generated for sessions (persistent cookies).
-       * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+       * Maximum age of cookies that are generated for sessions.
+       * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
        * on client restarts.
+       * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8858,9 +8865,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Maximum age of cookies that are generated for sessions (persistent cookies).
-       * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+       * Maximum age of cookies that are generated for sessions.
+       * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
        * on client restarts.
+       * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8874,9 +8882,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Maximum age of cookies that are generated for sessions (persistent cookies).
-       * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+       * Maximum age of cookies that are generated for sessions.
+       * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
        * on client restarts.
+       * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8896,9 +8905,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Maximum age of cookies that are generated for sessions (persistent cookies).
-       * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+       * Maximum age of cookies that are generated for sessions.
+       * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
        * on client restarts.
+       * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8916,9 +8926,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Maximum age of cookies that are generated for sessions (persistent cookies).
-       * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+       * Maximum age of cookies that are generated for sessions.
+       * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
        * on client restarts.
+       * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8940,9 +8951,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Maximum age of cookies that are generated for sessions (persistent cookies).
-       * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+       * Maximum age of cookies that are generated for sessions.
+       * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
        * on client restarts.
+       * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8960,9 +8972,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Maximum age of cookies that are generated for sessions (persistent cookies).
-       * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+       * Maximum age of cookies that are generated for sessions.
+       * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
        * on client restarts.
+       * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8974,9 +8987,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Maximum age of cookies that are generated for sessions (persistent cookies).
-       * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+       * Maximum age of cookies that are generated for sessions.
+       * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
        * on client restarts.
+       * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8991,9 +9005,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Maximum age of cookies that are generated for sessions (persistent cookies).
-       * If not set, session cookies are used, which are stored by clients in temporary memory and are deleted
+       * Maximum age of cookies that are generated for sessions.
+       * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
        * on client restarts.
+       * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -9591,7 +9606,8 @@ public final class BackendGroupOuterClass {
     /**
      * <pre>
      * Percentage of traffic that a load balancer node sends to healthy backends in its availability zone.
-     * The rest is divided equally between other zones. For details about zone-aware routing, see [documentation](/docs/application-load-balancer/concepts/backend-group#locality).
+     * The rest is divided equally between other zones. For details about zone-aware routing, see
+     * [documentation](/docs/application-load-balancer/concepts/backend-group#locality).
      * If there are no healthy backends in an availability zone, all the traffic is divided between other zones.
      * If [strict_locality] is `true`, the specified value is ignored.
      * A load balancer node sends all the traffic within its availability zone, regardless of backends' health.
@@ -9620,7 +9636,7 @@ public final class BackendGroupOuterClass {
     /**
      * <pre>
      * Load balancing mode for the backend.
-     * For detals about load balancing modes, see
+     * For details about load balancing modes, see
      * [documentation](/docs/application-load-balancer/concepts/backend-group#balancing-mode).
      * </pre>
      *
@@ -9630,7 +9646,7 @@ public final class BackendGroupOuterClass {
     /**
      * <pre>
      * Load balancing mode for the backend.
-     * For detals about load balancing modes, see
+     * For details about load balancing modes, see
      * [documentation](/docs/application-load-balancer/concepts/backend-group#balancing-mode).
      * </pre>
      *
@@ -9762,7 +9778,8 @@ public final class BackendGroupOuterClass {
     /**
      * <pre>
      * Percentage of traffic that a load balancer node sends to healthy backends in its availability zone.
-     * The rest is divided equally between other zones. For details about zone-aware routing, see [documentation](/docs/application-load-balancer/concepts/backend-group#locality).
+     * The rest is divided equally between other zones. For details about zone-aware routing, see
+     * [documentation](/docs/application-load-balancer/concepts/backend-group#locality).
      * If there are no healthy backends in an availability zone, all the traffic is divided between other zones.
      * If [strict_locality] is `true`, the specified value is ignored.
      * A load balancer node sends all the traffic within its availability zone, regardless of backends' health.
@@ -9799,7 +9816,7 @@ public final class BackendGroupOuterClass {
     /**
      * <pre>
      * Load balancing mode for the backend.
-     * For detals about load balancing modes, see
+     * For details about load balancing modes, see
      * [documentation](/docs/application-load-balancer/concepts/backend-group#balancing-mode).
      * </pre>
      *
@@ -9811,7 +9828,7 @@ public final class BackendGroupOuterClass {
     /**
      * <pre>
      * Load balancing mode for the backend.
-     * For detals about load balancing modes, see
+     * For details about load balancing modes, see
      * [documentation](/docs/application-load-balancer/concepts/backend-group#balancing-mode).
      * </pre>
      *
@@ -10243,7 +10260,8 @@ public final class BackendGroupOuterClass {
       /**
        * <pre>
        * Percentage of traffic that a load balancer node sends to healthy backends in its availability zone.
-       * The rest is divided equally between other zones. For details about zone-aware routing, see [documentation](/docs/application-load-balancer/concepts/backend-group#locality).
+       * The rest is divided equally between other zones. For details about zone-aware routing, see
+       * [documentation](/docs/application-load-balancer/concepts/backend-group#locality).
        * If there are no healthy backends in an availability zone, all the traffic is divided between other zones.
        * If [strict_locality] is `true`, the specified value is ignored.
        * A load balancer node sends all the traffic within its availability zone, regardless of backends' health.
@@ -10258,7 +10276,8 @@ public final class BackendGroupOuterClass {
       /**
        * <pre>
        * Percentage of traffic that a load balancer node sends to healthy backends in its availability zone.
-       * The rest is divided equally between other zones. For details about zone-aware routing, see [documentation](/docs/application-load-balancer/concepts/backend-group#locality).
+       * The rest is divided equally between other zones. For details about zone-aware routing, see
+       * [documentation](/docs/application-load-balancer/concepts/backend-group#locality).
        * If there are no healthy backends in an availability zone, all the traffic is divided between other zones.
        * If [strict_locality] is `true`, the specified value is ignored.
        * A load balancer node sends all the traffic within its availability zone, regardless of backends' health.
@@ -10276,7 +10295,8 @@ public final class BackendGroupOuterClass {
       /**
        * <pre>
        * Percentage of traffic that a load balancer node sends to healthy backends in its availability zone.
-       * The rest is divided equally between other zones. For details about zone-aware routing, see [documentation](/docs/application-load-balancer/concepts/backend-group#locality).
+       * The rest is divided equally between other zones. For details about zone-aware routing, see
+       * [documentation](/docs/application-load-balancer/concepts/backend-group#locality).
        * If there are no healthy backends in an availability zone, all the traffic is divided between other zones.
        * If [strict_locality] is `true`, the specified value is ignored.
        * A load balancer node sends all the traffic within its availability zone, regardless of backends' health.
@@ -10352,7 +10372,7 @@ public final class BackendGroupOuterClass {
       /**
        * <pre>
        * Load balancing mode for the backend.
-       * For detals about load balancing modes, see
+       * For details about load balancing modes, see
        * [documentation](/docs/application-load-balancer/concepts/backend-group#balancing-mode).
        * </pre>
        *
@@ -10364,7 +10384,7 @@ public final class BackendGroupOuterClass {
       /**
        * <pre>
        * Load balancing mode for the backend.
-       * For detals about load balancing modes, see
+       * For details about load balancing modes, see
        * [documentation](/docs/application-load-balancer/concepts/backend-group#balancing-mode).
        * </pre>
        *
@@ -10378,7 +10398,7 @@ public final class BackendGroupOuterClass {
       /**
        * <pre>
        * Load balancing mode for the backend.
-       * For detals about load balancing modes, see
+       * For details about load balancing modes, see
        * [documentation](/docs/application-load-balancer/concepts/backend-group#balancing-mode).
        * </pre>
        *
@@ -10392,7 +10412,7 @@ public final class BackendGroupOuterClass {
       /**
        * <pre>
        * Load balancing mode for the backend.
-       * For detals about load balancing modes, see
+       * For details about load balancing modes, see
        * [documentation](/docs/application-load-balancer/concepts/backend-group#balancing-mode).
        * </pre>
        *
@@ -10410,7 +10430,7 @@ public final class BackendGroupOuterClass {
       /**
        * <pre>
        * Load balancing mode for the backend.
-       * For detals about load balancing modes, see
+       * For details about load balancing modes, see
        * [documentation](/docs/application-load-balancer/concepts/backend-group#balancing-mode).
        * </pre>
        *
