@@ -1285,7 +1285,7 @@ public final class UserOuterClass {
      * Name of the Kafka user.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "1-63"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "1-256"];</code>
      */
     java.lang.String getName();
     /**
@@ -1293,7 +1293,7 @@ public final class UserOuterClass {
      * Name of the Kafka user.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "1-63"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "1-256"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -1466,7 +1466,7 @@ public final class UserOuterClass {
      * Name of the Kafka user.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "1-63"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "1-256"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -1485,7 +1485,7 @@ public final class UserOuterClass {
      * Name of the Kafka user.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "1-63"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "1-256"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -1983,7 +1983,7 @@ public final class UserOuterClass {
        * Name of the Kafka user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "1-63"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "1-256"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -2002,7 +2002,7 @@ public final class UserOuterClass {
        * Name of the Kafka user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "1-63"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "1-256"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -2022,7 +2022,7 @@ public final class UserOuterClass {
        * Name of the Kafka user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "1-63"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "1-256"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -2039,7 +2039,7 @@ public final class UserOuterClass {
        * Name of the Kafka user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "1-63"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "1-256"];</code>
        */
       public Builder clearName() {
         
@@ -2052,7 +2052,7 @@ public final class UserOuterClass {
        * Name of the Kafka user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "1-63"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "1-256"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3412,19 +3412,19 @@ public final class UserOuterClass {
       "yandex.cloud.mdb.kafka.v1\032\035yandex/cloud/" +
       "validation.proto\"d\n\004User\022\014\n\004name\030\001 \001(\t\022\022" +
       "\n\ncluster_id\030\002 \001(\t\022:\n\013permissions\030\003 \003(\0132" +
-      "%.yandex.cloud.mdb.kafka.v1.Permission\"\224" +
-      "\001\n\010UserSpec\022+\n\004name\030\001 \001(\tB\035\350\3071\001\212\3101\0041-63\362" +
-      "\3071\r[a-zA-Z0-9_]*\022\037\n\010password\030\002 \001(\tB\r\350\3071\001" +
-      "\212\3101\0058-128\022:\n\013permissions\030\003 \003(\0132%.yandex." +
-      "cloud.mdb.kafka.v1.Permission\"\326\001\n\nPermis" +
-      "sion\022\022\n\ntopic_name\030\001 \001(\t\022>\n\004role\030\002 \001(\01620" +
-      ".yandex.cloud.mdb.kafka.v1.Permission.Ac" +
-      "cessRole\"t\n\nAccessRole\022\033\n\027ACCESS_ROLE_UN" +
-      "SPECIFIED\020\000\022\030\n\024ACCESS_ROLE_PRODUCER\020\001\022\030\n" +
-      "\024ACCESS_ROLE_CONSUMER\020\002\022\025\n\021ACCESS_ROLE_A" +
-      "DMIN\020\003Bd\n\035yandex.cloud.api.mdb.kafka.v1Z" +
-      "Cgithub.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/mdb/kafka/v1;kafkab\006proto3"
+      "%.yandex.cloud.mdb.kafka.v1.Permission\"\225" +
+      "\001\n\010UserSpec\022,\n\004name\030\001 \001(\tB\036\350\3071\001\212\3101\0051-256" +
+      "\362\3071\r[a-zA-Z0-9_]*\022\037\n\010password\030\002 \001(\tB\r\350\3071" +
+      "\001\212\3101\0058-128\022:\n\013permissions\030\003 \003(\0132%.yandex" +
+      ".cloud.mdb.kafka.v1.Permission\"\326\001\n\nPermi" +
+      "ssion\022\022\n\ntopic_name\030\001 \001(\t\022>\n\004role\030\002 \001(\0162" +
+      "0.yandex.cloud.mdb.kafka.v1.Permission.A" +
+      "ccessRole\"t\n\nAccessRole\022\033\n\027ACCESS_ROLE_U" +
+      "NSPECIFIED\020\000\022\030\n\024ACCESS_ROLE_PRODUCER\020\001\022\030" +
+      "\n\024ACCESS_ROLE_CONSUMER\020\002\022\025\n\021ACCESS_ROLE_" +
+      "ADMIN\020\003Bd\n\035yandex.cloud.api.mdb.kafka.v1" +
+      "ZCgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/mdb/kafka/v1;kafkab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

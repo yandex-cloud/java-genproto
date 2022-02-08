@@ -5421,6 +5421,50 @@ public final class ClusterOuterClass {
      */
     com.google.protobuf.ByteString
         getSshPublicKeysBytes(int index);
+
+    /**
+     * <pre>
+     * Set of init-actions
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+     */
+    java.util.List<yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction> 
+        getInitializationActionsList();
+    /**
+     * <pre>
+     * Set of init-actions
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+     */
+    yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction getInitializationActions(int index);
+    /**
+     * <pre>
+     * Set of init-actions
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+     */
+    int getInitializationActionsCount();
+    /**
+     * <pre>
+     * Set of init-actions
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationActionOrBuilder> 
+        getInitializationActionsOrBuilderList();
+    /**
+     * <pre>
+     * Set of init-actions
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+     */
+    yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationActionOrBuilder getInitializationActionsOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -5442,6 +5486,7 @@ public final class ClusterOuterClass {
     private HadoopConfig() {
       services_ = java.util.Collections.emptyList();
       sshPublicKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      initializationActions_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -5513,6 +5558,15 @@ public final class ClusterOuterClass {
               sshPublicKeys_.add(s);
               break;
             }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                initializationActions_ = new java.util.ArrayList<yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              initializationActions_.add(
+                  input.readMessage(yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5533,6 +5587,9 @@ public final class ClusterOuterClass {
         }
         if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           sshPublicKeys_ = sshPublicKeys_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          initializationActions_ = java.util.Collections.unmodifiableList(initializationActions_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -5984,6 +6041,61 @@ public final class ClusterOuterClass {
       return sshPublicKeys_.getByteString(index);
     }
 
+    public static final int INITIALIZATION_ACTIONS_FIELD_NUMBER = 4;
+    private java.util.List<yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction> initializationActions_;
+    /**
+     * <pre>
+     * Set of init-actions
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+     */
+    public java.util.List<yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction> getInitializationActionsList() {
+      return initializationActions_;
+    }
+    /**
+     * <pre>
+     * Set of init-actions
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationActionOrBuilder> 
+        getInitializationActionsOrBuilderList() {
+      return initializationActions_;
+    }
+    /**
+     * <pre>
+     * Set of init-actions
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+     */
+    public int getInitializationActionsCount() {
+      return initializationActions_.size();
+    }
+    /**
+     * <pre>
+     * Set of init-actions
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+     */
+    public yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction getInitializationActions(int index) {
+      return initializationActions_.get(index);
+    }
+    /**
+     * <pre>
+     * Set of init-actions
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+     */
+    public yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationActionOrBuilder getInitializationActionsOrBuilder(
+        int index) {
+      return initializationActions_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6014,6 +6126,9 @@ public final class ClusterOuterClass {
           2);
       for (int i = 0; i < sshPublicKeys_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, sshPublicKeys_.getRaw(i));
+      }
+      for (int i = 0; i < initializationActions_.size(); i++) {
+        output.writeMessage(4, initializationActions_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -6054,6 +6169,10 @@ public final class ClusterOuterClass {
         size += dataSize;
         size += 1 * getSshPublicKeysList().size();
       }
+      for (int i = 0; i < initializationActions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, initializationActions_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6075,6 +6194,8 @@ public final class ClusterOuterClass {
           other.internalGetProperties());
       result = result && getSshPublicKeysList()
           .equals(other.getSshPublicKeysList());
+      result = result && getInitializationActionsList()
+          .equals(other.getInitializationActionsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -6097,6 +6218,10 @@ public final class ClusterOuterClass {
       if (getSshPublicKeysCount() > 0) {
         hash = (37 * hash) + SSH_PUBLIC_KEYS_FIELD_NUMBER;
         hash = (53 * hash) + getSshPublicKeysList().hashCode();
+      }
+      if (getInitializationActionsCount() > 0) {
+        hash = (37 * hash) + INITIALIZATION_ACTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getInitializationActionsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -6253,6 +6378,7 @@ public final class ClusterOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getInitializationActionsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -6263,6 +6389,12 @@ public final class ClusterOuterClass {
         internalGetMutableProperties().clear();
         sshPublicKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
+        if (initializationActionsBuilder_ == null) {
+          initializationActions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          initializationActionsBuilder_.clear();
+        }
         return this;
       }
 
@@ -6302,6 +6434,15 @@ public final class ClusterOuterClass {
           bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.sshPublicKeys_ = sshPublicKeys_;
+        if (initializationActionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+            initializationActions_ = java.util.Collections.unmodifiableList(initializationActions_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.initializationActions_ = initializationActions_;
+        } else {
+          result.initializationActions_ = initializationActionsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -6371,6 +6512,32 @@ public final class ClusterOuterClass {
             sshPublicKeys_.addAll(other.sshPublicKeys_);
           }
           onChanged();
+        }
+        if (initializationActionsBuilder_ == null) {
+          if (!other.initializationActions_.isEmpty()) {
+            if (initializationActions_.isEmpty()) {
+              initializationActions_ = other.initializationActions_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureInitializationActionsIsMutable();
+              initializationActions_.addAll(other.initializationActions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.initializationActions_.isEmpty()) {
+            if (initializationActionsBuilder_.isEmpty()) {
+              initializationActionsBuilder_.dispose();
+              initializationActionsBuilder_ = null;
+              initializationActions_ = other.initializationActions_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              initializationActionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInitializationActionsFieldBuilder() : null;
+            } else {
+              initializationActionsBuilder_.addAllMessages(other.initializationActions_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6868,6 +7035,318 @@ public final class ClusterOuterClass {
         sshPublicKeys_.add(value);
         onChanged();
         return this;
+      }
+
+      private java.util.List<yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction> initializationActions_ =
+        java.util.Collections.emptyList();
+      private void ensureInitializationActionsIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          initializationActions_ = new java.util.ArrayList<yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction>(initializationActions_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction, yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.Builder, yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationActionOrBuilder> initializationActionsBuilder_;
+
+      /**
+       * <pre>
+       * Set of init-actions
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction> getInitializationActionsList() {
+        if (initializationActionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(initializationActions_);
+        } else {
+          return initializationActionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Set of init-actions
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+       */
+      public int getInitializationActionsCount() {
+        if (initializationActionsBuilder_ == null) {
+          return initializationActions_.size();
+        } else {
+          return initializationActionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Set of init-actions
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+       */
+      public yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction getInitializationActions(int index) {
+        if (initializationActionsBuilder_ == null) {
+          return initializationActions_.get(index);
+        } else {
+          return initializationActionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Set of init-actions
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+       */
+      public Builder setInitializationActions(
+          int index, yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction value) {
+        if (initializationActionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInitializationActionsIsMutable();
+          initializationActions_.set(index, value);
+          onChanged();
+        } else {
+          initializationActionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of init-actions
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+       */
+      public Builder setInitializationActions(
+          int index, yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.Builder builderForValue) {
+        if (initializationActionsBuilder_ == null) {
+          ensureInitializationActionsIsMutable();
+          initializationActions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          initializationActionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of init-actions
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+       */
+      public Builder addInitializationActions(yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction value) {
+        if (initializationActionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInitializationActionsIsMutable();
+          initializationActions_.add(value);
+          onChanged();
+        } else {
+          initializationActionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of init-actions
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+       */
+      public Builder addInitializationActions(
+          int index, yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction value) {
+        if (initializationActionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInitializationActionsIsMutable();
+          initializationActions_.add(index, value);
+          onChanged();
+        } else {
+          initializationActionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of init-actions
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+       */
+      public Builder addInitializationActions(
+          yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.Builder builderForValue) {
+        if (initializationActionsBuilder_ == null) {
+          ensureInitializationActionsIsMutable();
+          initializationActions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          initializationActionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of init-actions
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+       */
+      public Builder addInitializationActions(
+          int index, yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.Builder builderForValue) {
+        if (initializationActionsBuilder_ == null) {
+          ensureInitializationActionsIsMutable();
+          initializationActions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          initializationActionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of init-actions
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+       */
+      public Builder addAllInitializationActions(
+          java.lang.Iterable<? extends yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction> values) {
+        if (initializationActionsBuilder_ == null) {
+          ensureInitializationActionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, initializationActions_);
+          onChanged();
+        } else {
+          initializationActionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of init-actions
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+       */
+      public Builder clearInitializationActions() {
+        if (initializationActionsBuilder_ == null) {
+          initializationActions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          initializationActionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of init-actions
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+       */
+      public Builder removeInitializationActions(int index) {
+        if (initializationActionsBuilder_ == null) {
+          ensureInitializationActionsIsMutable();
+          initializationActions_.remove(index);
+          onChanged();
+        } else {
+          initializationActionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of init-actions
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+       */
+      public yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.Builder getInitializationActionsBuilder(
+          int index) {
+        return getInitializationActionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Set of init-actions
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+       */
+      public yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationActionOrBuilder getInitializationActionsOrBuilder(
+          int index) {
+        if (initializationActionsBuilder_ == null) {
+          return initializationActions_.get(index);  } else {
+          return initializationActionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Set of init-actions
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationActionOrBuilder> 
+           getInitializationActionsOrBuilderList() {
+        if (initializationActionsBuilder_ != null) {
+          return initializationActionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(initializationActions_);
+        }
+      }
+      /**
+       * <pre>
+       * Set of init-actions
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+       */
+      public yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.Builder addInitializationActionsBuilder() {
+        return getInitializationActionsFieldBuilder().addBuilder(
+            yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Set of init-actions
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+       */
+      public yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.Builder addInitializationActionsBuilder(
+          int index) {
+        return getInitializationActionsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Set of init-actions
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dataproc.v1.InitializationAction initialization_actions = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.Builder> 
+           getInitializationActionsBuilderList() {
+        return getInitializationActionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction, yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.Builder, yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationActionOrBuilder> 
+          getInitializationActionsFieldBuilder() {
+        if (initializationActionsBuilder_ == null) {
+          initializationActionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction, yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.Builder, yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationActionOrBuilder>(
+                  initializationActions_,
+                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  getParentForChildren(),
+                  isClean());
+          initializationActions_ = null;
+        }
+        return initializationActionsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7771,6 +8250,938 @@ public final class ClusterOuterClass {
 
   }
 
+  public interface InitializationActionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.dataproc.v1.InitializationAction)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * URI of the executable file
+     * </pre>
+     *
+     * <code>string uri = 1;</code>
+     */
+    java.lang.String getUri();
+    /**
+     * <pre>
+     * URI of the executable file
+     * </pre>
+     *
+     * <code>string uri = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getUriBytes();
+
+    /**
+     * <pre>
+     * Arguments to the initialization action
+     * </pre>
+     *
+     * <code>repeated string args = 2;</code>
+     */
+    java.util.List<java.lang.String>
+        getArgsList();
+    /**
+     * <pre>
+     * Arguments to the initialization action
+     * </pre>
+     *
+     * <code>repeated string args = 2;</code>
+     */
+    int getArgsCount();
+    /**
+     * <pre>
+     * Arguments to the initialization action
+     * </pre>
+     *
+     * <code>repeated string args = 2;</code>
+     */
+    java.lang.String getArgs(int index);
+    /**
+     * <pre>
+     * Arguments to the initialization action
+     * </pre>
+     *
+     * <code>repeated string args = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getArgsBytes(int index);
+
+    /**
+     * <pre>
+     * Execution timeout
+     * </pre>
+     *
+     * <code>int64 timeout = 3;</code>
+     */
+    long getTimeout();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.dataproc.v1.InitializationAction}
+   */
+  public  static final class InitializationAction extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.InitializationAction)
+      InitializationActionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InitializationAction.newBuilder() to construct.
+    private InitializationAction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InitializationAction() {
+      uri_ = "";
+      args_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      timeout_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private InitializationAction(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              uri_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                args_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              args_.add(s);
+              break;
+            }
+            case 24: {
+
+              timeout_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          args_ = args_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.dataproc.v1.ClusterOuterClass.internal_static_yandex_cloud_dataproc_v1_InitializationAction_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.dataproc.v1.ClusterOuterClass.internal_static_yandex_cloud_dataproc_v1_InitializationAction_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.class, yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int URI_FIELD_NUMBER = 1;
+    private volatile java.lang.Object uri_;
+    /**
+     * <pre>
+     * URI of the executable file
+     * </pre>
+     *
+     * <code>string uri = 1;</code>
+     */
+    public java.lang.String getUri() {
+      java.lang.Object ref = uri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * URI of the executable file
+     * </pre>
+     *
+     * <code>string uri = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUriBytes() {
+      java.lang.Object ref = uri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ARGS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList args_;
+    /**
+     * <pre>
+     * Arguments to the initialization action
+     * </pre>
+     *
+     * <code>repeated string args = 2;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getArgsList() {
+      return args_;
+    }
+    /**
+     * <pre>
+     * Arguments to the initialization action
+     * </pre>
+     *
+     * <code>repeated string args = 2;</code>
+     */
+    public int getArgsCount() {
+      return args_.size();
+    }
+    /**
+     * <pre>
+     * Arguments to the initialization action
+     * </pre>
+     *
+     * <code>repeated string args = 2;</code>
+     */
+    public java.lang.String getArgs(int index) {
+      return args_.get(index);
+    }
+    /**
+     * <pre>
+     * Arguments to the initialization action
+     * </pre>
+     *
+     * <code>repeated string args = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getArgsBytes(int index) {
+      return args_.getByteString(index);
+    }
+
+    public static final int TIMEOUT_FIELD_NUMBER = 3;
+    private long timeout_;
+    /**
+     * <pre>
+     * Execution timeout
+     * </pre>
+     *
+     * <code>int64 timeout = 3;</code>
+     */
+    public long getTimeout() {
+      return timeout_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getUriBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uri_);
+      }
+      for (int i = 0; i < args_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, args_.getRaw(i));
+      }
+      if (timeout_ != 0L) {
+        output.writeInt64(3, timeout_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getUriBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uri_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < args_.size(); i++) {
+          dataSize += computeStringSizeNoTag(args_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getArgsList().size();
+      }
+      if (timeout_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, timeout_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction other = (yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction) obj;
+
+      boolean result = true;
+      result = result && getUri()
+          .equals(other.getUri());
+      result = result && getArgsList()
+          .equals(other.getArgsList());
+      result = result && (getTimeout()
+          == other.getTimeout());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + URI_FIELD_NUMBER;
+      hash = (53 * hash) + getUri().hashCode();
+      if (getArgsCount() > 0) {
+        hash = (37 * hash) + ARGS_FIELD_NUMBER;
+        hash = (53 * hash) + getArgsList().hashCode();
+      }
+      hash = (37 * hash) + TIMEOUT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTimeout());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.dataproc.v1.InitializationAction}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.dataproc.v1.InitializationAction)
+        yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationActionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.dataproc.v1.ClusterOuterClass.internal_static_yandex_cloud_dataproc_v1_InitializationAction_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.dataproc.v1.ClusterOuterClass.internal_static_yandex_cloud_dataproc_v1_InitializationAction_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.class, yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        uri_ = "";
+
+        args_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        timeout_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.dataproc.v1.ClusterOuterClass.internal_static_yandex_cloud_dataproc_v1_InitializationAction_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction getDefaultInstanceForType() {
+        return yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction build() {
+        yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction buildPartial() {
+        yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction result = new yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.uri_ = uri_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          args_ = args_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.args_ = args_;
+        result.timeout_ = timeout_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction) {
+          return mergeFrom((yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction other) {
+        if (other == yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.getDefaultInstance()) return this;
+        if (!other.getUri().isEmpty()) {
+          uri_ = other.uri_;
+          onChanged();
+        }
+        if (!other.args_.isEmpty()) {
+          if (args_.isEmpty()) {
+            args_ = other.args_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureArgsIsMutable();
+            args_.addAll(other.args_);
+          }
+          onChanged();
+        }
+        if (other.getTimeout() != 0L) {
+          setTimeout(other.getTimeout());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object uri_ = "";
+      /**
+       * <pre>
+       * URI of the executable file
+       * </pre>
+       *
+       * <code>string uri = 1;</code>
+       */
+      public java.lang.String getUri() {
+        java.lang.Object ref = uri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * URI of the executable file
+       * </pre>
+       *
+       * <code>string uri = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUriBytes() {
+        java.lang.Object ref = uri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * URI of the executable file
+       * </pre>
+       *
+       * <code>string uri = 1;</code>
+       */
+      public Builder setUri(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uri_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * URI of the executable file
+       * </pre>
+       *
+       * <code>string uri = 1;</code>
+       */
+      public Builder clearUri() {
+        
+        uri_ = getDefaultInstance().getUri();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * URI of the executable file
+       * </pre>
+       *
+       * <code>string uri = 1;</code>
+       */
+      public Builder setUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uri_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList args_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureArgsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          args_ = new com.google.protobuf.LazyStringArrayList(args_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * Arguments to the initialization action
+       * </pre>
+       *
+       * <code>repeated string args = 2;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getArgsList() {
+        return args_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Arguments to the initialization action
+       * </pre>
+       *
+       * <code>repeated string args = 2;</code>
+       */
+      public int getArgsCount() {
+        return args_.size();
+      }
+      /**
+       * <pre>
+       * Arguments to the initialization action
+       * </pre>
+       *
+       * <code>repeated string args = 2;</code>
+       */
+      public java.lang.String getArgs(int index) {
+        return args_.get(index);
+      }
+      /**
+       * <pre>
+       * Arguments to the initialization action
+       * </pre>
+       *
+       * <code>repeated string args = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getArgsBytes(int index) {
+        return args_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Arguments to the initialization action
+       * </pre>
+       *
+       * <code>repeated string args = 2;</code>
+       */
+      public Builder setArgs(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureArgsIsMutable();
+        args_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Arguments to the initialization action
+       * </pre>
+       *
+       * <code>repeated string args = 2;</code>
+       */
+      public Builder addArgs(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureArgsIsMutable();
+        args_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Arguments to the initialization action
+       * </pre>
+       *
+       * <code>repeated string args = 2;</code>
+       */
+      public Builder addAllArgs(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureArgsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, args_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Arguments to the initialization action
+       * </pre>
+       *
+       * <code>repeated string args = 2;</code>
+       */
+      public Builder clearArgs() {
+        args_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Arguments to the initialization action
+       * </pre>
+       *
+       * <code>repeated string args = 2;</code>
+       */
+      public Builder addArgsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureArgsIsMutable();
+        args_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private long timeout_ ;
+      /**
+       * <pre>
+       * Execution timeout
+       * </pre>
+       *
+       * <code>int64 timeout = 3;</code>
+       */
+      public long getTimeout() {
+        return timeout_;
+      }
+      /**
+       * <pre>
+       * Execution timeout
+       * </pre>
+       *
+       * <code>int64 timeout = 3;</code>
+       */
+      public Builder setTimeout(long value) {
+        
+        timeout_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Execution timeout
+       * </pre>
+       *
+       * <code>int64 timeout = 3;</code>
+       */
+      public Builder clearTimeout() {
+        
+        timeout_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.dataproc.v1.InitializationAction)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.dataproc.v1.InitializationAction)
+    private static final yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction();
+    }
+
+    public static yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<InitializationAction>
+        PARSER = new com.google.protobuf.AbstractParser<InitializationAction>() {
+      @java.lang.Override
+      public InitializationAction parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new InitializationAction(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<InitializationAction> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InitializationAction> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_dataproc_v1_Cluster_descriptor;
   private static final 
@@ -7801,6 +9212,11 @@ public final class ClusterOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_dataproc_v1_ClusterConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_dataproc_v1_InitializationAction_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_dataproc_v1_InitializationAction_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -7835,11 +9251,13 @@ public final class ClusterOuterClass {
       "ING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010STOPPIN" +
       "G\020\004\022\013\n\007STOPPED\020\005\022\014\n\010STARTING\020\006\"=\n\nMonito" +
       "ring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022" +
-      "\014\n\004link\030\003 \001(\t\"\241\003\n\014HadoopConfig\022@\n\010servic" +
+      "\014\n\004link\030\003 \001(\t\"\361\003\n\014HadoopConfig\022@\n\010servic" +
       "es\030\001 \003(\0162..yandex.cloud.dataproc.v1.Hado" +
       "opConfig.Service\022J\n\nproperties\030\002 \003(\01326.y" +
       "andex.cloud.dataproc.v1.HadoopConfig.Pro" +
-      "pertiesEntry\022\027\n\017ssh_public_keys\030\003 \003(\t\0321\n" +
+      "pertiesEntry\022\027\n\017ssh_public_keys\030\003 \003(\t\022N\n" +
+      "\026initialization_actions\030\004 \003(\0132..yandex.c" +
+      "loud.dataproc.v1.InitializationAction\0321\n" +
       "\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
       " \001(\t:\0028\001\"\266\001\n\007Service\022\027\n\023SERVICE_UNSPECIF" +
       "IED\020\000\022\010\n\004HDFS\020\001\022\010\n\004YARN\020\002\022\r\n\tMAPREDUCE\020\003" +
@@ -7848,9 +9266,11 @@ public final class ClusterOuterClass {
       "\n\010ZEPPELIN\020\013\022\t\n\005OOZIE\020\014\022\010\n\004LIVY\020\r\"[\n\rClu" +
       "sterConfig\022\022\n\nversion_id\030\001 \001(\t\0226\n\006hadoop" +
       "\030\002 \001(\0132&.yandex.cloud.dataproc.v1.Hadoop" +
-      "ConfigBe\n\034yandex.cloud.api.dataproc.v1ZE" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/dataproc/v1;dataprocb\006proto3"
+      "Config\"B\n\024InitializationAction\022\013\n\003uri\030\001 " +
+      "\001(\t\022\014\n\004args\030\002 \003(\t\022\017\n\007timeout\030\003 \001(\003Be\n\034ya" +
+      "ndex.cloud.api.dataproc.v1ZEgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/dat" +
+      "aproc/v1;dataprocb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7890,7 +9310,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_dataproc_v1_HadoopConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_v1_HadoopConfig_descriptor,
-        new java.lang.String[] { "Services", "Properties", "SshPublicKeys", });
+        new java.lang.String[] { "Services", "Properties", "SshPublicKeys", "InitializationActions", });
     internal_static_yandex_cloud_dataproc_v1_HadoopConfig_PropertiesEntry_descriptor =
       internal_static_yandex_cloud_dataproc_v1_HadoopConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_dataproc_v1_HadoopConfig_PropertiesEntry_fieldAccessorTable = new
@@ -7903,6 +9323,12 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_v1_ClusterConfig_descriptor,
         new java.lang.String[] { "VersionId", "Hadoop", });
+    internal_static_yandex_cloud_dataproc_v1_InitializationAction_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_dataproc_v1_InitializationAction_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_dataproc_v1_InitializationAction_descriptor,
+        new java.lang.String[] { "Uri", "Args", "Timeout", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

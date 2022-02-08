@@ -9738,6 +9738,30 @@ public final class ContainerServiceOuterClass {
      * <code>int64 concurrency = 9;</code>
      */
     long getConcurrency();
+
+    /**
+     * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+     */
+    java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret> 
+        getSecretsList();
+    /**
+     * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+     */
+    yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret getSecrets(int index);
+    /**
+     * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+     */
+    int getSecretsCount();
+    /**
+     * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.SecretOrBuilder> 
+        getSecretsOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+     */
+    yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.SecretOrBuilder getSecretsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.containers.v1.DeployContainerRevisionRequest}
@@ -9756,6 +9780,7 @@ public final class ContainerServiceOuterClass {
       description_ = "";
       serviceAccountId_ = "";
       concurrency_ = 0L;
+      secrets_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -9844,6 +9869,15 @@ public final class ContainerServiceOuterClass {
               concurrency_ = input.readInt64();
               break;
             }
+            case 82: {
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+                secrets_ = new java.util.ArrayList<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret>();
+                mutable_bitField0_ |= 0x00000080;
+              }
+              secrets_.add(
+                  input.readMessage(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -9859,6 +9893,9 @@ public final class ContainerServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+          secrets_ = java.util.Collections.unmodifiableList(secrets_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -9876,6 +9913,7 @@ public final class ContainerServiceOuterClass {
               yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeployContainerRevisionRequest.class, yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeployContainerRevisionRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONTAINER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object containerId_;
     /**
@@ -10050,6 +10088,41 @@ public final class ContainerServiceOuterClass {
       return concurrency_;
     }
 
+    public static final int SECRETS_FIELD_NUMBER = 10;
+    private java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret> secrets_;
+    /**
+     * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+     */
+    public java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret> getSecretsList() {
+      return secrets_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.SecretOrBuilder> 
+        getSecretsOrBuilderList() {
+      return secrets_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+     */
+    public int getSecretsCount() {
+      return secrets_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+     */
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret getSecrets(int index) {
+      return secrets_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+     */
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.SecretOrBuilder getSecretsOrBuilder(
+        int index) {
+      return secrets_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10085,6 +10158,9 @@ public final class ContainerServiceOuterClass {
       if (concurrency_ != 0L) {
         output.writeInt64(9, concurrency_);
       }
+      for (int i = 0; i < secrets_.size(); i++) {
+        output.writeMessage(10, secrets_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10118,6 +10194,10 @@ public final class ContainerServiceOuterClass {
       if (concurrency_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(9, concurrency_);
+      }
+      for (int i = 0; i < secrets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, secrets_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10158,6 +10238,8 @@ public final class ContainerServiceOuterClass {
       }
       result = result && (getConcurrency()
           == other.getConcurrency());
+      result = result && getSecretsList()
+          .equals(other.getSecretsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -10190,6 +10272,10 @@ public final class ContainerServiceOuterClass {
       hash = (37 * hash) + CONCURRENCY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getConcurrency());
+      if (getSecretsCount() > 0) {
+        hash = (37 * hash) + SECRETS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecretsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10318,6 +10404,7 @@ public final class ContainerServiceOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getSecretsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -10349,6 +10436,12 @@ public final class ContainerServiceOuterClass {
         }
         concurrency_ = 0L;
 
+        if (secretsBuilder_ == null) {
+          secrets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+        } else {
+          secretsBuilder_.clear();
+        }
         return this;
       }
 
@@ -10375,6 +10468,8 @@ public final class ContainerServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeployContainerRevisionRequest buildPartial() {
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeployContainerRevisionRequest result = new yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeployContainerRevisionRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.containerId_ = containerId_;
         result.description_ = description_;
         if (resourcesBuilder_ == null) {
@@ -10394,6 +10489,16 @@ public final class ContainerServiceOuterClass {
           result.imageSpec_ = imageSpecBuilder_.build();
         }
         result.concurrency_ = concurrency_;
+        if (secretsBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+            secrets_ = java.util.Collections.unmodifiableList(secrets_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.secrets_ = secrets_;
+        } else {
+          result.secrets_ = secretsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -10466,6 +10571,32 @@ public final class ContainerServiceOuterClass {
         if (other.getConcurrency() != 0L) {
           setConcurrency(other.getConcurrency());
         }
+        if (secretsBuilder_ == null) {
+          if (!other.secrets_.isEmpty()) {
+            if (secrets_.isEmpty()) {
+              secrets_ = other.secrets_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensureSecretsIsMutable();
+              secrets_.addAll(other.secrets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.secrets_.isEmpty()) {
+            if (secretsBuilder_.isEmpty()) {
+              secretsBuilder_.dispose();
+              secretsBuilder_ = null;
+              secrets_ = other.secrets_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              secretsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSecretsFieldBuilder() : null;
+            } else {
+              secretsBuilder_.addAllMessages(other.secrets_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -10494,6 +10625,7 @@ public final class ContainerServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object containerId_ = "";
       /**
@@ -11077,6 +11209,246 @@ public final class ContainerServiceOuterClass {
         concurrency_ = 0L;
         onChanged();
         return this;
+      }
+
+      private java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret> secrets_ =
+        java.util.Collections.emptyList();
+      private void ensureSecretsIsMutable() {
+        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+          secrets_ = new java.util.ArrayList<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret>(secrets_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.SecretOrBuilder> secretsBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+       */
+      public java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret> getSecretsList() {
+        if (secretsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(secrets_);
+        } else {
+          return secretsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+       */
+      public int getSecretsCount() {
+        if (secretsBuilder_ == null) {
+          return secrets_.size();
+        } else {
+          return secretsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret getSecrets(int index) {
+        if (secretsBuilder_ == null) {
+          return secrets_.get(index);
+        } else {
+          return secretsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+       */
+      public Builder setSecrets(
+          int index, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret value) {
+        if (secretsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSecretsIsMutable();
+          secrets_.set(index, value);
+          onChanged();
+        } else {
+          secretsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+       */
+      public Builder setSecrets(
+          int index, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.Builder builderForValue) {
+        if (secretsBuilder_ == null) {
+          ensureSecretsIsMutable();
+          secrets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          secretsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+       */
+      public Builder addSecrets(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret value) {
+        if (secretsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSecretsIsMutable();
+          secrets_.add(value);
+          onChanged();
+        } else {
+          secretsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+       */
+      public Builder addSecrets(
+          int index, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret value) {
+        if (secretsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSecretsIsMutable();
+          secrets_.add(index, value);
+          onChanged();
+        } else {
+          secretsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+       */
+      public Builder addSecrets(
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.Builder builderForValue) {
+        if (secretsBuilder_ == null) {
+          ensureSecretsIsMutable();
+          secrets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          secretsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+       */
+      public Builder addSecrets(
+          int index, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.Builder builderForValue) {
+        if (secretsBuilder_ == null) {
+          ensureSecretsIsMutable();
+          secrets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          secretsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+       */
+      public Builder addAllSecrets(
+          java.lang.Iterable<? extends yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret> values) {
+        if (secretsBuilder_ == null) {
+          ensureSecretsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, secrets_);
+          onChanged();
+        } else {
+          secretsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+       */
+      public Builder clearSecrets() {
+        if (secretsBuilder_ == null) {
+          secrets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          secretsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+       */
+      public Builder removeSecrets(int index) {
+        if (secretsBuilder_ == null) {
+          ensureSecretsIsMutable();
+          secrets_.remove(index);
+          onChanged();
+        } else {
+          secretsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.Builder getSecretsBuilder(
+          int index) {
+        return getSecretsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.SecretOrBuilder getSecretsOrBuilder(
+          int index) {
+        if (secretsBuilder_ == null) {
+          return secrets_.get(index);  } else {
+          return secretsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.SecretOrBuilder> 
+           getSecretsOrBuilderList() {
+        if (secretsBuilder_ != null) {
+          return secretsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(secrets_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.Builder addSecretsBuilder() {
+        return getSecretsFieldBuilder().addBuilder(
+            yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.Builder addSecretsBuilder(
+          int index) {
+        return getSecretsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
+       */
+      public java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.Builder> 
+           getSecretsBuilderList() {
+        return getSecretsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.SecretOrBuilder> 
+          getSecretsFieldBuilder() {
+        if (secretsBuilder_ == null) {
+          secretsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.SecretOrBuilder>(
+                  secrets_,
+                  ((bitField0_ & 0x00000080) == 0x00000080),
+                  getParentForChildren(),
+                  isClean());
+          secrets_ = null;
+        }
+        return secretsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -15036,7 +15408,7 @@ public final class ContainerServiceOuterClass {
       "\022\004\300\3011\001\"~\n\037ListContainersRevisionsRespons" +
       "e\022B\n\trevisions\030\001 \003(\0132/.yandex.cloud.serv" +
       "erless.containers.v1.Revision\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t\"\333\002\n\036DeployContainerRevisi" +
+      "ge_token\030\002 \001(\t\"\233\003\n\036DeployContainerRevisi" +
       "onRequest\022\032\n\014container_id\030\001 \001(\tB\004\350\3071\001\022\023\n" +
       "\013description\030\003 \001(\t\022I\n\tresources\030\005 \001(\01320." +
       "yandex.cloud.serverless.containers.v1.Re" +
@@ -15045,89 +15417,90 @@ public final class ContainerServiceOuterClass {
       "\032\n\022service_account_id\030\007 \001(\t\022J\n\nimage_spe" +
       "c\030\010 \001(\01320.yandex.cloud.serverless.contai" +
       "ners.v1.ImageSpecB\004\350\3071\001\022\023\n\013concurrency\030\t" +
-      " \001(\003\"\350\002\n\tImageSpec\022\027\n\timage_url\030\001 \001(\tB\004\350" +
-      "\3071\001\022?\n\007command\030\002 \001(\0132..yandex.cloud.serv" +
-      "erless.containers.v1.Command\0229\n\004args\030\003 \001" +
-      "(\0132+.yandex.cloud.serverless.containers." +
-      "v1.Args\022}\n\013environment\030\004 \003(\0132A.yandex.cl" +
-      "oud.serverless.containers.v1.ImageSpec.E" +
-      "nvironmentEntryB%\212\3101\006<=4096\262\3101\027\022\025[a-zA-Z" +
-      "][a-zA-Z0-9_]*\022\023\n\013working_dir\030\005 \001(\t\0322\n\020E" +
-      "nvironmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\"@\n\037DeployContainerRevisionMetada" +
-      "ta\022\035\n\025container_revision_id\030\001 \001(\t\"\226\001\n\036Li" +
-      "stContainerOperationsRequest\022\032\n\014containe" +
-      "r_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
-      "\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032" +
-      "\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"q\n\037ListContai" +
-      "nerOperationsResponse\0225\n\noperations\030\001 \003(" +
-      "\0132!.yandex.cloud.operation.Operation\022\027\n\017" +
-      "next_page_token\030\002 \001(\t2\224\023\n\020ContainerServi" +
-      "ce\022\245\001\n\003Get\022:.yandex.cloud.serverless.con" +
-      "tainers.v1.GetContainerRequest\0320.yandex." +
-      "cloud.serverless.containers.v1.Container" +
-      "\"0\202\323\344\223\002*\022(/containers/v1/containers/{con" +
-      "tainer_id}\022\246\001\n\004List\022<.yandex.cloud.serve" +
-      "rless.containers.v1.ListContainersReques" +
-      "t\032=.yandex.cloud.serverless.containers.v" +
-      "1.ListContainersResponse\"!\202\323\344\223\002\033\022\031/conta" +
-      "iners/v1/containers\022\270\001\n\006Create\022=.yandex." +
-      "cloud.serverless.containers.v1.CreateCon" +
-      "tainerRequest\032!.yandex.cloud.operation.O" +
-      "peration\"L\202\323\344\223\002\036\"\031/containers/v1/contain" +
-      "ers:\001*\262\322*$\n\027CreateContainerMetadata\022\tCon" +
-      "tainer\022\307\001\n\006Update\022=.yandex.cloud.serverl" +
-      "ess.containers.v1.UpdateContainerRequest" +
-      "\032!.yandex.cloud.operation.Operation\"[\202\323\344" +
-      "\223\002-2(/containers/v1/containers/{containe" +
-      "r_id}:\001*\262\322*$\n\027UpdateContainerMetadata\022\tC" +
-      "ontainer\022\320\001\n\006Delete\022=.yandex.cloud.serve" +
-      "rless.containers.v1.DeleteContainerReque" +
-      "st\032!.yandex.cloud.operation.Operation\"d\202" +
-      "\323\344\223\002**(/containers/v1/containers/{contai" +
-      "ner_id}\262\322*0\n\027DeleteContainerMetadata\022\025go" +
-      "ogle.protobuf.Empty\022\325\001\n\016DeployRevision\022E" +
-      ".yandex.cloud.serverless.containers.v1.D" +
-      "eployContainerRevisionRequest\032!.yandex.c" +
-      "loud.operation.Operation\"Y\202\323\344\223\002$\"\037/conta" +
-      "iners/v1/revisions:deploy:\001*\262\322*+\n\037Deploy" +
-      "ContainerRevisionMetadata\022\010Revision\022\274\001\n\013" +
-      "GetRevision\022B.yandex.cloud.serverless.co" +
-      "ntainers.v1.GetContainerRevisionRequest\032" +
-      "/.yandex.cloud.serverless.containers.v1." +
-      "Revision\"8\202\323\344\223\0022\0220/containers/v1/revisio" +
-      "ns/{container_revision_id}\022\300\001\n\rListRevis" +
-      "ions\022E.yandex.cloud.serverless.container" +
-      "s.v1.ListContainersRevisionsRequest\032F.ya" +
-      "ndex.cloud.serverless.containers.v1.List" +
-      "ContainersRevisionsResponse\" \202\323\344\223\002\032\022\030/co" +
-      "ntainers/v1/revisions\022\334\001\n\016ListOperations" +
-      "\022E.yandex.cloud.serverless.containers.v1" +
-      ".ListContainerOperationsRequest\032F.yandex" +
-      ".cloud.serverless.containers.v1.ListCont" +
-      "ainerOperationsResponse\";\202\323\344\223\0025\0223/contai" +
-      "ners/v1/containers/{container_id}/operat" +
-      "ions\022\271\001\n\022ListAccessBindings\022..yandex.clo" +
-      "ud.access.ListAccessBindingsRequest\032/.ya" +
-      "ndex.cloud.access.ListAccessBindingsResp" +
-      "onse\"B\202\323\344\223\002<\022:/containers/v1/containers/" +
-      "{resource_id}:listAccessBindings\022\351\001\n\021Set" +
-      "AccessBindings\022-.yandex.cloud.access.Set" +
-      "AccessBindingsRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"\201\001\202\323\344\223\002>\"9/containers/v" +
-      "1/containers/{resource_id}:setAccessBind" +
-      "ings:\001*\262\322*9\n access.SetAccessBindingsMet" +
-      "adata\022\025google.protobuf.Empty\022\365\001\n\024UpdateA" +
-      "ccessBindings\0220.yandex.cloud.access.Upda" +
-      "teAccessBindingsRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"\207\001\202\323\344\223\002A\"</containers" +
-      "/v1/containers/{resource_id}:updateAcces" +
-      "sBindings:\001*\262\322*<\n#access.UpdateAccessBin" +
-      "dingsMetadata\022\025google.protobuf.EmptyB\201\001\n" +
-      ")yandex.cloud.api.serverless.containers." +
-      "v1ZTgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/serverless/containers/v1;co" +
-      "ntainersb\006proto3"
+      " \001(\003\022>\n\007secrets\030\n \003(\0132-.yandex.cloud.ser" +
+      "verless.containers.v1.Secret\"\350\002\n\tImageSp" +
+      "ec\022\027\n\timage_url\030\001 \001(\tB\004\350\3071\001\022?\n\007command\030\002" +
+      " \001(\0132..yandex.cloud.serverless.container" +
+      "s.v1.Command\0229\n\004args\030\003 \001(\0132+.yandex.clou" +
+      "d.serverless.containers.v1.Args\022}\n\013envir" +
+      "onment\030\004 \003(\0132A.yandex.cloud.serverless.c" +
+      "ontainers.v1.ImageSpec.EnvironmentEntryB" +
+      "%\212\3101\006<=4096\262\3101\027\022\025[a-zA-Z][a-zA-Z0-9_]*\022\023" +
+      "\n\013working_dir\030\005 \001(\t\0322\n\020EnvironmentEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"@\n\037Deplo" +
+      "yContainerRevisionMetadata\022\035\n\025container_" +
+      "revision_id\030\001 \001(\t\"\226\001\n\036ListContainerOpera" +
+      "tionsRequest\022\032\n\014container_id\030\001 \001(\tB\004\350\3071\001" +
+      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_" +
+      "token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n" +
+      "\212\3101\006<=1000\"q\n\037ListContainerOperationsRes" +
+      "ponse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud" +
+      ".operation.Operation\022\027\n\017next_page_token\030" +
+      "\002 \001(\t2\224\023\n\020ContainerService\022\245\001\n\003Get\022:.yan" +
+      "dex.cloud.serverless.containers.v1.GetCo" +
+      "ntainerRequest\0320.yandex.cloud.serverless" +
+      ".containers.v1.Container\"0\202\323\344\223\002*\022(/conta" +
+      "iners/v1/containers/{container_id}\022\246\001\n\004L" +
+      "ist\022<.yandex.cloud.serverless.containers" +
+      ".v1.ListContainersRequest\032=.yandex.cloud" +
+      ".serverless.containers.v1.ListContainers" +
+      "Response\"!\202\323\344\223\002\033\022\031/containers/v1/contain" +
+      "ers\022\270\001\n\006Create\022=.yandex.cloud.serverless" +
+      ".containers.v1.CreateContainerRequest\032!." +
+      "yandex.cloud.operation.Operation\"L\202\323\344\223\002\036" +
+      "\"\031/containers/v1/containers:\001*\262\322*$\n\027Crea" +
+      "teContainerMetadata\022\tContainer\022\307\001\n\006Updat" +
+      "e\022=.yandex.cloud.serverless.containers.v" +
+      "1.UpdateContainerRequest\032!.yandex.cloud." +
+      "operation.Operation\"[\202\323\344\223\002-2(/containers" +
+      "/v1/containers/{container_id}:\001*\262\322*$\n\027Up" +
+      "dateContainerMetadata\022\tContainer\022\320\001\n\006Del" +
+      "ete\022=.yandex.cloud.serverless.containers" +
+      ".v1.DeleteContainerRequest\032!.yandex.clou" +
+      "d.operation.Operation\"d\202\323\344\223\002**(/containe" +
+      "rs/v1/containers/{container_id}\262\322*0\n\027Del" +
+      "eteContainerMetadata\022\025google.protobuf.Em" +
+      "pty\022\325\001\n\016DeployRevision\022E.yandex.cloud.se" +
+      "rverless.containers.v1.DeployContainerRe" +
+      "visionRequest\032!.yandex.cloud.operation.O" +
+      "peration\"Y\202\323\344\223\002$\"\037/containers/v1/revisio" +
+      "ns:deploy:\001*\262\322*+\n\037DeployContainerRevisio" +
+      "nMetadata\022\010Revision\022\274\001\n\013GetRevision\022B.ya" +
+      "ndex.cloud.serverless.containers.v1.GetC" +
+      "ontainerRevisionRequest\032/.yandex.cloud.s" +
+      "erverless.containers.v1.Revision\"8\202\323\344\223\0022" +
+      "\0220/containers/v1/revisions/{container_re" +
+      "vision_id}\022\300\001\n\rListRevisions\022E.yandex.cl" +
+      "oud.serverless.containers.v1.ListContain" +
+      "ersRevisionsRequest\032F.yandex.cloud.serve" +
+      "rless.containers.v1.ListContainersRevisi" +
+      "onsResponse\" \202\323\344\223\002\032\022\030/containers/v1/revi" +
+      "sions\022\334\001\n\016ListOperations\022E.yandex.cloud." +
+      "serverless.containers.v1.ListContainerOp" +
+      "erationsRequest\032F.yandex.cloud.serverles" +
+      "s.containers.v1.ListContainerOperationsR" +
+      "esponse\";\202\323\344\223\0025\0223/containers/v1/containe" +
+      "rs/{container_id}/operations\022\271\001\n\022ListAcc" +
+      "essBindings\022..yandex.cloud.access.ListAc" +
+      "cessBindingsRequest\032/.yandex.cloud.acces" +
+      "s.ListAccessBindingsResponse\"B\202\323\344\223\002<\022:/c" +
+      "ontainers/v1/containers/{resource_id}:li" +
+      "stAccessBindings\022\351\001\n\021SetAccessBindings\022-" +
+      ".yandex.cloud.access.SetAccessBindingsRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"\201\001\202\323\344\223\002>\"9/containers/v1/containers/{re" +
+      "source_id}:setAccessBindings:\001*\262\322*9\n acc" +
+      "ess.SetAccessBindingsMetadata\022\025google.pr" +
+      "otobuf.Empty\022\365\001\n\024UpdateAccessBindings\0220." +
+      "yandex.cloud.access.UpdateAccessBindings" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"\207\001\202\323\344\223\002A\"</containers/v1/containers/{" +
+      "resource_id}:updateAccessBindings:\001*\262\322*<" +
+      "\n#access.UpdateAccessBindingsMetadata\022\025g" +
+      "oogle.protobuf.EmptyB\201\001\n)yandex.cloud.ap" +
+      "i.serverless.containers.v1ZTgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/ser" +
+      "verless/containers/v1;containersb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15238,7 +15611,7 @@ public final class ContainerServiceOuterClass {
     internal_static_yandex_cloud_serverless_containers_v1_DeployContainerRevisionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_containers_v1_DeployContainerRevisionRequest_descriptor,
-        new java.lang.String[] { "ContainerId", "Description", "Resources", "ExecutionTimeout", "ServiceAccountId", "ImageSpec", "Concurrency", });
+        new java.lang.String[] { "ContainerId", "Description", "Resources", "ExecutionTimeout", "ServiceAccountId", "ImageSpec", "Concurrency", "Secrets", });
     internal_static_yandex_cloud_serverless_containers_v1_ImageSpec_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_serverless_containers_v1_ImageSpec_fieldAccessorTable = new

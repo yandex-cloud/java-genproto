@@ -130,6 +130,122 @@ public final class Common {
     // @@protoc_insertion_point(enum_scope:yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage)
   }
 
+  /**
+   * Protobuf enum {@code yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy}
+   */
+  public enum CleanupPolicy
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>CLEANUP_POLICY_UNSPECIFIED = 0;</code>
+     */
+    CLEANUP_POLICY_UNSPECIFIED(0),
+    /**
+     * <code>DISABLED = 1;</code>
+     */
+    DISABLED(1),
+    /**
+     * <code>DROP = 2;</code>
+     */
+    DROP(2),
+    /**
+     * <code>TRUNCATE = 3;</code>
+     */
+    TRUNCATE(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>CLEANUP_POLICY_UNSPECIFIED = 0;</code>
+     */
+    public static final int CLEANUP_POLICY_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>DISABLED = 1;</code>
+     */
+    public static final int DISABLED_VALUE = 1;
+    /**
+     * <code>DROP = 2;</code>
+     */
+    public static final int DROP_VALUE = 2;
+    /**
+     * <code>TRUNCATE = 3;</code>
+     */
+    public static final int TRUNCATE_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static CleanupPolicy valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static CleanupPolicy forNumber(int value) {
+      switch (value) {
+        case 0: return CLEANUP_POLICY_UNSPECIFIED;
+        case 1: return DISABLED;
+        case 2: return DROP;
+        case 3: return TRUNCATE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<CleanupPolicy>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        CleanupPolicy> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<CleanupPolicy>() {
+            public CleanupPolicy findValueByNumber(int number) {
+              return CleanupPolicy.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final CleanupPolicy[] VALUES = values();
+
+    public static CleanupPolicy valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private CleanupPolicy(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy)
+  }
+
   public interface SecretOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.endpoint.Secret)
       com.google.protobuf.MessageOrBuilder {
@@ -2386,12 +2502,14 @@ public final class Common {
       "\n\n\010tls_mode\"#\n\tTLSConfig\022\026\n\016ca_certifica" +
       "te\030\001 \001(\t*h\n\023ObjectTransferStage\022%\n!OBJEC" +
       "T_TRANSFER_STAGE_UNSPECIFIED\020\000\022\017\n\013BEFORE" +
-      "_DATA\020\001\022\016\n\nAFTER_DATA\020\002\022\t\n\005NEVER\020\003B\247\001\n)y" +
-      "andex.cloud.api.datatransfer.v1.endpoint" +
-      "ZRgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/datatransfer/v1/endpoint;endp" +
-      "oint\252\002%Yandex.Cloud.Datatransfer.V1.EndP" +
-      "ointb\006proto3"
+      "_DATA\020\001\022\016\n\nAFTER_DATA\020\002\022\t\n\005NEVER\020\003*U\n\rCl" +
+      "eanupPolicy\022\036\n\032CLEANUP_POLICY_UNSPECIFIE" +
+      "D\020\000\022\014\n\010DISABLED\020\001\022\010\n\004DROP\020\002\022\014\n\010TRUNCATE\020" +
+      "\003B\247\001\n)yandex.cloud.api.datatransfer.v1.e" +
+      "ndpointZRgithub.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/datatransfer/v1/endpoi" +
+      "nt;endpoint\252\002%Yandex.Cloud.Datatransfer." +
+      "V1.EndPointb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

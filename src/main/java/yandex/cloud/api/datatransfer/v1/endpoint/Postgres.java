@@ -5089,8 +5089,8 @@ public final class Postgres {
      * <pre>
      * Included tables
      * 
-     * If none or empty list is presented, all tables are replicated. Can contain
-     * regular expression.
+     * If none or empty list is presented, all tables are replicated. Full table name
+     * with schema. Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string include_tables = 5;</code>
@@ -5101,8 +5101,8 @@ public final class Postgres {
      * <pre>
      * Included tables
      * 
-     * If none or empty list is presented, all tables are replicated. Can contain
-     * regular expression.
+     * If none or empty list is presented, all tables are replicated. Full table name
+     * with schema. Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string include_tables = 5;</code>
@@ -5112,8 +5112,8 @@ public final class Postgres {
      * <pre>
      * Included tables
      * 
-     * If none or empty list is presented, all tables are replicated. Can contain
-     * regular expression.
+     * If none or empty list is presented, all tables are replicated. Full table name
+     * with schema. Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string include_tables = 5;</code>
@@ -5123,8 +5123,8 @@ public final class Postgres {
      * <pre>
      * Included tables
      * 
-     * If none or empty list is presented, all tables are replicated. Can contain
-     * regular expression.
+     * If none or empty list is presented, all tables are replicated. Full table name
+     * with schema. Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string include_tables = 5;</code>
@@ -5136,8 +5136,8 @@ public final class Postgres {
      * <pre>
      * Excluded tables
      * 
-     * If none or empty list is presented, all tables are replicated. Can contain
-     * regular expression.
+     * If none or empty list is presented, all tables are replicated. Full table name
+     * with schema. Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string exclude_tables = 6;</code>
@@ -5148,8 +5148,8 @@ public final class Postgres {
      * <pre>
      * Excluded tables
      * 
-     * If none or empty list is presented, all tables are replicated. Can contain
-     * regular expression.
+     * If none or empty list is presented, all tables are replicated. Full table name
+     * with schema. Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string exclude_tables = 6;</code>
@@ -5159,8 +5159,8 @@ public final class Postgres {
      * <pre>
      * Excluded tables
      * 
-     * If none or empty list is presented, all tables are replicated. Can contain
-     * regular expression.
+     * If none or empty list is presented, all tables are replicated. Full table name
+     * with schema. Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string exclude_tables = 6;</code>
@@ -5170,8 +5170,8 @@ public final class Postgres {
      * <pre>
      * Excluded tables
      * 
-     * If none or empty list is presented, all tables are replicated. Can contain
-     * regular expression.
+     * If none or empty list is presented, all tables are replicated. Full table name
+     * with schema. Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string exclude_tables = 6;</code>
@@ -5583,8 +5583,8 @@ public final class Postgres {
      * <pre>
      * Included tables
      * 
-     * If none or empty list is presented, all tables are replicated. Can contain
-     * regular expression.
+     * If none or empty list is presented, all tables are replicated. Full table name
+     * with schema. Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string include_tables = 5;</code>
@@ -5597,8 +5597,8 @@ public final class Postgres {
      * <pre>
      * Included tables
      * 
-     * If none or empty list is presented, all tables are replicated. Can contain
-     * regular expression.
+     * If none or empty list is presented, all tables are replicated. Full table name
+     * with schema. Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string include_tables = 5;</code>
@@ -5610,8 +5610,8 @@ public final class Postgres {
      * <pre>
      * Included tables
      * 
-     * If none or empty list is presented, all tables are replicated. Can contain
-     * regular expression.
+     * If none or empty list is presented, all tables are replicated. Full table name
+     * with schema. Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string include_tables = 5;</code>
@@ -5623,8 +5623,8 @@ public final class Postgres {
      * <pre>
      * Included tables
      * 
-     * If none or empty list is presented, all tables are replicated. Can contain
-     * regular expression.
+     * If none or empty list is presented, all tables are replicated. Full table name
+     * with schema. Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string include_tables = 5;</code>
@@ -5640,8 +5640,8 @@ public final class Postgres {
      * <pre>
      * Excluded tables
      * 
-     * If none or empty list is presented, all tables are replicated. Can contain
-     * regular expression.
+     * If none or empty list is presented, all tables are replicated. Full table name
+     * with schema. Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string exclude_tables = 6;</code>
@@ -5654,8 +5654,8 @@ public final class Postgres {
      * <pre>
      * Excluded tables
      * 
-     * If none or empty list is presented, all tables are replicated. Can contain
-     * regular expression.
+     * If none or empty list is presented, all tables are replicated. Full table name
+     * with schema. Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string exclude_tables = 6;</code>
@@ -5667,8 +5667,8 @@ public final class Postgres {
      * <pre>
      * Excluded tables
      * 
-     * If none or empty list is presented, all tables are replicated. Can contain
-     * regular expression.
+     * If none or empty list is presented, all tables are replicated. Full table name
+     * with schema. Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string exclude_tables = 6;</code>
@@ -5680,8 +5680,8 @@ public final class Postgres {
      * <pre>
      * Excluded tables
      * 
-     * If none or empty list is presented, all tables are replicated. Can contain
-     * regular expression.
+     * If none or empty list is presented, all tables are replicated. Full table name
+     * with schema. Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string exclude_tables = 6;</code>
@@ -6853,8 +6853,8 @@ public final class Postgres {
        * <pre>
        * Included tables
        * 
-       * If none or empty list is presented, all tables are replicated. Can contain
-       * regular expression.
+       * If none or empty list is presented, all tables are replicated. Full table name
+       * with schema. Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string include_tables = 5;</code>
@@ -6867,8 +6867,8 @@ public final class Postgres {
        * <pre>
        * Included tables
        * 
-       * If none or empty list is presented, all tables are replicated. Can contain
-       * regular expression.
+       * If none or empty list is presented, all tables are replicated. Full table name
+       * with schema. Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string include_tables = 5;</code>
@@ -6880,8 +6880,8 @@ public final class Postgres {
        * <pre>
        * Included tables
        * 
-       * If none or empty list is presented, all tables are replicated. Can contain
-       * regular expression.
+       * If none or empty list is presented, all tables are replicated. Full table name
+       * with schema. Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string include_tables = 5;</code>
@@ -6893,8 +6893,8 @@ public final class Postgres {
        * <pre>
        * Included tables
        * 
-       * If none or empty list is presented, all tables are replicated. Can contain
-       * regular expression.
+       * If none or empty list is presented, all tables are replicated. Full table name
+       * with schema. Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string include_tables = 5;</code>
@@ -6907,8 +6907,8 @@ public final class Postgres {
        * <pre>
        * Included tables
        * 
-       * If none or empty list is presented, all tables are replicated. Can contain
-       * regular expression.
+       * If none or empty list is presented, all tables are replicated. Full table name
+       * with schema. Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string include_tables = 5;</code>
@@ -6927,8 +6927,8 @@ public final class Postgres {
        * <pre>
        * Included tables
        * 
-       * If none or empty list is presented, all tables are replicated. Can contain
-       * regular expression.
+       * If none or empty list is presented, all tables are replicated. Full table name
+       * with schema. Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string include_tables = 5;</code>
@@ -6947,8 +6947,8 @@ public final class Postgres {
        * <pre>
        * Included tables
        * 
-       * If none or empty list is presented, all tables are replicated. Can contain
-       * regular expression.
+       * If none or empty list is presented, all tables are replicated. Full table name
+       * with schema. Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string include_tables = 5;</code>
@@ -6965,8 +6965,8 @@ public final class Postgres {
        * <pre>
        * Included tables
        * 
-       * If none or empty list is presented, all tables are replicated. Can contain
-       * regular expression.
+       * If none or empty list is presented, all tables are replicated. Full table name
+       * with schema. Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string include_tables = 5;</code>
@@ -6981,8 +6981,8 @@ public final class Postgres {
        * <pre>
        * Included tables
        * 
-       * If none or empty list is presented, all tables are replicated. Can contain
-       * regular expression.
+       * If none or empty list is presented, all tables are replicated. Full table name
+       * with schema. Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string include_tables = 5;</code>
@@ -7010,8 +7010,8 @@ public final class Postgres {
        * <pre>
        * Excluded tables
        * 
-       * If none or empty list is presented, all tables are replicated. Can contain
-       * regular expression.
+       * If none or empty list is presented, all tables are replicated. Full table name
+       * with schema. Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string exclude_tables = 6;</code>
@@ -7024,8 +7024,8 @@ public final class Postgres {
        * <pre>
        * Excluded tables
        * 
-       * If none or empty list is presented, all tables are replicated. Can contain
-       * regular expression.
+       * If none or empty list is presented, all tables are replicated. Full table name
+       * with schema. Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string exclude_tables = 6;</code>
@@ -7037,8 +7037,8 @@ public final class Postgres {
        * <pre>
        * Excluded tables
        * 
-       * If none or empty list is presented, all tables are replicated. Can contain
-       * regular expression.
+       * If none or empty list is presented, all tables are replicated. Full table name
+       * with schema. Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string exclude_tables = 6;</code>
@@ -7050,8 +7050,8 @@ public final class Postgres {
        * <pre>
        * Excluded tables
        * 
-       * If none or empty list is presented, all tables are replicated. Can contain
-       * regular expression.
+       * If none or empty list is presented, all tables are replicated. Full table name
+       * with schema. Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string exclude_tables = 6;</code>
@@ -7064,8 +7064,8 @@ public final class Postgres {
        * <pre>
        * Excluded tables
        * 
-       * If none or empty list is presented, all tables are replicated. Can contain
-       * regular expression.
+       * If none or empty list is presented, all tables are replicated. Full table name
+       * with schema. Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string exclude_tables = 6;</code>
@@ -7084,8 +7084,8 @@ public final class Postgres {
        * <pre>
        * Excluded tables
        * 
-       * If none or empty list is presented, all tables are replicated. Can contain
-       * regular expression.
+       * If none or empty list is presented, all tables are replicated. Full table name
+       * with schema. Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string exclude_tables = 6;</code>
@@ -7104,8 +7104,8 @@ public final class Postgres {
        * <pre>
        * Excluded tables
        * 
-       * If none or empty list is presented, all tables are replicated. Can contain
-       * regular expression.
+       * If none or empty list is presented, all tables are replicated. Full table name
+       * with schema. Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string exclude_tables = 6;</code>
@@ -7122,8 +7122,8 @@ public final class Postgres {
        * <pre>
        * Excluded tables
        * 
-       * If none or empty list is presented, all tables are replicated. Can contain
-       * regular expression.
+       * If none or empty list is presented, all tables are replicated. Full table name
+       * with schema. Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string exclude_tables = 6;</code>
@@ -7138,8 +7138,8 @@ public final class Postgres {
        * <pre>
        * Excluded tables
        * 
-       * If none or empty list is presented, all tables are replicated. Can contain
-       * regular expression.
+       * If none or empty list is presented, all tables are replicated. Full table name
+       * with schema. Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string exclude_tables = 6;</code>
@@ -7638,6 +7638,29 @@ public final class Postgres {
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder getPasswordOrBuilder();
+
+    /**
+     * <pre>
+     * Cleanup policy
+     * 
+     * Cleanup policy for activate, reactivate and reupload processes. Default is
+     * DISABLED.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
+     */
+    int getCleanupPolicyValue();
+    /**
+     * <pre>
+     * Cleanup policy
+     * 
+     * Cleanup policy for activate, reactivate and reupload processes. Default is
+     * DISABLED.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy getCleanupPolicy();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.PostgresTarget}
@@ -7654,6 +7677,7 @@ public final class Postgres {
     private PostgresTarget() {
       database_ = "";
       user_ = "";
+      cleanupPolicy_ = 0;
     }
 
     @java.lang.Override
@@ -7716,6 +7740,12 @@ public final class Postgres {
                 password_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+
+              cleanupPolicy_ = rawValue;
               break;
             }
             default: {
@@ -7916,6 +7946,37 @@ public final class Postgres {
       return getPassword();
     }
 
+    public static final int CLEANUP_POLICY_FIELD_NUMBER = 5;
+    private int cleanupPolicy_;
+    /**
+     * <pre>
+     * Cleanup policy
+     * 
+     * Cleanup policy for activate, reactivate and reupload processes. Default is
+     * DISABLED.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
+     */
+    public int getCleanupPolicyValue() {
+      return cleanupPolicy_;
+    }
+    /**
+     * <pre>
+     * Cleanup policy
+     * 
+     * Cleanup policy for activate, reactivate and reupload processes. Default is
+     * DISABLED.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
+     */
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy getCleanupPolicy() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy result = yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.valueOf(cleanupPolicy_);
+      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7942,6 +8003,9 @@ public final class Postgres {
       if (password_ != null) {
         output.writeMessage(4, getPassword());
       }
+      if (cleanupPolicy_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.CLEANUP_POLICY_UNSPECIFIED.getNumber()) {
+        output.writeEnum(5, cleanupPolicy_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -7964,6 +8028,10 @@ public final class Postgres {
       if (password_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPassword());
+      }
+      if (cleanupPolicy_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.CLEANUP_POLICY_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, cleanupPolicy_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7995,6 +8063,7 @@ public final class Postgres {
         result = result && getPassword()
             .equals(other.getPassword());
       }
+      result = result && cleanupPolicy_ == other.cleanupPolicy_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -8018,6 +8087,8 @@ public final class Postgres {
         hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
         hash = (53 * hash) + getPassword().hashCode();
       }
+      hash = (37 * hash) + CLEANUP_POLICY_FIELD_NUMBER;
+      hash = (53 * hash) + cleanupPolicy_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8167,6 +8238,8 @@ public final class Postgres {
           password_ = null;
           passwordBuilder_ = null;
         }
+        cleanupPolicy_ = 0;
+
         return this;
       }
 
@@ -8205,6 +8278,7 @@ public final class Postgres {
         } else {
           result.password_ = passwordBuilder_.build();
         }
+        result.cleanupPolicy_ = cleanupPolicy_;
         onBuilt();
         return result;
       }
@@ -8266,6 +8340,9 @@ public final class Postgres {
         }
         if (other.hasPassword()) {
           mergePassword(other.getPassword());
+        }
+        if (other.cleanupPolicy_ != 0) {
+          setCleanupPolicyValue(other.getCleanupPolicyValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8825,6 +8902,86 @@ public final class Postgres {
         }
         return passwordBuilder_;
       }
+
+      private int cleanupPolicy_ = 0;
+      /**
+       * <pre>
+       * Cleanup policy
+       * 
+       * Cleanup policy for activate, reactivate and reupload processes. Default is
+       * DISABLED.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
+       */
+      public int getCleanupPolicyValue() {
+        return cleanupPolicy_;
+      }
+      /**
+       * <pre>
+       * Cleanup policy
+       * 
+       * Cleanup policy for activate, reactivate and reupload processes. Default is
+       * DISABLED.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
+       */
+      public Builder setCleanupPolicyValue(int value) {
+        cleanupPolicy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cleanup policy
+       * 
+       * Cleanup policy for activate, reactivate and reupload processes. Default is
+       * DISABLED.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy getCleanupPolicy() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy result = yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.valueOf(cleanupPolicy_);
+        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Cleanup policy
+       * 
+       * Cleanup policy for activate, reactivate and reupload processes. Default is
+       * DISABLED.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
+       */
+      public Builder setCleanupPolicy(yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        cleanupPolicy_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cleanup policy
+       * 
+       * Cleanup policy for activate, reactivate and reupload processes. Default is
+       * DISABLED.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
+       */
+      public Builder clearCleanupPolicy() {
+        
+        cleanupPolicy_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8964,17 +9121,18 @@ public final class Postgres {
       "byte_lag_limit\030\010 \001(\003\022\026\n\016service_schema\030\t" +
       " \001(\t\022g\n\030object_transfer_settings\030\r \001(\0132E" +
       ".yandex.cloud.datatransfer.v1.endpoint.P" +
-      "ostgresObjectTransferSettings\"\300\001\n\016Postgr" +
+      "ostgresObjectTransferSettings\"\216\002\n\016Postgr" +
       "esTarget\022M\n\nconnection\030\001 \001(\01329.yandex.cl" +
       "oud.datatransfer.v1.endpoint.PostgresCon" +
       "nection\022\020\n\010database\030\002 \001(\t\022\014\n\004user\030\003 \001(\t\022" +
       "?\n\010password\030\004 \001(\0132-.yandex.cloud.datatra" +
-      "nsfer.v1.endpoint.SecretB\247\001\n)yandex.clou" +
-      "d.api.datatransfer.v1.endpointZRgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/datatransfer/v1/endpoint;endpoint\252\002%Yan" +
-      "dex.Cloud.Datatransfer.V1.EndPointb\006prot" +
-      "o3"
+      "nsfer.v1.endpoint.Secret\022L\n\016cleanup_poli" +
+      "cy\030\005 \001(\01624.yandex.cloud.datatransfer.v1." +
+      "endpoint.CleanupPolicyB\247\001\n)yandex.cloud." +
+      "api.datatransfer.v1.endpointZRgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/d" +
+      "atatransfer/v1/endpoint;endpoint\252\002%Yande" +
+      "x.Cloud.Datatransfer.V1.EndPointb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9018,7 +9176,7 @@ public final class Postgres {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresTarget_descriptor,
-        new java.lang.String[] { "Connection", "Database", "User", "Password", });
+        new java.lang.String[] { "Connection", "Database", "User", "Password", "CleanupPolicy", });
     yandex.cloud.api.datatransfer.v1.endpoint.Common.getDescriptor();
   }
 

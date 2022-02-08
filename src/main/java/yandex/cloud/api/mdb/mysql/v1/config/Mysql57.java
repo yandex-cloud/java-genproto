@@ -1688,6 +1688,62 @@ public final class Mysql57 {
      * <code>repeated .yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.LogSlowFilterType log_slow_filter = 61;</code>
      */
     int getLogSlowFilterValue(int index);
+
+    /**
+     * <pre>
+     * Replication lag threshold (seconds) which allows replica to be promoted to master while executing "switchover from".
+     * Should be less than mdb_offline_mode_disable_lag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 62 [(.yandex.cloud.value) = "0-86400"];</code>
+     */
+    boolean hasMdbPriorityChoiceMaxLag();
+    /**
+     * <pre>
+     * Replication lag threshold (seconds) which allows replica to be promoted to master while executing "switchover from".
+     * Should be less than mdb_offline_mode_disable_lag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 62 [(.yandex.cloud.value) = "0-86400"];</code>
+     */
+    com.google.protobuf.Int64Value getMdbPriorityChoiceMaxLag();
+    /**
+     * <pre>
+     * Replication lag threshold (seconds) which allows replica to be promoted to master while executing "switchover from".
+     * Should be less than mdb_offline_mode_disable_lag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 62 [(.yandex.cloud.value) = "0-86400"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMdbPriorityChoiceMaxLagOrBuilder();
+
+    /**
+     * <pre>
+     * Specifies the page size for InnoDB tablespaces.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_page_size = 63 [(.yandex.cloud.value) = "4096-65536"];</code>
+     */
+    boolean hasInnodbPageSize();
+    /**
+     * <pre>
+     * Specifies the page size for InnoDB tablespaces.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_page_size = 63 [(.yandex.cloud.value) = "4096-65536"];</code>
+     */
+    com.google.protobuf.Int64Value getInnodbPageSize();
+    /**
+     * <pre>
+     * Specifies the page size for InnoDB tablespaces.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_page_size = 63 [(.yandex.cloud.value) = "4096-65536"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getInnodbPageSizeOrBuilder();
   }
   /**
    * <pre>
@@ -2498,6 +2554,32 @@ public final class Mysql57 {
                 logSlowFilter_.add(rawValue);
               }
               input.popLimit(oldLimit);
+              break;
+            }
+            case 498: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (mdbPriorityChoiceMaxLag_ != null) {
+                subBuilder = mdbPriorityChoiceMaxLag_.toBuilder();
+              }
+              mdbPriorityChoiceMaxLag_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mdbPriorityChoiceMaxLag_);
+                mdbPriorityChoiceMaxLag_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 506: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (innodbPageSize_ != null) {
+                subBuilder = innodbPageSize_.toBuilder();
+              }
+              innodbPageSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(innodbPageSize_);
+                innodbPageSize_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -5869,6 +5951,78 @@ public final class Mysql57 {
     }
     private int logSlowFilterMemoizedSerializedSize;
 
+    public static final int MDB_PRIORITY_CHOICE_MAX_LAG_FIELD_NUMBER = 62;
+    private com.google.protobuf.Int64Value mdbPriorityChoiceMaxLag_;
+    /**
+     * <pre>
+     * Replication lag threshold (seconds) which allows replica to be promoted to master while executing "switchover from".
+     * Should be less than mdb_offline_mode_disable_lag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 62 [(.yandex.cloud.value) = "0-86400"];</code>
+     */
+    public boolean hasMdbPriorityChoiceMaxLag() {
+      return mdbPriorityChoiceMaxLag_ != null;
+    }
+    /**
+     * <pre>
+     * Replication lag threshold (seconds) which allows replica to be promoted to master while executing "switchover from".
+     * Should be less than mdb_offline_mode_disable_lag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 62 [(.yandex.cloud.value) = "0-86400"];</code>
+     */
+    public com.google.protobuf.Int64Value getMdbPriorityChoiceMaxLag() {
+      return mdbPriorityChoiceMaxLag_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mdbPriorityChoiceMaxLag_;
+    }
+    /**
+     * <pre>
+     * Replication lag threshold (seconds) which allows replica to be promoted to master while executing "switchover from".
+     * Should be less than mdb_offline_mode_disable_lag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 62 [(.yandex.cloud.value) = "0-86400"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMdbPriorityChoiceMaxLagOrBuilder() {
+      return getMdbPriorityChoiceMaxLag();
+    }
+
+    public static final int INNODB_PAGE_SIZE_FIELD_NUMBER = 63;
+    private com.google.protobuf.Int64Value innodbPageSize_;
+    /**
+     * <pre>
+     * Specifies the page size for InnoDB tablespaces.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_page_size = 63 [(.yandex.cloud.value) = "4096-65536"];</code>
+     */
+    public boolean hasInnodbPageSize() {
+      return innodbPageSize_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies the page size for InnoDB tablespaces.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_page_size = 63 [(.yandex.cloud.value) = "4096-65536"];</code>
+     */
+    public com.google.protobuf.Int64Value getInnodbPageSize() {
+      return innodbPageSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbPageSize_;
+    }
+    /**
+     * <pre>
+     * Specifies the page size for InnoDB tablespaces.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_page_size = 63 [(.yandex.cloud.value) = "4096-65536"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getInnodbPageSizeOrBuilder() {
+      return getInnodbPageSize();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6074,6 +6228,12 @@ public final class Mysql57 {
       }
       for (int i = 0; i < logSlowFilter_.size(); i++) {
         output.writeEnumNoTag(logSlowFilter_.get(i));
+      }
+      if (mdbPriorityChoiceMaxLag_ != null) {
+        output.writeMessage(62, getMdbPriorityChoiceMaxLag());
+      }
+      if (innodbPageSize_ != null) {
+        output.writeMessage(63, getInnodbPageSize());
       }
       unknownFields.writeTo(output);
     }
@@ -6340,6 +6500,14 @@ public final class Mysql57 {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32SizeNoTag(dataSize);
         }logSlowFilterMemoizedSerializedSize = dataSize;
+      }
+      if (mdbPriorityChoiceMaxLag_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(62, getMdbPriorityChoiceMaxLag());
+      }
+      if (innodbPageSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(63, getInnodbPageSize());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6625,6 +6793,16 @@ public final class Mysql57 {
             .equals(other.getLogSlowSpStatements());
       }
       result = result && logSlowFilter_.equals(other.logSlowFilter_);
+      result = result && (hasMdbPriorityChoiceMaxLag() == other.hasMdbPriorityChoiceMaxLag());
+      if (hasMdbPriorityChoiceMaxLag()) {
+        result = result && getMdbPriorityChoiceMaxLag()
+            .equals(other.getMdbPriorityChoiceMaxLag());
+      }
+      result = result && (hasInnodbPageSize() == other.hasInnodbPageSize());
+      if (hasInnodbPageSize()) {
+        result = result && getInnodbPageSize()
+            .equals(other.getInnodbPageSize());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -6863,6 +7041,14 @@ public final class Mysql57 {
       if (getLogSlowFilterCount() > 0) {
         hash = (37 * hash) + LOG_SLOW_FILTER_FIELD_NUMBER;
         hash = (53 * hash) + logSlowFilter_.hashCode();
+      }
+      if (hasMdbPriorityChoiceMaxLag()) {
+        hash = (37 * hash) + MDB_PRIORITY_CHOICE_MAX_LAG_FIELD_NUMBER;
+        hash = (53 * hash) + getMdbPriorityChoiceMaxLag().hashCode();
+      }
+      if (hasInnodbPageSize()) {
+        hash = (37 * hash) + INNODB_PAGE_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getInnodbPageSize().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7327,6 +7513,18 @@ public final class Mysql57 {
         }
         logSlowFilter_ = java.util.Collections.emptyList();
         bitField1_ = (bitField1_ & ~0x10000000);
+        if (mdbPriorityChoiceMaxLagBuilder_ == null) {
+          mdbPriorityChoiceMaxLag_ = null;
+        } else {
+          mdbPriorityChoiceMaxLag_ = null;
+          mdbPriorityChoiceMaxLagBuilder_ = null;
+        }
+        if (innodbPageSizeBuilder_ == null) {
+          innodbPageSize_ = null;
+        } else {
+          innodbPageSize_ = null;
+          innodbPageSizeBuilder_ = null;
+        }
         return this;
       }
 
@@ -7630,6 +7828,16 @@ public final class Mysql57 {
           bitField1_ = (bitField1_ & ~0x10000000);
         }
         result.logSlowFilter_ = logSlowFilter_;
+        if (mdbPriorityChoiceMaxLagBuilder_ == null) {
+          result.mdbPriorityChoiceMaxLag_ = mdbPriorityChoiceMaxLag_;
+        } else {
+          result.mdbPriorityChoiceMaxLag_ = mdbPriorityChoiceMaxLagBuilder_.build();
+        }
+        if (innodbPageSizeBuilder_ == null) {
+          result.innodbPageSize_ = innodbPageSize_;
+        } else {
+          result.innodbPageSize_ = innodbPageSizeBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -7879,6 +8087,12 @@ public final class Mysql57 {
             logSlowFilter_.addAll(other.logSlowFilter_);
           }
           onChanged();
+        }
+        if (other.hasMdbPriorityChoiceMaxLag()) {
+          mergeMdbPriorityChoiceMaxLag(other.getMdbPriorityChoiceMaxLag());
+        }
+        if (other.hasInnodbPageSize()) {
+          mergeInnodbPageSize(other.getInnodbPageSize());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -17142,6 +17356,330 @@ public final class Mysql57 {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.Int64Value mdbPriorityChoiceMaxLag_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> mdbPriorityChoiceMaxLagBuilder_;
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which allows replica to be promoted to master while executing "switchover from".
+       * Should be less than mdb_offline_mode_disable_lag.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 62 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public boolean hasMdbPriorityChoiceMaxLag() {
+        return mdbPriorityChoiceMaxLagBuilder_ != null || mdbPriorityChoiceMaxLag_ != null;
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which allows replica to be promoted to master while executing "switchover from".
+       * Should be less than mdb_offline_mode_disable_lag.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 62 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public com.google.protobuf.Int64Value getMdbPriorityChoiceMaxLag() {
+        if (mdbPriorityChoiceMaxLagBuilder_ == null) {
+          return mdbPriorityChoiceMaxLag_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mdbPriorityChoiceMaxLag_;
+        } else {
+          return mdbPriorityChoiceMaxLagBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which allows replica to be promoted to master while executing "switchover from".
+       * Should be less than mdb_offline_mode_disable_lag.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 62 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public Builder setMdbPriorityChoiceMaxLag(com.google.protobuf.Int64Value value) {
+        if (mdbPriorityChoiceMaxLagBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mdbPriorityChoiceMaxLag_ = value;
+          onChanged();
+        } else {
+          mdbPriorityChoiceMaxLagBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which allows replica to be promoted to master while executing "switchover from".
+       * Should be less than mdb_offline_mode_disable_lag.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 62 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public Builder setMdbPriorityChoiceMaxLag(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (mdbPriorityChoiceMaxLagBuilder_ == null) {
+          mdbPriorityChoiceMaxLag_ = builderForValue.build();
+          onChanged();
+        } else {
+          mdbPriorityChoiceMaxLagBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which allows replica to be promoted to master while executing "switchover from".
+       * Should be less than mdb_offline_mode_disable_lag.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 62 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public Builder mergeMdbPriorityChoiceMaxLag(com.google.protobuf.Int64Value value) {
+        if (mdbPriorityChoiceMaxLagBuilder_ == null) {
+          if (mdbPriorityChoiceMaxLag_ != null) {
+            mdbPriorityChoiceMaxLag_ =
+              com.google.protobuf.Int64Value.newBuilder(mdbPriorityChoiceMaxLag_).mergeFrom(value).buildPartial();
+          } else {
+            mdbPriorityChoiceMaxLag_ = value;
+          }
+          onChanged();
+        } else {
+          mdbPriorityChoiceMaxLagBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which allows replica to be promoted to master while executing "switchover from".
+       * Should be less than mdb_offline_mode_disable_lag.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 62 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public Builder clearMdbPriorityChoiceMaxLag() {
+        if (mdbPriorityChoiceMaxLagBuilder_ == null) {
+          mdbPriorityChoiceMaxLag_ = null;
+          onChanged();
+        } else {
+          mdbPriorityChoiceMaxLag_ = null;
+          mdbPriorityChoiceMaxLagBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which allows replica to be promoted to master while executing "switchover from".
+       * Should be less than mdb_offline_mode_disable_lag.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 62 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMdbPriorityChoiceMaxLagBuilder() {
+        
+        onChanged();
+        return getMdbPriorityChoiceMaxLagFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which allows replica to be promoted to master while executing "switchover from".
+       * Should be less than mdb_offline_mode_disable_lag.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 62 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMdbPriorityChoiceMaxLagOrBuilder() {
+        if (mdbPriorityChoiceMaxLagBuilder_ != null) {
+          return mdbPriorityChoiceMaxLagBuilder_.getMessageOrBuilder();
+        } else {
+          return mdbPriorityChoiceMaxLag_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : mdbPriorityChoiceMaxLag_;
+        }
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which allows replica to be promoted to master while executing "switchover from".
+       * Should be less than mdb_offline_mode_disable_lag.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_priority_choice_max_lag = 62 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMdbPriorityChoiceMaxLagFieldBuilder() {
+        if (mdbPriorityChoiceMaxLagBuilder_ == null) {
+          mdbPriorityChoiceMaxLagBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMdbPriorityChoiceMaxLag(),
+                  getParentForChildren(),
+                  isClean());
+          mdbPriorityChoiceMaxLag_ = null;
+        }
+        return mdbPriorityChoiceMaxLagBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value innodbPageSize_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbPageSizeBuilder_;
+      /**
+       * <pre>
+       * Specifies the page size for InnoDB tablespaces.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_page_size = 63 [(.yandex.cloud.value) = "4096-65536"];</code>
+       */
+      public boolean hasInnodbPageSize() {
+        return innodbPageSizeBuilder_ != null || innodbPageSize_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies the page size for InnoDB tablespaces.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_page_size = 63 [(.yandex.cloud.value) = "4096-65536"];</code>
+       */
+      public com.google.protobuf.Int64Value getInnodbPageSize() {
+        if (innodbPageSizeBuilder_ == null) {
+          return innodbPageSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbPageSize_;
+        } else {
+          return innodbPageSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the page size for InnoDB tablespaces.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_page_size = 63 [(.yandex.cloud.value) = "4096-65536"];</code>
+       */
+      public Builder setInnodbPageSize(com.google.protobuf.Int64Value value) {
+        if (innodbPageSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          innodbPageSize_ = value;
+          onChanged();
+        } else {
+          innodbPageSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the page size for InnoDB tablespaces.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_page_size = 63 [(.yandex.cloud.value) = "4096-65536"];</code>
+       */
+      public Builder setInnodbPageSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (innodbPageSizeBuilder_ == null) {
+          innodbPageSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          innodbPageSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the page size for InnoDB tablespaces.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_page_size = 63 [(.yandex.cloud.value) = "4096-65536"];</code>
+       */
+      public Builder mergeInnodbPageSize(com.google.protobuf.Int64Value value) {
+        if (innodbPageSizeBuilder_ == null) {
+          if (innodbPageSize_ != null) {
+            innodbPageSize_ =
+              com.google.protobuf.Int64Value.newBuilder(innodbPageSize_).mergeFrom(value).buildPartial();
+          } else {
+            innodbPageSize_ = value;
+          }
+          onChanged();
+        } else {
+          innodbPageSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the page size for InnoDB tablespaces.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_page_size = 63 [(.yandex.cloud.value) = "4096-65536"];</code>
+       */
+      public Builder clearInnodbPageSize() {
+        if (innodbPageSizeBuilder_ == null) {
+          innodbPageSize_ = null;
+          onChanged();
+        } else {
+          innodbPageSize_ = null;
+          innodbPageSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the page size for InnoDB tablespaces.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_page_size = 63 [(.yandex.cloud.value) = "4096-65536"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getInnodbPageSizeBuilder() {
+        
+        onChanged();
+        return getInnodbPageSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies the page size for InnoDB tablespaces.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_page_size = 63 [(.yandex.cloud.value) = "4096-65536"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getInnodbPageSizeOrBuilder() {
+        if (innodbPageSizeBuilder_ != null) {
+          return innodbPageSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return innodbPageSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : innodbPageSize_;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the page size for InnoDB tablespaces.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_page_size = 63 [(.yandex.cloud.value) = "4096-65536"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getInnodbPageSizeFieldBuilder() {
+        if (innodbPageSizeBuilder_ == null) {
+          innodbPageSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getInnodbPageSize(),
+                  getParentForChildren(),
+                  isClean());
+          innodbPageSize_ = null;
+        }
+        return innodbPageSizeBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -18407,7 +18945,7 @@ public final class Mysql57 {
       "\n/yandex/cloud/mdb/mysql/v1/config/mysql" +
       "5_7.proto\022 yandex.cloud.mdb.mysql.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\216-\n\016MysqlConf" +
+      "dex/cloud/validation.proto\"\244.\n\016MysqlConf" +
       "ig5_7\022K\n\027innodb_buffer_pool_size\030\001 \001(\0132\033" +
       ".google.protobuf.Int64ValueB\r\372\3071\t>=52428" +
       "80\022B\n\017max_connections\030\002 \001(\0132\033.google.pro" +
@@ -18518,50 +19056,53 @@ public final class Mysql57 {
       "\026log_slow_sp_statements\030< \001(\0132\032.google.p" +
       "rotobuf.BoolValue\022[\n\017log_slow_filter\030= \003" +
       "(\0162B.yandex.cloud.mdb.mysql.v1.config.My" +
-      "sqlConfig5_7.LogSlowFilterType\"\231\005\n\007SQLMo" +
-      "de\022\027\n\023SQLMODE_UNSPECIFIED\020\000\022\027\n\023ALLOW_INV" +
-      "ALID_DATES\020\001\022\017\n\013ANSI_QUOTES\020\002\022\036\n\032ERROR_F" +
-      "OR_DIVISION_BY_ZERO\020\003\022\027\n\023HIGH_NOT_PRECED" +
-      "ENCE\020\004\022\020\n\014IGNORE_SPACE\020\005\022\031\n\025NO_AUTO_VALU" +
-      "E_ON_ZERO\020\006\022\030\n\024NO_BACKSLASH_ESCAPES\020\007\022\032\n" +
-      "\026NO_ENGINE_SUBSTITUTION\020\010\022\033\n\027NO_UNSIGNED" +
-      "_SUBTRACTION\020\t\022\020\n\014NO_ZERO_DATE\020\n\022\023\n\017NO_Z" +
-      "ERO_IN_DATE\020\013\022\024\n\020NO_FIELD_OPTIONS\020\014\022\022\n\016N" +
-      "O_KEY_OPTIONS\020\r\022\024\n\020NO_TABLE_OPTIONS\020\016\022\026\n" +
-      "\022ONLY_FULL_GROUP_BY\020\017\022\033\n\027PAD_CHAR_TO_FUL" +
-      "L_LENGTH\020\020\022\023\n\017PIPES_AS_CONCAT\020\021\022\021\n\rREAL_" +
-      "AS_FLOAT\020\022\022\025\n\021STRICT_ALL_TABLES\020\023\022\027\n\023STR" +
-      "ICT_TRANS_TABLES\020\024\022\010\n\004ANSI\020\025\022\017\n\013TRADITIO" +
-      "NAL\020\026\022\007\n\003DB2\020\027\022\t\n\005MAXDB\020\030\022\t\n\005MSSQL\020\031\022\014\n\010" +
-      "MYSQL323\020\032\022\013\n\007MYSQL40\020\033\022\n\n\006ORACLE\020\034\022\016\n\nP" +
-      "OSTGRESQL\020\035\022\027\n\023NO_AUTO_CREATE_USER\020\036\022\024\n\020" +
-      "NO_DIR_IN_CREATE\020\037\"x\n\nAuthPlugin\022\033\n\027AUTH" +
-      "_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NATIVE_PA" +
-      "SSWORD\020\001\022\035\n\025CACHING_SHA2_PASSWORD\020\002\032\002\010\001\022" +
-      "\023\n\017SHA256_PASSWORD\020\003\"x\n\024TransactionIsola" +
-      "tion\022%\n!TRANSACTION_ISOLATION_UNSPECIFIE" +
-      "D\020\000\022\022\n\016READ_COMMITTED\020\001\022\023\n\017REPEATABLE_RE" +
-      "AD\020\002\022\020\n\014SERIALIZABLE\020\003\"U\n\016BinlogRowImage" +
-      "\022 \n\034BINLOG_ROW_IMAGE_UNSPECIFIED\020\000\022\010\n\004FU" +
-      "LL\020\001\022\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021SlavePa" +
-      "rallelType\022#\n\037SLAVE_PARALLEL_TYPE_UNSPEC" +
-      "IFIED\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLOGICAL_CLOCK\020\002" +
-      "\"M\n\017LogSlowRateType\022\"\n\036LOG_SLOW_RATE_TYP" +
-      "E_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\t\n\005QUERY\020\002\"" +
-      "\241\001\n\021LogSlowFilterType\022$\n LOG_SLOW_FILTER" +
-      "_TYPE_UNSPECIFIED\020\000\022\r\n\tFULL_SCAN\020\001\022\r\n\tFU" +
-      "LL_JOIN\020\002\022\r\n\tTMP_TABLE\020\003\022\025\n\021TMP_TABLE_ON" +
-      "_DISK\020\004\022\014\n\010FILESORT\020\005\022\024\n\020FILESORT_ON_DIS" +
-      "K\020\006\"\360\001\n\021MysqlConfigSet5_7\022J\n\020effective_c" +
-      "onfig\030\001 \001(\01320.yandex.cloud.mdb.mysql.v1." +
-      "config.MysqlConfig5_7\022E\n\013user_config\030\002 \001" +
-      "(\01320.yandex.cloud.mdb.mysql.v1.config.My" +
-      "sqlConfig5_7\022H\n\016default_config\030\003 \001(\01320.y" +
-      "andex.cloud.mdb.mysql.v1.config.MysqlCon" +
-      "fig5_7Br\n$yandex.cloud.api.mdb.mysql.v1." +
-      "configZJgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/mdb/mysql/v1/config;mys" +
-      "qlb\006proto3"
+      "sqlConfig5_7.LogSlowFilterType\022M\n\033mdb_pr" +
+      "iority_choice_max_lag\030> \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\013\372\3071\0070-86400\022E\n\020innodb_" +
+      "page_size\030? \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\016\372\3071\n4096-65536\"\231\005\n\007SQLMode\022\027\n\023SQLM" +
+      "ODE_UNSPECIFIED\020\000\022\027\n\023ALLOW_INVALID_DATES" +
+      "\020\001\022\017\n\013ANSI_QUOTES\020\002\022\036\n\032ERROR_FOR_DIVISIO" +
+      "N_BY_ZERO\020\003\022\027\n\023HIGH_NOT_PRECEDENCE\020\004\022\020\n\014" +
+      "IGNORE_SPACE\020\005\022\031\n\025NO_AUTO_VALUE_ON_ZERO\020" +
+      "\006\022\030\n\024NO_BACKSLASH_ESCAPES\020\007\022\032\n\026NO_ENGINE" +
+      "_SUBSTITUTION\020\010\022\033\n\027NO_UNSIGNED_SUBTRACTI" +
+      "ON\020\t\022\020\n\014NO_ZERO_DATE\020\n\022\023\n\017NO_ZERO_IN_DAT" +
+      "E\020\013\022\024\n\020NO_FIELD_OPTIONS\020\014\022\022\n\016NO_KEY_OPTI" +
+      "ONS\020\r\022\024\n\020NO_TABLE_OPTIONS\020\016\022\026\n\022ONLY_FULL" +
+      "_GROUP_BY\020\017\022\033\n\027PAD_CHAR_TO_FULL_LENGTH\020\020" +
+      "\022\023\n\017PIPES_AS_CONCAT\020\021\022\021\n\rREAL_AS_FLOAT\020\022" +
+      "\022\025\n\021STRICT_ALL_TABLES\020\023\022\027\n\023STRICT_TRANS_" +
+      "TABLES\020\024\022\010\n\004ANSI\020\025\022\017\n\013TRADITIONAL\020\026\022\007\n\003D" +
+      "B2\020\027\022\t\n\005MAXDB\020\030\022\t\n\005MSSQL\020\031\022\014\n\010MYSQL323\020\032" +
+      "\022\013\n\007MYSQL40\020\033\022\n\n\006ORACLE\020\034\022\016\n\nPOSTGRESQL\020" +
+      "\035\022\027\n\023NO_AUTO_CREATE_USER\020\036\022\024\n\020NO_DIR_IN_" +
+      "CREATE\020\037\"x\n\nAuthPlugin\022\033\n\027AUTH_PLUGIN_UN" +
+      "SPECIFIED\020\000\022\031\n\025MYSQL_NATIVE_PASSWORD\020\001\022\035" +
+      "\n\025CACHING_SHA2_PASSWORD\020\002\032\002\010\001\022\023\n\017SHA256_" +
+      "PASSWORD\020\003\"x\n\024TransactionIsolation\022%\n!TR" +
+      "ANSACTION_ISOLATION_UNSPECIFIED\020\000\022\022\n\016REA" +
+      "D_COMMITTED\020\001\022\023\n\017REPEATABLE_READ\020\002\022\020\n\014SE" +
+      "RIALIZABLE\020\003\"U\n\016BinlogRowImage\022 \n\034BINLOG" +
+      "_ROW_IMAGE_UNSPECIFIED\020\000\022\010\n\004FULL\020\001\022\013\n\007MI" +
+      "NIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021SlaveParallelType" +
+      "\022#\n\037SLAVE_PARALLEL_TYPE_UNSPECIFIED\020\000\022\014\n" +
+      "\010DATABASE\020\001\022\021\n\rLOGICAL_CLOCK\020\002\"M\n\017LogSlo" +
+      "wRateType\022\"\n\036LOG_SLOW_RATE_TYPE_UNSPECIF" +
+      "IED\020\000\022\013\n\007SESSION\020\001\022\t\n\005QUERY\020\002\"\241\001\n\021LogSlo" +
+      "wFilterType\022$\n LOG_SLOW_FILTER_TYPE_UNSP" +
+      "ECIFIED\020\000\022\r\n\tFULL_SCAN\020\001\022\r\n\tFULL_JOIN\020\002\022" +
+      "\r\n\tTMP_TABLE\020\003\022\025\n\021TMP_TABLE_ON_DISK\020\004\022\014\n" +
+      "\010FILESORT\020\005\022\024\n\020FILESORT_ON_DISK\020\006\"\360\001\n\021My" +
+      "sqlConfigSet5_7\022J\n\020effective_config\030\001 \001(" +
+      "\01320.yandex.cloud.mdb.mysql.v1.config.Mys" +
+      "qlConfig5_7\022E\n\013user_config\030\002 \001(\01320.yande" +
+      "x.cloud.mdb.mysql.v1.config.MysqlConfig5" +
+      "_7\022H\n\016default_config\030\003 \001(\01320.yandex.clou" +
+      "d.mdb.mysql.v1.config.MysqlConfig5_7Br\n$" +
+      "yandex.cloud.api.mdb.mysql.v1.configZJgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/mdb/mysql/v1/config;mysqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -18582,7 +19123,7 @@ public final class Mysql57 {
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig5_7_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig5_7_descriptor,
-        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "MdbPreserveBinlogBytes", "InteractiveTimeout", "WaitTimeout", "MdbOfflineModeEnableLag", "MdbOfflineModeDisableLag", "RangeOptimizerMaxMemSize", "SlowQueryLog", "SlowQueryLogAlwaysWriteTime", "LogSlowRateType", "LogSlowRateLimit", "LogSlowSpStatements", "LogSlowFilter", });
+        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "MdbPreserveBinlogBytes", "InteractiveTimeout", "WaitTimeout", "MdbOfflineModeEnableLag", "MdbOfflineModeDisableLag", "RangeOptimizerMaxMemSize", "SlowQueryLog", "SlowQueryLogAlwaysWriteTime", "LogSlowRateType", "LogSlowRateLimit", "LogSlowSpStatements", "LogSlowFilter", "MdbPriorityChoiceMaxLag", "InnodbPageSize", });
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet5_7_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet5_7_fieldAccessorTable = new

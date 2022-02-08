@@ -5466,6 +5466,51 @@ public final class Mysql {
      */
     com.google.protobuf.ByteString
         getTimezoneBytes();
+
+    /**
+     * <pre>
+     * Cleanup policy
+     * 
+     * Cleanup policy for activate, reactivate and reupload processes. Default is
+     * DISABLED.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
+     */
+    int getCleanupPolicyValue();
+    /**
+     * <pre>
+     * Cleanup policy
+     * 
+     * Cleanup policy for activate, reactivate and reupload processes. Default is
+     * DISABLED.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy getCleanupPolicy();
+
+    /**
+     * <pre>
+     * Database schema for service table
+     * 
+     * Default: db name. Here created technical tables (__tm_keeper, __tm_gtid_keeper).
+     * </pre>
+     *
+     * <code>string service_database = 15;</code>
+     */
+    java.lang.String getServiceDatabase();
+    /**
+     * <pre>
+     * Database schema for service table
+     * 
+     * Default: db name. Here created technical tables (__tm_keeper, __tm_gtid_keeper).
+     * </pre>
+     *
+     * <code>string service_database = 15;</code>
+     */
+    com.google.protobuf.ByteString
+        getServiceDatabaseBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MysqlTarget}
@@ -5485,6 +5530,8 @@ public final class Mysql {
       sqlMode_ = "";
       skipConstraintChecks_ = false;
       timezone_ = "";
+      cleanupPolicy_ = 0;
+      serviceDatabase_ = "";
     }
 
     @java.lang.Override
@@ -5564,6 +5611,18 @@ public final class Mysql {
               java.lang.String s = input.readStringRequireUtf8();
 
               timezone_ = s;
+              break;
+            }
+            case 64: {
+              int rawValue = input.readEnum();
+
+              cleanupPolicy_ = rawValue;
+              break;
+            }
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceDatabase_ = s;
               break;
             }
             default: {
@@ -5883,6 +5942,83 @@ public final class Mysql {
       }
     }
 
+    public static final int CLEANUP_POLICY_FIELD_NUMBER = 8;
+    private int cleanupPolicy_;
+    /**
+     * <pre>
+     * Cleanup policy
+     * 
+     * Cleanup policy for activate, reactivate and reupload processes. Default is
+     * DISABLED.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
+     */
+    public int getCleanupPolicyValue() {
+      return cleanupPolicy_;
+    }
+    /**
+     * <pre>
+     * Cleanup policy
+     * 
+     * Cleanup policy for activate, reactivate and reupload processes. Default is
+     * DISABLED.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
+     */
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy getCleanupPolicy() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy result = yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.valueOf(cleanupPolicy_);
+      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.UNRECOGNIZED : result;
+    }
+
+    public static final int SERVICE_DATABASE_FIELD_NUMBER = 15;
+    private volatile java.lang.Object serviceDatabase_;
+    /**
+     * <pre>
+     * Database schema for service table
+     * 
+     * Default: db name. Here created technical tables (__tm_keeper, __tm_gtid_keeper).
+     * </pre>
+     *
+     * <code>string service_database = 15;</code>
+     */
+    public java.lang.String getServiceDatabase() {
+      java.lang.Object ref = serviceDatabase_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceDatabase_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Database schema for service table
+     * 
+     * Default: db name. Here created technical tables (__tm_keeper, __tm_gtid_keeper).
+     * </pre>
+     *
+     * <code>string service_database = 15;</code>
+     */
+    public com.google.protobuf.ByteString
+        getServiceDatabaseBytes() {
+      java.lang.Object ref = serviceDatabase_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceDatabase_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5918,6 +6054,12 @@ public final class Mysql {
       if (!getTimezoneBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, timezone_);
       }
+      if (cleanupPolicy_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.CLEANUP_POLICY_UNSPECIFIED.getNumber()) {
+        output.writeEnum(8, cleanupPolicy_);
+      }
+      if (!getServiceDatabaseBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, serviceDatabase_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5950,6 +6092,13 @@ public final class Mysql {
       }
       if (!getTimezoneBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, timezone_);
+      }
+      if (cleanupPolicy_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.CLEANUP_POLICY_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, cleanupPolicy_);
+      }
+      if (!getServiceDatabaseBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, serviceDatabase_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5987,6 +6136,9 @@ public final class Mysql {
           == other.getSkipConstraintChecks());
       result = result && getTimezone()
           .equals(other.getTimezone());
+      result = result && cleanupPolicy_ == other.cleanupPolicy_;
+      result = result && getServiceDatabase()
+          .equals(other.getServiceDatabase());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -6017,6 +6169,10 @@ public final class Mysql {
           getSkipConstraintChecks());
       hash = (37 * hash) + TIMEZONE_FIELD_NUMBER;
       hash = (53 * hash) + getTimezone().hashCode();
+      hash = (37 * hash) + CLEANUP_POLICY_FIELD_NUMBER;
+      hash = (53 * hash) + cleanupPolicy_;
+      hash = (37 * hash) + SERVICE_DATABASE_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceDatabase().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6172,6 +6328,10 @@ public final class Mysql {
 
         timezone_ = "";
 
+        cleanupPolicy_ = 0;
+
+        serviceDatabase_ = "";
+
         return this;
       }
 
@@ -6213,6 +6373,8 @@ public final class Mysql {
         result.sqlMode_ = sqlMode_;
         result.skipConstraintChecks_ = skipConstraintChecks_;
         result.timezone_ = timezone_;
+        result.cleanupPolicy_ = cleanupPolicy_;
+        result.serviceDatabase_ = serviceDatabase_;
         onBuilt();
         return result;
       }
@@ -6284,6 +6446,13 @@ public final class Mysql {
         }
         if (!other.getTimezone().isEmpty()) {
           timezone_ = other.timezone_;
+          onChanged();
+        }
+        if (other.cleanupPolicy_ != 0) {
+          setCleanupPolicyValue(other.getCleanupPolicyValue());
+        }
+        if (!other.getServiceDatabase().isEmpty()) {
+          serviceDatabase_ = other.serviceDatabase_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -7117,6 +7286,185 @@ public final class Mysql {
         onChanged();
         return this;
       }
+
+      private int cleanupPolicy_ = 0;
+      /**
+       * <pre>
+       * Cleanup policy
+       * 
+       * Cleanup policy for activate, reactivate and reupload processes. Default is
+       * DISABLED.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
+       */
+      public int getCleanupPolicyValue() {
+        return cleanupPolicy_;
+      }
+      /**
+       * <pre>
+       * Cleanup policy
+       * 
+       * Cleanup policy for activate, reactivate and reupload processes. Default is
+       * DISABLED.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
+       */
+      public Builder setCleanupPolicyValue(int value) {
+        cleanupPolicy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cleanup policy
+       * 
+       * Cleanup policy for activate, reactivate and reupload processes. Default is
+       * DISABLED.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy getCleanupPolicy() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy result = yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.valueOf(cleanupPolicy_);
+        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Cleanup policy
+       * 
+       * Cleanup policy for activate, reactivate and reupload processes. Default is
+       * DISABLED.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
+       */
+      public Builder setCleanupPolicy(yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        cleanupPolicy_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cleanup policy
+       * 
+       * Cleanup policy for activate, reactivate and reupload processes. Default is
+       * DISABLED.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
+       */
+      public Builder clearCleanupPolicy() {
+        
+        cleanupPolicy_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceDatabase_ = "";
+      /**
+       * <pre>
+       * Database schema for service table
+       * 
+       * Default: db name. Here created technical tables (__tm_keeper, __tm_gtid_keeper).
+       * </pre>
+       *
+       * <code>string service_database = 15;</code>
+       */
+      public java.lang.String getServiceDatabase() {
+        java.lang.Object ref = serviceDatabase_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceDatabase_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Database schema for service table
+       * 
+       * Default: db name. Here created technical tables (__tm_keeper, __tm_gtid_keeper).
+       * </pre>
+       *
+       * <code>string service_database = 15;</code>
+       */
+      public com.google.protobuf.ByteString
+          getServiceDatabaseBytes() {
+        java.lang.Object ref = serviceDatabase_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceDatabase_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Database schema for service table
+       * 
+       * Default: db name. Here created technical tables (__tm_keeper, __tm_gtid_keeper).
+       * </pre>
+       *
+       * <code>string service_database = 15;</code>
+       */
+      public Builder setServiceDatabase(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceDatabase_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Database schema for service table
+       * 
+       * Default: db name. Here created technical tables (__tm_keeper, __tm_gtid_keeper).
+       * </pre>
+       *
+       * <code>string service_database = 15;</code>
+       */
+      public Builder clearServiceDatabase() {
+        
+        serviceDatabase_ = getDefaultInstance().getServiceDatabase();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Database schema for service table
+       * 
+       * Default: db name. Here created technical tables (__tm_keeper, __tm_gtid_keeper).
+       * </pre>
+       *
+       * <code>string service_database = 15;</code>
+       */
+      public Builder setServiceDatabaseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceDatabase_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7230,17 +7578,20 @@ public final class Mysql {
       "\t\022\020\n\010timezone\030\010 \001(\t\022d\n\030object_transfer_s" +
       "ettings\030\013 \001(\0132B.yandex.cloud.datatransfe" +
       "r.v1.endpoint.MysqlObjectTransferSetting" +
-      "s\"\376\001\n\013MysqlTarget\022J\n\nconnection\030\001 \001(\01326." +
+      "s\"\346\002\n\013MysqlTarget\022J\n\nconnection\030\001 \001(\01326." +
       "yandex.cloud.datatransfer.v1.endpoint.My" +
       "sqlConnection\022\020\n\010database\030\002 \001(\t\022\014\n\004user\030" +
       "\003 \001(\t\022?\n\010password\030\004 \001(\0132-.yandex.cloud.d" +
       "atatransfer.v1.endpoint.Secret\022\020\n\010sql_mo" +
       "de\030\005 \001(\t\022\036\n\026skip_constraint_checks\030\006 \001(\010" +
-      "\022\020\n\010timezone\030\007 \001(\tB\247\001\n)yandex.cloud.api." +
-      "datatransfer.v1.endpointZRgithub.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/datat" +
-      "ransfer/v1/endpoint;endpoint\252\002%Yandex.Cl" +
-      "oud.Datatransfer.V1.EndPointb\006proto3"
+      "\022\020\n\010timezone\030\007 \001(\t\022L\n\016cleanup_policy\030\010 \001" +
+      "(\01624.yandex.cloud.datatransfer.v1.endpoi" +
+      "nt.CleanupPolicy\022\030\n\020service_database\030\017 \001" +
+      "(\tB\247\001\n)yandex.cloud.api.datatransfer.v1." +
+      "endpointZRgithub.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/datatransfer/v1/endpo" +
+      "int;endpoint\252\002%Yandex.Cloud.Datatransfer" +
+      ".V1.EndPointb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7284,7 +7635,7 @@ public final class Mysql {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlTarget_descriptor,
-        new java.lang.String[] { "Connection", "Database", "User", "Password", "SqlMode", "SkipConstraintChecks", "Timezone", });
+        new java.lang.String[] { "Connection", "Database", "User", "Password", "SqlMode", "SkipConstraintChecks", "Timezone", "CleanupPolicy", "ServiceDatabase", });
     yandex.cloud.api.datatransfer.v1.endpoint.Common.getDescriptor();
   }
 
