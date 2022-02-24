@@ -20,8 +20,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster to return.
-     * To get the cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to return information about.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29,8 +29,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster to return.
-     * To get the cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to return information about.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -120,8 +120,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster to return.
-     * To get the cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to return information about.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -140,8 +140,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster to return.
-     * To get the cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to return information about.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -466,8 +466,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster to return.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to return information about.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -486,8 +486,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to return.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to return information about.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -507,8 +507,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to return.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to return information about.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -525,8 +525,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to return.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to return information about.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -539,8 +539,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to return.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to return information about.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -615,8 +615,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the folder to list MySQL clusters in.
-     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * ID of the folder to list clusters in.
+     * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -624,8 +624,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getFolderId();
     /**
      * <pre>
-     * ID of the folder to list MySQL clusters in.
-     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * ID of the folder to list clusters in.
+     * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -635,9 +635,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the API returns a [ListClustersResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.List] requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -646,8 +645,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous [ClusterService.List] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -655,8 +654,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous [ClusterService.List] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -666,7 +665,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
+     * A filter expression that selects clusters listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
      * 2. An `=` operator.
@@ -678,7 +677,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getFilter();
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
+     * A filter expression that selects clusters listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
      * 2. An `=` operator.
@@ -792,8 +791,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object folderId_;
     /**
      * <pre>
-     * ID of the folder to list MySQL clusters in.
-     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * ID of the folder to list clusters in.
+     * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -812,8 +811,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the folder to list MySQL clusters in.
-     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * ID of the folder to list clusters in.
+     * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -836,9 +835,8 @@ public final class ClusterServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the API returns a [ListClustersResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.List] requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -851,8 +849,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous [ClusterService.List] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -871,8 +869,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous [ClusterService.List] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -895,7 +893,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object filter_;
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
+     * A filter expression that selects clusters listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
      * 2. An `=` operator.
@@ -918,7 +916,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
+     * A filter expression that selects clusters listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
      * 2. An `=` operator.
@@ -1299,8 +1297,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object folderId_ = "";
       /**
        * <pre>
-       * ID of the folder to list MySQL clusters in.
-       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * ID of the folder to list clusters in.
+       * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1319,8 +1317,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder to list MySQL clusters in.
-       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * ID of the folder to list clusters in.
+       * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1340,8 +1338,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder to list MySQL clusters in.
-       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * ID of the folder to list clusters in.
+       * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1358,8 +1356,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder to list MySQL clusters in.
-       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * ID of the folder to list clusters in.
+       * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1372,8 +1370,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder to list MySQL clusters in.
-       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * ID of the folder to list clusters in.
+       * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1393,9 +1391,8 @@ public final class ClusterServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListClustersResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.List] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1405,9 +1402,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListClustersResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.List] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1420,9 +1416,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListClustersResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.List] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1437,8 +1432,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous [ClusterService.List] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1457,8 +1452,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous [ClusterService.List] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1478,8 +1473,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous [ClusterService.List] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1496,8 +1491,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous [ClusterService.List] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1510,8 +1505,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous [ClusterService.List] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1531,7 +1526,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object filter_ = "";
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
+       * A filter expression that selects clusters listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
        * 2. An `=` operator.
@@ -1554,7 +1549,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
+       * A filter expression that selects clusters listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
        * 2. An `=` operator.
@@ -1578,7 +1573,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
+       * A filter expression that selects clusters listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
        * 2. An `=` operator.
@@ -1599,7 +1594,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
+       * A filter expression that selects clusters listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
        * 2. An `=` operator.
@@ -1616,7 +1611,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
+       * A filter expression that selects clusters listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
        * 2. An `=` operator.
@@ -1695,7 +1690,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * List of MySQL clusters.
+     * List of clusters.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -1704,7 +1699,7 @@ public final class ClusterServiceOuterClass {
         getClustersList();
     /**
      * <pre>
-     * List of MySQL clusters.
+     * List of clusters.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -1712,7 +1707,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Cluster getClusters(int index);
     /**
      * <pre>
-     * List of MySQL clusters.
+     * List of clusters.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -1720,7 +1715,7 @@ public final class ClusterServiceOuterClass {
     int getClustersCount();
     /**
      * <pre>
-     * List of MySQL clusters.
+     * List of clusters.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -1729,7 +1724,7 @@ public final class ClusterServiceOuterClass {
         getClustersOrBuilderList();
     /**
      * <pre>
-     * List of MySQL clusters.
+     * List of clusters.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -1739,10 +1734,9 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value for the [ListClustersRequest.page_token] in the subsequent [ClusterService.List] request to iterate through multiple pages of results.
+     * Each of the subsequent [ClusterService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1750,10 +1744,9 @@ public final class ClusterServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value for the [ListClustersRequest.page_token] in the subsequent [ClusterService.List] request to iterate through multiple pages of results.
+     * Each of the subsequent [ClusterService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1857,7 +1850,7 @@ public final class ClusterServiceOuterClass {
     private java.util.List<yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Cluster> clusters_;
     /**
      * <pre>
-     * List of MySQL clusters.
+     * List of clusters.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -1867,7 +1860,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of MySQL clusters.
+     * List of clusters.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -1878,7 +1871,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of MySQL clusters.
+     * List of clusters.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -1888,7 +1881,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of MySQL clusters.
+     * List of clusters.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -1898,7 +1891,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of MySQL clusters.
+     * List of clusters.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -1912,10 +1905,9 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value for the [ListClustersRequest.page_token] in the subsequent [ClusterService.List] request to iterate through multiple pages of results.
+     * Each of the subsequent [ClusterService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1934,10 +1926,9 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value for the [ListClustersRequest.page_token] in the subsequent [ClusterService.List] request to iterate through multiple pages of results.
+     * Each of the subsequent [ClusterService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2332,7 +2323,7 @@ public final class ClusterServiceOuterClass {
 
       /**
        * <pre>
-       * List of MySQL clusters.
+       * List of clusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -2346,7 +2337,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL clusters.
+       * List of clusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -2360,7 +2351,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL clusters.
+       * List of clusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -2374,7 +2365,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL clusters.
+       * List of clusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -2395,7 +2386,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL clusters.
+       * List of clusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -2413,7 +2404,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL clusters.
+       * List of clusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -2433,7 +2424,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL clusters.
+       * List of clusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -2454,7 +2445,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL clusters.
+       * List of clusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -2472,7 +2463,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL clusters.
+       * List of clusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -2490,7 +2481,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL clusters.
+       * List of clusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -2509,7 +2500,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL clusters.
+       * List of clusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -2526,7 +2517,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL clusters.
+       * List of clusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -2543,7 +2534,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL clusters.
+       * List of clusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -2554,7 +2545,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL clusters.
+       * List of clusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -2568,7 +2559,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL clusters.
+       * List of clusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -2583,7 +2574,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL clusters.
+       * List of clusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -2594,7 +2585,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL clusters.
+       * List of clusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -2606,7 +2597,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL clusters.
+       * List of clusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Cluster clusters = 1;</code>
@@ -2633,10 +2624,9 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value for the [ListClustersRequest.page_token] in the subsequent [ClusterService.List] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2655,10 +2645,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value for the [ListClustersRequest.page_token] in the subsequent [ClusterService.List] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2678,10 +2667,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value for the [ListClustersRequest.page_token] in the subsequent [ClusterService.List] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2698,10 +2686,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value for the [ListClustersRequest.page_token] in the subsequent [ClusterService.List] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2714,10 +2701,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value for the [ListClustersRequest.page_token] in the subsequent [ClusterService.List] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2792,7 +2778,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the folder to create the MySQL cluster in.
+     * ID of the folder to create the cluster in.
+     * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2800,7 +2787,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getFolderId();
     /**
      * <pre>
-     * ID of the folder to create the MySQL cluster in.
+     * ID of the folder to create the cluster in.
+     * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2810,7 +2798,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the MySQL cluster. The name must be unique within the folder.
+     * Name of the cluster. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -2818,7 +2806,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the MySQL cluster. The name must be unique within the folder.
+     * Name of the cluster. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -2828,7 +2816,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Description of the MySQL cluster.
+     * Description of the cluster.
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -2836,7 +2824,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Description of the MySQL cluster.
+     * Description of the cluster.
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -2846,8 +2834,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -2855,8 +2842,7 @@ public final class ClusterServiceOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -2871,8 +2857,7 @@ public final class ClusterServiceOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -2881,8 +2866,7 @@ public final class ClusterServiceOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -2893,8 +2877,7 @@ public final class ClusterServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -2905,7 +2888,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Deployment environment of the MySQL cluster.
+     * Deployment environment of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 5;</code>
@@ -2913,7 +2896,7 @@ public final class ClusterServiceOuterClass {
     int getEnvironmentValue();
     /**
      * <pre>
-     * Deployment environment of the MySQL cluster.
+     * Deployment environment of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 5;</code>
@@ -2922,7 +2905,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Configuration and resources for hosts that should be created for the MySQL cluster.
+     * Configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 6;</code>
@@ -2930,7 +2913,7 @@ public final class ClusterServiceOuterClass {
     boolean hasConfigSpec();
     /**
      * <pre>
-     * Configuration and resources for hosts that should be created for the MySQL cluster.
+     * Configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 6;</code>
@@ -2938,7 +2921,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ConfigSpec getConfigSpec();
     /**
      * <pre>
-     * Configuration and resources for hosts that should be created for the MySQL cluster.
+     * Configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 6;</code>
@@ -2947,7 +2930,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Descriptions of databases to be created in the MySQL cluster.
+     * Configuration of databases in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -2956,7 +2939,7 @@ public final class ClusterServiceOuterClass {
         getDatabaseSpecsList();
     /**
      * <pre>
-     * Descriptions of databases to be created in the MySQL cluster.
+     * Configuration of databases in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -2964,7 +2947,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.mysql.v1.DatabaseOuterClass.DatabaseSpec getDatabaseSpecs(int index);
     /**
      * <pre>
-     * Descriptions of databases to be created in the MySQL cluster.
+     * Configuration of databases in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -2972,7 +2955,7 @@ public final class ClusterServiceOuterClass {
     int getDatabaseSpecsCount();
     /**
      * <pre>
-     * Descriptions of databases to be created in the MySQL cluster.
+     * Configuration of databases in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -2981,7 +2964,7 @@ public final class ClusterServiceOuterClass {
         getDatabaseSpecsOrBuilderList();
     /**
      * <pre>
-     * Descriptions of databases to be created in the MySQL cluster.
+     * Configuration of databases in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -2991,7 +2974,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Descriptions of database users to be created in the MySQL cluster.
+     * Configuration of database users in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -3000,7 +2983,7 @@ public final class ClusterServiceOuterClass {
         getUserSpecsList();
     /**
      * <pre>
-     * Descriptions of database users to be created in the MySQL cluster.
+     * Configuration of database users in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -3008,7 +2991,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.mysql.v1.UserOuterClass.UserSpec getUserSpecs(int index);
     /**
      * <pre>
-     * Descriptions of database users to be created in the MySQL cluster.
+     * Configuration of database users in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -3016,7 +2999,7 @@ public final class ClusterServiceOuterClass {
     int getUserSpecsCount();
     /**
      * <pre>
-     * Descriptions of database users to be created in the MySQL cluster.
+     * Configuration of database users in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -3025,7 +3008,7 @@ public final class ClusterServiceOuterClass {
         getUserSpecsOrBuilderList();
     /**
      * <pre>
-     * Descriptions of database users to be created in the MySQL cluster.
+     * Configuration of database users in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -3035,7 +3018,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Individual configurations for hosts that should be created for the MySQL cluster.
+     * Configuration of hosts in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -3044,7 +3027,7 @@ public final class ClusterServiceOuterClass {
         getHostSpecsList();
     /**
      * <pre>
-     * Individual configurations for hosts that should be created for the MySQL cluster.
+     * Configuration of hosts in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -3052,7 +3035,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.HostSpec getHostSpecs(int index);
     /**
      * <pre>
-     * Individual configurations for hosts that should be created for the MySQL cluster.
+     * Configuration of hosts in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -3060,7 +3043,7 @@ public final class ClusterServiceOuterClass {
     int getHostSpecsCount();
     /**
      * <pre>
-     * Individual configurations for hosts that should be created for the MySQL cluster.
+     * Configuration of hosts in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -3069,7 +3052,7 @@ public final class ClusterServiceOuterClass {
         getHostSpecsOrBuilderList();
     /**
      * <pre>
-     * Individual configurations for hosts that should be created for the MySQL cluster.
+     * Configuration of hosts in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -3097,7 +3080,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * User security groups
+     * List of security group IDs to apply to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -3106,7 +3089,7 @@ public final class ClusterServiceOuterClass {
         getSecurityGroupIdsList();
     /**
      * <pre>
-     * User security groups
+     * List of security group IDs to apply to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -3114,7 +3097,7 @@ public final class ClusterServiceOuterClass {
     int getSecurityGroupIdsCount();
     /**
      * <pre>
-     * User security groups
+     * List of security group IDs to apply to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -3122,7 +3105,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getSecurityGroupIds(int index);
     /**
      * <pre>
-     * User security groups
+     * List of security group IDs to apply to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -3132,7 +3115,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the cluster
+     * This option prevents unintended deletion of the cluster.
      * </pre>
      *
      * <code>bool deletion_protection = 12;</code>
@@ -3346,7 +3329,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object folderId_;
     /**
      * <pre>
-     * ID of the folder to create the MySQL cluster in.
+     * ID of the folder to create the cluster in.
+     * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3365,7 +3349,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the folder to create the MySQL cluster in.
+     * ID of the folder to create the cluster in.
+     * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3388,7 +3373,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the MySQL cluster. The name must be unique within the folder.
+     * Name of the cluster. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -3407,7 +3392,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the MySQL cluster. The name must be unique within the folder.
+     * Name of the cluster. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -3430,7 +3415,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Description of the MySQL cluster.
+     * Description of the cluster.
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -3449,7 +3434,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Description of the MySQL cluster.
+     * Description of the cluster.
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -3496,8 +3481,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3517,8 +3501,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3529,8 +3512,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3546,8 +3528,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3568,7 +3549,7 @@ public final class ClusterServiceOuterClass {
     private int environment_;
     /**
      * <pre>
-     * Deployment environment of the MySQL cluster.
+     * Deployment environment of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 5;</code>
@@ -3578,7 +3559,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Deployment environment of the MySQL cluster.
+     * Deployment environment of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 5;</code>
@@ -3593,7 +3574,7 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ConfigSpec configSpec_;
     /**
      * <pre>
-     * Configuration and resources for hosts that should be created for the MySQL cluster.
+     * Configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 6;</code>
@@ -3603,7 +3584,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Configuration and resources for hosts that should be created for the MySQL cluster.
+     * Configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 6;</code>
@@ -3613,7 +3594,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Configuration and resources for hosts that should be created for the MySQL cluster.
+     * Configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 6;</code>
@@ -3626,7 +3607,7 @@ public final class ClusterServiceOuterClass {
     private java.util.List<yandex.cloud.api.mdb.mysql.v1.DatabaseOuterClass.DatabaseSpec> databaseSpecs_;
     /**
      * <pre>
-     * Descriptions of databases to be created in the MySQL cluster.
+     * Configuration of databases in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -3636,7 +3617,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Descriptions of databases to be created in the MySQL cluster.
+     * Configuration of databases in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -3647,7 +3628,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Descriptions of databases to be created in the MySQL cluster.
+     * Configuration of databases in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -3657,7 +3638,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Descriptions of databases to be created in the MySQL cluster.
+     * Configuration of databases in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -3667,7 +3648,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Descriptions of databases to be created in the MySQL cluster.
+     * Configuration of databases in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -3681,7 +3662,7 @@ public final class ClusterServiceOuterClass {
     private java.util.List<yandex.cloud.api.mdb.mysql.v1.UserOuterClass.UserSpec> userSpecs_;
     /**
      * <pre>
-     * Descriptions of database users to be created in the MySQL cluster.
+     * Configuration of database users in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -3691,7 +3672,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Descriptions of database users to be created in the MySQL cluster.
+     * Configuration of database users in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -3702,7 +3683,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Descriptions of database users to be created in the MySQL cluster.
+     * Configuration of database users in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -3712,7 +3693,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Descriptions of database users to be created in the MySQL cluster.
+     * Configuration of database users in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -3722,7 +3703,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Descriptions of database users to be created in the MySQL cluster.
+     * Configuration of database users in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -3736,7 +3717,7 @@ public final class ClusterServiceOuterClass {
     private java.util.List<yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.HostSpec> hostSpecs_;
     /**
      * <pre>
-     * Individual configurations for hosts that should be created for the MySQL cluster.
+     * Configuration of hosts in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -3746,7 +3727,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Individual configurations for hosts that should be created for the MySQL cluster.
+     * Configuration of hosts in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -3757,7 +3738,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Individual configurations for hosts that should be created for the MySQL cluster.
+     * Configuration of hosts in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -3767,7 +3748,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Individual configurations for hosts that should be created for the MySQL cluster.
+     * Configuration of hosts in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -3777,7 +3758,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Individual configurations for hosts that should be created for the MySQL cluster.
+     * Configuration of hosts in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -3833,7 +3814,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.LazyStringList securityGroupIds_;
     /**
      * <pre>
-     * User security groups
+     * List of security group IDs to apply to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -3844,7 +3825,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * User security groups
+     * List of security group IDs to apply to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -3854,7 +3835,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * User security groups
+     * List of security group IDs to apply to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -3864,7 +3845,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * User security groups
+     * List of security group IDs to apply to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -3878,7 +3859,7 @@ public final class ClusterServiceOuterClass {
     private boolean deletionProtection_;
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the cluster
+     * This option prevents unintended deletion of the cluster.
      * </pre>
      *
      * <code>bool deletion_protection = 12;</code>
@@ -4560,7 +4541,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object folderId_ = "";
       /**
        * <pre>
-       * ID of the folder to create the MySQL cluster in.
+       * ID of the folder to create the cluster in.
+       * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4579,7 +4561,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder to create the MySQL cluster in.
+       * ID of the folder to create the cluster in.
+       * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4599,7 +4582,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder to create the MySQL cluster in.
+       * ID of the folder to create the cluster in.
+       * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4616,7 +4600,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder to create the MySQL cluster in.
+       * ID of the folder to create the cluster in.
+       * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4629,7 +4614,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder to create the MySQL cluster in.
+       * ID of the folder to create the cluster in.
+       * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4649,7 +4635,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the MySQL cluster. The name must be unique within the folder.
+       * Name of the cluster. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4668,7 +4654,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL cluster. The name must be unique within the folder.
+       * Name of the cluster. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4688,7 +4674,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL cluster. The name must be unique within the folder.
+       * Name of the cluster. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4705,7 +4691,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL cluster. The name must be unique within the folder.
+       * Name of the cluster. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4718,7 +4704,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL cluster. The name must be unique within the folder.
+       * Name of the cluster. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4738,7 +4724,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Description of the MySQL cluster.
+       * Description of the cluster.
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -4757,7 +4743,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the MySQL cluster.
+       * Description of the cluster.
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -4777,7 +4763,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the MySQL cluster.
+       * Description of the cluster.
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -4794,7 +4780,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the MySQL cluster.
+       * Description of the cluster.
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -4807,7 +4793,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the MySQL cluster.
+       * Description of the cluster.
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -4852,8 +4838,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4873,8 +4858,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4885,8 +4869,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4902,8 +4885,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4927,8 +4909,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4951,8 +4932,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4968,8 +4948,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4985,7 +4964,7 @@ public final class ClusterServiceOuterClass {
       private int environment_ = 0;
       /**
        * <pre>
-       * Deployment environment of the MySQL cluster.
+       * Deployment environment of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 5;</code>
@@ -4995,7 +4974,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deployment environment of the MySQL cluster.
+       * Deployment environment of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 5;</code>
@@ -5007,7 +4986,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deployment environment of the MySQL cluster.
+       * Deployment environment of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 5;</code>
@@ -5019,7 +4998,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deployment environment of the MySQL cluster.
+       * Deployment environment of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 5;</code>
@@ -5035,7 +5014,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deployment environment of the MySQL cluster.
+       * Deployment environment of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 5;</code>
@@ -5052,7 +5031,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ConfigSpec, yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ConfigSpec.Builder, yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ConfigSpecOrBuilder> configSpecBuilder_;
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the MySQL cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 6;</code>
@@ -5062,7 +5041,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the MySQL cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 6;</code>
@@ -5076,7 +5055,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the MySQL cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 6;</code>
@@ -5096,7 +5075,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the MySQL cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 6;</code>
@@ -5114,7 +5093,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the MySQL cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 6;</code>
@@ -5136,7 +5115,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the MySQL cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 6;</code>
@@ -5154,7 +5133,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the MySQL cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 6;</code>
@@ -5166,7 +5145,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the MySQL cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 6;</code>
@@ -5181,7 +5160,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the MySQL cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 6;</code>
@@ -5214,7 +5193,7 @@ public final class ClusterServiceOuterClass {
 
       /**
        * <pre>
-       * Descriptions of databases to be created in the MySQL cluster.
+       * Configuration of databases in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -5228,7 +5207,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of databases to be created in the MySQL cluster.
+       * Configuration of databases in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -5242,7 +5221,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of databases to be created in the MySQL cluster.
+       * Configuration of databases in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -5256,7 +5235,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of databases to be created in the MySQL cluster.
+       * Configuration of databases in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -5277,7 +5256,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of databases to be created in the MySQL cluster.
+       * Configuration of databases in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -5295,7 +5274,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of databases to be created in the MySQL cluster.
+       * Configuration of databases in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -5315,7 +5294,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of databases to be created in the MySQL cluster.
+       * Configuration of databases in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -5336,7 +5315,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of databases to be created in the MySQL cluster.
+       * Configuration of databases in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -5354,7 +5333,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of databases to be created in the MySQL cluster.
+       * Configuration of databases in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -5372,7 +5351,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of databases to be created in the MySQL cluster.
+       * Configuration of databases in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -5391,7 +5370,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of databases to be created in the MySQL cluster.
+       * Configuration of databases in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -5408,7 +5387,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of databases to be created in the MySQL cluster.
+       * Configuration of databases in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -5425,7 +5404,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of databases to be created in the MySQL cluster.
+       * Configuration of databases in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -5436,7 +5415,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of databases to be created in the MySQL cluster.
+       * Configuration of databases in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -5450,7 +5429,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of databases to be created in the MySQL cluster.
+       * Configuration of databases in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -5465,7 +5444,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of databases to be created in the MySQL cluster.
+       * Configuration of databases in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -5476,7 +5455,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of databases to be created in the MySQL cluster.
+       * Configuration of databases in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -5488,7 +5467,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of databases to be created in the MySQL cluster.
+       * Configuration of databases in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.DatabaseSpec database_specs = 7;</code>
@@ -5526,7 +5505,7 @@ public final class ClusterServiceOuterClass {
 
       /**
        * <pre>
-       * Descriptions of database users to be created in the MySQL cluster.
+       * Configuration of database users in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -5540,7 +5519,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of database users to be created in the MySQL cluster.
+       * Configuration of database users in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -5554,7 +5533,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of database users to be created in the MySQL cluster.
+       * Configuration of database users in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -5568,7 +5547,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of database users to be created in the MySQL cluster.
+       * Configuration of database users in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -5589,7 +5568,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of database users to be created in the MySQL cluster.
+       * Configuration of database users in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -5607,7 +5586,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of database users to be created in the MySQL cluster.
+       * Configuration of database users in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -5627,7 +5606,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of database users to be created in the MySQL cluster.
+       * Configuration of database users in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -5648,7 +5627,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of database users to be created in the MySQL cluster.
+       * Configuration of database users in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -5666,7 +5645,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of database users to be created in the MySQL cluster.
+       * Configuration of database users in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -5684,7 +5663,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of database users to be created in the MySQL cluster.
+       * Configuration of database users in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -5703,7 +5682,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of database users to be created in the MySQL cluster.
+       * Configuration of database users in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -5720,7 +5699,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of database users to be created in the MySQL cluster.
+       * Configuration of database users in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -5737,7 +5716,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of database users to be created in the MySQL cluster.
+       * Configuration of database users in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -5748,7 +5727,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of database users to be created in the MySQL cluster.
+       * Configuration of database users in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -5762,7 +5741,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of database users to be created in the MySQL cluster.
+       * Configuration of database users in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -5777,7 +5756,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of database users to be created in the MySQL cluster.
+       * Configuration of database users in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -5788,7 +5767,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of database users to be created in the MySQL cluster.
+       * Configuration of database users in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -5800,7 +5779,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Descriptions of database users to be created in the MySQL cluster.
+       * Configuration of database users in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.UserSpec user_specs = 8;</code>
@@ -5838,7 +5817,7 @@ public final class ClusterServiceOuterClass {
 
       /**
        * <pre>
-       * Individual configurations for hosts that should be created for the MySQL cluster.
+       * Configuration of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -5852,7 +5831,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Individual configurations for hosts that should be created for the MySQL cluster.
+       * Configuration of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -5866,7 +5845,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Individual configurations for hosts that should be created for the MySQL cluster.
+       * Configuration of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -5880,7 +5859,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Individual configurations for hosts that should be created for the MySQL cluster.
+       * Configuration of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -5901,7 +5880,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Individual configurations for hosts that should be created for the MySQL cluster.
+       * Configuration of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -5919,7 +5898,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Individual configurations for hosts that should be created for the MySQL cluster.
+       * Configuration of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -5939,7 +5918,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Individual configurations for hosts that should be created for the MySQL cluster.
+       * Configuration of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -5960,7 +5939,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Individual configurations for hosts that should be created for the MySQL cluster.
+       * Configuration of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -5978,7 +5957,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Individual configurations for hosts that should be created for the MySQL cluster.
+       * Configuration of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -5996,7 +5975,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Individual configurations for hosts that should be created for the MySQL cluster.
+       * Configuration of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -6015,7 +5994,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Individual configurations for hosts that should be created for the MySQL cluster.
+       * Configuration of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -6032,7 +6011,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Individual configurations for hosts that should be created for the MySQL cluster.
+       * Configuration of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -6049,7 +6028,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Individual configurations for hosts that should be created for the MySQL cluster.
+       * Configuration of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -6060,7 +6039,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Individual configurations for hosts that should be created for the MySQL cluster.
+       * Configuration of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -6074,7 +6053,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Individual configurations for hosts that should be created for the MySQL cluster.
+       * Configuration of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -6089,7 +6068,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Individual configurations for hosts that should be created for the MySQL cluster.
+       * Configuration of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -6100,7 +6079,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Individual configurations for hosts that should be created for the MySQL cluster.
+       * Configuration of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -6112,7 +6091,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Individual configurations for hosts that should be created for the MySQL cluster.
+       * Configuration of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -6234,7 +6213,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * List of security group IDs to apply to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -6245,7 +6224,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * List of security group IDs to apply to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -6255,7 +6234,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * List of security group IDs to apply to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -6265,7 +6244,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * List of security group IDs to apply to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -6276,7 +6255,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * List of security group IDs to apply to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -6293,7 +6272,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * List of security group IDs to apply to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -6310,7 +6289,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * List of security group IDs to apply to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -6325,7 +6304,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * List of security group IDs to apply to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -6338,7 +6317,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * List of security group IDs to apply to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -6358,7 +6337,7 @@ public final class ClusterServiceOuterClass {
       private boolean deletionProtection_ ;
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * This option prevents unintended deletion of the cluster.
        * </pre>
        *
        * <code>bool deletion_protection = 12;</code>
@@ -6368,7 +6347,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * This option prevents unintended deletion of the cluster.
        * </pre>
        *
        * <code>bool deletion_protection = 12;</code>
@@ -6381,7 +6360,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * This option prevents unintended deletion of the cluster.
        * </pre>
        *
        * <code>bool deletion_protection = 12;</code>
@@ -6451,7 +6430,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster that is being created.
+     * ID of the cluster that is being created.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -6459,7 +6438,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster that is being created.
+     * ID of the cluster that is being created.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -6549,7 +6528,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster that is being created.
+     * ID of the cluster that is being created.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -6568,7 +6547,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster that is being created.
+     * ID of the cluster that is being created.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -6893,7 +6872,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster that is being created.
+       * ID of the cluster that is being created.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -6912,7 +6891,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that is being created.
+       * ID of the cluster that is being created.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -6932,7 +6911,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that is being created.
+       * ID of the cluster that is being created.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -6949,7 +6928,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that is being created.
+       * ID of the cluster that is being created.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -6962,7 +6941,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that is being created.
+       * ID of the cluster that is being created.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -7037,8 +7016,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster to update.
-     * To get the MySQL cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to update.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7046,8 +7025,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster to update.
-     * To get the MySQL cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to update.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7057,7 +7036,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL cluster should be updated.
+     * Field mask that specifies which settings of the cluster should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7065,7 +7044,7 @@ public final class ClusterServiceOuterClass {
     boolean hasUpdateMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL cluster should be updated.
+     * Field mask that specifies which settings of the cluster should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7073,7 +7052,7 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.FieldMask getUpdateMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL cluster should be updated.
+     * Field mask that specifies which settings of the cluster should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7082,7 +7061,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * New description of the MySQL cluster.
+     * New description of the cluster.
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -7090,7 +7069,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * New description of the MySQL cluster.
+     * New description of the cluster.
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -7100,10 +7079,9 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
-     * The new set of labels will completely replace the old ones. To add a label, request the current
-     * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+     * New set of custom labels for the cluster as `key:value` pairs.
+     * This set will completely replace the current one.
+     * To add a label, request the current label set with the [ClusterService.Get] request, then send an [ClusterService.Update] request with the new label added to the current set.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7111,10 +7089,9 @@ public final class ClusterServiceOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
-     * The new set of labels will completely replace the old ones. To add a label, request the current
-     * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+     * New set of custom labels for the cluster as `key:value` pairs.
+     * This set will completely replace the current one.
+     * To add a label, request the current label set with the [ClusterService.Get] request, then send an [ClusterService.Update] request with the new label added to the current set.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7129,10 +7106,9 @@ public final class ClusterServiceOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
-     * The new set of labels will completely replace the old ones. To add a label, request the current
-     * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+     * New set of custom labels for the cluster as `key:value` pairs.
+     * This set will completely replace the current one.
+     * To add a label, request the current label set with the [ClusterService.Get] request, then send an [ClusterService.Update] request with the new label added to the current set.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7141,10 +7117,9 @@ public final class ClusterServiceOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
-     * The new set of labels will completely replace the old ones. To add a label, request the current
-     * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+     * New set of custom labels for the cluster as `key:value` pairs.
+     * This set will completely replace the current one.
+     * To add a label, request the current label set with the [ClusterService.Get] request, then send an [ClusterService.Update] request with the new label added to the current set.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7155,10 +7130,9 @@ public final class ClusterServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
-     * The new set of labels will completely replace the old ones. To add a label, request the current
-     * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+     * New set of custom labels for the cluster as `key:value` pairs.
+     * This set will completely replace the current one.
+     * To add a label, request the current label set with the [ClusterService.Get] request, then send an [ClusterService.Update] request with the new label added to the current set.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7169,7 +7143,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * New configuration and resources for hosts in the cluster.
+     * New configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 5;</code>
@@ -7177,7 +7151,7 @@ public final class ClusterServiceOuterClass {
     boolean hasConfigSpec();
     /**
      * <pre>
-     * New configuration and resources for hosts in the cluster.
+     * New configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 5;</code>
@@ -7185,7 +7159,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ConfigSpec getConfigSpec();
     /**
      * <pre>
-     * New configuration and resources for hosts in the cluster.
+     * New configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 5;</code>
@@ -7194,7 +7168,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * New name for the cluster.
+     * New name of the cluster.
      * </pre>
      *
      * <code>string name = 6 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -7202,7 +7176,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * New name for the cluster.
+     * New name of the cluster.
      * </pre>
      *
      * <code>string name = 6 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -7212,7 +7186,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * New maintenance window settings for the cluster.
+     * Configuration of a maintenance window in an MySQL cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -7220,7 +7194,7 @@ public final class ClusterServiceOuterClass {
     boolean hasMaintenanceWindow();
     /**
      * <pre>
-     * New maintenance window settings for the cluster.
+     * Configuration of a maintenance window in an MySQL cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -7228,7 +7202,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
     /**
      * <pre>
-     * New maintenance window settings for the cluster.
+     * Configuration of a maintenance window in an MySQL cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -7237,7 +7211,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * User security groups
+     * New list of security group IDs to apply to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 8;</code>
@@ -7246,7 +7220,7 @@ public final class ClusterServiceOuterClass {
         getSecurityGroupIdsList();
     /**
      * <pre>
-     * User security groups
+     * New list of security group IDs to apply to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 8;</code>
@@ -7254,7 +7228,7 @@ public final class ClusterServiceOuterClass {
     int getSecurityGroupIdsCount();
     /**
      * <pre>
-     * User security groups
+     * New list of security group IDs to apply to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 8;</code>
@@ -7262,7 +7236,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getSecurityGroupIds(int index);
     /**
      * <pre>
-     * User security groups
+     * New list of security group IDs to apply to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 8;</code>
@@ -7272,7 +7246,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the cluster
+     * This option prevents unintended deletion of the cluster.
      * </pre>
      *
      * <code>bool deletion_protection = 9;</code>
@@ -7459,8 +7433,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster to update.
-     * To get the MySQL cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to update.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7479,8 +7453,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster to update.
-     * To get the MySQL cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to update.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7503,7 +7477,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.FieldMask updateMask_;
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL cluster should be updated.
+     * Field mask that specifies which settings of the cluster should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7513,7 +7487,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL cluster should be updated.
+     * Field mask that specifies which settings of the cluster should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7523,7 +7497,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL cluster should be updated.
+     * Field mask that specifies which settings of the cluster should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7536,7 +7510,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * New description of the MySQL cluster.
+     * New description of the cluster.
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -7555,7 +7529,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * New description of the MySQL cluster.
+     * New description of the cluster.
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -7602,10 +7576,9 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
-     * The new set of labels will completely replace the old ones. To add a label, request the current
-     * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+     * New set of custom labels for the cluster as `key:value` pairs.
+     * This set will completely replace the current one.
+     * To add a label, request the current label set with the [ClusterService.Get] request, then send an [ClusterService.Update] request with the new label added to the current set.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7625,10 +7598,9 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
-     * The new set of labels will completely replace the old ones. To add a label, request the current
-     * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+     * New set of custom labels for the cluster as `key:value` pairs.
+     * This set will completely replace the current one.
+     * To add a label, request the current label set with the [ClusterService.Get] request, then send an [ClusterService.Update] request with the new label added to the current set.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7639,10 +7611,9 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
-     * The new set of labels will completely replace the old ones. To add a label, request the current
-     * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+     * New set of custom labels for the cluster as `key:value` pairs.
+     * This set will completely replace the current one.
+     * To add a label, request the current label set with the [ClusterService.Get] request, then send an [ClusterService.Update] request with the new label added to the current set.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7658,10 +7629,9 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
-     * The new set of labels will completely replace the old ones. To add a label, request the current
-     * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+     * New set of custom labels for the cluster as `key:value` pairs.
+     * This set will completely replace the current one.
+     * To add a label, request the current label set with the [ClusterService.Get] request, then send an [ClusterService.Update] request with the new label added to the current set.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7682,7 +7652,7 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ConfigSpec configSpec_;
     /**
      * <pre>
-     * New configuration and resources for hosts in the cluster.
+     * New configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 5;</code>
@@ -7692,7 +7662,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * New configuration and resources for hosts in the cluster.
+     * New configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 5;</code>
@@ -7702,7 +7672,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * New configuration and resources for hosts in the cluster.
+     * New configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 5;</code>
@@ -7715,7 +7685,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * New name for the cluster.
+     * New name of the cluster.
      * </pre>
      *
      * <code>string name = 6 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -7734,7 +7704,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * New name for the cluster.
+     * New name of the cluster.
      * </pre>
      *
      * <code>string name = 6 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -7757,7 +7727,7 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
     /**
      * <pre>
-     * New maintenance window settings for the cluster.
+     * Configuration of a maintenance window in an MySQL cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -7767,7 +7737,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * New maintenance window settings for the cluster.
+     * Configuration of a maintenance window in an MySQL cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -7777,7 +7747,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * New maintenance window settings for the cluster.
+     * Configuration of a maintenance window in an MySQL cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -7790,7 +7760,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.LazyStringList securityGroupIds_;
     /**
      * <pre>
-     * User security groups
+     * New list of security group IDs to apply to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 8;</code>
@@ -7801,7 +7771,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * User security groups
+     * New list of security group IDs to apply to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 8;</code>
@@ -7811,7 +7781,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * User security groups
+     * New list of security group IDs to apply to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 8;</code>
@@ -7821,7 +7791,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * User security groups
+     * New list of security group IDs to apply to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 8;</code>
@@ -7835,7 +7805,7 @@ public final class ClusterServiceOuterClass {
     private boolean deletionProtection_;
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the cluster
+     * This option prevents unintended deletion of the cluster.
      * </pre>
      *
      * <code>bool deletion_protection = 9;</code>
@@ -8379,8 +8349,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster to update.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to update.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8399,8 +8369,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to update.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to update.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8420,8 +8390,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to update.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to update.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8438,8 +8408,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to update.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to update.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8452,8 +8422,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to update.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to update.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8475,7 +8445,7 @@ public final class ClusterServiceOuterClass {
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL cluster should be updated.
+       * Field mask that specifies which settings of the cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -8485,7 +8455,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL cluster should be updated.
+       * Field mask that specifies which settings of the cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -8499,7 +8469,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL cluster should be updated.
+       * Field mask that specifies which settings of the cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -8519,7 +8489,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL cluster should be updated.
+       * Field mask that specifies which settings of the cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -8537,7 +8507,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL cluster should be updated.
+       * Field mask that specifies which settings of the cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -8559,7 +8529,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL cluster should be updated.
+       * Field mask that specifies which settings of the cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -8577,7 +8547,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL cluster should be updated.
+       * Field mask that specifies which settings of the cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -8589,7 +8559,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL cluster should be updated.
+       * Field mask that specifies which settings of the cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -8604,7 +8574,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL cluster should be updated.
+       * Field mask that specifies which settings of the cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -8626,7 +8596,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * New description of the MySQL cluster.
+       * New description of the cluster.
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -8645,7 +8615,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New description of the MySQL cluster.
+       * New description of the cluster.
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -8665,7 +8635,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New description of the MySQL cluster.
+       * New description of the cluster.
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -8682,7 +8652,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New description of the MySQL cluster.
+       * New description of the cluster.
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -8695,7 +8665,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New description of the MySQL cluster.
+       * New description of the cluster.
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -8740,10 +8710,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
-       * The new set of labels will completely replace the old ones. To add a label, request the current
-       * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+       * New set of custom labels for the cluster as `key:value` pairs.
+       * This set will completely replace the current one.
+       * To add a label, request the current label set with the [ClusterService.Get] request, then send an [ClusterService.Update] request with the new label added to the current set.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -8763,10 +8732,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
-       * The new set of labels will completely replace the old ones. To add a label, request the current
-       * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+       * New set of custom labels for the cluster as `key:value` pairs.
+       * This set will completely replace the current one.
+       * To add a label, request the current label set with the [ClusterService.Get] request, then send an [ClusterService.Update] request with the new label added to the current set.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -8777,10 +8745,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
-       * The new set of labels will completely replace the old ones. To add a label, request the current
-       * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+       * New set of custom labels for the cluster as `key:value` pairs.
+       * This set will completely replace the current one.
+       * To add a label, request the current label set with the [ClusterService.Get] request, then send an [ClusterService.Update] request with the new label added to the current set.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -8796,10 +8763,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
-       * The new set of labels will completely replace the old ones. To add a label, request the current
-       * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+       * New set of custom labels for the cluster as `key:value` pairs.
+       * This set will completely replace the current one.
+       * To add a label, request the current label set with the [ClusterService.Get] request, then send an [ClusterService.Update] request with the new label added to the current set.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -8823,10 +8789,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
-       * The new set of labels will completely replace the old ones. To add a label, request the current
-       * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+       * New set of custom labels for the cluster as `key:value` pairs.
+       * This set will completely replace the current one.
+       * To add a label, request the current label set with the [ClusterService.Get] request, then send an [ClusterService.Update] request with the new label added to the current set.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -8849,10 +8814,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
-       * The new set of labels will completely replace the old ones. To add a label, request the current
-       * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+       * New set of custom labels for the cluster as `key:value` pairs.
+       * This set will completely replace the current one.
+       * To add a label, request the current label set with the [ClusterService.Get] request, then send an [ClusterService.Update] request with the new label added to the current set.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -8868,10 +8832,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
-       * The new set of labels will completely replace the old ones. To add a label, request the current
-       * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+       * New set of custom labels for the cluster as `key:value` pairs.
+       * This set will completely replace the current one.
+       * To add a label, request the current label set with the [ClusterService.Get] request, then send an [ClusterService.Update] request with the new label added to the current set.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -8889,7 +8852,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ConfigSpec, yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ConfigSpec.Builder, yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ConfigSpecOrBuilder> configSpecBuilder_;
       /**
        * <pre>
-       * New configuration and resources for hosts in the cluster.
+       * New configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 5;</code>
@@ -8899,7 +8862,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New configuration and resources for hosts in the cluster.
+       * New configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 5;</code>
@@ -8913,7 +8876,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New configuration and resources for hosts in the cluster.
+       * New configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 5;</code>
@@ -8933,7 +8896,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New configuration and resources for hosts in the cluster.
+       * New configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 5;</code>
@@ -8951,7 +8914,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New configuration and resources for hosts in the cluster.
+       * New configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 5;</code>
@@ -8973,7 +8936,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New configuration and resources for hosts in the cluster.
+       * New configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 5;</code>
@@ -8991,7 +8954,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New configuration and resources for hosts in the cluster.
+       * New configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 5;</code>
@@ -9003,7 +8966,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New configuration and resources for hosts in the cluster.
+       * New configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 5;</code>
@@ -9018,7 +8981,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New configuration and resources for hosts in the cluster.
+       * New configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 5;</code>
@@ -9040,7 +9003,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * New name for the cluster.
+       * New name of the cluster.
        * </pre>
        *
        * <code>string name = 6 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -9059,7 +9022,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New name for the cluster.
+       * New name of the cluster.
        * </pre>
        *
        * <code>string name = 6 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -9079,7 +9042,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New name for the cluster.
+       * New name of the cluster.
        * </pre>
        *
        * <code>string name = 6 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -9096,7 +9059,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New name for the cluster.
+       * New name of the cluster.
        * </pre>
        *
        * <code>string name = 6 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -9109,7 +9072,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New name for the cluster.
+       * New name of the cluster.
        * </pre>
        *
        * <code>string name = 6 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -9131,7 +9094,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
       /**
        * <pre>
-       * New maintenance window settings for the cluster.
+       * Configuration of a maintenance window in an MySQL cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -9141,7 +9104,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New maintenance window settings for the cluster.
+       * Configuration of a maintenance window in an MySQL cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -9155,7 +9118,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New maintenance window settings for the cluster.
+       * Configuration of a maintenance window in an MySQL cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -9175,7 +9138,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New maintenance window settings for the cluster.
+       * Configuration of a maintenance window in an MySQL cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -9193,7 +9156,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New maintenance window settings for the cluster.
+       * Configuration of a maintenance window in an MySQL cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -9215,7 +9178,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New maintenance window settings for the cluster.
+       * Configuration of a maintenance window in an MySQL cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -9233,7 +9196,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New maintenance window settings for the cluster.
+       * Configuration of a maintenance window in an MySQL cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -9245,7 +9208,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New maintenance window settings for the cluster.
+       * Configuration of a maintenance window in an MySQL cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -9260,7 +9223,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New maintenance window settings for the cluster.
+       * Configuration of a maintenance window in an MySQL cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -9288,7 +9251,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * New list of security group IDs to apply to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 8;</code>
@@ -9299,7 +9262,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * New list of security group IDs to apply to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 8;</code>
@@ -9309,7 +9272,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * New list of security group IDs to apply to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 8;</code>
@@ -9319,7 +9282,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * New list of security group IDs to apply to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 8;</code>
@@ -9330,7 +9293,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * New list of security group IDs to apply to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 8;</code>
@@ -9347,7 +9310,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * New list of security group IDs to apply to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 8;</code>
@@ -9364,7 +9327,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * New list of security group IDs to apply to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 8;</code>
@@ -9379,7 +9342,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * New list of security group IDs to apply to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 8;</code>
@@ -9392,7 +9355,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * New list of security group IDs to apply to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 8;</code>
@@ -9412,7 +9375,7 @@ public final class ClusterServiceOuterClass {
       private boolean deletionProtection_ ;
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * This option prevents unintended deletion of the cluster.
        * </pre>
        *
        * <code>bool deletion_protection = 9;</code>
@@ -9422,7 +9385,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * This option prevents unintended deletion of the cluster.
        * </pre>
        *
        * <code>bool deletion_protection = 9;</code>
@@ -9435,7 +9398,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * This option prevents unintended deletion of the cluster.
        * </pre>
        *
        * <code>bool deletion_protection = 9;</code>
@@ -9505,7 +9468,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster that is being modified.
+     * ID of the cluster that is being updated.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -9513,7 +9476,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster that is being modified.
+     * ID of the cluster that is being updated.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -9603,7 +9566,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster that is being modified.
+     * ID of the cluster that is being updated.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -9622,7 +9585,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster that is being modified.
+     * ID of the cluster that is being updated.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -9947,7 +9910,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster that is being modified.
+       * ID of the cluster that is being updated.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -9966,7 +9929,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that is being modified.
+       * ID of the cluster that is being updated.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -9986,7 +9949,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that is being modified.
+       * ID of the cluster that is being updated.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -10003,7 +9966,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that is being modified.
+       * ID of the cluster that is being updated.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -10016,7 +9979,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that is being modified.
+       * ID of the cluster that is being updated.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -10091,8 +10054,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster to delete.
-     * To get the MySQL cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to delete.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10100,8 +10063,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster to delete.
-     * To get the MySQL cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to delete.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10191,8 +10154,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster to delete.
-     * To get the MySQL cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to delete.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10211,8 +10174,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster to delete.
-     * To get the MySQL cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to delete.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10537,8 +10500,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster to delete.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to delete.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10557,8 +10520,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to delete.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to delete.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10578,8 +10541,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to delete.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to delete.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10596,8 +10559,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to delete.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to delete.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10610,8 +10573,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to delete.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to delete.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10686,7 +10649,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster that is being deleted.
+     * ID of the cluster that is being deleted.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -10694,7 +10657,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster that is being deleted.
+     * ID of the cluster that is being deleted.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -10784,7 +10747,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster that is being deleted.
+     * ID of the cluster that is being deleted.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -10803,7 +10766,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster that is being deleted.
+     * ID of the cluster that is being deleted.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -11128,7 +11091,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster that is being deleted.
+       * ID of the cluster that is being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -11147,7 +11110,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that is being deleted.
+       * ID of the cluster that is being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -11167,7 +11130,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that is being deleted.
+       * ID of the cluster that is being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -11184,7 +11147,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that is being deleted.
+       * ID of the cluster that is being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -11197,7 +11160,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that is being deleted.
+       * ID of the cluster that is being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -11272,8 +11235,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster to back up.
-     * To get the MySQL cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to back up.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11281,8 +11244,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster to back up.
-     * To get the MySQL cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to back up.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11372,8 +11335,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster to back up.
-     * To get the MySQL cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to back up.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11392,8 +11355,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster to back up.
-     * To get the MySQL cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to back up.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11718,8 +11681,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster to back up.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to back up.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11738,8 +11701,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to back up.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to back up.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11759,8 +11722,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to back up.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to back up.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11777,8 +11740,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to back up.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to back up.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11791,8 +11754,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to back up.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to back up.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11867,7 +11830,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster that is being backed up.
+     * ID of the cluster that is being backed up.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -11875,7 +11838,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster that is being backed up.
+     * ID of the cluster that is being backed up.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -11965,7 +11928,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster that is being backed up.
+     * ID of the cluster that is being backed up.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -11984,7 +11947,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster that is being backed up.
+     * ID of the cluster that is being backed up.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -12309,7 +12272,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster that is being backed up.
+       * ID of the cluster that is being backed up.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -12328,7 +12291,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that is being backed up.
+       * ID of the cluster that is being backed up.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -12348,7 +12311,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that is being backed up.
+       * ID of the cluster that is being backed up.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -12365,7 +12328,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that is being backed up.
+       * ID of the cluster that is being backed up.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -12378,7 +12341,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that is being backed up.
+       * ID of the cluster that is being backed up.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -12453,8 +12416,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the backup to create a cluster from.
-     * To get the backup ID, use a [ClusterService.ListBackups] request.
+     * ID of the backup to restore from.
+     * To get this ID, make a [BackupService.List] request (lists all backups in a folder) or a [ClusterService.ListBackups] request (lists all backups for an existing cluster).
      * </pre>
      *
      * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -12462,8 +12425,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getBackupId();
     /**
      * <pre>
-     * ID of the backup to create a cluster from.
-     * To get the backup ID, use a [ClusterService.ListBackups] request.
+     * ID of the backup to restore from.
+     * To get this ID, make a [BackupService.List] request (lists all backups in a folder) or a [ClusterService.ListBackups] request (lists all backups for an existing cluster).
      * </pre>
      *
      * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -12498,7 +12461,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the new MySQL cluster. The name must be unique within the folder.
+     * Name of the new MySQL cluster the backup will be restored to. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*"];</code>
@@ -12506,7 +12469,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the new MySQL cluster. The name must be unique within the folder.
+     * Name of the new MySQL cluster the backup will be restored to. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*"];</code>
@@ -12516,7 +12479,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Description of the new MySQL cluster.
+     * Description of the new cluster.
      * </pre>
      *
      * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -12524,7 +12487,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Description of the new MySQL cluster.
+     * Description of the new cluster.
      * </pre>
      *
      * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -12534,8 +12497,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the new cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -12543,8 +12505,7 @@ public final class ClusterServiceOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the new cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -12559,8 +12520,7 @@ public final class ClusterServiceOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the new cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -12569,8 +12529,7 @@ public final class ClusterServiceOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the new cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -12581,8 +12540,7 @@ public final class ClusterServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the new cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -12593,7 +12551,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Deployment environment of the new MySQL cluster.
+     * Deployment environment for the new cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -12601,7 +12559,7 @@ public final class ClusterServiceOuterClass {
     int getEnvironmentValue();
     /**
      * <pre>
-     * Deployment environment of the new MySQL cluster.
+     * Deployment environment for the new cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -12610,7 +12568,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Configuration for the MySQL cluster to be created.
+     * Configuration of the new cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 8;</code>
@@ -12618,7 +12576,7 @@ public final class ClusterServiceOuterClass {
     boolean hasConfigSpec();
     /**
      * <pre>
-     * Configuration for the MySQL cluster to be created.
+     * Configuration of the new cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 8;</code>
@@ -12626,7 +12584,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ConfigSpec getConfigSpec();
     /**
      * <pre>
-     * Configuration for the MySQL cluster to be created.
+     * Configuration of the new cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 8;</code>
@@ -12635,8 +12593,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Configurations for MySQL hosts that should be added
-     * to the cluster that is being created from the backup.
+     * Configuration of hosts in the new cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -12645,8 +12602,7 @@ public final class ClusterServiceOuterClass {
         getHostSpecsList();
     /**
      * <pre>
-     * Configurations for MySQL hosts that should be added
-     * to the cluster that is being created from the backup.
+     * Configuration of hosts in the new cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -12654,8 +12610,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.HostSpec getHostSpecs(int index);
     /**
      * <pre>
-     * Configurations for MySQL hosts that should be added
-     * to the cluster that is being created from the backup.
+     * Configuration of hosts in the new cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -12663,8 +12618,7 @@ public final class ClusterServiceOuterClass {
     int getHostSpecsCount();
     /**
      * <pre>
-     * Configurations for MySQL hosts that should be added
-     * to the cluster that is being created from the backup.
+     * Configuration of hosts in the new cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -12673,8 +12627,7 @@ public final class ClusterServiceOuterClass {
         getHostSpecsOrBuilderList();
     /**
      * <pre>
-     * Configurations for MySQL hosts that should be added
-     * to the cluster that is being created from the backup.
+     * Configuration of hosts in the new cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -12684,7 +12637,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the network to create the MySQL cluster in.
+     * ID of the network to create the new cluster in.
      * </pre>
      *
      * <code>string network_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12692,7 +12645,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getNetworkId();
     /**
      * <pre>
-     * ID of the network to create the MySQL cluster in.
+     * ID of the network to create the new cluster in.
      * </pre>
      *
      * <code>string network_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12702,7 +12655,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the folder to create the MySQL cluster in.
+     * ID of the folder to create the new cluster in.
      * </pre>
      *
      * <code>string folder_id = 11 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12710,7 +12663,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getFolderId();
     /**
      * <pre>
-     * ID of the folder to create the MySQL cluster in.
+     * ID of the folder to create the new cluster in.
      * </pre>
      *
      * <code>string folder_id = 11 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12720,7 +12673,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * User security groups
+     * List of security group IDs to apply to the new cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -12729,7 +12682,7 @@ public final class ClusterServiceOuterClass {
         getSecurityGroupIdsList();
     /**
      * <pre>
-     * User security groups
+     * List of security group IDs to apply to the new cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -12737,7 +12690,7 @@ public final class ClusterServiceOuterClass {
     int getSecurityGroupIdsCount();
     /**
      * <pre>
-     * User security groups
+     * List of security group IDs to apply to the new cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -12745,7 +12698,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getSecurityGroupIds(int index);
     /**
      * <pre>
-     * User security groups
+     * List of security group IDs to apply to the new cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -12948,8 +12901,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object backupId_;
     /**
      * <pre>
-     * ID of the backup to create a cluster from.
-     * To get the backup ID, use a [ClusterService.ListBackups] request.
+     * ID of the backup to restore from.
+     * To get this ID, make a [BackupService.List] request (lists all backups in a folder) or a [ClusterService.ListBackups] request (lists all backups for an existing cluster).
      * </pre>
      *
      * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -12968,8 +12921,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the backup to create a cluster from.
-     * To get the backup ID, use a [ClusterService.ListBackups] request.
+     * ID of the backup to restore from.
+     * To get this ID, make a [BackupService.List] request (lists all backups in a folder) or a [ClusterService.ListBackups] request (lists all backups for an existing cluster).
      * </pre>
      *
      * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13025,7 +12978,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the new MySQL cluster. The name must be unique within the folder.
+     * Name of the new MySQL cluster the backup will be restored to. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*"];</code>
@@ -13044,7 +12997,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the new MySQL cluster. The name must be unique within the folder.
+     * Name of the new MySQL cluster the backup will be restored to. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*"];</code>
@@ -13067,7 +13020,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Description of the new MySQL cluster.
+     * Description of the new cluster.
      * </pre>
      *
      * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -13086,7 +13039,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Description of the new MySQL cluster.
+     * Description of the new cluster.
      * </pre>
      *
      * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -13133,8 +13086,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the new cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -13154,8 +13106,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the new cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -13166,8 +13117,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the new cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -13183,8 +13133,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the new cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -13205,7 +13154,7 @@ public final class ClusterServiceOuterClass {
     private int environment_;
     /**
      * <pre>
-     * Deployment environment of the new MySQL cluster.
+     * Deployment environment for the new cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -13215,7 +13164,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Deployment environment of the new MySQL cluster.
+     * Deployment environment for the new cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -13230,7 +13179,7 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ConfigSpec configSpec_;
     /**
      * <pre>
-     * Configuration for the MySQL cluster to be created.
+     * Configuration of the new cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 8;</code>
@@ -13240,7 +13189,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Configuration for the MySQL cluster to be created.
+     * Configuration of the new cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 8;</code>
@@ -13250,7 +13199,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Configuration for the MySQL cluster to be created.
+     * Configuration of the new cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 8;</code>
@@ -13263,8 +13212,7 @@ public final class ClusterServiceOuterClass {
     private java.util.List<yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.HostSpec> hostSpecs_;
     /**
      * <pre>
-     * Configurations for MySQL hosts that should be added
-     * to the cluster that is being created from the backup.
+     * Configuration of hosts in the new cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -13274,8 +13222,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Configurations for MySQL hosts that should be added
-     * to the cluster that is being created from the backup.
+     * Configuration of hosts in the new cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -13286,8 +13233,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Configurations for MySQL hosts that should be added
-     * to the cluster that is being created from the backup.
+     * Configuration of hosts in the new cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -13297,8 +13243,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Configurations for MySQL hosts that should be added
-     * to the cluster that is being created from the backup.
+     * Configuration of hosts in the new cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -13308,8 +13253,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Configurations for MySQL hosts that should be added
-     * to the cluster that is being created from the backup.
+     * Configuration of hosts in the new cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -13323,7 +13267,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object networkId_;
     /**
      * <pre>
-     * ID of the network to create the MySQL cluster in.
+     * ID of the network to create the new cluster in.
      * </pre>
      *
      * <code>string network_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -13342,7 +13286,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the network to create the MySQL cluster in.
+     * ID of the network to create the new cluster in.
      * </pre>
      *
      * <code>string network_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -13365,7 +13309,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object folderId_;
     /**
      * <pre>
-     * ID of the folder to create the MySQL cluster in.
+     * ID of the folder to create the new cluster in.
      * </pre>
      *
      * <code>string folder_id = 11 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -13384,7 +13328,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the folder to create the MySQL cluster in.
+     * ID of the folder to create the new cluster in.
      * </pre>
      *
      * <code>string folder_id = 11 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -13407,7 +13351,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.LazyStringList securityGroupIds_;
     /**
      * <pre>
-     * User security groups
+     * List of security group IDs to apply to the new cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -13418,7 +13362,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * User security groups
+     * List of security group IDs to apply to the new cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -13428,7 +13372,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * User security groups
+     * List of security group IDs to apply to the new cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -13438,7 +13382,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * User security groups
+     * List of security group IDs to apply to the new cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -14040,8 +13984,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object backupId_ = "";
       /**
        * <pre>
-       * ID of the backup to create a cluster from.
-       * To get the backup ID, use a [ClusterService.ListBackups] request.
+       * ID of the backup to restore from.
+       * To get this ID, make a [BackupService.List] request (lists all backups in a folder) or a [ClusterService.ListBackups] request (lists all backups for an existing cluster).
        * </pre>
        *
        * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -14060,8 +14004,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the backup to create a cluster from.
-       * To get the backup ID, use a [ClusterService.ListBackups] request.
+       * ID of the backup to restore from.
+       * To get this ID, make a [BackupService.List] request (lists all backups in a folder) or a [ClusterService.ListBackups] request (lists all backups for an existing cluster).
        * </pre>
        *
        * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -14081,8 +14025,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the backup to create a cluster from.
-       * To get the backup ID, use a [ClusterService.ListBackups] request.
+       * ID of the backup to restore from.
+       * To get this ID, make a [BackupService.List] request (lists all backups in a folder) or a [ClusterService.ListBackups] request (lists all backups for an existing cluster).
        * </pre>
        *
        * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -14099,8 +14043,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the backup to create a cluster from.
-       * To get the backup ID, use a [ClusterService.ListBackups] request.
+       * ID of the backup to restore from.
+       * To get this ID, make a [BackupService.List] request (lists all backups in a folder) or a [ClusterService.ListBackups] request (lists all backups for an existing cluster).
        * </pre>
        *
        * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -14113,8 +14057,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the backup to create a cluster from.
-       * To get the backup ID, use a [ClusterService.ListBackups] request.
+       * ID of the backup to restore from.
+       * To get this ID, make a [BackupService.List] request (lists all backups in a folder) or a [ClusterService.ListBackups] request (lists all backups for an existing cluster).
        * </pre>
        *
        * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -14287,7 +14231,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the new MySQL cluster. The name must be unique within the folder.
+       * Name of the new MySQL cluster the backup will be restored to. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*"];</code>
@@ -14306,7 +14250,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the new MySQL cluster. The name must be unique within the folder.
+       * Name of the new MySQL cluster the backup will be restored to. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*"];</code>
@@ -14326,7 +14270,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the new MySQL cluster. The name must be unique within the folder.
+       * Name of the new MySQL cluster the backup will be restored to. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*"];</code>
@@ -14343,7 +14287,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the new MySQL cluster. The name must be unique within the folder.
+       * Name of the new MySQL cluster the backup will be restored to. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*"];</code>
@@ -14356,7 +14300,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the new MySQL cluster. The name must be unique within the folder.
+       * Name of the new MySQL cluster the backup will be restored to. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*"];</code>
@@ -14376,7 +14320,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Description of the new MySQL cluster.
+       * Description of the new cluster.
        * </pre>
        *
        * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -14395,7 +14339,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the new MySQL cluster.
+       * Description of the new cluster.
        * </pre>
        *
        * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -14415,7 +14359,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the new MySQL cluster.
+       * Description of the new cluster.
        * </pre>
        *
        * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -14432,7 +14376,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the new MySQL cluster.
+       * Description of the new cluster.
        * </pre>
        *
        * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -14445,7 +14389,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the new MySQL cluster.
+       * Description of the new cluster.
        * </pre>
        *
        * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -14490,8 +14434,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the new cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -14511,8 +14454,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the new cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -14523,8 +14465,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the new cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -14540,8 +14481,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the new cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -14565,8 +14505,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the new cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -14589,8 +14528,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the new cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -14606,8 +14544,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the new cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -14623,7 +14560,7 @@ public final class ClusterServiceOuterClass {
       private int environment_ = 0;
       /**
        * <pre>
-       * Deployment environment of the new MySQL cluster.
+       * Deployment environment for the new cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -14633,7 +14570,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deployment environment of the new MySQL cluster.
+       * Deployment environment for the new cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -14645,7 +14582,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deployment environment of the new MySQL cluster.
+       * Deployment environment for the new cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -14657,7 +14594,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deployment environment of the new MySQL cluster.
+       * Deployment environment for the new cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -14673,7 +14610,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deployment environment of the new MySQL cluster.
+       * Deployment environment for the new cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -14690,7 +14627,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ConfigSpec, yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ConfigSpec.Builder, yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ConfigSpecOrBuilder> configSpecBuilder_;
       /**
        * <pre>
-       * Configuration for the MySQL cluster to be created.
+       * Configuration of the new cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 8;</code>
@@ -14700,7 +14637,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration for the MySQL cluster to be created.
+       * Configuration of the new cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 8;</code>
@@ -14714,7 +14651,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration for the MySQL cluster to be created.
+       * Configuration of the new cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 8;</code>
@@ -14734,7 +14671,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration for the MySQL cluster to be created.
+       * Configuration of the new cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 8;</code>
@@ -14752,7 +14689,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration for the MySQL cluster to be created.
+       * Configuration of the new cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 8;</code>
@@ -14774,7 +14711,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration for the MySQL cluster to be created.
+       * Configuration of the new cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 8;</code>
@@ -14792,7 +14729,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration for the MySQL cluster to be created.
+       * Configuration of the new cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 8;</code>
@@ -14804,7 +14741,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration for the MySQL cluster to be created.
+       * Configuration of the new cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 8;</code>
@@ -14819,7 +14756,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration for the MySQL cluster to be created.
+       * Configuration of the new cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ConfigSpec config_spec = 8;</code>
@@ -14852,8 +14789,7 @@ public final class ClusterServiceOuterClass {
 
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added
-       * to the cluster that is being created from the backup.
+       * Configuration of hosts in the new cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -14867,8 +14803,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added
-       * to the cluster that is being created from the backup.
+       * Configuration of hosts in the new cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -14882,8 +14817,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added
-       * to the cluster that is being created from the backup.
+       * Configuration of hosts in the new cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -14897,8 +14831,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added
-       * to the cluster that is being created from the backup.
+       * Configuration of hosts in the new cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -14919,8 +14852,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added
-       * to the cluster that is being created from the backup.
+       * Configuration of hosts in the new cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -14938,8 +14870,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added
-       * to the cluster that is being created from the backup.
+       * Configuration of hosts in the new cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -14959,8 +14890,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added
-       * to the cluster that is being created from the backup.
+       * Configuration of hosts in the new cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -14981,8 +14911,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added
-       * to the cluster that is being created from the backup.
+       * Configuration of hosts in the new cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -15000,8 +14929,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added
-       * to the cluster that is being created from the backup.
+       * Configuration of hosts in the new cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -15019,8 +14947,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added
-       * to the cluster that is being created from the backup.
+       * Configuration of hosts in the new cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -15039,8 +14966,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added
-       * to the cluster that is being created from the backup.
+       * Configuration of hosts in the new cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -15057,8 +14983,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added
-       * to the cluster that is being created from the backup.
+       * Configuration of hosts in the new cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -15075,8 +15000,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added
-       * to the cluster that is being created from the backup.
+       * Configuration of hosts in the new cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -15087,8 +15011,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added
-       * to the cluster that is being created from the backup.
+       * Configuration of hosts in the new cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -15102,8 +15025,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added
-       * to the cluster that is being created from the backup.
+       * Configuration of hosts in the new cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -15118,8 +15040,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added
-       * to the cluster that is being created from the backup.
+       * Configuration of hosts in the new cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -15130,8 +15051,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added
-       * to the cluster that is being created from the backup.
+       * Configuration of hosts in the new cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -15143,8 +15063,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added
-       * to the cluster that is being created from the backup.
+       * Configuration of hosts in the new cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 9;</code>
@@ -15171,7 +15090,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object networkId_ = "";
       /**
        * <pre>
-       * ID of the network to create the MySQL cluster in.
+       * ID of the network to create the new cluster in.
        * </pre>
        *
        * <code>string network_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15190,7 +15109,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the network to create the MySQL cluster in.
+       * ID of the network to create the new cluster in.
        * </pre>
        *
        * <code>string network_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15210,7 +15129,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the network to create the MySQL cluster in.
+       * ID of the network to create the new cluster in.
        * </pre>
        *
        * <code>string network_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15227,7 +15146,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the network to create the MySQL cluster in.
+       * ID of the network to create the new cluster in.
        * </pre>
        *
        * <code>string network_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15240,7 +15159,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the network to create the MySQL cluster in.
+       * ID of the network to create the new cluster in.
        * </pre>
        *
        * <code>string network_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15260,7 +15179,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object folderId_ = "";
       /**
        * <pre>
-       * ID of the folder to create the MySQL cluster in.
+       * ID of the folder to create the new cluster in.
        * </pre>
        *
        * <code>string folder_id = 11 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15279,7 +15198,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder to create the MySQL cluster in.
+       * ID of the folder to create the new cluster in.
        * </pre>
        *
        * <code>string folder_id = 11 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15299,7 +15218,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder to create the MySQL cluster in.
+       * ID of the folder to create the new cluster in.
        * </pre>
        *
        * <code>string folder_id = 11 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15316,7 +15235,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder to create the MySQL cluster in.
+       * ID of the folder to create the new cluster in.
        * </pre>
        *
        * <code>string folder_id = 11 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15329,7 +15248,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder to create the MySQL cluster in.
+       * ID of the folder to create the new cluster in.
        * </pre>
        *
        * <code>string folder_id = 11 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15355,7 +15274,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * List of security group IDs to apply to the new cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -15366,7 +15285,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * List of security group IDs to apply to the new cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -15376,7 +15295,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * List of security group IDs to apply to the new cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -15386,7 +15305,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * List of security group IDs to apply to the new cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -15397,7 +15316,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * List of security group IDs to apply to the new cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -15414,7 +15333,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * List of security group IDs to apply to the new cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -15431,7 +15350,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * List of security group IDs to apply to the new cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -15446,7 +15365,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * List of security group IDs to apply to the new cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -15459,7 +15378,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * List of security group IDs to apply to the new cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -15534,7 +15453,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the new MySQL cluster that is being created from a backup.
+     * ID of the new cluster that is being created from a backup.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -15542,7 +15461,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the new MySQL cluster that is being created from a backup.
+     * ID of the new cluster that is being created from a backup.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -15657,7 +15576,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the new MySQL cluster that is being created from a backup.
+     * ID of the new cluster that is being created from a backup.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -15676,7 +15595,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the new MySQL cluster that is being created from a backup.
+     * ID of the new cluster that is being created from a backup.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -16060,7 +15979,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the new MySQL cluster that is being created from a backup.
+       * ID of the new cluster that is being created from a backup.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -16079,7 +15998,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the new MySQL cluster that is being created from a backup.
+       * ID of the new cluster that is being created from a backup.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -16099,7 +16018,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the new MySQL cluster that is being created from a backup.
+       * ID of the new cluster that is being created from a backup.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -16116,7 +16035,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the new MySQL cluster that is being created from a backup.
+       * ID of the new cluster that is being created from a backup.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -16129,7 +16048,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the new MySQL cluster that is being created from a backup.
+       * ID of the new cluster that is being created from a backup.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -16293,7 +16212,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of MySQL cluster.
+     * ID of the cluster to start failover for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16301,7 +16221,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of MySQL cluster.
+     * ID of the cluster to start failover for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16311,7 +16232,9 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * New master host. Switch to the most up-to-date replica if not provided.
+     * Host name to switch master role to.
+     * If not provided, then the master role is switched to the most up-to-date replica host.
+     * To get this name, make a [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>string host_name = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
@@ -16319,7 +16242,9 @@ public final class ClusterServiceOuterClass {
     java.lang.String getHostName();
     /**
      * <pre>
-     * New master host. Switch to the most up-to-date replica if not provided.
+     * Host name to switch master role to.
+     * If not provided, then the master role is switched to the most up-to-date replica host.
+     * To get this name, make a [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>string host_name = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
@@ -16416,7 +16341,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of MySQL cluster.
+     * ID of the cluster to start failover for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16435,7 +16361,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of MySQL cluster.
+     * ID of the cluster to start failover for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16458,7 +16385,9 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object hostName_;
     /**
      * <pre>
-     * New master host. Switch to the most up-to-date replica if not provided.
+     * Host name to switch master role to.
+     * If not provided, then the master role is switched to the most up-to-date replica host.
+     * To get this name, make a [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>string host_name = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
@@ -16477,7 +16406,9 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * New master host. Switch to the most up-to-date replica if not provided.
+     * Host name to switch master role to.
+     * If not provided, then the master role is switched to the most up-to-date replica host.
+     * To get this name, make a [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>string host_name = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
@@ -16819,7 +16750,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of MySQL cluster.
+       * ID of the cluster to start failover for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16838,7 +16770,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of MySQL cluster.
+       * ID of the cluster to start failover for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16858,7 +16791,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of MySQL cluster.
+       * ID of the cluster to start failover for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16875,7 +16809,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of MySQL cluster.
+       * ID of the cluster to start failover for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16888,7 +16823,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of MySQL cluster.
+       * ID of the cluster to start failover for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16908,7 +16844,9 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object hostName_ = "";
       /**
        * <pre>
-       * New master host. Switch to the most up-to-date replica if not provided.
+       * Host name to switch master role to.
+       * If not provided, then the master role is switched to the most up-to-date replica host.
+       * To get this name, make a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>string host_name = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
@@ -16927,7 +16865,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New master host. Switch to the most up-to-date replica if not provided.
+       * Host name to switch master role to.
+       * If not provided, then the master role is switched to the most up-to-date replica host.
+       * To get this name, make a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>string host_name = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
@@ -16947,7 +16887,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New master host. Switch to the most up-to-date replica if not provided.
+       * Host name to switch master role to.
+       * If not provided, then the master role is switched to the most up-to-date replica host.
+       * To get this name, make a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>string host_name = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
@@ -16964,7 +16906,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New master host. Switch to the most up-to-date replica if not provided.
+       * Host name to switch master role to.
+       * If not provided, then the master role is switched to the most up-to-date replica host.
+       * To get this name, make a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>string host_name = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
@@ -16977,7 +16921,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * New master host. Switch to the most up-to-date replica if not provided.
+       * Host name to switch master role to.
+       * If not provided, then the master role is switched to the most up-to-date replica host.
+       * To get this name, make a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>string host_name = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
@@ -17052,7 +16998,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster being failovered.
+     * ID of the cluster that is being failovered.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -17060,7 +17006,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster being failovered.
+     * ID of the cluster that is being failovered.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -17150,7 +17096,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster being failovered.
+     * ID of the cluster that is being failovered.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -17169,7 +17115,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster being failovered.
+     * ID of the cluster that is being failovered.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -17494,7 +17440,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster being failovered.
+       * ID of the cluster that is being failovered.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -17513,7 +17459,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster being failovered.
+       * ID of the cluster that is being failovered.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -17533,7 +17479,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster being failovered.
+       * ID of the cluster that is being failovered.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -17550,7 +17496,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster being failovered.
+       * ID of the cluster that is being failovered.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -17563,7 +17509,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster being failovered.
+       * ID of the cluster that is being failovered.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -17638,7 +17584,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster to reschedule the maintenance operation for.
+     * ID of the cluster to reschedule the maintenance operation for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -17646,7 +17593,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster to reschedule the maintenance operation for.
+     * ID of the cluster to reschedule the maintenance operation for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -17673,7 +17621,9 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+     * The time until which this maintenance operation should be delayed.
+     * The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks.
+     * The value can also point to the past moment of time if `IMMEDIATE` reschedule type is chosen.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -17681,7 +17631,9 @@ public final class ClusterServiceOuterClass {
     boolean hasDelayedUntil();
     /**
      * <pre>
-     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+     * The time until which this maintenance operation should be delayed.
+     * The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks.
+     * The value can also point to the past moment of time if `IMMEDIATE` reschedule type is chosen.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -17689,7 +17641,9 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.Timestamp getDelayedUntil();
     /**
      * <pre>
-     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+     * The time until which this maintenance operation should be delayed.
+     * The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks.
+     * The value can also point to the past moment of time if `IMMEDIATE` reschedule type is chosen.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -17938,7 +17892,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster to reschedule the maintenance operation for.
+     * ID of the cluster to reschedule the maintenance operation for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -17957,7 +17912,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster to reschedule the maintenance operation for.
+     * ID of the cluster to reschedule the maintenance operation for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18005,7 +17961,9 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.Timestamp delayedUntil_;
     /**
      * <pre>
-     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+     * The time until which this maintenance operation should be delayed.
+     * The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks.
+     * The value can also point to the past moment of time if `IMMEDIATE` reschedule type is chosen.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18015,7 +17973,9 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+     * The time until which this maintenance operation should be delayed.
+     * The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks.
+     * The value can also point to the past moment of time if `IMMEDIATE` reschedule type is chosen.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18025,7 +17985,9 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+     * The time until which this maintenance operation should be delayed.
+     * The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks.
+     * The value can also point to the past moment of time if `IMMEDIATE` reschedule type is chosen.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18386,7 +18348,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster to reschedule the maintenance operation for.
+       * ID of the cluster to reschedule the maintenance operation for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18405,7 +18368,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to reschedule the maintenance operation for.
+       * ID of the cluster to reschedule the maintenance operation for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18425,7 +18389,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to reschedule the maintenance operation for.
+       * ID of the cluster to reschedule the maintenance operation for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18442,7 +18407,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to reschedule the maintenance operation for.
+       * ID of the cluster to reschedule the maintenance operation for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18455,7 +18421,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to reschedule the maintenance operation for.
+       * ID of the cluster to reschedule the maintenance operation for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18542,7 +18509,9 @@ public final class ClusterServiceOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> delayedUntilBuilder_;
       /**
        * <pre>
-       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+       * The time until which this maintenance operation should be delayed.
+       * The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks.
+       * The value can also point to the past moment of time if `IMMEDIATE` reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18552,7 +18521,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+       * The time until which this maintenance operation should be delayed.
+       * The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks.
+       * The value can also point to the past moment of time if `IMMEDIATE` reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18566,7 +18537,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+       * The time until which this maintenance operation should be delayed.
+       * The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks.
+       * The value can also point to the past moment of time if `IMMEDIATE` reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18586,7 +18559,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+       * The time until which this maintenance operation should be delayed.
+       * The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks.
+       * The value can also point to the past moment of time if `IMMEDIATE` reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18604,7 +18579,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+       * The time until which this maintenance operation should be delayed.
+       * The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks.
+       * The value can also point to the past moment of time if `IMMEDIATE` reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18626,7 +18603,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+       * The time until which this maintenance operation should be delayed.
+       * The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks.
+       * The value can also point to the past moment of time if `IMMEDIATE` reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18644,7 +18623,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+       * The time until which this maintenance operation should be delayed.
+       * The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks.
+       * The value can also point to the past moment of time if `IMMEDIATE` reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18656,7 +18637,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+       * The time until which this maintenance operation should be delayed.
+       * The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks.
+       * The value can also point to the past moment of time if `IMMEDIATE` reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18671,7 +18654,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
+       * The time until which this maintenance operation should be delayed.
+       * The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks.
+       * The value can also point to the past moment of time if `IMMEDIATE` reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18748,7 +18733,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the MySQL cluster.
+     * ID of the cluster the maintenance operation is being rescheduled for.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -18756,7 +18741,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. ID of the MySQL cluster.
+     * ID of the cluster the maintenance operation is being rescheduled for.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -18766,7 +18751,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Required. The time until which this maintenance operation is to be delayed.
+     * The time until which this maintenance operation is to be delayed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -18774,7 +18759,7 @@ public final class ClusterServiceOuterClass {
     boolean hasDelayedUntil();
     /**
      * <pre>
-     * Required. The time until which this maintenance operation is to be delayed.
+     * The time until which this maintenance operation is to be delayed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -18782,7 +18767,7 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.Timestamp getDelayedUntil();
     /**
      * <pre>
-     * Required. The time until which this maintenance operation is to be delayed.
+     * The time until which this maintenance operation is to be delayed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -18790,10 +18775,6 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder();
   }
   /**
-   * <pre>
-   * Rescheduled maintenance operation metadata.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceMetadata}
    */
   public  static final class RescheduleMaintenanceMetadata extends
@@ -18888,7 +18869,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. ID of the MySQL cluster.
+     * ID of the cluster the maintenance operation is being rescheduled for.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -18907,7 +18888,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the MySQL cluster.
+     * ID of the cluster the maintenance operation is being rescheduled for.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -18930,7 +18911,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.Timestamp delayedUntil_;
     /**
      * <pre>
-     * Required. The time until which this maintenance operation is to be delayed.
+     * The time until which this maintenance operation is to be delayed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -18940,7 +18921,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. The time until which this maintenance operation is to be delayed.
+     * The time until which this maintenance operation is to be delayed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -18950,7 +18931,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. The time until which this maintenance operation is to be delayed.
+     * The time until which this maintenance operation is to be delayed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -19131,10 +19112,6 @@ public final class ClusterServiceOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Rescheduled maintenance operation metadata.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceMetadata}
      */
     public static final class Builder extends
@@ -19299,7 +19276,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. ID of the MySQL cluster.
+       * ID of the cluster the maintenance operation is being rescheduled for.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -19318,7 +19295,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the MySQL cluster.
+       * ID of the cluster the maintenance operation is being rescheduled for.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -19338,7 +19315,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the MySQL cluster.
+       * ID of the cluster the maintenance operation is being rescheduled for.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -19355,7 +19332,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the MySQL cluster.
+       * ID of the cluster the maintenance operation is being rescheduled for.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -19368,7 +19345,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the MySQL cluster.
+       * ID of the cluster the maintenance operation is being rescheduled for.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -19390,7 +19367,7 @@ public final class ClusterServiceOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> delayedUntilBuilder_;
       /**
        * <pre>
-       * Required. The time until which this maintenance operation is to be delayed.
+       * The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -19400,7 +19377,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. The time until which this maintenance operation is to be delayed.
+       * The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -19414,7 +19391,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. The time until which this maintenance operation is to be delayed.
+       * The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -19434,7 +19411,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. The time until which this maintenance operation is to be delayed.
+       * The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -19452,7 +19429,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. The time until which this maintenance operation is to be delayed.
+       * The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -19474,7 +19451,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. The time until which this maintenance operation is to be delayed.
+       * The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -19492,7 +19469,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. The time until which this maintenance operation is to be delayed.
+       * The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -19504,7 +19481,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. The time until which this maintenance operation is to be delayed.
+       * The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -19519,7 +19496,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. The time until which this maintenance operation is to be delayed.
+       * The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -19596,7 +19573,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Timestamp of the log record.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -19604,7 +19581,7 @@ public final class ClusterServiceOuterClass {
     boolean hasTimestamp();
     /**
      * <pre>
-     * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Timestamp of the log record.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -19612,7 +19589,7 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.Timestamp getTimestamp();
     /**
      * <pre>
-     * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Timestamp of the log record.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -19674,6 +19651,10 @@ public final class ClusterServiceOuterClass {
         java.lang.String key);
   }
   /**
+   * <pre>
+   * A single log record.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.LogRecord}
    */
   public  static final class LogRecord extends
@@ -19787,7 +19768,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.Timestamp timestamp_;
     /**
      * <pre>
-     * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Timestamp of the log record.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -19797,7 +19778,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Timestamp of the log record.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -19807,7 +19788,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Timestamp of the log record.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -20092,6 +20073,10 @@ public final class ClusterServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A single log record.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.mdb.mysql.v1.LogRecord}
      */
     public static final class Builder extends
@@ -20282,7 +20267,7 @@ public final class ClusterServiceOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
       /**
        * <pre>
-       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Timestamp of the log record.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -20292,7 +20277,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Timestamp of the log record.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -20306,7 +20291,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Timestamp of the log record.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -20326,7 +20311,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Timestamp of the log record.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -20344,7 +20329,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Timestamp of the log record.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -20366,7 +20351,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Timestamp of the log record.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -20384,7 +20369,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Timestamp of the log record.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -20396,7 +20381,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Timestamp of the log record.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -20411,7 +20396,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Timestamp of the log record.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -20639,8 +20624,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster to request logs for.
-     * To get the MySQL cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to request logs for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20648,8 +20633,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster to request logs for.
-     * To get the MySQL cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to request logs for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20660,7 +20645,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Columns from the logs table to request.
-     * If no columns are specified, entire log records are returned.
+     * If no columns are specified, complete log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -20670,7 +20655,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Columns from the logs table to request.
-     * If no columns are specified, entire log records are returned.
+     * If no columns are specified, complete log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -20679,7 +20664,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Columns from the logs table to request.
-     * If no columns are specified, entire log records are returned.
+     * If no columns are specified, complete log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -20688,7 +20673,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Columns from the logs table to request.
-     * If no columns are specified, entire log records are returned.
+     * If no columns are specified, complete log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -20698,7 +20683,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Type of the service to request logs about.
+     * The log type.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ListClusterLogsRequest.ServiceType service_type = 3;</code>
@@ -20706,7 +20691,7 @@ public final class ClusterServiceOuterClass {
     int getServiceTypeValue();
     /**
      * <pre>
-     * Type of the service to request logs about.
+     * The log type.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ListClusterLogsRequest.ServiceType service_type = 3;</code>
@@ -20716,6 +20701,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Start timestamp for the logs request.
+     * The logs in the response will be within [from_time] to [to_time] range.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -20724,6 +20710,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Start timestamp for the logs request.
+     * The logs in the response will be within [from_time] to [to_time] range.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -20732,6 +20719,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Start timestamp for the logs request.
+     * The logs in the response will be within [from_time] to [to_time] range.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -20741,6 +20729,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * End timestamp for the logs request.
+     * The logs in the response will be within [from_time] to [to_time] range.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -20749,6 +20738,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * End timestamp for the logs request.
+     * The logs in the response will be within [from_time] to [to_time] range.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -20757,6 +20747,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * End timestamp for the logs request.
+     * The logs in the response will be within [from_time] to [to_time] range.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -20765,9 +20756,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the API returns a [ListClusterLogsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.ListLogs] requests.
      * </pre>
      *
      * <code>int64 page_size = 6 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -20776,8 +20766,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
-     * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous [ClusterService.ListLogs] request.
      * </pre>
      *
      * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -20785,8 +20775,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
-     * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous [ClusterService.ListLogs] request.
      * </pre>
      *
      * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -20796,7 +20786,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Always return `next_page_token`, even if current page is empty.
+     * Option that controls the behavior of result pagination.
+     * If it is set to `true`, then [ListClusterLogsResponse.next_page_token] will always be returned, even if the current page is empty.
      * </pre>
      *
      * <code>bool always_next_page_token = 8;</code>
@@ -21108,8 +21099,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster to request logs for.
-     * To get the MySQL cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to request logs for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21128,8 +21119,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster to request logs for.
-     * To get the MySQL cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to request logs for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21153,7 +21144,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Columns from the logs table to request.
-     * If no columns are specified, entire log records are returned.
+     * If no columns are specified, complete log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -21165,7 +21156,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Columns from the logs table to request.
-     * If no columns are specified, entire log records are returned.
+     * If no columns are specified, complete log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -21176,7 +21167,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Columns from the logs table to request.
-     * If no columns are specified, entire log records are returned.
+     * If no columns are specified, complete log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -21187,7 +21178,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Columns from the logs table to request.
-     * If no columns are specified, entire log records are returned.
+     * If no columns are specified, complete log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -21201,7 +21192,7 @@ public final class ClusterServiceOuterClass {
     private int serviceType_;
     /**
      * <pre>
-     * Type of the service to request logs about.
+     * The log type.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ListClusterLogsRequest.ServiceType service_type = 3;</code>
@@ -21211,7 +21202,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Type of the service to request logs about.
+     * The log type.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ListClusterLogsRequest.ServiceType service_type = 3;</code>
@@ -21227,6 +21218,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Start timestamp for the logs request.
+     * The logs in the response will be within [from_time] to [to_time] range.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -21237,6 +21229,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Start timestamp for the logs request.
+     * The logs in the response will be within [from_time] to [to_time] range.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -21247,6 +21240,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Start timestamp for the logs request.
+     * The logs in the response will be within [from_time] to [to_time] range.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -21260,6 +21254,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * End timestamp for the logs request.
+     * The logs in the response will be within [from_time] to [to_time] range.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -21270,6 +21265,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * End timestamp for the logs request.
+     * The logs in the response will be within [from_time] to [to_time] range.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -21280,6 +21276,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * End timestamp for the logs request.
+     * The logs in the response will be within [from_time] to [to_time] range.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -21292,9 +21289,8 @@ public final class ClusterServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the API returns a [ListClusterLogsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.ListLogs] requests.
      * </pre>
      *
      * <code>int64 page_size = 6 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -21307,8 +21303,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
-     * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous [ClusterService.ListLogs] request.
      * </pre>
      *
      * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -21327,8 +21323,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
-     * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous [ClusterService.ListLogs] request.
      * </pre>
      *
      * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -21351,7 +21347,8 @@ public final class ClusterServiceOuterClass {
     private boolean alwaysNextPageToken_;
     /**
      * <pre>
-     * Always return `next_page_token`, even if current page is empty.
+     * Option that controls the behavior of result pagination.
+     * If it is set to `true`, then [ListClusterLogsResponse.next_page_token] will always be returned, even if the current page is empty.
      * </pre>
      *
      * <code>bool always_next_page_token = 8;</code>
@@ -21833,8 +21830,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster to request logs for.
-       * To get the MySQL cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to request logs for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21853,8 +21850,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to request logs for.
-       * To get the MySQL cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to request logs for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21874,8 +21871,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to request logs for.
-       * To get the MySQL cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to request logs for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21892,8 +21889,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to request logs for.
-       * To get the MySQL cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to request logs for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21906,8 +21903,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to request logs for.
-       * To get the MySQL cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to request logs for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21934,7 +21931,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Columns from the logs table to request.
-       * If no columns are specified, entire log records are returned.
+       * If no columns are specified, complete log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -21946,7 +21943,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Columns from the logs table to request.
-       * If no columns are specified, entire log records are returned.
+       * If no columns are specified, complete log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -21957,7 +21954,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Columns from the logs table to request.
-       * If no columns are specified, entire log records are returned.
+       * If no columns are specified, complete log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -21968,7 +21965,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Columns from the logs table to request.
-       * If no columns are specified, entire log records are returned.
+       * If no columns are specified, complete log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -21980,7 +21977,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Columns from the logs table to request.
-       * If no columns are specified, entire log records are returned.
+       * If no columns are specified, complete log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -21998,7 +21995,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Columns from the logs table to request.
-       * If no columns are specified, entire log records are returned.
+       * If no columns are specified, complete log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -22016,7 +22013,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Columns from the logs table to request.
-       * If no columns are specified, entire log records are returned.
+       * If no columns are specified, complete log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -22032,7 +22029,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Columns from the logs table to request.
-       * If no columns are specified, entire log records are returned.
+       * If no columns are specified, complete log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -22046,7 +22043,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Columns from the logs table to request.
-       * If no columns are specified, entire log records are returned.
+       * If no columns are specified, complete log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -22066,7 +22063,7 @@ public final class ClusterServiceOuterClass {
       private int serviceType_ = 0;
       /**
        * <pre>
-       * Type of the service to request logs about.
+       * The log type.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ListClusterLogsRequest.ServiceType service_type = 3;</code>
@@ -22076,7 +22073,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Type of the service to request logs about.
+       * The log type.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ListClusterLogsRequest.ServiceType service_type = 3;</code>
@@ -22088,7 +22085,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Type of the service to request logs about.
+       * The log type.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ListClusterLogsRequest.ServiceType service_type = 3;</code>
@@ -22100,7 +22097,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Type of the service to request logs about.
+       * The log type.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ListClusterLogsRequest.ServiceType service_type = 3;</code>
@@ -22116,7 +22113,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Type of the service to request logs about.
+       * The log type.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ListClusterLogsRequest.ServiceType service_type = 3;</code>
@@ -22134,6 +22131,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Start timestamp for the logs request.
+       * The logs in the response will be within [from_time] to [to_time] range.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -22144,6 +22142,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Start timestamp for the logs request.
+       * The logs in the response will be within [from_time] to [to_time] range.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -22158,6 +22157,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Start timestamp for the logs request.
+       * The logs in the response will be within [from_time] to [to_time] range.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -22178,6 +22178,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Start timestamp for the logs request.
+       * The logs in the response will be within [from_time] to [to_time] range.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -22196,6 +22197,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Start timestamp for the logs request.
+       * The logs in the response will be within [from_time] to [to_time] range.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -22218,6 +22220,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Start timestamp for the logs request.
+       * The logs in the response will be within [from_time] to [to_time] range.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -22236,6 +22239,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Start timestamp for the logs request.
+       * The logs in the response will be within [from_time] to [to_time] range.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -22248,6 +22252,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Start timestamp for the logs request.
+       * The logs in the response will be within [from_time] to [to_time] range.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -22263,6 +22268,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Start timestamp for the logs request.
+       * The logs in the response will be within [from_time] to [to_time] range.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -22287,6 +22293,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
+       * The logs in the response will be within [from_time] to [to_time] range.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -22297,6 +22304,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
+       * The logs in the response will be within [from_time] to [to_time] range.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -22311,6 +22319,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
+       * The logs in the response will be within [from_time] to [to_time] range.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -22331,6 +22340,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
+       * The logs in the response will be within [from_time] to [to_time] range.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -22349,6 +22359,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
+       * The logs in the response will be within [from_time] to [to_time] range.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -22371,6 +22382,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
+       * The logs in the response will be within [from_time] to [to_time] range.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -22389,6 +22401,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
+       * The logs in the response will be within [from_time] to [to_time] range.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -22401,6 +22414,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
+       * The logs in the response will be within [from_time] to [to_time] range.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -22416,6 +22430,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
+       * The logs in the response will be within [from_time] to [to_time] range.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -22437,9 +22452,8 @@ public final class ClusterServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListClusterLogsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.ListLogs] requests.
        * </pre>
        *
        * <code>int64 page_size = 6 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -22449,9 +22463,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListClusterLogsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.ListLogs] requests.
        * </pre>
        *
        * <code>int64 page_size = 6 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -22464,9 +22477,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListClusterLogsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.ListLogs] requests.
        * </pre>
        *
        * <code>int64 page_size = 6 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -22481,8 +22493,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
-       * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous [ClusterService.ListLogs] request.
        * </pre>
        *
        * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -22501,8 +22513,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
-       * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous [ClusterService.ListLogs] request.
        * </pre>
        *
        * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -22522,8 +22534,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
-       * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous [ClusterService.ListLogs] request.
        * </pre>
        *
        * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -22540,8 +22552,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
-       * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous [ClusterService.ListLogs] request.
        * </pre>
        *
        * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -22554,8 +22566,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
-       * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous [ClusterService.ListLogs] request.
        * </pre>
        *
        * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -22575,7 +22587,8 @@ public final class ClusterServiceOuterClass {
       private boolean alwaysNextPageToken_ ;
       /**
        * <pre>
-       * Always return `next_page_token`, even if current page is empty.
+       * Option that controls the behavior of result pagination.
+       * If it is set to `true`, then [ListClusterLogsResponse.next_page_token] will always be returned, even if the current page is empty.
        * </pre>
        *
        * <code>bool always_next_page_token = 8;</code>
@@ -22585,7 +22598,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Always return `next_page_token`, even if current page is empty.
+       * Option that controls the behavior of result pagination.
+       * If it is set to `true`, then [ListClusterLogsResponse.next_page_token] will always be returned, even if the current page is empty.
        * </pre>
        *
        * <code>bool always_next_page_token = 8;</code>
@@ -22598,7 +22612,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Always return `next_page_token`, even if current page is empty.
+       * Option that controls the behavior of result pagination.
+       * If it is set to `true`, then [ListClusterLogsResponse.next_page_token] will always be returned, even if the current page is empty.
        * </pre>
        *
        * <code>bool always_next_page_token = 8;</code>
@@ -22712,11 +22727,10 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-     * This value is interchangeable with `next_record_token` from StreamLogs method.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] in the subsequent [ClusterService.ListLogs] request to iterate through multiple pages of results.
+     * Each of the subsequent [ClusterService.ListLogs] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
+     * This value is interchangeable with [StreamLogRecord.next_record_token] from [ClusterService.StreamLogs] method.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -22724,11 +22738,10 @@ public final class ClusterServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-     * This value is interchangeable with `next_record_token` from StreamLogs method.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] in the subsequent [ClusterService.ListLogs] request to iterate through multiple pages of results.
+     * Each of the subsequent [ClusterService.ListLogs] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
+     * This value is interchangeable with [StreamLogRecord.next_record_token] from [ClusterService.StreamLogs] method.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -22887,11 +22900,10 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-     * This value is interchangeable with `next_record_token` from StreamLogs method.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] in the subsequent [ClusterService.ListLogs] request to iterate through multiple pages of results.
+     * Each of the subsequent [ClusterService.ListLogs] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
+     * This value is interchangeable with [StreamLogRecord.next_record_token] from [ClusterService.StreamLogs] method.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -22910,11 +22922,10 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-     * This value is interchangeable with `next_record_token` from StreamLogs method.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] in the subsequent [ClusterService.ListLogs] request to iterate through multiple pages of results.
+     * Each of the subsequent [ClusterService.ListLogs] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
+     * This value is interchangeable with [StreamLogRecord.next_record_token] from [ClusterService.StreamLogs] method.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -23610,11 +23621,10 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-       * This value is interchangeable with `next_record_token` from StreamLogs method.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] in the subsequent [ClusterService.ListLogs] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.ListLogs] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
+       * This value is interchangeable with [StreamLogRecord.next_record_token] from [ClusterService.StreamLogs] method.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -23633,11 +23643,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-       * This value is interchangeable with `next_record_token` from StreamLogs method.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] in the subsequent [ClusterService.ListLogs] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.ListLogs] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
+       * This value is interchangeable with [StreamLogRecord.next_record_token] from [ClusterService.StreamLogs] method.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -23657,11 +23666,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-       * This value is interchangeable with `next_record_token` from StreamLogs method.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] in the subsequent [ClusterService.ListLogs] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.ListLogs] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
+       * This value is interchangeable with [StreamLogRecord.next_record_token] from [ClusterService.StreamLogs] method.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -23678,11 +23686,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-       * This value is interchangeable with `next_record_token` from StreamLogs method.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] in the subsequent [ClusterService.ListLogs] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.ListLogs] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
+       * This value is interchangeable with [StreamLogRecord.next_record_token] from [ClusterService.StreamLogs] method.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -23695,11 +23702,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-       * This value is interchangeable with `next_record_token` from StreamLogs method.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] in the subsequent [ClusterService.ListLogs] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.ListLogs] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
+       * This value is interchangeable with [StreamLogRecord.next_record_token] from [ClusterService.StreamLogs] method.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -23799,10 +23805,9 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to continue streaming logs starting from the exact
-     * same record. To continue streaming, specify value of `next_record_token`
-     * as value for `record_token` parameter in the next StreamLogs request.
-     * This value is interchangeable with `next_page_token` from ListLogs method.
+     * The token that can be used to continue streaming logs starting from the exact same record.
+     * To continue streaming, specify value of [next_record_token] as the [StreamClusterLogsRequest.record_token] value in the next [ClusterService.StreamLogs] request.
+     * This value is interchangeable with [ListClusterLogsResponse.next_page_token] from [ClusterService.ListLogs] method.
      * </pre>
      *
      * <code>string next_record_token = 2;</code>
@@ -23810,10 +23815,9 @@ public final class ClusterServiceOuterClass {
     java.lang.String getNextRecordToken();
     /**
      * <pre>
-     * This token allows you to continue streaming logs starting from the exact
-     * same record. To continue streaming, specify value of `next_record_token`
-     * as value for `record_token` parameter in the next StreamLogs request.
-     * This value is interchangeable with `next_page_token` from ListLogs method.
+     * The token that can be used to continue streaming logs starting from the exact same record.
+     * To continue streaming, specify value of [next_record_token] as the [StreamClusterLogsRequest.record_token] value in the next [ClusterService.StreamLogs] request.
+     * This value is interchangeable with [ListClusterLogsResponse.next_page_token] from [ClusterService.ListLogs] method.
      * </pre>
      *
      * <code>string next_record_token = 2;</code>
@@ -23822,6 +23826,10 @@ public final class ClusterServiceOuterClass {
         getNextRecordTokenBytes();
   }
   /**
+   * <pre>
+   * A single log record in the logs stream.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.StreamLogRecord}
    */
   public  static final class StreamLogRecord extends
@@ -23949,10 +23957,9 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object nextRecordToken_;
     /**
      * <pre>
-     * This token allows you to continue streaming logs starting from the exact
-     * same record. To continue streaming, specify value of `next_record_token`
-     * as value for `record_token` parameter in the next StreamLogs request.
-     * This value is interchangeable with `next_page_token` from ListLogs method.
+     * The token that can be used to continue streaming logs starting from the exact same record.
+     * To continue streaming, specify value of [next_record_token] as the [StreamClusterLogsRequest.record_token] value in the next [ClusterService.StreamLogs] request.
+     * This value is interchangeable with [ListClusterLogsResponse.next_page_token] from [ClusterService.ListLogs] method.
      * </pre>
      *
      * <code>string next_record_token = 2;</code>
@@ -23971,10 +23978,9 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to continue streaming logs starting from the exact
-     * same record. To continue streaming, specify value of `next_record_token`
-     * as value for `record_token` parameter in the next StreamLogs request.
-     * This value is interchangeable with `next_page_token` from ListLogs method.
+     * The token that can be used to continue streaming logs starting from the exact same record.
+     * To continue streaming, specify value of [next_record_token] as the [StreamClusterLogsRequest.record_token] value in the next [ClusterService.StreamLogs] request.
+     * This value is interchangeable with [ListClusterLogsResponse.next_page_token] from [ClusterService.ListLogs] method.
      * </pre>
      *
      * <code>string next_record_token = 2;</code>
@@ -24165,6 +24171,10 @@ public final class ClusterServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A single log record in the logs stream.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.mdb.mysql.v1.StreamLogRecord}
      */
     public static final class Builder extends
@@ -24482,10 +24492,9 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object nextRecordToken_ = "";
       /**
        * <pre>
-       * This token allows you to continue streaming logs starting from the exact
-       * same record. To continue streaming, specify value of `next_record_token`
-       * as value for `record_token` parameter in the next StreamLogs request.
-       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * The token that can be used to continue streaming logs starting from the exact same record.
+       * To continue streaming, specify value of [next_record_token] as the [StreamClusterLogsRequest.record_token] value in the next [ClusterService.StreamLogs] request.
+       * This value is interchangeable with [ListClusterLogsResponse.next_page_token] from [ClusterService.ListLogs] method.
        * </pre>
        *
        * <code>string next_record_token = 2;</code>
@@ -24504,10 +24513,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to continue streaming logs starting from the exact
-       * same record. To continue streaming, specify value of `next_record_token`
-       * as value for `record_token` parameter in the next StreamLogs request.
-       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * The token that can be used to continue streaming logs starting from the exact same record.
+       * To continue streaming, specify value of [next_record_token] as the [StreamClusterLogsRequest.record_token] value in the next [ClusterService.StreamLogs] request.
+       * This value is interchangeable with [ListClusterLogsResponse.next_page_token] from [ClusterService.ListLogs] method.
        * </pre>
        *
        * <code>string next_record_token = 2;</code>
@@ -24527,10 +24535,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to continue streaming logs starting from the exact
-       * same record. To continue streaming, specify value of `next_record_token`
-       * as value for `record_token` parameter in the next StreamLogs request.
-       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * The token that can be used to continue streaming logs starting from the exact same record.
+       * To continue streaming, specify value of [next_record_token] as the [StreamClusterLogsRequest.record_token] value in the next [ClusterService.StreamLogs] request.
+       * This value is interchangeable with [ListClusterLogsResponse.next_page_token] from [ClusterService.ListLogs] method.
        * </pre>
        *
        * <code>string next_record_token = 2;</code>
@@ -24547,10 +24554,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to continue streaming logs starting from the exact
-       * same record. To continue streaming, specify value of `next_record_token`
-       * as value for `record_token` parameter in the next StreamLogs request.
-       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * The token that can be used to continue streaming logs starting from the exact same record.
+       * To continue streaming, specify value of [next_record_token] as the [StreamClusterLogsRequest.record_token] value in the next [ClusterService.StreamLogs] request.
+       * This value is interchangeable with [ListClusterLogsResponse.next_page_token] from [ClusterService.ListLogs] method.
        * </pre>
        *
        * <code>string next_record_token = 2;</code>
@@ -24563,10 +24569,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to continue streaming logs starting from the exact
-       * same record. To continue streaming, specify value of `next_record_token`
-       * as value for `record_token` parameter in the next StreamLogs request.
-       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * The token that can be used to continue streaming logs starting from the exact same record.
+       * To continue streaming, specify value of [next_record_token] as the [StreamClusterLogsRequest.record_token] value in the next [ClusterService.StreamLogs] request.
+       * This value is interchangeable with [ListClusterLogsResponse.next_page_token] from [ClusterService.ListLogs] method.
        * </pre>
        *
        * <code>string next_record_token = 2;</code>
@@ -24641,7 +24646,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the MySQL cluster.
+     * ID of the cluster to stream logs for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -24649,7 +24655,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. ID of the MySQL cluster.
+     * ID of the cluster to stream logs for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -24659,7 +24666,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Columns from logs table to get in the response.
+     * Columns from the logs table to request.
+     * If no columns are specified, complete log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -24668,7 +24676,8 @@ public final class ClusterServiceOuterClass {
         getColumnFilterList();
     /**
      * <pre>
-     * Columns from logs table to get in the response.
+     * Columns from the logs table to request.
+     * If no columns are specified, complete log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -24676,7 +24685,8 @@ public final class ClusterServiceOuterClass {
     int getColumnFilterCount();
     /**
      * <pre>
-     * Columns from logs table to get in the response.
+     * Columns from the logs table to request.
+     * If no columns are specified, complete log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -24684,7 +24694,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getColumnFilter(int index);
     /**
      * <pre>
-     * Columns from logs table to get in the response.
+     * Columns from the logs table to request.
+     * If no columns are specified, complete log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -24693,10 +24704,18 @@ public final class ClusterServiceOuterClass {
         getColumnFilterBytes(int index);
 
     /**
+     * <pre>
+     * The log type.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.mysql.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
      */
     int getServiceTypeValue();
     /**
+     * <pre>
+     * The log type.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.mysql.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
      */
     yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.ServiceType getServiceType();
@@ -24729,8 +24748,8 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * End timestamp for the logs request.
-     * If this field is not set, all existing logs will be sent and then the new ones as
-     * they appear. In essence it has 'tail -f' semantics.
+     * If this field is not set, all existing log records beginning from [from_time] will be returned first, and then the new records will be returned as they appear.
+     * In essence it has `tail -f` command semantics.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -24739,8 +24758,8 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * End timestamp for the logs request.
-     * If this field is not set, all existing logs will be sent and then the new ones as
-     * they appear. In essence it has 'tail -f' semantics.
+     * If this field is not set, all existing log records beginning from [from_time] will be returned first, and then the new records will be returned as they appear.
+     * In essence it has `tail -f` command semantics.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -24749,8 +24768,8 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * End timestamp for the logs request.
-     * If this field is not set, all existing logs will be sent and then the new ones as
-     * they appear. In essence it has 'tail -f' semantics.
+     * If this field is not set, all existing log records beginning from [from_time] will be returned first, and then the new records will be returned as they appear.
+     * In essence it has `tail -f` command semantics.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -24759,8 +24778,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
-     * request to start streaming from next log record.
+     * Record token that can be used to control logs streaming.
+     * Set [record_token] to the [StreamLogRecord.next_record_token], returned by the previous [ClusterService.StreamLogs] request to start streaming from the next log record.
      * </pre>
      *
      * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -24768,8 +24787,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getRecordToken();
     /**
      * <pre>
-     * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
-     * request to start streaming from next log record.
+     * Record token that can be used to control logs streaming.
+     * Set [record_token] to the [StreamLogRecord.next_record_token], returned by the previous [ClusterService.StreamLogs] request to start streaming from the next log record.
      * </pre>
      *
      * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -24779,7 +24798,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
+     * A filter expression that selects clusters logs listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.hostname] field.
      * 2. An `=` operator.
@@ -24792,7 +24811,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getFilter();
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
+     * A filter expression that selects clusters logs listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.hostname] field.
      * 2. An `=` operator.
@@ -25105,7 +25124,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. ID of the MySQL cluster.
+     * ID of the cluster to stream logs for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25124,7 +25144,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the MySQL cluster.
+     * ID of the cluster to stream logs for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25147,7 +25168,8 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.LazyStringList columnFilter_;
     /**
      * <pre>
-     * Columns from logs table to get in the response.
+     * Columns from the logs table to request.
+     * If no columns are specified, complete log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -25158,7 +25180,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Columns from logs table to get in the response.
+     * Columns from the logs table to request.
+     * If no columns are specified, complete log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -25168,7 +25191,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Columns from logs table to get in the response.
+     * Columns from the logs table to request.
+     * If no columns are specified, complete log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -25178,7 +25202,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Columns from logs table to get in the response.
+     * Columns from the logs table to request.
+     * If no columns are specified, complete log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -25191,12 +25216,20 @@ public final class ClusterServiceOuterClass {
     public static final int SERVICE_TYPE_FIELD_NUMBER = 3;
     private int serviceType_;
     /**
+     * <pre>
+     * The log type.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.mysql.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
      */
     public int getServiceTypeValue() {
       return serviceType_;
     }
     /**
+     * <pre>
+     * The log type.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.mysql.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
      */
     public yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.ServiceType getServiceType() {
@@ -25243,8 +25276,8 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * End timestamp for the logs request.
-     * If this field is not set, all existing logs will be sent and then the new ones as
-     * they appear. In essence it has 'tail -f' semantics.
+     * If this field is not set, all existing log records beginning from [from_time] will be returned first, and then the new records will be returned as they appear.
+     * In essence it has `tail -f` command semantics.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -25255,8 +25288,8 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * End timestamp for the logs request.
-     * If this field is not set, all existing logs will be sent and then the new ones as
-     * they appear. In essence it has 'tail -f' semantics.
+     * If this field is not set, all existing log records beginning from [from_time] will be returned first, and then the new records will be returned as they appear.
+     * In essence it has `tail -f` command semantics.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -25267,8 +25300,8 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * End timestamp for the logs request.
-     * If this field is not set, all existing logs will be sent and then the new ones as
-     * they appear. In essence it has 'tail -f' semantics.
+     * If this field is not set, all existing log records beginning from [from_time] will be returned first, and then the new records will be returned as they appear.
+     * In essence it has `tail -f` command semantics.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -25281,8 +25314,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object recordToken_;
     /**
      * <pre>
-     * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
-     * request to start streaming from next log record.
+     * Record token that can be used to control logs streaming.
+     * Set [record_token] to the [StreamLogRecord.next_record_token], returned by the previous [ClusterService.StreamLogs] request to start streaming from the next log record.
      * </pre>
      *
      * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -25301,8 +25334,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
-     * request to start streaming from next log record.
+     * Record token that can be used to control logs streaming.
+     * Set [record_token] to the [StreamLogRecord.next_record_token], returned by the previous [ClusterService.StreamLogs] request to start streaming from the next log record.
      * </pre>
      *
      * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -25325,7 +25358,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object filter_;
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
+     * A filter expression that selects clusters logs listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.hostname] field.
      * 2. An `=` operator.
@@ -25349,7 +25382,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
+     * A filter expression that selects clusters logs listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.hostname] field.
      * 2. An `=` operator.
@@ -25827,7 +25860,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. ID of the MySQL cluster.
+       * ID of the cluster to stream logs for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25846,7 +25880,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the MySQL cluster.
+       * ID of the cluster to stream logs for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25866,7 +25901,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the MySQL cluster.
+       * ID of the cluster to stream logs for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25883,7 +25919,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the MySQL cluster.
+       * ID of the cluster to stream logs for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25896,7 +25933,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the MySQL cluster.
+       * ID of the cluster to stream logs for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25922,7 +25960,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to get in the response.
+       * Columns from the logs table to request.
+       * If no columns are specified, complete log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -25933,7 +25972,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to get in the response.
+       * Columns from the logs table to request.
+       * If no columns are specified, complete log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -25943,7 +25983,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to get in the response.
+       * Columns from the logs table to request.
+       * If no columns are specified, complete log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -25953,7 +25994,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to get in the response.
+       * Columns from the logs table to request.
+       * If no columns are specified, complete log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -25964,7 +26006,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to get in the response.
+       * Columns from the logs table to request.
+       * If no columns are specified, complete log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -25981,7 +26024,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to get in the response.
+       * Columns from the logs table to request.
+       * If no columns are specified, complete log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -25998,7 +26042,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to get in the response.
+       * Columns from the logs table to request.
+       * If no columns are specified, complete log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -26013,7 +26058,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to get in the response.
+       * Columns from the logs table to request.
+       * If no columns are specified, complete log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -26026,7 +26072,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to get in the response.
+       * Columns from the logs table to request.
+       * If no columns are specified, complete log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -26045,12 +26092,20 @@ public final class ClusterServiceOuterClass {
 
       private int serviceType_ = 0;
       /**
+       * <pre>
+       * The log type.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.mysql.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
        */
       public int getServiceTypeValue() {
         return serviceType_;
       }
       /**
+       * <pre>
+       * The log type.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.mysql.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
        */
       public Builder setServiceTypeValue(int value) {
@@ -26059,6 +26114,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The log type.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.mysql.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
        */
       public yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.ServiceType getServiceType() {
@@ -26067,6 +26126,10 @@ public final class ClusterServiceOuterClass {
         return result == null ? yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.ServiceType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * The log type.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.mysql.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
        */
       public Builder setServiceType(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.ServiceType value) {
@@ -26079,6 +26142,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The log type.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.mysql.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
        */
       public Builder clearServiceType() {
@@ -26247,8 +26314,8 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
-       * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * If this field is not set, all existing log records beginning from [from_time] will be returned first, and then the new records will be returned as they appear.
+       * In essence it has `tail -f` command semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -26259,8 +26326,8 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
-       * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * If this field is not set, all existing log records beginning from [from_time] will be returned first, and then the new records will be returned as they appear.
+       * In essence it has `tail -f` command semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -26275,8 +26342,8 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
-       * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * If this field is not set, all existing log records beginning from [from_time] will be returned first, and then the new records will be returned as they appear.
+       * In essence it has `tail -f` command semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -26297,8 +26364,8 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
-       * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * If this field is not set, all existing log records beginning from [from_time] will be returned first, and then the new records will be returned as they appear.
+       * In essence it has `tail -f` command semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -26317,8 +26384,8 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
-       * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * If this field is not set, all existing log records beginning from [from_time] will be returned first, and then the new records will be returned as they appear.
+       * In essence it has `tail -f` command semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -26341,8 +26408,8 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
-       * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * If this field is not set, all existing log records beginning from [from_time] will be returned first, and then the new records will be returned as they appear.
+       * In essence it has `tail -f` command semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -26361,8 +26428,8 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
-       * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * If this field is not set, all existing log records beginning from [from_time] will be returned first, and then the new records will be returned as they appear.
+       * In essence it has `tail -f` command semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -26375,8 +26442,8 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
-       * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * If this field is not set, all existing log records beginning from [from_time] will be returned first, and then the new records will be returned as they appear.
+       * In essence it has `tail -f` command semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -26392,8 +26459,8 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
-       * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * If this field is not set, all existing log records beginning from [from_time] will be returned first, and then the new records will be returned as they appear.
+       * In essence it has `tail -f` command semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -26415,8 +26482,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object recordToken_ = "";
       /**
        * <pre>
-       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
-       * request to start streaming from next log record.
+       * Record token that can be used to control logs streaming.
+       * Set [record_token] to the [StreamLogRecord.next_record_token], returned by the previous [ClusterService.StreamLogs] request to start streaming from the next log record.
        * </pre>
        *
        * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26435,8 +26502,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
-       * request to start streaming from next log record.
+       * Record token that can be used to control logs streaming.
+       * Set [record_token] to the [StreamLogRecord.next_record_token], returned by the previous [ClusterService.StreamLogs] request to start streaming from the next log record.
        * </pre>
        *
        * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26456,8 +26523,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
-       * request to start streaming from next log record.
+       * Record token that can be used to control logs streaming.
+       * Set [record_token] to the [StreamLogRecord.next_record_token], returned by the previous [ClusterService.StreamLogs] request to start streaming from the next log record.
        * </pre>
        *
        * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26474,8 +26541,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
-       * request to start streaming from next log record.
+       * Record token that can be used to control logs streaming.
+       * Set [record_token] to the [StreamLogRecord.next_record_token], returned by the previous [ClusterService.StreamLogs] request to start streaming from the next log record.
        * </pre>
        *
        * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26488,8 +26555,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
-       * request to start streaming from next log record.
+       * Record token that can be used to control logs streaming.
+       * Set [record_token] to the [StreamLogRecord.next_record_token], returned by the previous [ClusterService.StreamLogs] request to start streaming from the next log record.
        * </pre>
        *
        * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26509,7 +26576,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object filter_ = "";
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
+       * A filter expression that selects clusters logs listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.hostname] field.
        * 2. An `=` operator.
@@ -26533,7 +26600,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
+       * A filter expression that selects clusters logs listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.hostname] field.
        * 2. An `=` operator.
@@ -26558,7 +26625,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
+       * A filter expression that selects clusters logs listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.hostname] field.
        * 2. An `=` operator.
@@ -26580,7 +26647,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
+       * A filter expression that selects clusters logs listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.hostname] field.
        * 2. An `=` operator.
@@ -26598,7 +26665,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
+       * A filter expression that selects clusters logs listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.hostname] field.
        * 2. An `=` operator.
@@ -26678,7 +26745,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster to list operations for.
+     * ID of the cluster to list operations for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -26686,7 +26754,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster to list operations for.
+     * ID of the cluster to list operations for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -26696,9 +26765,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the API returns a [ListClusterOperationsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.ListOperations] requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -26707,8 +26775,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Page token.  To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous [ClusterService.ListOperations] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26716,8 +26784,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token.  To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous [ClusterService.ListOperations] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26820,7 +26888,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster to list operations for.
+     * ID of the cluster to list operations for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -26839,7 +26908,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster to list operations for.
+     * ID of the cluster to list operations for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -26862,9 +26932,8 @@ public final class ClusterServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the API returns a [ListClusterOperationsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.ListOperations] requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -26877,8 +26946,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token.  To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous [ClusterService.ListOperations] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26897,8 +26966,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token.  To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous [ClusterService.ListOperations] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -27258,7 +27327,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster to list operations for.
+       * ID of the cluster to list operations for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -27277,7 +27347,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to list operations for.
+       * ID of the cluster to list operations for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -27297,7 +27368,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to list operations for.
+       * ID of the cluster to list operations for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -27314,7 +27386,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to list operations for.
+       * ID of the cluster to list operations for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -27327,7 +27400,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to list operations for.
+       * ID of the cluster to list operations for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -27347,9 +27421,8 @@ public final class ClusterServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListClusterOperationsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.ListOperations] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -27359,9 +27432,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListClusterOperationsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.ListOperations] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -27374,9 +27446,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListClusterOperationsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.ListOperations] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -27391,8 +27462,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token.  To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous [ClusterService.ListOperations] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -27411,8 +27482,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token.  To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous [ClusterService.ListOperations] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -27432,8 +27503,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token.  To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous [ClusterService.ListOperations] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -27450,8 +27521,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token.  To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous [ClusterService.ListOperations] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -27464,8 +27535,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token.  To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous [ClusterService.ListOperations] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -27540,7 +27611,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * List of operations for the specified MySQL cluster.
+     * List of operations in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -27549,7 +27620,7 @@ public final class ClusterServiceOuterClass {
         getOperationsList();
     /**
      * <pre>
-     * List of operations for the specified MySQL cluster.
+     * List of operations in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -27557,7 +27628,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index);
     /**
      * <pre>
-     * List of operations for the specified MySQL cluster.
+     * List of operations in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -27565,7 +27636,7 @@ public final class ClusterServiceOuterClass {
     int getOperationsCount();
     /**
      * <pre>
-     * List of operations for the specified MySQL cluster.
+     * List of operations in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -27574,7 +27645,7 @@ public final class ClusterServiceOuterClass {
         getOperationsOrBuilderList();
     /**
      * <pre>
-     * List of operations for the specified MySQL cluster.
+     * List of operations in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -27584,10 +27655,9 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] in the subsequent [ClusterService.ListOperations] request to iterate through multiple pages of results.
+     * Each of the subsequent [ClusterService.ListOperations] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -27595,10 +27665,9 @@ public final class ClusterServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] in the subsequent [ClusterService.ListOperations] request to iterate through multiple pages of results.
+     * Each of the subsequent [ClusterService.ListOperations] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -27702,7 +27771,7 @@ public final class ClusterServiceOuterClass {
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
      * <pre>
-     * List of operations for the specified MySQL cluster.
+     * List of operations in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -27712,7 +27781,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of operations for the specified MySQL cluster.
+     * List of operations in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -27723,7 +27792,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of operations for the specified MySQL cluster.
+     * List of operations in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -27733,7 +27802,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of operations for the specified MySQL cluster.
+     * List of operations in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -27743,7 +27812,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of operations for the specified MySQL cluster.
+     * List of operations in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -27757,10 +27826,9 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] in the subsequent [ClusterService.ListOperations] request to iterate through multiple pages of results.
+     * Each of the subsequent [ClusterService.ListOperations] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -27779,10 +27847,9 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] in the subsequent [ClusterService.ListOperations] request to iterate through multiple pages of results.
+     * Each of the subsequent [ClusterService.ListOperations] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -28177,7 +28244,7 @@ public final class ClusterServiceOuterClass {
 
       /**
        * <pre>
-       * List of operations for the specified MySQL cluster.
+       * List of operations in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -28191,7 +28258,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified MySQL cluster.
+       * List of operations in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -28205,7 +28272,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified MySQL cluster.
+       * List of operations in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -28219,7 +28286,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified MySQL cluster.
+       * List of operations in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -28240,7 +28307,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified MySQL cluster.
+       * List of operations in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -28258,7 +28325,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified MySQL cluster.
+       * List of operations in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -28278,7 +28345,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified MySQL cluster.
+       * List of operations in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -28299,7 +28366,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified MySQL cluster.
+       * List of operations in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -28317,7 +28384,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified MySQL cluster.
+       * List of operations in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -28335,7 +28402,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified MySQL cluster.
+       * List of operations in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -28354,7 +28421,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified MySQL cluster.
+       * List of operations in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -28371,7 +28438,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified MySQL cluster.
+       * List of operations in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -28388,7 +28455,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified MySQL cluster.
+       * List of operations in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -28399,7 +28466,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified MySQL cluster.
+       * List of operations in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -28413,7 +28480,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified MySQL cluster.
+       * List of operations in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -28428,7 +28495,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified MySQL cluster.
+       * List of operations in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -28439,7 +28506,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified MySQL cluster.
+       * List of operations in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -28451,7 +28518,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified MySQL cluster.
+       * List of operations in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -28478,10 +28545,9 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] in the subsequent [ClusterService.ListOperations] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.ListOperations] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -28500,10 +28566,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] in the subsequent [ClusterService.ListOperations] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.ListOperations] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -28523,10 +28588,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] in the subsequent [ClusterService.ListOperations] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.ListOperations] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -28543,10 +28607,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] in the subsequent [ClusterService.ListOperations] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.ListOperations] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -28559,10 +28622,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] in the subsequent [ClusterService.ListOperations] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.ListOperations] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -28637,8 +28699,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster.
-     * To get the MySQL cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to list backups for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -28646,8 +28708,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster.
-     * To get the MySQL cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to list backups for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -28657,9 +28719,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the API returns a [ListClusterBackupsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.ListBackups] requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -28668,8 +28729,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous [ClusterService.ListBackups] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -28677,8 +28738,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous [ClusterService.ListBackups] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -28781,8 +28842,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster.
-     * To get the MySQL cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to list backups for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -28801,8 +28862,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster.
-     * To get the MySQL cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to list backups for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -28825,9 +28886,8 @@ public final class ClusterServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the API returns a [ListClusterBackupsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.ListBackups] requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -28840,8 +28900,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous [ClusterService.ListBackups] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -28860,8 +28920,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous [ClusterService.ListBackups] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -29221,8 +29281,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster.
-       * To get the MySQL cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to list backups for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29241,8 +29301,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster.
-       * To get the MySQL cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to list backups for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29262,8 +29322,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster.
-       * To get the MySQL cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to list backups for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29280,8 +29340,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster.
-       * To get the MySQL cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to list backups for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29294,8 +29354,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster.
-       * To get the MySQL cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to list backups for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29315,9 +29375,8 @@ public final class ClusterServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListClusterBackupsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.ListBackups] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -29327,9 +29386,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListClusterBackupsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.ListBackups] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -29342,9 +29400,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListClusterBackupsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.ListBackups] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -29359,8 +29416,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous [ClusterService.ListBackups] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -29379,8 +29436,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous [ClusterService.ListBackups] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -29400,8 +29457,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous [ClusterService.ListBackups] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -29418,8 +29475,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous [ClusterService.ListBackups] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -29432,8 +29489,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous [ClusterService.ListBackups] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -29508,7 +29565,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * List of MySQL backups.
+     * List of the cluster backups.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -29517,7 +29574,7 @@ public final class ClusterServiceOuterClass {
         getBackupsList();
     /**
      * <pre>
-     * List of MySQL backups.
+     * List of the cluster backups.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -29525,7 +29582,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.mysql.v1.BackupOuterClass.Backup getBackups(int index);
     /**
      * <pre>
-     * List of MySQL backups.
+     * List of the cluster backups.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -29533,7 +29590,7 @@ public final class ClusterServiceOuterClass {
     int getBackupsCount();
     /**
      * <pre>
-     * List of MySQL backups.
+     * List of the cluster backups.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -29542,7 +29599,7 @@ public final class ClusterServiceOuterClass {
         getBackupsOrBuilderList();
     /**
      * <pre>
-     * List of MySQL backups.
+     * List of the cluster backups.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -29552,10 +29609,9 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] in the subsequent [ClusterService.ListBackups] request to iterate through multiple pages of results.
+     * Each of the subsequent [ClusterService.ListBackups] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -29563,10 +29619,9 @@ public final class ClusterServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] in the subsequent [ClusterService.ListBackups] request to iterate through multiple pages of results.
+     * Each of the subsequent [ClusterService.ListBackups] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -29670,7 +29725,7 @@ public final class ClusterServiceOuterClass {
     private java.util.List<yandex.cloud.api.mdb.mysql.v1.BackupOuterClass.Backup> backups_;
     /**
      * <pre>
-     * List of MySQL backups.
+     * List of the cluster backups.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -29680,7 +29735,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of MySQL backups.
+     * List of the cluster backups.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -29691,7 +29746,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of MySQL backups.
+     * List of the cluster backups.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -29701,7 +29756,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of MySQL backups.
+     * List of the cluster backups.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -29711,7 +29766,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of MySQL backups.
+     * List of the cluster backups.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -29725,10 +29780,9 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] in the subsequent [ClusterService.ListBackups] request to iterate through multiple pages of results.
+     * Each of the subsequent [ClusterService.ListBackups] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -29747,10 +29801,9 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] in the subsequent [ClusterService.ListBackups] request to iterate through multiple pages of results.
+     * Each of the subsequent [ClusterService.ListBackups] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -30145,7 +30198,7 @@ public final class ClusterServiceOuterClass {
 
       /**
        * <pre>
-       * List of MySQL backups.
+       * List of the cluster backups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -30159,7 +30212,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL backups.
+       * List of the cluster backups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -30173,7 +30226,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL backups.
+       * List of the cluster backups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -30187,7 +30240,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL backups.
+       * List of the cluster backups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -30208,7 +30261,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL backups.
+       * List of the cluster backups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -30226,7 +30279,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL backups.
+       * List of the cluster backups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -30246,7 +30299,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL backups.
+       * List of the cluster backups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -30267,7 +30320,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL backups.
+       * List of the cluster backups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -30285,7 +30338,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL backups.
+       * List of the cluster backups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -30303,7 +30356,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL backups.
+       * List of the cluster backups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -30322,7 +30375,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL backups.
+       * List of the cluster backups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -30339,7 +30392,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL backups.
+       * List of the cluster backups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -30356,7 +30409,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL backups.
+       * List of the cluster backups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -30367,7 +30420,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL backups.
+       * List of the cluster backups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -30381,7 +30434,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL backups.
+       * List of the cluster backups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -30396,7 +30449,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL backups.
+       * List of the cluster backups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -30407,7 +30460,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL backups.
+       * List of the cluster backups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -30419,7 +30472,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL backups.
+       * List of the cluster backups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Backup backups = 1;</code>
@@ -30446,10 +30499,9 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] in the subsequent [ClusterService.ListBackups] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.ListBackups] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -30468,10 +30520,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] in the subsequent [ClusterService.ListBackups] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.ListBackups] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -30491,10 +30542,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] in the subsequent [ClusterService.ListBackups] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.ListBackups] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -30511,10 +30561,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] in the subsequent [ClusterService.ListBackups] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.ListBackups] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -30527,10 +30576,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] in the subsequent [ClusterService.ListBackups] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.ListBackups] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -30605,8 +30653,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster.
-     * To get the MySQL cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to list hosts for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -30614,8 +30662,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster.
-     * To get the MySQL cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to list hosts for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -30625,9 +30673,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the API returns a [ListClusterHostsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.ListHosts] requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -30636,8 +30683,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Page token.  To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -30645,8 +30692,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token.  To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -30749,8 +30796,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster.
-     * To get the MySQL cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to list hosts for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -30769,8 +30816,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster.
-     * To get the MySQL cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to list hosts for.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -30793,9 +30840,8 @@ public final class ClusterServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the API returns a [ListClusterHostsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.ListHosts] requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -30808,8 +30854,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token.  To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -30828,8 +30874,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token.  To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -31189,8 +31235,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster.
-       * To get the MySQL cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to list hosts for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -31209,8 +31255,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster.
-       * To get the MySQL cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to list hosts for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -31230,8 +31276,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster.
-       * To get the MySQL cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to list hosts for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -31248,8 +31294,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster.
-       * To get the MySQL cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to list hosts for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -31262,8 +31308,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster.
-       * To get the MySQL cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to list hosts for.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -31283,9 +31329,8 @@ public final class ClusterServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListClusterHostsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.ListHosts] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -31295,9 +31340,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListClusterHostsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.ListHosts] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -31310,9 +31354,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListClusterHostsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ClusterService.ListHosts] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -31327,8 +31370,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token.  To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -31347,8 +31390,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token.  To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -31368,8 +31411,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token.  To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -31386,8 +31429,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token.  To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -31400,8 +31443,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token.  To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -31476,7 +31519,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * List of MySQL hosts.
+     * List of hosts in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -31485,7 +31528,7 @@ public final class ClusterServiceOuterClass {
         getHostsList();
     /**
      * <pre>
-     * List of MySQL hosts.
+     * List of hosts in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -31493,7 +31536,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Host getHosts(int index);
     /**
      * <pre>
-     * List of MySQL hosts.
+     * List of hosts in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -31501,7 +31544,7 @@ public final class ClusterServiceOuterClass {
     int getHostsCount();
     /**
      * <pre>
-     * List of MySQL hosts.
+     * List of hosts in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -31510,7 +31553,7 @@ public final class ClusterServiceOuterClass {
         getHostsOrBuilderList();
     /**
      * <pre>
-     * List of MySQL hosts.
+     * List of hosts in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -31520,10 +31563,9 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] in the subsequent [ClusterService.ListHosts] request to iterate through multiple pages of results.
+     * Each of the subsequent [ClusterService.ListHosts] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -31531,10 +31573,9 @@ public final class ClusterServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] in the subsequent [ClusterService.ListHosts] request to iterate through multiple pages of results.
+     * Each of the subsequent [ClusterService.ListHosts] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -31638,7 +31679,7 @@ public final class ClusterServiceOuterClass {
     private java.util.List<yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Host> hosts_;
     /**
      * <pre>
-     * List of MySQL hosts.
+     * List of hosts in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -31648,7 +31689,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of MySQL hosts.
+     * List of hosts in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -31659,7 +31700,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of MySQL hosts.
+     * List of hosts in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -31669,7 +31710,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of MySQL hosts.
+     * List of hosts in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -31679,7 +31720,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of MySQL hosts.
+     * List of hosts in the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -31693,10 +31734,9 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] in the subsequent [ClusterService.ListHosts] request to iterate through multiple pages of results.
+     * Each of the subsequent [ClusterService.ListHosts] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -31715,10 +31755,9 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] in the subsequent [ClusterService.ListHosts] request to iterate through multiple pages of results.
+     * Each of the subsequent [ClusterService.ListHosts] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -32113,7 +32152,7 @@ public final class ClusterServiceOuterClass {
 
       /**
        * <pre>
-       * List of MySQL hosts.
+       * List of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -32127,7 +32166,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL hosts.
+       * List of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -32141,7 +32180,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL hosts.
+       * List of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -32155,7 +32194,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL hosts.
+       * List of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -32176,7 +32215,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL hosts.
+       * List of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -32194,7 +32233,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL hosts.
+       * List of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -32214,7 +32253,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL hosts.
+       * List of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -32235,7 +32274,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL hosts.
+       * List of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -32253,7 +32292,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL hosts.
+       * List of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -32271,7 +32310,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL hosts.
+       * List of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -32290,7 +32329,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL hosts.
+       * List of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -32307,7 +32346,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL hosts.
+       * List of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -32324,7 +32363,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL hosts.
+       * List of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -32335,7 +32374,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL hosts.
+       * List of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -32349,7 +32388,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL hosts.
+       * List of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -32364,7 +32403,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL hosts.
+       * List of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -32375,7 +32414,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL hosts.
+       * List of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -32387,7 +32426,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL hosts.
+       * List of hosts in the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Host hosts = 1;</code>
@@ -32414,10 +32453,9 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] in the subsequent [ClusterService.ListHosts] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.ListHosts] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -32436,10 +32474,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] in the subsequent [ClusterService.ListHosts] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.ListHosts] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -32459,10 +32496,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] in the subsequent [ClusterService.ListHosts] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.ListHosts] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -32479,10 +32515,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] in the subsequent [ClusterService.ListHosts] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.ListHosts] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -32495,10 +32530,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] in the subsequent [ClusterService.ListHosts] request to iterate through multiple pages of results.
+       * Each of the subsequent [ClusterService.ListHosts] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -32573,8 +32607,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster to add hosts to.
-     * To get the MySQL cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to add hosts to.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -32582,8 +32616,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster to add hosts to.
-     * To get the MySQL cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to add hosts to.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -32593,7 +32627,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Configurations for MySQL hosts that should be added to the cluster.
+     * Configuration of the newly added hosts.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -32602,7 +32636,7 @@ public final class ClusterServiceOuterClass {
         getHostSpecsList();
     /**
      * <pre>
-     * Configurations for MySQL hosts that should be added to the cluster.
+     * Configuration of the newly added hosts.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -32610,7 +32644,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.HostSpec getHostSpecs(int index);
     /**
      * <pre>
-     * Configurations for MySQL hosts that should be added to the cluster.
+     * Configuration of the newly added hosts.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -32618,7 +32652,7 @@ public final class ClusterServiceOuterClass {
     int getHostSpecsCount();
     /**
      * <pre>
-     * Configurations for MySQL hosts that should be added to the cluster.
+     * Configuration of the newly added hosts.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -32627,7 +32661,7 @@ public final class ClusterServiceOuterClass {
         getHostSpecsOrBuilderList();
     /**
      * <pre>
-     * Configurations for MySQL hosts that should be added to the cluster.
+     * Configuration of the newly added hosts.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -32731,8 +32765,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster to add hosts to.
-     * To get the MySQL cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to add hosts to.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -32751,8 +32785,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster to add hosts to.
-     * To get the MySQL cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to add hosts to.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -32775,7 +32809,7 @@ public final class ClusterServiceOuterClass {
     private java.util.List<yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.HostSpec> hostSpecs_;
     /**
      * <pre>
-     * Configurations for MySQL hosts that should be added to the cluster.
+     * Configuration of the newly added hosts.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -32785,7 +32819,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Configurations for MySQL hosts that should be added to the cluster.
+     * Configuration of the newly added hosts.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -32796,7 +32830,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Configurations for MySQL hosts that should be added to the cluster.
+     * Configuration of the newly added hosts.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -32806,7 +32840,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Configurations for MySQL hosts that should be added to the cluster.
+     * Configuration of the newly added hosts.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -32816,7 +32850,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Configurations for MySQL hosts that should be added to the cluster.
+     * Configuration of the newly added hosts.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -33191,8 +33225,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster to add hosts to.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to add hosts to.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -33211,8 +33245,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to add hosts to.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to add hosts to.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -33232,8 +33266,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to add hosts to.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to add hosts to.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -33250,8 +33284,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to add hosts to.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to add hosts to.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -33264,8 +33298,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to add hosts to.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to add hosts to.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -33296,7 +33330,7 @@ public final class ClusterServiceOuterClass {
 
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added to the cluster.
+       * Configuration of the newly added hosts.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -33310,7 +33344,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added to the cluster.
+       * Configuration of the newly added hosts.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -33324,7 +33358,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added to the cluster.
+       * Configuration of the newly added hosts.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -33338,7 +33372,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added to the cluster.
+       * Configuration of the newly added hosts.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -33359,7 +33393,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added to the cluster.
+       * Configuration of the newly added hosts.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -33377,7 +33411,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added to the cluster.
+       * Configuration of the newly added hosts.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -33397,7 +33431,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added to the cluster.
+       * Configuration of the newly added hosts.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -33418,7 +33452,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added to the cluster.
+       * Configuration of the newly added hosts.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -33436,7 +33470,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added to the cluster.
+       * Configuration of the newly added hosts.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -33454,7 +33488,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added to the cluster.
+       * Configuration of the newly added hosts.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -33473,7 +33507,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added to the cluster.
+       * Configuration of the newly added hosts.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -33490,7 +33524,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added to the cluster.
+       * Configuration of the newly added hosts.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -33507,7 +33541,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added to the cluster.
+       * Configuration of the newly added hosts.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -33518,7 +33552,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added to the cluster.
+       * Configuration of the newly added hosts.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -33532,7 +33566,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added to the cluster.
+       * Configuration of the newly added hosts.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -33547,7 +33581,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added to the cluster.
+       * Configuration of the newly added hosts.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -33558,7 +33592,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added to the cluster.
+       * Configuration of the newly added hosts.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -33570,7 +33604,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configurations for MySQL hosts that should be added to the cluster.
+       * Configuration of the newly added hosts.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.HostSpec host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -33652,7 +33686,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster to which the hosts are being added.
+     * ID of the cluster to which the hosts are being added.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -33660,7 +33694,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster to which the hosts are being added.
+     * ID of the cluster to which the hosts are being added.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -33670,7 +33704,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Names of hosts that are being added to the cluster.
+     * Names of hosts that are being added.
      * </pre>
      *
      * <code>repeated string host_names = 2;</code>
@@ -33679,7 +33713,7 @@ public final class ClusterServiceOuterClass {
         getHostNamesList();
     /**
      * <pre>
-     * Names of hosts that are being added to the cluster.
+     * Names of hosts that are being added.
      * </pre>
      *
      * <code>repeated string host_names = 2;</code>
@@ -33687,7 +33721,7 @@ public final class ClusterServiceOuterClass {
     int getHostNamesCount();
     /**
      * <pre>
-     * Names of hosts that are being added to the cluster.
+     * Names of hosts that are being added.
      * </pre>
      *
      * <code>repeated string host_names = 2;</code>
@@ -33695,7 +33729,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getHostNames(int index);
     /**
      * <pre>
-     * Names of hosts that are being added to the cluster.
+     * Names of hosts that are being added.
      * </pre>
      *
      * <code>repeated string host_names = 2;</code>
@@ -33799,7 +33833,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster to which the hosts are being added.
+     * ID of the cluster to which the hosts are being added.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -33818,7 +33852,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster to which the hosts are being added.
+     * ID of the cluster to which the hosts are being added.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -33841,7 +33875,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.LazyStringList hostNames_;
     /**
      * <pre>
-     * Names of hosts that are being added to the cluster.
+     * Names of hosts that are being added.
      * </pre>
      *
      * <code>repeated string host_names = 2;</code>
@@ -33852,7 +33886,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Names of hosts that are being added to the cluster.
+     * Names of hosts that are being added.
      * </pre>
      *
      * <code>repeated string host_names = 2;</code>
@@ -33862,7 +33896,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Names of hosts that are being added to the cluster.
+     * Names of hosts that are being added.
      * </pre>
      *
      * <code>repeated string host_names = 2;</code>
@@ -33872,7 +33906,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Names of hosts that are being added to the cluster.
+     * Names of hosts that are being added.
      * </pre>
      *
      * <code>repeated string host_names = 2;</code>
@@ -34226,7 +34260,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster to which the hosts are being added.
+       * ID of the cluster to which the hosts are being added.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -34245,7 +34279,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to which the hosts are being added.
+       * ID of the cluster to which the hosts are being added.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -34265,7 +34299,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to which the hosts are being added.
+       * ID of the cluster to which the hosts are being added.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -34282,7 +34316,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to which the hosts are being added.
+       * ID of the cluster to which the hosts are being added.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -34295,7 +34329,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to which the hosts are being added.
+       * ID of the cluster to which the hosts are being added.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -34321,7 +34355,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Names of hosts that are being added to the cluster.
+       * Names of hosts that are being added.
        * </pre>
        *
        * <code>repeated string host_names = 2;</code>
@@ -34332,7 +34366,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Names of hosts that are being added to the cluster.
+       * Names of hosts that are being added.
        * </pre>
        *
        * <code>repeated string host_names = 2;</code>
@@ -34342,7 +34376,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Names of hosts that are being added to the cluster.
+       * Names of hosts that are being added.
        * </pre>
        *
        * <code>repeated string host_names = 2;</code>
@@ -34352,7 +34386,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Names of hosts that are being added to the cluster.
+       * Names of hosts that are being added.
        * </pre>
        *
        * <code>repeated string host_names = 2;</code>
@@ -34363,7 +34397,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Names of hosts that are being added to the cluster.
+       * Names of hosts that are being added.
        * </pre>
        *
        * <code>repeated string host_names = 2;</code>
@@ -34380,7 +34414,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Names of hosts that are being added to the cluster.
+       * Names of hosts that are being added.
        * </pre>
        *
        * <code>repeated string host_names = 2;</code>
@@ -34397,7 +34431,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Names of hosts that are being added to the cluster.
+       * Names of hosts that are being added.
        * </pre>
        *
        * <code>repeated string host_names = 2;</code>
@@ -34412,7 +34446,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Names of hosts that are being added to the cluster.
+       * Names of hosts that are being added.
        * </pre>
        *
        * <code>repeated string host_names = 2;</code>
@@ -34425,7 +34459,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Names of hosts that are being added to the cluster.
+       * Names of hosts that are being added.
        * </pre>
        *
        * <code>repeated string host_names = 2;</code>
@@ -34500,8 +34534,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster to remove hosts from.
-     * To get the MySQL cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to delete hosts from.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -34509,8 +34543,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster to remove hosts from.
-     * To get the MySQL cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to delete hosts from.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -34521,6 +34555,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Names of hosts to delete.
+     * To get these names, make a [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
@@ -34530,6 +34565,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Names of hosts to delete.
+     * To get these names, make a [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
@@ -34538,6 +34574,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Names of hosts to delete.
+     * To get these names, make a [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
@@ -34546,6 +34583,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Names of hosts to delete.
+     * To get these names, make a [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
@@ -34649,8 +34687,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster to remove hosts from.
-     * To get the MySQL cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to delete hosts from.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -34669,8 +34707,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster to remove hosts from.
-     * To get the MySQL cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to delete hosts from.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -34694,6 +34732,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Names of hosts to delete.
+     * To get these names, make a [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
@@ -34705,6 +34744,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Names of hosts to delete.
+     * To get these names, make a [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
@@ -34715,6 +34755,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Names of hosts to delete.
+     * To get these names, make a [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
@@ -34725,6 +34766,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Names of hosts to delete.
+     * To get these names, make a [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
@@ -35078,8 +35120,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster to remove hosts from.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to delete hosts from.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -35098,8 +35140,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to remove hosts from.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to delete hosts from.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -35119,8 +35161,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to remove hosts from.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to delete hosts from.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -35137,8 +35179,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to remove hosts from.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to delete hosts from.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -35151,8 +35193,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to remove hosts from.
-       * To get the MySQL cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to delete hosts from.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -35179,6 +35221,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Names of hosts to delete.
+       * To get these names, make a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
@@ -35190,6 +35233,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Names of hosts to delete.
+       * To get these names, make a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
@@ -35200,6 +35244,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Names of hosts to delete.
+       * To get these names, make a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
@@ -35210,6 +35255,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Names of hosts to delete.
+       * To get these names, make a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
@@ -35221,6 +35267,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Names of hosts to delete.
+       * To get these names, make a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
@@ -35238,6 +35285,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Names of hosts to delete.
+       * To get these names, make a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
@@ -35255,6 +35303,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Names of hosts to delete.
+       * To get these names, make a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
@@ -35270,6 +35319,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Names of hosts to delete.
+       * To get these names, make a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
@@ -35283,6 +35333,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Names of hosts to delete.
+       * To get these names, make a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
@@ -35357,7 +35408,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster to remove hosts from.
+     * ID of the cluster from which the hosts are being deleted.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -35365,7 +35416,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster to remove hosts from.
+     * ID of the cluster from which the hosts are being deleted.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -35504,7 +35555,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster to remove hosts from.
+     * ID of the cluster from which the hosts are being deleted.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -35523,7 +35574,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster to remove hosts from.
+     * ID of the cluster from which the hosts are being deleted.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -35931,7 +35982,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster to remove hosts from.
+       * ID of the cluster from which the hosts are being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -35950,7 +36001,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to remove hosts from.
+       * ID of the cluster from which the hosts are being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -35970,7 +36021,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to remove hosts from.
+       * ID of the cluster from which the hosts are being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -35987,7 +36038,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to remove hosts from.
+       * ID of the cluster from which the hosts are being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -36000,7 +36051,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to remove hosts from.
+       * ID of the cluster from which the hosts are being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -36205,7 +36256,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster to start.
+     * ID of the cluster to start.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -36213,7 +36265,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster to start.
+     * ID of the cluster to start.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -36303,7 +36356,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster to start.
+     * ID of the cluster to start.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -36322,7 +36376,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster to start.
+     * ID of the cluster to start.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -36647,7 +36702,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster to start.
+       * ID of the cluster to start.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -36666,7 +36722,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to start.
+       * ID of the cluster to start.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -36686,7 +36743,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to start.
+       * ID of the cluster to start.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -36703,7 +36761,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to start.
+       * ID of the cluster to start.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -36716,7 +36775,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to start.
+       * ID of the cluster to start.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -36791,7 +36851,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster being started.
+     * ID of the cluster that is being started.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -36799,7 +36859,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster being started.
+     * ID of the cluster that is being started.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -36889,7 +36949,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster being started.
+     * ID of the cluster that is being started.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -36908,7 +36968,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster being started.
+     * ID of the cluster that is being started.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -37233,7 +37293,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster being started.
+       * ID of the cluster that is being started.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -37252,7 +37312,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster being started.
+       * ID of the cluster that is being started.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -37272,7 +37332,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster being started.
+       * ID of the cluster that is being started.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -37289,7 +37349,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster being started.
+       * ID of the cluster that is being started.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -37302,7 +37362,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster being started.
+       * ID of the cluster that is being started.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -37377,7 +37437,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster to stop.
+     * ID of the cluster to stop.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -37385,7 +37446,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster to stop.
+     * ID of the cluster to stop.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -37475,7 +37537,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster to stop.
+     * ID of the cluster to stop.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -37494,7 +37557,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster to stop.
+     * ID of the cluster to stop.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -37819,7 +37883,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster to stop.
+       * ID of the cluster to stop.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -37838,7 +37903,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to stop.
+       * ID of the cluster to stop.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -37858,7 +37924,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to stop.
+       * ID of the cluster to stop.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -37875,7 +37942,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to stop.
+       * ID of the cluster to stop.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -37888,7 +37956,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to stop.
+       * ID of the cluster to stop.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -37963,7 +38032,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster being stopped.
+     * ID of the cluster that is being stopped.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -37971,7 +38040,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster being stopped.
+     * ID of the cluster that is being stopped.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -38061,7 +38130,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster being stopped.
+     * ID of the cluster that is being stopped.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -38080,7 +38149,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster being stopped.
+     * ID of the cluster that is being stopped.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -38405,7 +38474,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster being stopped.
+       * ID of the cluster that is being stopped.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -38424,7 +38493,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster being stopped.
+       * ID of the cluster that is being stopped.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -38444,7 +38513,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster being stopped.
+       * ID of the cluster that is being stopped.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -38461,7 +38530,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster being stopped.
+       * ID of the cluster that is being stopped.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -38474,7 +38543,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster being stopped.
+       * ID of the cluster that is being stopped.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -38549,7 +38618,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster to move.
+     * ID of the cluster to move.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -38557,7 +38627,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster to move.
+     * ID of the cluster to move.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -38568,6 +38639,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the destination folder.
+     * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request. 
      * </pre>
      *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -38576,6 +38648,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the destination folder.
+     * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request. 
      * </pre>
      *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -38672,7 +38745,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster to move.
+     * ID of the cluster to move.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -38691,7 +38765,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster to move.
+     * ID of the cluster to move.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -38715,6 +38790,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the destination folder.
+     * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request. 
      * </pre>
      *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -38734,6 +38810,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the destination folder.
+     * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request. 
      * </pre>
      *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -39075,7 +39152,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster to move.
+       * ID of the cluster to move.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -39094,7 +39172,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to move.
+       * ID of the cluster to move.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -39114,7 +39193,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to move.
+       * ID of the cluster to move.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -39131,7 +39211,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to move.
+       * ID of the cluster to move.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -39144,7 +39225,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to move.
+       * ID of the cluster to move.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -39165,6 +39247,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the destination folder.
+       * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request. 
        * </pre>
        *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -39184,6 +39267,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the destination folder.
+       * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request. 
        * </pre>
        *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -39204,6 +39288,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the destination folder.
+       * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request. 
        * </pre>
        *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -39221,6 +39306,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the destination folder.
+       * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request. 
        * </pre>
        *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -39234,6 +39320,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the destination folder.
+       * To get this ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request. 
        * </pre>
        *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -39308,7 +39395,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster being moved.
+     * ID of the cluster that is being moved.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -39316,7 +39403,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster being moved.
+     * ID of the cluster that is being moved.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -39344,7 +39431,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the destnation folder.
+     * ID of the destination folder.
      * </pre>
      *
      * <code>string destination_folder_id = 3;</code>
@@ -39352,7 +39439,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getDestinationFolderId();
     /**
      * <pre>
-     * ID of the destnation folder.
+     * ID of the destination folder.
      * </pre>
      *
      * <code>string destination_folder_id = 3;</code>
@@ -39456,7 +39543,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster being moved.
+     * ID of the cluster that is being moved.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -39475,7 +39562,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster being moved.
+     * ID of the cluster that is being moved.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -39540,7 +39627,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object destinationFolderId_;
     /**
      * <pre>
-     * ID of the destnation folder.
+     * ID of the destination folder.
      * </pre>
      *
      * <code>string destination_folder_id = 3;</code>
@@ -39559,7 +39646,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the destnation folder.
+     * ID of the destination folder.
      * </pre>
      *
      * <code>string destination_folder_id = 3;</code>
@@ -39918,7 +40005,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster being moved.
+       * ID of the cluster that is being moved.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -39937,7 +40024,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster being moved.
+       * ID of the cluster that is being moved.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -39957,7 +40044,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster being moved.
+       * ID of the cluster that is being moved.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -39974,7 +40061,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster being moved.
+       * ID of the cluster that is being moved.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -39987,7 +40074,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster being moved.
+       * ID of the cluster that is being moved.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -40096,7 +40183,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object destinationFolderId_ = "";
       /**
        * <pre>
-       * ID of the destnation folder.
+       * ID of the destination folder.
        * </pre>
        *
        * <code>string destination_folder_id = 3;</code>
@@ -40115,7 +40202,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the destnation folder.
+       * ID of the destination folder.
        * </pre>
        *
        * <code>string destination_folder_id = 3;</code>
@@ -40135,7 +40222,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the destnation folder.
+       * ID of the destination folder.
        * </pre>
        *
        * <code>string destination_folder_id = 3;</code>
@@ -40152,7 +40239,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the destnation folder.
+       * ID of the destination folder.
        * </pre>
        *
        * <code>string destination_folder_id = 3;</code>
@@ -40165,7 +40252,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the destnation folder.
+       * ID of the destination folder.
        * </pre>
        *
        * <code>string destination_folder_id = 3;</code>
@@ -41319,7 +41406,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster to modify hosts in.
+     * ID of the cluster in which the hosts are being updated.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -41327,7 +41414,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster to modify hosts in.
+     * ID of the cluster in which the hosts are being updated.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -41337,7 +41424,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Names of hosts that are being modified.
+     * Names of hosts that are being updated.
      * </pre>
      *
      * <code>repeated string host_names = 2;</code>
@@ -41346,7 +41433,7 @@ public final class ClusterServiceOuterClass {
         getHostNamesList();
     /**
      * <pre>
-     * Names of hosts that are being modified.
+     * Names of hosts that are being updated.
      * </pre>
      *
      * <code>repeated string host_names = 2;</code>
@@ -41354,7 +41441,7 @@ public final class ClusterServiceOuterClass {
     int getHostNamesCount();
     /**
      * <pre>
-     * Names of hosts that are being modified.
+     * Names of hosts that are being updated.
      * </pre>
      *
      * <code>repeated string host_names = 2;</code>
@@ -41362,7 +41449,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getHostNames(int index);
     /**
      * <pre>
-     * Names of hosts that are being modified.
+     * Names of hosts that are being updated.
      * </pre>
      *
      * <code>repeated string host_names = 2;</code>
@@ -41466,7 +41553,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster to modify hosts in.
+     * ID of the cluster in which the hosts are being updated.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -41485,7 +41572,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster to modify hosts in.
+     * ID of the cluster in which the hosts are being updated.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -41508,7 +41595,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.LazyStringList hostNames_;
     /**
      * <pre>
-     * Names of hosts that are being modified.
+     * Names of hosts that are being updated.
      * </pre>
      *
      * <code>repeated string host_names = 2;</code>
@@ -41519,7 +41606,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Names of hosts that are being modified.
+     * Names of hosts that are being updated.
      * </pre>
      *
      * <code>repeated string host_names = 2;</code>
@@ -41529,7 +41616,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Names of hosts that are being modified.
+     * Names of hosts that are being updated.
      * </pre>
      *
      * <code>repeated string host_names = 2;</code>
@@ -41539,7 +41626,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Names of hosts that are being modified.
+     * Names of hosts that are being updated.
      * </pre>
      *
      * <code>repeated string host_names = 2;</code>
@@ -41893,7 +41980,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster to modify hosts in.
+       * ID of the cluster in which the hosts are being updated.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -41912,7 +41999,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to modify hosts in.
+       * ID of the cluster in which the hosts are being updated.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -41932,7 +42019,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to modify hosts in.
+       * ID of the cluster in which the hosts are being updated.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -41949,7 +42036,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to modify hosts in.
+       * ID of the cluster in which the hosts are being updated.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -41962,7 +42049,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to modify hosts in.
+       * ID of the cluster in which the hosts are being updated.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -41988,7 +42075,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Names of hosts that are being modified.
+       * Names of hosts that are being updated.
        * </pre>
        *
        * <code>repeated string host_names = 2;</code>
@@ -41999,7 +42086,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Names of hosts that are being modified.
+       * Names of hosts that are being updated.
        * </pre>
        *
        * <code>repeated string host_names = 2;</code>
@@ -42009,7 +42096,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Names of hosts that are being modified.
+       * Names of hosts that are being updated.
        * </pre>
        *
        * <code>repeated string host_names = 2;</code>
@@ -42019,7 +42106,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Names of hosts that are being modified.
+       * Names of hosts that are being updated.
        * </pre>
        *
        * <code>repeated string host_names = 2;</code>
@@ -42030,7 +42117,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Names of hosts that are being modified.
+       * Names of hosts that are being updated.
        * </pre>
        *
        * <code>repeated string host_names = 2;</code>
@@ -42047,7 +42134,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Names of hosts that are being modified.
+       * Names of hosts that are being updated.
        * </pre>
        *
        * <code>repeated string host_names = 2;</code>
@@ -42064,7 +42151,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Names of hosts that are being modified.
+       * Names of hosts that are being updated.
        * </pre>
        *
        * <code>repeated string host_names = 2;</code>
@@ -42079,7 +42166,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Names of hosts that are being modified.
+       * Names of hosts that are being updated.
        * </pre>
        *
        * <code>repeated string host_names = 2;</code>
@@ -42092,7 +42179,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Names of hosts that are being modified.
+       * Names of hosts that are being updated.
        * </pre>
        *
        * <code>repeated string host_names = 2;</code>
@@ -42168,7 +42255,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Name of the host to update.
-     * To get the MySQL host name, use a [ClusterService.ListHosts] request.
+     * To get a MySQL host name, use a [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
@@ -42177,7 +42264,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Name of the host to update.
-     * To get the MySQL host name, use a [ClusterService.ListHosts] request.
+     * To get a MySQL host name, use a [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
@@ -42188,7 +42275,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * [Host.name] of the host to be used as the replication source (for cascading replication).
-     * To get the MySQL host name, use a [ClusterService.ListHosts] request.
+     * To get a MySQL host name, use a [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>string replication_source = 2;</code>
@@ -42197,7 +42284,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * [Host.name] of the host to be used as the replication source (for cascading replication).
-     * To get the MySQL host name, use a [ClusterService.ListHosts] request.
+     * To get a MySQL host name, use a [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>string replication_source = 2;</code>
@@ -42207,7 +42294,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL host should be updated.
+     * Field mask that specifies which settings of the MySQL host should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -42215,7 +42302,7 @@ public final class ClusterServiceOuterClass {
     boolean hasUpdateMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL host should be updated.
+     * Field mask that specifies which settings of the MySQL host should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -42223,7 +42310,7 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.FieldMask getUpdateMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL host should be updated.
+     * Field mask that specifies which settings of the MySQL host should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -42232,7 +42319,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Host backup priority
+     * Host backup priority.
      * </pre>
      *
      * <code>int64 backup_priority = 4 [(.yandex.cloud.value) = "0-100"];</code>
@@ -42250,7 +42337,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Host master promotion priority
+     * Host master promotion priority.
      * </pre>
      *
      * <code>int64 priority = 6 [(.yandex.cloud.value) = "0-100"];</code>
@@ -42378,7 +42465,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Name of the host to update.
-     * To get the MySQL host name, use a [ClusterService.ListHosts] request.
+     * To get a MySQL host name, use a [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
@@ -42398,7 +42485,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Name of the host to update.
-     * To get the MySQL host name, use a [ClusterService.ListHosts] request.
+     * To get a MySQL host name, use a [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
@@ -42422,7 +42509,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * [Host.name] of the host to be used as the replication source (for cascading replication).
-     * To get the MySQL host name, use a [ClusterService.ListHosts] request.
+     * To get a MySQL host name, use a [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>string replication_source = 2;</code>
@@ -42442,7 +42529,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * [Host.name] of the host to be used as the replication source (for cascading replication).
-     * To get the MySQL host name, use a [ClusterService.ListHosts] request.
+     * To get a MySQL host name, use a [ClusterService.ListHosts] request.
      * </pre>
      *
      * <code>string replication_source = 2;</code>
@@ -42465,7 +42552,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.FieldMask updateMask_;
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL host should be updated.
+     * Field mask that specifies which settings of the MySQL host should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -42475,7 +42562,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL host should be updated.
+     * Field mask that specifies which settings of the MySQL host should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -42485,7 +42572,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL host should be updated.
+     * Field mask that specifies which settings of the MySQL host should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -42498,7 +42585,7 @@ public final class ClusterServiceOuterClass {
     private long backupPriority_;
     /**
      * <pre>
-     * Host backup priority
+     * Host backup priority.
      * </pre>
      *
      * <code>int64 backup_priority = 4 [(.yandex.cloud.value) = "0-100"];</code>
@@ -42524,7 +42611,7 @@ public final class ClusterServiceOuterClass {
     private long priority_;
     /**
      * <pre>
-     * Host master promotion priority
+     * Host master promotion priority.
      * </pre>
      *
      * <code>int64 priority = 6 [(.yandex.cloud.value) = "0-100"];</code>
@@ -42941,7 +43028,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the host to update.
-       * To get the MySQL host name, use a [ClusterService.ListHosts] request.
+       * To get a MySQL host name, use a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
@@ -42961,7 +43048,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the host to update.
-       * To get the MySQL host name, use a [ClusterService.ListHosts] request.
+       * To get a MySQL host name, use a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
@@ -42982,7 +43069,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the host to update.
-       * To get the MySQL host name, use a [ClusterService.ListHosts] request.
+       * To get a MySQL host name, use a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
@@ -43000,7 +43087,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the host to update.
-       * To get the MySQL host name, use a [ClusterService.ListHosts] request.
+       * To get a MySQL host name, use a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
@@ -43014,7 +43101,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the host to update.
-       * To get the MySQL host name, use a [ClusterService.ListHosts] request.
+       * To get a MySQL host name, use a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
@@ -43035,7 +43122,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * [Host.name] of the host to be used as the replication source (for cascading replication).
-       * To get the MySQL host name, use a [ClusterService.ListHosts] request.
+       * To get a MySQL host name, use a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>string replication_source = 2;</code>
@@ -43055,7 +43142,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * [Host.name] of the host to be used as the replication source (for cascading replication).
-       * To get the MySQL host name, use a [ClusterService.ListHosts] request.
+       * To get a MySQL host name, use a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>string replication_source = 2;</code>
@@ -43076,7 +43163,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * [Host.name] of the host to be used as the replication source (for cascading replication).
-       * To get the MySQL host name, use a [ClusterService.ListHosts] request.
+       * To get a MySQL host name, use a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>string replication_source = 2;</code>
@@ -43094,7 +43181,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * [Host.name] of the host to be used as the replication source (for cascading replication).
-       * To get the MySQL host name, use a [ClusterService.ListHosts] request.
+       * To get a MySQL host name, use a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>string replication_source = 2;</code>
@@ -43108,7 +43195,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * [Host.name] of the host to be used as the replication source (for cascading replication).
-       * To get the MySQL host name, use a [ClusterService.ListHosts] request.
+       * To get a MySQL host name, use a [ClusterService.ListHosts] request.
        * </pre>
        *
        * <code>string replication_source = 2;</code>
@@ -43130,7 +43217,7 @@ public final class ClusterServiceOuterClass {
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL host should be updated.
+       * Field mask that specifies which settings of the MySQL host should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -43140,7 +43227,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL host should be updated.
+       * Field mask that specifies which settings of the MySQL host should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -43154,7 +43241,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL host should be updated.
+       * Field mask that specifies which settings of the MySQL host should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -43174,7 +43261,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL host should be updated.
+       * Field mask that specifies which settings of the MySQL host should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -43192,7 +43279,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL host should be updated.
+       * Field mask that specifies which settings of the MySQL host should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -43214,7 +43301,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL host should be updated.
+       * Field mask that specifies which settings of the MySQL host should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -43232,7 +43319,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL host should be updated.
+       * Field mask that specifies which settings of the MySQL host should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -43244,7 +43331,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL host should be updated.
+       * Field mask that specifies which settings of the MySQL host should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -43259,7 +43346,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL host should be updated.
+       * Field mask that specifies which settings of the MySQL host should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -43281,7 +43368,7 @@ public final class ClusterServiceOuterClass {
       private long backupPriority_ ;
       /**
        * <pre>
-       * Host backup priority
+       * Host backup priority.
        * </pre>
        *
        * <code>int64 backup_priority = 4 [(.yandex.cloud.value) = "0-100"];</code>
@@ -43291,7 +43378,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Host backup priority
+       * Host backup priority.
        * </pre>
        *
        * <code>int64 backup_priority = 4 [(.yandex.cloud.value) = "0-100"];</code>
@@ -43304,7 +43391,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Host backup priority
+       * Host backup priority.
        * </pre>
        *
        * <code>int64 backup_priority = 4 [(.yandex.cloud.value) = "0-100"];</code>
@@ -43357,7 +43444,7 @@ public final class ClusterServiceOuterClass {
       private long priority_ ;
       /**
        * <pre>
-       * Host master promotion priority
+       * Host master promotion priority.
        * </pre>
        *
        * <code>int64 priority = 6 [(.yandex.cloud.value) = "0-100"];</code>
@@ -43367,7 +43454,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Host master promotion priority
+       * Host master promotion priority.
        * </pre>
        *
        * <code>int64 priority = 6 [(.yandex.cloud.value) = "0-100"];</code>
@@ -43380,7 +43467,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Host master promotion priority
+       * Host master promotion priority.
        * </pre>
        *
        * <code>int64 priority = 6 [(.yandex.cloud.value) = "0-100"];</code>
@@ -43451,7 +43538,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the availability zone where the host resides.
-     * To get a list of available zones, use the [yandex.cloud.compute.v1.ZoneService.List] request.
+     * To get a list of available zones, make the [yandex.cloud.compute.v1.ZoneService.List] request.
      * </pre>
      *
      * <code>string zone_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -43460,7 +43547,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the availability zone where the host resides.
-     * To get a list of available zones, use the [yandex.cloud.compute.v1.ZoneService.List] request.
+     * To get a list of available zones, make the [yandex.cloud.compute.v1.ZoneService.List] request.
      * </pre>
      *
      * <code>string zone_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -43470,9 +43557,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the subnet that the host should belong to. This subnet should be a part
-     * of the network that the cluster belongs to.
-     * The ID of the network is set in the field [Cluster.network_id].
+     * ID of the subnet to assign to the host.
+     * This subnet should be a part of the cluster network (the network ID is specified in the [ClusterService.CreateClusterRequest.network_id]).
      * </pre>
      *
      * <code>string subnet_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -43480,9 +43566,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getSubnetId();
     /**
      * <pre>
-     * ID of the subnet that the host should belong to. This subnet should be a part
-     * of the network that the cluster belongs to.
-     * The ID of the network is set in the field [Cluster.network_id].
+     * ID of the subnet to assign to the host.
+     * This subnet should be a part of the cluster network (the network ID is specified in the [ClusterService.CreateClusterRequest.network_id]).
      * </pre>
      *
      * <code>string subnet_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -43492,12 +43577,12 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Whether the host should get a public IP address on creation.
-     * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign
-     * a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
+     * Option that enables public IP address for the host so that the host can be accessed from the internet.
+     * After a host has been created, this setting cannot be changed.
+     * To remove an assigned public IP address, or to assign a public IP address to a host without one, recreate the host with the appropriate [assign_public_ip] value set.
      * Possible values:
-     * * false - don't assign a public IP to the host.
-     * * true - the host should have a public IP address.
+     * * `false` - don't assign a public IP address to the host.
+     * * `true` - assign a public IP address to the host.
      * </pre>
      *
      * <code>bool assign_public_ip = 3;</code>
@@ -43655,7 +43740,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the availability zone where the host resides.
-     * To get a list of available zones, use the [yandex.cloud.compute.v1.ZoneService.List] request.
+     * To get a list of available zones, make the [yandex.cloud.compute.v1.ZoneService.List] request.
      * </pre>
      *
      * <code>string zone_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -43675,7 +43760,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the availability zone where the host resides.
-     * To get a list of available zones, use the [yandex.cloud.compute.v1.ZoneService.List] request.
+     * To get a list of available zones, make the [yandex.cloud.compute.v1.ZoneService.List] request.
      * </pre>
      *
      * <code>string zone_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -43698,9 +43783,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object subnetId_;
     /**
      * <pre>
-     * ID of the subnet that the host should belong to. This subnet should be a part
-     * of the network that the cluster belongs to.
-     * The ID of the network is set in the field [Cluster.network_id].
+     * ID of the subnet to assign to the host.
+     * This subnet should be a part of the cluster network (the network ID is specified in the [ClusterService.CreateClusterRequest.network_id]).
      * </pre>
      *
      * <code>string subnet_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -43719,9 +43803,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the subnet that the host should belong to. This subnet should be a part
-     * of the network that the cluster belongs to.
-     * The ID of the network is set in the field [Cluster.network_id].
+     * ID of the subnet to assign to the host.
+     * This subnet should be a part of the cluster network (the network ID is specified in the [ClusterService.CreateClusterRequest.network_id]).
      * </pre>
      *
      * <code>string subnet_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -43744,12 +43827,12 @@ public final class ClusterServiceOuterClass {
     private boolean assignPublicIp_;
     /**
      * <pre>
-     * Whether the host should get a public IP address on creation.
-     * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign
-     * a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
+     * Option that enables public IP address for the host so that the host can be accessed from the internet.
+     * After a host has been created, this setting cannot be changed.
+     * To remove an assigned public IP address, or to assign a public IP address to a host without one, recreate the host with the appropriate [assign_public_ip] value set.
      * Possible values:
-     * * false - don't assign a public IP to the host.
-     * * true - the host should have a public IP address.
+     * * `false` - don't assign a public IP address to the host.
+     * * `true` - assign a public IP address to the host.
      * </pre>
      *
      * <code>bool assign_public_ip = 3;</code>
@@ -44221,7 +44304,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the availability zone where the host resides.
-       * To get a list of available zones, use the [yandex.cloud.compute.v1.ZoneService.List] request.
+       * To get a list of available zones, make the [yandex.cloud.compute.v1.ZoneService.List] request.
        * </pre>
        *
        * <code>string zone_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -44241,7 +44324,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the availability zone where the host resides.
-       * To get a list of available zones, use the [yandex.cloud.compute.v1.ZoneService.List] request.
+       * To get a list of available zones, make the [yandex.cloud.compute.v1.ZoneService.List] request.
        * </pre>
        *
        * <code>string zone_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -44262,7 +44345,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the availability zone where the host resides.
-       * To get a list of available zones, use the [yandex.cloud.compute.v1.ZoneService.List] request.
+       * To get a list of available zones, make the [yandex.cloud.compute.v1.ZoneService.List] request.
        * </pre>
        *
        * <code>string zone_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -44280,7 +44363,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the availability zone where the host resides.
-       * To get a list of available zones, use the [yandex.cloud.compute.v1.ZoneService.List] request.
+       * To get a list of available zones, make the [yandex.cloud.compute.v1.ZoneService.List] request.
        * </pre>
        *
        * <code>string zone_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -44294,7 +44377,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the availability zone where the host resides.
-       * To get a list of available zones, use the [yandex.cloud.compute.v1.ZoneService.List] request.
+       * To get a list of available zones, make the [yandex.cloud.compute.v1.ZoneService.List] request.
        * </pre>
        *
        * <code>string zone_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -44314,9 +44397,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object subnetId_ = "";
       /**
        * <pre>
-       * ID of the subnet that the host should belong to. This subnet should be a part
-       * of the network that the cluster belongs to.
-       * The ID of the network is set in the field [Cluster.network_id].
+       * ID of the subnet to assign to the host.
+       * This subnet should be a part of the cluster network (the network ID is specified in the [ClusterService.CreateClusterRequest.network_id]).
        * </pre>
        *
        * <code>string subnet_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -44335,9 +44417,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subnet that the host should belong to. This subnet should be a part
-       * of the network that the cluster belongs to.
-       * The ID of the network is set in the field [Cluster.network_id].
+       * ID of the subnet to assign to the host.
+       * This subnet should be a part of the cluster network (the network ID is specified in the [ClusterService.CreateClusterRequest.network_id]).
        * </pre>
        *
        * <code>string subnet_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -44357,9 +44438,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subnet that the host should belong to. This subnet should be a part
-       * of the network that the cluster belongs to.
-       * The ID of the network is set in the field [Cluster.network_id].
+       * ID of the subnet to assign to the host.
+       * This subnet should be a part of the cluster network (the network ID is specified in the [ClusterService.CreateClusterRequest.network_id]).
        * </pre>
        *
        * <code>string subnet_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -44376,9 +44456,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subnet that the host should belong to. This subnet should be a part
-       * of the network that the cluster belongs to.
-       * The ID of the network is set in the field [Cluster.network_id].
+       * ID of the subnet to assign to the host.
+       * This subnet should be a part of the cluster network (the network ID is specified in the [ClusterService.CreateClusterRequest.network_id]).
        * </pre>
        *
        * <code>string subnet_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -44391,9 +44470,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the subnet that the host should belong to. This subnet should be a part
-       * of the network that the cluster belongs to.
-       * The ID of the network is set in the field [Cluster.network_id].
+       * ID of the subnet to assign to the host.
+       * This subnet should be a part of the cluster network (the network ID is specified in the [ClusterService.CreateClusterRequest.network_id]).
        * </pre>
        *
        * <code>string subnet_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -44413,12 +44491,12 @@ public final class ClusterServiceOuterClass {
       private boolean assignPublicIp_ ;
       /**
        * <pre>
-       * Whether the host should get a public IP address on creation.
-       * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign
-       * a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
+       * Option that enables public IP address for the host so that the host can be accessed from the internet.
+       * After a host has been created, this setting cannot be changed.
+       * To remove an assigned public IP address, or to assign a public IP address to a host without one, recreate the host with the appropriate [assign_public_ip] value set.
        * Possible values:
-       * * false - don't assign a public IP to the host.
-       * * true - the host should have a public IP address.
+       * * `false` - don't assign a public IP address to the host.
+       * * `true` - assign a public IP address to the host.
        * </pre>
        *
        * <code>bool assign_public_ip = 3;</code>
@@ -44428,12 +44506,12 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Whether the host should get a public IP address on creation.
-       * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign
-       * a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
+       * Option that enables public IP address for the host so that the host can be accessed from the internet.
+       * After a host has been created, this setting cannot be changed.
+       * To remove an assigned public IP address, or to assign a public IP address to a host without one, recreate the host with the appropriate [assign_public_ip] value set.
        * Possible values:
-       * * false - don't assign a public IP to the host.
-       * * true - the host should have a public IP address.
+       * * `false` - don't assign a public IP address to the host.
+       * * `true` - assign a public IP address to the host.
        * </pre>
        *
        * <code>bool assign_public_ip = 3;</code>
@@ -44446,12 +44524,12 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Whether the host should get a public IP address on creation.
-       * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign
-       * a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
+       * Option that enables public IP address for the host so that the host can be accessed from the internet.
+       * After a host has been created, this setting cannot be changed.
+       * To remove an assigned public IP address, or to assign a public IP address to a host without one, recreate the host with the appropriate [assign_public_ip] value set.
        * Possible values:
-       * * false - don't assign a public IP to the host.
-       * * true - the host should have a public IP address.
+       * * `false` - don't assign a public IP address to the host.
+       * * `true` - assign a public IP address to the host.
        * </pre>
        *
        * <code>bool assign_public_ip = 3;</code>
@@ -44687,9 +44765,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Version of MySQL used in the cluster.
-     * Possible values:
-     * * 5.7
-     * * 8.0
+     * Possible values: `5.7`, `8.0`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -44698,9 +44774,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Version of MySQL used in the cluster.
-     * Possible values:
-     * * 5.7
-     * * 8.0
+     * Possible values: `5.7`, `8.0`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -44760,7 +44834,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Resources allocated to MySQL hosts.
+     * Resource preset for the cluster hosts.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -44768,7 +44842,7 @@ public final class ClusterServiceOuterClass {
     boolean hasResources();
     /**
      * <pre>
-     * Resources allocated to MySQL hosts.
+     * Resource preset for the cluster hosts.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -44776,7 +44850,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Resources getResources();
     /**
      * <pre>
-     * Resources allocated to MySQL hosts.
+     * Resource preset for the cluster hosts.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -44810,7 +44884,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Access policy to DB
+     * Access policy for external services.
+     * If the specific services need to access the cluster, then set the necessary values in this policy.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -44818,7 +44893,8 @@ public final class ClusterServiceOuterClass {
     boolean hasAccess();
     /**
      * <pre>
-     * Access policy to DB
+     * Access policy for external services.
+     * If the specific services need to access the cluster, then set the necessary values in this policy.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -44826,7 +44902,8 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Access getAccess();
     /**
      * <pre>
-     * Access policy to DB
+     * Access policy for external services.
+     * If the specific services need to access the cluster, then set the necessary values in this policy.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -45023,9 +45100,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Version of MySQL used in the cluster.
-     * Possible values:
-     * * 5.7
-     * * 8.0
+     * Possible values: `5.7`, `8.0`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -45045,9 +45120,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Version of MySQL used in the cluster.
-     * Possible values:
-     * * 5.7
-     * * 8.0
+     * Possible values: `5.7`, `8.0`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -45146,7 +45219,7 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Resources resources_;
     /**
      * <pre>
-     * Resources allocated to MySQL hosts.
+     * Resource preset for the cluster hosts.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -45156,7 +45229,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Resources allocated to MySQL hosts.
+     * Resource preset for the cluster hosts.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -45166,7 +45239,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Resources allocated to MySQL hosts.
+     * Resource preset for the cluster hosts.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -45212,7 +45285,8 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Access access_;
     /**
      * <pre>
-     * Access policy to DB
+     * Access policy for external services.
+     * If the specific services need to access the cluster, then set the necessary values in this policy.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -45222,7 +45296,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Access policy to DB
+     * Access policy for external services.
+     * If the specific services need to access the cluster, then set the necessary values in this policy.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -45232,7 +45307,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Access policy to DB
+     * Access policy for external services.
+     * If the specific services need to access the cluster, then set the necessary values in this policy.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -45724,9 +45800,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Version of MySQL used in the cluster.
-       * Possible values:
-       * * 5.7
-       * * 8.0
+       * Possible values: `5.7`, `8.0`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -45746,9 +45820,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Version of MySQL used in the cluster.
-       * Possible values:
-       * * 5.7
-       * * 8.0
+       * Possible values: `5.7`, `8.0`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -45769,9 +45841,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Version of MySQL used in the cluster.
-       * Possible values:
-       * * 5.7
-       * * 8.0
+       * Possible values: `5.7`, `8.0`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -45789,9 +45859,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Version of MySQL used in the cluster.
-       * Possible values:
-       * * 5.7
-       * * 8.0
+       * Possible values: `5.7`, `8.0`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -45805,9 +45873,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Version of MySQL used in the cluster.
-       * Possible values:
-       * * 5.7
-       * * 8.0
+       * Possible values: `5.7`, `8.0`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -46173,7 +46239,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
       /**
        * <pre>
-       * Resources allocated to MySQL hosts.
+       * Resource preset for the cluster hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -46183,7 +46249,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to MySQL hosts.
+       * Resource preset for the cluster hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -46197,7 +46263,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to MySQL hosts.
+       * Resource preset for the cluster hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -46217,7 +46283,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to MySQL hosts.
+       * Resource preset for the cluster hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -46235,7 +46301,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to MySQL hosts.
+       * Resource preset for the cluster hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -46257,7 +46323,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to MySQL hosts.
+       * Resource preset for the cluster hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -46275,7 +46341,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to MySQL hosts.
+       * Resource preset for the cluster hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -46287,7 +46353,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to MySQL hosts.
+       * Resource preset for the cluster hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -46302,7 +46368,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to MySQL hosts.
+       * Resource preset for the cluster hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -46479,7 +46545,8 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Access, yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Access.Builder, yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.AccessOrBuilder> accessBuilder_;
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
+       * If the specific services need to access the cluster, then set the necessary values in this policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -46489,7 +46556,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
+       * If the specific services need to access the cluster, then set the necessary values in this policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -46503,7 +46571,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
+       * If the specific services need to access the cluster, then set the necessary values in this policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -46523,7 +46592,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
+       * If the specific services need to access the cluster, then set the necessary values in this policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -46541,7 +46611,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
+       * If the specific services need to access the cluster, then set the necessary values in this policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -46563,7 +46634,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
+       * If the specific services need to access the cluster, then set the necessary values in this policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -46581,7 +46653,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
+       * If the specific services need to access the cluster, then set the necessary values in this policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -46593,7 +46666,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
+       * If the specific services need to access the cluster, then set the necessary values in this policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -46608,7 +46682,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
+       * If the specific services need to access the cluster, then set the necessary values in this policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>

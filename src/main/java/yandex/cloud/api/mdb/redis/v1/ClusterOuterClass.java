@@ -419,6 +419,23 @@ public final class ClusterOuterClass {
      * <code>bool deletion_protection = 18;</code>
      */
     boolean getDeletionProtection();
+
+    /**
+     * <pre>
+     * Persistence mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.Cluster.PersistenceMode persistence_mode = 19;</code>
+     */
+    int getPersistenceModeValue();
+    /**
+     * <pre>
+     * Persistence mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.Cluster.PersistenceMode persistence_mode = 19;</code>
+     */
+    yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Cluster.PersistenceMode getPersistenceMode();
   }
   /**
    * <pre>
@@ -451,6 +468,7 @@ public final class ClusterOuterClass {
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       tlsEnabled_ = false;
       deletionProtection_ = false;
+      persistenceMode_ = 0;
     }
 
     @java.lang.Override
@@ -621,6 +639,12 @@ public final class ClusterOuterClass {
             case 144: {
 
               deletionProtection_ = input.readBool();
+              break;
+            }
+            case 152: {
+              int rawValue = input.readEnum();
+
+              persistenceMode_ = rawValue;
               break;
             }
             default: {
@@ -1162,6 +1186,120 @@ public final class ClusterOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.redis.v1.Cluster.Status)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.redis.v1.Cluster.PersistenceMode}
+     */
+    public enum PersistenceMode
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * cluster persistence mode on
+       * </pre>
+       *
+       * <code>ON = 0;</code>
+       */
+      ON(0),
+      /**
+       * <pre>
+       * cluster persistence mode off
+       * </pre>
+       *
+       * <code>OFF = 1;</code>
+       */
+      OFF(1),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * cluster persistence mode on
+       * </pre>
+       *
+       * <code>ON = 0;</code>
+       */
+      public static final int ON_VALUE = 0;
+      /**
+       * <pre>
+       * cluster persistence mode off
+       * </pre>
+       *
+       * <code>OFF = 1;</code>
+       */
+      public static final int OFF_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PersistenceMode valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static PersistenceMode forNumber(int value) {
+        switch (value) {
+          case 0: return ON;
+          case 1: return OFF;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<PersistenceMode>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          PersistenceMode> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<PersistenceMode>() {
+              public PersistenceMode findValueByNumber(int number) {
+                return PersistenceMode.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Cluster.getDescriptor().getEnumTypes().get(3);
+      }
+
+      private static final PersistenceMode[] VALUES = values();
+
+      public static PersistenceMode valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private PersistenceMode(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.redis.v1.Cluster.PersistenceMode)
     }
 
     private int bitField0_;
@@ -1813,6 +1951,31 @@ public final class ClusterOuterClass {
       return deletionProtection_;
     }
 
+    public static final int PERSISTENCE_MODE_FIELD_NUMBER = 19;
+    private int persistenceMode_;
+    /**
+     * <pre>
+     * Persistence mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.Cluster.PersistenceMode persistence_mode = 19;</code>
+     */
+    public int getPersistenceModeValue() {
+      return persistenceMode_;
+    }
+    /**
+     * <pre>
+     * Persistence mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.Cluster.PersistenceMode persistence_mode = 19;</code>
+     */
+    public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Cluster.PersistenceMode getPersistenceMode() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Cluster.PersistenceMode result = yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Cluster.PersistenceMode.valueOf(persistenceMode_);
+      return result == null ? yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Cluster.PersistenceMode.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1883,6 +2046,9 @@ public final class ClusterOuterClass {
       }
       if (deletionProtection_ != false) {
         output.writeBool(18, deletionProtection_);
+      }
+      if (persistenceMode_ != yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Cluster.PersistenceMode.ON.getNumber()) {
+        output.writeEnum(19, persistenceMode_);
       }
       unknownFields.writeTo(output);
     }
@@ -1970,6 +2136,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(18, deletionProtection_);
       }
+      if (persistenceMode_ != yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Cluster.PersistenceMode.ON.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(19, persistenceMode_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2031,6 +2201,7 @@ public final class ClusterOuterClass {
           == other.getTlsEnabled());
       result = result && (getDeletionProtection()
           == other.getDeletionProtection());
+      result = result && persistenceMode_ == other.persistenceMode_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2095,6 +2266,8 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
+      hash = (37 * hash) + PERSISTENCE_MODE_FIELD_NUMBER;
+      hash = (53 * hash) + persistenceMode_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2311,6 +2484,8 @@ public final class ClusterOuterClass {
 
         deletionProtection_ = false;
 
+        persistenceMode_ = 0;
+
         return this;
       }
 
@@ -2386,6 +2561,7 @@ public final class ClusterOuterClass {
         result.securityGroupIds_ = securityGroupIds_;
         result.tlsEnabled_ = tlsEnabled_;
         result.deletionProtection_ = deletionProtection_;
+        result.persistenceMode_ = persistenceMode_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2522,6 +2698,9 @@ public final class ClusterOuterClass {
         }
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
+        }
+        if (other.persistenceMode_ != 0) {
+          setPersistenceModeValue(other.getPersistenceModeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4505,6 +4684,71 @@ public final class ClusterOuterClass {
       public Builder clearDeletionProtection() {
         
         deletionProtection_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int persistenceMode_ = 0;
+      /**
+       * <pre>
+       * Persistence mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.Cluster.PersistenceMode persistence_mode = 19;</code>
+       */
+      public int getPersistenceModeValue() {
+        return persistenceMode_;
+      }
+      /**
+       * <pre>
+       * Persistence mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.Cluster.PersistenceMode persistence_mode = 19;</code>
+       */
+      public Builder setPersistenceModeValue(int value) {
+        persistenceMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Persistence mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.Cluster.PersistenceMode persistence_mode = 19;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Cluster.PersistenceMode getPersistenceMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Cluster.PersistenceMode result = yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Cluster.PersistenceMode.valueOf(persistenceMode_);
+        return result == null ? yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Cluster.PersistenceMode.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Persistence mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.Cluster.PersistenceMode persistence_mode = 19;</code>
+       */
+      public Builder setPersistenceMode(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Cluster.PersistenceMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        persistenceMode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Persistence mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.Cluster.PersistenceMode persistence_mode = 19;</code>
+       */
+      public Builder clearPersistenceMode() {
+        
+        persistenceMode_ = 0;
         onChanged();
         return this;
       }
@@ -13429,7 +13673,7 @@ public final class ClusterOuterClass {
       "dis/v1/config/redis6_0.proto\032/yandex/clo" +
       "ud/mdb/redis/v1/config/redis6_2.proto\032+y" +
       "andex/cloud/mdb/redis/v1/maintenance.pro" +
-      "to\"\252\010\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030" +
+      "to\"\234\t\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030" +
       "\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.proto" +
       "buf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descripti" +
       "on\030\005 \001(\t\022>\n\006labels\030\006 \003(\0132..yandex.cloud." +
@@ -13448,52 +13692,55 @@ public final class ClusterOuterClass {
       "dex.cloud.mdb.redis.v1.MaintenanceOperat" +
       "ion\022\032\n\022security_group_ids\030\020 \003(\t\022\023\n\013tls_e" +
       "nabled\030\021 \001(\010\022\033\n\023deletion_protection\030\022 \001(" +
-      "\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_U" +
-      "NSPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABL" +
-      "E\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALI" +
-      "VE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022" +
-      "\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNN" +
-      "ING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPI" +
-      "NG\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonit" +
-      "oring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t" +
-      "\022\014\n\004link\030\003 \001(\t\"\367\003\n\rClusterConfig\022\017\n\007vers" +
-      "ion\030\001 \001(\t\022`\n\020redis_config_5_0\030\002 \001(\01323.ya" +
-      "ndex.cloud.mdb.redis.v1.config.RedisConf" +
-      "igSet5_0H\000R\017redisConfig_5_0\022`\n\020redis_con" +
-      "fig_6_0\030\006 \001(\01323.yandex.cloud.mdb.redis.v" +
-      "1.config.RedisConfigSet6_0H\000R\017redisConfi" +
-      "g_6_0\022`\n\020redis_config_6_2\030\007 \001(\01323.yandex" +
-      ".cloud.mdb.redis.v1.config.RedisConfigSe" +
-      "t6_2H\000R\017redisConfig_6_2\0227\n\tresources\030\003 \001" +
-      "(\0132$.yandex.cloud.mdb.redis.v1.Resources" +
-      "\0223\n\023backup_window_start\030\004 \001(\0132\026.google.t" +
-      "ype.TimeOfDay\0221\n\006access\030\005 \001(\0132!.yandex.c" +
-      "loud.mdb.redis.v1.AccessB\016\n\014redis_config" +
-      "\")\n\005Shard\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 " +
-      "\001(\t\"\257\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id" +
-      "\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022\021\n\tsubnet_id\030\004 \001" +
-      "(\t\0227\n\tresources\030\005 \001(\0132$.yandex.cloud.mdb" +
-      ".redis.v1.Resources\0222\n\004role\030\006 \001(\0162$.yand" +
-      "ex.cloud.mdb.redis.v1.Host.Role\0226\n\006healt" +
-      "h\030\007 \001(\0162&.yandex.cloud.mdb.redis.v1.Host" +
-      ".Health\0224\n\010services\030\010 \003(\0132\".yandex.cloud" +
-      ".mdb.redis.v1.Service\022\022\n\nshard_name\030\t \001(" +
-      "\t\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022" +
-      "\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN" +
-      "\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\367\001" +
-      "\n\007Service\0225\n\004type\030\001 \001(\0162\'.yandex.cloud.m" +
-      "db.redis.v1.Service.Type\0229\n\006health\030\002 \001(\016" +
-      "2).yandex.cloud.mdb.redis.v1.Service.Hea" +
-      "lth\"G\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005RED" +
-      "IS\020\001\022\013\n\007ARBITER\020\002\022\021\n\rREDIS_CLUSTER\020\003\"1\n\006" +
-      "Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n" +
-      "\004DEAD\020\002\"P\n\tResources\022\032\n\022resource_preset_" +
-      "id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type" +
-      "_id\030\003 \001(\t\"\033\n\006Access\022\021\n\tdata_lens\030\001 \001(\010Bd" +
-      "\n\035yandex.cloud.api.mdb.redis.v1ZCgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/mdb/redis/v1;redisb\006proto3"
+      "\010\022L\n\020persistence_mode\030\023 \001(\01622.yandex.clo" +
+      "ud.mdb.redis.v1.Cluster.PersistenceMode\032" +
+      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UNS" +
+      "PECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020" +
+      "\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE" +
+      "\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016" +
+      "STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNIN" +
+      "G\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING" +
+      "\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"\"\n\017Persist" +
+      "enceMode\022\006\n\002ON\020\000\022\007\n\003OFF\020\001\"=\n\nMonitoring\022" +
+      "\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004li" +
+      "nk\030\003 \001(\t\"\367\003\n\rClusterConfig\022\017\n\007version\030\001 " +
+      "\001(\t\022`\n\020redis_config_5_0\030\002 \001(\01323.yandex.c" +
+      "loud.mdb.redis.v1.config.RedisConfigSet5" +
+      "_0H\000R\017redisConfig_5_0\022`\n\020redis_config_6_" +
+      "0\030\006 \001(\01323.yandex.cloud.mdb.redis.v1.conf" +
+      "ig.RedisConfigSet6_0H\000R\017redisConfig_6_0\022" +
+      "`\n\020redis_config_6_2\030\007 \001(\01323.yandex.cloud" +
+      ".mdb.redis.v1.config.RedisConfigSet6_2H\000" +
+      "R\017redisConfig_6_2\0227\n\tresources\030\003 \001(\0132$.y" +
+      "andex.cloud.mdb.redis.v1.Resources\0223\n\023ba" +
+      "ckup_window_start\030\004 \001(\0132\026.google.type.Ti" +
+      "meOfDay\0221\n\006access\030\005 \001(\0132!.yandex.cloud.m" +
+      "db.redis.v1.AccessB\016\n\014redis_config\")\n\005Sh" +
+      "ard\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\"\257\003" +
+      "\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t" +
+      "\022\017\n\007zone_id\030\003 \001(\t\022\021\n\tsubnet_id\030\004 \001(\t\0227\n\t" +
+      "resources\030\005 \001(\0132$.yandex.cloud.mdb.redis" +
+      ".v1.Resources\0222\n\004role\030\006 \001(\0162$.yandex.clo" +
+      "ud.mdb.redis.v1.Host.Role\0226\n\006health\030\007 \001(" +
+      "\0162&.yandex.cloud.mdb.redis.v1.Host.Healt" +
+      "h\0224\n\010services\030\010 \003(\0132\".yandex.cloud.mdb.r" +
+      "edis.v1.Service\022\022\n\nshard_name\030\t \001(\t\"1\n\004R" +
+      "ole\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007REP" +
+      "LICA\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005" +
+      "ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\367\001\n\007Serv" +
+      "ice\0225\n\004type\030\001 \001(\0162\'.yandex.cloud.mdb.red" +
+      "is.v1.Service.Type\0229\n\006health\030\002 \001(\0162).yan" +
+      "dex.cloud.mdb.redis.v1.Service.Health\"G\n" +
+      "\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005REDIS\020\001\022\013" +
+      "\n\007ARBITER\020\002\022\021\n\rREDIS_CLUSTER\020\003\"1\n\006Health" +
+      "\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020" +
+      "\002\"P\n\tResources\022\032\n\022resource_preset_id\030\001 \001" +
+      "(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 " +
+      "\001(\t\"\033\n\006Access\022\021\n\tdata_lens\030\001 \001(\010Bd\n\035yand" +
+      "ex.cloud.api.mdb.redis.v1ZCgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/mdb/" +
+      "redis/v1;redisb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13518,7 +13765,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_redis_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "Sharded", "MaintenanceWindow", "PlannedOperation", "SecurityGroupIds", "TlsEnabled", "DeletionProtection", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "Sharded", "MaintenanceWindow", "PlannedOperation", "SecurityGroupIds", "TlsEnabled", "DeletionProtection", "PersistenceMode", });
     internal_static_yandex_cloud_mdb_redis_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_redis_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_redis_v1_Cluster_LabelsEntry_fieldAccessorTable = new

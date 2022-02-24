@@ -25,7 +25,7 @@ public final class UserOuterClass {
     GLOBAL_PERMISSION_UNSPECIFIED(0),
     /**
      * <pre>
-     * Enables use of the SHOW MASTER STATUS, SHOW SLAVE STATUS, and SHOW BINARY LOGS statements.
+     * Enables use of the `SHOW MASTER STATUS`, `SHOW SLAVE STATUS`, and `SHOW BINARY LOGS` statements.
      * </pre>
      *
      * <code>REPLICATION_CLIENT = 1;</code>
@@ -34,7 +34,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Enables the account to request updates that have been made to databases on the master server,
-     * using the SHOW SLAVE HOSTS, SHOW RELAYLOG EVENTS, and SHOW BINLOG EVENTS statements.
+     * using the `SHOW SLAVE HOSTS`, `SHOW RELAYLOG EVENTS` and `SHOW BINLOG EVENTS` statements.
      * </pre>
      *
      * <code>REPLICATION_SLAVE = 2;</code>
@@ -42,10 +42,9 @@ public final class UserOuterClass {
     REPLICATION_SLAVE(2),
     /**
      * <pre>
-     * Enables display of information about the threads executing within the server
-     * (that is, information about the statements being executed by sessions).
-     * The privilege enables use of SHOW PROCESSLIST or mysqladmin processlist to see threads belonging
-     * to other accounts; you can always see your own threads. The PROCESS privilege also enables use of SHOW ENGINE.
+     * Enables display of information about the the statements currently being performed by sessions (the set of threads executing within the server).
+     * The privilege enables use of `SHOW PROCESSLIST` or `mysqladmin` processlist to see threads belonging to other users.
+     * You can always see your own threads. The `PROCESS` privilege also enables use of `SHOW ENGINE`.
      * </pre>
      *
      * <code>PROCESS = 3;</code>
@@ -60,7 +59,7 @@ public final class UserOuterClass {
     public static final int GLOBAL_PERMISSION_UNSPECIFIED_VALUE = 0;
     /**
      * <pre>
-     * Enables use of the SHOW MASTER STATUS, SHOW SLAVE STATUS, and SHOW BINARY LOGS statements.
+     * Enables use of the `SHOW MASTER STATUS`, `SHOW SLAVE STATUS`, and `SHOW BINARY LOGS` statements.
      * </pre>
      *
      * <code>REPLICATION_CLIENT = 1;</code>
@@ -69,7 +68,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Enables the account to request updates that have been made to databases on the master server,
-     * using the SHOW SLAVE HOSTS, SHOW RELAYLOG EVENTS, and SHOW BINLOG EVENTS statements.
+     * using the `SHOW SLAVE HOSTS`, `SHOW RELAYLOG EVENTS` and `SHOW BINLOG EVENTS` statements.
      * </pre>
      *
      * <code>REPLICATION_SLAVE = 2;</code>
@@ -77,10 +76,9 @@ public final class UserOuterClass {
     public static final int REPLICATION_SLAVE_VALUE = 2;
     /**
      * <pre>
-     * Enables display of information about the threads executing within the server
-     * (that is, information about the statements being executed by sessions).
-     * The privilege enables use of SHOW PROCESSLIST or mysqladmin processlist to see threads belonging
-     * to other accounts; you can always see your own threads. The PROCESS privilege also enables use of SHOW ENGINE.
+     * Enables display of information about the the statements currently being performed by sessions (the set of threads executing within the server).
+     * The privilege enables use of `SHOW PROCESSLIST` or `mysqladmin` processlist to see threads belonging to other users.
+     * You can always see your own threads. The `PROCESS` privilege also enables use of `SHOW ENGINE`.
      * </pre>
      *
      * <code>PROCESS = 3;</code>
@@ -308,7 +306,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Name of the MySQL user.
+     * Name of the user.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -316,7 +314,7 @@ public final class UserOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the MySQL user.
+     * Name of the user.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -326,7 +324,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
+     * ID of the cluster the user belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -334,7 +332,7 @@ public final class UserOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
+     * ID of the cluster the user belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -472,8 +470,8 @@ public final class UserOuterClass {
   }
   /**
    * <pre>
-   * A MySQL user. For more information, see
-   * the [documentation](/docs/managed-mysql/concepts).
+   * An object that represents MySQL user.
+   * See [the documentation](/docs/managed-mysql/operations/cluster-users) for details.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.User}
@@ -625,7 +623,7 @@ public final class UserOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the MySQL user.
+     * Name of the user.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -644,7 +642,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Name of the MySQL user.
+     * Name of the user.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -667,7 +665,7 @@ public final class UserOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
+     * ID of the cluster the user belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -686,7 +684,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
+     * ID of the cluster the user belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -1115,8 +1113,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * A MySQL user. For more information, see
-     * the [documentation](/docs/managed-mysql/concepts).
+     * An object that represents MySQL user.
+     * See [the documentation](/docs/managed-mysql/operations/cluster-users) for details.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.mdb.mysql.v1.User}
@@ -1359,7 +1357,7 @@ public final class UserOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the MySQL user.
+       * Name of the user.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -1378,7 +1376,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL user.
+       * Name of the user.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -1398,7 +1396,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL user.
+       * Name of the user.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -1415,7 +1413,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL user.
+       * Name of the user.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -1428,7 +1426,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL user.
+       * Name of the user.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -1448,7 +1446,7 @@ public final class UserOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
+       * ID of the cluster the user belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1467,7 +1465,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
+       * ID of the cluster the user belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1487,7 +1485,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
+       * ID of the cluster the user belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1504,7 +1502,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
+       * ID of the cluster the user belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1517,7 +1515,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
+       * ID of the cluster the user belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -2307,6 +2305,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Roles granted to the user within the database.
+     * See [the documentation](/docs/managed-mysql/operations/grant) for details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -2315,6 +2314,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Roles granted to the user within the database.
+     * See [the documentation](/docs/managed-mysql/operations/grant) for details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -2323,6 +2323,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Roles granted to the user within the database.
+     * See [the documentation](/docs/managed-mysql/operations/grant) for details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -2331,6 +2332,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Roles granted to the user within the database.
+     * See [the documentation](/docs/managed-mysql/operations/grant) for details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -2340,6 +2342,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Roles granted to the user within the database.
+     * See [the documentation](/docs/managed-mysql/operations/grant) for details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -2478,7 +2481,7 @@ public final class UserOuterClass {
       ALTER(2),
       /**
        * <pre>
-       * Altering stored routines (stored procedures and functions).
+       * Altering stored routines and functions.
        * </pre>
        *
        * <code>ALTER_ROUTINE = 3;</code>
@@ -2566,7 +2569,7 @@ public final class UserOuterClass {
       INSERT(13),
       /**
        * <pre>
-       * Using LOCK TABLES statement for tables available with SELECT privilege.
+       * Using `LOCK TABLES` statement for tables available with `SELECT` privilege.
        * </pre>
        *
        * <code>LOCK_TABLES = 14;</code>
@@ -2575,9 +2578,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Selecting rows from tables.
-       * Some SELECT statements can be allowed without the SELECT privilege. All
-       * statements that read column values require the SELECT privilege. See
-       * details in [MySQL documentation](https://dev.mysql.com/doc/refman/5.7/en/privileges-provided.html#priv_select).
+       * Some `SELECT` statements can be allowed without the `SELECT` privilege. All statements that read column values require the `SELECT` privilege.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/privileges-provided.html#priv_select) for details.
        * </pre>
        *
        * <code>SELECT = 15;</code>
@@ -2585,7 +2587,7 @@ public final class UserOuterClass {
       SELECT(15),
       /**
        * <pre>
-       * Using the SHOW CREATE VIEW statement. Also needed for views used with EXPLAIN.
+       * Using the `SHOW CREATE VIEW` statement. Also needed for views used with `EXPLAIN`.
        * </pre>
        *
        * <code>SHOW_VIEW = 16;</code>
@@ -2640,7 +2642,7 @@ public final class UserOuterClass {
       public static final int ALTER_VALUE = 2;
       /**
        * <pre>
-       * Altering stored routines (stored procedures and functions).
+       * Altering stored routines and functions.
        * </pre>
        *
        * <code>ALTER_ROUTINE = 3;</code>
@@ -2728,7 +2730,7 @@ public final class UserOuterClass {
       public static final int INSERT_VALUE = 13;
       /**
        * <pre>
-       * Using LOCK TABLES statement for tables available with SELECT privilege.
+       * Using `LOCK TABLES` statement for tables available with `SELECT` privilege.
        * </pre>
        *
        * <code>LOCK_TABLES = 14;</code>
@@ -2737,9 +2739,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Selecting rows from tables.
-       * Some SELECT statements can be allowed without the SELECT privilege. All
-       * statements that read column values require the SELECT privilege. See
-       * details in [MySQL documentation](https://dev.mysql.com/doc/refman/5.7/en/privileges-provided.html#priv_select).
+       * Some `SELECT` statements can be allowed without the `SELECT` privilege. All statements that read column values require the `SELECT` privilege.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/privileges-provided.html#priv_select) for details.
        * </pre>
        *
        * <code>SELECT = 15;</code>
@@ -2747,7 +2748,7 @@ public final class UserOuterClass {
       public static final int SELECT_VALUE = 15;
       /**
        * <pre>
-       * Using the SHOW CREATE VIEW statement. Also needed for views used with EXPLAIN.
+       * Using the `SHOW CREATE VIEW` statement. Also needed for views used with `EXPLAIN`.
        * </pre>
        *
        * <code>SHOW_VIEW = 16;</code>
@@ -2927,6 +2928,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Roles granted to the user within the database.
+     * See [the documentation](/docs/managed-mysql/operations/grant) for details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -2938,6 +2940,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Roles granted to the user within the database.
+     * See [the documentation](/docs/managed-mysql/operations/grant) for details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -2948,6 +2951,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Roles granted to the user within the database.
+     * See [the documentation](/docs/managed-mysql/operations/grant) for details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -2958,6 +2962,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Roles granted to the user within the database.
+     * See [the documentation](/docs/managed-mysql/operations/grant) for details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -2969,6 +2974,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Roles granted to the user within the database.
+     * See [the documentation](/docs/managed-mysql/operations/grant) for details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -3427,6 +3433,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Roles granted to the user within the database.
+       * See [the documentation](/docs/managed-mysql/operations/grant) for details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -3438,6 +3445,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Roles granted to the user within the database.
+       * See [the documentation](/docs/managed-mysql/operations/grant) for details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -3448,6 +3456,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Roles granted to the user within the database.
+       * See [the documentation](/docs/managed-mysql/operations/grant) for details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -3458,6 +3467,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Roles granted to the user within the database.
+       * See [the documentation](/docs/managed-mysql/operations/grant) for details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -3475,6 +3485,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Roles granted to the user within the database.
+       * See [the documentation](/docs/managed-mysql/operations/grant) for details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -3491,6 +3502,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Roles granted to the user within the database.
+       * See [the documentation](/docs/managed-mysql/operations/grant) for details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -3507,6 +3519,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Roles granted to the user within the database.
+       * See [the documentation](/docs/managed-mysql/operations/grant) for details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -3520,6 +3533,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Roles granted to the user within the database.
+       * See [the documentation](/docs/managed-mysql/operations/grant) for details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -3531,6 +3545,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Roles granted to the user within the database.
+       * See [the documentation](/docs/managed-mysql/operations/grant) for details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -3541,6 +3556,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Roles granted to the user within the database.
+       * See [the documentation](/docs/managed-mysql/operations/grant) for details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -3555,6 +3571,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Roles granted to the user within the database.
+       * See [the documentation](/docs/managed-mysql/operations/grant) for details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -3568,6 +3585,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Roles granted to the user within the database.
+       * See [the documentation](/docs/managed-mysql/operations/grant) for details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission.Privilege roles = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
@@ -5069,7 +5087,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Name of the MySQL user.
+     * Name of the user.
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=32"];</code>
@@ -5077,7 +5095,7 @@ public final class UserOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the MySQL user.
+     * Name of the user.
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=32"];</code>
@@ -5087,7 +5105,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Password of the MySQL user.
+     * Password of the user.
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -5095,7 +5113,7 @@ public final class UserOuterClass {
     java.lang.String getPassword();
     /**
      * <pre>
-     * Password of the MySQL user.
+     * Password of the user.
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -5105,7 +5123,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions granted to the user to access specific databases.
+     * One permission per database.
+     * When a permission for a database is set, the user will have access to the database.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -5114,7 +5134,9 @@ public final class UserOuterClass {
         getPermissionsList();
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions granted to the user to access specific databases.
+     * One permission per database.
+     * When a permission for a database is set, the user will have access to the database.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -5122,7 +5144,9 @@ public final class UserOuterClass {
     yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission getPermissions(int index);
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions granted to the user to access specific databases.
+     * One permission per database.
+     * When a permission for a database is set, the user will have access to the database.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -5130,7 +5154,9 @@ public final class UserOuterClass {
     int getPermissionsCount();
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions granted to the user to access specific databases.
+     * One permission per database.
+     * When a permission for a database is set, the user will have access to the database.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -5139,7 +5165,9 @@ public final class UserOuterClass {
         getPermissionsOrBuilderList();
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions granted to the user to access specific databases.
+     * One permission per database.
+     * When a permission for a database is set, the user will have access to the database.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -5381,7 +5409,7 @@ public final class UserOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the MySQL user.
+     * Name of the user.
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=32"];</code>
@@ -5400,7 +5428,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Name of the MySQL user.
+     * Name of the user.
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=32"];</code>
@@ -5423,7 +5451,7 @@ public final class UserOuterClass {
     private volatile java.lang.Object password_;
     /**
      * <pre>
-     * Password of the MySQL user.
+     * Password of the user.
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -5442,7 +5470,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Password of the MySQL user.
+     * Password of the user.
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -5465,7 +5493,9 @@ public final class UserOuterClass {
     private java.util.List<yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission> permissions_;
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions granted to the user to access specific databases.
+     * One permission per database.
+     * When a permission for a database is set, the user will have access to the database.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -5475,7 +5505,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions granted to the user to access specific databases.
+     * One permission per database.
+     * When a permission for a database is set, the user will have access to the database.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -5486,7 +5518,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions granted to the user to access specific databases.
+     * One permission per database.
+     * When a permission for a database is set, the user will have access to the database.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -5496,7 +5530,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions granted to the user to access specific databases.
+     * One permission per database.
+     * When a permission for a database is set, the user will have access to the database.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -5506,7 +5542,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions granted to the user to access specific databases.
+     * One permission per database.
+     * When a permission for a database is set, the user will have access to the database.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -6110,7 +6148,7 @@ public final class UserOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the MySQL user.
+       * Name of the user.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=32"];</code>
@@ -6129,7 +6167,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL user.
+       * Name of the user.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=32"];</code>
@@ -6149,7 +6187,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL user.
+       * Name of the user.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=32"];</code>
@@ -6166,7 +6204,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL user.
+       * Name of the user.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=32"];</code>
@@ -6179,7 +6217,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL user.
+       * Name of the user.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=32"];</code>
@@ -6199,7 +6237,7 @@ public final class UserOuterClass {
       private java.lang.Object password_ = "";
       /**
        * <pre>
-       * Password of the MySQL user.
+       * Password of the user.
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -6218,7 +6256,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Password of the MySQL user.
+       * Password of the user.
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -6238,7 +6276,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Password of the MySQL user.
+       * Password of the user.
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -6255,7 +6293,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Password of the MySQL user.
+       * Password of the user.
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -6268,7 +6306,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Password of the MySQL user.
+       * Password of the user.
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -6299,7 +6337,9 @@ public final class UserOuterClass {
 
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions granted to the user to access specific databases.
+       * One permission per database.
+       * When a permission for a database is set, the user will have access to the database.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -6313,7 +6353,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions granted to the user to access specific databases.
+       * One permission per database.
+       * When a permission for a database is set, the user will have access to the database.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -6327,7 +6369,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions granted to the user to access specific databases.
+       * One permission per database.
+       * When a permission for a database is set, the user will have access to the database.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -6341,7 +6385,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions granted to the user to access specific databases.
+       * One permission per database.
+       * When a permission for a database is set, the user will have access to the database.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -6362,7 +6408,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions granted to the user to access specific databases.
+       * One permission per database.
+       * When a permission for a database is set, the user will have access to the database.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -6380,7 +6428,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions granted to the user to access specific databases.
+       * One permission per database.
+       * When a permission for a database is set, the user will have access to the database.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -6400,7 +6450,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions granted to the user to access specific databases.
+       * One permission per database.
+       * When a permission for a database is set, the user will have access to the database.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -6421,7 +6473,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions granted to the user to access specific databases.
+       * One permission per database.
+       * When a permission for a database is set, the user will have access to the database.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -6439,7 +6493,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions granted to the user to access specific databases.
+       * One permission per database.
+       * When a permission for a database is set, the user will have access to the database.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -6457,7 +6513,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions granted to the user to access specific databases.
+       * One permission per database.
+       * When a permission for a database is set, the user will have access to the database.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -6476,7 +6534,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions granted to the user to access specific databases.
+       * One permission per database.
+       * When a permission for a database is set, the user will have access to the database.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -6493,7 +6553,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions granted to the user to access specific databases.
+       * One permission per database.
+       * When a permission for a database is set, the user will have access to the database.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -6510,7 +6572,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions granted to the user to access specific databases.
+       * One permission per database.
+       * When a permission for a database is set, the user will have access to the database.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -6521,7 +6585,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions granted to the user to access specific databases.
+       * One permission per database.
+       * When a permission for a database is set, the user will have access to the database.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -6535,7 +6601,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions granted to the user to access specific databases.
+       * One permission per database.
+       * When a permission for a database is set, the user will have access to the database.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -6550,7 +6618,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions granted to the user to access specific databases.
+       * One permission per database.
+       * When a permission for a database is set, the user will have access to the database.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -6561,7 +6631,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions granted to the user to access specific databases.
+       * One permission per database.
+       * When a permission for a database is set, the user will have access to the database.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>
@@ -6573,7 +6645,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions granted to the user to access specific databases.
+       * One permission per database.
+       * When a permission for a database is set, the user will have access to the database.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Permission permissions = 3;</code>

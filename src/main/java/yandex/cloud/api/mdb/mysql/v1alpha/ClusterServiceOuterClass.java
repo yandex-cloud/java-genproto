@@ -6716,7 +6716,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL cluster should be updated.
+     * Field mask that specifies which settings of the MySQL cluster should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6724,7 +6724,7 @@ public final class ClusterServiceOuterClass {
     boolean hasUpdateMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL cluster should be updated.
+     * Field mask that specifies which settings of the MySQL cluster should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6732,7 +6732,7 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.FieldMask getUpdateMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL cluster should be updated.
+     * Field mask that specifies which settings of the MySQL cluster should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7061,7 +7061,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.FieldMask updateMask_;
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL cluster should be updated.
+     * Field mask that specifies which settings of the MySQL cluster should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7071,7 +7071,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL cluster should be updated.
+     * Field mask that specifies which settings of the MySQL cluster should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7081,7 +7081,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL cluster should be updated.
+     * Field mask that specifies which settings of the MySQL cluster should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7860,7 +7860,7 @@ public final class ClusterServiceOuterClass {
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL cluster should be updated.
+       * Field mask that specifies which settings of the MySQL cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7870,7 +7870,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL cluster should be updated.
+       * Field mask that specifies which settings of the MySQL cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7884,7 +7884,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL cluster should be updated.
+       * Field mask that specifies which settings of the MySQL cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7904,7 +7904,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL cluster should be updated.
+       * Field mask that specifies which settings of the MySQL cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7922,7 +7922,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL cluster should be updated.
+       * Field mask that specifies which settings of the MySQL cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7944,7 +7944,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL cluster should be updated.
+       * Field mask that specifies which settings of the MySQL cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7962,7 +7962,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL cluster should be updated.
+       * Field mask that specifies which settings of the MySQL cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7974,7 +7974,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL cluster should be updated.
+       * Field mask that specifies which settings of the MySQL cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7989,7 +7989,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL cluster should be updated.
+       * Field mask that specifies which settings of the MySQL cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>

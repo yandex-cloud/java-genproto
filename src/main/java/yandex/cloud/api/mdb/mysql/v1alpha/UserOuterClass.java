@@ -100,8 +100,7 @@ public final class UserOuterClass {
   }
   /**
    * <pre>
-   * A MySQL user. For more information, see
-   * the [documentation](/docs/managed-mysql/concepts).
+   * A MySQL user. For more information, see the [documentation](/docs/managed-mysql/concepts).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1alpha.User}
@@ -521,8 +520,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * A MySQL user. For more information, see
-     * the [documentation](/docs/managed-mysql/concepts).
+     * A MySQL user. For more information, see the [documentation](/docs/managed-mysql/concepts).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.mdb.mysql.v1alpha.User}
@@ -1560,9 +1558,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Selecting rows from tables.
-       * Some SELECT statements can be allowed without the SELECT privilege. All
-       * statements that read column values require the SELECT privilege. See
-       * details in [MySQL documentation](https://dev.mysql.com/doc/refman/5.7/en/privileges-provided.html#priv_select).
+       * Some SELECT statements can be allowed without the SELECT privilege. All statements that read column values require the SELECT privilege. See details in [MySQL documentation](https://dev.mysql.com/doc/refman/5.7/en/privileges-provided.html#priv_select).
        * </pre>
        *
        * <code>SELECT = 15;</code>
@@ -1714,9 +1710,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Selecting rows from tables.
-       * Some SELECT statements can be allowed without the SELECT privilege. All
-       * statements that read column values require the SELECT privilege. See
-       * details in [MySQL documentation](https://dev.mysql.com/doc/refman/5.7/en/privileges-provided.html#priv_select).
+       * Some SELECT statements can be allowed without the SELECT privilege. All statements that read column values require the SELECT privilege. See details in [MySQL documentation](https://dev.mysql.com/doc/refman/5.7/en/privileges-provided.html#priv_select).
        * </pre>
        *
        * <code>SELECT = 15;</code>

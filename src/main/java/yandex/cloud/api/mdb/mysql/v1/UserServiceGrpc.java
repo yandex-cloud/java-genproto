@@ -18,6 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  * <pre>
  * A set of methods for managing MySQL users.
+ * See [the documentation](/docs/managed-mysql/operations/cluster-users) for details.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -280,14 +281,14 @@ public final class UserServiceGrpc {
   /**
    * <pre>
    * A set of methods for managing MySQL users.
+   * See [the documentation](/docs/managed-mysql/operations/cluster-users) for details.
    * </pre>
    */
   public static abstract class UserServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Returns the specified MySQL user.
-     * To get the list of available MySQL users, make a [List] request.
+     * Retrieves information about the specified user.
      * </pre>
      */
     public void get(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.GetUserRequest request,
@@ -297,7 +298,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of MySQL users in the specified cluster.
+     * Retrieves the list of users in a cluster.
      * </pre>
      */
     public void list(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.ListUsersRequest request,
@@ -307,7 +308,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Creates a MySQL user in the specified cluster.
+     * Creates a user in a cluster.
      * </pre>
      */
     public void create(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.CreateUserRequest request,
@@ -317,7 +318,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Modifies the specified MySQL user.
+     * Updates a user in a cluster.
      * </pre>
      */
     public void update(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.UpdateUserRequest request,
@@ -327,7 +328,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified MySQL user.
+     * Deletes a user in a cluster.
      * </pre>
      */
     public void delete(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.DeleteUserRequest request,
@@ -337,7 +338,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Grants a permission to the specified MySQL user.
+     * Grants permission to access a database to a user in a cluster.
      * </pre>
      */
     public void grantPermission(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.GrantUserPermissionRequest request,
@@ -347,7 +348,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Revokes a permission from the specified MySQL user.
+     * Revokes permission to access a database from a user in a cluster.
      * </pre>
      */
     public void revokePermission(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.RevokeUserPermissionRequest request,
@@ -413,6 +414,7 @@ public final class UserServiceGrpc {
   /**
    * <pre>
    * A set of methods for managing MySQL users.
+   * See [the documentation](/docs/managed-mysql/operations/cluster-users) for details.
    * </pre>
    */
   public static final class UserServiceStub extends io.grpc.stub.AbstractStub<UserServiceStub> {
@@ -433,8 +435,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified MySQL user.
-     * To get the list of available MySQL users, make a [List] request.
+     * Retrieves information about the specified user.
      * </pre>
      */
     public void get(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.GetUserRequest request,
@@ -445,7 +446,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of MySQL users in the specified cluster.
+     * Retrieves the list of users in a cluster.
      * </pre>
      */
     public void list(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.ListUsersRequest request,
@@ -456,7 +457,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Creates a MySQL user in the specified cluster.
+     * Creates a user in a cluster.
      * </pre>
      */
     public void create(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.CreateUserRequest request,
@@ -467,7 +468,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Modifies the specified MySQL user.
+     * Updates a user in a cluster.
      * </pre>
      */
     public void update(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.UpdateUserRequest request,
@@ -478,7 +479,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified MySQL user.
+     * Deletes a user in a cluster.
      * </pre>
      */
     public void delete(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.DeleteUserRequest request,
@@ -489,7 +490,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Grants a permission to the specified MySQL user.
+     * Grants permission to access a database to a user in a cluster.
      * </pre>
      */
     public void grantPermission(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.GrantUserPermissionRequest request,
@@ -500,7 +501,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Revokes a permission from the specified MySQL user.
+     * Revokes permission to access a database from a user in a cluster.
      * </pre>
      */
     public void revokePermission(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.RevokeUserPermissionRequest request,
@@ -513,6 +514,7 @@ public final class UserServiceGrpc {
   /**
    * <pre>
    * A set of methods for managing MySQL users.
+   * See [the documentation](/docs/managed-mysql/operations/cluster-users) for details.
    * </pre>
    */
   public static final class UserServiceBlockingStub extends io.grpc.stub.AbstractStub<UserServiceBlockingStub> {
@@ -533,8 +535,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified MySQL user.
-     * To get the list of available MySQL users, make a [List] request.
+     * Retrieves information about the specified user.
      * </pre>
      */
     public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.User get(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.GetUserRequest request) {
@@ -544,7 +545,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of MySQL users in the specified cluster.
+     * Retrieves the list of users in a cluster.
      * </pre>
      */
     public yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.ListUsersResponse list(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.ListUsersRequest request) {
@@ -554,7 +555,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Creates a MySQL user in the specified cluster.
+     * Creates a user in a cluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.CreateUserRequest request) {
@@ -564,7 +565,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Modifies the specified MySQL user.
+     * Updates a user in a cluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.UpdateUserRequest request) {
@@ -574,7 +575,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified MySQL user.
+     * Deletes a user in a cluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.DeleteUserRequest request) {
@@ -584,7 +585,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Grants a permission to the specified MySQL user.
+     * Grants permission to access a database to a user in a cluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation grantPermission(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.GrantUserPermissionRequest request) {
@@ -594,7 +595,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Revokes a permission from the specified MySQL user.
+     * Revokes permission to access a database from a user in a cluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation revokePermission(yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.RevokeUserPermissionRequest request) {
@@ -606,6 +607,7 @@ public final class UserServiceGrpc {
   /**
    * <pre>
    * A set of methods for managing MySQL users.
+   * See [the documentation](/docs/managed-mysql/operations/cluster-users) for details.
    * </pre>
    */
   public static final class UserServiceFutureStub extends io.grpc.stub.AbstractStub<UserServiceFutureStub> {
@@ -626,8 +628,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified MySQL user.
-     * To get the list of available MySQL users, make a [List] request.
+     * Retrieves information about the specified user.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.mysql.v1.UserOuterClass.User> get(
@@ -638,7 +639,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of MySQL users in the specified cluster.
+     * Retrieves the list of users in a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.mysql.v1.UserServiceOuterClass.ListUsersResponse> list(
@@ -649,7 +650,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Creates a MySQL user in the specified cluster.
+     * Creates a user in a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
@@ -660,7 +661,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Modifies the specified MySQL user.
+     * Updates a user in a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
@@ -671,7 +672,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified MySQL user.
+     * Deletes a user in a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
@@ -682,7 +683,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Grants a permission to the specified MySQL user.
+     * Grants permission to access a database to a user in a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> grantPermission(
@@ -693,7 +694,7 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Revokes a permission from the specified MySQL user.
+     * Revokes permission to access a database from a user in a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> revokePermission(

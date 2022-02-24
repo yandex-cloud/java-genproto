@@ -702,8 +702,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified MySQL cluster.
-     * To get the list of available MySQL clusters, make a [List] request.
+     * Retrieves information about a cluster.
      * </pre>
      */
     public void get(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.GetClusterRequest request,
@@ -713,7 +712,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of MySQL clusters that belong to the specified folder.
+     * Retrieves the list of clusters in a folder.
      * </pre>
      */
     public void list(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClustersRequest request,
@@ -723,7 +722,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates a MySQL cluster in the specified folder.
+     * Creates a cluster in a folder.
      * </pre>
      */
     public void create(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.CreateClusterRequest request,
@@ -733,7 +732,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Modifies the specified MySQL cluster.
+     * Updates a cluster.
      * </pre>
      */
     public void update(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.UpdateClusterRequest request,
@@ -743,7 +742,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified MySQL cluster.
+     * Deletes a cluster.
      * </pre>
      */
     public void delete(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.DeleteClusterRequest request,
@@ -753,7 +752,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Starts the specified MySQL cluster.
+     * Starts a cluster.
      * </pre>
      */
     public void start(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.StartClusterRequest request,
@@ -763,7 +762,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Stops the specified MySQL cluster.
+     * Stops a cluster.
      * </pre>
      */
     public void stop(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.StopClusterRequest request,
@@ -773,7 +772,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Moves the specified MySQL cluster to the specified folder.
+     * Moves a cluster to a folder.
      * </pre>
      */
     public void move(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.MoveClusterRequest request,
@@ -783,7 +782,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates a backup for the specified MySQL cluster.
+     * Creates a backup for a cluster.
+     * To get information about a backup, make a [BackupService.Get] request.
      * </pre>
      */
     public void backup(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.BackupClusterRequest request,
@@ -793,7 +793,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates a new MySQL cluster using the specified backup.
+     * Restores a backup to a new cluster.
+     * See [the documentation](/docs/managed-mysql/concepts/backup) for details.
      * </pre>
      */
     public void restore(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RestoreClusterRequest request,
@@ -813,7 +814,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Start a manual failover on the specified MySQL cluster.
+     * Starts a manual failover for a cluster.
      * </pre>
      */
     public void startFailover(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.StartClusterFailoverRequest request,
@@ -823,7 +824,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves logs for the specified MySQL cluster.
+     * Retrieves logs for a cluster.
+     * Alternatively, logs can be streamed using [StreamLogs].
      * </pre>
      */
     public void listLogs(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClusterLogsRequest request,
@@ -833,7 +835,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Same as ListLogs but using server-side streaming. Also allows for 'tail -f' semantics.
+     * Retrieves a log stream for a cluster.
+     * This method is similar to [ListLogs], but uses server-side streaming, which allows for the `tail -f` command semantics.
      * </pre>
      */
     public void streamLogs(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.StreamClusterLogsRequest request,
@@ -843,7 +846,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of operations for the specified MySQL cluster.
+     * Retrieves a list of operations for a cluster.
      * </pre>
      */
     public void listOperations(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClusterOperationsRequest request,
@@ -853,7 +856,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of available backups for the specified MySQL cluster.
+     * Retrieves a list of backups for a cluster.
+     * To list all backups in a folder, make a [BackupService.List] request.
      * </pre>
      */
     public void listBackups(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClusterBackupsRequest request,
@@ -863,7 +867,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of hosts for the specified MySQL cluster.
+     * Retrieves a list of hosts for a cluster.
      * </pre>
      */
     public void listHosts(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClusterHostsRequest request,
@@ -873,7 +877,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates new hosts for a cluster.
+     * Adds new hosts in a cluster.
      * </pre>
      */
     public void addHosts(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.AddClusterHostsRequest request,
@@ -1070,8 +1074,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified MySQL cluster.
-     * To get the list of available MySQL clusters, make a [List] request.
+     * Retrieves information about a cluster.
      * </pre>
      */
     public void get(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.GetClusterRequest request,
@@ -1082,7 +1085,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of MySQL clusters that belong to the specified folder.
+     * Retrieves the list of clusters in a folder.
      * </pre>
      */
     public void list(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClustersRequest request,
@@ -1093,7 +1096,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates a MySQL cluster in the specified folder.
+     * Creates a cluster in a folder.
      * </pre>
      */
     public void create(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.CreateClusterRequest request,
@@ -1104,7 +1107,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Modifies the specified MySQL cluster.
+     * Updates a cluster.
      * </pre>
      */
     public void update(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.UpdateClusterRequest request,
@@ -1115,7 +1118,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified MySQL cluster.
+     * Deletes a cluster.
      * </pre>
      */
     public void delete(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.DeleteClusterRequest request,
@@ -1126,7 +1129,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Starts the specified MySQL cluster.
+     * Starts a cluster.
      * </pre>
      */
     public void start(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.StartClusterRequest request,
@@ -1137,7 +1140,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Stops the specified MySQL cluster.
+     * Stops a cluster.
      * </pre>
      */
     public void stop(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.StopClusterRequest request,
@@ -1148,7 +1151,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Moves the specified MySQL cluster to the specified folder.
+     * Moves a cluster to a folder.
      * </pre>
      */
     public void move(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.MoveClusterRequest request,
@@ -1159,7 +1162,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates a backup for the specified MySQL cluster.
+     * Creates a backup for a cluster.
+     * To get information about a backup, make a [BackupService.Get] request.
      * </pre>
      */
     public void backup(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.BackupClusterRequest request,
@@ -1170,7 +1174,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates a new MySQL cluster using the specified backup.
+     * Restores a backup to a new cluster.
+     * See [the documentation](/docs/managed-mysql/concepts/backup) for details.
      * </pre>
      */
     public void restore(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RestoreClusterRequest request,
@@ -1192,7 +1197,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Start a manual failover on the specified MySQL cluster.
+     * Starts a manual failover for a cluster.
      * </pre>
      */
     public void startFailover(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.StartClusterFailoverRequest request,
@@ -1203,7 +1208,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves logs for the specified MySQL cluster.
+     * Retrieves logs for a cluster.
+     * Alternatively, logs can be streamed using [StreamLogs].
      * </pre>
      */
     public void listLogs(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClusterLogsRequest request,
@@ -1214,7 +1220,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Same as ListLogs but using server-side streaming. Also allows for 'tail -f' semantics.
+     * Retrieves a log stream for a cluster.
+     * This method is similar to [ListLogs], but uses server-side streaming, which allows for the `tail -f` command semantics.
      * </pre>
      */
     public void streamLogs(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.StreamClusterLogsRequest request,
@@ -1225,7 +1232,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of operations for the specified MySQL cluster.
+     * Retrieves a list of operations for a cluster.
      * </pre>
      */
     public void listOperations(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClusterOperationsRequest request,
@@ -1236,7 +1243,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of available backups for the specified MySQL cluster.
+     * Retrieves a list of backups for a cluster.
+     * To list all backups in a folder, make a [BackupService.List] request.
      * </pre>
      */
     public void listBackups(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClusterBackupsRequest request,
@@ -1247,7 +1255,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of hosts for the specified MySQL cluster.
+     * Retrieves a list of hosts for a cluster.
      * </pre>
      */
     public void listHosts(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClusterHostsRequest request,
@@ -1258,7 +1266,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates new hosts for a cluster.
+     * Adds new hosts in a cluster.
      * </pre>
      */
     public void addHosts(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.AddClusterHostsRequest request,
@@ -1313,8 +1321,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified MySQL cluster.
-     * To get the list of available MySQL clusters, make a [List] request.
+     * Retrieves information about a cluster.
      * </pre>
      */
     public yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Cluster get(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.GetClusterRequest request) {
@@ -1324,7 +1331,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of MySQL clusters that belong to the specified folder.
+     * Retrieves the list of clusters in a folder.
      * </pre>
      */
     public yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClustersResponse list(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClustersRequest request) {
@@ -1334,7 +1341,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates a MySQL cluster in the specified folder.
+     * Creates a cluster in a folder.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.CreateClusterRequest request) {
@@ -1344,7 +1351,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Modifies the specified MySQL cluster.
+     * Updates a cluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.UpdateClusterRequest request) {
@@ -1354,7 +1361,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified MySQL cluster.
+     * Deletes a cluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.DeleteClusterRequest request) {
@@ -1364,7 +1371,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Starts the specified MySQL cluster.
+     * Starts a cluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation start(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.StartClusterRequest request) {
@@ -1374,7 +1381,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Stops the specified MySQL cluster.
+     * Stops a cluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation stop(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.StopClusterRequest request) {
@@ -1384,7 +1391,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Moves the specified MySQL cluster to the specified folder.
+     * Moves a cluster to a folder.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.MoveClusterRequest request) {
@@ -1394,7 +1401,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates a backup for the specified MySQL cluster.
+     * Creates a backup for a cluster.
+     * To get information about a backup, make a [BackupService.Get] request.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation backup(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.BackupClusterRequest request) {
@@ -1404,7 +1412,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates a new MySQL cluster using the specified backup.
+     * Restores a backup to a new cluster.
+     * See [the documentation](/docs/managed-mysql/concepts/backup) for details.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation restore(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RestoreClusterRequest request) {
@@ -1424,7 +1433,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Start a manual failover on the specified MySQL cluster.
+     * Starts a manual failover for a cluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation startFailover(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.StartClusterFailoverRequest request) {
@@ -1434,7 +1443,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves logs for the specified MySQL cluster.
+     * Retrieves logs for a cluster.
+     * Alternatively, logs can be streamed using [StreamLogs].
      * </pre>
      */
     public yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClusterLogsResponse listLogs(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClusterLogsRequest request) {
@@ -1444,7 +1454,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Same as ListLogs but using server-side streaming. Also allows for 'tail -f' semantics.
+     * Retrieves a log stream for a cluster.
+     * This method is similar to [ListLogs], but uses server-side streaming, which allows for the `tail -f` command semantics.
      * </pre>
      */
     public java.util.Iterator<yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.StreamLogRecord> streamLogs(
@@ -1455,7 +1466,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of operations for the specified MySQL cluster.
+     * Retrieves a list of operations for a cluster.
      * </pre>
      */
     public yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClusterOperationsResponse listOperations(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClusterOperationsRequest request) {
@@ -1465,7 +1476,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of available backups for the specified MySQL cluster.
+     * Retrieves a list of backups for a cluster.
+     * To list all backups in a folder, make a [BackupService.List] request.
      * </pre>
      */
     public yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClusterBackupsResponse listBackups(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClusterBackupsRequest request) {
@@ -1475,7 +1487,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of hosts for the specified MySQL cluster.
+     * Retrieves a list of hosts for a cluster.
      * </pre>
      */
     public yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClusterHostsResponse listHosts(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClusterHostsRequest request) {
@@ -1485,7 +1497,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates new hosts for a cluster.
+     * Adds new hosts in a cluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addHosts(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.AddClusterHostsRequest request) {
@@ -1537,8 +1549,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified MySQL cluster.
-     * To get the list of available MySQL clusters, make a [List] request.
+     * Retrieves information about a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Cluster> get(
@@ -1549,7 +1560,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of MySQL clusters that belong to the specified folder.
+     * Retrieves the list of clusters in a folder.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClustersResponse> list(
@@ -1560,7 +1571,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates a MySQL cluster in the specified folder.
+     * Creates a cluster in a folder.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
@@ -1571,7 +1582,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Modifies the specified MySQL cluster.
+     * Updates a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
@@ -1582,7 +1593,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified MySQL cluster.
+     * Deletes a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
@@ -1593,7 +1604,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Starts the specified MySQL cluster.
+     * Starts a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> start(
@@ -1604,7 +1615,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Stops the specified MySQL cluster.
+     * Stops a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> stop(
@@ -1615,7 +1626,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Moves the specified MySQL cluster to the specified folder.
+     * Moves a cluster to a folder.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> move(
@@ -1626,7 +1637,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates a backup for the specified MySQL cluster.
+     * Creates a backup for a cluster.
+     * To get information about a backup, make a [BackupService.Get] request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> backup(
@@ -1637,7 +1649,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates a new MySQL cluster using the specified backup.
+     * Restores a backup to a new cluster.
+     * See [the documentation](/docs/managed-mysql/concepts/backup) for details.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> restore(
@@ -1659,7 +1672,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Start a manual failover on the specified MySQL cluster.
+     * Starts a manual failover for a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> startFailover(
@@ -1670,7 +1683,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves logs for the specified MySQL cluster.
+     * Retrieves logs for a cluster.
+     * Alternatively, logs can be streamed using [StreamLogs].
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClusterLogsResponse> listLogs(
@@ -1681,7 +1695,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of operations for the specified MySQL cluster.
+     * Retrieves a list of operations for a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> listOperations(
@@ -1692,7 +1706,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of available backups for the specified MySQL cluster.
+     * Retrieves a list of backups for a cluster.
+     * To list all backups in a folder, make a [BackupService.List] request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClusterBackupsResponse> listBackups(
@@ -1703,7 +1718,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of hosts for the specified MySQL cluster.
+     * Retrieves a list of hosts for a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.ListClusterHostsResponse> listHosts(
@@ -1714,7 +1729,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates new hosts for a cluster.
+     * Adds new hosts in a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addHosts(

@@ -20,8 +20,8 @@ public final class ResourcePresetServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the resource preset to return.
-     * To get the resource preset ID, use a [ResourcePresetService.List] request.
+     * ID of the resource preset to return information about.
+     * To get this ID, make a [ResourcePresetService.List] request.
      * </pre>
      *
      * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -29,8 +29,8 @@ public final class ResourcePresetServiceOuterClass {
     java.lang.String getResourcePresetId();
     /**
      * <pre>
-     * ID of the resource preset to return.
-     * To get the resource preset ID, use a [ResourcePresetService.List] request.
+     * ID of the resource preset to return information about.
+     * To get this ID, make a [ResourcePresetService.List] request.
      * </pre>
      *
      * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -120,8 +120,8 @@ public final class ResourcePresetServiceOuterClass {
     private volatile java.lang.Object resourcePresetId_;
     /**
      * <pre>
-     * ID of the resource preset to return.
-     * To get the resource preset ID, use a [ResourcePresetService.List] request.
+     * ID of the resource preset to return information about.
+     * To get this ID, make a [ResourcePresetService.List] request.
      * </pre>
      *
      * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -140,8 +140,8 @@ public final class ResourcePresetServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the resource preset to return.
-     * To get the resource preset ID, use a [ResourcePresetService.List] request.
+     * ID of the resource preset to return information about.
+     * To get this ID, make a [ResourcePresetService.List] request.
      * </pre>
      *
      * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -466,8 +466,8 @@ public final class ResourcePresetServiceOuterClass {
       private java.lang.Object resourcePresetId_ = "";
       /**
        * <pre>
-       * ID of the resource preset to return.
-       * To get the resource preset ID, use a [ResourcePresetService.List] request.
+       * ID of the resource preset to return information about.
+       * To get this ID, make a [ResourcePresetService.List] request.
        * </pre>
        *
        * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -486,8 +486,8 @@ public final class ResourcePresetServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the resource preset to return.
-       * To get the resource preset ID, use a [ResourcePresetService.List] request.
+       * ID of the resource preset to return information about.
+       * To get this ID, make a [ResourcePresetService.List] request.
        * </pre>
        *
        * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -507,8 +507,8 @@ public final class ResourcePresetServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the resource preset to return.
-       * To get the resource preset ID, use a [ResourcePresetService.List] request.
+       * ID of the resource preset to return information about.
+       * To get this ID, make a [ResourcePresetService.List] request.
        * </pre>
        *
        * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -525,8 +525,8 @@ public final class ResourcePresetServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the resource preset to return.
-       * To get the resource preset ID, use a [ResourcePresetService.List] request.
+       * ID of the resource preset to return information about.
+       * To get this ID, make a [ResourcePresetService.List] request.
        * </pre>
        *
        * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -539,8 +539,8 @@ public final class ResourcePresetServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the resource preset to return.
-       * To get the resource preset ID, use a [ResourcePresetService.List] request.
+       * ID of the resource preset to return information about.
+       * To get this ID, make a [ResourcePresetService.List] request.
        * </pre>
        *
        * <code>string resource_preset_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -615,9 +615,8 @@ public final class ResourcePresetServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListResourcePresetsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the API returns a [ListResourcePresetsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ResourcePresetService.List] requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -626,8 +625,8 @@ public final class ResourcePresetServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token] returned by the previous [ResourcePresetService.List] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -635,8 +634,8 @@ public final class ResourcePresetServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token] returned by the previous [ResourcePresetService.List] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -732,9 +731,8 @@ public final class ResourcePresetServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListResourcePresetsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the API returns a [ListResourcePresetsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ResourcePresetService.List] requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -747,8 +745,8 @@ public final class ResourcePresetServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token] returned by the previous [ResourcePresetService.List] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -767,8 +765,8 @@ public final class ResourcePresetServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token] returned by the previous [ResourcePresetService.List] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1111,9 +1109,8 @@ public final class ResourcePresetServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListResourcePresetsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListResourcePresetsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ResourcePresetService.List] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1123,9 +1120,8 @@ public final class ResourcePresetServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListResourcePresetsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListResourcePresetsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ResourcePresetService.List] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1138,9 +1134,8 @@ public final class ResourcePresetServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListResourcePresetsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListResourcePresetsResponse.next_page_token] that can be used to get the next page of results in the subsequent [ResourcePresetService.List] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1155,8 +1150,8 @@ public final class ResourcePresetServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token] returned by the previous [ResourcePresetService.List] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1175,8 +1170,8 @@ public final class ResourcePresetServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token] returned by the previous [ResourcePresetService.List] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1196,8 +1191,8 @@ public final class ResourcePresetServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token] returned by the previous [ResourcePresetService.List] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1214,8 +1209,8 @@ public final class ResourcePresetServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token] returned by the previous [ResourcePresetService.List] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1228,8 +1223,8 @@ public final class ResourcePresetServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token] returned by the previous [ResourcePresetService.List] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1348,10 +1343,9 @@ public final class ResourcePresetServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListResourcePresetsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListResourcePresetsRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListResourcePresetsRequest.page_size], use the [next_page_token] as the value for the [ListResourcePresetsRequest.page_token] in the subsequent [ResourcePresetService.List] request to iterate through multiple pages of results.
+     * Each of the subsequent [ResourcePresetService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1359,10 +1353,9 @@ public final class ResourcePresetServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListResourcePresetsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListResourcePresetsRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListResourcePresetsRequest.page_size], use the [next_page_token] as the value for the [ListResourcePresetsRequest.page_token] in the subsequent [ResourcePresetService.List] request to iterate through multiple pages of results.
+     * Each of the subsequent [ResourcePresetService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1521,10 +1514,9 @@ public final class ResourcePresetServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListResourcePresetsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListResourcePresetsRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListResourcePresetsRequest.page_size], use the [next_page_token] as the value for the [ListResourcePresetsRequest.page_token] in the subsequent [ResourcePresetService.List] request to iterate through multiple pages of results.
+     * Each of the subsequent [ResourcePresetService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1543,10 +1535,9 @@ public final class ResourcePresetServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListResourcePresetsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListResourcePresetsRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListResourcePresetsRequest.page_size], use the [next_page_token] as the value for the [ListResourcePresetsRequest.page_token] in the subsequent [ResourcePresetService.List] request to iterate through multiple pages of results.
+     * Each of the subsequent [ResourcePresetService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -2242,10 +2233,9 @@ public final class ResourcePresetServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListResourcePresetsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListResourcePresetsRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListResourcePresetsRequest.page_size], use the [next_page_token] as the value for the [ListResourcePresetsRequest.page_token] in the subsequent [ResourcePresetService.List] request to iterate through multiple pages of results.
+       * Each of the subsequent [ResourcePresetService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -2264,10 +2254,9 @@ public final class ResourcePresetServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListResourcePresetsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListResourcePresetsRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListResourcePresetsRequest.page_size], use the [next_page_token] as the value for the [ListResourcePresetsRequest.page_token] in the subsequent [ResourcePresetService.List] request to iterate through multiple pages of results.
+       * Each of the subsequent [ResourcePresetService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -2287,10 +2276,9 @@ public final class ResourcePresetServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListResourcePresetsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListResourcePresetsRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListResourcePresetsRequest.page_size], use the [next_page_token] as the value for the [ListResourcePresetsRequest.page_token] in the subsequent [ResourcePresetService.List] request to iterate through multiple pages of results.
+       * Each of the subsequent [ResourcePresetService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -2307,10 +2295,9 @@ public final class ResourcePresetServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListResourcePresetsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListResourcePresetsRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListResourcePresetsRequest.page_size], use the [next_page_token] as the value for the [ListResourcePresetsRequest.page_token] in the subsequent [ResourcePresetService.List] request to iterate through multiple pages of results.
+       * Each of the subsequent [ResourcePresetService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -2323,10 +2310,9 @@ public final class ResourcePresetServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListResourcePresetsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListResourcePresetsRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListResourcePresetsRequest.page_size], use the [next_page_token] as the value for the [ListResourcePresetsRequest.page_token] in the subsequent [ResourcePresetService.List] request to iterate through multiple pages of results.
+       * Each of the subsequent [ResourcePresetService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>

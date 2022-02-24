@@ -17,7 +17,8 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * A set of methods for managing MySQL databases.
+ * A set of methods for managing MySQL databases in a cluster.
+ * See [the documentation](/docs/managed-mysql/operations/databases) for details.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -183,15 +184,15 @@ public final class DatabaseServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing MySQL databases.
+   * A set of methods for managing MySQL databases in a cluster.
+   * See [the documentation](/docs/managed-mysql/operations/databases) for details.
    * </pre>
    */
   public static abstract class DatabaseServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Returns the specified MySQL database.
-     * To get the list of available MySQL databases, make a [List] request.
+     * Retrieves information about the specified database.
      * </pre>
      */
     public void get(yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.GetDatabaseRequest request,
@@ -201,7 +202,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of MySQL databases in the specified cluster.
+     * Retrieves the list of databases in a cluster.
      * </pre>
      */
     public void list(yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.ListDatabasesRequest request,
@@ -211,7 +212,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Creates a new MySQL database in the specified cluster.
+     * Creates a new database in a cluster.
      * </pre>
      */
     public void create(yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.CreateDatabaseRequest request,
@@ -221,7 +222,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified MySQL database.
+     * Deletes a database from a cluster.
      * </pre>
      */
     public void delete(yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.DeleteDatabaseRequest request,
@@ -265,7 +266,8 @@ public final class DatabaseServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing MySQL databases.
+   * A set of methods for managing MySQL databases in a cluster.
+   * See [the documentation](/docs/managed-mysql/operations/databases) for details.
    * </pre>
    */
   public static final class DatabaseServiceStub extends io.grpc.stub.AbstractStub<DatabaseServiceStub> {
@@ -286,8 +288,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified MySQL database.
-     * To get the list of available MySQL databases, make a [List] request.
+     * Retrieves information about the specified database.
      * </pre>
      */
     public void get(yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.GetDatabaseRequest request,
@@ -298,7 +299,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of MySQL databases in the specified cluster.
+     * Retrieves the list of databases in a cluster.
      * </pre>
      */
     public void list(yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.ListDatabasesRequest request,
@@ -309,7 +310,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Creates a new MySQL database in the specified cluster.
+     * Creates a new database in a cluster.
      * </pre>
      */
     public void create(yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.CreateDatabaseRequest request,
@@ -320,7 +321,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified MySQL database.
+     * Deletes a database from a cluster.
      * </pre>
      */
     public void delete(yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.DeleteDatabaseRequest request,
@@ -332,7 +333,8 @@ public final class DatabaseServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing MySQL databases.
+   * A set of methods for managing MySQL databases in a cluster.
+   * See [the documentation](/docs/managed-mysql/operations/databases) for details.
    * </pre>
    */
   public static final class DatabaseServiceBlockingStub extends io.grpc.stub.AbstractStub<DatabaseServiceBlockingStub> {
@@ -353,8 +355,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified MySQL database.
-     * To get the list of available MySQL databases, make a [List] request.
+     * Retrieves information about the specified database.
      * </pre>
      */
     public yandex.cloud.api.mdb.mysql.v1.DatabaseOuterClass.Database get(yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.GetDatabaseRequest request) {
@@ -364,7 +365,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of MySQL databases in the specified cluster.
+     * Retrieves the list of databases in a cluster.
      * </pre>
      */
     public yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.ListDatabasesResponse list(yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.ListDatabasesRequest request) {
@@ -374,7 +375,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Creates a new MySQL database in the specified cluster.
+     * Creates a new database in a cluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.CreateDatabaseRequest request) {
@@ -384,7 +385,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified MySQL database.
+     * Deletes a database from a cluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.DeleteDatabaseRequest request) {
@@ -395,7 +396,8 @@ public final class DatabaseServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing MySQL databases.
+   * A set of methods for managing MySQL databases in a cluster.
+   * See [the documentation](/docs/managed-mysql/operations/databases) for details.
    * </pre>
    */
   public static final class DatabaseServiceFutureStub extends io.grpc.stub.AbstractStub<DatabaseServiceFutureStub> {
@@ -416,8 +418,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified MySQL database.
-     * To get the list of available MySQL databases, make a [List] request.
+     * Retrieves information about the specified database.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.mysql.v1.DatabaseOuterClass.Database> get(
@@ -428,7 +429,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of MySQL databases in the specified cluster.
+     * Retrieves the list of databases in a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.ListDatabasesResponse> list(
@@ -439,7 +440,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Creates a new MySQL database in the specified cluster.
+     * Creates a new database in a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
@@ -450,7 +451,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified MySQL database.
+     * Deletes a database from a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(

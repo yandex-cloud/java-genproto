@@ -1,4 +1,4 @@
-package yandex.cloud.api.mdb.mysql.v1;
+package yandex.cloud.api.mdb.greenplum.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
@@ -17,44 +17,43 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * A set of methods for managing MySQL resource presets.
- * See [the documentation](/docs/managed-mysql/concepts/instance-types) for details.
+ * A set of methods for managing resource presets.
  * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.22.0)",
-    comments = "Source: yandex/cloud/mdb/mysql/v1/resource_preset_service.proto")
+    comments = "Source: yandex/cloud/mdb/greenplum/v1/resource_preset_service.proto")
 public final class ResourcePresetServiceGrpc {
 
   private ResourcePresetServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "yandex.cloud.mdb.mysql.v1.ResourcePresetService";
+  public static final String SERVICE_NAME = "yandex.cloud.mdb.greenplum.v1.ResourcePresetService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest,
-      yandex.cloud.api.mdb.mysql.v1.ResourcePresetOuterClass.ResourcePreset> getGetMethod;
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest,
+      yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset> getGetMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Get",
-      requestType = yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest.class,
-      responseType = yandex.cloud.api.mdb.mysql.v1.ResourcePresetOuterClass.ResourcePreset.class,
+      requestType = yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest.class,
+      responseType = yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest,
-      yandex.cloud.api.mdb.mysql.v1.ResourcePresetOuterClass.ResourcePreset> getGetMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest, yandex.cloud.api.mdb.mysql.v1.ResourcePresetOuterClass.ResourcePreset> getGetMethod;
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest,
+      yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset> getGetMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest, yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset> getGetMethod;
     if ((getGetMethod = ResourcePresetServiceGrpc.getGetMethod) == null) {
       synchronized (ResourcePresetServiceGrpc.class) {
         if ((getGetMethod = ResourcePresetServiceGrpc.getGetMethod) == null) {
           ResourcePresetServiceGrpc.getGetMethod = getGetMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest, yandex.cloud.api.mdb.mysql.v1.ResourcePresetOuterClass.ResourcePreset>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest, yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.mysql.v1.ResourcePresetService", "Get"))
+                  "yandex.cloud.mdb.greenplum.v1.ResourcePresetService", "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.mysql.v1.ResourcePresetOuterClass.ResourcePreset.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.getDefaultInstance()))
                   .setSchemaDescriptor(new ResourcePresetServiceMethodDescriptorSupplier("Get"))
                   .build();
           }
@@ -63,30 +62,30 @@ public final class ResourcePresetServiceGrpc {
      return getGetMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest,
-      yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse> getListMethod;
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest,
+      yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse> getListMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "List",
-      requestType = yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest.class,
-      responseType = yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse.class,
+      requestType = yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest.class,
+      responseType = yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest,
-      yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse> getListMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest, yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse> getListMethod;
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest,
+      yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse> getListMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest, yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse> getListMethod;
     if ((getListMethod = ResourcePresetServiceGrpc.getListMethod) == null) {
       synchronized (ResourcePresetServiceGrpc.class) {
         if ((getListMethod = ResourcePresetServiceGrpc.getListMethod) == null) {
           ResourcePresetServiceGrpc.getListMethod = getListMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest, yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest, yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.mdb.mysql.v1.ResourcePresetService", "List"))
+                  "yandex.cloud.mdb.greenplum.v1.ResourcePresetService", "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse.getDefaultInstance()))
+                  yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new ResourcePresetServiceMethodDescriptorSupplier("List"))
                   .build();
           }
@@ -120,19 +119,19 @@ public final class ResourcePresetServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing MySQL resource presets.
-   * See [the documentation](/docs/managed-mysql/concepts/instance-types) for details.
+   * A set of methods for managing resource presets.
    * </pre>
    */
   public static abstract class ResourcePresetServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Retrieves information about a resource preset.
+     * Returns the specified resource preset.
+     * To get the list of available resource presets, make a [List] request.
      * </pre>
      */
-    public void get(yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.mysql.v1.ResourcePresetOuterClass.ResourcePreset> responseObserver) {
+    public void get(yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset> responseObserver) {
       asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
@@ -141,8 +140,8 @@ public final class ResourcePresetServiceGrpc {
      * Retrieves the list of available resource presets.
      * </pre>
      */
-    public void list(yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse> responseObserver) {
+    public void list(yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
@@ -152,15 +151,15 @@ public final class ResourcePresetServiceGrpc {
             getGetMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest,
-                yandex.cloud.api.mdb.mysql.v1.ResourcePresetOuterClass.ResourcePreset>(
+                yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest,
+                yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset>(
                   this, METHODID_GET)))
           .addMethod(
             getListMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest,
-                yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse>(
+                yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest,
+                yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse>(
                   this, METHODID_LIST)))
           .build();
     }
@@ -168,8 +167,7 @@ public final class ResourcePresetServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing MySQL resource presets.
-   * See [the documentation](/docs/managed-mysql/concepts/instance-types) for details.
+   * A set of methods for managing resource presets.
    * </pre>
    */
   public static final class ResourcePresetServiceStub extends io.grpc.stub.AbstractStub<ResourcePresetServiceStub> {
@@ -190,11 +188,12 @@ public final class ResourcePresetServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves information about a resource preset.
+     * Returns the specified resource preset.
+     * To get the list of available resource presets, make a [List] request.
      * </pre>
      */
-    public void get(yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.mysql.v1.ResourcePresetOuterClass.ResourcePreset> responseObserver) {
+    public void get(yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
@@ -204,8 +203,8 @@ public final class ResourcePresetServiceGrpc {
      * Retrieves the list of available resource presets.
      * </pre>
      */
-    public void list(yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse> responseObserver) {
+    public void list(yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
@@ -213,8 +212,7 @@ public final class ResourcePresetServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing MySQL resource presets.
-   * See [the documentation](/docs/managed-mysql/concepts/instance-types) for details.
+   * A set of methods for managing resource presets.
    * </pre>
    */
   public static final class ResourcePresetServiceBlockingStub extends io.grpc.stub.AbstractStub<ResourcePresetServiceBlockingStub> {
@@ -235,10 +233,11 @@ public final class ResourcePresetServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves information about a resource preset.
+     * Returns the specified resource preset.
+     * To get the list of available resource presets, make a [List] request.
      * </pre>
      */
-    public yandex.cloud.api.mdb.mysql.v1.ResourcePresetOuterClass.ResourcePreset get(yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest request) {
+    public yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset get(yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
@@ -248,7 +247,7 @@ public final class ResourcePresetServiceGrpc {
      * Retrieves the list of available resource presets.
      * </pre>
      */
-    public yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse list(yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest request) {
+    public yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse list(yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
@@ -256,8 +255,7 @@ public final class ResourcePresetServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing MySQL resource presets.
-   * See [the documentation](/docs/managed-mysql/concepts/instance-types) for details.
+   * A set of methods for managing resource presets.
    * </pre>
    */
   public static final class ResourcePresetServiceFutureStub extends io.grpc.stub.AbstractStub<ResourcePresetServiceFutureStub> {
@@ -278,11 +276,12 @@ public final class ResourcePresetServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves information about a resource preset.
+     * Returns the specified resource preset.
+     * To get the list of available resource presets, make a [List] request.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.mysql.v1.ResourcePresetOuterClass.ResourcePreset> get(
-        yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset> get(
+        yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
@@ -292,8 +291,8 @@ public final class ResourcePresetServiceGrpc {
      * Retrieves the list of available resource presets.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse> list(
-        yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse> list(
+        yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
@@ -320,12 +319,12 @@ public final class ResourcePresetServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET:
-          serviceImpl.get((yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.mysql.v1.ResourcePresetOuterClass.ResourcePreset>) responseObserver);
+          serviceImpl.get((yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset>) responseObserver);
           break;
         case METHODID_LIST:
-          serviceImpl.list((yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse>) responseObserver);
+          serviceImpl.list((yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -349,7 +348,7 @@ public final class ResourcePresetServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return yandex.cloud.api.mdb.mysql.v1.ResourcePresetServiceOuterClass.getDescriptor();
+      return yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.getDescriptor();
     }
 
     @java.lang.Override

@@ -56,7 +56,7 @@ public final class BackupOuterClass {
 
     /**
      * <pre>
-     * Comment for API reference generated automatically.
+     * Creation timestamp (the time when the backup operation was completed).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -64,7 +64,7 @@ public final class BackupOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Comment for API reference generated automatically.
+     * Creation timestamp (the time when the backup operation was completed).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -72,7 +72,7 @@ public final class BackupOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Comment for API reference generated automatically.
+     * Creation timestamp (the time when the backup operation was completed).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -81,7 +81,7 @@ public final class BackupOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster that the backup was created for.
+     * ID of the cluster that the backup was created for.
      * </pre>
      *
      * <code>string source_cluster_id = 4;</code>
@@ -89,7 +89,7 @@ public final class BackupOuterClass {
     java.lang.String getSourceClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster that the backup was created for.
+     * ID of the cluster that the backup was created for.
      * </pre>
      *
      * <code>string source_cluster_id = 4;</code>
@@ -99,7 +99,7 @@ public final class BackupOuterClass {
 
     /**
      * <pre>
-     * Time when the backup operation was started.
+     * Start timestamp (the time when the backup operation was started).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 5;</code>
@@ -107,7 +107,7 @@ public final class BackupOuterClass {
     boolean hasStartedAt();
     /**
      * <pre>
-     * Time when the backup operation was started.
+     * Start timestamp (the time when the backup operation was started).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 5;</code>
@@ -115,7 +115,7 @@ public final class BackupOuterClass {
     com.google.protobuf.Timestamp getStartedAt();
     /**
      * <pre>
-     * Time when the backup operation was started.
+     * Start timestamp (the time when the backup operation was started).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 5;</code>
@@ -124,8 +124,8 @@ public final class BackupOuterClass {
   }
   /**
    * <pre>
-   * A MySQL backup. For more information, see
-   * the [documentation](/docs/managed-mysql/concepts/backup).
+   * An object that represents MySQL backup.
+   * See [the documentation](/docs/managed-mysql/concepts/backup) for details.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.Backup}
@@ -333,7 +333,7 @@ public final class BackupOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Comment for API reference generated automatically.
+     * Creation timestamp (the time when the backup operation was completed).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -343,7 +343,7 @@ public final class BackupOuterClass {
     }
     /**
      * <pre>
-     * Comment for API reference generated automatically.
+     * Creation timestamp (the time when the backup operation was completed).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -353,7 +353,7 @@ public final class BackupOuterClass {
     }
     /**
      * <pre>
-     * Comment for API reference generated automatically.
+     * Creation timestamp (the time when the backup operation was completed).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -366,7 +366,7 @@ public final class BackupOuterClass {
     private volatile java.lang.Object sourceClusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster that the backup was created for.
+     * ID of the cluster that the backup was created for.
      * </pre>
      *
      * <code>string source_cluster_id = 4;</code>
@@ -385,7 +385,7 @@ public final class BackupOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster that the backup was created for.
+     * ID of the cluster that the backup was created for.
      * </pre>
      *
      * <code>string source_cluster_id = 4;</code>
@@ -408,7 +408,7 @@ public final class BackupOuterClass {
     private com.google.protobuf.Timestamp startedAt_;
     /**
      * <pre>
-     * Time when the backup operation was started.
+     * Start timestamp (the time when the backup operation was started).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 5;</code>
@@ -418,7 +418,7 @@ public final class BackupOuterClass {
     }
     /**
      * <pre>
-     * Time when the backup operation was started.
+     * Start timestamp (the time when the backup operation was started).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 5;</code>
@@ -428,7 +428,7 @@ public final class BackupOuterClass {
     }
     /**
      * <pre>
-     * Time when the backup operation was started.
+     * Start timestamp (the time when the backup operation was started).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 5;</code>
@@ -646,8 +646,8 @@ public final class BackupOuterClass {
     }
     /**
      * <pre>
-     * A MySQL backup. For more information, see
-     * the [documentation](/docs/managed-mysql/concepts/backup).
+     * An object that represents MySQL backup.
+     * See [the documentation](/docs/managed-mysql/concepts/backup) for details.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.mdb.mysql.v1.Backup}
@@ -1022,7 +1022,7 @@ public final class BackupOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Comment for API reference generated automatically.
+       * Creation timestamp (the time when the backup operation was completed).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1032,7 +1032,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Comment for API reference generated automatically.
+       * Creation timestamp (the time when the backup operation was completed).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1046,7 +1046,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Comment for API reference generated automatically.
+       * Creation timestamp (the time when the backup operation was completed).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1066,7 +1066,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Comment for API reference generated automatically.
+       * Creation timestamp (the time when the backup operation was completed).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1084,7 +1084,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Comment for API reference generated automatically.
+       * Creation timestamp (the time when the backup operation was completed).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1106,7 +1106,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Comment for API reference generated automatically.
+       * Creation timestamp (the time when the backup operation was completed).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1124,7 +1124,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Comment for API reference generated automatically.
+       * Creation timestamp (the time when the backup operation was completed).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1136,7 +1136,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Comment for API reference generated automatically.
+       * Creation timestamp (the time when the backup operation was completed).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1151,7 +1151,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Comment for API reference generated automatically.
+       * Creation timestamp (the time when the backup operation was completed).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1173,7 +1173,7 @@ public final class BackupOuterClass {
       private java.lang.Object sourceClusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster that the backup was created for.
+       * ID of the cluster that the backup was created for.
        * </pre>
        *
        * <code>string source_cluster_id = 4;</code>
@@ -1192,7 +1192,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that the backup was created for.
+       * ID of the cluster that the backup was created for.
        * </pre>
        *
        * <code>string source_cluster_id = 4;</code>
@@ -1212,7 +1212,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that the backup was created for.
+       * ID of the cluster that the backup was created for.
        * </pre>
        *
        * <code>string source_cluster_id = 4;</code>
@@ -1229,7 +1229,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that the backup was created for.
+       * ID of the cluster that the backup was created for.
        * </pre>
        *
        * <code>string source_cluster_id = 4;</code>
@@ -1242,7 +1242,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that the backup was created for.
+       * ID of the cluster that the backup was created for.
        * </pre>
        *
        * <code>string source_cluster_id = 4;</code>
@@ -1264,7 +1264,7 @@ public final class BackupOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startedAtBuilder_;
       /**
        * <pre>
-       * Time when the backup operation was started.
+       * Start timestamp (the time when the backup operation was started).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 5;</code>
@@ -1274,7 +1274,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Time when the backup operation was started.
+       * Start timestamp (the time when the backup operation was started).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 5;</code>
@@ -1288,7 +1288,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Time when the backup operation was started.
+       * Start timestamp (the time when the backup operation was started).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 5;</code>
@@ -1308,7 +1308,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Time when the backup operation was started.
+       * Start timestamp (the time when the backup operation was started).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 5;</code>
@@ -1326,7 +1326,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Time when the backup operation was started.
+       * Start timestamp (the time when the backup operation was started).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 5;</code>
@@ -1348,7 +1348,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Time when the backup operation was started.
+       * Start timestamp (the time when the backup operation was started).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 5;</code>
@@ -1366,7 +1366,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Time when the backup operation was started.
+       * Start timestamp (the time when the backup operation was started).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 5;</code>
@@ -1378,7 +1378,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Time when the backup operation was started.
+       * Start timestamp (the time when the backup operation was started).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 5;</code>
@@ -1393,7 +1393,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Time when the backup operation was started.
+       * Start timestamp (the time when the backup operation was started).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 5;</code>

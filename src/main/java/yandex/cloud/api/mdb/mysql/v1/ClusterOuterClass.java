@@ -20,8 +20,8 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster.
-     * This ID is assigned by Managed Service for MySQL at creation time.
+     * ID of the cluster.
+     * This ID is assigned by Yandex.Cloud at the time of creation.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -29,8 +29,8 @@ public final class ClusterOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the MySQL cluster.
-     * This ID is assigned by Managed Service for MySQL at creation time.
+     * ID of the cluster.
+     * This ID is assigned by Yandex.Cloud at the time of creation.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -40,7 +40,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * ID of the folder that the MySQL cluster belongs to.
+     * ID of the folder that the cluster belongs to.
      * </pre>
      *
      * <code>string folder_id = 2;</code>
@@ -48,7 +48,7 @@ public final class ClusterOuterClass {
     java.lang.String getFolderId();
     /**
      * <pre>
-     * ID of the folder that the MySQL cluster belongs to.
+     * ID of the folder that the cluster belongs to.
      * </pre>
      *
      * <code>string folder_id = 2;</code>
@@ -57,23 +57,33 @@ public final class ClusterOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Creation timestamp of the cluster.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp of the cluster.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp of the cluster.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
      * <pre>
-     * Name of the MySQL cluster.
-     * The name must be unique within the folder, comply with RFC 1035
-     * and be 1-63 characters long.
+     * Name of the cluster.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -81,9 +91,7 @@ public final class ClusterOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the MySQL cluster.
-     * The name must be unique within the folder, comply with RFC 1035
-     * and be 1-63 characters long.
+     * Name of the cluster.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -93,7 +101,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Description of the MySQL cluster. 0-256 characters long.
+     * Description of the cluster.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -101,7 +109,7 @@ public final class ClusterOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Description of the MySQL cluster. 0-256 characters long.
+     * Description of the cluster.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -111,8 +119,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs.
-     * Maximum 64 per resource.
+     * Custom labels for the cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -120,8 +127,7 @@ public final class ClusterOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs.
-     * Maximum 64 per resource.
+     * Custom labels for the cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -136,8 +142,7 @@ public final class ClusterOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs.
-     * Maximum 64 per resource.
+     * Custom labels for the cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -146,8 +151,7 @@ public final class ClusterOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs.
-     * Maximum 64 per resource.
+     * Custom labels for the cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -158,8 +162,7 @@ public final class ClusterOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs.
-     * Maximum 64 per resource.
+     * Custom labels for the cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -170,7 +173,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Deployment environment of the MySQL cluster.
+     * Deployment environment of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -178,7 +181,7 @@ public final class ClusterOuterClass {
     int getEnvironmentValue();
     /**
      * <pre>
-     * Deployment environment of the MySQL cluster.
+     * Deployment environment of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -187,7 +190,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Description of monitoring systems relevant to the MySQL cluster.
+     * Monitoring systems data that is relevant to the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -196,7 +199,7 @@ public final class ClusterOuterClass {
         getMonitoringList();
     /**
      * <pre>
-     * Description of monitoring systems relevant to the MySQL cluster.
+     * Monitoring systems data that is relevant to the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -204,7 +207,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Monitoring getMonitoring(int index);
     /**
      * <pre>
-     * Description of monitoring systems relevant to the MySQL cluster.
+     * Monitoring systems data that is relevant to the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -212,7 +215,7 @@ public final class ClusterOuterClass {
     int getMonitoringCount();
     /**
      * <pre>
-     * Description of monitoring systems relevant to the MySQL cluster.
+     * Monitoring systems data that is relevant to the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -221,7 +224,7 @@ public final class ClusterOuterClass {
         getMonitoringOrBuilderList();
     /**
      * <pre>
-     * Description of monitoring systems relevant to the MySQL cluster.
+     * Monitoring systems data that is relevant to the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -231,7 +234,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Configuration of the MySQL cluster.
+     * Configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ClusterConfig config = 9;</code>
@@ -239,7 +242,7 @@ public final class ClusterOuterClass {
     boolean hasConfig();
     /**
      * <pre>
-     * Configuration of the MySQL cluster.
+     * Configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ClusterConfig config = 9;</code>
@@ -247,7 +250,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.ClusterConfig getConfig();
     /**
      * <pre>
-     * Configuration of the MySQL cluster.
+     * Configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ClusterConfig config = 9;</code>
@@ -274,7 +277,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Aggregated cluster health.
+     * Aggregated health of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Health health = 11;</code>
@@ -282,7 +285,7 @@ public final class ClusterOuterClass {
     int getHealthValue();
     /**
      * <pre>
-     * Aggregated cluster health.
+     * Aggregated health of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Health health = 11;</code>
@@ -308,7 +311,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Maintenance window for the cluster.
+     * Maintenance window settings for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -316,7 +319,7 @@ public final class ClusterOuterClass {
     boolean hasMaintenanceWindow();
     /**
      * <pre>
-     * Maintenance window for the cluster.
+     * Maintenance window settings for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -324,7 +327,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
     /**
      * <pre>
-     * Maintenance window for the cluster.
+     * Maintenance window settings for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -358,7 +361,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * User security groups
+     * Effective list of security group IDs applied to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 15;</code>
@@ -367,7 +370,7 @@ public final class ClusterOuterClass {
         getSecurityGroupIdsList();
     /**
      * <pre>
-     * User security groups
+     * Effective list of security group IDs applied to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 15;</code>
@@ -375,7 +378,7 @@ public final class ClusterOuterClass {
     int getSecurityGroupIdsCount();
     /**
      * <pre>
-     * User security groups
+     * Effective list of security group IDs applied to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 15;</code>
@@ -383,7 +386,7 @@ public final class ClusterOuterClass {
     java.lang.String getSecurityGroupIds(int index);
     /**
      * <pre>
-     * User security groups
+     * Effective list of security group IDs applied to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 15;</code>
@@ -393,7 +396,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the cluster
+     * This option prevents unintended deletion of the cluster.
      * </pre>
      *
      * <code>bool deletion_protection = 16;</code>
@@ -402,8 +405,8 @@ public final class ClusterOuterClass {
   }
   /**
    * <pre>
-   * A MySQL cluster. For more information, see
-   * the [documentation](/docs/managed-mysql/concepts).
+   * An object that represents MySQL cluster.
+   * See [the documentation](/docs/managed-mysql/concepts) for details.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.Cluster}
@@ -652,8 +655,8 @@ public final class ClusterOuterClass {
       ENVIRONMENT_UNSPECIFIED(0),
       /**
        * <pre>
-       * Stable environment with a conservative update policy:
-       * only hotfixes are applied during regular maintenance.
+       * Environment for stable versions of your apps.
+       * A conservative update policy is in effect: only bug fixes are applied during regular maintenance.
        * </pre>
        *
        * <code>PRODUCTION = 1;</code>
@@ -661,8 +664,9 @@ public final class ClusterOuterClass {
       PRODUCTION(1),
       /**
        * <pre>
-       * Environment with more aggressive update policy: new versions
-       * are rolled out irrespective of backward compatibility.
+       * Environment for testing, including the Managed Service for MySQL itself.
+       * This environment gets new features, improvements, and bug fixes in the first place, compared to the production environment.
+       * However, not every update ensures backward compatibility.
        * </pre>
        *
        * <code>PRESTABLE = 2;</code>
@@ -677,8 +681,8 @@ public final class ClusterOuterClass {
       public static final int ENVIRONMENT_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * Stable environment with a conservative update policy:
-       * only hotfixes are applied during regular maintenance.
+       * Environment for stable versions of your apps.
+       * A conservative update policy is in effect: only bug fixes are applied during regular maintenance.
        * </pre>
        *
        * <code>PRODUCTION = 1;</code>
@@ -686,8 +690,9 @@ public final class ClusterOuterClass {
       public static final int PRODUCTION_VALUE = 1;
       /**
        * <pre>
-       * Environment with more aggressive update policy: new versions
-       * are rolled out irrespective of backward compatibility.
+       * Environment for testing, including the Managed Service for MySQL itself.
+       * This environment gets new features, improvements, and bug fixes in the first place, compared to the production environment.
+       * However, not every update ensures backward compatibility.
        * </pre>
        *
        * <code>PRESTABLE = 2;</code>
@@ -775,7 +780,7 @@ public final class ClusterOuterClass {
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * State of the cluster is unknown ([Host.health] for every host in the cluster is UNKNOWN).
+       * Health of the cluster is unknown ([Host.health] for every host in the cluster is `UNKNOWN`).
        * </pre>
        *
        * <code>HEALTH_UNKNOWN = 0;</code>
@@ -783,7 +788,7 @@ public final class ClusterOuterClass {
       HEALTH_UNKNOWN(0),
       /**
        * <pre>
-       * Cluster is alive and well ([Host.health] for every host in the cluster is ALIVE).
+       * Cluster is alive and well ([Host.health] for every host in the cluster is `ALIVE`).
        * </pre>
        *
        * <code>ALIVE = 1;</code>
@@ -791,7 +796,7 @@ public final class ClusterOuterClass {
       ALIVE(1),
       /**
        * <pre>
-       * Cluster is inoperable ([Host.health] for every host in the cluster is DEAD).
+       * Cluster is inoperable ([Host.health] for every host in the cluster is `DEAD`).
        * </pre>
        *
        * <code>DEAD = 2;</code>
@@ -799,7 +804,7 @@ public final class ClusterOuterClass {
       DEAD(2),
       /**
        * <pre>
-       * Cluster is working below capacity ([Host.health] for at least one host in the cluster is not ALIVE).
+       * Cluster is degraded ([Host.health] for at least one host in the cluster is not `ALIVE`).
        * </pre>
        *
        * <code>DEGRADED = 3;</code>
@@ -810,7 +815,7 @@ public final class ClusterOuterClass {
 
       /**
        * <pre>
-       * State of the cluster is unknown ([Host.health] for every host in the cluster is UNKNOWN).
+       * Health of the cluster is unknown ([Host.health] for every host in the cluster is `UNKNOWN`).
        * </pre>
        *
        * <code>HEALTH_UNKNOWN = 0;</code>
@@ -818,7 +823,7 @@ public final class ClusterOuterClass {
       public static final int HEALTH_UNKNOWN_VALUE = 0;
       /**
        * <pre>
-       * Cluster is alive and well ([Host.health] for every host in the cluster is ALIVE).
+       * Cluster is alive and well ([Host.health] for every host in the cluster is `ALIVE`).
        * </pre>
        *
        * <code>ALIVE = 1;</code>
@@ -826,7 +831,7 @@ public final class ClusterOuterClass {
       public static final int ALIVE_VALUE = 1;
       /**
        * <pre>
-       * Cluster is inoperable ([Host.health] for every host in the cluster is DEAD).
+       * Cluster is inoperable ([Host.health] for every host in the cluster is `DEAD`).
        * </pre>
        *
        * <code>DEAD = 2;</code>
@@ -834,7 +839,7 @@ public final class ClusterOuterClass {
       public static final int DEAD_VALUE = 2;
       /**
        * <pre>
-       * Cluster is working below capacity ([Host.health] for at least one host in the cluster is not ALIVE).
+       * Cluster is degraded ([Host.health] for at least one host in the cluster is not `ALIVE`).
        * </pre>
        *
        * <code>DEGRADED = 3;</code>
@@ -971,7 +976,7 @@ public final class ClusterOuterClass {
       STOPPING(5),
       /**
        * <pre>
-       * Cluster stopped.
+       * Cluster is stopped.
        * </pre>
        *
        * <code>STOPPED = 6;</code>
@@ -1038,7 +1043,7 @@ public final class ClusterOuterClass {
       public static final int STOPPING_VALUE = 5;
       /**
        * <pre>
-       * Cluster stopped.
+       * Cluster is stopped.
        * </pre>
        *
        * <code>STOPPED = 6;</code>
@@ -1137,8 +1142,8 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the MySQL cluster.
-     * This ID is assigned by Managed Service for MySQL at creation time.
+     * ID of the cluster.
+     * This ID is assigned by Yandex.Cloud at the time of creation.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -1157,8 +1162,8 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster.
-     * This ID is assigned by Managed Service for MySQL at creation time.
+     * ID of the cluster.
+     * This ID is assigned by Yandex.Cloud at the time of creation.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -1181,7 +1186,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object folderId_;
     /**
      * <pre>
-     * ID of the folder that the MySQL cluster belongs to.
+     * ID of the folder that the cluster belongs to.
      * </pre>
      *
      * <code>string folder_id = 2;</code>
@@ -1200,7 +1205,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the folder that the MySQL cluster belongs to.
+     * ID of the folder that the cluster belongs to.
      * </pre>
      *
      * <code>string folder_id = 2;</code>
@@ -1222,18 +1227,30 @@ public final class ClusterOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp of the cluster.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp of the cluster.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp of the cluster.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1244,9 +1261,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the MySQL cluster.
-     * The name must be unique within the folder, comply with RFC 1035
-     * and be 1-63 characters long.
+     * Name of the cluster.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -1265,9 +1280,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Name of the MySQL cluster.
-     * The name must be unique within the folder, comply with RFC 1035
-     * and be 1-63 characters long.
+     * Name of the cluster.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -1290,7 +1303,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Description of the MySQL cluster. 0-256 characters long.
+     * Description of the cluster.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -1309,7 +1322,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Description of the MySQL cluster. 0-256 characters long.
+     * Description of the cluster.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -1356,8 +1369,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs.
-     * Maximum 64 per resource.
+     * Custom labels for the cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1377,8 +1389,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs.
-     * Maximum 64 per resource.
+     * Custom labels for the cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1389,8 +1400,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs.
-     * Maximum 64 per resource.
+     * Custom labels for the cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1406,8 +1416,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the MySQL cluster as `key:value` pairs.
-     * Maximum 64 per resource.
+     * Custom labels for the cluster as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1428,7 +1437,7 @@ public final class ClusterOuterClass {
     private int environment_;
     /**
      * <pre>
-     * Deployment environment of the MySQL cluster.
+     * Deployment environment of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -1438,7 +1447,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Deployment environment of the MySQL cluster.
+     * Deployment environment of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -1453,7 +1462,7 @@ public final class ClusterOuterClass {
     private java.util.List<yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Monitoring> monitoring_;
     /**
      * <pre>
-     * Description of monitoring systems relevant to the MySQL cluster.
+     * Monitoring systems data that is relevant to the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -1463,7 +1472,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Description of monitoring systems relevant to the MySQL cluster.
+     * Monitoring systems data that is relevant to the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -1474,7 +1483,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Description of monitoring systems relevant to the MySQL cluster.
+     * Monitoring systems data that is relevant to the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -1484,7 +1493,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Description of monitoring systems relevant to the MySQL cluster.
+     * Monitoring systems data that is relevant to the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -1494,7 +1503,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Description of monitoring systems relevant to the MySQL cluster.
+     * Monitoring systems data that is relevant to the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -1508,7 +1517,7 @@ public final class ClusterOuterClass {
     private yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.ClusterConfig config_;
     /**
      * <pre>
-     * Configuration of the MySQL cluster.
+     * Configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ClusterConfig config = 9;</code>
@@ -1518,7 +1527,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Configuration of the MySQL cluster.
+     * Configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ClusterConfig config = 9;</code>
@@ -1528,7 +1537,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Configuration of the MySQL cluster.
+     * Configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.ClusterConfig config = 9;</code>
@@ -1583,7 +1592,7 @@ public final class ClusterOuterClass {
     private int health_;
     /**
      * <pre>
-     * Aggregated cluster health.
+     * Aggregated health of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Health health = 11;</code>
@@ -1593,7 +1602,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Aggregated cluster health.
+     * Aggregated health of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Health health = 11;</code>
@@ -1633,7 +1642,7 @@ public final class ClusterOuterClass {
     private yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
     /**
      * <pre>
-     * Maintenance window for the cluster.
+     * Maintenance window settings for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -1643,7 +1652,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Maintenance window for the cluster.
+     * Maintenance window settings for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -1653,7 +1662,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Maintenance window for the cluster.
+     * Maintenance window settings for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -1699,7 +1708,7 @@ public final class ClusterOuterClass {
     private com.google.protobuf.LazyStringList securityGroupIds_;
     /**
      * <pre>
-     * User security groups
+     * Effective list of security group IDs applied to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 15;</code>
@@ -1710,7 +1719,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * User security groups
+     * Effective list of security group IDs applied to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 15;</code>
@@ -1720,7 +1729,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * User security groups
+     * Effective list of security group IDs applied to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 15;</code>
@@ -1730,7 +1739,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * User security groups
+     * Effective list of security group IDs applied to the cluster.
      * </pre>
      *
      * <code>repeated string security_group_ids = 15;</code>
@@ -1744,7 +1753,7 @@ public final class ClusterOuterClass {
     private boolean deletionProtection_;
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the cluster
+     * This option prevents unintended deletion of the cluster.
      * </pre>
      *
      * <code>bool deletion_protection = 16;</code>
@@ -2108,8 +2117,8 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * A MySQL cluster. For more information, see
-     * the [documentation](/docs/managed-mysql/concepts).
+     * An object that represents MySQL cluster.
+     * See [the documentation](/docs/managed-mysql/concepts) for details.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.mdb.mysql.v1.Cluster}
@@ -2460,8 +2469,8 @@ public final class ClusterOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster.
-       * This ID is assigned by Managed Service for MySQL at creation time.
+       * ID of the cluster.
+       * This ID is assigned by Yandex.Cloud at the time of creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2480,8 +2489,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster.
-       * This ID is assigned by Managed Service for MySQL at creation time.
+       * ID of the cluster.
+       * This ID is assigned by Yandex.Cloud at the time of creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2501,8 +2510,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster.
-       * This ID is assigned by Managed Service for MySQL at creation time.
+       * ID of the cluster.
+       * This ID is assigned by Yandex.Cloud at the time of creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2519,8 +2528,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster.
-       * This ID is assigned by Managed Service for MySQL at creation time.
+       * ID of the cluster.
+       * This ID is assigned by Yandex.Cloud at the time of creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2533,8 +2542,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster.
-       * This ID is assigned by Managed Service for MySQL at creation time.
+       * ID of the cluster.
+       * This ID is assigned by Yandex.Cloud at the time of creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2554,7 +2563,7 @@ public final class ClusterOuterClass {
       private java.lang.Object folderId_ = "";
       /**
        * <pre>
-       * ID of the folder that the MySQL cluster belongs to.
+       * ID of the folder that the cluster belongs to.
        * </pre>
        *
        * <code>string folder_id = 2;</code>
@@ -2573,7 +2582,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the MySQL cluster belongs to.
+       * ID of the folder that the cluster belongs to.
        * </pre>
        *
        * <code>string folder_id = 2;</code>
@@ -2593,7 +2602,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the MySQL cluster belongs to.
+       * ID of the folder that the cluster belongs to.
        * </pre>
        *
        * <code>string folder_id = 2;</code>
@@ -2610,7 +2619,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the MySQL cluster belongs to.
+       * ID of the folder that the cluster belongs to.
        * </pre>
        *
        * <code>string folder_id = 2;</code>
@@ -2623,7 +2632,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the MySQL cluster belongs to.
+       * ID of the folder that the cluster belongs to.
        * </pre>
        *
        * <code>string folder_id = 2;</code>
@@ -2644,12 +2653,20 @@ public final class ClusterOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp of the cluster.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp of the cluster.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
@@ -2660,6 +2677,10 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp of the cluster.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -2676,6 +2697,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp of the cluster.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(
@@ -2690,6 +2715,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp of the cluster.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -2708,6 +2737,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp of the cluster.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder clearCreatedAt() {
@@ -2722,6 +2755,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp of the cluster.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -2730,6 +2767,10 @@ public final class ClusterOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp of the cluster.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -2741,6 +2782,10 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp of the cluster.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2760,9 +2805,7 @@ public final class ClusterOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the MySQL cluster.
-       * The name must be unique within the folder, comply with RFC 1035
-       * and be 1-63 characters long.
+       * Name of the cluster.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2781,9 +2824,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL cluster.
-       * The name must be unique within the folder, comply with RFC 1035
-       * and be 1-63 characters long.
+       * Name of the cluster.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2803,9 +2844,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL cluster.
-       * The name must be unique within the folder, comply with RFC 1035
-       * and be 1-63 characters long.
+       * Name of the cluster.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2822,9 +2861,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL cluster.
-       * The name must be unique within the folder, comply with RFC 1035
-       * and be 1-63 characters long.
+       * Name of the cluster.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2837,9 +2874,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL cluster.
-       * The name must be unique within the folder, comply with RFC 1035
-       * and be 1-63 characters long.
+       * Name of the cluster.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2859,7 +2894,7 @@ public final class ClusterOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Description of the MySQL cluster. 0-256 characters long.
+       * Description of the cluster.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2878,7 +2913,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of the MySQL cluster. 0-256 characters long.
+       * Description of the cluster.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2898,7 +2933,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of the MySQL cluster. 0-256 characters long.
+       * Description of the cluster.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2915,7 +2950,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of the MySQL cluster. 0-256 characters long.
+       * Description of the cluster.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2928,7 +2963,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of the MySQL cluster. 0-256 characters long.
+       * Description of the cluster.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2973,8 +3008,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs.
-       * Maximum 64 per resource.
+       * Custom labels for the cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2994,8 +3028,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs.
-       * Maximum 64 per resource.
+       * Custom labels for the cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3006,8 +3039,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs.
-       * Maximum 64 per resource.
+       * Custom labels for the cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3023,8 +3055,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs.
-       * Maximum 64 per resource.
+       * Custom labels for the cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3048,8 +3079,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs.
-       * Maximum 64 per resource.
+       * Custom labels for the cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3072,8 +3102,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs.
-       * Maximum 64 per resource.
+       * Custom labels for the cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3089,8 +3118,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the MySQL cluster as `key:value` pairs.
-       * Maximum 64 per resource.
+       * Custom labels for the cluster as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3106,7 +3134,7 @@ public final class ClusterOuterClass {
       private int environment_ = 0;
       /**
        * <pre>
-       * Deployment environment of the MySQL cluster.
+       * Deployment environment of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -3116,7 +3144,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Deployment environment of the MySQL cluster.
+       * Deployment environment of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -3128,7 +3156,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Deployment environment of the MySQL cluster.
+       * Deployment environment of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -3140,7 +3168,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Deployment environment of the MySQL cluster.
+       * Deployment environment of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -3156,7 +3184,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Deployment environment of the MySQL cluster.
+       * Deployment environment of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -3182,7 +3210,7 @@ public final class ClusterOuterClass {
 
       /**
        * <pre>
-       * Description of monitoring systems relevant to the MySQL cluster.
+       * Monitoring systems data that is relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -3196,7 +3224,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of monitoring systems relevant to the MySQL cluster.
+       * Monitoring systems data that is relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -3210,7 +3238,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of monitoring systems relevant to the MySQL cluster.
+       * Monitoring systems data that is relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -3224,7 +3252,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of monitoring systems relevant to the MySQL cluster.
+       * Monitoring systems data that is relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -3245,7 +3273,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of monitoring systems relevant to the MySQL cluster.
+       * Monitoring systems data that is relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -3263,7 +3291,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of monitoring systems relevant to the MySQL cluster.
+       * Monitoring systems data that is relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -3283,7 +3311,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of monitoring systems relevant to the MySQL cluster.
+       * Monitoring systems data that is relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -3304,7 +3332,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of monitoring systems relevant to the MySQL cluster.
+       * Monitoring systems data that is relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -3322,7 +3350,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of monitoring systems relevant to the MySQL cluster.
+       * Monitoring systems data that is relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -3340,7 +3368,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of monitoring systems relevant to the MySQL cluster.
+       * Monitoring systems data that is relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -3359,7 +3387,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of monitoring systems relevant to the MySQL cluster.
+       * Monitoring systems data that is relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -3376,7 +3404,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of monitoring systems relevant to the MySQL cluster.
+       * Monitoring systems data that is relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -3393,7 +3421,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of monitoring systems relevant to the MySQL cluster.
+       * Monitoring systems data that is relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -3404,7 +3432,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of monitoring systems relevant to the MySQL cluster.
+       * Monitoring systems data that is relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -3418,7 +3446,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of monitoring systems relevant to the MySQL cluster.
+       * Monitoring systems data that is relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -3433,7 +3461,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of monitoring systems relevant to the MySQL cluster.
+       * Monitoring systems data that is relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -3444,7 +3472,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of monitoring systems relevant to the MySQL cluster.
+       * Monitoring systems data that is relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -3456,7 +3484,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of monitoring systems relevant to the MySQL cluster.
+       * Monitoring systems data that is relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Monitoring monitoring = 8;</code>
@@ -3485,7 +3513,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.ClusterConfig, yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.ClusterConfig.Builder, yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.ClusterConfigOrBuilder> configBuilder_;
       /**
        * <pre>
-       * Configuration of the MySQL cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ClusterConfig config = 9;</code>
@@ -3495,7 +3523,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the MySQL cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ClusterConfig config = 9;</code>
@@ -3509,7 +3537,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the MySQL cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ClusterConfig config = 9;</code>
@@ -3529,7 +3557,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the MySQL cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ClusterConfig config = 9;</code>
@@ -3547,7 +3575,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the MySQL cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ClusterConfig config = 9;</code>
@@ -3569,7 +3597,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the MySQL cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ClusterConfig config = 9;</code>
@@ -3587,7 +3615,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the MySQL cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ClusterConfig config = 9;</code>
@@ -3599,7 +3627,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the MySQL cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ClusterConfig config = 9;</code>
@@ -3614,7 +3642,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the MySQL cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.ClusterConfig config = 9;</code>
@@ -3725,7 +3753,7 @@ public final class ClusterOuterClass {
       private int health_ = 0;
       /**
        * <pre>
-       * Aggregated cluster health.
+       * Aggregated health of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Health health = 11;</code>
@@ -3735,7 +3763,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Aggregated cluster health.
+       * Aggregated health of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Health health = 11;</code>
@@ -3747,7 +3775,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Aggregated cluster health.
+       * Aggregated health of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Health health = 11;</code>
@@ -3759,7 +3787,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Aggregated cluster health.
+       * Aggregated health of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Health health = 11;</code>
@@ -3775,7 +3803,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Aggregated cluster health.
+       * Aggregated health of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Health health = 11;</code>
@@ -3857,7 +3885,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
       /**
        * <pre>
-       * Maintenance window for the cluster.
+       * Maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -3867,7 +3895,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance window for the cluster.
+       * Maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -3881,7 +3909,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance window for the cluster.
+       * Maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -3901,7 +3929,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance window for the cluster.
+       * Maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -3919,7 +3947,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance window for the cluster.
+       * Maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -3941,7 +3969,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance window for the cluster.
+       * Maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -3959,7 +3987,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance window for the cluster.
+       * Maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -3971,7 +3999,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance window for the cluster.
+       * Maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -3986,7 +4014,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance window for the cluster.
+       * Maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -4167,7 +4195,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * Effective list of security group IDs applied to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 15;</code>
@@ -4178,7 +4206,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * Effective list of security group IDs applied to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 15;</code>
@@ -4188,7 +4216,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * Effective list of security group IDs applied to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 15;</code>
@@ -4198,7 +4226,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * Effective list of security group IDs applied to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 15;</code>
@@ -4209,7 +4237,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * Effective list of security group IDs applied to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 15;</code>
@@ -4226,7 +4254,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * Effective list of security group IDs applied to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 15;</code>
@@ -4243,7 +4271,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * Effective list of security group IDs applied to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 15;</code>
@@ -4258,7 +4286,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * Effective list of security group IDs applied to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 15;</code>
@@ -4271,7 +4299,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * Effective list of security group IDs applied to the cluster.
        * </pre>
        *
        * <code>repeated string security_group_ids = 15;</code>
@@ -4291,7 +4319,7 @@ public final class ClusterOuterClass {
       private boolean deletionProtection_ ;
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * This option prevents unintended deletion of the cluster.
        * </pre>
        *
        * <code>bool deletion_protection = 16;</code>
@@ -4301,7 +4329,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * This option prevents unintended deletion of the cluster.
        * </pre>
        *
        * <code>bool deletion_protection = 16;</code>
@@ -4314,7 +4342,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * This option prevents unintended deletion of the cluster.
        * </pre>
        *
        * <code>bool deletion_protection = 16;</code>
@@ -4420,7 +4448,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Link to the monitoring system charts for the MySQL cluster.
+     * Link to the monitoring system charts for the cluster.
      * </pre>
      *
      * <code>string link = 3;</code>
@@ -4428,7 +4456,7 @@ public final class ClusterOuterClass {
     java.lang.String getLink();
     /**
      * <pre>
-     * Link to the monitoring system charts for the MySQL cluster.
+     * Link to the monitoring system charts for the cluster.
      * </pre>
      *
      * <code>string link = 3;</code>
@@ -4437,6 +4465,10 @@ public final class ClusterOuterClass {
         getLinkBytes();
   }
   /**
+   * <pre>
+   * Cluster-related monitoring system data.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.Monitoring}
    */
   public  static final class Monitoring extends
@@ -4616,7 +4648,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object link_;
     /**
      * <pre>
-     * Link to the monitoring system charts for the MySQL cluster.
+     * Link to the monitoring system charts for the cluster.
      * </pre>
      *
      * <code>string link = 3;</code>
@@ -4635,7 +4667,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Link to the monitoring system charts for the MySQL cluster.
+     * Link to the monitoring system charts for the cluster.
      * </pre>
      *
      * <code>string link = 3;</code>
@@ -4830,6 +4862,10 @@ public final class ClusterOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Cluster-related monitoring system data.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.mdb.mysql.v1.Monitoring}
      */
     public static final class Builder extends
@@ -5172,7 +5208,7 @@ public final class ClusterOuterClass {
       private java.lang.Object link_ = "";
       /**
        * <pre>
-       * Link to the monitoring system charts for the MySQL cluster.
+       * Link to the monitoring system charts for the cluster.
        * </pre>
        *
        * <code>string link = 3;</code>
@@ -5191,7 +5227,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Link to the monitoring system charts for the MySQL cluster.
+       * Link to the monitoring system charts for the cluster.
        * </pre>
        *
        * <code>string link = 3;</code>
@@ -5211,7 +5247,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Link to the monitoring system charts for the MySQL cluster.
+       * Link to the monitoring system charts for the cluster.
        * </pre>
        *
        * <code>string link = 3;</code>
@@ -5228,7 +5264,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Link to the monitoring system charts for the MySQL cluster.
+       * Link to the monitoring system charts for the cluster.
        * </pre>
        *
        * <code>string link = 3;</code>
@@ -5241,7 +5277,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Link to the monitoring system charts for the MySQL cluster.
+       * Link to the monitoring system charts for the cluster.
        * </pre>
        *
        * <code>string link = 3;</code>
@@ -5316,7 +5352,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Version of MySQL server software.
+     * Version of MySQL used in the cluster.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -5324,7 +5360,7 @@ public final class ClusterOuterClass {
     java.lang.String getVersion();
     /**
      * <pre>
-     * Version of MySQL server software.
+     * Version of MySQL used in the cluster.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -5384,7 +5420,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Resources allocated to MySQL hosts.
+     * Resource preset for the cluster hosts.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -5392,7 +5428,7 @@ public final class ClusterOuterClass {
     boolean hasResources();
     /**
      * <pre>
-     * Resources allocated to MySQL hosts.
+     * Resource preset for the cluster hosts.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -5400,7 +5436,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Resources getResources();
     /**
      * <pre>
-     * Resources allocated to MySQL hosts.
+     * Resource preset for the cluster hosts.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -5434,7 +5470,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Access policy to DB
+     * Access policy for external services.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -5442,7 +5478,7 @@ public final class ClusterOuterClass {
     boolean hasAccess();
     /**
      * <pre>
-     * Access policy to DB
+     * Access policy for external services.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -5450,7 +5486,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Access getAccess();
     /**
      * <pre>
-     * Access policy to DB
+     * Access policy for external services.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -5646,7 +5682,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object version_;
     /**
      * <pre>
-     * Version of MySQL server software.
+     * Version of MySQL used in the cluster.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -5665,7 +5701,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Version of MySQL server software.
+     * Version of MySQL used in the cluster.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -5764,7 +5800,7 @@ public final class ClusterOuterClass {
     private yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Resources resources_;
     /**
      * <pre>
-     * Resources allocated to MySQL hosts.
+     * Resource preset for the cluster hosts.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -5774,7 +5810,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Resources allocated to MySQL hosts.
+     * Resource preset for the cluster hosts.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -5784,7 +5820,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Resources allocated to MySQL hosts.
+     * Resource preset for the cluster hosts.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -5830,7 +5866,7 @@ public final class ClusterOuterClass {
     private yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Access access_;
     /**
      * <pre>
-     * Access policy to DB
+     * Access policy for external services.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -5840,7 +5876,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Access policy to DB
+     * Access policy for external services.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -5850,7 +5886,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Access policy to DB
+     * Access policy for external services.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -6341,7 +6377,7 @@ public final class ClusterOuterClass {
       private java.lang.Object version_ = "";
       /**
        * <pre>
-       * Version of MySQL server software.
+       * Version of MySQL used in the cluster.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -6360,7 +6396,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of MySQL server software.
+       * Version of MySQL used in the cluster.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -6380,7 +6416,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of MySQL server software.
+       * Version of MySQL used in the cluster.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -6397,7 +6433,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of MySQL server software.
+       * Version of MySQL used in the cluster.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -6410,7 +6446,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of MySQL server software.
+       * Version of MySQL used in the cluster.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -6776,7 +6812,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
       /**
        * <pre>
-       * Resources allocated to MySQL hosts.
+       * Resource preset for the cluster hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -6786,7 +6822,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to MySQL hosts.
+       * Resource preset for the cluster hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -6800,7 +6836,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to MySQL hosts.
+       * Resource preset for the cluster hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -6820,7 +6856,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to MySQL hosts.
+       * Resource preset for the cluster hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -6838,7 +6874,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to MySQL hosts.
+       * Resource preset for the cluster hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -6860,7 +6896,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to MySQL hosts.
+       * Resource preset for the cluster hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -6878,7 +6914,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to MySQL hosts.
+       * Resource preset for the cluster hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -6890,7 +6926,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to MySQL hosts.
+       * Resource preset for the cluster hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -6905,7 +6941,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to MySQL hosts.
+       * Resource preset for the cluster hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Resources resources = 3;</code>
@@ -7082,7 +7118,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Access, yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Access.Builder, yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.AccessOrBuilder> accessBuilder_;
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -7092,7 +7128,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -7106,7 +7142,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -7126,7 +7162,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -7144,7 +7180,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -7166,7 +7202,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -7184,7 +7220,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -7196,7 +7232,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -7211,7 +7247,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Access access = 5;</code>
@@ -7288,10 +7324,9 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Name of the MySQL host. The host name is assigned by Managed Service for MySQL
-     * at creation time, and cannot be changed. 1-63 characters long.
-     * The name is unique across all existing database hosts in Yandex.Cloud,
-     * as it defines the FQDN of the host.
+     * Name of the host.
+     * This name is assigned by Yandex.Cloud at the time of creation.
+     * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -7299,10 +7334,9 @@ public final class ClusterOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the MySQL host. The host name is assigned by Managed Service for MySQL
-     * at creation time, and cannot be changed. 1-63 characters long.
-     * The name is unique across all existing database hosts in Yandex.Cloud,
-     * as it defines the FQDN of the host.
+     * Name of the host.
+     * This name is assigned by Yandex.Cloud at the time of creation.
+     * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -7312,8 +7346,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL host. The ID is assigned by Managed Service for MySQL
-     * at creation time.
+     * ID of the cluster the host belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -7321,8 +7354,7 @@ public final class ClusterOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL host. The ID is assigned by Managed Service for MySQL
-     * at creation time.
+     * ID of the cluster the host belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -7332,7 +7364,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * ID of the availability zone where the MySQL host resides.
+     * ID of the availability zone where the host resides.
      * </pre>
      *
      * <code>string zone_id = 3;</code>
@@ -7340,7 +7372,7 @@ public final class ClusterOuterClass {
     java.lang.String getZoneId();
     /**
      * <pre>
-     * ID of the availability zone where the MySQL host resides.
+     * ID of the availability zone where the host resides.
      * </pre>
      *
      * <code>string zone_id = 3;</code>
@@ -7392,7 +7424,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Status code of the aggregated health of the host.
+     * Aggregated health of the host.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Host.Health health = 6;</code>
@@ -7400,7 +7432,7 @@ public final class ClusterOuterClass {
     int getHealthValue();
     /**
      * <pre>
-     * Status code of the aggregated health of the host.
+     * Aggregated health of the host.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Host.Health health = 6;</code>
@@ -7409,7 +7441,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Services provided by the host.
+     * List of services provided by the host.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -7418,7 +7450,7 @@ public final class ClusterOuterClass {
         getServicesList();
     /**
      * <pre>
-     * Services provided by the host.
+     * List of services provided by the host.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -7426,7 +7458,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Service getServices(int index);
     /**
      * <pre>
-     * Services provided by the host.
+     * List of services provided by the host.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -7434,7 +7466,7 @@ public final class ClusterOuterClass {
     int getServicesCount();
     /**
      * <pre>
-     * Services provided by the host.
+     * List of services provided by the host.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -7443,7 +7475,7 @@ public final class ClusterOuterClass {
         getServicesOrBuilderList();
     /**
      * <pre>
-     * Services provided by the host.
+     * List of services provided by the host.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -7471,7 +7503,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Flag showing public IP assignment status to this host.
+     * Flag that shows if public IP address is assigned to the host so that the host can be accessed from the internet.
      * </pre>
      *
      * <code>bool assign_public_ip = 9;</code>
@@ -7498,7 +7530,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Host backup priority
+     * Host backup priority.
      * </pre>
      *
      * <code>int64 backup_priority = 11 [(.yandex.cloud.value) = "0-100"];</code>
@@ -7507,7 +7539,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Host master promotion priority
+     * Host master promotion priority.
      * </pre>
      *
      * <code>int64 priority = 12 [(.yandex.cloud.value) = "0-100"];</code>
@@ -7685,7 +7717,7 @@ public final class ClusterOuterClass {
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * Role of the host in the cluster is unknown.
+       * Role of the host is unknown.
        * </pre>
        *
        * <code>ROLE_UNKNOWN = 0;</code>
@@ -7693,7 +7725,7 @@ public final class ClusterOuterClass {
       ROLE_UNKNOWN(0),
       /**
        * <pre>
-       * Host is the master MySQL server in the cluster.
+       * Host is the master.
        * </pre>
        *
        * <code>MASTER = 1;</code>
@@ -7701,7 +7733,7 @@ public final class ClusterOuterClass {
       MASTER(1),
       /**
        * <pre>
-       * Host is a replica MySQL server in the cluster.
+       * Host is a replica.
        * </pre>
        *
        * <code>REPLICA = 2;</code>
@@ -7712,7 +7744,7 @@ public final class ClusterOuterClass {
 
       /**
        * <pre>
-       * Role of the host in the cluster is unknown.
+       * Role of the host is unknown.
        * </pre>
        *
        * <code>ROLE_UNKNOWN = 0;</code>
@@ -7720,7 +7752,7 @@ public final class ClusterOuterClass {
       public static final int ROLE_UNKNOWN_VALUE = 0;
       /**
        * <pre>
-       * Host is the master MySQL server in the cluster.
+       * Host is the master.
        * </pre>
        *
        * <code>MASTER = 1;</code>
@@ -7728,7 +7760,7 @@ public final class ClusterOuterClass {
       public static final int MASTER_VALUE = 1;
       /**
        * <pre>
-       * Host is a replica MySQL server in the cluster.
+       * Host is a replica.
        * </pre>
        *
        * <code>REPLICA = 2;</code>
@@ -7824,7 +7856,7 @@ public final class ClusterOuterClass {
       HEALTH_UNKNOWN(0),
       /**
        * <pre>
-       * The host is performing all its functions normally.
+       * Host is performing all its functions normally.
        * </pre>
        *
        * <code>ALIVE = 1;</code>
@@ -7832,7 +7864,7 @@ public final class ClusterOuterClass {
       ALIVE(1),
       /**
        * <pre>
-       * The host is inoperable, and cannot perform any of its essential functions.
+       * Host is inoperable, and cannot perform any of its essential functions.
        * </pre>
        *
        * <code>DEAD = 2;</code>
@@ -7840,7 +7872,7 @@ public final class ClusterOuterClass {
       DEAD(2),
       /**
        * <pre>
-       * The host is degraded, and can perform only some of its essential functions.
+       * Host is degraded, and can perform only some of its essential functions.
        * </pre>
        *
        * <code>DEGRADED = 3;</code>
@@ -7859,7 +7891,7 @@ public final class ClusterOuterClass {
       public static final int HEALTH_UNKNOWN_VALUE = 0;
       /**
        * <pre>
-       * The host is performing all its functions normally.
+       * Host is performing all its functions normally.
        * </pre>
        *
        * <code>ALIVE = 1;</code>
@@ -7867,7 +7899,7 @@ public final class ClusterOuterClass {
       public static final int ALIVE_VALUE = 1;
       /**
        * <pre>
-       * The host is inoperable, and cannot perform any of its essential functions.
+       * Host is inoperable, and cannot perform any of its essential functions.
        * </pre>
        *
        * <code>DEAD = 2;</code>
@@ -7875,7 +7907,7 @@ public final class ClusterOuterClass {
       public static final int DEAD_VALUE = 2;
       /**
        * <pre>
-       * The host is degraded, and can perform only some of its essential functions.
+       * Host is degraded, and can perform only some of its essential functions.
        * </pre>
        *
        * <code>DEGRADED = 3;</code>
@@ -7962,10 +7994,9 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the MySQL host. The host name is assigned by Managed Service for MySQL
-     * at creation time, and cannot be changed. 1-63 characters long.
-     * The name is unique across all existing database hosts in Yandex.Cloud,
-     * as it defines the FQDN of the host.
+     * Name of the host.
+     * This name is assigned by Yandex.Cloud at the time of creation.
+     * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -7984,10 +8015,9 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Name of the MySQL host. The host name is assigned by Managed Service for MySQL
-     * at creation time, and cannot be changed. 1-63 characters long.
-     * The name is unique across all existing database hosts in Yandex.Cloud,
-     * as it defines the FQDN of the host.
+     * Name of the host.
+     * This name is assigned by Yandex.Cloud at the time of creation.
+     * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -8010,8 +8040,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL host. The ID is assigned by Managed Service for MySQL
-     * at creation time.
+     * ID of the cluster the host belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -8030,8 +8059,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL host. The ID is assigned by Managed Service for MySQL
-     * at creation time.
+     * ID of the cluster the host belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -8054,7 +8082,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object zoneId_;
     /**
      * <pre>
-     * ID of the availability zone where the MySQL host resides.
+     * ID of the availability zone where the host resides.
      * </pre>
      *
      * <code>string zone_id = 3;</code>
@@ -8073,7 +8101,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the availability zone where the MySQL host resides.
+     * ID of the availability zone where the host resides.
      * </pre>
      *
      * <code>string zone_id = 3;</code>
@@ -8154,7 +8182,7 @@ public final class ClusterOuterClass {
     private int health_;
     /**
      * <pre>
-     * Status code of the aggregated health of the host.
+     * Aggregated health of the host.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Host.Health health = 6;</code>
@@ -8164,7 +8192,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Status code of the aggregated health of the host.
+     * Aggregated health of the host.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Host.Health health = 6;</code>
@@ -8179,7 +8207,7 @@ public final class ClusterOuterClass {
     private java.util.List<yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Service> services_;
     /**
      * <pre>
-     * Services provided by the host.
+     * List of services provided by the host.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -8189,7 +8217,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Services provided by the host.
+     * List of services provided by the host.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -8200,7 +8228,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Services provided by the host.
+     * List of services provided by the host.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -8210,7 +8238,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Services provided by the host.
+     * List of services provided by the host.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -8220,7 +8248,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Services provided by the host.
+     * List of services provided by the host.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -8276,7 +8304,7 @@ public final class ClusterOuterClass {
     private boolean assignPublicIp_;
     /**
      * <pre>
-     * Flag showing public IP assignment status to this host.
+     * Flag that shows if public IP address is assigned to the host so that the host can be accessed from the internet.
      * </pre>
      *
      * <code>bool assign_public_ip = 9;</code>
@@ -8331,7 +8359,7 @@ public final class ClusterOuterClass {
     private long backupPriority_;
     /**
      * <pre>
-     * Host backup priority
+     * Host backup priority.
      * </pre>
      *
      * <code>int64 backup_priority = 11 [(.yandex.cloud.value) = "0-100"];</code>
@@ -8344,7 +8372,7 @@ public final class ClusterOuterClass {
     private long priority_;
     /**
      * <pre>
-     * Host master promotion priority
+     * Host master promotion priority.
      * </pre>
      *
      * <code>int64 priority = 12 [(.yandex.cloud.value) = "0-100"];</code>
@@ -8902,10 +8930,9 @@ public final class ClusterOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the MySQL host. The host name is assigned by Managed Service for MySQL
-       * at creation time, and cannot be changed. 1-63 characters long.
-       * The name is unique across all existing database hosts in Yandex.Cloud,
-       * as it defines the FQDN of the host.
+       * Name of the host.
+       * This name is assigned by Yandex.Cloud at the time of creation.
+       * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -8924,10 +8951,9 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL host. The host name is assigned by Managed Service for MySQL
-       * at creation time, and cannot be changed. 1-63 characters long.
-       * The name is unique across all existing database hosts in Yandex.Cloud,
-       * as it defines the FQDN of the host.
+       * Name of the host.
+       * This name is assigned by Yandex.Cloud at the time of creation.
+       * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -8947,10 +8973,9 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL host. The host name is assigned by Managed Service for MySQL
-       * at creation time, and cannot be changed. 1-63 characters long.
-       * The name is unique across all existing database hosts in Yandex.Cloud,
-       * as it defines the FQDN of the host.
+       * Name of the host.
+       * This name is assigned by Yandex.Cloud at the time of creation.
+       * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -8967,10 +8992,9 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL host. The host name is assigned by Managed Service for MySQL
-       * at creation time, and cannot be changed. 1-63 characters long.
-       * The name is unique across all existing database hosts in Yandex.Cloud,
-       * as it defines the FQDN of the host.
+       * Name of the host.
+       * This name is assigned by Yandex.Cloud at the time of creation.
+       * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -8983,10 +9007,9 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL host. The host name is assigned by Managed Service for MySQL
-       * at creation time, and cannot be changed. 1-63 characters long.
-       * The name is unique across all existing database hosts in Yandex.Cloud,
-       * as it defines the FQDN of the host.
+       * Name of the host.
+       * This name is assigned by Yandex.Cloud at the time of creation.
+       * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -9006,8 +9029,7 @@ public final class ClusterOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL host. The ID is assigned by Managed Service for MySQL
-       * at creation time.
+       * ID of the cluster the host belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -9026,8 +9048,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL host. The ID is assigned by Managed Service for MySQL
-       * at creation time.
+       * ID of the cluster the host belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -9047,8 +9068,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL host. The ID is assigned by Managed Service for MySQL
-       * at creation time.
+       * ID of the cluster the host belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -9065,8 +9085,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL host. The ID is assigned by Managed Service for MySQL
-       * at creation time.
+       * ID of the cluster the host belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -9079,8 +9098,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL host. The ID is assigned by Managed Service for MySQL
-       * at creation time.
+       * ID of the cluster the host belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -9100,7 +9118,7 @@ public final class ClusterOuterClass {
       private java.lang.Object zoneId_ = "";
       /**
        * <pre>
-       * ID of the availability zone where the MySQL host resides.
+       * ID of the availability zone where the host resides.
        * </pre>
        *
        * <code>string zone_id = 3;</code>
@@ -9119,7 +9137,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the availability zone where the MySQL host resides.
+       * ID of the availability zone where the host resides.
        * </pre>
        *
        * <code>string zone_id = 3;</code>
@@ -9139,7 +9157,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the availability zone where the MySQL host resides.
+       * ID of the availability zone where the host resides.
        * </pre>
        *
        * <code>string zone_id = 3;</code>
@@ -9156,7 +9174,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the availability zone where the MySQL host resides.
+       * ID of the availability zone where the host resides.
        * </pre>
        *
        * <code>string zone_id = 3;</code>
@@ -9169,7 +9187,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the availability zone where the MySQL host resides.
+       * ID of the availability zone where the host resides.
        * </pre>
        *
        * <code>string zone_id = 3;</code>
@@ -9407,7 +9425,7 @@ public final class ClusterOuterClass {
       private int health_ = 0;
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Aggregated health of the host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Host.Health health = 6;</code>
@@ -9417,7 +9435,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Aggregated health of the host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Host.Health health = 6;</code>
@@ -9429,7 +9447,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Aggregated health of the host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Host.Health health = 6;</code>
@@ -9441,7 +9459,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Aggregated health of the host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Host.Health health = 6;</code>
@@ -9457,7 +9475,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Aggregated health of the host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Host.Health health = 6;</code>
@@ -9483,7 +9501,7 @@ public final class ClusterOuterClass {
 
       /**
        * <pre>
-       * Services provided by the host.
+       * List of services provided by the host.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -9497,7 +9515,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Services provided by the host.
+       * List of services provided by the host.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -9511,7 +9529,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Services provided by the host.
+       * List of services provided by the host.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -9525,7 +9543,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Services provided by the host.
+       * List of services provided by the host.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -9546,7 +9564,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Services provided by the host.
+       * List of services provided by the host.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -9564,7 +9582,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Services provided by the host.
+       * List of services provided by the host.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -9584,7 +9602,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Services provided by the host.
+       * List of services provided by the host.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -9605,7 +9623,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Services provided by the host.
+       * List of services provided by the host.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -9623,7 +9641,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Services provided by the host.
+       * List of services provided by the host.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -9641,7 +9659,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Services provided by the host.
+       * List of services provided by the host.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -9660,7 +9678,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Services provided by the host.
+       * List of services provided by the host.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -9677,7 +9695,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Services provided by the host.
+       * List of services provided by the host.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -9694,7 +9712,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Services provided by the host.
+       * List of services provided by the host.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -9705,7 +9723,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Services provided by the host.
+       * List of services provided by the host.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -9719,7 +9737,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Services provided by the host.
+       * List of services provided by the host.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -9734,7 +9752,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Services provided by the host.
+       * List of services provided by the host.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -9745,7 +9763,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Services provided by the host.
+       * List of services provided by the host.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -9757,7 +9775,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Services provided by the host.
+       * List of services provided by the host.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Service services = 7;</code>
@@ -9873,7 +9891,7 @@ public final class ClusterOuterClass {
       private boolean assignPublicIp_ ;
       /**
        * <pre>
-       * Flag showing public IP assignment status to this host.
+       * Flag that shows if public IP address is assigned to the host so that the host can be accessed from the internet.
        * </pre>
        *
        * <code>bool assign_public_ip = 9;</code>
@@ -9883,7 +9901,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Flag showing public IP assignment status to this host.
+       * Flag that shows if public IP address is assigned to the host so that the host can be accessed from the internet.
        * </pre>
        *
        * <code>bool assign_public_ip = 9;</code>
@@ -9896,7 +9914,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Flag showing public IP assignment status to this host.
+       * Flag that shows if public IP address is assigned to the host so that the host can be accessed from the internet.
        * </pre>
        *
        * <code>bool assign_public_ip = 9;</code>
@@ -10000,7 +10018,7 @@ public final class ClusterOuterClass {
       private long backupPriority_ ;
       /**
        * <pre>
-       * Host backup priority
+       * Host backup priority.
        * </pre>
        *
        * <code>int64 backup_priority = 11 [(.yandex.cloud.value) = "0-100"];</code>
@@ -10010,7 +10028,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Host backup priority
+       * Host backup priority.
        * </pre>
        *
        * <code>int64 backup_priority = 11 [(.yandex.cloud.value) = "0-100"];</code>
@@ -10023,7 +10041,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Host backup priority
+       * Host backup priority.
        * </pre>
        *
        * <code>int64 backup_priority = 11 [(.yandex.cloud.value) = "0-100"];</code>
@@ -10038,7 +10056,7 @@ public final class ClusterOuterClass {
       private long priority_ ;
       /**
        * <pre>
-       * Host master promotion priority
+       * Host master promotion priority.
        * </pre>
        *
        * <code>int64 priority = 12 [(.yandex.cloud.value) = "0-100"];</code>
@@ -10048,7 +10066,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Host master promotion priority
+       * Host master promotion priority.
        * </pre>
        *
        * <code>int64 priority = 12 [(.yandex.cloud.value) = "0-100"];</code>
@@ -10061,7 +10079,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Host master promotion priority
+       * Host master promotion priority.
        * </pre>
        *
        * <code>int64 priority = 12 [(.yandex.cloud.value) = "0-100"];</code>
@@ -10148,7 +10166,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Status code of server availability.
+     * Aggregated health of the service.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Service.Health health = 2;</code>
@@ -10156,7 +10174,7 @@ public final class ClusterOuterClass {
     int getHealthValue();
     /**
      * <pre>
-     * Status code of server availability.
+     * Aggregated health of the service.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Service.Health health = 2;</code>
@@ -10361,7 +10379,7 @@ public final class ClusterOuterClass {
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * Health of the server is unknown.
+       * Health of the service is unknown.
        * </pre>
        *
        * <code>HEALTH_UNKNOWN = 0;</code>
@@ -10369,7 +10387,7 @@ public final class ClusterOuterClass {
       HEALTH_UNKNOWN(0),
       /**
        * <pre>
-       * The server is working normally.
+       * The service is working normally.
        * </pre>
        *
        * <code>ALIVE = 1;</code>
@@ -10377,7 +10395,7 @@ public final class ClusterOuterClass {
       ALIVE(1),
       /**
        * <pre>
-       * The server is dead or unresponsive.
+       * The service is dead or unresponsive.
        * </pre>
        *
        * <code>DEAD = 2;</code>
@@ -10388,7 +10406,7 @@ public final class ClusterOuterClass {
 
       /**
        * <pre>
-       * Health of the server is unknown.
+       * Health of the service is unknown.
        * </pre>
        *
        * <code>HEALTH_UNKNOWN = 0;</code>
@@ -10396,7 +10414,7 @@ public final class ClusterOuterClass {
       public static final int HEALTH_UNKNOWN_VALUE = 0;
       /**
        * <pre>
-       * The server is working normally.
+       * The service is working normally.
        * </pre>
        *
        * <code>ALIVE = 1;</code>
@@ -10404,7 +10422,7 @@ public final class ClusterOuterClass {
       public static final int ALIVE_VALUE = 1;
       /**
        * <pre>
-       * The server is dead or unresponsive.
+       * The service is dead or unresponsive.
        * </pre>
        *
        * <code>DEAD = 2;</code>
@@ -10514,7 +10532,7 @@ public final class ClusterOuterClass {
     private int health_;
     /**
      * <pre>
-     * Status code of server availability.
+     * Aggregated health of the service.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Service.Health health = 2;</code>
@@ -10524,7 +10542,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Status code of server availability.
+     * Aggregated health of the service.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Service.Health health = 2;</code>
@@ -10921,7 +10939,7 @@ public final class ClusterOuterClass {
       private int health_ = 0;
       /**
        * <pre>
-       * Status code of server availability.
+       * Aggregated health of the service.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Service.Health health = 2;</code>
@@ -10931,7 +10949,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of server availability.
+       * Aggregated health of the service.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Service.Health health = 2;</code>
@@ -10943,7 +10961,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of server availability.
+       * Aggregated health of the service.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Service.Health health = 2;</code>
@@ -10955,7 +10973,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of server availability.
+       * Aggregated health of the service.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Service.Health health = 2;</code>
@@ -10971,7 +10989,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of server availability.
+       * Aggregated health of the service.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Service.Health health = 2;</code>
@@ -11041,8 +11059,8 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * ID of the preset for computational resources available to a host (CPU, memory etc.).
-     * All available presets are listed in the [documentation](/docs/managed-mysql/concepts/instance-types).
+     * ID of the resource preset that defines available computational resources (vCPU, RAM, etc.) for a cluster host.
+     * All available presets are listed in [the documentation](/docs/managed-mysql/concepts/instance-types).
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
@@ -11050,8 +11068,8 @@ public final class ClusterOuterClass {
     java.lang.String getResourcePresetId();
     /**
      * <pre>
-     * ID of the preset for computational resources available to a host (CPU, memory etc.).
-     * All available presets are listed in the [documentation](/docs/managed-mysql/concepts/instance-types).
+     * ID of the resource preset that defines available computational resources (vCPU, RAM, etc.) for a cluster host.
+     * All available presets are listed in [the documentation](/docs/managed-mysql/concepts/instance-types).
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
@@ -11061,7 +11079,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Volume of the storage available to a host.
+     * Volume of the storage (for each cluster host, in bytes).
      * </pre>
      *
      * <code>int64 disk_size = 2;</code>
@@ -11070,10 +11088,13 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Type of the storage environment for the host.
+     * Type of the storage.
      * Possible values:
-     * * network-ssd - network SSD drive,
-     * * local-ssd - local SSD storage.
+     * * `network-hdd` - standard network storage
+     * * `network-ssd` - fast network storage
+     * * `network-ssd-nonreplicated` - fast network nonreplicated storage
+     * * `local-ssd` - fast local storage.
+     * See [the documentation](/docs/managed-mysql/concepts/storage) for details.
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
@@ -11081,10 +11102,13 @@ public final class ClusterOuterClass {
     java.lang.String getDiskTypeId();
     /**
      * <pre>
-     * Type of the storage environment for the host.
+     * Type of the storage.
      * Possible values:
-     * * network-ssd - network SSD drive,
-     * * local-ssd - local SSD storage.
+     * * `network-hdd` - standard network storage
+     * * `network-ssd` - fast network storage
+     * * `network-ssd-nonreplicated` - fast network nonreplicated storage
+     * * `local-ssd` - fast local storage.
+     * See [the documentation](/docs/managed-mysql/concepts/storage) for details.
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
@@ -11093,6 +11117,10 @@ public final class ClusterOuterClass {
         getDiskTypeIdBytes();
   }
   /**
+   * <pre>
+   * Cluster resource preset.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.Resources}
    */
   public  static final class Resources extends
@@ -11187,8 +11215,8 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object resourcePresetId_;
     /**
      * <pre>
-     * ID of the preset for computational resources available to a host (CPU, memory etc.).
-     * All available presets are listed in the [documentation](/docs/managed-mysql/concepts/instance-types).
+     * ID of the resource preset that defines available computational resources (vCPU, RAM, etc.) for a cluster host.
+     * All available presets are listed in [the documentation](/docs/managed-mysql/concepts/instance-types).
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
@@ -11207,8 +11235,8 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the preset for computational resources available to a host (CPU, memory etc.).
-     * All available presets are listed in the [documentation](/docs/managed-mysql/concepts/instance-types).
+     * ID of the resource preset that defines available computational resources (vCPU, RAM, etc.) for a cluster host.
+     * All available presets are listed in [the documentation](/docs/managed-mysql/concepts/instance-types).
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
@@ -11231,7 +11259,7 @@ public final class ClusterOuterClass {
     private long diskSize_;
     /**
      * <pre>
-     * Volume of the storage available to a host.
+     * Volume of the storage (for each cluster host, in bytes).
      * </pre>
      *
      * <code>int64 disk_size = 2;</code>
@@ -11244,10 +11272,13 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object diskTypeId_;
     /**
      * <pre>
-     * Type of the storage environment for the host.
+     * Type of the storage.
      * Possible values:
-     * * network-ssd - network SSD drive,
-     * * local-ssd - local SSD storage.
+     * * `network-hdd` - standard network storage
+     * * `network-ssd` - fast network storage
+     * * `network-ssd-nonreplicated` - fast network nonreplicated storage
+     * * `local-ssd` - fast local storage.
+     * See [the documentation](/docs/managed-mysql/concepts/storage) for details.
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
@@ -11266,10 +11297,13 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Type of the storage environment for the host.
+     * Type of the storage.
      * Possible values:
-     * * network-ssd - network SSD drive,
-     * * local-ssd - local SSD storage.
+     * * `network-hdd` - standard network storage
+     * * `network-ssd` - fast network storage
+     * * `network-ssd-nonreplicated` - fast network nonreplicated storage
+     * * `local-ssd` - fast local storage.
+     * See [the documentation](/docs/managed-mysql/concepts/storage) for details.
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
@@ -11466,6 +11500,10 @@ public final class ClusterOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Cluster resource preset.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.mdb.mysql.v1.Resources}
      */
     public static final class Builder extends
@@ -11629,8 +11667,8 @@ public final class ClusterOuterClass {
       private java.lang.Object resourcePresetId_ = "";
       /**
        * <pre>
-       * ID of the preset for computational resources available to a host (CPU, memory etc.).
-       * All available presets are listed in the [documentation](/docs/managed-mysql/concepts/instance-types).
+       * ID of the resource preset that defines available computational resources (vCPU, RAM, etc.) for a cluster host.
+       * All available presets are listed in [the documentation](/docs/managed-mysql/concepts/instance-types).
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
@@ -11649,8 +11687,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the preset for computational resources available to a host (CPU, memory etc.).
-       * All available presets are listed in the [documentation](/docs/managed-mysql/concepts/instance-types).
+       * ID of the resource preset that defines available computational resources (vCPU, RAM, etc.) for a cluster host.
+       * All available presets are listed in [the documentation](/docs/managed-mysql/concepts/instance-types).
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
@@ -11670,8 +11708,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the preset for computational resources available to a host (CPU, memory etc.).
-       * All available presets are listed in the [documentation](/docs/managed-mysql/concepts/instance-types).
+       * ID of the resource preset that defines available computational resources (vCPU, RAM, etc.) for a cluster host.
+       * All available presets are listed in [the documentation](/docs/managed-mysql/concepts/instance-types).
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
@@ -11688,8 +11726,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the preset for computational resources available to a host (CPU, memory etc.).
-       * All available presets are listed in the [documentation](/docs/managed-mysql/concepts/instance-types).
+       * ID of the resource preset that defines available computational resources (vCPU, RAM, etc.) for a cluster host.
+       * All available presets are listed in [the documentation](/docs/managed-mysql/concepts/instance-types).
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
@@ -11702,8 +11740,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the preset for computational resources available to a host (CPU, memory etc.).
-       * All available presets are listed in the [documentation](/docs/managed-mysql/concepts/instance-types).
+       * ID of the resource preset that defines available computational resources (vCPU, RAM, etc.) for a cluster host.
+       * All available presets are listed in [the documentation](/docs/managed-mysql/concepts/instance-types).
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
@@ -11723,7 +11761,7 @@ public final class ClusterOuterClass {
       private long diskSize_ ;
       /**
        * <pre>
-       * Volume of the storage available to a host.
+       * Volume of the storage (for each cluster host, in bytes).
        * </pre>
        *
        * <code>int64 disk_size = 2;</code>
@@ -11733,7 +11771,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Volume of the storage available to a host.
+       * Volume of the storage (for each cluster host, in bytes).
        * </pre>
        *
        * <code>int64 disk_size = 2;</code>
@@ -11746,7 +11784,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Volume of the storage available to a host.
+       * Volume of the storage (for each cluster host, in bytes).
        * </pre>
        *
        * <code>int64 disk_size = 2;</code>
@@ -11761,10 +11799,13 @@ public final class ClusterOuterClass {
       private java.lang.Object diskTypeId_ = "";
       /**
        * <pre>
-       * Type of the storage environment for the host.
+       * Type of the storage.
        * Possible values:
-       * * network-ssd - network SSD drive,
-       * * local-ssd - local SSD storage.
+       * * `network-hdd` - standard network storage
+       * * `network-ssd` - fast network storage
+       * * `network-ssd-nonreplicated` - fast network nonreplicated storage
+       * * `local-ssd` - fast local storage.
+       * See [the documentation](/docs/managed-mysql/concepts/storage) for details.
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
@@ -11783,10 +11824,13 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Type of the storage environment for the host.
+       * Type of the storage.
        * Possible values:
-       * * network-ssd - network SSD drive,
-       * * local-ssd - local SSD storage.
+       * * `network-hdd` - standard network storage
+       * * `network-ssd` - fast network storage
+       * * `network-ssd-nonreplicated` - fast network nonreplicated storage
+       * * `local-ssd` - fast local storage.
+       * See [the documentation](/docs/managed-mysql/concepts/storage) for details.
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
@@ -11806,10 +11850,13 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Type of the storage environment for the host.
+       * Type of the storage.
        * Possible values:
-       * * network-ssd - network SSD drive,
-       * * local-ssd - local SSD storage.
+       * * `network-hdd` - standard network storage
+       * * `network-ssd` - fast network storage
+       * * `network-ssd-nonreplicated` - fast network nonreplicated storage
+       * * `local-ssd` - fast local storage.
+       * See [the documentation](/docs/managed-mysql/concepts/storage) for details.
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
@@ -11826,10 +11873,13 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Type of the storage environment for the host.
+       * Type of the storage.
        * Possible values:
-       * * network-ssd - network SSD drive,
-       * * local-ssd - local SSD storage.
+       * * `network-hdd` - standard network storage
+       * * `network-ssd` - fast network storage
+       * * `network-ssd-nonreplicated` - fast network nonreplicated storage
+       * * `local-ssd` - fast local storage.
+       * See [the documentation](/docs/managed-mysql/concepts/storage) for details.
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
@@ -11842,10 +11892,13 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Type of the storage environment for the host.
+       * Type of the storage.
        * Possible values:
-       * * network-ssd - network SSD drive,
-       * * local-ssd - local SSD storage.
+       * * `network-hdd` - standard network storage
+       * * `network-ssd` - fast network storage
+       * * `network-ssd-nonreplicated` - fast network nonreplicated storage
+       * * `local-ssd` - fast local storage.
+       * See [the documentation](/docs/managed-mysql/concepts/storage) for details.
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
@@ -11920,7 +11973,8 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Allow access for DataLens
+     * Allows access from DataLens.
+     * See [the documentation](/docs/managed-mysql/operations/datalens-connect) for details.
      * </pre>
      *
      * <code>bool data_lens = 1;</code>
@@ -11929,8 +11983,8 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Allow SQL queries to the cluster databases from the Yandex.Cloud management console.
-     * See [SQL queries in the management console](/docs/managed-mysql/operations/web-sql-query) for more details.
+     * Allows SQL queries to the cluster databases from Yandex.Cloud management console.
+     * See [the documentation](/docs/managed-mysql/operations/web-sql-query) for details.
      * </pre>
      *
      * <code>bool web_sql = 2;</code>
@@ -12024,7 +12078,8 @@ public final class ClusterOuterClass {
     private boolean dataLens_;
     /**
      * <pre>
-     * Allow access for DataLens
+     * Allows access from DataLens.
+     * See [the documentation](/docs/managed-mysql/operations/datalens-connect) for details.
      * </pre>
      *
      * <code>bool data_lens = 1;</code>
@@ -12037,8 +12092,8 @@ public final class ClusterOuterClass {
     private boolean webSql_;
     /**
      * <pre>
-     * Allow SQL queries to the cluster databases from the Yandex.Cloud management console.
-     * See [SQL queries in the management console](/docs/managed-mysql/operations/web-sql-query) for more details.
+     * Allows SQL queries to the cluster databases from Yandex.Cloud management console.
+     * See [the documentation](/docs/managed-mysql/operations/web-sql-query) for details.
      * </pre>
      *
      * <code>bool web_sql = 2;</code>
@@ -12372,7 +12427,8 @@ public final class ClusterOuterClass {
       private boolean dataLens_ ;
       /**
        * <pre>
-       * Allow access for DataLens
+       * Allows access from DataLens.
+       * See [the documentation](/docs/managed-mysql/operations/datalens-connect) for details.
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
@@ -12382,7 +12438,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allow access for DataLens
+       * Allows access from DataLens.
+       * See [the documentation](/docs/managed-mysql/operations/datalens-connect) for details.
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
@@ -12395,7 +12452,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allow access for DataLens
+       * Allows access from DataLens.
+       * See [the documentation](/docs/managed-mysql/operations/datalens-connect) for details.
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
@@ -12410,8 +12468,8 @@ public final class ClusterOuterClass {
       private boolean webSql_ ;
       /**
        * <pre>
-       * Allow SQL queries to the cluster databases from the Yandex.Cloud management console.
-       * See [SQL queries in the management console](/docs/managed-mysql/operations/web-sql-query) for more details.
+       * Allows SQL queries to the cluster databases from Yandex.Cloud management console.
+       * See [the documentation](/docs/managed-mysql/operations/web-sql-query) for details.
        * </pre>
        *
        * <code>bool web_sql = 2;</code>
@@ -12421,8 +12479,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allow SQL queries to the cluster databases from the Yandex.Cloud management console.
-       * See [SQL queries in the management console](/docs/managed-mysql/operations/web-sql-query) for more details.
+       * Allows SQL queries to the cluster databases from Yandex.Cloud management console.
+       * See [the documentation](/docs/managed-mysql/operations/web-sql-query) for details.
        * </pre>
        *
        * <code>bool web_sql = 2;</code>
@@ -12435,8 +12493,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allow SQL queries to the cluster databases from the Yandex.Cloud management console.
-       * See [SQL queries in the management console](/docs/managed-mysql/operations/web-sql-query) for more details.
+       * Allows SQL queries to the cluster databases from Yandex.Cloud management console.
+       * See [the documentation](/docs/managed-mysql/operations/web-sql-query) for details.
        * </pre>
        *
        * <code>bool web_sql = 2;</code>
@@ -12506,7 +12564,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Configuration setting which enables/disables performance diagnostics service in cluster.
+     * Flag that shows if performance statistics gathering is enabled for the cluster.
      * </pre>
      *
      * <code>bool enabled = 1;</code>
@@ -12515,7 +12573,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Interval (in seconds) for my_session sampling
+     * Interval (in seconds) for `my_session` sampling.
      * </pre>
      *
      * <code>int64 sessions_sampling_interval = 2 [(.yandex.cloud.value) = "1-86400"];</code>
@@ -12524,7 +12582,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Interval (in seconds) for my_statements sampling
+     * Interval (in seconds) for `my_statements` sampling.
      * </pre>
      *
      * <code>int64 statements_sampling_interval = 3 [(.yandex.cloud.value) = "1-86400"];</code>
@@ -12624,7 +12682,7 @@ public final class ClusterOuterClass {
     private boolean enabled_;
     /**
      * <pre>
-     * Configuration setting which enables/disables performance diagnostics service in cluster.
+     * Flag that shows if performance statistics gathering is enabled for the cluster.
      * </pre>
      *
      * <code>bool enabled = 1;</code>
@@ -12637,7 +12695,7 @@ public final class ClusterOuterClass {
     private long sessionsSamplingInterval_;
     /**
      * <pre>
-     * Interval (in seconds) for my_session sampling
+     * Interval (in seconds) for `my_session` sampling.
      * </pre>
      *
      * <code>int64 sessions_sampling_interval = 2 [(.yandex.cloud.value) = "1-86400"];</code>
@@ -12650,7 +12708,7 @@ public final class ClusterOuterClass {
     private long statementsSamplingInterval_;
     /**
      * <pre>
-     * Interval (in seconds) for my_statements sampling
+     * Interval (in seconds) for `my_statements` sampling.
      * </pre>
      *
      * <code>int64 statements_sampling_interval = 3 [(.yandex.cloud.value) = "1-86400"];</code>
@@ -13002,7 +13060,7 @@ public final class ClusterOuterClass {
       private boolean enabled_ ;
       /**
        * <pre>
-       * Configuration setting which enables/disables performance diagnostics service in cluster.
+       * Flag that shows if performance statistics gathering is enabled for the cluster.
        * </pre>
        *
        * <code>bool enabled = 1;</code>
@@ -13012,7 +13070,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Configuration setting which enables/disables performance diagnostics service in cluster.
+       * Flag that shows if performance statistics gathering is enabled for the cluster.
        * </pre>
        *
        * <code>bool enabled = 1;</code>
@@ -13025,7 +13083,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Configuration setting which enables/disables performance diagnostics service in cluster.
+       * Flag that shows if performance statistics gathering is enabled for the cluster.
        * </pre>
        *
        * <code>bool enabled = 1;</code>
@@ -13040,7 +13098,7 @@ public final class ClusterOuterClass {
       private long sessionsSamplingInterval_ ;
       /**
        * <pre>
-       * Interval (in seconds) for my_session sampling
+       * Interval (in seconds) for `my_session` sampling.
        * </pre>
        *
        * <code>int64 sessions_sampling_interval = 2 [(.yandex.cloud.value) = "1-86400"];</code>
@@ -13050,7 +13108,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Interval (in seconds) for my_session sampling
+       * Interval (in seconds) for `my_session` sampling.
        * </pre>
        *
        * <code>int64 sessions_sampling_interval = 2 [(.yandex.cloud.value) = "1-86400"];</code>
@@ -13063,7 +13121,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Interval (in seconds) for my_session sampling
+       * Interval (in seconds) for `my_session` sampling.
        * </pre>
        *
        * <code>int64 sessions_sampling_interval = 2 [(.yandex.cloud.value) = "1-86400"];</code>
@@ -13078,7 +13136,7 @@ public final class ClusterOuterClass {
       private long statementsSamplingInterval_ ;
       /**
        * <pre>
-       * Interval (in seconds) for my_statements sampling
+       * Interval (in seconds) for `my_statements` sampling.
        * </pre>
        *
        * <code>int64 statements_sampling_interval = 3 [(.yandex.cloud.value) = "1-86400"];</code>
@@ -13088,7 +13146,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Interval (in seconds) for my_statements sampling
+       * Interval (in seconds) for `my_statements` sampling.
        * </pre>
        *
        * <code>int64 statements_sampling_interval = 3 [(.yandex.cloud.value) = "1-86400"];</code>
@@ -13101,7 +13159,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Interval (in seconds) for my_statements sampling
+       * Interval (in seconds) for `my_statements` sampling.
        * </pre>
        *
        * <code>int64 statements_sampling_interval = 3 [(.yandex.cloud.value) = "1-86400"];</code>

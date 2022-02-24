@@ -25622,63 +25622,62 @@ public final class ClusterServiceOuterClass {
       "\3101\005<=100\022\036\n\026always_next_page_token\030\010 \001(\010" +
       "\022\032\n\006filter\030\t \001(\tB\n\212\3101\006<=1000\"P\n\013ServiceT" +
       "ype\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\r\n\tGRE" +
-      "ENPLUM\020\001\022\024\n\020GREENPLUM_POOLER\020\0022\266\020\n\016Clust" +
-      "erService\022\230\001\n\003Get\0220.yandex.cloud.mdb.gre" +
+      "ENPLUM\020\001\022\024\n\020GREENPLUM_POOLER\020\0022\212\020\n\016Clust" +
+      "erService\022\224\001\n\003Get\0220.yandex.cloud.mdb.gre" +
       "enplum.v1.GetClusterRequest\032&.yandex.clo" +
-      "ud.mdb.greenplum.v1.Cluster\"7\202\323\344\223\0021\022//md" +
-      "b/managed-greenplum/v1/clusters/{cluster" +
-      "_id}\022\233\001\n\004List\0222.yandex.cloud.mdb.greenpl" +
-      "um.v1.ListClustersRequest\0323.yandex.cloud" +
-      ".mdb.greenplum.v1.ListClustersResponse\"*" +
-      "\202\323\344\223\002$\022\"/mdb/managed-greenplum/v1/cluste" +
-      "rs\022\263\001\n\006Create\0223.yandex.cloud.mdb.greenpl" +
-      "um.v1.CreateClusterRequest\032!.yandex.clou" +
-      "d.operation.Operation\"Q\202\323\344\223\002\'\"\"/mdb/mana" +
-      "ged-greenplum/v1/clusters:\001*\262\322* \n\025Create" +
-      "ClusterMetadata\022\007Cluster\022\300\001\n\006Update\0223.ya" +
-      "ndex.cloud.mdb.greenplum.v1.UpdateCluste" +
-      "rRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"^\202\323\344\223\00242//mdb/managed-greenplum/v1/c" +
-      "lusters/{cluster_id}:\001*\262\322* \n\025UpdateClust" +
-      "erMetadata\022\007Cluster\022\313\001\n\006Delete\0223.yandex." +
-      "cloud.mdb.greenplum.v1.DeleteClusterRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"i" +
-      "\202\323\344\223\0021*//mdb/managed-greenplum/v1/cluste" +
-      "rs/{cluster_id}\262\322*.\n\025DeleteClusterMetada" +
-      "ta\022\025google.protobuf.Empty\022\300\001\n\005Start\0222.ya" +
-      "ndex.cloud.mdb.greenplum.v1.StartCluster" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"`\202\323\344\223\0027\"5/mdb/managed-greenplum/v1/cl" +
-      "usters/{cluster_id}:start\262\322*\037\n\024StartClus" +
-      "terMetadata\022\007Cluster\022\274\001\n\004Stop\0221.yandex.c" +
-      "loud.mdb.greenplum.v1.StopClusterRequest" +
-      "\032!.yandex.cloud.operation.Operation\"^\202\323\344" +
-      "\223\0026\"4/mdb/managed-greenplum/v1/clusters/" +
-      "{cluster_id}:stop\262\322*\036\n\023StopClusterMetada" +
-      "ta\022\007Cluster\022\317\001\n\016ListOperations\022;.yandex." +
-      "cloud.mdb.greenplum.v1.ListClusterOperat" +
-      "ionsRequest\032<.yandex.cloud.mdb.greenplum" +
-      ".v1.ListClusterOperationsResponse\"B\202\323\344\223\002" +
-      "<\022:/mdb/managed-greenplum/v1/clusters/{c" +
-      "luster_id}/operations\022\310\001\n\017ListMasterHost" +
-      "s\0226.yandex.cloud.mdb.greenplum.v1.ListCl" +
-      "usterHostsRequest\0327.yandex.cloud.mdb.gre" +
-      "enplum.v1.ListClusterHostsResponse\"D\202\323\344\223" +
-      "\002>\022</mdb/managed-greenplum/v1/clusters/{" +
-      "cluster_id}/master-hosts\022\312\001\n\020ListSegment" +
-      "Hosts\0226.yandex.cloud.mdb.greenplum.v1.Li" +
-      "stClusterHostsRequest\0327.yandex.cloud.mdb" +
-      ".greenplum.v1.ListClusterHostsResponse\"E" +
-      "\202\323\344\223\002?\022=/mdb/managed-greenplum/v1/cluste" +
-      "rs/{cluster_id}/segment-hosts\022\267\001\n\010ListLo" +
+      "ud.mdb.greenplum.v1.Cluster\"3\202\323\344\223\002-\022+/ma" +
+      "naged-greenplum/v1/clusters/{cluster_id}" +
+      "\022\227\001\n\004List\0222.yandex.cloud.mdb.greenplum.v" +
+      "1.ListClustersRequest\0323.yandex.cloud.mdb" +
+      ".greenplum.v1.ListClustersResponse\"&\202\323\344\223" +
+      "\002 \022\036/managed-greenplum/v1/clusters\022\257\001\n\006C" +
+      "reate\0223.yandex.cloud.mdb.greenplum.v1.Cr" +
+      "eateClusterRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"M\202\323\344\223\002#\"\036/managed-greenplu" +
+      "m/v1/clusters:\001*\262\322* \n\025CreateClusterMetad" +
+      "ata\022\007Cluster\022\274\001\n\006Update\0223.yandex.cloud.m" +
+      "db.greenplum.v1.UpdateClusterRequest\032!.y" +
+      "andex.cloud.operation.Operation\"Z\202\323\344\223\00202" +
+      "+/managed-greenplum/v1/clusters/{cluster" +
+      "_id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Clus" +
+      "ter\022\307\001\n\006Delete\0223.yandex.cloud.mdb.greenp" +
+      "lum.v1.DeleteClusterRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"e\202\323\344\223\002-*+/managed" +
+      "-greenplum/v1/clusters/{cluster_id}\262\322*.\n" +
+      "\025DeleteClusterMetadata\022\025google.protobuf." +
+      "Empty\022\274\001\n\005Start\0222.yandex.cloud.mdb.green" +
+      "plum.v1.StartClusterRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"\\\202\323\344\223\0023\"1/managed" +
+      "-greenplum/v1/clusters/{cluster_id}:star" +
+      "t\262\322*\037\n\024StartClusterMetadata\022\007Cluster\022\270\001\n" +
+      "\004Stop\0221.yandex.cloud.mdb.greenplum.v1.St" +
+      "opClusterRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"Z\202\323\344\223\0022\"0/managed-greenplum/" +
+      "v1/clusters/{cluster_id}:stop\262\322*\036\n\023StopC" +
+      "lusterMetadata\022\007Cluster\022\313\001\n\016ListOperatio" +
+      "ns\022;.yandex.cloud.mdb.greenplum.v1.ListC" +
+      "lusterOperationsRequest\032<.yandex.cloud.m" +
+      "db.greenplum.v1.ListClusterOperationsRes" +
+      "ponse\">\202\323\344\223\0028\0226/managed-greenplum/v1/clu" +
+      "sters/{cluster_id}/operations\022\304\001\n\017ListMa" +
+      "sterHosts\0226.yandex.cloud.mdb.greenplum.v" +
+      "1.ListClusterHostsRequest\0327.yandex.cloud" +
+      ".mdb.greenplum.v1.ListClusterHostsRespon" +
+      "se\"@\202\323\344\223\002:\0228/managed-greenplum/v1/cluste" +
+      "rs/{cluster_id}/master-hosts\022\306\001\n\020ListSeg" +
+      "mentHosts\0226.yandex.cloud.mdb.greenplum.v" +
+      "1.ListClusterHostsRequest\0327.yandex.cloud" +
+      ".mdb.greenplum.v1.ListClusterHostsRespon" +
+      "se\"A\202\323\344\223\002;\0229/managed-greenplum/v1/cluste" +
+      "rs/{cluster_id}/segment-hosts\022\263\001\n\010ListLo" +
       "gs\0225.yandex.cloud.mdb.greenplum.v1.ListC" +
       "lusterLogsRequest\0326.yandex.cloud.mdb.gre" +
-      "enplum.v1.ListClusterLogsResponse\"<\202\323\344\223\002" +
-      "6\0224/mdb/managed-greenplum/v1/clusters/{c" +
-      "luster_id}:logsBp\n!yandex.cloud.api.mdb." +
-      "greenplum.v1ZKgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/mdb/greenplum/v1;" +
-      "greenplumb\006proto3"
+      "enplum.v1.ListClusterLogsResponse\"8\202\323\344\223\002" +
+      "2\0220/managed-greenplum/v1/clusters/{clust" +
+      "er_id}:logsBp\n!yandex.cloud.api.mdb.gree" +
+      "nplum.v1ZKgithub.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/mdb/greenplum/v1;gree" +
+      "nplumb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

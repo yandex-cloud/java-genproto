@@ -72,7 +72,7 @@ public final class Maintenance {
   }
   /**
    * <pre>
-   * A maintenance window settings.
+   * Configuration of a maintenance window in a MySQL cluster.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.MaintenanceWindow}
@@ -475,7 +475,7 @@ public final class Maintenance {
     }
     /**
      * <pre>
-     * A maintenance window settings.
+     * Configuration of a maintenance window in a MySQL cluster.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.mdb.mysql.v1.MaintenanceWindow}

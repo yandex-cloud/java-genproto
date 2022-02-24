@@ -779,8 +779,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the cluster to list MySQL users in.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to list MySQL users in. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -788,8 +787,7 @@ public final class UserServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the cluster to list MySQL users in.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to list MySQL users in. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -799,9 +797,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return. If the number of available results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -810,8 +806,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -819,8 +814,7 @@ public final class UserServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -923,8 +917,7 @@ public final class UserServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the cluster to list MySQL users in.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to list MySQL users in. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -943,8 +936,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the cluster to list MySQL users in.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to list MySQL users in. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -967,9 +959,7 @@ public final class UserServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return. If the number of available results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -982,8 +972,7 @@ public final class UserServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1002,8 +991,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1363,8 +1351,7 @@ public final class UserServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the cluster to list MySQL users in.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to list MySQL users in. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1383,8 +1370,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the cluster to list MySQL users in.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to list MySQL users in. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1404,8 +1390,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the cluster to list MySQL users in.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to list MySQL users in. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1422,8 +1407,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the cluster to list MySQL users in.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to list MySQL users in. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1436,8 +1420,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the cluster to list MySQL users in.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to list MySQL users in. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1457,9 +1440,7 @@ public final class UserServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return. If the number of available results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1469,9 +1450,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return. If the number of available results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1484,9 +1463,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return. If the number of available results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1501,8 +1478,7 @@ public final class UserServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1521,8 +1497,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1542,8 +1517,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1560,8 +1534,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1574,8 +1547,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1694,10 +1666,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value
-     * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests. If the number of results is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent list request will have its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1705,10 +1674,7 @@ public final class UserServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value
-     * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests. If the number of results is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent list request will have its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1867,10 +1833,7 @@ public final class UserServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value
-     * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests. If the number of results is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent list request will have its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1889,10 +1852,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value
-     * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests. If the number of results is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent list request will have its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2588,10 +2548,7 @@ public final class UserServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value
-       * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests. If the number of results is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2610,10 +2567,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value
-       * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests. If the number of results is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2633,10 +2587,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value
-       * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests. If the number of results is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2653,10 +2604,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value
-       * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests. If the number of results is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2669,10 +2617,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value
-       * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests. If the number of results is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2747,8 +2692,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster to create a user for.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the MySQL cluster to create a user for. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2756,8 +2700,7 @@ public final class UserServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster to create a user for.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the MySQL cluster to create a user for. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2885,8 +2828,7 @@ public final class UserServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster to create a user for.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the MySQL cluster to create a user for. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2905,8 +2847,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster to create a user for.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the MySQL cluster to create a user for. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3294,8 +3235,7 @@ public final class UserServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster to create a user for.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster to create a user for. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3314,8 +3254,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to create a user for.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster to create a user for. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3335,8 +3274,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to create a user for.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster to create a user for. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3353,8 +3291,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to create a user for.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster to create a user for. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3367,8 +3304,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to create a user for.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster to create a user for. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4355,8 +4291,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
-     * To get the cluster ID use a [ClusterService.List] request.
+     * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4364,8 +4299,7 @@ public final class UserServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
-     * To get the cluster ID use a [ClusterService.List] request.
+     * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4375,8 +4309,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the user to be updated.
-     * To get the name of the user use a [UserService.List] request.
+     * Name of the user to be updated. To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4384,8 +4317,7 @@ public final class UserServiceOuterClass {
     java.lang.String getUserName();
     /**
      * <pre>
-     * Name of the user to be updated.
-     * To get the name of the user use a [UserService.List] request.
+     * Name of the user to be updated. To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4395,7 +4327,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL user should be updated.
+     * Field mask that specifies which settings of the MySQL user should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -4403,7 +4335,7 @@ public final class UserServiceOuterClass {
     boolean hasUpdateMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL user should be updated.
+     * Field mask that specifies which settings of the MySQL user should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -4411,7 +4343,7 @@ public final class UserServiceOuterClass {
     com.google.protobuf.FieldMask getUpdateMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL user should be updated.
+     * Field mask that specifies which settings of the MySQL user should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -4603,8 +4535,7 @@ public final class UserServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
-     * To get the cluster ID use a [ClusterService.List] request.
+     * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4623,8 +4554,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
-     * To get the cluster ID use a [ClusterService.List] request.
+     * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4647,8 +4577,7 @@ public final class UserServiceOuterClass {
     private volatile java.lang.Object userName_;
     /**
      * <pre>
-     * Name of the user to be updated.
-     * To get the name of the user use a [UserService.List] request.
+     * Name of the user to be updated. To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4667,8 +4596,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the user to be updated.
-     * To get the name of the user use a [UserService.List] request.
+     * Name of the user to be updated. To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4691,7 +4619,7 @@ public final class UserServiceOuterClass {
     private com.google.protobuf.FieldMask updateMask_;
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL user should be updated.
+     * Field mask that specifies which settings of the MySQL user should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -4701,7 +4629,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL user should be updated.
+     * Field mask that specifies which settings of the MySQL user should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -4711,7 +4639,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the MySQL user should be updated.
+     * Field mask that specifies which settings of the MySQL user should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -5246,8 +5174,7 @@ public final class UserServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5266,8 +5193,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5287,8 +5213,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5305,8 +5230,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5319,8 +5243,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5340,8 +5263,7 @@ public final class UserServiceOuterClass {
       private java.lang.Object userName_ = "";
       /**
        * <pre>
-       * Name of the user to be updated.
-       * To get the name of the user use a [UserService.List] request.
+       * Name of the user to be updated. To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -5360,8 +5282,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the user to be updated.
-       * To get the name of the user use a [UserService.List] request.
+       * Name of the user to be updated. To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -5381,8 +5302,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the user to be updated.
-       * To get the name of the user use a [UserService.List] request.
+       * Name of the user to be updated. To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -5399,8 +5319,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the user to be updated.
-       * To get the name of the user use a [UserService.List] request.
+       * Name of the user to be updated. To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -5413,8 +5332,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the user to be updated.
-       * To get the name of the user use a [UserService.List] request.
+       * Name of the user to be updated. To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -5436,7 +5354,7 @@ public final class UserServiceOuterClass {
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL user should be updated.
+       * Field mask that specifies which settings of the MySQL user should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -5446,7 +5364,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL user should be updated.
+       * Field mask that specifies which settings of the MySQL user should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -5460,7 +5378,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL user should be updated.
+       * Field mask that specifies which settings of the MySQL user should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -5480,7 +5398,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL user should be updated.
+       * Field mask that specifies which settings of the MySQL user should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -5498,7 +5416,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL user should be updated.
+       * Field mask that specifies which settings of the MySQL user should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -5520,7 +5438,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL user should be updated.
+       * Field mask that specifies which settings of the MySQL user should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -5538,7 +5456,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL user should be updated.
+       * Field mask that specifies which settings of the MySQL user should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -5550,7 +5468,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL user should be updated.
+       * Field mask that specifies which settings of the MySQL user should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -5565,7 +5483,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the MySQL user should be updated.
+       * Field mask that specifies which settings of the MySQL user should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -6061,7 +5979,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the user that is being updated.
+     * Name of a user that is being updated.
      * </pre>
      *
      * <code>string user_name = 2;</code>
@@ -6069,7 +5987,7 @@ public final class UserServiceOuterClass {
     java.lang.String getUserName();
     /**
      * <pre>
-     * Name of the user that is being updated.
+     * Name of a user that is being updated.
      * </pre>
      *
      * <code>string user_name = 2;</code>
@@ -6208,7 +6126,7 @@ public final class UserServiceOuterClass {
     private volatile java.lang.Object userName_;
     /**
      * <pre>
-     * Name of the user that is being updated.
+     * Name of a user that is being updated.
      * </pre>
      *
      * <code>string user_name = 2;</code>
@@ -6227,7 +6145,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the user that is being updated.
+     * Name of a user that is being updated.
      * </pre>
      *
      * <code>string user_name = 2;</code>
@@ -6658,7 +6576,7 @@ public final class UserServiceOuterClass {
       private java.lang.Object userName_ = "";
       /**
        * <pre>
-       * Name of the user that is being updated.
+       * Name of a user that is being updated.
        * </pre>
        *
        * <code>string user_name = 2;</code>
@@ -6677,7 +6595,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the user that is being updated.
+       * Name of a user that is being updated.
        * </pre>
        *
        * <code>string user_name = 2;</code>
@@ -6697,7 +6615,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the user that is being updated.
+       * Name of a user that is being updated.
        * </pre>
        *
        * <code>string user_name = 2;</code>
@@ -6714,7 +6632,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the user that is being updated.
+       * Name of a user that is being updated.
        * </pre>
        *
        * <code>string user_name = 2;</code>
@@ -6727,7 +6645,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the user that is being updated.
+       * Name of a user that is being updated.
        * </pre>
        *
        * <code>string user_name = 2;</code>
@@ -6802,8 +6720,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6811,8 +6728,7 @@ public final class UserServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6822,8 +6738,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the user to delete.
-     * To get the name of the user, use a [UserService.List] request.
+     * Name of the user to delete. To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -6831,8 +6746,7 @@ public final class UserServiceOuterClass {
     java.lang.String getUserName();
     /**
      * <pre>
-     * Name of the user to delete.
-     * To get the name of the user, use a [UserService.List] request.
+     * Name of the user to delete. To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -6929,8 +6843,7 @@ public final class UserServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6949,8 +6862,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6973,8 +6885,7 @@ public final class UserServiceOuterClass {
     private volatile java.lang.Object userName_;
     /**
      * <pre>
-     * Name of the user to delete.
-     * To get the name of the user, use a [UserService.List] request.
+     * Name of the user to delete. To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -6993,8 +6904,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the user to delete.
-     * To get the name of the user, use a [UserService.List] request.
+     * Name of the user to delete. To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -7336,8 +7246,7 @@ public final class UserServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7356,8 +7265,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7377,8 +7285,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7395,8 +7302,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7409,8 +7315,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7430,8 +7335,7 @@ public final class UserServiceOuterClass {
       private java.lang.Object userName_ = "";
       /**
        * <pre>
-       * Name of the user to delete.
-       * To get the name of the user, use a [UserService.List] request.
+       * Name of the user to delete. To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -7450,8 +7354,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the user to delete.
-       * To get the name of the user, use a [UserService.List] request.
+       * Name of the user to delete. To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -7471,8 +7374,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the user to delete.
-       * To get the name of the user, use a [UserService.List] request.
+       * Name of the user to delete. To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -7489,8 +7391,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the user to delete.
-       * To get the name of the user, use a [UserService.List] request.
+       * Name of the user to delete. To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -7503,8 +7404,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the user to delete.
-       * To get the name of the user, use a [UserService.List] request.
+       * Name of the user to delete. To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -8338,8 +8238,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8347,8 +8246,7 @@ public final class UserServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8358,8 +8256,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the user to grant the permission to.
-     * To get the name of the user, use a [UserService.List] request.
+     * Name of the user to grant the permission to. To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -8367,8 +8264,7 @@ public final class UserServiceOuterClass {
     java.lang.String getUserName();
     /**
      * <pre>
-     * Name of the user to grant the permission to.
-     * To get the name of the user, use a [UserService.List] request.
+     * Name of the user to grant the permission to. To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -8503,8 +8399,7 @@ public final class UserServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8523,8 +8418,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8547,8 +8441,7 @@ public final class UserServiceOuterClass {
     private volatile java.lang.Object userName_;
     /**
      * <pre>
-     * Name of the user to grant the permission to.
-     * To get the name of the user, use a [UserService.List] request.
+     * Name of the user to grant the permission to. To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -8567,8 +8460,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the user to grant the permission to.
-     * To get the name of the user, use a [UserService.List] request.
+     * Name of the user to grant the permission to. To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -8973,8 +8865,7 @@ public final class UserServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8993,8 +8884,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9014,8 +8904,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9032,8 +8921,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9046,8 +8934,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9067,8 +8954,7 @@ public final class UserServiceOuterClass {
       private java.lang.Object userName_ = "";
       /**
        * <pre>
-       * Name of the user to grant the permission to.
-       * To get the name of the user, use a [UserService.List] request.
+       * Name of the user to grant the permission to. To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -9087,8 +8973,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the user to grant the permission to.
-       * To get the name of the user, use a [UserService.List] request.
+       * Name of the user to grant the permission to. To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -9108,8 +8993,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the user to grant the permission to.
-       * To get the name of the user, use a [UserService.List] request.
+       * Name of the user to grant the permission to. To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -9126,8 +9010,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the user to grant the permission to.
-       * To get the name of the user, use a [UserService.List] request.
+       * Name of the user to grant the permission to. To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -9140,8 +9023,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the user to grant the permission to.
-       * To get the name of the user, use a [UserService.List] request.
+       * Name of the user to grant the permission to. To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -9369,8 +9251,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -9378,8 +9259,7 @@ public final class UserServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -9494,8 +9374,7 @@ public final class UserServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -9514,8 +9393,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -9899,8 +9777,7 @@ public final class UserServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -9919,8 +9796,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -9940,8 +9816,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -9958,8 +9833,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -9972,8 +9846,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -10137,8 +10010,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10146,8 +10018,7 @@ public final class UserServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10157,8 +10028,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the user to revoke a permission from.
-     * To get the name of the user, use a [UserService.List] request.
+     * Name of the user to revoke a permission from. To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -10166,8 +10036,7 @@ public final class UserServiceOuterClass {
     java.lang.String getUserName();
     /**
      * <pre>
-     * Name of the user to revoke a permission from.
-     * To get the name of the user, use a [UserService.List] request.
+     * Name of the user to revoke a permission from. To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -10289,8 +10158,7 @@ public final class UserServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10309,8 +10177,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster the user belongs to.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10333,8 +10200,7 @@ public final class UserServiceOuterClass {
     private volatile java.lang.Object userName_;
     /**
      * <pre>
-     * Name of the user to revoke a permission from.
-     * To get the name of the user, use a [UserService.List] request.
+     * Name of the user to revoke a permission from. To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -10353,8 +10219,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the user to revoke a permission from.
-     * To get the name of the user, use a [UserService.List] request.
+     * Name of the user to revoke a permission from. To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
      * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -10755,8 +10620,7 @@ public final class UserServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10775,8 +10639,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10796,8 +10659,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10814,8 +10676,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10828,8 +10689,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster the user belongs to.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the MySQL cluster the user belongs to. To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10849,8 +10709,7 @@ public final class UserServiceOuterClass {
       private java.lang.Object userName_ = "";
       /**
        * <pre>
-       * Name of the user to revoke a permission from.
-       * To get the name of the user, use a [UserService.List] request.
+       * Name of the user to revoke a permission from. To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -10869,8 +10728,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the user to revoke a permission from.
-       * To get the name of the user, use a [UserService.List] request.
+       * Name of the user to revoke a permission from. To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -10890,8 +10748,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the user to revoke a permission from.
-       * To get the name of the user, use a [UserService.List] request.
+       * Name of the user to revoke a permission from. To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -10908,8 +10765,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the user to revoke a permission from.
-       * To get the name of the user, use a [UserService.List] request.
+       * Name of the user to revoke a permission from. To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -10922,8 +10778,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the user to revoke a permission from.
-       * To get the name of the user, use a [UserService.List] request.
+       * Name of the user to revoke a permission from. To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
        * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>

@@ -1651,6 +1651,71 @@ public final class Postgresql10 {
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig10.LogLevel pg_hint_plan_message_level = 112;</code>
      */
     yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.LogLevel getPgHintPlanMessageLevel();
+
+    /**
+     * <code>.google.protobuf.BoolValue pg_qualstats_enabled = 113;</code>
+     */
+    boolean hasPgQualstatsEnabled();
+    /**
+     * <code>.google.protobuf.BoolValue pg_qualstats_enabled = 113;</code>
+     */
+    com.google.protobuf.BoolValue getPgQualstatsEnabled();
+    /**
+     * <code>.google.protobuf.BoolValue pg_qualstats_enabled = 113;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getPgQualstatsEnabledOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BoolValue pg_qualstats_track_constants = 114;</code>
+     */
+    boolean hasPgQualstatsTrackConstants();
+    /**
+     * <code>.google.protobuf.BoolValue pg_qualstats_track_constants = 114;</code>
+     */
+    com.google.protobuf.BoolValue getPgQualstatsTrackConstants();
+    /**
+     * <code>.google.protobuf.BoolValue pg_qualstats_track_constants = 114;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getPgQualstatsTrackConstantsOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Int64Value pg_qualstats_max = 115;</code>
+     */
+    boolean hasPgQualstatsMax();
+    /**
+     * <code>.google.protobuf.Int64Value pg_qualstats_max = 115;</code>
+     */
+    com.google.protobuf.Int64Value getPgQualstatsMax();
+    /**
+     * <code>.google.protobuf.Int64Value pg_qualstats_max = 115;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getPgQualstatsMaxOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BoolValue pg_qualstats_resolve_oids = 116;</code>
+     */
+    boolean hasPgQualstatsResolveOids();
+    /**
+     * <code>.google.protobuf.BoolValue pg_qualstats_resolve_oids = 116;</code>
+     */
+    com.google.protobuf.BoolValue getPgQualstatsResolveOids();
+    /**
+     * <code>.google.protobuf.BoolValue pg_qualstats_resolve_oids = 116;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getPgQualstatsResolveOidsOrBuilder();
+
+    /**
+     * <code>.google.protobuf.DoubleValue pg_qualstats_sample_rate = 117;</code>
+     */
+    boolean hasPgQualstatsSampleRate();
+    /**
+     * <code>.google.protobuf.DoubleValue pg_qualstats_sample_rate = 117;</code>
+     */
+    com.google.protobuf.DoubleValue getPgQualstatsSampleRate();
+    /**
+     * <code>.google.protobuf.DoubleValue pg_qualstats_sample_rate = 117;</code>
+     */
+    com.google.protobuf.DoubleValueOrBuilder getPgQualstatsSampleRateOrBuilder();
   }
   /**
    * <pre>
@@ -3044,6 +3109,71 @@ public final class Postgresql10 {
               int rawValue = input.readEnum();
 
               pgHintPlanMessageLevel_ = rawValue;
+              break;
+            }
+            case 906: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (pgQualstatsEnabled_ != null) {
+                subBuilder = pgQualstatsEnabled_.toBuilder();
+              }
+              pgQualstatsEnabled_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pgQualstatsEnabled_);
+                pgQualstatsEnabled_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 914: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (pgQualstatsTrackConstants_ != null) {
+                subBuilder = pgQualstatsTrackConstants_.toBuilder();
+              }
+              pgQualstatsTrackConstants_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pgQualstatsTrackConstants_);
+                pgQualstatsTrackConstants_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 922: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (pgQualstatsMax_ != null) {
+                subBuilder = pgQualstatsMax_.toBuilder();
+              }
+              pgQualstatsMax_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pgQualstatsMax_);
+                pgQualstatsMax_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 930: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (pgQualstatsResolveOids_ != null) {
+                subBuilder = pgQualstatsResolveOids_.toBuilder();
+              }
+              pgQualstatsResolveOids_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pgQualstatsResolveOids_);
+                pgQualstatsResolveOids_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 938: {
+              com.google.protobuf.DoubleValue.Builder subBuilder = null;
+              if (pgQualstatsSampleRate_ != null) {
+                subBuilder = pgQualstatsSampleRate_.toBuilder();
+              }
+              pgQualstatsSampleRate_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pgQualstatsSampleRate_);
+                pgQualstatsSampleRate_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -7378,6 +7508,111 @@ public final class Postgresql10 {
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.LogLevel.UNRECOGNIZED : result;
     }
 
+    public static final int PG_QUALSTATS_ENABLED_FIELD_NUMBER = 113;
+    private com.google.protobuf.BoolValue pgQualstatsEnabled_;
+    /**
+     * <code>.google.protobuf.BoolValue pg_qualstats_enabled = 113;</code>
+     */
+    public boolean hasPgQualstatsEnabled() {
+      return pgQualstatsEnabled_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue pg_qualstats_enabled = 113;</code>
+     */
+    public com.google.protobuf.BoolValue getPgQualstatsEnabled() {
+      return pgQualstatsEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : pgQualstatsEnabled_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue pg_qualstats_enabled = 113;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getPgQualstatsEnabledOrBuilder() {
+      return getPgQualstatsEnabled();
+    }
+
+    public static final int PG_QUALSTATS_TRACK_CONSTANTS_FIELD_NUMBER = 114;
+    private com.google.protobuf.BoolValue pgQualstatsTrackConstants_;
+    /**
+     * <code>.google.protobuf.BoolValue pg_qualstats_track_constants = 114;</code>
+     */
+    public boolean hasPgQualstatsTrackConstants() {
+      return pgQualstatsTrackConstants_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue pg_qualstats_track_constants = 114;</code>
+     */
+    public com.google.protobuf.BoolValue getPgQualstatsTrackConstants() {
+      return pgQualstatsTrackConstants_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : pgQualstatsTrackConstants_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue pg_qualstats_track_constants = 114;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getPgQualstatsTrackConstantsOrBuilder() {
+      return getPgQualstatsTrackConstants();
+    }
+
+    public static final int PG_QUALSTATS_MAX_FIELD_NUMBER = 115;
+    private com.google.protobuf.Int64Value pgQualstatsMax_;
+    /**
+     * <code>.google.protobuf.Int64Value pg_qualstats_max = 115;</code>
+     */
+    public boolean hasPgQualstatsMax() {
+      return pgQualstatsMax_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value pg_qualstats_max = 115;</code>
+     */
+    public com.google.protobuf.Int64Value getPgQualstatsMax() {
+      return pgQualstatsMax_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : pgQualstatsMax_;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value pg_qualstats_max = 115;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getPgQualstatsMaxOrBuilder() {
+      return getPgQualstatsMax();
+    }
+
+    public static final int PG_QUALSTATS_RESOLVE_OIDS_FIELD_NUMBER = 116;
+    private com.google.protobuf.BoolValue pgQualstatsResolveOids_;
+    /**
+     * <code>.google.protobuf.BoolValue pg_qualstats_resolve_oids = 116;</code>
+     */
+    public boolean hasPgQualstatsResolveOids() {
+      return pgQualstatsResolveOids_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue pg_qualstats_resolve_oids = 116;</code>
+     */
+    public com.google.protobuf.BoolValue getPgQualstatsResolveOids() {
+      return pgQualstatsResolveOids_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : pgQualstatsResolveOids_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue pg_qualstats_resolve_oids = 116;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getPgQualstatsResolveOidsOrBuilder() {
+      return getPgQualstatsResolveOids();
+    }
+
+    public static final int PG_QUALSTATS_SAMPLE_RATE_FIELD_NUMBER = 117;
+    private com.google.protobuf.DoubleValue pgQualstatsSampleRate_;
+    /**
+     * <code>.google.protobuf.DoubleValue pg_qualstats_sample_rate = 117;</code>
+     */
+    public boolean hasPgQualstatsSampleRate() {
+      return pgQualstatsSampleRate_ != null;
+    }
+    /**
+     * <code>.google.protobuf.DoubleValue pg_qualstats_sample_rate = 117;</code>
+     */
+    public com.google.protobuf.DoubleValue getPgQualstatsSampleRate() {
+      return pgQualstatsSampleRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : pgQualstatsSampleRate_;
+    }
+    /**
+     * <code>.google.protobuf.DoubleValue pg_qualstats_sample_rate = 117;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getPgQualstatsSampleRateOrBuilder() {
+      return getPgQualstatsSampleRate();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7729,6 +7964,21 @@ public final class Postgresql10 {
       }
       if (pgHintPlanMessageLevel_ != yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.LogLevel.LOG_LEVEL_UNSPECIFIED.getNumber()) {
         output.writeEnum(112, pgHintPlanMessageLevel_);
+      }
+      if (pgQualstatsEnabled_ != null) {
+        output.writeMessage(113, getPgQualstatsEnabled());
+      }
+      if (pgQualstatsTrackConstants_ != null) {
+        output.writeMessage(114, getPgQualstatsTrackConstants());
+      }
+      if (pgQualstatsMax_ != null) {
+        output.writeMessage(115, getPgQualstatsMax());
+      }
+      if (pgQualstatsResolveOids_ != null) {
+        output.writeMessage(116, getPgQualstatsResolveOids());
+      }
+      if (pgQualstatsSampleRate_ != null) {
+        output.writeMessage(117, getPgQualstatsSampleRate());
       }
       unknownFields.writeTo(output);
     }
@@ -8188,6 +8438,26 @@ public final class Postgresql10 {
       if (pgHintPlanMessageLevel_ != yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.LogLevel.LOG_LEVEL_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(112, pgHintPlanMessageLevel_);
+      }
+      if (pgQualstatsEnabled_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(113, getPgQualstatsEnabled());
+      }
+      if (pgQualstatsTrackConstants_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(114, getPgQualstatsTrackConstants());
+      }
+      if (pgQualstatsMax_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(115, getPgQualstatsMax());
+      }
+      if (pgQualstatsResolveOids_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(116, getPgQualstatsResolveOids());
+      }
+      if (pgQualstatsSampleRate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(117, getPgQualstatsSampleRate());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8686,6 +8956,31 @@ public final class Postgresql10 {
       }
       result = result && pgHintPlanDebugPrint_ == other.pgHintPlanDebugPrint_;
       result = result && pgHintPlanMessageLevel_ == other.pgHintPlanMessageLevel_;
+      result = result && (hasPgQualstatsEnabled() == other.hasPgQualstatsEnabled());
+      if (hasPgQualstatsEnabled()) {
+        result = result && getPgQualstatsEnabled()
+            .equals(other.getPgQualstatsEnabled());
+      }
+      result = result && (hasPgQualstatsTrackConstants() == other.hasPgQualstatsTrackConstants());
+      if (hasPgQualstatsTrackConstants()) {
+        result = result && getPgQualstatsTrackConstants()
+            .equals(other.getPgQualstatsTrackConstants());
+      }
+      result = result && (hasPgQualstatsMax() == other.hasPgQualstatsMax());
+      if (hasPgQualstatsMax()) {
+        result = result && getPgQualstatsMax()
+            .equals(other.getPgQualstatsMax());
+      }
+      result = result && (hasPgQualstatsResolveOids() == other.hasPgQualstatsResolveOids());
+      if (hasPgQualstatsResolveOids()) {
+        result = result && getPgQualstatsResolveOids()
+            .equals(other.getPgQualstatsResolveOids());
+      }
+      result = result && (hasPgQualstatsSampleRate() == other.hasPgQualstatsSampleRate());
+      if (hasPgQualstatsSampleRate()) {
+        result = result && getPgQualstatsSampleRate()
+            .equals(other.getPgQualstatsSampleRate());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -9105,6 +9400,26 @@ public final class Postgresql10 {
       hash = (53 * hash) + pgHintPlanDebugPrint_;
       hash = (37 * hash) + PG_HINT_PLAN_MESSAGE_LEVEL_FIELD_NUMBER;
       hash = (53 * hash) + pgHintPlanMessageLevel_;
+      if (hasPgQualstatsEnabled()) {
+        hash = (37 * hash) + PG_QUALSTATS_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + getPgQualstatsEnabled().hashCode();
+      }
+      if (hasPgQualstatsTrackConstants()) {
+        hash = (37 * hash) + PG_QUALSTATS_TRACK_CONSTANTS_FIELD_NUMBER;
+        hash = (53 * hash) + getPgQualstatsTrackConstants().hashCode();
+      }
+      if (hasPgQualstatsMax()) {
+        hash = (37 * hash) + PG_QUALSTATS_MAX_FIELD_NUMBER;
+        hash = (53 * hash) + getPgQualstatsMax().hashCode();
+      }
+      if (hasPgQualstatsResolveOids()) {
+        hash = (37 * hash) + PG_QUALSTATS_RESOLVE_OIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getPgQualstatsResolveOids().hashCode();
+      }
+      if (hasPgQualstatsSampleRate()) {
+        hash = (37 * hash) + PG_QUALSTATS_SAMPLE_RATE_FIELD_NUMBER;
+        hash = (53 * hash) + getPgQualstatsSampleRate().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9834,6 +10149,36 @@ public final class Postgresql10 {
 
         pgHintPlanMessageLevel_ = 0;
 
+        if (pgQualstatsEnabledBuilder_ == null) {
+          pgQualstatsEnabled_ = null;
+        } else {
+          pgQualstatsEnabled_ = null;
+          pgQualstatsEnabledBuilder_ = null;
+        }
+        if (pgQualstatsTrackConstantsBuilder_ == null) {
+          pgQualstatsTrackConstants_ = null;
+        } else {
+          pgQualstatsTrackConstants_ = null;
+          pgQualstatsTrackConstantsBuilder_ = null;
+        }
+        if (pgQualstatsMaxBuilder_ == null) {
+          pgQualstatsMax_ = null;
+        } else {
+          pgQualstatsMax_ = null;
+          pgQualstatsMaxBuilder_ = null;
+        }
+        if (pgQualstatsResolveOidsBuilder_ == null) {
+          pgQualstatsResolveOids_ = null;
+        } else {
+          pgQualstatsResolveOids_ = null;
+          pgQualstatsResolveOidsBuilder_ = null;
+        }
+        if (pgQualstatsSampleRateBuilder_ == null) {
+          pgQualstatsSampleRate_ = null;
+        } else {
+          pgQualstatsSampleRate_ = null;
+          pgQualstatsSampleRateBuilder_ = null;
+        }
         return this;
       }
 
@@ -10351,6 +10696,31 @@ public final class Postgresql10 {
         }
         result.pgHintPlanDebugPrint_ = pgHintPlanDebugPrint_;
         result.pgHintPlanMessageLevel_ = pgHintPlanMessageLevel_;
+        if (pgQualstatsEnabledBuilder_ == null) {
+          result.pgQualstatsEnabled_ = pgQualstatsEnabled_;
+        } else {
+          result.pgQualstatsEnabled_ = pgQualstatsEnabledBuilder_.build();
+        }
+        if (pgQualstatsTrackConstantsBuilder_ == null) {
+          result.pgQualstatsTrackConstants_ = pgQualstatsTrackConstants_;
+        } else {
+          result.pgQualstatsTrackConstants_ = pgQualstatsTrackConstantsBuilder_.build();
+        }
+        if (pgQualstatsMaxBuilder_ == null) {
+          result.pgQualstatsMax_ = pgQualstatsMax_;
+        } else {
+          result.pgQualstatsMax_ = pgQualstatsMaxBuilder_.build();
+        }
+        if (pgQualstatsResolveOidsBuilder_ == null) {
+          result.pgQualstatsResolveOids_ = pgQualstatsResolveOids_;
+        } else {
+          result.pgQualstatsResolveOids_ = pgQualstatsResolveOidsBuilder_.build();
+        }
+        if (pgQualstatsSampleRateBuilder_ == null) {
+          result.pgQualstatsSampleRate_ = pgQualstatsSampleRate_;
+        } else {
+          result.pgQualstatsSampleRate_ = pgQualstatsSampleRateBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         result.bitField2_ = to_bitField2_;
@@ -10744,6 +11114,21 @@ public final class Postgresql10 {
         }
         if (other.pgHintPlanMessageLevel_ != 0) {
           setPgHintPlanMessageLevelValue(other.getPgHintPlanMessageLevelValue());
+        }
+        if (other.hasPgQualstatsEnabled()) {
+          mergePgQualstatsEnabled(other.getPgQualstatsEnabled());
+        }
+        if (other.hasPgQualstatsTrackConstants()) {
+          mergePgQualstatsTrackConstants(other.getPgQualstatsTrackConstants());
+        }
+        if (other.hasPgQualstatsMax()) {
+          mergePgQualstatsMax(other.getPgQualstatsMax());
+        }
+        if (other.hasPgQualstatsResolveOids()) {
+          mergePgQualstatsResolveOids(other.getPgQualstatsResolveOids());
+        }
+        if (other.hasPgQualstatsSampleRate()) {
+          mergePgQualstatsSampleRate(other.getPgQualstatsSampleRate());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -23273,6 +23658,591 @@ public final class Postgresql10 {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.BoolValue pgQualstatsEnabled_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> pgQualstatsEnabledBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_enabled = 113;</code>
+       */
+      public boolean hasPgQualstatsEnabled() {
+        return pgQualstatsEnabledBuilder_ != null || pgQualstatsEnabled_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_enabled = 113;</code>
+       */
+      public com.google.protobuf.BoolValue getPgQualstatsEnabled() {
+        if (pgQualstatsEnabledBuilder_ == null) {
+          return pgQualstatsEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : pgQualstatsEnabled_;
+        } else {
+          return pgQualstatsEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_enabled = 113;</code>
+       */
+      public Builder setPgQualstatsEnabled(com.google.protobuf.BoolValue value) {
+        if (pgQualstatsEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pgQualstatsEnabled_ = value;
+          onChanged();
+        } else {
+          pgQualstatsEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_enabled = 113;</code>
+       */
+      public Builder setPgQualstatsEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (pgQualstatsEnabledBuilder_ == null) {
+          pgQualstatsEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          pgQualstatsEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_enabled = 113;</code>
+       */
+      public Builder mergePgQualstatsEnabled(com.google.protobuf.BoolValue value) {
+        if (pgQualstatsEnabledBuilder_ == null) {
+          if (pgQualstatsEnabled_ != null) {
+            pgQualstatsEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(pgQualstatsEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            pgQualstatsEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          pgQualstatsEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_enabled = 113;</code>
+       */
+      public Builder clearPgQualstatsEnabled() {
+        if (pgQualstatsEnabledBuilder_ == null) {
+          pgQualstatsEnabled_ = null;
+          onChanged();
+        } else {
+          pgQualstatsEnabled_ = null;
+          pgQualstatsEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_enabled = 113;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getPgQualstatsEnabledBuilder() {
+        
+        onChanged();
+        return getPgQualstatsEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_enabled = 113;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getPgQualstatsEnabledOrBuilder() {
+        if (pgQualstatsEnabledBuilder_ != null) {
+          return pgQualstatsEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return pgQualstatsEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : pgQualstatsEnabled_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_enabled = 113;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getPgQualstatsEnabledFieldBuilder() {
+        if (pgQualstatsEnabledBuilder_ == null) {
+          pgQualstatsEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getPgQualstatsEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          pgQualstatsEnabled_ = null;
+        }
+        return pgQualstatsEnabledBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue pgQualstatsTrackConstants_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> pgQualstatsTrackConstantsBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_track_constants = 114;</code>
+       */
+      public boolean hasPgQualstatsTrackConstants() {
+        return pgQualstatsTrackConstantsBuilder_ != null || pgQualstatsTrackConstants_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_track_constants = 114;</code>
+       */
+      public com.google.protobuf.BoolValue getPgQualstatsTrackConstants() {
+        if (pgQualstatsTrackConstantsBuilder_ == null) {
+          return pgQualstatsTrackConstants_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : pgQualstatsTrackConstants_;
+        } else {
+          return pgQualstatsTrackConstantsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_track_constants = 114;</code>
+       */
+      public Builder setPgQualstatsTrackConstants(com.google.protobuf.BoolValue value) {
+        if (pgQualstatsTrackConstantsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pgQualstatsTrackConstants_ = value;
+          onChanged();
+        } else {
+          pgQualstatsTrackConstantsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_track_constants = 114;</code>
+       */
+      public Builder setPgQualstatsTrackConstants(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (pgQualstatsTrackConstantsBuilder_ == null) {
+          pgQualstatsTrackConstants_ = builderForValue.build();
+          onChanged();
+        } else {
+          pgQualstatsTrackConstantsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_track_constants = 114;</code>
+       */
+      public Builder mergePgQualstatsTrackConstants(com.google.protobuf.BoolValue value) {
+        if (pgQualstatsTrackConstantsBuilder_ == null) {
+          if (pgQualstatsTrackConstants_ != null) {
+            pgQualstatsTrackConstants_ =
+              com.google.protobuf.BoolValue.newBuilder(pgQualstatsTrackConstants_).mergeFrom(value).buildPartial();
+          } else {
+            pgQualstatsTrackConstants_ = value;
+          }
+          onChanged();
+        } else {
+          pgQualstatsTrackConstantsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_track_constants = 114;</code>
+       */
+      public Builder clearPgQualstatsTrackConstants() {
+        if (pgQualstatsTrackConstantsBuilder_ == null) {
+          pgQualstatsTrackConstants_ = null;
+          onChanged();
+        } else {
+          pgQualstatsTrackConstants_ = null;
+          pgQualstatsTrackConstantsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_track_constants = 114;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getPgQualstatsTrackConstantsBuilder() {
+        
+        onChanged();
+        return getPgQualstatsTrackConstantsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_track_constants = 114;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getPgQualstatsTrackConstantsOrBuilder() {
+        if (pgQualstatsTrackConstantsBuilder_ != null) {
+          return pgQualstatsTrackConstantsBuilder_.getMessageOrBuilder();
+        } else {
+          return pgQualstatsTrackConstants_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : pgQualstatsTrackConstants_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_track_constants = 114;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getPgQualstatsTrackConstantsFieldBuilder() {
+        if (pgQualstatsTrackConstantsBuilder_ == null) {
+          pgQualstatsTrackConstantsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getPgQualstatsTrackConstants(),
+                  getParentForChildren(),
+                  isClean());
+          pgQualstatsTrackConstants_ = null;
+        }
+        return pgQualstatsTrackConstantsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value pgQualstatsMax_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> pgQualstatsMaxBuilder_;
+      /**
+       * <code>.google.protobuf.Int64Value pg_qualstats_max = 115;</code>
+       */
+      public boolean hasPgQualstatsMax() {
+        return pgQualstatsMaxBuilder_ != null || pgQualstatsMax_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value pg_qualstats_max = 115;</code>
+       */
+      public com.google.protobuf.Int64Value getPgQualstatsMax() {
+        if (pgQualstatsMaxBuilder_ == null) {
+          return pgQualstatsMax_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : pgQualstatsMax_;
+        } else {
+          return pgQualstatsMaxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value pg_qualstats_max = 115;</code>
+       */
+      public Builder setPgQualstatsMax(com.google.protobuf.Int64Value value) {
+        if (pgQualstatsMaxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pgQualstatsMax_ = value;
+          onChanged();
+        } else {
+          pgQualstatsMaxBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value pg_qualstats_max = 115;</code>
+       */
+      public Builder setPgQualstatsMax(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (pgQualstatsMaxBuilder_ == null) {
+          pgQualstatsMax_ = builderForValue.build();
+          onChanged();
+        } else {
+          pgQualstatsMaxBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value pg_qualstats_max = 115;</code>
+       */
+      public Builder mergePgQualstatsMax(com.google.protobuf.Int64Value value) {
+        if (pgQualstatsMaxBuilder_ == null) {
+          if (pgQualstatsMax_ != null) {
+            pgQualstatsMax_ =
+              com.google.protobuf.Int64Value.newBuilder(pgQualstatsMax_).mergeFrom(value).buildPartial();
+          } else {
+            pgQualstatsMax_ = value;
+          }
+          onChanged();
+        } else {
+          pgQualstatsMaxBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value pg_qualstats_max = 115;</code>
+       */
+      public Builder clearPgQualstatsMax() {
+        if (pgQualstatsMaxBuilder_ == null) {
+          pgQualstatsMax_ = null;
+          onChanged();
+        } else {
+          pgQualstatsMax_ = null;
+          pgQualstatsMaxBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value pg_qualstats_max = 115;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getPgQualstatsMaxBuilder() {
+        
+        onChanged();
+        return getPgQualstatsMaxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Int64Value pg_qualstats_max = 115;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getPgQualstatsMaxOrBuilder() {
+        if (pgQualstatsMaxBuilder_ != null) {
+          return pgQualstatsMaxBuilder_.getMessageOrBuilder();
+        } else {
+          return pgQualstatsMax_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : pgQualstatsMax_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value pg_qualstats_max = 115;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getPgQualstatsMaxFieldBuilder() {
+        if (pgQualstatsMaxBuilder_ == null) {
+          pgQualstatsMaxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getPgQualstatsMax(),
+                  getParentForChildren(),
+                  isClean());
+          pgQualstatsMax_ = null;
+        }
+        return pgQualstatsMaxBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue pgQualstatsResolveOids_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> pgQualstatsResolveOidsBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_resolve_oids = 116;</code>
+       */
+      public boolean hasPgQualstatsResolveOids() {
+        return pgQualstatsResolveOidsBuilder_ != null || pgQualstatsResolveOids_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_resolve_oids = 116;</code>
+       */
+      public com.google.protobuf.BoolValue getPgQualstatsResolveOids() {
+        if (pgQualstatsResolveOidsBuilder_ == null) {
+          return pgQualstatsResolveOids_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : pgQualstatsResolveOids_;
+        } else {
+          return pgQualstatsResolveOidsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_resolve_oids = 116;</code>
+       */
+      public Builder setPgQualstatsResolveOids(com.google.protobuf.BoolValue value) {
+        if (pgQualstatsResolveOidsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pgQualstatsResolveOids_ = value;
+          onChanged();
+        } else {
+          pgQualstatsResolveOidsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_resolve_oids = 116;</code>
+       */
+      public Builder setPgQualstatsResolveOids(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (pgQualstatsResolveOidsBuilder_ == null) {
+          pgQualstatsResolveOids_ = builderForValue.build();
+          onChanged();
+        } else {
+          pgQualstatsResolveOidsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_resolve_oids = 116;</code>
+       */
+      public Builder mergePgQualstatsResolveOids(com.google.protobuf.BoolValue value) {
+        if (pgQualstatsResolveOidsBuilder_ == null) {
+          if (pgQualstatsResolveOids_ != null) {
+            pgQualstatsResolveOids_ =
+              com.google.protobuf.BoolValue.newBuilder(pgQualstatsResolveOids_).mergeFrom(value).buildPartial();
+          } else {
+            pgQualstatsResolveOids_ = value;
+          }
+          onChanged();
+        } else {
+          pgQualstatsResolveOidsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_resolve_oids = 116;</code>
+       */
+      public Builder clearPgQualstatsResolveOids() {
+        if (pgQualstatsResolveOidsBuilder_ == null) {
+          pgQualstatsResolveOids_ = null;
+          onChanged();
+        } else {
+          pgQualstatsResolveOids_ = null;
+          pgQualstatsResolveOidsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_resolve_oids = 116;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getPgQualstatsResolveOidsBuilder() {
+        
+        onChanged();
+        return getPgQualstatsResolveOidsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_resolve_oids = 116;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getPgQualstatsResolveOidsOrBuilder() {
+        if (pgQualstatsResolveOidsBuilder_ != null) {
+          return pgQualstatsResolveOidsBuilder_.getMessageOrBuilder();
+        } else {
+          return pgQualstatsResolveOids_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : pgQualstatsResolveOids_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue pg_qualstats_resolve_oids = 116;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getPgQualstatsResolveOidsFieldBuilder() {
+        if (pgQualstatsResolveOidsBuilder_ == null) {
+          pgQualstatsResolveOidsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getPgQualstatsResolveOids(),
+                  getParentForChildren(),
+                  isClean());
+          pgQualstatsResolveOids_ = null;
+        }
+        return pgQualstatsResolveOidsBuilder_;
+      }
+
+      private com.google.protobuf.DoubleValue pgQualstatsSampleRate_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> pgQualstatsSampleRateBuilder_;
+      /**
+       * <code>.google.protobuf.DoubleValue pg_qualstats_sample_rate = 117;</code>
+       */
+      public boolean hasPgQualstatsSampleRate() {
+        return pgQualstatsSampleRateBuilder_ != null || pgQualstatsSampleRate_ != null;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_qualstats_sample_rate = 117;</code>
+       */
+      public com.google.protobuf.DoubleValue getPgQualstatsSampleRate() {
+        if (pgQualstatsSampleRateBuilder_ == null) {
+          return pgQualstatsSampleRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : pgQualstatsSampleRate_;
+        } else {
+          return pgQualstatsSampleRateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_qualstats_sample_rate = 117;</code>
+       */
+      public Builder setPgQualstatsSampleRate(com.google.protobuf.DoubleValue value) {
+        if (pgQualstatsSampleRateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pgQualstatsSampleRate_ = value;
+          onChanged();
+        } else {
+          pgQualstatsSampleRateBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_qualstats_sample_rate = 117;</code>
+       */
+      public Builder setPgQualstatsSampleRate(
+          com.google.protobuf.DoubleValue.Builder builderForValue) {
+        if (pgQualstatsSampleRateBuilder_ == null) {
+          pgQualstatsSampleRate_ = builderForValue.build();
+          onChanged();
+        } else {
+          pgQualstatsSampleRateBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_qualstats_sample_rate = 117;</code>
+       */
+      public Builder mergePgQualstatsSampleRate(com.google.protobuf.DoubleValue value) {
+        if (pgQualstatsSampleRateBuilder_ == null) {
+          if (pgQualstatsSampleRate_ != null) {
+            pgQualstatsSampleRate_ =
+              com.google.protobuf.DoubleValue.newBuilder(pgQualstatsSampleRate_).mergeFrom(value).buildPartial();
+          } else {
+            pgQualstatsSampleRate_ = value;
+          }
+          onChanged();
+        } else {
+          pgQualstatsSampleRateBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_qualstats_sample_rate = 117;</code>
+       */
+      public Builder clearPgQualstatsSampleRate() {
+        if (pgQualstatsSampleRateBuilder_ == null) {
+          pgQualstatsSampleRate_ = null;
+          onChanged();
+        } else {
+          pgQualstatsSampleRate_ = null;
+          pgQualstatsSampleRateBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_qualstats_sample_rate = 117;</code>
+       */
+      public com.google.protobuf.DoubleValue.Builder getPgQualstatsSampleRateBuilder() {
+        
+        onChanged();
+        return getPgQualstatsSampleRateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_qualstats_sample_rate = 117;</code>
+       */
+      public com.google.protobuf.DoubleValueOrBuilder getPgQualstatsSampleRateOrBuilder() {
+        if (pgQualstatsSampleRateBuilder_ != null) {
+          return pgQualstatsSampleRateBuilder_.getMessageOrBuilder();
+        } else {
+          return pgQualstatsSampleRate_ == null ?
+              com.google.protobuf.DoubleValue.getDefaultInstance() : pgQualstatsSampleRate_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_qualstats_sample_rate = 117;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          getPgQualstatsSampleRateFieldBuilder() {
+        if (pgQualstatsSampleRateBuilder_ == null) {
+          pgQualstatsSampleRateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                  getPgQualstatsSampleRate(),
+                  getParentForChildren(),
+                  isClean());
+          pgQualstatsSampleRate_ = null;
+        }
+        return pgQualstatsSampleRateBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -24539,7 +25509,7 @@ public final class Postgresql10 {
       "postgresql10.proto\022%yandex.cloud.mdb.pos" +
       "tgresql.v1.config\032\036google/protobuf/wrapp" +
       "ers.proto\032\035yandex/cloud/validation.proto" +
-      "\"\333L\n\022PostgresqlConfig10\0224\n\017max_connectio" +
+      "\"\215O\n\022PostgresqlConfig10\0224\n\017max_connectio" +
       "ns\030\001 \001(\0132\033.google.protobuf.Int64Value\0223\n" +
       "\016shared_buffers\030\002 \001(\0132\033.google.protobuf." +
       "Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033.googl" +
@@ -24727,75 +25697,82 @@ public final class Postgresql10 {
       "onfig10.PgHintPlanDebugPrint\022f\n\032pg_hint_" +
       "plan_message_level\030p \001(\0162B.yandex.cloud." +
       "mdb.postgresql.v1.config.PostgresqlConfi" +
-      "g10.LogLevel\"S\n\010WalLevel\022\031\n\025WAL_LEVEL_UN" +
-      "SPECIFIED\020\000\022\025\n\021WAL_LEVEL_REPLICA\020\001\022\025\n\021WA" +
-      "L_LEVEL_LOGICAL\020\002\"\326\001\n\021SynchronousCommit\022" +
-      "\"\n\036SYNCHRONOUS_COMMIT_UNSPECIFIED\020\000\022\031\n\025S" +
-      "YNCHRONOUS_COMMIT_ON\020\001\022\032\n\026SYNCHRONOUS_CO" +
-      "MMIT_OFF\020\002\022\034\n\030SYNCHRONOUS_COMMIT_LOCAL\020\003" +
-      "\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_WRITE\020\004\022#\n" +
-      "\037SYNCHRONOUS_COMMIT_REMOTE_APPLY\020\005\"\232\001\n\023C" +
-      "onstraintExclusion\022$\n CONSTRAINT_EXCLUSI" +
-      "ON_UNSPECIFIED\020\000\022\033\n\027CONSTRAINT_EXCLUSION" +
-      "_ON\020\001\022\034\n\030CONSTRAINT_EXCLUSION_OFF\020\002\022\"\n\036C" +
-      "ONSTRAINT_EXCLUSION_PARTITION\020\003\"\222\001\n\021Forc" +
-      "eParallelMode\022#\n\037FORCE_PARALLEL_MODE_UNS" +
-      "PECIFIED\020\000\022\032\n\026FORCE_PARALLEL_MODE_ON\020\001\022\033" +
-      "\n\027FORCE_PARALLEL_MODE_OFF\020\002\022\037\n\033FORCE_PAR" +
-      "ALLEL_MODE_REGRESS\020\003\"\222\002\n\010LogLevel\022\031\n\025LOG" +
-      "_LEVEL_UNSPECIFIED\020\000\022\024\n\020LOG_LEVEL_DEBUG5" +
-      "\020\001\022\024\n\020LOG_LEVEL_DEBUG4\020\002\022\024\n\020LOG_LEVEL_DE" +
-      "BUG3\020\003\022\024\n\020LOG_LEVEL_DEBUG2\020\004\022\024\n\020LOG_LEVE" +
-      "L_DEBUG1\020\005\022\021\n\rLOG_LEVEL_LOG\020\006\022\024\n\020LOG_LEV" +
-      "EL_NOTICE\020\007\022\025\n\021LOG_LEVEL_WARNING\020\010\022\023\n\017LO" +
-      "G_LEVEL_ERROR\020\t\022\023\n\017LOG_LEVEL_FATAL\020\n\022\023\n\017" +
-      "LOG_LEVEL_PANIC\020\013\"\231\001\n\021LogErrorVerbosity\022" +
-      "#\n\037LOG_ERROR_VERBOSITY_UNSPECIFIED\020\000\022\035\n\031" +
-      "LOG_ERROR_VERBOSITY_TERSE\020\001\022\037\n\033LOG_ERROR" +
-      "_VERBOSITY_DEFAULT\020\002\022\037\n\033LOG_ERROR_VERBOS" +
-      "ITY_VERBOSE\020\003\"\212\001\n\014LogStatement\022\035\n\031LOG_ST" +
-      "ATEMENT_UNSPECIFIED\020\000\022\026\n\022LOG_STATEMENT_N" +
-      "ONE\020\001\022\025\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021LOG_STAT" +
-      "EMENT_MOD\020\003\022\025\n\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024T" +
-      "ransactionIsolation\022%\n!TRANSACTION_ISOLA" +
-      "TION_UNSPECIFIED\020\000\022*\n&TRANSACTION_ISOLAT" +
-      "ION_READ_UNCOMMITTED\020\001\022(\n$TRANSACTION_IS" +
-      "OLATION_READ_COMMITTED\020\002\022)\n%TRANSACTION_" +
-      "ISOLATION_REPEATABLE_READ\020\003\022&\n\"TRANSACTI" +
-      "ON_ISOLATION_SERIALIZABLE\020\004\"[\n\013ByteaOutp" +
-      "ut\022\034\n\030BYTEA_OUTPUT_UNSPECIFIED\020\000\022\024\n\020BYTE" +
-      "A_OUTPUT_HEX\020\001\022\030\n\024BYTEA_OUTPUT_ESCAPED\020\002" +
-      "\"R\n\tXmlBinary\022\032\n\026XML_BINARY_UNSPECIFIED\020" +
-      "\000\022\025\n\021XML_BINARY_BASE64\020\001\022\022\n\016XML_BINARY_H" +
-      "EX\020\002\"X\n\tXmlOption\022\032\n\026XML_OPTION_UNSPECIF" +
-      "IED\020\000\022\027\n\023XML_OPTION_DOCUMENT\020\001\022\026\n\022XML_OP" +
-      "TION_CONTENT\020\002\"\232\001\n\016BackslashQuote\022\037\n\033BAC" +
-      "KSLASH_QUOTE_UNSPECIFIED\020\000\022\023\n\017BACKSLASH_" +
-      "QUOTE\020\001\022\026\n\022BACKSLASH_QUOTE_ON\020\002\022\027\n\023BACKS" +
-      "LASH_QUOTE_OFF\020\003\022!\n\035BACKSLASH_QUOTE_SAFE" +
-      "_ENCODING\020\004\"\320\001\n\024PgHintPlanDebugPrint\022(\n$" +
-      "PG_HINT_PLAN_DEBUG_PRINT_UNSPECIFIED\020\000\022 " +
-      "\n\034PG_HINT_PLAN_DEBUG_PRINT_OFF\020\001\022\037\n\033PG_H" +
-      "INT_PLAN_DEBUG_PRINT_ON\020\002\022%\n!PG_HINT_PLA" +
-      "N_DEBUG_PRINT_DETAILED\020\003\022$\n PG_HINT_PLAN" +
-      "_DEBUG_PRINT_VERBOSE\020\004\"\355\001\n\026SharedPreload" +
-      "Libraries\022(\n$SHARED_PRELOAD_LIBRARIES_UN" +
-      "SPECIFIED\020\000\022)\n%SHARED_PRELOAD_LIBRARIES_" +
-      "AUTO_EXPLAIN\020\001\022)\n%SHARED_PRELOAD_LIBRARI" +
-      "ES_PG_HINT_PLAN\020\002\022(\n$SHARED_PRELOAD_LIBR" +
-      "ARIES_TIMESCALEDB\020\003\022)\n%SHARED_PRELOAD_LI" +
-      "BRARIES_PG_QUALSTATS\020\004\"\225\002\n\025PostgresqlCon" +
-      "figSet10\022Y\n\020effective_config\030\001 \001(\01329.yan" +
-      "dex.cloud.mdb.postgresql.v1.config.Postg" +
-      "resqlConfig10B\004\350\3071\001\022N\n\013user_config\030\002 \001(\013" +
-      "29.yandex.cloud.mdb.postgresql.v1.config" +
-      ".PostgresqlConfig10\022Q\n\016default_config\030\003 " +
-      "\001(\01329.yandex.cloud.mdb.postgresql.v1.con" +
-      "fig.PostgresqlConfig10B\201\001\n)yandex.cloud." +
-      "api.mdb.postgresql.v1.configZTgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/m" +
-      "db/postgresql/v1/config;postgresqlb\006prot" +
-      "o3"
+      "g10.LogLevel\0228\n\024pg_qualstats_enabled\030q \001" +
+      "(\0132\032.google.protobuf.BoolValue\022@\n\034pg_qua" +
+      "lstats_track_constants\030r \001(\0132\032.google.pr" +
+      "otobuf.BoolValue\0225\n\020pg_qualstats_max\030s \001" +
+      "(\0132\033.google.protobuf.Int64Value\022=\n\031pg_qu" +
+      "alstats_resolve_oids\030t \001(\0132\032.google.prot" +
+      "obuf.BoolValue\022>\n\030pg_qualstats_sample_ra" +
+      "te\030u \001(\0132\034.google.protobuf.DoubleValue\"S" +
+      "\n\010WalLevel\022\031\n\025WAL_LEVEL_UNSPECIFIED\020\000\022\025\n" +
+      "\021WAL_LEVEL_REPLICA\020\001\022\025\n\021WAL_LEVEL_LOGICA" +
+      "L\020\002\"\326\001\n\021SynchronousCommit\022\"\n\036SYNCHRONOUS" +
+      "_COMMIT_UNSPECIFIED\020\000\022\031\n\025SYNCHRONOUS_COM" +
+      "MIT_ON\020\001\022\032\n\026SYNCHRONOUS_COMMIT_OFF\020\002\022\034\n\030" +
+      "SYNCHRONOUS_COMMIT_LOCAL\020\003\022#\n\037SYNCHRONOU" +
+      "S_COMMIT_REMOTE_WRITE\020\004\022#\n\037SYNCHRONOUS_C" +
+      "OMMIT_REMOTE_APPLY\020\005\"\232\001\n\023ConstraintExclu" +
+      "sion\022$\n CONSTRAINT_EXCLUSION_UNSPECIFIED" +
+      "\020\000\022\033\n\027CONSTRAINT_EXCLUSION_ON\020\001\022\034\n\030CONST" +
+      "RAINT_EXCLUSION_OFF\020\002\022\"\n\036CONSTRAINT_EXCL" +
+      "USION_PARTITION\020\003\"\222\001\n\021ForceParallelMode\022" +
+      "#\n\037FORCE_PARALLEL_MODE_UNSPECIFIED\020\000\022\032\n\026" +
+      "FORCE_PARALLEL_MODE_ON\020\001\022\033\n\027FORCE_PARALL" +
+      "EL_MODE_OFF\020\002\022\037\n\033FORCE_PARALLEL_MODE_REG" +
+      "RESS\020\003\"\222\002\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECI" +
+      "FIED\020\000\022\024\n\020LOG_LEVEL_DEBUG5\020\001\022\024\n\020LOG_LEVE" +
+      "L_DEBUG4\020\002\022\024\n\020LOG_LEVEL_DEBUG3\020\003\022\024\n\020LOG_" +
+      "LEVEL_DEBUG2\020\004\022\024\n\020LOG_LEVEL_DEBUG1\020\005\022\021\n\r" +
+      "LOG_LEVEL_LOG\020\006\022\024\n\020LOG_LEVEL_NOTICE\020\007\022\025\n" +
+      "\021LOG_LEVEL_WARNING\020\010\022\023\n\017LOG_LEVEL_ERROR\020" +
+      "\t\022\023\n\017LOG_LEVEL_FATAL\020\n\022\023\n\017LOG_LEVEL_PANI" +
+      "C\020\013\"\231\001\n\021LogErrorVerbosity\022#\n\037LOG_ERROR_V" +
+      "ERBOSITY_UNSPECIFIED\020\000\022\035\n\031LOG_ERROR_VERB" +
+      "OSITY_TERSE\020\001\022\037\n\033LOG_ERROR_VERBOSITY_DEF" +
+      "AULT\020\002\022\037\n\033LOG_ERROR_VERBOSITY_VERBOSE\020\003\"" +
+      "\212\001\n\014LogStatement\022\035\n\031LOG_STATEMENT_UNSPEC" +
+      "IFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025\n\021LOG_S" +
+      "TATEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003\022\025\n" +
+      "\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024TransactionIsol" +
+      "ation\022%\n!TRANSACTION_ISOLATION_UNSPECIFI" +
+      "ED\020\000\022*\n&TRANSACTION_ISOLATION_READ_UNCOM" +
+      "MITTED\020\001\022(\n$TRANSACTION_ISOLATION_READ_C" +
+      "OMMITTED\020\002\022)\n%TRANSACTION_ISOLATION_REPE" +
+      "ATABLE_READ\020\003\022&\n\"TRANSACTION_ISOLATION_S" +
+      "ERIALIZABLE\020\004\"[\n\013ByteaOutput\022\034\n\030BYTEA_OU" +
+      "TPUT_UNSPECIFIED\020\000\022\024\n\020BYTEA_OUTPUT_HEX\020\001" +
+      "\022\030\n\024BYTEA_OUTPUT_ESCAPED\020\002\"R\n\tXmlBinary\022" +
+      "\032\n\026XML_BINARY_UNSPECIFIED\020\000\022\025\n\021XML_BINAR" +
+      "Y_BASE64\020\001\022\022\n\016XML_BINARY_HEX\020\002\"X\n\tXmlOpt" +
+      "ion\022\032\n\026XML_OPTION_UNSPECIFIED\020\000\022\027\n\023XML_O" +
+      "PTION_DOCUMENT\020\001\022\026\n\022XML_OPTION_CONTENT\020\002" +
+      "\"\232\001\n\016BackslashQuote\022\037\n\033BACKSLASH_QUOTE_U" +
+      "NSPECIFIED\020\000\022\023\n\017BACKSLASH_QUOTE\020\001\022\026\n\022BAC" +
+      "KSLASH_QUOTE_ON\020\002\022\027\n\023BACKSLASH_QUOTE_OFF" +
+      "\020\003\022!\n\035BACKSLASH_QUOTE_SAFE_ENCODING\020\004\"\320\001" +
+      "\n\024PgHintPlanDebugPrint\022(\n$PG_HINT_PLAN_D" +
+      "EBUG_PRINT_UNSPECIFIED\020\000\022 \n\034PG_HINT_PLAN" +
+      "_DEBUG_PRINT_OFF\020\001\022\037\n\033PG_HINT_PLAN_DEBUG" +
+      "_PRINT_ON\020\002\022%\n!PG_HINT_PLAN_DEBUG_PRINT_" +
+      "DETAILED\020\003\022$\n PG_HINT_PLAN_DEBUG_PRINT_V" +
+      "ERBOSE\020\004\"\355\001\n\026SharedPreloadLibraries\022(\n$S" +
+      "HARED_PRELOAD_LIBRARIES_UNSPECIFIED\020\000\022)\n" +
+      "%SHARED_PRELOAD_LIBRARIES_AUTO_EXPLAIN\020\001" +
+      "\022)\n%SHARED_PRELOAD_LIBRARIES_PG_HINT_PLA" +
+      "N\020\002\022(\n$SHARED_PRELOAD_LIBRARIES_TIMESCAL" +
+      "EDB\020\003\022)\n%SHARED_PRELOAD_LIBRARIES_PG_QUA" +
+      "LSTATS\020\004\"\225\002\n\025PostgresqlConfigSet10\022Y\n\020ef" +
+      "fective_config\030\001 \001(\01329.yandex.cloud.mdb." +
+      "postgresql.v1.config.PostgresqlConfig10B" +
+      "\004\350\3071\001\022N\n\013user_config\030\002 \001(\01329.yandex.clou" +
+      "d.mdb.postgresql.v1.config.PostgresqlCon" +
+      "fig10\022Q\n\016default_config\030\003 \001(\01329.yandex.c" +
+      "loud.mdb.postgresql.v1.config.Postgresql" +
+      "Config10B\201\001\n)yandex.cloud.api.mdb.postgr" +
+      "esql.v1.configZTgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/mdb/postgresql/" +
+      "v1/config;postgresqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -24816,7 +25793,7 @@ public final class Postgresql10 {
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig10_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig10_descriptor,
-        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "ReplacementSortTuples", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "OldSnapshotThreshold", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "ForceParallelMode", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "OperatorPrecedenceWarning", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", });
+        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "ReplacementSortTuples", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "OldSnapshotThreshold", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "ForceParallelMode", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "OperatorPrecedenceWarning", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", "PgQualstatsEnabled", "PgQualstatsTrackConstants", "PgQualstatsMax", "PgQualstatsResolveOids", "PgQualstatsSampleRate", });
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet10_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet10_fieldAccessorTable = new

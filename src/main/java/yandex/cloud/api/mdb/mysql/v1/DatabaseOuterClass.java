@@ -38,7 +38,7 @@ public final class DatabaseOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster that the database belongs to.
+     * ID of the cluster that the database belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -46,7 +46,7 @@ public final class DatabaseOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster that the database belongs to.
+     * ID of the cluster that the database belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -56,8 +56,8 @@ public final class DatabaseOuterClass {
   }
   /**
    * <pre>
-   * A MySQL database. For more information, see
-   * the [documentation](/docs/managed-mysql/concepts).
+   * An object that represents MySQL database.
+   * See [the documentation](/docs/managed-mysql/operations/databases) for details.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.Database}
@@ -190,7 +190,7 @@ public final class DatabaseOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster that the database belongs to.
+     * ID of the cluster that the database belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -209,7 +209,7 @@ public final class DatabaseOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster that the database belongs to.
+     * ID of the cluster that the database belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -395,8 +395,8 @@ public final class DatabaseOuterClass {
     }
     /**
      * <pre>
-     * A MySQL database. For more information, see
-     * the [documentation](/docs/managed-mysql/concepts).
+     * An object that represents MySQL database.
+     * See [the documentation](/docs/managed-mysql/operations/databases) for details.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.mdb.mysql.v1.Database}
@@ -645,7 +645,7 @@ public final class DatabaseOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster that the database belongs to.
+       * ID of the cluster that the database belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -664,7 +664,7 @@ public final class DatabaseOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that the database belongs to.
+       * ID of the cluster that the database belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -684,7 +684,7 @@ public final class DatabaseOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that the database belongs to.
+       * ID of the cluster that the database belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -701,7 +701,7 @@ public final class DatabaseOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that the database belongs to.
+       * ID of the cluster that the database belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -714,7 +714,7 @@ public final class DatabaseOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that the database belongs to.
+       * ID of the cluster that the database belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -789,7 +789,7 @@ public final class DatabaseOuterClass {
 
     /**
      * <pre>
-     * Name of the MySQL database.
+     * Name of the database.
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -797,7 +797,7 @@ public final class DatabaseOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the MySQL database.
+     * Name of the database.
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -887,7 +887,7 @@ public final class DatabaseOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the MySQL database.
+     * Name of the database.
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -906,7 +906,7 @@ public final class DatabaseOuterClass {
     }
     /**
      * <pre>
-     * Name of the MySQL database.
+     * Name of the database.
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -1231,7 +1231,7 @@ public final class DatabaseOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the MySQL database.
+       * Name of the database.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -1250,7 +1250,7 @@ public final class DatabaseOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL database.
+       * Name of the database.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -1270,7 +1270,7 @@ public final class DatabaseOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL database.
+       * Name of the database.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -1287,7 +1287,7 @@ public final class DatabaseOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL database.
+       * Name of the database.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -1300,7 +1300,7 @@ public final class DatabaseOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL database.
+       * Name of the database.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>

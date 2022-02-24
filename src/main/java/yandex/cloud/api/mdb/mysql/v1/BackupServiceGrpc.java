@@ -18,6 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  * <pre>
  * A set of methods for managing MySQL backups.
+ * See [the documentation](/docs/managed-mysql/operations/cluster-backups) for details.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -120,14 +121,14 @@ public final class BackupServiceGrpc {
   /**
    * <pre>
    * A set of methods for managing MySQL backups.
+   * See [the documentation](/docs/managed-mysql/operations/cluster-backups) for details.
    * </pre>
    */
   public static abstract class BackupServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Returns the specified MySQL backup.
-     * To get the list of available MySQL backups, make a [List] request.
+     * Retrieves information about the specified backup.
      * </pre>
      */
     public void get(yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.GetBackupRequest request,
@@ -137,7 +138,8 @@ public final class BackupServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of MySQL backups available for the specified folder.
+     * Retrieves the list of backups in a folder.
+     * To list backups for an existing cluster, make a [ClusterService.ListBackups] request.
      * </pre>
      */
     public void list(yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.ListBackupsRequest request,
@@ -168,6 +170,7 @@ public final class BackupServiceGrpc {
   /**
    * <pre>
    * A set of methods for managing MySQL backups.
+   * See [the documentation](/docs/managed-mysql/operations/cluster-backups) for details.
    * </pre>
    */
   public static final class BackupServiceStub extends io.grpc.stub.AbstractStub<BackupServiceStub> {
@@ -188,8 +191,7 @@ public final class BackupServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified MySQL backup.
-     * To get the list of available MySQL backups, make a [List] request.
+     * Retrieves information about the specified backup.
      * </pre>
      */
     public void get(yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.GetBackupRequest request,
@@ -200,7 +202,8 @@ public final class BackupServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of MySQL backups available for the specified folder.
+     * Retrieves the list of backups in a folder.
+     * To list backups for an existing cluster, make a [ClusterService.ListBackups] request.
      * </pre>
      */
     public void list(yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.ListBackupsRequest request,
@@ -213,6 +216,7 @@ public final class BackupServiceGrpc {
   /**
    * <pre>
    * A set of methods for managing MySQL backups.
+   * See [the documentation](/docs/managed-mysql/operations/cluster-backups) for details.
    * </pre>
    */
   public static final class BackupServiceBlockingStub extends io.grpc.stub.AbstractStub<BackupServiceBlockingStub> {
@@ -233,8 +237,7 @@ public final class BackupServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified MySQL backup.
-     * To get the list of available MySQL backups, make a [List] request.
+     * Retrieves information about the specified backup.
      * </pre>
      */
     public yandex.cloud.api.mdb.mysql.v1.BackupOuterClass.Backup get(yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.GetBackupRequest request) {
@@ -244,7 +247,8 @@ public final class BackupServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of MySQL backups available for the specified folder.
+     * Retrieves the list of backups in a folder.
+     * To list backups for an existing cluster, make a [ClusterService.ListBackups] request.
      * </pre>
      */
     public yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.ListBackupsResponse list(yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.ListBackupsRequest request) {
@@ -256,6 +260,7 @@ public final class BackupServiceGrpc {
   /**
    * <pre>
    * A set of methods for managing MySQL backups.
+   * See [the documentation](/docs/managed-mysql/operations/cluster-backups) for details.
    * </pre>
    */
   public static final class BackupServiceFutureStub extends io.grpc.stub.AbstractStub<BackupServiceFutureStub> {
@@ -276,8 +281,7 @@ public final class BackupServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified MySQL backup.
-     * To get the list of available MySQL backups, make a [List] request.
+     * Retrieves information about the specified backup.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.mysql.v1.BackupOuterClass.Backup> get(
@@ -288,7 +292,8 @@ public final class BackupServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of MySQL backups available for the specified folder.
+     * Retrieves the list of backups in a folder.
+     * To list backups for an existing cluster, make a [ClusterService.ListBackups] request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.mysql.v1.BackupServiceOuterClass.ListBackupsResponse> list(

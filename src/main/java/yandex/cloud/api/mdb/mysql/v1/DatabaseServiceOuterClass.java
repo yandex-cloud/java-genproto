@@ -20,8 +20,8 @@ public final class DatabaseServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster that the database belongs to.
-     * To get the cluster ID use a [ClusterService.List] request.
+     * ID of the cluster that the database belongs to.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29,8 +29,8 @@ public final class DatabaseServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster that the database belongs to.
-     * To get the cluster ID use a [ClusterService.List] request.
+     * ID of the cluster that the database belongs to.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -40,8 +40,8 @@ public final class DatabaseServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the MySQL database to return.
-     * To get the name of the database use a [DatabaseService.List] request.
+     * Name of the database to return information about.
+     * To get this name, make a [DatabaseService.List] request.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -49,8 +49,8 @@ public final class DatabaseServiceOuterClass {
     java.lang.String getDatabaseName();
     /**
      * <pre>
-     * Name of the MySQL database to return.
-     * To get the name of the database use a [DatabaseService.List] request.
+     * Name of the database to return information about.
+     * To get this name, make a [DatabaseService.List] request.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -147,8 +147,8 @@ public final class DatabaseServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster that the database belongs to.
-     * To get the cluster ID use a [ClusterService.List] request.
+     * ID of the cluster that the database belongs to.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -167,8 +167,8 @@ public final class DatabaseServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster that the database belongs to.
-     * To get the cluster ID use a [ClusterService.List] request.
+     * ID of the cluster that the database belongs to.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -191,8 +191,8 @@ public final class DatabaseServiceOuterClass {
     private volatile java.lang.Object databaseName_;
     /**
      * <pre>
-     * Name of the MySQL database to return.
-     * To get the name of the database use a [DatabaseService.List] request.
+     * Name of the database to return information about.
+     * To get this name, make a [DatabaseService.List] request.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -211,8 +211,8 @@ public final class DatabaseServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the MySQL database to return.
-     * To get the name of the database use a [DatabaseService.List] request.
+     * Name of the database to return information about.
+     * To get this name, make a [DatabaseService.List] request.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -554,8 +554,8 @@ public final class DatabaseServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster that the database belongs to.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the cluster that the database belongs to.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -574,8 +574,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that the database belongs to.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the cluster that the database belongs to.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -595,8 +595,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that the database belongs to.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the cluster that the database belongs to.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -613,8 +613,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that the database belongs to.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the cluster that the database belongs to.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -627,8 +627,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster that the database belongs to.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the cluster that the database belongs to.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -648,8 +648,8 @@ public final class DatabaseServiceOuterClass {
       private java.lang.Object databaseName_ = "";
       /**
        * <pre>
-       * Name of the MySQL database to return.
-       * To get the name of the database use a [DatabaseService.List] request.
+       * Name of the database to return information about.
+       * To get this name, make a [DatabaseService.List] request.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -668,8 +668,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL database to return.
-       * To get the name of the database use a [DatabaseService.List] request.
+       * Name of the database to return information about.
+       * To get this name, make a [DatabaseService.List] request.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -689,8 +689,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL database to return.
-       * To get the name of the database use a [DatabaseService.List] request.
+       * Name of the database to return information about.
+       * To get this name, make a [DatabaseService.List] request.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -707,8 +707,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL database to return.
-       * To get the name of the database use a [DatabaseService.List] request.
+       * Name of the database to return information about.
+       * To get this name, make a [DatabaseService.List] request.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -721,8 +721,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL database to return.
-       * To get the name of the database use a [DatabaseService.List] request.
+       * Name of the database to return information about.
+       * To get this name, make a [DatabaseService.List] request.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -797,8 +797,8 @@ public final class DatabaseServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster to list databases in.
-     * To get the cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to list databases in.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -806,8 +806,8 @@ public final class DatabaseServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster to list databases in.
-     * To get the cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to list databases in.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -817,9 +817,8 @@ public final class DatabaseServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListDatabasesResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the API returns a [ListDatabasesResponse.next_page_token] that can be used to get the next page of results in the subsequent [DatabaseService.List] requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -828,8 +827,8 @@ public final class DatabaseServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, Set [page_token] to the [ListDatabasesResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListDatabasesResponse.next_page_token] returned by the previous [DatabaseService.List] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -837,8 +836,8 @@ public final class DatabaseServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, Set [page_token] to the [ListDatabasesResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListDatabasesResponse.next_page_token] returned by the previous [DatabaseService.List] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -941,8 +940,8 @@ public final class DatabaseServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster to list databases in.
-     * To get the cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to list databases in.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -961,8 +960,8 @@ public final class DatabaseServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster to list databases in.
-     * To get the cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to list databases in.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -985,9 +984,8 @@ public final class DatabaseServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListDatabasesResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the API returns a [ListDatabasesResponse.next_page_token] that can be used to get the next page of results in the subsequent [DatabaseService.List] requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1000,8 +998,8 @@ public final class DatabaseServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, Set [page_token] to the [ListDatabasesResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListDatabasesResponse.next_page_token] returned by the previous [DatabaseService.List] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1020,8 +1018,8 @@ public final class DatabaseServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, Set [page_token] to the [ListDatabasesResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListDatabasesResponse.next_page_token] returned by the previous [DatabaseService.List] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1381,8 +1379,8 @@ public final class DatabaseServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster to list databases in.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to list databases in.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1401,8 +1399,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to list databases in.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to list databases in.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1422,8 +1420,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to list databases in.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to list databases in.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1440,8 +1438,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to list databases in.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to list databases in.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1454,8 +1452,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to list databases in.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to list databases in.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1475,9 +1473,8 @@ public final class DatabaseServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListDatabasesResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListDatabasesResponse.next_page_token] that can be used to get the next page of results in the subsequent [DatabaseService.List] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1487,9 +1484,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListDatabasesResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListDatabasesResponse.next_page_token] that can be used to get the next page of results in the subsequent [DatabaseService.List] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1502,9 +1498,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListDatabasesResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListDatabasesResponse.next_page_token] that can be used to get the next page of results in the subsequent [DatabaseService.List] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1519,8 +1514,8 @@ public final class DatabaseServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, Set [page_token] to the [ListDatabasesResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListDatabasesResponse.next_page_token] returned by the previous [DatabaseService.List] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1539,8 +1534,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, Set [page_token] to the [ListDatabasesResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListDatabasesResponse.next_page_token] returned by the previous [DatabaseService.List] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1560,8 +1555,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, Set [page_token] to the [ListDatabasesResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListDatabasesResponse.next_page_token] returned by the previous [DatabaseService.List] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1578,8 +1573,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, Set [page_token] to the [ListDatabasesResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListDatabasesResponse.next_page_token] returned by the previous [DatabaseService.List] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1592,8 +1587,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, Set [page_token] to the [ListDatabasesResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListDatabasesResponse.next_page_token] returned by the previous [DatabaseService.List] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1668,7 +1663,7 @@ public final class DatabaseServiceOuterClass {
 
     /**
      * <pre>
-     * List of MySQL databases.
+     * List of databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -1677,7 +1672,7 @@ public final class DatabaseServiceOuterClass {
         getDatabasesList();
     /**
      * <pre>
-     * List of MySQL databases.
+     * List of databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -1685,7 +1680,7 @@ public final class DatabaseServiceOuterClass {
     yandex.cloud.api.mdb.mysql.v1.DatabaseOuterClass.Database getDatabases(int index);
     /**
      * <pre>
-     * List of MySQL databases.
+     * List of databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -1693,7 +1688,7 @@ public final class DatabaseServiceOuterClass {
     int getDatabasesCount();
     /**
      * <pre>
-     * List of MySQL databases.
+     * List of databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -1702,7 +1697,7 @@ public final class DatabaseServiceOuterClass {
         getDatabasesOrBuilderList();
     /**
      * <pre>
-     * List of MySQL databases.
+     * List of databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -1712,10 +1707,9 @@ public final class DatabaseServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value
-     * for the [ListDatabasesRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value for the [ListDatabasesRequest.page_token] in the subsequent [DatabaseService.List] request to iterate through multiple pages of results.
+     * Each of the subsequent [DatabaseService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1723,10 +1717,9 @@ public final class DatabaseServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value
-     * for the [ListDatabasesRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value for the [ListDatabasesRequest.page_token] in the subsequent [DatabaseService.List] request to iterate through multiple pages of results.
+     * Each of the subsequent [DatabaseService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1830,7 +1823,7 @@ public final class DatabaseServiceOuterClass {
     private java.util.List<yandex.cloud.api.mdb.mysql.v1.DatabaseOuterClass.Database> databases_;
     /**
      * <pre>
-     * List of MySQL databases.
+     * List of databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -1840,7 +1833,7 @@ public final class DatabaseServiceOuterClass {
     }
     /**
      * <pre>
-     * List of MySQL databases.
+     * List of databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -1851,7 +1844,7 @@ public final class DatabaseServiceOuterClass {
     }
     /**
      * <pre>
-     * List of MySQL databases.
+     * List of databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -1861,7 +1854,7 @@ public final class DatabaseServiceOuterClass {
     }
     /**
      * <pre>
-     * List of MySQL databases.
+     * List of databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -1871,7 +1864,7 @@ public final class DatabaseServiceOuterClass {
     }
     /**
      * <pre>
-     * List of MySQL databases.
+     * List of databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -1885,10 +1878,9 @@ public final class DatabaseServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value
-     * for the [ListDatabasesRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value for the [ListDatabasesRequest.page_token] in the subsequent [DatabaseService.List] request to iterate through multiple pages of results.
+     * Each of the subsequent [DatabaseService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1907,10 +1899,9 @@ public final class DatabaseServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value
-     * for the [ListDatabasesRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value for the [ListDatabasesRequest.page_token] in the subsequent [DatabaseService.List] request to iterate through multiple pages of results.
+     * Each of the subsequent [DatabaseService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2305,7 +2296,7 @@ public final class DatabaseServiceOuterClass {
 
       /**
        * <pre>
-       * List of MySQL databases.
+       * List of databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -2319,7 +2310,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL databases.
+       * List of databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -2333,7 +2324,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL databases.
+       * List of databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -2347,7 +2338,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL databases.
+       * List of databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -2368,7 +2359,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL databases.
+       * List of databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -2386,7 +2377,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL databases.
+       * List of databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -2406,7 +2397,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL databases.
+       * List of databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -2427,7 +2418,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL databases.
+       * List of databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -2445,7 +2436,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL databases.
+       * List of databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -2463,7 +2454,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL databases.
+       * List of databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -2482,7 +2473,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL databases.
+       * List of databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -2499,7 +2490,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL databases.
+       * List of databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -2516,7 +2507,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL databases.
+       * List of databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -2527,7 +2518,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL databases.
+       * List of databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -2541,7 +2532,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL databases.
+       * List of databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -2556,7 +2547,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL databases.
+       * List of databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -2567,7 +2558,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL databases.
+       * List of databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -2579,7 +2570,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * List of MySQL databases.
+       * List of databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.mysql.v1.Database databases = 1;</code>
@@ -2606,10 +2597,9 @@ public final class DatabaseServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value
-       * for the [ListDatabasesRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value for the [ListDatabasesRequest.page_token] in the subsequent [DatabaseService.List] request to iterate through multiple pages of results.
+       * Each of the subsequent [DatabaseService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2628,10 +2618,9 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value
-       * for the [ListDatabasesRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value for the [ListDatabasesRequest.page_token] in the subsequent [DatabaseService.List] request to iterate through multiple pages of results.
+       * Each of the subsequent [DatabaseService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2651,10 +2640,9 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value
-       * for the [ListDatabasesRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value for the [ListDatabasesRequest.page_token] in the subsequent [DatabaseService.List] request to iterate through multiple pages of results.
+       * Each of the subsequent [DatabaseService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2671,10 +2659,9 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value
-       * for the [ListDatabasesRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value for the [ListDatabasesRequest.page_token] in the subsequent [DatabaseService.List] request to iterate through multiple pages of results.
+       * Each of the subsequent [DatabaseService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2687,10 +2674,9 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value
-       * for the [ListDatabasesRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value for the [ListDatabasesRequest.page_token] in the subsequent [DatabaseService.List] request to iterate through multiple pages of results.
+       * Each of the subsequent [DatabaseService.List] requests should use the [next_page_token] value returned by the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2765,8 +2751,8 @@ public final class DatabaseServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster to create a database in.
-     * To get the cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to create the database in.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2774,8 +2760,8 @@ public final class DatabaseServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster to create a database in.
-     * To get the cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to create the database in.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2785,7 +2771,7 @@ public final class DatabaseServiceOuterClass {
 
     /**
      * <pre>
-     * Configuration of the database to create.
+     * Configuration of the database.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -2793,7 +2779,7 @@ public final class DatabaseServiceOuterClass {
     boolean hasDatabaseSpec();
     /**
      * <pre>
-     * Configuration of the database to create.
+     * Configuration of the database.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -2801,7 +2787,7 @@ public final class DatabaseServiceOuterClass {
     yandex.cloud.api.mdb.mysql.v1.DatabaseOuterClass.DatabaseSpec getDatabaseSpec();
     /**
      * <pre>
-     * Configuration of the database to create.
+     * Configuration of the database.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -2903,8 +2889,8 @@ public final class DatabaseServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster to create a database in.
-     * To get the cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to create the database in.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2923,8 +2909,8 @@ public final class DatabaseServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster to create a database in.
-     * To get the cluster ID use a [ClusterService.List] request.
+     * ID of the cluster to create the database in.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2947,7 +2933,7 @@ public final class DatabaseServiceOuterClass {
     private yandex.cloud.api.mdb.mysql.v1.DatabaseOuterClass.DatabaseSpec databaseSpec_;
     /**
      * <pre>
-     * Configuration of the database to create.
+     * Configuration of the database.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -2957,7 +2943,7 @@ public final class DatabaseServiceOuterClass {
     }
     /**
      * <pre>
-     * Configuration of the database to create.
+     * Configuration of the database.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -2967,7 +2953,7 @@ public final class DatabaseServiceOuterClass {
     }
     /**
      * <pre>
-     * Configuration of the database to create.
+     * Configuration of the database.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -3312,8 +3298,8 @@ public final class DatabaseServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster to create a database in.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to create the database in.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3332,8 +3318,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to create a database in.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to create the database in.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3353,8 +3339,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to create a database in.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to create the database in.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3371,8 +3357,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to create a database in.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to create the database in.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3385,8 +3371,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to create a database in.
-       * To get the cluster ID use a [ClusterService.List] request.
+       * ID of the cluster to create the database in.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3408,7 +3394,7 @@ public final class DatabaseServiceOuterClass {
           yandex.cloud.api.mdb.mysql.v1.DatabaseOuterClass.DatabaseSpec, yandex.cloud.api.mdb.mysql.v1.DatabaseOuterClass.DatabaseSpec.Builder, yandex.cloud.api.mdb.mysql.v1.DatabaseOuterClass.DatabaseSpecOrBuilder> databaseSpecBuilder_;
       /**
        * <pre>
-       * Configuration of the database to create.
+       * Configuration of the database.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -3418,7 +3404,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the database to create.
+       * Configuration of the database.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -3432,7 +3418,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the database to create.
+       * Configuration of the database.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -3452,7 +3438,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the database to create.
+       * Configuration of the database.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -3470,7 +3456,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the database to create.
+       * Configuration of the database.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -3492,7 +3478,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the database to create.
+       * Configuration of the database.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -3510,7 +3496,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the database to create.
+       * Configuration of the database.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -3522,7 +3508,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the database to create.
+       * Configuration of the database.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -3537,7 +3523,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the database to create.
+       * Configuration of the database.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.DatabaseSpec database_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -3614,7 +3600,7 @@ public final class DatabaseServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster where a database is being created.
+     * ID of the cluster the database is being created in.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -3622,7 +3608,7 @@ public final class DatabaseServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster where a database is being created.
+     * ID of the cluster the database is being created in.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -3632,7 +3618,7 @@ public final class DatabaseServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the MySQL database that is being created.
+     * Name of the database that is being created.
      * </pre>
      *
      * <code>string database_name = 2;</code>
@@ -3640,7 +3626,7 @@ public final class DatabaseServiceOuterClass {
     java.lang.String getDatabaseName();
     /**
      * <pre>
-     * Name of the MySQL database that is being created.
+     * Name of the database that is being created.
      * </pre>
      *
      * <code>string database_name = 2;</code>
@@ -3737,7 +3723,7 @@ public final class DatabaseServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster where a database is being created.
+     * ID of the cluster the database is being created in.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -3756,7 +3742,7 @@ public final class DatabaseServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster where a database is being created.
+     * ID of the cluster the database is being created in.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -3779,7 +3765,7 @@ public final class DatabaseServiceOuterClass {
     private volatile java.lang.Object databaseName_;
     /**
      * <pre>
-     * Name of the MySQL database that is being created.
+     * Name of the database that is being created.
      * </pre>
      *
      * <code>string database_name = 2;</code>
@@ -3798,7 +3784,7 @@ public final class DatabaseServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the MySQL database that is being created.
+     * Name of the database that is being created.
      * </pre>
      *
      * <code>string database_name = 2;</code>
@@ -4140,7 +4126,7 @@ public final class DatabaseServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster where a database is being created.
+       * ID of the cluster the database is being created in.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -4159,7 +4145,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster where a database is being created.
+       * ID of the cluster the database is being created in.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -4179,7 +4165,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster where a database is being created.
+       * ID of the cluster the database is being created in.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -4196,7 +4182,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster where a database is being created.
+       * ID of the cluster the database is being created in.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -4209,7 +4195,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster where a database is being created.
+       * ID of the cluster the database is being created in.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -4229,7 +4215,7 @@ public final class DatabaseServiceOuterClass {
       private java.lang.Object databaseName_ = "";
       /**
        * <pre>
-       * Name of the MySQL database that is being created.
+       * Name of the database that is being created.
        * </pre>
        *
        * <code>string database_name = 2;</code>
@@ -4248,7 +4234,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL database that is being created.
+       * Name of the database that is being created.
        * </pre>
        *
        * <code>string database_name = 2;</code>
@@ -4268,7 +4254,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL database that is being created.
+       * Name of the database that is being created.
        * </pre>
        *
        * <code>string database_name = 2;</code>
@@ -4285,7 +4271,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL database that is being created.
+       * Name of the database that is being created.
        * </pre>
        *
        * <code>string database_name = 2;</code>
@@ -4298,7 +4284,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL database that is being created.
+       * Name of the database that is being created.
        * </pre>
        *
        * <code>string database_name = 2;</code>
@@ -4373,8 +4359,8 @@ public final class DatabaseServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster to delete a database in.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to delete the database from.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4382,8 +4368,8 @@ public final class DatabaseServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster to delete a database in.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to delete the database from.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4394,7 +4380,7 @@ public final class DatabaseServiceOuterClass {
     /**
      * <pre>
      * Name of the database to delete.
-     * To get the name of the database, use a [DatabaseService.List] request.
+     * To get this name, make a [DatabaseService.List] request.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4403,7 +4389,7 @@ public final class DatabaseServiceOuterClass {
     /**
      * <pre>
      * Name of the database to delete.
-     * To get the name of the database, use a [DatabaseService.List] request.
+     * To get this name, make a [DatabaseService.List] request.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4500,8 +4486,8 @@ public final class DatabaseServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster to delete a database in.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to delete the database from.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4520,8 +4506,8 @@ public final class DatabaseServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster to delete a database in.
-     * To get the cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to delete the database from.
+     * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4545,7 +4531,7 @@ public final class DatabaseServiceOuterClass {
     /**
      * <pre>
      * Name of the database to delete.
-     * To get the name of the database, use a [DatabaseService.List] request.
+     * To get this name, make a [DatabaseService.List] request.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4565,7 +4551,7 @@ public final class DatabaseServiceOuterClass {
     /**
      * <pre>
      * Name of the database to delete.
-     * To get the name of the database, use a [DatabaseService.List] request.
+     * To get this name, make a [DatabaseService.List] request.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4907,8 +4893,8 @@ public final class DatabaseServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster to delete a database in.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to delete the database from.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4927,8 +4913,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to delete a database in.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to delete the database from.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4948,8 +4934,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to delete a database in.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to delete the database from.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4966,8 +4952,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to delete a database in.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to delete the database from.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4980,8 +4966,8 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster to delete a database in.
-       * To get the cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to delete the database from.
+       * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5002,7 +4988,7 @@ public final class DatabaseServiceOuterClass {
       /**
        * <pre>
        * Name of the database to delete.
-       * To get the name of the database, use a [DatabaseService.List] request.
+       * To get this name, make a [DatabaseService.List] request.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -5022,7 +5008,7 @@ public final class DatabaseServiceOuterClass {
       /**
        * <pre>
        * Name of the database to delete.
-       * To get the name of the database, use a [DatabaseService.List] request.
+       * To get this name, make a [DatabaseService.List] request.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -5043,7 +5029,7 @@ public final class DatabaseServiceOuterClass {
       /**
        * <pre>
        * Name of the database to delete.
-       * To get the name of the database, use a [DatabaseService.List] request.
+       * To get this name, make a [DatabaseService.List] request.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -5061,7 +5047,7 @@ public final class DatabaseServiceOuterClass {
       /**
        * <pre>
        * Name of the database to delete.
-       * To get the name of the database, use a [DatabaseService.List] request.
+       * To get this name, make a [DatabaseService.List] request.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -5075,7 +5061,7 @@ public final class DatabaseServiceOuterClass {
       /**
        * <pre>
        * Name of the database to delete.
-       * To get the name of the database, use a [DatabaseService.List] request.
+       * To get this name, make a [DatabaseService.List] request.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -5150,7 +5136,7 @@ public final class DatabaseServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the MySQL cluster where a database is being deleted.
+     * ID of the cluster the database is being deleted from.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -5158,7 +5144,7 @@ public final class DatabaseServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the MySQL cluster where a database is being deleted.
+     * ID of the cluster the database is being deleted from.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -5168,7 +5154,7 @@ public final class DatabaseServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the MySQL database that is being deleted.
+     * Name of the database that is being deleted.
      * </pre>
      *
      * <code>string database_name = 2;</code>
@@ -5176,7 +5162,7 @@ public final class DatabaseServiceOuterClass {
     java.lang.String getDatabaseName();
     /**
      * <pre>
-     * Name of the MySQL database that is being deleted.
+     * Name of the database that is being deleted.
      * </pre>
      *
      * <code>string database_name = 2;</code>
@@ -5273,7 +5259,7 @@ public final class DatabaseServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the MySQL cluster where a database is being deleted.
+     * ID of the cluster the database is being deleted from.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -5292,7 +5278,7 @@ public final class DatabaseServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the MySQL cluster where a database is being deleted.
+     * ID of the cluster the database is being deleted from.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -5315,7 +5301,7 @@ public final class DatabaseServiceOuterClass {
     private volatile java.lang.Object databaseName_;
     /**
      * <pre>
-     * Name of the MySQL database that is being deleted.
+     * Name of the database that is being deleted.
      * </pre>
      *
      * <code>string database_name = 2;</code>
@@ -5334,7 +5320,7 @@ public final class DatabaseServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the MySQL database that is being deleted.
+     * Name of the database that is being deleted.
      * </pre>
      *
      * <code>string database_name = 2;</code>
@@ -5676,7 +5662,7 @@ public final class DatabaseServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the MySQL cluster where a database is being deleted.
+       * ID of the cluster the database is being deleted from.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -5695,7 +5681,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster where a database is being deleted.
+       * ID of the cluster the database is being deleted from.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -5715,7 +5701,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster where a database is being deleted.
+       * ID of the cluster the database is being deleted from.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -5732,7 +5718,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster where a database is being deleted.
+       * ID of the cluster the database is being deleted from.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -5745,7 +5731,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the MySQL cluster where a database is being deleted.
+       * ID of the cluster the database is being deleted from.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -5765,7 +5751,7 @@ public final class DatabaseServiceOuterClass {
       private java.lang.Object databaseName_ = "";
       /**
        * <pre>
-       * Name of the MySQL database that is being deleted.
+       * Name of the database that is being deleted.
        * </pre>
        *
        * <code>string database_name = 2;</code>
@@ -5784,7 +5770,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL database that is being deleted.
+       * Name of the database that is being deleted.
        * </pre>
        *
        * <code>string database_name = 2;</code>
@@ -5804,7 +5790,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL database that is being deleted.
+       * Name of the database that is being deleted.
        * </pre>
        *
        * <code>string database_name = 2;</code>
@@ -5821,7 +5807,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL database that is being deleted.
+       * Name of the database that is being deleted.
        * </pre>
        *
        * <code>string database_name = 2;</code>
@@ -5834,7 +5820,7 @@ public final class DatabaseServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the MySQL database that is being deleted.
+       * Name of the database that is being deleted.
        * </pre>
        *
        * <code>string database_name = 2;</code>
