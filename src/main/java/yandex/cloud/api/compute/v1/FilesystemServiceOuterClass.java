@@ -5461,6 +5461,15 @@ public final class FilesystemServiceOuterClass {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * Size of the filesystem, specified in bytes.
+     * </pre>
+     *
+     * <code>int64 size = 6;</code>
+     */
+    long getSize();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.UpdateFilesystemRequest}
@@ -5478,6 +5487,7 @@ public final class FilesystemServiceOuterClass {
       filesystemId_ = "";
       name_ = "";
       description_ = "";
+      size_ = 0L;
     }
 
     @java.lang.Override
@@ -5546,6 +5556,11 @@ public final class FilesystemServiceOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 48: {
+
+              size_ = input.readInt64();
               break;
             }
             default: {
@@ -5870,6 +5885,19 @@ public final class FilesystemServiceOuterClass {
       return map.get(key);
     }
 
+    public static final int SIZE_FIELD_NUMBER = 6;
+    private long size_;
+    /**
+     * <pre>
+     * Size of the filesystem, specified in bytes.
+     * </pre>
+     *
+     * <code>int64 size = 6;</code>
+     */
+    public long getSize() {
+      return size_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5902,6 +5930,9 @@ public final class FilesystemServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           5);
+      if (size_ != 0L) {
+        output.writeInt64(6, size_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5934,6 +5965,10 @@ public final class FilesystemServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(5, labels__);
       }
+      if (size_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, size_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5963,6 +5998,8 @@ public final class FilesystemServiceOuterClass {
           .equals(other.getDescription());
       result = result && internalGetLabels().equals(
           other.internalGetLabels());
+      result = result && (getSize()
+          == other.getSize());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5988,6 +6025,9 @@ public final class FilesystemServiceOuterClass {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
       }
+      hash = (37 * hash) + SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSize());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6156,6 +6196,8 @@ public final class FilesystemServiceOuterClass {
         description_ = "";
 
         internalGetMutableLabels().clear();
+        size_ = 0L;
+
         return this;
       }
 
@@ -6194,6 +6236,7 @@ public final class FilesystemServiceOuterClass {
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        result.size_ = size_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -6260,6 +6303,9 @@ public final class FilesystemServiceOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (other.getSize() != 0L) {
+          setSize(other.getSize());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -6905,6 +6951,44 @@ public final class FilesystemServiceOuterClass {
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableLabels().getMutableMap()
             .putAll(values);
+        return this;
+      }
+
+      private long size_ ;
+      /**
+       * <pre>
+       * Size of the filesystem, specified in bytes.
+       * </pre>
+       *
+       * <code>int64 size = 6;</code>
+       */
+      public long getSize() {
+        return size_;
+      }
+      /**
+       * <pre>
+       * Size of the filesystem, specified in bytes.
+       * </pre>
+       *
+       * <code>int64 size = 6;</code>
+       */
+      public Builder setSize(long value) {
+        
+        size_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of the filesystem, specified in bytes.
+       * </pre>
+       *
+       * <code>int64 size = 6;</code>
+       */
+      public Builder clearSize() {
+        
+        size_ = 0L;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -10796,7 +10880,7 @@ public final class FilesystemServiceOuterClass {
       " \001(\003B\004\350\3071\001\022\022\n\nblock_size\030\010 \001(\003\032-\n\013Labels" +
       "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"1\n" +
       "\030CreateFilesystemMetadata\022\025\n\rfilesystem_" +
-      "id\030\001 \001(\t\"\212\003\n\027UpdateFilesystemRequest\022#\n\r" +
+      "id\030\001 \001(\t\"\230\003\n\027UpdateFilesystemRequest\022#\n\r" +
       "filesystem_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013upd" +
       "ate_mask\030\002 \001(\0132\032.google.protobuf.FieldMa" +
       "sk\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0" +
@@ -10804,48 +10888,49 @@ public final class FilesystemServiceOuterClass {
       "\005<=256\022\225\001\n\006labels\030\005 \003(\0132<.yandex.cloud.c" +
       "ompute.v1.UpdateFilesystemRequest.Labels" +
       "EntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z" +
-      "]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032-" +
-      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"1\n\030UpdateFilesystemMetadata\022\025\n\rfil" +
-      "esystem_id\030\001 \001(\t\">\n\027DeleteFilesystemRequ" +
-      "est\022#\n\rfilesystem_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\"1\n\030DeleteFilesystemMetadata\022\025\n\rfilesyst" +
-      "em_id\030\001 \001(\t\"\204\001\n\037ListFilesystemOperations" +
-      "Request\022#\n\rfilesystem_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\np" +
-      "age_token\030\003 \001(\tB\t\212\3101\005<=100\"r\n ListFilesy" +
-      "stemOperationsResponse\0225\n\noperations\030\001 \003" +
-      "(\0132!.yandex.cloud.operation.Operation\022\027\n" +
-      "\017next_page_token\030\002 \001(\t2\243\010\n\021FilesystemSer" +
-      "vice\022\212\001\n\003Get\022-.yandex.cloud.compute.v1.G" +
-      "etFilesystemRequest\032#.yandex.cloud.compu" +
-      "te.v1.Filesystem\"/\202\323\344\223\002)\022\'/compute/v1/fi" +
-      "lesystems/{filesystem_id}\022\212\001\n\004List\022/.yan" +
-      "dex.cloud.compute.v1.ListFilesystemsRequ" +
-      "est\0320.yandex.cloud.compute.v1.ListFilesy" +
-      "stemsResponse\"\037\202\323\344\223\002\031\022\027/compute/v1/files" +
-      "ystems\022\253\001\n\006Create\0220.yandex.cloud.compute" +
-      ".v1.CreateFilesystemRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"L\202\323\344\223\002\034\"\027/compute" +
-      "/v1/filesystems:\001*\262\322*&\n\030CreateFilesystem" +
-      "Metadata\022\nFilesystem\022\273\001\n\006Update\0220.yandex" +
-      ".cloud.compute.v1.UpdateFilesystemReques" +
-      "t\032!.yandex.cloud.operation.Operation\"\\\202\323" +
-      "\344\223\002,2\'/compute/v1/filesystems/{filesyste" +
-      "m_id}:\001*\262\322*&\n\030UpdateFilesystemMetadata\022\n" +
-      "Filesystem\022\303\001\n\006Delete\0220.yandex.cloud.com" +
-      "pute.v1.DeleteFilesystemRequest\032!.yandex" +
-      ".cloud.operation.Operation\"d\202\323\344\223\002)*\'/com" +
-      "pute/v1/filesystems/{filesystem_id}\262\322*1\n" +
-      "\030DeleteFilesystemMetadata\022\025google.protob" +
-      "uf.Empty\022\301\001\n\016ListOperations\0228.yandex.clo" +
-      "ud.compute.v1.ListFilesystemOperationsRe" +
-      "quest\0329.yandex.cloud.compute.v1.ListFile" +
-      "systemOperationsResponse\":\202\323\344\223\0024\0222/compu" +
-      "te/v1/filesystems/{filesystem_id}/operat" +
-      "ionsBb\n\033yandex.cloud.api.compute.v1ZCgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/compute/v1;computeb\006proto3"
+      "]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\014" +
+      "\n\004size\030\006 \001(\003\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\"1\n\030UpdateFilesystemM" +
+      "etadata\022\025\n\rfilesystem_id\030\001 \001(\t\">\n\027Delete" +
+      "FilesystemRequest\022#\n\rfilesystem_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\"1\n\030DeleteFilesystemMetada" +
+      "ta\022\025\n\rfilesystem_id\030\001 \001(\t\"\204\001\n\037ListFilesy" +
+      "stemOperationsRequest\022#\n\rfilesystem_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
+      "\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
+      "\"r\n ListFilesystemOperationsResponse\0225\n\n" +
+      "operations\030\001 \003(\0132!.yandex.cloud.operatio" +
+      "n.Operation\022\027\n\017next_page_token\030\002 \001(\t2\243\010\n" +
+      "\021FilesystemService\022\212\001\n\003Get\022-.yandex.clou" +
+      "d.compute.v1.GetFilesystemRequest\032#.yand" +
+      "ex.cloud.compute.v1.Filesystem\"/\202\323\344\223\002)\022\'" +
+      "/compute/v1/filesystems/{filesystem_id}\022" +
+      "\212\001\n\004List\022/.yandex.cloud.compute.v1.ListF" +
+      "ilesystemsRequest\0320.yandex.cloud.compute" +
+      ".v1.ListFilesystemsResponse\"\037\202\323\344\223\002\031\022\027/co" +
+      "mpute/v1/filesystems\022\253\001\n\006Create\0220.yandex" +
+      ".cloud.compute.v1.CreateFilesystemReques" +
+      "t\032!.yandex.cloud.operation.Operation\"L\202\323" +
+      "\344\223\002\034\"\027/compute/v1/filesystems:\001*\262\322*&\n\030Cr" +
+      "eateFilesystemMetadata\022\nFilesystem\022\273\001\n\006U" +
+      "pdate\0220.yandex.cloud.compute.v1.UpdateFi" +
+      "lesystemRequest\032!.yandex.cloud.operation" +
+      ".Operation\"\\\202\323\344\223\002,2\'/compute/v1/filesyst" +
+      "ems/{filesystem_id}:\001*\262\322*&\n\030UpdateFilesy" +
+      "stemMetadata\022\nFilesystem\022\303\001\n\006Delete\0220.ya" +
+      "ndex.cloud.compute.v1.DeleteFilesystemRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"d\202\323\344\223\002)*\'/compute/v1/filesystems/{files" +
+      "ystem_id}\262\322*1\n\030DeleteFilesystemMetadata\022" +
+      "\025google.protobuf.Empty\022\301\001\n\016ListOperation" +
+      "s\0228.yandex.cloud.compute.v1.ListFilesyst" +
+      "emOperationsRequest\0329.yandex.cloud.compu" +
+      "te.v1.ListFilesystemOperationsResponse\":" +
+      "\202\323\344\223\0024\0222/compute/v1/filesystems/{filesys" +
+      "tem_id}/operationsBb\n\033yandex.cloud.api.c" +
+      "ompute.v1ZCgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/compute/v1;computeb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10906,7 +10991,7 @@ public final class FilesystemServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_UpdateFilesystemRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_UpdateFilesystemRequest_descriptor,
-        new java.lang.String[] { "FilesystemId", "UpdateMask", "Name", "Description", "Labels", });
+        new java.lang.String[] { "FilesystemId", "UpdateMask", "Name", "Description", "Labels", "Size", });
     internal_static_yandex_cloud_compute_v1_UpdateFilesystemRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_UpdateFilesystemRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_UpdateFilesystemRequest_LabelsEntry_fieldAccessorTable = new

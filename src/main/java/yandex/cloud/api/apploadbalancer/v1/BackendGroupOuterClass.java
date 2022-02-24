@@ -8213,7 +8213,7 @@ public final class BackendGroupOuterClass {
      * Maximum age of cookies that are generated for sessions.
      * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
      * on client restarts.
-     * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
+     * If not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8224,7 +8224,7 @@ public final class BackendGroupOuterClass {
      * Maximum age of cookies that are generated for sessions.
      * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
      * on client restarts.
-     * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
+     * If not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8235,7 +8235,7 @@ public final class BackendGroupOuterClass {
      * Maximum age of cookies that are generated for sessions.
      * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
      * on client restarts.
-     * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
+     * If not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8386,7 +8386,7 @@ public final class BackendGroupOuterClass {
      * Maximum age of cookies that are generated for sessions.
      * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
      * on client restarts.
-     * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
+     * If not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8399,7 +8399,7 @@ public final class BackendGroupOuterClass {
      * Maximum age of cookies that are generated for sessions.
      * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
      * on client restarts.
-     * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
+     * If not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8412,7 +8412,7 @@ public final class BackendGroupOuterClass {
      * Maximum age of cookies that are generated for sessions.
      * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
      * on client restarts.
-     * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
+     * If not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
      * </pre>
      *
      * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8855,7 +8855,7 @@ public final class BackendGroupOuterClass {
        * Maximum age of cookies that are generated for sessions.
        * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
        * on client restarts.
-       * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
+       * If not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8868,7 +8868,7 @@ public final class BackendGroupOuterClass {
        * Maximum age of cookies that are generated for sessions.
        * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
        * on client restarts.
-       * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
+       * If not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8885,7 +8885,7 @@ public final class BackendGroupOuterClass {
        * Maximum age of cookies that are generated for sessions.
        * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
        * on client restarts.
-       * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
+       * If not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8908,7 +8908,7 @@ public final class BackendGroupOuterClass {
        * Maximum age of cookies that are generated for sessions.
        * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
        * on client restarts.
-       * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
+       * If not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8929,7 +8929,7 @@ public final class BackendGroupOuterClass {
        * Maximum age of cookies that are generated for sessions.
        * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
        * on client restarts.
-       * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
+       * If not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8954,7 +8954,7 @@ public final class BackendGroupOuterClass {
        * Maximum age of cookies that are generated for sessions.
        * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
        * on client restarts.
-       * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
+       * If not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8975,7 +8975,7 @@ public final class BackendGroupOuterClass {
        * Maximum age of cookies that are generated for sessions.
        * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
        * on client restarts.
-       * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
+       * If not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -8990,7 +8990,7 @@ public final class BackendGroupOuterClass {
        * Maximum age of cookies that are generated for sessions.
        * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
        * on client restarts.
-       * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
+       * If not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
@@ -9008,7 +9008,7 @@ public final class BackendGroupOuterClass {
        * Maximum age of cookies that are generated for sessions.
        * If set to `0`, session cookies are used, which are stored by clients in temporary memory and are deleted
        * on client restarts.
-       * if not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
+       * If not set, the balancer does not generate cookies and only uses incoming ones for establishing session affinity.
        * </pre>
        *
        * <code>.google.protobuf.Duration ttl = 2;</code>
