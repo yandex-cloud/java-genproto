@@ -137,6 +137,7 @@ public final class OperationServiceGrpc {
     /**
      * <pre>
      * Cancels the specified operation.
+     * Note that currently Yandex Object Storage API does not support cancelling operations.
      * </pre>
      */
     public void cancel(yandex.cloud.api.operation.OperationServiceOuterClass.CancelOperationRequest request,
@@ -199,6 +200,7 @@ public final class OperationServiceGrpc {
     /**
      * <pre>
      * Cancels the specified operation.
+     * Note that currently Yandex Object Storage API does not support cancelling operations.
      * </pre>
      */
     public void cancel(yandex.cloud.api.operation.OperationServiceOuterClass.CancelOperationRequest request,
@@ -242,6 +244,7 @@ public final class OperationServiceGrpc {
     /**
      * <pre>
      * Cancels the specified operation.
+     * Note that currently Yandex Object Storage API does not support cancelling operations.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation cancel(yandex.cloud.api.operation.OperationServiceOuterClass.CancelOperationRequest request) {
@@ -285,6 +288,7 @@ public final class OperationServiceGrpc {
     /**
      * <pre>
      * Cancels the specified operation.
+     * Note that currently Yandex Object Storage API does not support cancelling operations.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> cancel(

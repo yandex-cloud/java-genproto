@@ -127,6 +127,7 @@ public final class CacheServiceGrpc {
     /**
      * <pre>
      * Removes specified files from the cache of the specified resource. For details about purging, see [documentation](/docs/cdn/concepts/caching#purge).
+     * Purging may take up to 15 minutes.
      * </pre>
      */
     public void purge(yandex.cloud.api.cdn.v1.CacheServiceOuterClass.PurgeCacheRequest request,
@@ -188,6 +189,7 @@ public final class CacheServiceGrpc {
     /**
      * <pre>
      * Removes specified files from the cache of the specified resource. For details about purging, see [documentation](/docs/cdn/concepts/caching#purge).
+     * Purging may take up to 15 minutes.
      * </pre>
      */
     public void purge(yandex.cloud.api.cdn.v1.CacheServiceOuterClass.PurgeCacheRequest request,
@@ -232,6 +234,7 @@ public final class CacheServiceGrpc {
     /**
      * <pre>
      * Removes specified files from the cache of the specified resource. For details about purging, see [documentation](/docs/cdn/concepts/caching#purge).
+     * Purging may take up to 15 minutes.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation purge(yandex.cloud.api.cdn.v1.CacheServiceOuterClass.PurgeCacheRequest request) {
@@ -274,6 +277,7 @@ public final class CacheServiceGrpc {
     /**
      * <pre>
      * Removes specified files from the cache of the specified resource. For details about purging, see [documentation](/docs/cdn/concepts/caching#purge).
+     * Purging may take up to 15 minutes.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> purge(

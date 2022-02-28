@@ -180,6 +180,15 @@ public final class TranslationServiceOuterClass {
      * <code>.yandex.cloud.ai.translate.v2.TranslateGlossaryConfig glossary_config = 7;</code>
      */
     yandex.cloud.api.ai.translate.v2.TranslationServiceOuterClass.TranslateGlossaryConfigOrBuilder getGlossaryConfigOrBuilder();
+
+    /**
+     * <pre>
+     * use speller
+     * </pre>
+     *
+     * <code>bool speller = 8;</code>
+     */
+    boolean getSpeller();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.translate.v2.TranslateRequest}
@@ -200,6 +209,7 @@ public final class TranslationServiceOuterClass {
       texts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       folderId_ = "";
       model_ = "";
+      speller_ = false;
     }
 
     @java.lang.Override
@@ -276,6 +286,11 @@ public final class TranslationServiceOuterClass {
                 glossaryConfig_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 64: {
+
+              speller_ = input.readBool();
               break;
             }
             default: {
@@ -722,6 +737,19 @@ public final class TranslationServiceOuterClass {
       return getGlossaryConfig();
     }
 
+    public static final int SPELLER_FIELD_NUMBER = 8;
+    private boolean speller_;
+    /**
+     * <pre>
+     * use speller
+     * </pre>
+     *
+     * <code>bool speller = 8;</code>
+     */
+    public boolean getSpeller() {
+      return speller_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -756,6 +784,9 @@ public final class TranslationServiceOuterClass {
       }
       if (glossaryConfig_ != null) {
         output.writeMessage(7, getGlossaryConfig());
+      }
+      if (speller_ != false) {
+        output.writeBool(8, speller_);
       }
       unknownFields.writeTo(output);
     }
@@ -794,6 +825,10 @@ public final class TranslationServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getGlossaryConfig());
       }
+      if (speller_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, speller_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -826,6 +861,8 @@ public final class TranslationServiceOuterClass {
         result = result && getGlossaryConfig()
             .equals(other.getGlossaryConfig());
       }
+      result = result && (getSpeller()
+          == other.getSpeller());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -855,6 +892,9 @@ public final class TranslationServiceOuterClass {
         hash = (37 * hash) + GLOSSARY_CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + getGlossaryConfig().hashCode();
       }
+      hash = (37 * hash) + SPELLER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSpeller());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1006,6 +1046,8 @@ public final class TranslationServiceOuterClass {
           glossaryConfig_ = null;
           glossaryConfigBuilder_ = null;
         }
+        speller_ = false;
+
         return this;
       }
 
@@ -1049,6 +1091,7 @@ public final class TranslationServiceOuterClass {
         } else {
           result.glossaryConfig_ = glossaryConfigBuilder_.build();
         }
+        result.speller_ = speller_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1129,6 +1172,9 @@ public final class TranslationServiceOuterClass {
         }
         if (other.hasGlossaryConfig()) {
           mergeGlossaryConfig(other.getGlossaryConfig());
+        }
+        if (other.getSpeller() != false) {
+          setSpeller(other.getSpeller());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1896,6 +1942,44 @@ public final class TranslationServiceOuterClass {
           glossaryConfig_ = null;
         }
         return glossaryConfigBuilder_;
+      }
+
+      private boolean speller_ ;
+      /**
+       * <pre>
+       * use speller
+       * </pre>
+       *
+       * <code>bool speller = 8;</code>
+       */
+      public boolean getSpeller() {
+        return speller_;
+      }
+      /**
+       * <pre>
+       * use speller
+       * </pre>
+       *
+       * <code>bool speller = 8;</code>
+       */
+      public Builder setSpeller(boolean value) {
+        
+        speller_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * use speller
+       * </pre>
+       *
+       * <code>bool speller = 8;</code>
+       */
+      public Builder clearSpeller() {
+        
+        speller_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -8537,7 +8621,7 @@ public final class TranslationServiceOuterClass {
       "on_service.proto\022\034yandex.cloud.ai.transl" +
       "ate.v2\032\034google/api/annotations.proto\032\035ya" +
       "ndex/cloud/validation.proto\032.yandex/clou" +
-      "d/ai/translate/v2/translation.proto\"\204\003\n\020" +
+      "d/ai/translate/v2/translation.proto\"\225\003\n\020" +
       "TranslateRequest\022%\n\024source_language_code" +
       "\030\001 \001(\tB\007\212\3101\003<=3\022)\n\024target_language_code\030" +
       "\002 \001(\tB\013\350\3071\001\212\3101\003<=3\022E\n\006format\030\003 \001(\01625.yan" +
@@ -8546,41 +8630,41 @@ public final class TranslationServiceOuterClass {
       "er_id\030\005 \001(\tB\010\212\3101\004<=50\022\027\n\005model\030\006 \001(\tB\010\212\310" +
       "1\004<=50\022N\n\017glossary_config\030\007 \001(\01325.yandex" +
       ".cloud.ai.translate.v2.TranslateGlossary" +
-      "Config\":\n\006Format\022\026\n\022FORMAT_UNSPECIFIED\020\000" +
-      "\022\016\n\nPLAIN_TEXT\020\001\022\010\n\004HTML\020\002\"w\n\027TranslateG" +
-      "lossaryConfig\022C\n\rglossary_data\030\001 \001(\0132*.y" +
-      "andex.cloud.ai.translate.v2.GlossaryData" +
-      "H\000B\027\n\017glossary_source\022\004\300\3011\001\"\\\n\014GlossaryD" +
-      "ata\022L\n\016glossary_pairs\030\001 \003(\0132*.yandex.clo" +
-      "ud.ai.translate.v2.GlossaryPairB\010\202\3101\0041-5" +
-      "0\"H\n\014GlossaryPair\022\031\n\013source_text\030\001 \001(\tB\004" +
-      "\350\3071\001\022\035\n\017translated_text\030\002 \001(\tB\004\350\3071\001\"W\n\021T" +
-      "ranslateResponse\022B\n\014translations\030\001 \003(\0132," +
-      ".yandex.cloud.ai.translate.v2.Translated" +
-      "Text\"\200\001\n\025DetectLanguageRequest\022\034\n\004text\030\001" +
-      " \001(\tB\016\350\3071\001\212\3101\006<=1000\022,\n\023language_code_hi" +
-      "nts\030\002 \003(\tB\017\202\3101\004<=10\212\3101\003<=3\022\033\n\tfolder_id\030" +
-      "\003 \001(\tB\010\212\3101\004<=50\"/\n\026DetectLanguageRespons" +
-      "e\022\025\n\rlanguage_code\030\001 \001(\t\"3\n\024ListLanguage" +
-      "sRequest\022\033\n\tfolder_id\030\001 \001(\tB\010\212\3101\004<=50\"R\n" +
-      "\025ListLanguagesResponse\0229\n\tlanguages\030\001 \003(" +
-      "\0132&.yandex.cloud.ai.translate.v2.Languag" +
-      "e2\345\003\n\022TranslationService\022\220\001\n\tTranslate\022." +
-      ".yandex.cloud.ai.translate.v2.TranslateR" +
-      "equest\032/.yandex.cloud.ai.translate.v2.Tr" +
-      "anslateResponse\"\"\202\323\344\223\002\034\"\027/translate/v2/t" +
-      "ranslate:\001*\022\234\001\n\016DetectLanguage\0223.yandex." +
-      "cloud.ai.translate.v2.DetectLanguageRequ" +
-      "est\0324.yandex.cloud.ai.translate.v2.Detec" +
-      "tLanguageResponse\"\037\202\323\344\223\002\031\"\024/translate/v2" +
-      "/detect:\001*\022\234\001\n\rListLanguages\0222.yandex.cl" +
-      "oud.ai.translate.v2.ListLanguagesRequest" +
-      "\0323.yandex.cloud.ai.translate.v2.ListLang" +
-      "uagesResponse\"\"\202\323\344\223\002\034\"\027/translate/v2/lan" +
-      "guages:\001*Bn\n yandex.cloud.api.ai.transla" +
-      "te.v2ZJgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/ai/translate/v2;translat" +
-      "eb\006proto3"
+      "Config\022\017\n\007speller\030\010 \001(\010\":\n\006Format\022\026\n\022FOR" +
+      "MAT_UNSPECIFIED\020\000\022\016\n\nPLAIN_TEXT\020\001\022\010\n\004HTM" +
+      "L\020\002\"w\n\027TranslateGlossaryConfig\022C\n\rglossa" +
+      "ry_data\030\001 \001(\0132*.yandex.cloud.ai.translat" +
+      "e.v2.GlossaryDataH\000B\027\n\017glossary_source\022\004" +
+      "\300\3011\001\"\\\n\014GlossaryData\022L\n\016glossary_pairs\030\001" +
+      " \003(\0132*.yandex.cloud.ai.translate.v2.Glos" +
+      "saryPairB\010\202\3101\0041-50\"H\n\014GlossaryPair\022\031\n\013so" +
+      "urce_text\030\001 \001(\tB\004\350\3071\001\022\035\n\017translated_text" +
+      "\030\002 \001(\tB\004\350\3071\001\"W\n\021TranslateResponse\022B\n\014tra" +
+      "nslations\030\001 \003(\0132,.yandex.cloud.ai.transl" +
+      "ate.v2.TranslatedText\"\200\001\n\025DetectLanguage" +
+      "Request\022\034\n\004text\030\001 \001(\tB\016\350\3071\001\212\3101\006<=1000\022,\n" +
+      "\023language_code_hints\030\002 \003(\tB\017\202\3101\004<=10\212\3101\003" +
+      "<=3\022\033\n\tfolder_id\030\003 \001(\tB\010\212\3101\004<=50\"/\n\026Dete" +
+      "ctLanguageResponse\022\025\n\rlanguage_code\030\001 \001(" +
+      "\t\"3\n\024ListLanguagesRequest\022\033\n\tfolder_id\030\001" +
+      " \001(\tB\010\212\3101\004<=50\"R\n\025ListLanguagesResponse\022" +
+      "9\n\tlanguages\030\001 \003(\0132&.yandex.cloud.ai.tra" +
+      "nslate.v2.Language2\345\003\n\022TranslationServic" +
+      "e\022\220\001\n\tTranslate\022..yandex.cloud.ai.transl" +
+      "ate.v2.TranslateRequest\032/.yandex.cloud.a" +
+      "i.translate.v2.TranslateResponse\"\"\202\323\344\223\002\034" +
+      "\"\027/translate/v2/translate:\001*\022\234\001\n\016DetectL" +
+      "anguage\0223.yandex.cloud.ai.translate.v2.D" +
+      "etectLanguageRequest\0324.yandex.cloud.ai.t" +
+      "ranslate.v2.DetectLanguageResponse\"\037\202\323\344\223" +
+      "\002\031\"\024/translate/v2/detect:\001*\022\234\001\n\rListLang" +
+      "uages\0222.yandex.cloud.ai.translate.v2.Lis" +
+      "tLanguagesRequest\0323.yandex.cloud.ai.tran" +
+      "slate.v2.ListLanguagesResponse\"\"\202\323\344\223\002\034\"\027" +
+      "/translate/v2/languages:\001*Bn\n yandex.clo" +
+      "ud.api.ai.translate.v2ZJgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/ai/tran" +
+      "slate/v2;translateb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8602,7 +8686,7 @@ public final class TranslationServiceOuterClass {
     internal_static_yandex_cloud_ai_translate_v2_TranslateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_translate_v2_TranslateRequest_descriptor,
-        new java.lang.String[] { "SourceLanguageCode", "TargetLanguageCode", "Format", "Texts", "FolderId", "Model", "GlossaryConfig", });
+        new java.lang.String[] { "SourceLanguageCode", "TargetLanguageCode", "Format", "Texts", "FolderId", "Model", "GlossaryConfig", "Speller", });
     internal_static_yandex_cloud_ai_translate_v2_TranslateGlossaryConfig_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_ai_translate_v2_TranslateGlossaryConfig_fieldAccessorTable = new

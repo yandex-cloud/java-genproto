@@ -274,7 +274,8 @@ public final class ResourceServiceGrpc {
 
     /**
      * <pre>
-     * Creates client's CDN resource.
+     * Creates a CDN resource in the specified folder.
+     * Creation may take up to 15 minutes.
      * </pre>
      */
     public void create(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.CreateResourceRequest request,
@@ -284,7 +285,10 @@ public final class ResourceServiceGrpc {
 
     /**
      * <pre>
-     * Updates of client's CDN resource. (PATCH behavior)
+     * Updates the specified CDN resource.
+     * The method implements patch behaviour, i.e. only the fields specified in the request are updated in the resource.
+     * Changes may take up to 15 minutes to apply. Afterwards, it is recommended to purge the resource's cache via a
+     * [CacheService.Purge] request.
      * </pre>
      */
     public void update(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.UpdateResourceRequest request,
@@ -406,7 +410,8 @@ public final class ResourceServiceGrpc {
 
     /**
      * <pre>
-     * Creates client's CDN resource.
+     * Creates a CDN resource in the specified folder.
+     * Creation may take up to 15 minutes.
      * </pre>
      */
     public void create(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.CreateResourceRequest request,
@@ -417,7 +422,10 @@ public final class ResourceServiceGrpc {
 
     /**
      * <pre>
-     * Updates of client's CDN resource. (PATCH behavior)
+     * Updates the specified CDN resource.
+     * The method implements patch behaviour, i.e. only the fields specified in the request are updated in the resource.
+     * Changes may take up to 15 minutes to apply. Afterwards, it is recommended to purge the resource's cache via a
+     * [CacheService.Purge] request.
      * </pre>
      */
     public void update(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.UpdateResourceRequest request,
@@ -493,7 +501,8 @@ public final class ResourceServiceGrpc {
 
     /**
      * <pre>
-     * Creates client's CDN resource.
+     * Creates a CDN resource in the specified folder.
+     * Creation may take up to 15 minutes.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.CreateResourceRequest request) {
@@ -503,7 +512,10 @@ public final class ResourceServiceGrpc {
 
     /**
      * <pre>
-     * Updates of client's CDN resource. (PATCH behavior)
+     * Updates the specified CDN resource.
+     * The method implements patch behaviour, i.e. only the fields specified in the request are updated in the resource.
+     * Changes may take up to 15 minutes to apply. Afterwards, it is recommended to purge the resource's cache via a
+     * [CacheService.Purge] request.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.UpdateResourceRequest request) {
@@ -578,7 +590,8 @@ public final class ResourceServiceGrpc {
 
     /**
      * <pre>
-     * Creates client's CDN resource.
+     * Creates a CDN resource in the specified folder.
+     * Creation may take up to 15 minutes.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
@@ -589,7 +602,10 @@ public final class ResourceServiceGrpc {
 
     /**
      * <pre>
-     * Updates of client's CDN resource. (PATCH behavior)
+     * Updates the specified CDN resource.
+     * The method implements patch behaviour, i.e. only the fields specified in the request are updated in the resource.
+     * Changes may take up to 15 minutes to apply. Afterwards, it is recommended to purge the resource's cache via a
+     * [CacheService.Purge] request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(

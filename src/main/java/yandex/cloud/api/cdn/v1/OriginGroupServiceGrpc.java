@@ -252,7 +252,9 @@ public final class OriginGroupServiceGrpc {
 
     /**
      * <pre>
-     * Updates origin group.
+     * Updates the specified origin group.
+     * Changes may take up to 15 minutes to apply. Afterwards, it is recommended to purge cache of the resources that
+     * use the origin group via a [CacheService.Purge] request.
      * </pre>
      */
     public void update(yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.UpdateOriginGroupRequest request,
@@ -367,7 +369,9 @@ public final class OriginGroupServiceGrpc {
 
     /**
      * <pre>
-     * Updates origin group.
+     * Updates the specified origin group.
+     * Changes may take up to 15 minutes to apply. Afterwards, it is recommended to purge cache of the resources that
+     * use the origin group via a [CacheService.Purge] request.
      * </pre>
      */
     public void update(yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.UpdateOriginGroupRequest request,
@@ -441,7 +445,9 @@ public final class OriginGroupServiceGrpc {
 
     /**
      * <pre>
-     * Updates origin group.
+     * Updates the specified origin group.
+     * Changes may take up to 15 minutes to apply. Afterwards, it is recommended to purge cache of the resources that
+     * use the origin group via a [CacheService.Purge] request.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.cdn.v1.OriginGroupServiceOuterClass.UpdateOriginGroupRequest request) {
@@ -516,7 +522,9 @@ public final class OriginGroupServiceGrpc {
 
     /**
      * <pre>
-     * Updates origin group.
+     * Updates the specified origin group.
+     * Changes may take up to 15 minutes to apply. Afterwards, it is recommended to purge cache of the resources that
+     * use the origin group via a [CacheService.Purge] request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(

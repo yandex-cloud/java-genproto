@@ -606,6 +606,38 @@ public final class ClusterServiceGrpc {
      return getAddHostsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateHostsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateHosts",
+      requestType = yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateHostsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateHostsMethod;
+    if ((getUpdateHostsMethod = ClusterServiceGrpc.getUpdateHostsMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getUpdateHostsMethod = ClusterServiceGrpc.getUpdateHostsMethod) == null) {
+          ClusterServiceGrpc.getUpdateHostsMethod = getUpdateHostsMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.mdb.clickhouse.v1.ClusterService", "UpdateHosts"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("UpdateHosts"))
+                  .build();
+          }
+        }
+     }
+     return getUpdateHostsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterHostsRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteHostsMethod;
 
@@ -1236,6 +1268,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Updates the specified hosts.
+     * </pre>
+     */
+    public void updateHosts(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getUpdateHostsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified hosts for a cluster.
      * </pre>
      */
@@ -1492,6 +1534,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.AddClusterHostsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ADD_HOSTS)))
+          .addMethod(
+            getUpdateHostsMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UPDATE_HOSTS)))
           .addMethod(
             getDeleteHostsMethod(),
             asyncUnaryCall(
@@ -1806,6 +1855,17 @@ public final class ClusterServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getAddHostsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the specified hosts.
+     * </pre>
+     */
+    public void updateHosts(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getUpdateHostsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -2158,6 +2218,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Updates the specified hosts.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation updateHosts(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getUpdateHostsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified hosts for a cluster.
      * </pre>
      */
@@ -2499,6 +2569,17 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Updates the specified hosts.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateHosts(
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getUpdateHostsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified hosts for a cluster.
      * </pre>
      */
@@ -2659,19 +2740,20 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_LIST_BACKUPS = 15;
   private static final int METHODID_LIST_HOSTS = 16;
   private static final int METHODID_ADD_HOSTS = 17;
-  private static final int METHODID_DELETE_HOSTS = 18;
-  private static final int METHODID_GET_SHARD = 19;
-  private static final int METHODID_LIST_SHARDS = 20;
-  private static final int METHODID_ADD_SHARD = 21;
-  private static final int METHODID_UPDATE_SHARD = 22;
-  private static final int METHODID_DELETE_SHARD = 23;
-  private static final int METHODID_GET_SHARD_GROUP = 24;
-  private static final int METHODID_LIST_SHARD_GROUPS = 25;
-  private static final int METHODID_CREATE_SHARD_GROUP = 26;
-  private static final int METHODID_UPDATE_SHARD_GROUP = 27;
-  private static final int METHODID_DELETE_SHARD_GROUP = 28;
-  private static final int METHODID_CREATE_EXTERNAL_DICTIONARY = 29;
-  private static final int METHODID_DELETE_EXTERNAL_DICTIONARY = 30;
+  private static final int METHODID_UPDATE_HOSTS = 18;
+  private static final int METHODID_DELETE_HOSTS = 19;
+  private static final int METHODID_GET_SHARD = 20;
+  private static final int METHODID_LIST_SHARDS = 21;
+  private static final int METHODID_ADD_SHARD = 22;
+  private static final int METHODID_UPDATE_SHARD = 23;
+  private static final int METHODID_DELETE_SHARD = 24;
+  private static final int METHODID_GET_SHARD_GROUP = 25;
+  private static final int METHODID_LIST_SHARD_GROUPS = 26;
+  private static final int METHODID_CREATE_SHARD_GROUP = 27;
+  private static final int METHODID_UPDATE_SHARD_GROUP = 28;
+  private static final int METHODID_DELETE_SHARD_GROUP = 29;
+  private static final int METHODID_CREATE_EXTERNAL_DICTIONARY = 30;
+  private static final int METHODID_DELETE_EXTERNAL_DICTIONARY = 31;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2760,6 +2842,10 @@ public final class ClusterServiceGrpc {
           break;
         case METHODID_ADD_HOSTS:
           serviceImpl.addHosts((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.AddClusterHostsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_UPDATE_HOSTS:
+          serviceImpl.updateHosts((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_DELETE_HOSTS:
@@ -2893,6 +2979,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getListBackupsMethod())
               .addMethod(getListHostsMethod())
               .addMethod(getAddHostsMethod())
+              .addMethod(getUpdateHostsMethod())
               .addMethod(getDeleteHostsMethod())
               .addMethod(getGetShardMethod())
               .addMethod(getListShardsMethod())
