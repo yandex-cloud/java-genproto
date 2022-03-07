@@ -179,6 +179,56 @@ public final class Redis50 {
      */
     com.google.protobuf.ByteString
         getNotifyKeyspaceEventsBytes();
+
+    /**
+     * <pre>
+     * Redis connection output buffers limits for pubsub operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+     */
+    boolean hasClientOutputBufferLimitPubsub();
+    /**
+     * <pre>
+     * Redis connection output buffers limits for pubsub operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+     */
+    yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit getClientOutputBufferLimitPubsub();
+    /**
+     * <pre>
+     * Redis connection output buffers limits for pubsub operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+     */
+    yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimitOrBuilder getClientOutputBufferLimitPubsubOrBuilder();
+
+    /**
+     * <pre>
+     * Redis connection output buffers limits for clients.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+     */
+    boolean hasClientOutputBufferLimitNormal();
+    /**
+     * <pre>
+     * Redis connection output buffers limits for clients.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+     */
+    yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit getClientOutputBufferLimitNormal();
+    /**
+     * <pre>
+     * Redis connection output buffers limits for clients.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+     */
+    yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimitOrBuilder getClientOutputBufferLimitNormalOrBuilder();
   }
   /**
    * <pre>
@@ -295,6 +345,32 @@ public final class Redis50 {
               java.lang.String s = input.readStringRequireUtf8();
 
               notifyKeyspaceEvents_ = s;
+              break;
+            }
+            case 66: {
+              yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.Builder subBuilder = null;
+              if (clientOutputBufferLimitPubsub_ != null) {
+                subBuilder = clientOutputBufferLimitPubsub_.toBuilder();
+              }
+              clientOutputBufferLimitPubsub_ = input.readMessage(yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(clientOutputBufferLimitPubsub_);
+                clientOutputBufferLimitPubsub_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.Builder subBuilder = null;
+              if (clientOutputBufferLimitNormal_ != null) {
+                subBuilder = clientOutputBufferLimitNormal_.toBuilder();
+              }
+              clientOutputBufferLimitNormal_ = input.readMessage(yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(clientOutputBufferLimitNormal_);
+                clientOutputBufferLimitNormal_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -558,6 +634,1181 @@ public final class Redis50 {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.MaxmemoryPolicy)
     }
 
+    public interface ClientOutputBufferLimitOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Total limit in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      boolean hasHardLimit();
+      /**
+       * <pre>
+       * Total limit in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      com.google.protobuf.Int64Value getHardLimit();
+      /**
+       * <pre>
+       * Total limit in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getHardLimitOrBuilder();
+
+      /**
+       * <pre>
+       * Limit in bytes during certain time period.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      boolean hasSoftLimit();
+      /**
+       * <pre>
+       * Limit in bytes during certain time period.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      com.google.protobuf.Int64Value getSoftLimit();
+      /**
+       * <pre>
+       * Limit in bytes during certain time period.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getSoftLimitOrBuilder();
+
+      /**
+       * <pre>
+       * Seconds for soft limit.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      boolean hasSoftSeconds();
+      /**
+       * <pre>
+       * Seconds for soft limit.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      com.google.protobuf.Int64Value getSoftSeconds();
+      /**
+       * <pre>
+       * Seconds for soft limit.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getSoftSecondsOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit}
+     */
+    public  static final class ClientOutputBufferLimit extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit)
+        ClientOutputBufferLimitOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ClientOutputBufferLimit.newBuilder() to construct.
+      private ClientOutputBufferLimit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ClientOutputBufferLimit() {
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ClientOutputBufferLimit(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (hardLimit_ != null) {
+                  subBuilder = hardLimit_.toBuilder();
+                }
+                hardLimit_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(hardLimit_);
+                  hardLimit_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (softLimit_ != null) {
+                  subBuilder = softLimit_.toBuilder();
+                }
+                softLimit_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(softLimit_);
+                  softLimit_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 42: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (softSeconds_ != null) {
+                  subBuilder = softSeconds_.toBuilder();
+                }
+                softSeconds_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(softSeconds_);
+                  softSeconds_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.redis.v1.config.Redis50.internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig5_0_ClientOutputBufferLimit_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.redis.v1.config.Redis50.internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig5_0_ClientOutputBufferLimit_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.class, yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.Builder.class);
+      }
+
+      public static final int HARD_LIMIT_FIELD_NUMBER = 1;
+      private com.google.protobuf.Int64Value hardLimit_;
+      /**
+       * <pre>
+       * Total limit in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public boolean hasHardLimit() {
+        return hardLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Total limit in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value getHardLimit() {
+        return hardLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : hardLimit_;
+      }
+      /**
+       * <pre>
+       * Total limit in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getHardLimitOrBuilder() {
+        return getHardLimit();
+      }
+
+      public static final int SOFT_LIMIT_FIELD_NUMBER = 3;
+      private com.google.protobuf.Int64Value softLimit_;
+      /**
+       * <pre>
+       * Limit in bytes during certain time period.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public boolean hasSoftLimit() {
+        return softLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Limit in bytes during certain time period.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value getSoftLimit() {
+        return softLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : softLimit_;
+      }
+      /**
+       * <pre>
+       * Limit in bytes during certain time period.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSoftLimitOrBuilder() {
+        return getSoftLimit();
+      }
+
+      public static final int SOFT_SECONDS_FIELD_NUMBER = 5;
+      private com.google.protobuf.Int64Value softSeconds_;
+      /**
+       * <pre>
+       * Seconds for soft limit.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public boolean hasSoftSeconds() {
+        return softSeconds_ != null;
+      }
+      /**
+       * <pre>
+       * Seconds for soft limit.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value getSoftSeconds() {
+        return softSeconds_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : softSeconds_;
+      }
+      /**
+       * <pre>
+       * Seconds for soft limit.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSoftSecondsOrBuilder() {
+        return getSoftSeconds();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (hardLimit_ != null) {
+          output.writeMessage(1, getHardLimit());
+        }
+        if (softLimit_ != null) {
+          output.writeMessage(3, getSoftLimit());
+        }
+        if (softSeconds_ != null) {
+          output.writeMessage(5, getSoftSeconds());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (hardLimit_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getHardLimit());
+        }
+        if (softLimit_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getSoftLimit());
+        }
+        if (softSeconds_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, getSoftSeconds());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit other = (yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit) obj;
+
+        boolean result = true;
+        result = result && (hasHardLimit() == other.hasHardLimit());
+        if (hasHardLimit()) {
+          result = result && getHardLimit()
+              .equals(other.getHardLimit());
+        }
+        result = result && (hasSoftLimit() == other.hasSoftLimit());
+        if (hasSoftLimit()) {
+          result = result && getSoftLimit()
+              .equals(other.getSoftLimit());
+        }
+        result = result && (hasSoftSeconds() == other.hasSoftSeconds());
+        if (hasSoftSeconds()) {
+          result = result && getSoftSeconds()
+              .equals(other.getSoftSeconds());
+        }
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasHardLimit()) {
+          hash = (37 * hash) + HARD_LIMIT_FIELD_NUMBER;
+          hash = (53 * hash) + getHardLimit().hashCode();
+        }
+        if (hasSoftLimit()) {
+          hash = (37 * hash) + SOFT_LIMIT_FIELD_NUMBER;
+          hash = (53 * hash) + getSoftLimit().hashCode();
+        }
+        if (hasSoftSeconds()) {
+          hash = (37 * hash) + SOFT_SECONDS_FIELD_NUMBER;
+          hash = (53 * hash) + getSoftSeconds().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit)
+          yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimitOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.redis.v1.config.Redis50.internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig5_0_ClientOutputBufferLimit_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.redis.v1.config.Redis50.internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig5_0_ClientOutputBufferLimit_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.class, yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (hardLimitBuilder_ == null) {
+            hardLimit_ = null;
+          } else {
+            hardLimit_ = null;
+            hardLimitBuilder_ = null;
+          }
+          if (softLimitBuilder_ == null) {
+            softLimit_ = null;
+          } else {
+            softLimit_ = null;
+            softLimitBuilder_ = null;
+          }
+          if (softSecondsBuilder_ == null) {
+            softSeconds_ = null;
+          } else {
+            softSeconds_ = null;
+            softSecondsBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.redis.v1.config.Redis50.internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig5_0_ClientOutputBufferLimit_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit build() {
+          yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit buildPartial() {
+          yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit result = new yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit(this);
+          if (hardLimitBuilder_ == null) {
+            result.hardLimit_ = hardLimit_;
+          } else {
+            result.hardLimit_ = hardLimitBuilder_.build();
+          }
+          if (softLimitBuilder_ == null) {
+            result.softLimit_ = softLimit_;
+          } else {
+            result.softLimit_ = softLimitBuilder_.build();
+          }
+          if (softSecondsBuilder_ == null) {
+            result.softSeconds_ = softSeconds_;
+          } else {
+            result.softSeconds_ = softSecondsBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit) {
+            return mergeFrom((yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit other) {
+          if (other == yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.getDefaultInstance()) return this;
+          if (other.hasHardLimit()) {
+            mergeHardLimit(other.getHardLimit());
+          }
+          if (other.hasSoftLimit()) {
+            mergeSoftLimit(other.getSoftLimit());
+          }
+          if (other.hasSoftSeconds()) {
+            mergeSoftSeconds(other.getSoftSeconds());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private com.google.protobuf.Int64Value hardLimit_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> hardLimitBuilder_;
+        /**
+         * <pre>
+         * Total limit in bytes.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public boolean hasHardLimit() {
+          return hardLimitBuilder_ != null || hardLimit_ != null;
+        }
+        /**
+         * <pre>
+         * Total limit in bytes.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64Value getHardLimit() {
+          if (hardLimitBuilder_ == null) {
+            return hardLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : hardLimit_;
+          } else {
+            return hardLimitBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Total limit in bytes.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setHardLimit(com.google.protobuf.Int64Value value) {
+          if (hardLimitBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            hardLimit_ = value;
+            onChanged();
+          } else {
+            hardLimitBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Total limit in bytes.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setHardLimit(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (hardLimitBuilder_ == null) {
+            hardLimit_ = builderForValue.build();
+            onChanged();
+          } else {
+            hardLimitBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Total limit in bytes.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder mergeHardLimit(com.google.protobuf.Int64Value value) {
+          if (hardLimitBuilder_ == null) {
+            if (hardLimit_ != null) {
+              hardLimit_ =
+                com.google.protobuf.Int64Value.newBuilder(hardLimit_).mergeFrom(value).buildPartial();
+            } else {
+              hardLimit_ = value;
+            }
+            onChanged();
+          } else {
+            hardLimitBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Total limit in bytes.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder clearHardLimit() {
+          if (hardLimitBuilder_ == null) {
+            hardLimit_ = null;
+            onChanged();
+          } else {
+            hardLimit_ = null;
+            hardLimitBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Total limit in bytes.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getHardLimitBuilder() {
+          
+          onChanged();
+          return getHardLimitFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Total limit in bytes.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getHardLimitOrBuilder() {
+          if (hardLimitBuilder_ != null) {
+            return hardLimitBuilder_.getMessageOrBuilder();
+          } else {
+            return hardLimit_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : hardLimit_;
+          }
+        }
+        /**
+         * <pre>
+         * Total limit in bytes.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value hard_limit = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getHardLimitFieldBuilder() {
+          if (hardLimitBuilder_ == null) {
+            hardLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getHardLimit(),
+                    getParentForChildren(),
+                    isClean());
+            hardLimit_ = null;
+          }
+          return hardLimitBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value softLimit_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> softLimitBuilder_;
+        /**
+         * <pre>
+         * Limit in bytes during certain time period.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public boolean hasSoftLimit() {
+          return softLimitBuilder_ != null || softLimit_ != null;
+        }
+        /**
+         * <pre>
+         * Limit in bytes during certain time period.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64Value getSoftLimit() {
+          if (softLimitBuilder_ == null) {
+            return softLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : softLimit_;
+          } else {
+            return softLimitBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Limit in bytes during certain time period.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setSoftLimit(com.google.protobuf.Int64Value value) {
+          if (softLimitBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            softLimit_ = value;
+            onChanged();
+          } else {
+            softLimitBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Limit in bytes during certain time period.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setSoftLimit(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (softLimitBuilder_ == null) {
+            softLimit_ = builderForValue.build();
+            onChanged();
+          } else {
+            softLimitBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Limit in bytes during certain time period.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder mergeSoftLimit(com.google.protobuf.Int64Value value) {
+          if (softLimitBuilder_ == null) {
+            if (softLimit_ != null) {
+              softLimit_ =
+                com.google.protobuf.Int64Value.newBuilder(softLimit_).mergeFrom(value).buildPartial();
+            } else {
+              softLimit_ = value;
+            }
+            onChanged();
+          } else {
+            softLimitBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Limit in bytes during certain time period.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder clearSoftLimit() {
+          if (softLimitBuilder_ == null) {
+            softLimit_ = null;
+            onChanged();
+          } else {
+            softLimit_ = null;
+            softLimitBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Limit in bytes during certain time period.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getSoftLimitBuilder() {
+          
+          onChanged();
+          return getSoftLimitFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Limit in bytes during certain time period.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getSoftLimitOrBuilder() {
+          if (softLimitBuilder_ != null) {
+            return softLimitBuilder_.getMessageOrBuilder();
+          } else {
+            return softLimit_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : softLimit_;
+          }
+        }
+        /**
+         * <pre>
+         * Limit in bytes during certain time period.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value soft_limit = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getSoftLimitFieldBuilder() {
+          if (softLimitBuilder_ == null) {
+            softLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getSoftLimit(),
+                    getParentForChildren(),
+                    isClean());
+            softLimit_ = null;
+          }
+          return softLimitBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value softSeconds_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> softSecondsBuilder_;
+        /**
+         * <pre>
+         * Seconds for soft limit.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public boolean hasSoftSeconds() {
+          return softSecondsBuilder_ != null || softSeconds_ != null;
+        }
+        /**
+         * <pre>
+         * Seconds for soft limit.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64Value getSoftSeconds() {
+          if (softSecondsBuilder_ == null) {
+            return softSeconds_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : softSeconds_;
+          } else {
+            return softSecondsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Seconds for soft limit.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setSoftSeconds(com.google.protobuf.Int64Value value) {
+          if (softSecondsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            softSeconds_ = value;
+            onChanged();
+          } else {
+            softSecondsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Seconds for soft limit.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setSoftSeconds(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (softSecondsBuilder_ == null) {
+            softSeconds_ = builderForValue.build();
+            onChanged();
+          } else {
+            softSecondsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Seconds for soft limit.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder mergeSoftSeconds(com.google.protobuf.Int64Value value) {
+          if (softSecondsBuilder_ == null) {
+            if (softSeconds_ != null) {
+              softSeconds_ =
+                com.google.protobuf.Int64Value.newBuilder(softSeconds_).mergeFrom(value).buildPartial();
+            } else {
+              softSeconds_ = value;
+            }
+            onChanged();
+          } else {
+            softSecondsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Seconds for soft limit.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder clearSoftSeconds() {
+          if (softSecondsBuilder_ == null) {
+            softSeconds_ = null;
+            onChanged();
+          } else {
+            softSeconds_ = null;
+            softSecondsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Seconds for soft limit.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getSoftSecondsBuilder() {
+          
+          onChanged();
+          return getSoftSecondsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Seconds for soft limit.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getSoftSecondsOrBuilder() {
+          if (softSecondsBuilder_ != null) {
+            return softSecondsBuilder_.getMessageOrBuilder();
+          } else {
+            return softSeconds_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : softSeconds_;
+          }
+        }
+        /**
+         * <pre>
+         * Seconds for soft limit.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value soft_seconds = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getSoftSecondsFieldBuilder() {
+          if (softSecondsBuilder_ == null) {
+            softSecondsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getSoftSeconds(),
+                    getParentForChildren(),
+                    isClean());
+            softSeconds_ = null;
+          }
+          return softSecondsBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit)
+      private static final yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit();
+      }
+
+      public static yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<ClientOutputBufferLimit>
+          PARSER = new com.google.protobuf.AbstractParser<ClientOutputBufferLimit>() {
+        @java.lang.Override
+        public ClientOutputBufferLimit parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ClientOutputBufferLimit(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ClientOutputBufferLimit> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ClientOutputBufferLimit> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int MAXMEMORY_POLICY_FIELD_NUMBER = 1;
     private int maxmemoryPolicy_;
     /**
@@ -808,6 +2059,72 @@ public final class Redis50 {
       }
     }
 
+    public static final int CLIENT_OUTPUT_BUFFER_LIMIT_PUBSUB_FIELD_NUMBER = 8;
+    private yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit clientOutputBufferLimitPubsub_;
+    /**
+     * <pre>
+     * Redis connection output buffers limits for pubsub operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+     */
+    public boolean hasClientOutputBufferLimitPubsub() {
+      return clientOutputBufferLimitPubsub_ != null;
+    }
+    /**
+     * <pre>
+     * Redis connection output buffers limits for pubsub operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+     */
+    public yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit getClientOutputBufferLimitPubsub() {
+      return clientOutputBufferLimitPubsub_ == null ? yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.getDefaultInstance() : clientOutputBufferLimitPubsub_;
+    }
+    /**
+     * <pre>
+     * Redis connection output buffers limits for pubsub operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+     */
+    public yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimitOrBuilder getClientOutputBufferLimitPubsubOrBuilder() {
+      return getClientOutputBufferLimitPubsub();
+    }
+
+    public static final int CLIENT_OUTPUT_BUFFER_LIMIT_NORMAL_FIELD_NUMBER = 9;
+    private yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit clientOutputBufferLimitNormal_;
+    /**
+     * <pre>
+     * Redis connection output buffers limits for clients.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+     */
+    public boolean hasClientOutputBufferLimitNormal() {
+      return clientOutputBufferLimitNormal_ != null;
+    }
+    /**
+     * <pre>
+     * Redis connection output buffers limits for clients.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+     */
+    public yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit getClientOutputBufferLimitNormal() {
+      return clientOutputBufferLimitNormal_ == null ? yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.getDefaultInstance() : clientOutputBufferLimitNormal_;
+    }
+    /**
+     * <pre>
+     * Redis connection output buffers limits for clients.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+     */
+    public yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimitOrBuilder getClientOutputBufferLimitNormalOrBuilder() {
+      return getClientOutputBufferLimitNormal();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -843,6 +2160,12 @@ public final class Redis50 {
       if (!getNotifyKeyspaceEventsBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, notifyKeyspaceEvents_);
       }
+      if (clientOutputBufferLimitPubsub_ != null) {
+        output.writeMessage(8, getClientOutputBufferLimitPubsub());
+      }
+      if (clientOutputBufferLimitNormal_ != null) {
+        output.writeMessage(9, getClientOutputBufferLimitNormal());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -877,6 +2200,14 @@ public final class Redis50 {
       }
       if (!getNotifyKeyspaceEventsBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, notifyKeyspaceEvents_);
+      }
+      if (clientOutputBufferLimitPubsub_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getClientOutputBufferLimitPubsub());
+      }
+      if (clientOutputBufferLimitNormal_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getClientOutputBufferLimitNormal());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -919,6 +2250,16 @@ public final class Redis50 {
       }
       result = result && getNotifyKeyspaceEvents()
           .equals(other.getNotifyKeyspaceEvents());
+      result = result && (hasClientOutputBufferLimitPubsub() == other.hasClientOutputBufferLimitPubsub());
+      if (hasClientOutputBufferLimitPubsub()) {
+        result = result && getClientOutputBufferLimitPubsub()
+            .equals(other.getClientOutputBufferLimitPubsub());
+      }
+      result = result && (hasClientOutputBufferLimitNormal() == other.hasClientOutputBufferLimitNormal());
+      if (hasClientOutputBufferLimitNormal()) {
+        result = result && getClientOutputBufferLimitNormal()
+            .equals(other.getClientOutputBufferLimitNormal());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -952,6 +2293,14 @@ public final class Redis50 {
       }
       hash = (37 * hash) + NOTIFY_KEYSPACE_EVENTS_FIELD_NUMBER;
       hash = (53 * hash) + getNotifyKeyspaceEvents().hashCode();
+      if (hasClientOutputBufferLimitPubsub()) {
+        hash = (37 * hash) + CLIENT_OUTPUT_BUFFER_LIMIT_PUBSUB_FIELD_NUMBER;
+        hash = (53 * hash) + getClientOutputBufferLimitPubsub().hashCode();
+      }
+      if (hasClientOutputBufferLimitNormal()) {
+        hash = (37 * hash) + CLIENT_OUTPUT_BUFFER_LIMIT_NORMAL_FIELD_NUMBER;
+        hash = (53 * hash) + getClientOutputBufferLimitNormal().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1120,6 +2469,18 @@ public final class Redis50 {
         }
         notifyKeyspaceEvents_ = "";
 
+        if (clientOutputBufferLimitPubsubBuilder_ == null) {
+          clientOutputBufferLimitPubsub_ = null;
+        } else {
+          clientOutputBufferLimitPubsub_ = null;
+          clientOutputBufferLimitPubsubBuilder_ = null;
+        }
+        if (clientOutputBufferLimitNormalBuilder_ == null) {
+          clientOutputBufferLimitNormal_ = null;
+        } else {
+          clientOutputBufferLimitNormal_ = null;
+          clientOutputBufferLimitNormalBuilder_ = null;
+        }
         return this;
       }
 
@@ -1169,6 +2530,16 @@ public final class Redis50 {
           result.slowlogMaxLen_ = slowlogMaxLenBuilder_.build();
         }
         result.notifyKeyspaceEvents_ = notifyKeyspaceEvents_;
+        if (clientOutputBufferLimitPubsubBuilder_ == null) {
+          result.clientOutputBufferLimitPubsub_ = clientOutputBufferLimitPubsub_;
+        } else {
+          result.clientOutputBufferLimitPubsub_ = clientOutputBufferLimitPubsubBuilder_.build();
+        }
+        if (clientOutputBufferLimitNormalBuilder_ == null) {
+          result.clientOutputBufferLimitNormal_ = clientOutputBufferLimitNormal_;
+        } else {
+          result.clientOutputBufferLimitNormal_ = clientOutputBufferLimitNormalBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1239,6 +2610,12 @@ public final class Redis50 {
         if (!other.getNotifyKeyspaceEvents().isEmpty()) {
           notifyKeyspaceEvents_ = other.notifyKeyspaceEvents_;
           onChanged();
+        }
+        if (other.hasClientOutputBufferLimitPubsub()) {
+          mergeClientOutputBufferLimitPubsub(other.getClientOutputBufferLimitPubsub());
+        }
+        if (other.hasClientOutputBufferLimitNormal()) {
+          mergeClientOutputBufferLimitNormal(other.getClientOutputBufferLimitNormal());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2146,6 +3523,312 @@ public final class Redis50 {
         notifyKeyspaceEvents_ = value;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit clientOutputBufferLimitPubsub_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit, yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.Builder, yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimitOrBuilder> clientOutputBufferLimitPubsubBuilder_;
+      /**
+       * <pre>
+       * Redis connection output buffers limits for pubsub operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+       */
+      public boolean hasClientOutputBufferLimitPubsub() {
+        return clientOutputBufferLimitPubsubBuilder_ != null || clientOutputBufferLimitPubsub_ != null;
+      }
+      /**
+       * <pre>
+       * Redis connection output buffers limits for pubsub operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit getClientOutputBufferLimitPubsub() {
+        if (clientOutputBufferLimitPubsubBuilder_ == null) {
+          return clientOutputBufferLimitPubsub_ == null ? yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.getDefaultInstance() : clientOutputBufferLimitPubsub_;
+        } else {
+          return clientOutputBufferLimitPubsubBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Redis connection output buffers limits for pubsub operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+       */
+      public Builder setClientOutputBufferLimitPubsub(yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit value) {
+        if (clientOutputBufferLimitPubsubBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          clientOutputBufferLimitPubsub_ = value;
+          onChanged();
+        } else {
+          clientOutputBufferLimitPubsubBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Redis connection output buffers limits for pubsub operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+       */
+      public Builder setClientOutputBufferLimitPubsub(
+          yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.Builder builderForValue) {
+        if (clientOutputBufferLimitPubsubBuilder_ == null) {
+          clientOutputBufferLimitPubsub_ = builderForValue.build();
+          onChanged();
+        } else {
+          clientOutputBufferLimitPubsubBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Redis connection output buffers limits for pubsub operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+       */
+      public Builder mergeClientOutputBufferLimitPubsub(yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit value) {
+        if (clientOutputBufferLimitPubsubBuilder_ == null) {
+          if (clientOutputBufferLimitPubsub_ != null) {
+            clientOutputBufferLimitPubsub_ =
+              yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.newBuilder(clientOutputBufferLimitPubsub_).mergeFrom(value).buildPartial();
+          } else {
+            clientOutputBufferLimitPubsub_ = value;
+          }
+          onChanged();
+        } else {
+          clientOutputBufferLimitPubsubBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Redis connection output buffers limits for pubsub operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+       */
+      public Builder clearClientOutputBufferLimitPubsub() {
+        if (clientOutputBufferLimitPubsubBuilder_ == null) {
+          clientOutputBufferLimitPubsub_ = null;
+          onChanged();
+        } else {
+          clientOutputBufferLimitPubsub_ = null;
+          clientOutputBufferLimitPubsubBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Redis connection output buffers limits for pubsub operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.Builder getClientOutputBufferLimitPubsubBuilder() {
+        
+        onChanged();
+        return getClientOutputBufferLimitPubsubFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Redis connection output buffers limits for pubsub operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimitOrBuilder getClientOutputBufferLimitPubsubOrBuilder() {
+        if (clientOutputBufferLimitPubsubBuilder_ != null) {
+          return clientOutputBufferLimitPubsubBuilder_.getMessageOrBuilder();
+        } else {
+          return clientOutputBufferLimitPubsub_ == null ?
+              yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.getDefaultInstance() : clientOutputBufferLimitPubsub_;
+        }
+      }
+      /**
+       * <pre>
+       * Redis connection output buffers limits for pubsub operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_pubsub = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit, yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.Builder, yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimitOrBuilder> 
+          getClientOutputBufferLimitPubsubFieldBuilder() {
+        if (clientOutputBufferLimitPubsubBuilder_ == null) {
+          clientOutputBufferLimitPubsubBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit, yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.Builder, yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimitOrBuilder>(
+                  getClientOutputBufferLimitPubsub(),
+                  getParentForChildren(),
+                  isClean());
+          clientOutputBufferLimitPubsub_ = null;
+        }
+        return clientOutputBufferLimitPubsubBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit clientOutputBufferLimitNormal_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit, yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.Builder, yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimitOrBuilder> clientOutputBufferLimitNormalBuilder_;
+      /**
+       * <pre>
+       * Redis connection output buffers limits for clients.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+       */
+      public boolean hasClientOutputBufferLimitNormal() {
+        return clientOutputBufferLimitNormalBuilder_ != null || clientOutputBufferLimitNormal_ != null;
+      }
+      /**
+       * <pre>
+       * Redis connection output buffers limits for clients.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit getClientOutputBufferLimitNormal() {
+        if (clientOutputBufferLimitNormalBuilder_ == null) {
+          return clientOutputBufferLimitNormal_ == null ? yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.getDefaultInstance() : clientOutputBufferLimitNormal_;
+        } else {
+          return clientOutputBufferLimitNormalBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Redis connection output buffers limits for clients.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+       */
+      public Builder setClientOutputBufferLimitNormal(yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit value) {
+        if (clientOutputBufferLimitNormalBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          clientOutputBufferLimitNormal_ = value;
+          onChanged();
+        } else {
+          clientOutputBufferLimitNormalBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Redis connection output buffers limits for clients.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+       */
+      public Builder setClientOutputBufferLimitNormal(
+          yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.Builder builderForValue) {
+        if (clientOutputBufferLimitNormalBuilder_ == null) {
+          clientOutputBufferLimitNormal_ = builderForValue.build();
+          onChanged();
+        } else {
+          clientOutputBufferLimitNormalBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Redis connection output buffers limits for clients.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+       */
+      public Builder mergeClientOutputBufferLimitNormal(yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit value) {
+        if (clientOutputBufferLimitNormalBuilder_ == null) {
+          if (clientOutputBufferLimitNormal_ != null) {
+            clientOutputBufferLimitNormal_ =
+              yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.newBuilder(clientOutputBufferLimitNormal_).mergeFrom(value).buildPartial();
+          } else {
+            clientOutputBufferLimitNormal_ = value;
+          }
+          onChanged();
+        } else {
+          clientOutputBufferLimitNormalBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Redis connection output buffers limits for clients.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+       */
+      public Builder clearClientOutputBufferLimitNormal() {
+        if (clientOutputBufferLimitNormalBuilder_ == null) {
+          clientOutputBufferLimitNormal_ = null;
+          onChanged();
+        } else {
+          clientOutputBufferLimitNormal_ = null;
+          clientOutputBufferLimitNormalBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Redis connection output buffers limits for clients.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.Builder getClientOutputBufferLimitNormalBuilder() {
+        
+        onChanged();
+        return getClientOutputBufferLimitNormalFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Redis connection output buffers limits for clients.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimitOrBuilder getClientOutputBufferLimitNormalOrBuilder() {
+        if (clientOutputBufferLimitNormalBuilder_ != null) {
+          return clientOutputBufferLimitNormalBuilder_.getMessageOrBuilder();
+        } else {
+          return clientOutputBufferLimitNormal_ == null ?
+              yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.getDefaultInstance() : clientOutputBufferLimitNormal_;
+        }
+      }
+      /**
+       * <pre>
+       * Redis connection output buffers limits for clients.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig5_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit, yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.Builder, yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimitOrBuilder> 
+          getClientOutputBufferLimitNormalFieldBuilder() {
+        if (clientOutputBufferLimitNormalBuilder_ == null) {
+          clientOutputBufferLimitNormalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit, yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimit.Builder, yandex.cloud.api.mdb.redis.v1.config.Redis50.RedisConfig5_0.ClientOutputBufferLimitOrBuilder>(
+                  getClientOutputBufferLimitNormal(),
+                  getParentForChildren(),
+                  isClean());
+          clientOutputBufferLimitNormal_ = null;
+        }
+        return clientOutputBufferLimitNormalBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3396,6 +5079,11 @@ public final class Redis50 {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig5_0_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig5_0_ClientOutputBufferLimit_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig5_0_ClientOutputBufferLimit_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfigSet5_0_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -3412,7 +5100,7 @@ public final class Redis50 {
       "\n/yandex/cloud/mdb/redis/v1/config/redis" +
       "5_0.proto\022 yandex.cloud.mdb.redis.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\223\005\n\016RedisConf" +
+      "dex/cloud/validation.proto\"\311\010\n\016RedisConf" +
       "ig5_0\022Z\n\020maxmemory_policy\030\001 \001(\0162@.yandex" +
       ".cloud.mdb.redis.v1.config.RedisConfig5_" +
       "0.MaxmemoryPolicy\022,\n\007timeout\030\002 \001(\0132\033.goo" +
@@ -3424,21 +5112,32 @@ public final class Redis50 {
       "\007\372\3071\003>=0\022=\n\017slowlog_max_len\030\006 \001(\0132\033.goog" +
       "le.protobuf.Int64ValueB\007\372\3071\003>=0\0228\n\026notif" +
       "y_keyspace_events\030\007 \001(\tB\030\362\3071\024[KEg$lshzxe" +
-      "At]{0,12}\"\304\001\n\017MaxmemoryPolicy\022 \n\034MAXMEMO" +
-      "RY_POLICY_UNSPECIFIED\020\000\022\020\n\014VOLATILE_LRU\020" +
-      "\001\022\017\n\013ALLKEYS_LRU\020\002\022\020\n\014VOLATILE_LFU\020\003\022\017\n\013" +
-      "ALLKEYS_LFU\020\004\022\023\n\017VOLATILE_RANDOM\020\005\022\022\n\016AL" +
-      "LKEYS_RANDOM\020\006\022\020\n\014VOLATILE_TTL\020\007\022\016\n\nNOEV" +
-      "ICTION\020\010\"\360\001\n\021RedisConfigSet5_0\022J\n\020effect" +
-      "ive_config\030\001 \001(\01320.yandex.cloud.mdb.redi" +
-      "s.v1.config.RedisConfig5_0\022E\n\013user_confi" +
-      "g\030\002 \001(\01320.yandex.cloud.mdb.redis.v1.conf" +
-      "ig.RedisConfig5_0\022H\n\016default_config\030\003 \001(" +
-      "\01320.yandex.cloud.mdb.redis.v1.config.Red" +
-      "isConfig5_0Br\n$yandex.cloud.api.mdb.redi" +
-      "s.v1.configZJgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/mdb/redis/v1/confi" +
-      "g;redisb\006proto3"
+      "At]{0,12}\022s\n!client_output_buffer_limit_" +
+      "pubsub\030\010 \001(\0132H.yandex.cloud.mdb.redis.v1" +
+      ".config.RedisConfig5_0.ClientOutputBuffe" +
+      "rLimit\022s\n!client_output_buffer_limit_nor" +
+      "mal\030\t \001(\0132H.yandex.cloud.mdb.redis.v1.co" +
+      "nfig.RedisConfig5_0.ClientOutputBufferLi" +
+      "mit\032\311\001\n\027ClientOutputBufferLimit\0228\n\nhard_" +
+      "limit\030\001 \001(\0132\033.google.protobuf.Int64Value" +
+      "B\007\372\3071\003>=0\0228\n\nsoft_limit\030\003 \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\007\372\3071\003>=0\022:\n\014soft_seco" +
+      "nds\030\005 \001(\0132\033.google.protobuf.Int64ValueB\007" +
+      "\372\3071\003>=0\"\304\001\n\017MaxmemoryPolicy\022 \n\034MAXMEMORY" +
+      "_POLICY_UNSPECIFIED\020\000\022\020\n\014VOLATILE_LRU\020\001\022" +
+      "\017\n\013ALLKEYS_LRU\020\002\022\020\n\014VOLATILE_LFU\020\003\022\017\n\013AL" +
+      "LKEYS_LFU\020\004\022\023\n\017VOLATILE_RANDOM\020\005\022\022\n\016ALLK" +
+      "EYS_RANDOM\020\006\022\020\n\014VOLATILE_TTL\020\007\022\016\n\nNOEVIC" +
+      "TION\020\010\"\360\001\n\021RedisConfigSet5_0\022J\n\020effectiv" +
+      "e_config\030\001 \001(\01320.yandex.cloud.mdb.redis." +
+      "v1.config.RedisConfig5_0\022E\n\013user_config\030" +
+      "\002 \001(\01320.yandex.cloud.mdb.redis.v1.config" +
+      ".RedisConfig5_0\022H\n\016default_config\030\003 \001(\0132" +
+      "0.yandex.cloud.mdb.redis.v1.config.Redis" +
+      "Config5_0Br\n$yandex.cloud.api.mdb.redis." +
+      "v1.configZJgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/mdb/redis/v1/config;" +
+      "redisb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3459,7 +5158,13 @@ public final class Redis50 {
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig5_0_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig5_0_descriptor,
-        new java.lang.String[] { "MaxmemoryPolicy", "Timeout", "Password", "Databases", "SlowlogLogSlowerThan", "SlowlogMaxLen", "NotifyKeyspaceEvents", });
+        new java.lang.String[] { "MaxmemoryPolicy", "Timeout", "Password", "Databases", "SlowlogLogSlowerThan", "SlowlogMaxLen", "NotifyKeyspaceEvents", "ClientOutputBufferLimitPubsub", "ClientOutputBufferLimitNormal", });
+    internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig5_0_ClientOutputBufferLimit_descriptor =
+      internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig5_0_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig5_0_ClientOutputBufferLimit_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig5_0_ClientOutputBufferLimit_descriptor,
+        new java.lang.String[] { "HardLimit", "SoftLimit", "SoftSeconds", });
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfigSet5_0_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfigSet5_0_fieldAccessorTable = new

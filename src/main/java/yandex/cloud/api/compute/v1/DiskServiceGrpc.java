@@ -352,7 +352,7 @@ public final class DiskServiceGrpc {
 
     /**
      * <pre>
-     * Moves disk between folders.
+     * Moves the specified disk to another folder of the same cloud.
      * </pre>
      */
     public void move(yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest request,
@@ -510,7 +510,7 @@ public final class DiskServiceGrpc {
 
     /**
      * <pre>
-     * Moves disk between folders.
+     * Moves the specified disk to another folder of the same cloud.
      * </pre>
      */
     public void move(yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest request,
@@ -609,7 +609,7 @@ public final class DiskServiceGrpc {
 
     /**
      * <pre>
-     * Moves disk between folders.
+     * Moves the specified disk to another folder of the same cloud.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest request) {
@@ -713,7 +713,7 @@ public final class DiskServiceGrpc {
 
     /**
      * <pre>
-     * Moves disk between folders.
+     * Moves the specified disk to another folder of the same cloud.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> move(

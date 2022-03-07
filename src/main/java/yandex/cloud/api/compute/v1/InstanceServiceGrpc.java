@@ -862,7 +862,10 @@ public final class InstanceServiceGrpc {
 
     /**
      * <pre>
-     * Moves the specified instance between folders
+     * Moves the specified instance to another folder of the same cloud.
+     * The instance must be stopped before moving. To stop the instance, make a [Stop] request.
+     * After moving, the instance will start recording its Yandex Monitoring default metrics to its new folder. Metrics
+     * that have been recorded to the source folder prior to moving will be retained.
      * </pre>
      */
     public void move(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest request,
@@ -1242,7 +1245,10 @@ public final class InstanceServiceGrpc {
 
     /**
      * <pre>
-     * Moves the specified instance between folders
+     * Moves the specified instance to another folder of the same cloud.
+     * The instance must be stopped before moving. To stop the instance, make a [Stop] request.
+     * After moving, the instance will start recording its Yandex Monitoring default metrics to its new folder. Metrics
+     * that have been recorded to the source folder prior to moving will be retained.
      * </pre>
      */
     public void move(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest request,
@@ -1467,7 +1473,10 @@ public final class InstanceServiceGrpc {
 
     /**
      * <pre>
-     * Moves the specified instance between folders
+     * Moves the specified instance to another folder of the same cloud.
+     * The instance must be stopped before moving. To stop the instance, make a [Stop] request.
+     * After moving, the instance will start recording its Yandex Monitoring default metrics to its new folder. Metrics
+     * that have been recorded to the source folder prior to moving will be retained.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest request) {
@@ -1709,7 +1718,10 @@ public final class InstanceServiceGrpc {
 
     /**
      * <pre>
-     * Moves the specified instance between folders
+     * Moves the specified instance to another folder of the same cloud.
+     * The instance must be stopped before moving. To stop the instance, make a [Stop] request.
+     * After moving, the instance will start recording its Yandex Monitoring default metrics to its new folder. Metrics
+     * that have been recorded to the source folder prior to moving will be retained.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> move(

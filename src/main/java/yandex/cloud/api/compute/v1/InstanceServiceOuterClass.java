@@ -45690,7 +45690,8 @@ public final class InstanceServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the instance that is being moved.
+     * ID of the instance to move.
+     * To get the instance ID, make a [InstanceService.List] request.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -45698,7 +45699,8 @@ public final class InstanceServiceOuterClass {
     java.lang.String getInstanceId();
     /**
      * <pre>
-     * ID of the instance that is being moved.
+     * ID of the instance to move.
+     * To get the instance ID, make a [InstanceService.List] request.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -45708,7 +45710,8 @@ public final class InstanceServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the destination folder.
+     * ID of the folder to move the instance to.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -45716,7 +45719,8 @@ public final class InstanceServiceOuterClass {
     java.lang.String getDestinationFolderId();
     /**
      * <pre>
-     * ID of the destination folder.
+     * ID of the folder to move the instance to.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -45813,7 +45817,8 @@ public final class InstanceServiceOuterClass {
     private volatile java.lang.Object instanceId_;
     /**
      * <pre>
-     * ID of the instance that is being moved.
+     * ID of the instance to move.
+     * To get the instance ID, make a [InstanceService.List] request.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -45832,7 +45837,8 @@ public final class InstanceServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the instance that is being moved.
+     * ID of the instance to move.
+     * To get the instance ID, make a [InstanceService.List] request.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -45855,7 +45861,8 @@ public final class InstanceServiceOuterClass {
     private volatile java.lang.Object destinationFolderId_;
     /**
      * <pre>
-     * ID of the destination folder.
+     * ID of the folder to move the instance to.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -45874,7 +45881,8 @@ public final class InstanceServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the destination folder.
+     * ID of the folder to move the instance to.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -46216,7 +46224,8 @@ public final class InstanceServiceOuterClass {
       private java.lang.Object instanceId_ = "";
       /**
        * <pre>
-       * ID of the instance that is being moved.
+       * ID of the instance to move.
+       * To get the instance ID, make a [InstanceService.List] request.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -46235,7 +46244,8 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the instance that is being moved.
+       * ID of the instance to move.
+       * To get the instance ID, make a [InstanceService.List] request.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -46255,7 +46265,8 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the instance that is being moved.
+       * ID of the instance to move.
+       * To get the instance ID, make a [InstanceService.List] request.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -46272,7 +46283,8 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the instance that is being moved.
+       * ID of the instance to move.
+       * To get the instance ID, make a [InstanceService.List] request.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -46285,7 +46297,8 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the instance that is being moved.
+       * ID of the instance to move.
+       * To get the instance ID, make a [InstanceService.List] request.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -46305,7 +46318,8 @@ public final class InstanceServiceOuterClass {
       private java.lang.Object destinationFolderId_ = "";
       /**
        * <pre>
-       * ID of the destination folder.
+       * ID of the folder to move the instance to.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -46324,7 +46338,8 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the destination folder.
+       * ID of the folder to move the instance to.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -46344,7 +46359,8 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the destination folder.
+       * ID of the folder to move the instance to.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -46361,7 +46377,8 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the destination folder.
+       * ID of the folder to move the instance to.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -46374,7 +46391,8 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the destination folder.
+       * ID of the folder to move the instance to.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -46467,7 +46485,7 @@ public final class InstanceServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the source folder.
+     * ID of the folder that the instance is being moved from.
      * </pre>
      *
      * <code>string source_folder_id = 2;</code>
@@ -46475,7 +46493,7 @@ public final class InstanceServiceOuterClass {
     java.lang.String getSourceFolderId();
     /**
      * <pre>
-     * ID of the source folder.
+     * ID of the folder that the instance is being moved from.
      * </pre>
      *
      * <code>string source_folder_id = 2;</code>
@@ -46485,7 +46503,7 @@ public final class InstanceServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the destination folder.
+     * ID of the folder that the instance is being moved to.
      * </pre>
      *
      * <code>string destination_folder_id = 3;</code>
@@ -46493,7 +46511,7 @@ public final class InstanceServiceOuterClass {
     java.lang.String getDestinationFolderId();
     /**
      * <pre>
-     * ID of the destination folder.
+     * ID of the folder that the instance is being moved to.
      * </pre>
      *
      * <code>string destination_folder_id = 3;</code>
@@ -46639,7 +46657,7 @@ public final class InstanceServiceOuterClass {
     private volatile java.lang.Object sourceFolderId_;
     /**
      * <pre>
-     * ID of the source folder.
+     * ID of the folder that the instance is being moved from.
      * </pre>
      *
      * <code>string source_folder_id = 2;</code>
@@ -46658,7 +46676,7 @@ public final class InstanceServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the source folder.
+     * ID of the folder that the instance is being moved from.
      * </pre>
      *
      * <code>string source_folder_id = 2;</code>
@@ -46681,7 +46699,7 @@ public final class InstanceServiceOuterClass {
     private volatile java.lang.Object destinationFolderId_;
     /**
      * <pre>
-     * ID of the destination folder.
+     * ID of the folder that the instance is being moved to.
      * </pre>
      *
      * <code>string destination_folder_id = 3;</code>
@@ -46700,7 +46718,7 @@ public final class InstanceServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the destination folder.
+     * ID of the folder that the instance is being moved to.
      * </pre>
      *
      * <code>string destination_folder_id = 3;</code>
@@ -47148,7 +47166,7 @@ public final class InstanceServiceOuterClass {
       private java.lang.Object sourceFolderId_ = "";
       /**
        * <pre>
-       * ID of the source folder.
+       * ID of the folder that the instance is being moved from.
        * </pre>
        *
        * <code>string source_folder_id = 2;</code>
@@ -47167,7 +47185,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the source folder.
+       * ID of the folder that the instance is being moved from.
        * </pre>
        *
        * <code>string source_folder_id = 2;</code>
@@ -47187,7 +47205,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the source folder.
+       * ID of the folder that the instance is being moved from.
        * </pre>
        *
        * <code>string source_folder_id = 2;</code>
@@ -47204,7 +47222,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the source folder.
+       * ID of the folder that the instance is being moved from.
        * </pre>
        *
        * <code>string source_folder_id = 2;</code>
@@ -47217,7 +47235,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the source folder.
+       * ID of the folder that the instance is being moved from.
        * </pre>
        *
        * <code>string source_folder_id = 2;</code>
@@ -47237,7 +47255,7 @@ public final class InstanceServiceOuterClass {
       private java.lang.Object destinationFolderId_ = "";
       /**
        * <pre>
-       * ID of the destination folder.
+       * ID of the folder that the instance is being moved to.
        * </pre>
        *
        * <code>string destination_folder_id = 3;</code>
@@ -47256,7 +47274,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the destination folder.
+       * ID of the folder that the instance is being moved to.
        * </pre>
        *
        * <code>string destination_folder_id = 3;</code>
@@ -47276,7 +47294,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the destination folder.
+       * ID of the folder that the instance is being moved to.
        * </pre>
        *
        * <code>string destination_folder_id = 3;</code>
@@ -47293,7 +47311,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the destination folder.
+       * ID of the folder that the instance is being moved to.
        * </pre>
        *
        * <code>string destination_folder_id = 3;</code>
@@ -47306,7 +47324,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the destination folder.
+       * ID of the folder that the instance is being moved to.
        * </pre>
        *
        * <code>string destination_folder_id = 3;</code>

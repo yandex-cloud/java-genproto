@@ -11635,7 +11635,8 @@ public final class DiskServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the disk that is being moved.
+     * ID of the disk to move.
+     * To get the disk ID, make a [DiskService.List] request.
      * </pre>
      *
      * <code>string disk_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11643,7 +11644,8 @@ public final class DiskServiceOuterClass {
     java.lang.String getDiskId();
     /**
      * <pre>
-     * ID of the disk that is being moved.
+     * ID of the disk to move.
+     * To get the disk ID, make a [DiskService.List] request.
      * </pre>
      *
      * <code>string disk_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11653,7 +11655,8 @@ public final class DiskServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the destination folder.
+     * ID of the folder to move the disk to.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11661,7 +11664,8 @@ public final class DiskServiceOuterClass {
     java.lang.String getDestinationFolderId();
     /**
      * <pre>
-     * ID of the destination folder.
+     * ID of the folder to move the disk to.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11758,7 +11762,8 @@ public final class DiskServiceOuterClass {
     private volatile java.lang.Object diskId_;
     /**
      * <pre>
-     * ID of the disk that is being moved.
+     * ID of the disk to move.
+     * To get the disk ID, make a [DiskService.List] request.
      * </pre>
      *
      * <code>string disk_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11777,7 +11782,8 @@ public final class DiskServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the disk that is being moved.
+     * ID of the disk to move.
+     * To get the disk ID, make a [DiskService.List] request.
      * </pre>
      *
      * <code>string disk_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11800,7 +11806,8 @@ public final class DiskServiceOuterClass {
     private volatile java.lang.Object destinationFolderId_;
     /**
      * <pre>
-     * ID of the destination folder.
+     * ID of the folder to move the disk to.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11819,7 +11826,8 @@ public final class DiskServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the destination folder.
+     * ID of the folder to move the disk to.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12161,7 +12169,8 @@ public final class DiskServiceOuterClass {
       private java.lang.Object diskId_ = "";
       /**
        * <pre>
-       * ID of the disk that is being moved.
+       * ID of the disk to move.
+       * To get the disk ID, make a [DiskService.List] request.
        * </pre>
        *
        * <code>string disk_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12180,7 +12189,8 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the disk that is being moved.
+       * ID of the disk to move.
+       * To get the disk ID, make a [DiskService.List] request.
        * </pre>
        *
        * <code>string disk_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12200,7 +12210,8 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the disk that is being moved.
+       * ID of the disk to move.
+       * To get the disk ID, make a [DiskService.List] request.
        * </pre>
        *
        * <code>string disk_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12217,7 +12228,8 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the disk that is being moved.
+       * ID of the disk to move.
+       * To get the disk ID, make a [DiskService.List] request.
        * </pre>
        *
        * <code>string disk_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12230,7 +12242,8 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the disk that is being moved.
+       * ID of the disk to move.
+       * To get the disk ID, make a [DiskService.List] request.
        * </pre>
        *
        * <code>string disk_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12250,7 +12263,8 @@ public final class DiskServiceOuterClass {
       private java.lang.Object destinationFolderId_ = "";
       /**
        * <pre>
-       * ID of the destination folder.
+       * ID of the folder to move the disk to.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12269,7 +12283,8 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the destination folder.
+       * ID of the folder to move the disk to.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12289,7 +12304,8 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the destination folder.
+       * ID of the folder to move the disk to.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12306,7 +12322,8 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the destination folder.
+       * ID of the folder to move the disk to.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12319,7 +12336,8 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the destination folder.
+       * ID of the folder to move the disk to.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12412,7 +12430,7 @@ public final class DiskServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the source folder.
+     * ID of the folder that the disk is being moved from.
      * </pre>
      *
      * <code>string source_folder_id = 2;</code>
@@ -12420,7 +12438,7 @@ public final class DiskServiceOuterClass {
     java.lang.String getSourceFolderId();
     /**
      * <pre>
-     * ID of the source folder.
+     * ID of the folder that the disk is being moved from.
      * </pre>
      *
      * <code>string source_folder_id = 2;</code>
@@ -12430,7 +12448,7 @@ public final class DiskServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the destination folder.
+     * ID of the folder that the disk is being moved to.
      * </pre>
      *
      * <code>string destination_folder_id = 3;</code>
@@ -12438,7 +12456,7 @@ public final class DiskServiceOuterClass {
     java.lang.String getDestinationFolderId();
     /**
      * <pre>
-     * ID of the destination folder.
+     * ID of the folder that the disk is being moved to.
      * </pre>
      *
      * <code>string destination_folder_id = 3;</code>
@@ -12584,7 +12602,7 @@ public final class DiskServiceOuterClass {
     private volatile java.lang.Object sourceFolderId_;
     /**
      * <pre>
-     * ID of the source folder.
+     * ID of the folder that the disk is being moved from.
      * </pre>
      *
      * <code>string source_folder_id = 2;</code>
@@ -12603,7 +12621,7 @@ public final class DiskServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the source folder.
+     * ID of the folder that the disk is being moved from.
      * </pre>
      *
      * <code>string source_folder_id = 2;</code>
@@ -12626,7 +12644,7 @@ public final class DiskServiceOuterClass {
     private volatile java.lang.Object destinationFolderId_;
     /**
      * <pre>
-     * ID of the destination folder.
+     * ID of the folder that the disk is being moved to.
      * </pre>
      *
      * <code>string destination_folder_id = 3;</code>
@@ -12645,7 +12663,7 @@ public final class DiskServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the destination folder.
+     * ID of the folder that the disk is being moved to.
      * </pre>
      *
      * <code>string destination_folder_id = 3;</code>
@@ -13093,7 +13111,7 @@ public final class DiskServiceOuterClass {
       private java.lang.Object sourceFolderId_ = "";
       /**
        * <pre>
-       * ID of the source folder.
+       * ID of the folder that the disk is being moved from.
        * </pre>
        *
        * <code>string source_folder_id = 2;</code>
@@ -13112,7 +13130,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the source folder.
+       * ID of the folder that the disk is being moved from.
        * </pre>
        *
        * <code>string source_folder_id = 2;</code>
@@ -13132,7 +13150,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the source folder.
+       * ID of the folder that the disk is being moved from.
        * </pre>
        *
        * <code>string source_folder_id = 2;</code>
@@ -13149,7 +13167,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the source folder.
+       * ID of the folder that the disk is being moved from.
        * </pre>
        *
        * <code>string source_folder_id = 2;</code>
@@ -13162,7 +13180,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the source folder.
+       * ID of the folder that the disk is being moved from.
        * </pre>
        *
        * <code>string source_folder_id = 2;</code>
@@ -13182,7 +13200,7 @@ public final class DiskServiceOuterClass {
       private java.lang.Object destinationFolderId_ = "";
       /**
        * <pre>
-       * ID of the destination folder.
+       * ID of the folder that the disk is being moved to.
        * </pre>
        *
        * <code>string destination_folder_id = 3;</code>
@@ -13201,7 +13219,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the destination folder.
+       * ID of the folder that the disk is being moved to.
        * </pre>
        *
        * <code>string destination_folder_id = 3;</code>
@@ -13221,7 +13239,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the destination folder.
+       * ID of the folder that the disk is being moved to.
        * </pre>
        *
        * <code>string destination_folder_id = 3;</code>
@@ -13238,7 +13256,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the destination folder.
+       * ID of the folder that the disk is being moved to.
        * </pre>
        *
        * <code>string destination_folder_id = 3;</code>
@@ -13251,7 +13269,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the destination folder.
+       * ID of the folder that the disk is being moved to.
        * </pre>
        *
        * <code>string destination_folder_id = 3;</code>
