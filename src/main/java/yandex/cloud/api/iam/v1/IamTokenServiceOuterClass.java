@@ -20,7 +20,7 @@ public final class IamTokenServiceOuterClass {
 
     /**
      * <pre>
-     * OAuth token for a Yandex.Passport account.
+     * OAuth token for a Yandex account.
      * For more information, see [OAuth token](/docs/iam/concepts/authorization/oauth-token).
      * </pre>
      *
@@ -29,7 +29,7 @@ public final class IamTokenServiceOuterClass {
     java.lang.String getYandexPassportOauthToken();
     /**
      * <pre>
-     * OAuth token for a Yandex.Passport account.
+     * OAuth token for a Yandex account.
      * For more information, see [OAuth token](/docs/iam/concepts/authorization/oauth-token).
      * </pre>
      *
@@ -184,7 +184,7 @@ public final class IamTokenServiceOuterClass {
     public static final int YANDEX_PASSPORT_OAUTH_TOKEN_FIELD_NUMBER = 1;
     /**
      * <pre>
-     * OAuth token for a Yandex.Passport account.
+     * OAuth token for a Yandex account.
      * For more information, see [OAuth token](/docs/iam/concepts/authorization/oauth-token).
      * </pre>
      *
@@ -209,7 +209,7 @@ public final class IamTokenServiceOuterClass {
     }
     /**
      * <pre>
-     * OAuth token for a Yandex.Passport account.
+     * OAuth token for a Yandex account.
      * For more information, see [OAuth token](/docs/iam/concepts/authorization/oauth-token).
      * </pre>
      *
@@ -655,7 +655,7 @@ public final class IamTokenServiceOuterClass {
 
       /**
        * <pre>
-       * OAuth token for a Yandex.Passport account.
+       * OAuth token for a Yandex account.
        * For more information, see [OAuth token](/docs/iam/concepts/authorization/oauth-token).
        * </pre>
        *
@@ -680,7 +680,7 @@ public final class IamTokenServiceOuterClass {
       }
       /**
        * <pre>
-       * OAuth token for a Yandex.Passport account.
+       * OAuth token for a Yandex account.
        * For more information, see [OAuth token](/docs/iam/concepts/authorization/oauth-token).
        * </pre>
        *
@@ -706,7 +706,7 @@ public final class IamTokenServiceOuterClass {
       }
       /**
        * <pre>
-       * OAuth token for a Yandex.Passport account.
+       * OAuth token for a Yandex account.
        * For more information, see [OAuth token](/docs/iam/concepts/authorization/oauth-token).
        * </pre>
        *
@@ -724,7 +724,7 @@ public final class IamTokenServiceOuterClass {
       }
       /**
        * <pre>
-       * OAuth token for a Yandex.Passport account.
+       * OAuth token for a Yandex account.
        * For more information, see [OAuth token](/docs/iam/concepts/authorization/oauth-token).
        * </pre>
        *
@@ -740,7 +740,7 @@ public final class IamTokenServiceOuterClass {
       }
       /**
        * <pre>
-       * OAuth token for a Yandex.Passport account.
+       * OAuth token for a Yandex account.
        * For more information, see [OAuth token](/docs/iam/concepts/authorization/oauth-token).
        * </pre>
        *

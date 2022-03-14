@@ -14941,6 +14941,1933 @@ public final class ClusterServiceOuterClass {
 
   }
 
+  public interface UpdateClusterHostsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.redis.v1.UpdateClusterHostsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Redis cluster to update hosts in.
+     * To get the Redis cluster ID, use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the Redis cluster to update hosts in.
+     * To get the Redis cluster ID, use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * New configurations to apply to hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    java.util.List<yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec> 
+        getUpdateHostSpecsList();
+    /**
+     * <pre>
+     * New configurations to apply to hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec getUpdateHostSpecs(int index);
+    /**
+     * <pre>
+     * New configurations to apply to hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    int getUpdateHostSpecsCount();
+    /**
+     * <pre>
+     * New configurations to apply to hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    java.util.List<? extends yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpecOrBuilder> 
+        getUpdateHostSpecsOrBuilderList();
+    /**
+     * <pre>
+     * New configurations to apply to hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpecOrBuilder getUpdateHostSpecsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.redis.v1.UpdateClusterHostsRequest}
+   */
+  public  static final class UpdateClusterHostsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.redis.v1.UpdateClusterHostsRequest)
+      UpdateClusterHostsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateClusterHostsRequest.newBuilder() to construct.
+    private UpdateClusterHostsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateClusterHostsRequest() {
+      clusterId_ = "";
+      updateHostSpecs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateClusterHostsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                updateHostSpecs_ = new java.util.ArrayList<yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              updateHostSpecs_.add(
+                  input.readMessage(yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          updateHostSpecs_ = java.util.Collections.unmodifiableList(updateHostSpecs_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_UpdateClusterHostsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_UpdateClusterHostsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest.class, yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the Redis cluster to update hosts in.
+     * To get the Redis cluster ID, use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Redis cluster to update hosts in.
+     * To get the Redis cluster ID, use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPDATE_HOST_SPECS_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec> updateHostSpecs_;
+    /**
+     * <pre>
+     * New configurations to apply to hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    public java.util.List<yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec> getUpdateHostSpecsList() {
+      return updateHostSpecs_;
+    }
+    /**
+     * <pre>
+     * New configurations to apply to hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpecOrBuilder> 
+        getUpdateHostSpecsOrBuilderList() {
+      return updateHostSpecs_;
+    }
+    /**
+     * <pre>
+     * New configurations to apply to hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    public int getUpdateHostSpecsCount() {
+      return updateHostSpecs_.size();
+    }
+    /**
+     * <pre>
+     * New configurations to apply to hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec getUpdateHostSpecs(int index) {
+      return updateHostSpecs_.get(index);
+    }
+    /**
+     * <pre>
+     * New configurations to apply to hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpecOrBuilder getUpdateHostSpecsOrBuilder(
+        int index) {
+      return updateHostSpecs_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      for (int i = 0; i < updateHostSpecs_.size(); i++) {
+        output.writeMessage(2, updateHostSpecs_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      for (int i = 0; i < updateHostSpecs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, updateHostSpecs_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest other = (yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && getUpdateHostSpecsList()
+          .equals(other.getUpdateHostSpecsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      if (getUpdateHostSpecsCount() > 0) {
+        hash = (37 * hash) + UPDATE_HOST_SPECS_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdateHostSpecsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.redis.v1.UpdateClusterHostsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.redis.v1.UpdateClusterHostsRequest)
+        yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_UpdateClusterHostsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_UpdateClusterHostsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest.class, yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getUpdateHostSpecsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        if (updateHostSpecsBuilder_ == null) {
+          updateHostSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          updateHostSpecsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_UpdateClusterHostsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest build() {
+        yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest buildPartial() {
+        yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest result = new yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.clusterId_ = clusterId_;
+        if (updateHostSpecsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            updateHostSpecs_ = java.util.Collections.unmodifiableList(updateHostSpecs_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.updateHostSpecs_ = updateHostSpecs_;
+        } else {
+          result.updateHostSpecs_ = updateHostSpecsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest other) {
+        if (other == yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (updateHostSpecsBuilder_ == null) {
+          if (!other.updateHostSpecs_.isEmpty()) {
+            if (updateHostSpecs_.isEmpty()) {
+              updateHostSpecs_ = other.updateHostSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureUpdateHostSpecsIsMutable();
+              updateHostSpecs_.addAll(other.updateHostSpecs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.updateHostSpecs_.isEmpty()) {
+            if (updateHostSpecsBuilder_.isEmpty()) {
+              updateHostSpecsBuilder_.dispose();
+              updateHostSpecsBuilder_ = null;
+              updateHostSpecs_ = other.updateHostSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              updateHostSpecsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUpdateHostSpecsFieldBuilder() : null;
+            } else {
+              updateHostSpecsBuilder_.addAllMessages(other.updateHostSpecs_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the Redis cluster to update hosts in.
+       * To get the Redis cluster ID, use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Redis cluster to update hosts in.
+       * To get the Redis cluster ID, use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Redis cluster to update hosts in.
+       * To get the Redis cluster ID, use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Redis cluster to update hosts in.
+       * To get the Redis cluster ID, use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Redis cluster to update hosts in.
+       * To get the Redis cluster ID, use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec> updateHostSpecs_ =
+        java.util.Collections.emptyList();
+      private void ensureUpdateHostSpecsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          updateHostSpecs_ = new java.util.ArrayList<yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec>(updateHostSpecs_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec, yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec.Builder, yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpecOrBuilder> updateHostSpecsBuilder_;
+
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec> getUpdateHostSpecsList() {
+        if (updateHostSpecsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(updateHostSpecs_);
+        } else {
+          return updateHostSpecsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public int getUpdateHostSpecsCount() {
+        if (updateHostSpecsBuilder_ == null) {
+          return updateHostSpecs_.size();
+        } else {
+          return updateHostSpecsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec getUpdateHostSpecs(int index) {
+        if (updateHostSpecsBuilder_ == null) {
+          return updateHostSpecs_.get(index);
+        } else {
+          return updateHostSpecsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder setUpdateHostSpecs(
+          int index, yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec value) {
+        if (updateHostSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUpdateHostSpecsIsMutable();
+          updateHostSpecs_.set(index, value);
+          onChanged();
+        } else {
+          updateHostSpecsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder setUpdateHostSpecs(
+          int index, yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec.Builder builderForValue) {
+        if (updateHostSpecsBuilder_ == null) {
+          ensureUpdateHostSpecsIsMutable();
+          updateHostSpecs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          updateHostSpecsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder addUpdateHostSpecs(yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec value) {
+        if (updateHostSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUpdateHostSpecsIsMutable();
+          updateHostSpecs_.add(value);
+          onChanged();
+        } else {
+          updateHostSpecsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder addUpdateHostSpecs(
+          int index, yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec value) {
+        if (updateHostSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUpdateHostSpecsIsMutable();
+          updateHostSpecs_.add(index, value);
+          onChanged();
+        } else {
+          updateHostSpecsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder addUpdateHostSpecs(
+          yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec.Builder builderForValue) {
+        if (updateHostSpecsBuilder_ == null) {
+          ensureUpdateHostSpecsIsMutable();
+          updateHostSpecs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          updateHostSpecsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder addUpdateHostSpecs(
+          int index, yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec.Builder builderForValue) {
+        if (updateHostSpecsBuilder_ == null) {
+          ensureUpdateHostSpecsIsMutable();
+          updateHostSpecs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          updateHostSpecsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder addAllUpdateHostSpecs(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec> values) {
+        if (updateHostSpecsBuilder_ == null) {
+          ensureUpdateHostSpecsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, updateHostSpecs_);
+          onChanged();
+        } else {
+          updateHostSpecsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder clearUpdateHostSpecs() {
+        if (updateHostSpecsBuilder_ == null) {
+          updateHostSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          updateHostSpecsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder removeUpdateHostSpecs(int index) {
+        if (updateHostSpecsBuilder_ == null) {
+          ensureUpdateHostSpecsIsMutable();
+          updateHostSpecs_.remove(index);
+          onChanged();
+        } else {
+          updateHostSpecsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec.Builder getUpdateHostSpecsBuilder(
+          int index) {
+        return getUpdateHostSpecsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpecOrBuilder getUpdateHostSpecsOrBuilder(
+          int index) {
+        if (updateHostSpecsBuilder_ == null) {
+          return updateHostSpecs_.get(index);  } else {
+          return updateHostSpecsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpecOrBuilder> 
+           getUpdateHostSpecsOrBuilderList() {
+        if (updateHostSpecsBuilder_ != null) {
+          return updateHostSpecsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(updateHostSpecs_);
+        }
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec.Builder addUpdateHostSpecsBuilder() {
+        return getUpdateHostSpecsFieldBuilder().addBuilder(
+            yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec.Builder addUpdateHostSpecsBuilder(
+          int index) {
+        return getUpdateHostSpecsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.redis.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec.Builder> 
+           getUpdateHostSpecsBuilderList() {
+        return getUpdateHostSpecsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec, yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec.Builder, yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpecOrBuilder> 
+          getUpdateHostSpecsFieldBuilder() {
+        if (updateHostSpecsBuilder_ == null) {
+          updateHostSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec, yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec.Builder, yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpecOrBuilder>(
+                  updateHostSpecs_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          updateHostSpecs_ = null;
+        }
+        return updateHostSpecsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.redis.v1.UpdateClusterHostsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.redis.v1.UpdateClusterHostsRequest)
+    private static final yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest();
+    }
+
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateClusterHostsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateClusterHostsRequest>() {
+      @java.lang.Override
+      public UpdateClusterHostsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateClusterHostsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateClusterHostsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateClusterHostsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateClusterHostsMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.redis.v1.UpdateClusterHostsMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Redis cluster to update hosts in.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the Redis cluster to update hosts in.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Names of hosts that are being updated.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    java.util.List<java.lang.String>
+        getHostNamesList();
+    /**
+     * <pre>
+     * Names of hosts that are being updated.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    int getHostNamesCount();
+    /**
+     * <pre>
+     * Names of hosts that are being updated.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    java.lang.String getHostNames(int index);
+    /**
+     * <pre>
+     * Names of hosts that are being updated.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getHostNamesBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.redis.v1.UpdateClusterHostsMetadata}
+   */
+  public  static final class UpdateClusterHostsMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.redis.v1.UpdateClusterHostsMetadata)
+      UpdateClusterHostsMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateClusterHostsMetadata.newBuilder() to construct.
+    private UpdateClusterHostsMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateClusterHostsMetadata() {
+      clusterId_ = "";
+      hostNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateClusterHostsMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                hostNames_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              hostNames_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          hostNames_ = hostNames_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_UpdateClusterHostsMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_UpdateClusterHostsMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata.class, yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the Redis cluster to update hosts in.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Redis cluster to update hosts in.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HOST_NAMES_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList hostNames_;
+    /**
+     * <pre>
+     * Names of hosts that are being updated.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getHostNamesList() {
+      return hostNames_;
+    }
+    /**
+     * <pre>
+     * Names of hosts that are being updated.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    public int getHostNamesCount() {
+      return hostNames_.size();
+    }
+    /**
+     * <pre>
+     * Names of hosts that are being updated.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    public java.lang.String getHostNames(int index) {
+      return hostNames_.get(index);
+    }
+    /**
+     * <pre>
+     * Names of hosts that are being updated.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getHostNamesBytes(int index) {
+      return hostNames_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      for (int i = 0; i < hostNames_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, hostNames_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < hostNames_.size(); i++) {
+          dataSize += computeStringSizeNoTag(hostNames_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getHostNamesList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata other = (yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && getHostNamesList()
+          .equals(other.getHostNamesList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      if (getHostNamesCount() > 0) {
+        hash = (37 * hash) + HOST_NAMES_FIELD_NUMBER;
+        hash = (53 * hash) + getHostNamesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.redis.v1.UpdateClusterHostsMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.redis.v1.UpdateClusterHostsMetadata)
+        yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_UpdateClusterHostsMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_UpdateClusterHostsMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata.class, yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        hostNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_UpdateClusterHostsMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata build() {
+        yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata buildPartial() {
+        yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata result = new yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.clusterId_ = clusterId_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          hostNames_ = hostNames_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.hostNames_ = hostNames_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata) {
+          return mergeFrom((yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata other) {
+        if (other == yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.hostNames_.isEmpty()) {
+          if (hostNames_.isEmpty()) {
+            hostNames_ = other.hostNames_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureHostNamesIsMutable();
+            hostNames_.addAll(other.hostNames_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the Redis cluster to update hosts in.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Redis cluster to update hosts in.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Redis cluster to update hosts in.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Redis cluster to update hosts in.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Redis cluster to update hosts in.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList hostNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureHostNamesIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          hostNames_ = new com.google.protobuf.LazyStringArrayList(hostNames_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * Names of hosts that are being updated.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getHostNamesList() {
+        return hostNames_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Names of hosts that are being updated.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public int getHostNamesCount() {
+        return hostNames_.size();
+      }
+      /**
+       * <pre>
+       * Names of hosts that are being updated.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public java.lang.String getHostNames(int index) {
+        return hostNames_.get(index);
+      }
+      /**
+       * <pre>
+       * Names of hosts that are being updated.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getHostNamesBytes(int index) {
+        return hostNames_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Names of hosts that are being updated.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public Builder setHostNames(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostNamesIsMutable();
+        hostNames_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Names of hosts that are being updated.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public Builder addHostNames(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostNamesIsMutable();
+        hostNames_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Names of hosts that are being updated.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public Builder addAllHostNames(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureHostNamesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, hostNames_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Names of hosts that are being updated.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public Builder clearHostNames() {
+        hostNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Names of hosts that are being updated.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public Builder addHostNamesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureHostNamesIsMutable();
+        hostNames_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.redis.v1.UpdateClusterHostsMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.redis.v1.UpdateClusterHostsMetadata)
+    private static final yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata();
+    }
+
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateClusterHostsMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateClusterHostsMetadata>() {
+      @java.lang.Override
+      public UpdateClusterHostsMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateClusterHostsMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateClusterHostsMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateClusterHostsMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateClusterHostsMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface BackupClusterRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.redis.v1.BackupClusterRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -47663,6 +49590,1223 @@ public final class ClusterServiceOuterClass {
 
   }
 
+  public interface UpdateHostSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.redis.v1.UpdateHostSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Name of the host to update.
+     * To get the Redis host name, use a [ClusterService.ListHosts] request.
+     * </pre>
+     *
+     * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getHostName();
+    /**
+     * <pre>
+     * Name of the host to update.
+     * To get the Redis host name, use a [ClusterService.ListHosts] request.
+     * </pre>
+     *
+     * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getHostNameBytes();
+
+    /**
+     * <pre>
+     * A replica with a low priority number is considered better for promotion.
+     * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+     * Works only for non-sharded clusters. Default value is 100.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_priority = 2;</code>
+     */
+    boolean hasReplicaPriority();
+    /**
+     * <pre>
+     * A replica with a low priority number is considered better for promotion.
+     * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+     * Works only for non-sharded clusters. Default value is 100.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_priority = 2;</code>
+     */
+    com.google.protobuf.Int64Value getReplicaPriority();
+    /**
+     * <pre>
+     * A replica with a low priority number is considered better for promotion.
+     * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+     * Works only for non-sharded clusters. Default value is 100.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_priority = 2;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getReplicaPriorityOrBuilder();
+
+    /**
+     * <pre>
+     * Whether the host should get a public IP address on update.
+     * </pre>
+     *
+     * <code>bool assign_public_ip = 3;</code>
+     */
+    boolean getAssignPublicIp();
+
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Redis host should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+     */
+    boolean hasUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Redis host should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+     */
+    com.google.protobuf.FieldMask getUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Redis host should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+     */
+    com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.redis.v1.UpdateHostSpec}
+   */
+  public  static final class UpdateHostSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.redis.v1.UpdateHostSpec)
+      UpdateHostSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateHostSpec.newBuilder() to construct.
+    private UpdateHostSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateHostSpec() {
+      hostName_ = "";
+      assignPublicIp_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateHostSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              hostName_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (replicaPriority_ != null) {
+                subBuilder = replicaPriority_.toBuilder();
+              }
+              replicaPriority_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(replicaPriority_);
+                replicaPriority_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 24: {
+
+              assignPublicIp_ = input.readBool();
+              break;
+            }
+            case 34: {
+              com.google.protobuf.FieldMask.Builder subBuilder = null;
+              if (updateMask_ != null) {
+                subBuilder = updateMask_.toBuilder();
+              }
+              updateMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updateMask_);
+                updateMask_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_UpdateHostSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_UpdateHostSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec.class, yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec.Builder.class);
+    }
+
+    public static final int HOST_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object hostName_;
+    /**
+     * <pre>
+     * Name of the host to update.
+     * To get the Redis host name, use a [ClusterService.ListHosts] request.
+     * </pre>
+     *
+     * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getHostName() {
+      java.lang.Object ref = hostName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the host to update.
+     * To get the Redis host name, use a [ClusterService.ListHosts] request.
+     * </pre>
+     *
+     * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getHostNameBytes() {
+      java.lang.Object ref = hostName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hostName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REPLICA_PRIORITY_FIELD_NUMBER = 2;
+    private com.google.protobuf.Int64Value replicaPriority_;
+    /**
+     * <pre>
+     * A replica with a low priority number is considered better for promotion.
+     * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+     * Works only for non-sharded clusters. Default value is 100.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_priority = 2;</code>
+     */
+    public boolean hasReplicaPriority() {
+      return replicaPriority_ != null;
+    }
+    /**
+     * <pre>
+     * A replica with a low priority number is considered better for promotion.
+     * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+     * Works only for non-sharded clusters. Default value is 100.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_priority = 2;</code>
+     */
+    public com.google.protobuf.Int64Value getReplicaPriority() {
+      return replicaPriority_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicaPriority_;
+    }
+    /**
+     * <pre>
+     * A replica with a low priority number is considered better for promotion.
+     * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+     * Works only for non-sharded clusters. Default value is 100.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_priority = 2;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getReplicaPriorityOrBuilder() {
+      return getReplicaPriority();
+    }
+
+    public static final int ASSIGN_PUBLIC_IP_FIELD_NUMBER = 3;
+    private boolean assignPublicIp_;
+    /**
+     * <pre>
+     * Whether the host should get a public IP address on update.
+     * </pre>
+     *
+     * <code>bool assign_public_ip = 3;</code>
+     */
+    public boolean getAssignPublicIp() {
+      return assignPublicIp_;
+    }
+
+    public static final int UPDATE_MASK_FIELD_NUMBER = 4;
+    private com.google.protobuf.FieldMask updateMask_;
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Redis host should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+     */
+    public boolean hasUpdateMask() {
+      return updateMask_ != null;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Redis host should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+     */
+    public com.google.protobuf.FieldMask getUpdateMask() {
+      return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Redis host should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+     */
+    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+      return getUpdateMask();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getHostNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hostName_);
+      }
+      if (replicaPriority_ != null) {
+        output.writeMessage(2, getReplicaPriority());
+      }
+      if (assignPublicIp_ != false) {
+        output.writeBool(3, assignPublicIp_);
+      }
+      if (updateMask_ != null) {
+        output.writeMessage(4, getUpdateMask());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getHostNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hostName_);
+      }
+      if (replicaPriority_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getReplicaPriority());
+      }
+      if (assignPublicIp_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, assignPublicIp_);
+      }
+      if (updateMask_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getUpdateMask());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec other = (yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec) obj;
+
+      boolean result = true;
+      result = result && getHostName()
+          .equals(other.getHostName());
+      result = result && (hasReplicaPriority() == other.hasReplicaPriority());
+      if (hasReplicaPriority()) {
+        result = result && getReplicaPriority()
+            .equals(other.getReplicaPriority());
+      }
+      result = result && (getAssignPublicIp()
+          == other.getAssignPublicIp());
+      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (hasUpdateMask()) {
+        result = result && getUpdateMask()
+            .equals(other.getUpdateMask());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HOST_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getHostName().hashCode();
+      if (hasReplicaPriority()) {
+        hash = (37 * hash) + REPLICA_PRIORITY_FIELD_NUMBER;
+        hash = (53 * hash) + getReplicaPriority().hashCode();
+      }
+      hash = (37 * hash) + ASSIGN_PUBLIC_IP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAssignPublicIp());
+      if (hasUpdateMask()) {
+        hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdateMask().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.redis.v1.UpdateHostSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.redis.v1.UpdateHostSpec)
+        yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_UpdateHostSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_UpdateHostSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec.class, yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        hostName_ = "";
+
+        if (replicaPriorityBuilder_ == null) {
+          replicaPriority_ = null;
+        } else {
+          replicaPriority_ = null;
+          replicaPriorityBuilder_ = null;
+        }
+        assignPublicIp_ = false;
+
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_UpdateHostSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec build() {
+        yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec buildPartial() {
+        yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec result = new yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec(this);
+        result.hostName_ = hostName_;
+        if (replicaPriorityBuilder_ == null) {
+          result.replicaPriority_ = replicaPriority_;
+        } else {
+          result.replicaPriority_ = replicaPriorityBuilder_.build();
+        }
+        result.assignPublicIp_ = assignPublicIp_;
+        if (updateMaskBuilder_ == null) {
+          result.updateMask_ = updateMask_;
+        } else {
+          result.updateMask_ = updateMaskBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec) {
+          return mergeFrom((yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec other) {
+        if (other == yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec.getDefaultInstance()) return this;
+        if (!other.getHostName().isEmpty()) {
+          hostName_ = other.hostName_;
+          onChanged();
+        }
+        if (other.hasReplicaPriority()) {
+          mergeReplicaPriority(other.getReplicaPriority());
+        }
+        if (other.getAssignPublicIp() != false) {
+          setAssignPublicIp(other.getAssignPublicIp());
+        }
+        if (other.hasUpdateMask()) {
+          mergeUpdateMask(other.getUpdateMask());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object hostName_ = "";
+      /**
+       * <pre>
+       * Name of the host to update.
+       * To get the Redis host name, use a [ClusterService.ListHosts] request.
+       * </pre>
+       *
+       * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getHostName() {
+        java.lang.Object ref = hostName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hostName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the host to update.
+       * To get the Redis host name, use a [ClusterService.ListHosts] request.
+       * </pre>
+       *
+       * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getHostNameBytes() {
+        java.lang.Object ref = hostName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hostName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the host to update.
+       * To get the Redis host name, use a [ClusterService.ListHosts] request.
+       * </pre>
+       *
+       * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setHostName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        hostName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the host to update.
+       * To get the Redis host name, use a [ClusterService.ListHosts] request.
+       * </pre>
+       *
+       * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearHostName() {
+        
+        hostName_ = getDefaultInstance().getHostName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the host to update.
+       * To get the Redis host name, use a [ClusterService.ListHosts] request.
+       * </pre>
+       *
+       * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setHostNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        hostName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value replicaPriority_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replicaPriorityBuilder_;
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 2;</code>
+       */
+      public boolean hasReplicaPriority() {
+        return replicaPriorityBuilder_ != null || replicaPriority_ != null;
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 2;</code>
+       */
+      public com.google.protobuf.Int64Value getReplicaPriority() {
+        if (replicaPriorityBuilder_ == null) {
+          return replicaPriority_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicaPriority_;
+        } else {
+          return replicaPriorityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 2;</code>
+       */
+      public Builder setReplicaPriority(com.google.protobuf.Int64Value value) {
+        if (replicaPriorityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          replicaPriority_ = value;
+          onChanged();
+        } else {
+          replicaPriorityBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 2;</code>
+       */
+      public Builder setReplicaPriority(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (replicaPriorityBuilder_ == null) {
+          replicaPriority_ = builderForValue.build();
+          onChanged();
+        } else {
+          replicaPriorityBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 2;</code>
+       */
+      public Builder mergeReplicaPriority(com.google.protobuf.Int64Value value) {
+        if (replicaPriorityBuilder_ == null) {
+          if (replicaPriority_ != null) {
+            replicaPriority_ =
+              com.google.protobuf.Int64Value.newBuilder(replicaPriority_).mergeFrom(value).buildPartial();
+          } else {
+            replicaPriority_ = value;
+          }
+          onChanged();
+        } else {
+          replicaPriorityBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 2;</code>
+       */
+      public Builder clearReplicaPriority() {
+        if (replicaPriorityBuilder_ == null) {
+          replicaPriority_ = null;
+          onChanged();
+        } else {
+          replicaPriority_ = null;
+          replicaPriorityBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 2;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getReplicaPriorityBuilder() {
+        
+        onChanged();
+        return getReplicaPriorityFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 2;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getReplicaPriorityOrBuilder() {
+        if (replicaPriorityBuilder_ != null) {
+          return replicaPriorityBuilder_.getMessageOrBuilder();
+        } else {
+          return replicaPriority_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : replicaPriority_;
+        }
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getReplicaPriorityFieldBuilder() {
+        if (replicaPriorityBuilder_ == null) {
+          replicaPriorityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getReplicaPriority(),
+                  getParentForChildren(),
+                  isClean());
+          replicaPriority_ = null;
+        }
+        return replicaPriorityBuilder_;
+      }
+
+      private boolean assignPublicIp_ ;
+      /**
+       * <pre>
+       * Whether the host should get a public IP address on update.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 3;</code>
+       */
+      public boolean getAssignPublicIp() {
+        return assignPublicIp_;
+      }
+      /**
+       * <pre>
+       * Whether the host should get a public IP address on update.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 3;</code>
+       */
+      public Builder setAssignPublicIp(boolean value) {
+        
+        assignPublicIp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the host should get a public IP address on update.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 3;</code>
+       */
+      public Builder clearAssignPublicIp() {
+        
+        assignPublicIp_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Redis host should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+       */
+      public boolean hasUpdateMask() {
+        return updateMaskBuilder_ != null || updateMask_ != null;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Redis host should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+       */
+      public com.google.protobuf.FieldMask getUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        } else {
+          return updateMaskBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Redis host should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+       */
+      public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updateMask_ = value;
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Redis host should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+       */
+      public Builder setUpdateMask(
+          com.google.protobuf.FieldMask.Builder builderForValue) {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = builderForValue.build();
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Redis host should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+       */
+      public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (updateMask_ != null) {
+            updateMask_ =
+              com.google.protobuf.FieldMask.newBuilder(updateMask_).mergeFrom(value).buildPartial();
+          } else {
+            updateMask_ = value;
+          }
+          onChanged();
+        } else {
+          updateMaskBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Redis host should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+       */
+      public Builder clearUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+          onChanged();
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Redis host should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+       */
+      public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
+        
+        onChanged();
+        return getUpdateMaskFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Redis host should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+       */
+      public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+        if (updateMaskBuilder_ != null) {
+          return updateMaskBuilder_.getMessageOrBuilder();
+        } else {
+          return updateMask_ == null ?
+              com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Redis host should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+          getUpdateMaskFieldBuilder() {
+        if (updateMaskBuilder_ == null) {
+          updateMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                  getUpdateMask(),
+                  getParentForChildren(),
+                  isClean());
+          updateMask_ = null;
+        }
+        return updateMaskBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.redis.v1.UpdateHostSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.redis.v1.UpdateHostSpec)
+    private static final yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec();
+    }
+
+    public static yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateHostSpec>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateHostSpec>() {
+      @java.lang.Override
+      public UpdateHostSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateHostSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateHostSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateHostSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.UpdateHostSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface HostSpecOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.redis.v1.HostSpec)
       com.google.protobuf.MessageOrBuilder {
@@ -47728,6 +50872,49 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getShardNameBytes();
+
+    /**
+     * <pre>
+     * A replica with a low priority number is considered better for promotion.
+     * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+     * Works only for non-sharded clusters. Default value is 100.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_priority = 4;</code>
+     */
+    boolean hasReplicaPriority();
+    /**
+     * <pre>
+     * A replica with a low priority number is considered better for promotion.
+     * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+     * Works only for non-sharded clusters. Default value is 100.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_priority = 4;</code>
+     */
+    com.google.protobuf.Int64Value getReplicaPriority();
+    /**
+     * <pre>
+     * A replica with a low priority number is considered better for promotion.
+     * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+     * Works only for non-sharded clusters. Default value is 100.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_priority = 4;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getReplicaPriorityOrBuilder();
+
+    /**
+     * <pre>
+     * Whether the host should get a public IP address on creation.
+     * Possible values:
+     * * false - don't assign a public IP to the host.
+     * * true - the host should have a public IP address.
+     * </pre>
+     *
+     * <code>bool assign_public_ip = 5;</code>
+     */
+    boolean getAssignPublicIp();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.redis.v1.HostSpec}
@@ -47745,6 +50932,7 @@ public final class ClusterServiceOuterClass {
       zoneId_ = "";
       subnetId_ = "";
       shardName_ = "";
+      assignPublicIp_ = false;
     }
 
     @java.lang.Override
@@ -47787,6 +50975,24 @@ public final class ClusterServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               shardName_ = s;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (replicaPriority_ != null) {
+                subBuilder = replicaPriority_.toBuilder();
+              }
+              replicaPriority_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(replicaPriority_);
+                replicaPriority_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 40: {
+
+              assignPublicIp_ = input.readBool();
               break;
             }
             default: {
@@ -47955,6 +51161,61 @@ public final class ClusterServiceOuterClass {
       }
     }
 
+    public static final int REPLICA_PRIORITY_FIELD_NUMBER = 4;
+    private com.google.protobuf.Int64Value replicaPriority_;
+    /**
+     * <pre>
+     * A replica with a low priority number is considered better for promotion.
+     * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+     * Works only for non-sharded clusters. Default value is 100.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_priority = 4;</code>
+     */
+    public boolean hasReplicaPriority() {
+      return replicaPriority_ != null;
+    }
+    /**
+     * <pre>
+     * A replica with a low priority number is considered better for promotion.
+     * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+     * Works only for non-sharded clusters. Default value is 100.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_priority = 4;</code>
+     */
+    public com.google.protobuf.Int64Value getReplicaPriority() {
+      return replicaPriority_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicaPriority_;
+    }
+    /**
+     * <pre>
+     * A replica with a low priority number is considered better for promotion.
+     * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+     * Works only for non-sharded clusters. Default value is 100.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_priority = 4;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getReplicaPriorityOrBuilder() {
+      return getReplicaPriority();
+    }
+
+    public static final int ASSIGN_PUBLIC_IP_FIELD_NUMBER = 5;
+    private boolean assignPublicIp_;
+    /**
+     * <pre>
+     * Whether the host should get a public IP address on creation.
+     * Possible values:
+     * * false - don't assign a public IP to the host.
+     * * true - the host should have a public IP address.
+     * </pre>
+     *
+     * <code>bool assign_public_ip = 5;</code>
+     */
+    public boolean getAssignPublicIp() {
+      return assignPublicIp_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -47978,6 +51239,12 @@ public final class ClusterServiceOuterClass {
       if (!getShardNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, shardName_);
       }
+      if (replicaPriority_ != null) {
+        output.writeMessage(4, getReplicaPriority());
+      }
+      if (assignPublicIp_ != false) {
+        output.writeBool(5, assignPublicIp_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -47995,6 +51262,14 @@ public final class ClusterServiceOuterClass {
       }
       if (!getShardNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, shardName_);
+      }
+      if (replicaPriority_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getReplicaPriority());
+      }
+      if (assignPublicIp_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, assignPublicIp_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -48018,6 +51293,13 @@ public final class ClusterServiceOuterClass {
           .equals(other.getSubnetId());
       result = result && getShardName()
           .equals(other.getShardName());
+      result = result && (hasReplicaPriority() == other.hasReplicaPriority());
+      if (hasReplicaPriority()) {
+        result = result && getReplicaPriority()
+            .equals(other.getReplicaPriority());
+      }
+      result = result && (getAssignPublicIp()
+          == other.getAssignPublicIp());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -48035,6 +51317,13 @@ public final class ClusterServiceOuterClass {
       hash = (53 * hash) + getSubnetId().hashCode();
       hash = (37 * hash) + SHARD_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getShardName().hashCode();
+      if (hasReplicaPriority()) {
+        hash = (37 * hash) + REPLICA_PRIORITY_FIELD_NUMBER;
+        hash = (53 * hash) + getReplicaPriority().hashCode();
+      }
+      hash = (37 * hash) + ASSIGN_PUBLIC_IP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAssignPublicIp());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -48174,6 +51463,14 @@ public final class ClusterServiceOuterClass {
 
         shardName_ = "";
 
+        if (replicaPriorityBuilder_ == null) {
+          replicaPriority_ = null;
+        } else {
+          replicaPriority_ = null;
+          replicaPriorityBuilder_ = null;
+        }
+        assignPublicIp_ = false;
+
         return this;
       }
 
@@ -48203,6 +51500,12 @@ public final class ClusterServiceOuterClass {
         result.zoneId_ = zoneId_;
         result.subnetId_ = subnetId_;
         result.shardName_ = shardName_;
+        if (replicaPriorityBuilder_ == null) {
+          result.replicaPriority_ = replicaPriority_;
+        } else {
+          result.replicaPriority_ = replicaPriorityBuilder_.build();
+        }
+        result.assignPublicIp_ = assignPublicIp_;
         onBuilt();
         return result;
       }
@@ -48262,6 +51565,12 @@ public final class ClusterServiceOuterClass {
         if (!other.getShardName().isEmpty()) {
           shardName_ = other.shardName_;
           onChanged();
+        }
+        if (other.hasReplicaPriority()) {
+          mergeReplicaPriority(other.getReplicaPriority());
+        }
+        if (other.getAssignPublicIp() != false) {
+          setAssignPublicIp(other.getAssignPublicIp());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -48575,6 +51884,224 @@ public final class ClusterServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         shardName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value replicaPriority_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replicaPriorityBuilder_;
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 4;</code>
+       */
+      public boolean hasReplicaPriority() {
+        return replicaPriorityBuilder_ != null || replicaPriority_ != null;
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 4;</code>
+       */
+      public com.google.protobuf.Int64Value getReplicaPriority() {
+        if (replicaPriorityBuilder_ == null) {
+          return replicaPriority_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicaPriority_;
+        } else {
+          return replicaPriorityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 4;</code>
+       */
+      public Builder setReplicaPriority(com.google.protobuf.Int64Value value) {
+        if (replicaPriorityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          replicaPriority_ = value;
+          onChanged();
+        } else {
+          replicaPriorityBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 4;</code>
+       */
+      public Builder setReplicaPriority(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (replicaPriorityBuilder_ == null) {
+          replicaPriority_ = builderForValue.build();
+          onChanged();
+        } else {
+          replicaPriorityBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 4;</code>
+       */
+      public Builder mergeReplicaPriority(com.google.protobuf.Int64Value value) {
+        if (replicaPriorityBuilder_ == null) {
+          if (replicaPriority_ != null) {
+            replicaPriority_ =
+              com.google.protobuf.Int64Value.newBuilder(replicaPriority_).mergeFrom(value).buildPartial();
+          } else {
+            replicaPriority_ = value;
+          }
+          onChanged();
+        } else {
+          replicaPriorityBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 4;</code>
+       */
+      public Builder clearReplicaPriority() {
+        if (replicaPriorityBuilder_ == null) {
+          replicaPriority_ = null;
+          onChanged();
+        } else {
+          replicaPriority_ = null;
+          replicaPriorityBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 4;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getReplicaPriorityBuilder() {
+        
+        onChanged();
+        return getReplicaPriorityFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 4;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getReplicaPriorityOrBuilder() {
+        if (replicaPriorityBuilder_ != null) {
+          return replicaPriorityBuilder_.getMessageOrBuilder();
+        } else {
+          return replicaPriority_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : replicaPriority_;
+        }
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getReplicaPriorityFieldBuilder() {
+        if (replicaPriorityBuilder_ == null) {
+          replicaPriorityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getReplicaPriority(),
+                  getParentForChildren(),
+                  isClean());
+          replicaPriority_ = null;
+        }
+        return replicaPriorityBuilder_;
+      }
+
+      private boolean assignPublicIp_ ;
+      /**
+       * <pre>
+       * Whether the host should get a public IP address on creation.
+       * Possible values:
+       * * false - don't assign a public IP to the host.
+       * * true - the host should have a public IP address.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 5;</code>
+       */
+      public boolean getAssignPublicIp() {
+        return assignPublicIp_;
+      }
+      /**
+       * <pre>
+       * Whether the host should get a public IP address on creation.
+       * Possible values:
+       * * false - don't assign a public IP to the host.
+       * * true - the host should have a public IP address.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 5;</code>
+       */
+      public Builder setAssignPublicIp(boolean value) {
+        
+        assignPublicIp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the host should get a public IP address on creation.
+       * Possible values:
+       * * false - don't assign a public IP to the host.
+       * * true - the host should have a public IP address.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 5;</code>
+       */
+      public Builder clearAssignPublicIp() {
+        
+        assignPublicIp_ = false;
         onChanged();
         return this;
       }
@@ -50786,6 +54313,16 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_redis_v1_MoveClusterMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_redis_v1_UpdateClusterHostsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_redis_v1_UpdateClusterHostsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_redis_v1_UpdateClusterHostsMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_redis_v1_UpdateClusterHostsMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_redis_v1_BackupClusterRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -50956,6 +54493,11 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_redis_v1_RebalanceClusterMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_redis_v1_UpdateHostSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_redis_v1_UpdateHostSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_redis_v1_HostSpec_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -51047,252 +54589,269 @@ public final class ClusterServiceOuterClass {
       "\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023MoveClusterMetada" +
       "ta\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020source_folder_" +
       "id\030\002 \001(\t\022\035\n\025destination_folder_id\030\003 \001(\t\"" +
-      "8\n\024BackupClusterRequest\022 \n\ncluster_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025BackupClusterMetada" +
-      "ta\022\022\n\ncluster_id\030\001 \001(\t\"\345\005\n\025RestoreCluste" +
-      "rRequest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\022,\n\004nam" +
-      "e\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022" +
-      "\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\215\001\n\006labe" +
-      "ls\030\004 \003(\0132<.yandex.cloud.mdb.redis.v1.Res" +
-      "toreClusterRequest.LabelsEntryB?\202\3101\004<=64" +
-      "\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[" +
-      "a-z][-_0-9a-z]*\022I\n\013environment\030\005 \001(\0162..y" +
-      "andex.cloud.mdb.redis.v1.Cluster.Environ" +
-      "mentB\004\350\3071\001\022@\n\013config_spec\030\006 \001(\0132%.yandex" +
-      ".cloud.mdb.redis.v1.ConfigSpecB\004\350\3071\001\022?\n\n" +
-      "host_specs\030\007 \003(\0132#.yandex.cloud.mdb.redi" +
-      "s.v1.HostSpecB\006\202\3101\002>0\022 \n\nnetwork_id\030\010 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\022\033\n\tfolder_id\030\t \001(\tB\010\212\3101\004" +
-      "<=50\022\032\n\022security_group_ids\030\n \003(\t\022/\n\013tls_" +
-      "enabled\030\013 \001(\0132\032.google.protobuf.BoolValu" +
-      "e\022L\n\020persistence_mode\030\014 \001(\01622.yandex.clo" +
-      "ud.mdb.redis.v1.Cluster.PersistenceMode\032" +
-      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"?\n\026RestoreClusterMetadata\022\022\n\nclus" +
-      "ter_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"^\n\033Start" +
-      "ClusterFailoverRequest\022 \n\ncluster_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\nhost_names\030\002 \003(\tB\t\212\310" +
-      "1\005<=253\"F\n\034StartClusterFailoverMetadata\022" +
-      "\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"" +
-      "\312\002\n\034RescheduleMaintenanceRequest\022 \n\nclus" +
-      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022e\n\017reschedule" +
-      "_type\030\002 \001(\0162F.yandex.cloud.mdb.redis.v1." +
-      "RescheduleMaintenanceRequest.RescheduleT" +
-      "ypeB\004\350\3071\001\0221\n\rdelayed_until\030\003 \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\"n\n\016RescheduleType\022\037" +
-      "\n\033RESCHEDULE_TYPE_UNSPECIFIED\020\000\022\r\n\tIMMED" +
-      "IATE\020\001\022\031\n\025NEXT_AVAILABLE_WINDOW\020\002\022\021\n\rSPE" +
-      "CIFIC_TIME\020\003\"f\n\035RescheduleMaintenanceMet" +
-      "adata\022\022\n\ncluster_id\030\001 \001(\t\0221\n\rdelayed_unt" +
-      "il\030\004 \001(\0132\032.google.protobuf.Timestamp\"\256\001\n" +
-      "\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022B\n\007message\030\002 \003(\01321.yan" +
-      "dex.cloud.mdb.redis.v1.LogRecord.Message" +
-      "Entry\032.\n\014MessageEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001\"\370\002\n\026ListClusterLogsRequest" +
-      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rco" +
-      "lumn_filter\030\002 \003(\t\022S\n\014service_type\030\003 \001(\0162" +
-      "=.yandex.cloud.mdb.redis.v1.ListClusterL" +
-      "ogsRequest.ServiceType\022-\n\tfrom_time\030\004 \001(" +
-      "\0132\032.google.protobuf.Timestamp\022+\n\007to_time" +
-      "\030\005 \001(\0132\032.google.protobuf.Timestamp\022\035\n\tpa" +
-      "ge_size\030\006 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030" +
-      "\007 \001(\tB\t\212\3101\005<=100\"6\n\013ServiceType\022\034\n\030SERVI" +
-      "CE_TYPE_UNSPECIFIED\020\000\022\t\n\005REDIS\020\001\"f\n\027List" +
-      "ClusterLogsResponse\0222\n\004logs\030\001 \003(\0132$.yand" +
-      "ex.cloud.mdb.redis.v1.LogRecord\022\027\n\017next_" +
-      "page_token\030\002 \001(\t\"b\n\017StreamLogRecord\0224\n\006r" +
-      "ecord\030\001 \001(\0132$.yandex.cloud.mdb.redis.v1." +
-      "LogRecord\022\031\n\021next_record_token\030\002 \001(\t\"\373\002\n" +
-      "\030StreamClusterLogsRequest\022 \n\ncluster_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003" +
-      "(\t\022U\n\014service_type\030\003 \001(\0162?.yandex.cloud." +
-      "mdb.redis.v1.StreamClusterLogsRequest.Se" +
-      "rviceType\022-\n\tfrom_time\030\004 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022\037\n\014record_token\030\006 " +
-      "\001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=10" +
-      "00\"6\n\013ServiceType\022\034\n\030SERVICE_TYPE_UNSPEC" +
-      "IFIED\020\000\022\t\n\005REDIS\020\001\"~\n\034ListClusterOperati" +
-      "onsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "\213\001\n\031UpdateClusterHostsRequest\022 \n\ncluster" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022L\n\021update_host_s" +
+      "pecs\030\002 \003(\0132).yandex.cloud.mdb.redis.v1.U" +
+      "pdateHostSpecB\006\202\3101\002>0\"D\n\032UpdateClusterHo" +
+      "stsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_" +
+      "names\030\002 \003(\t\"8\n\024BackupClusterRequest\022 \n\nc" +
+      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025BackupC" +
+      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\345\005\n\025R" +
+      "estoreClusterRequest\022\027\n\tbackup_id\030\001 \001(\tB" +
+      "\004\350\3071\001\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-" +
+      "zA-Z0-9_-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=" +
+      "256\022\215\001\n\006labels\030\004 \003(\0132<.yandex.cloud.mdb." +
+      "redis.v1.RestoreClusterRequest.LabelsEnt" +
+      "ryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032" +
+      "\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022I\n\013environme" +
+      "nt\030\005 \001(\0162..yandex.cloud.mdb.redis.v1.Clu" +
+      "ster.EnvironmentB\004\350\3071\001\022@\n\013config_spec\030\006 " +
+      "\001(\0132%.yandex.cloud.mdb.redis.v1.ConfigSp" +
+      "ecB\004\350\3071\001\022?\n\nhost_specs\030\007 \003(\0132#.yandex.cl" +
+      "oud.mdb.redis.v1.HostSpecB\006\202\3101\002>0\022 \n\nnet" +
+      "work_id\030\010 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\tfolder_id" +
+      "\030\t \001(\tB\010\212\3101\004<=50\022\032\n\022security_group_ids\030\n" +
+      " \003(\t\022/\n\013tls_enabled\030\013 \001(\0132\032.google.proto" +
+      "buf.BoolValue\022L\n\020persistence_mode\030\014 \001(\0162" +
+      "2.yandex.cloud.mdb.redis.v1.Cluster.Pers" +
+      "istenceMode\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001\"?\n\026RestoreClusterMeta" +
+      "data\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 " +
+      "\001(\t\"^\n\033StartClusterFailoverRequest\022 \n\ncl" +
+      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\nhost_nam" +
+      "es\030\002 \003(\tB\t\212\3101\005<=253\"F\n\034StartClusterFailo" +
+      "verMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_" +
+      "names\030\002 \003(\t\"\312\002\n\034RescheduleMaintenanceReq" +
+      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022e" +
+      "\n\017reschedule_type\030\002 \001(\0162F.yandex.cloud.m" +
+      "db.redis.v1.RescheduleMaintenanceRequest" +
+      ".RescheduleTypeB\004\350\3071\001\0221\n\rdelayed_until\030\003" +
+      " \001(\0132\032.google.protobuf.Timestamp\"n\n\016Resc" +
+      "heduleType\022\037\n\033RESCHEDULE_TYPE_UNSPECIFIE" +
+      "D\020\000\022\r\n\tIMMEDIATE\020\001\022\031\n\025NEXT_AVAILABLE_WIN" +
+      "DOW\020\002\022\021\n\rSPECIFIC_TIME\020\003\"f\n\035RescheduleMa" +
+      "intenanceMetadata\022\022\n\ncluster_id\030\001 \001(\t\0221\n" +
+      "\rdelayed_until\030\004 \001(\0132\032.google.protobuf.T" +
+      "imestamp\"\256\001\n\tLogRecord\022-\n\ttimestamp\030\001 \001(" +
+      "\0132\032.google.protobuf.Timestamp\022B\n\007message" +
+      "\030\002 \003(\01321.yandex.cloud.mdb.redis.v1.LogRe" +
+      "cord.MessageEntry\032.\n\014MessageEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\370\002\n\026ListCluste" +
+      "rLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022S\n\014service" +
+      "_type\030\003 \001(\0162=.yandex.cloud.mdb.redis.v1." +
+      "ListClusterLogsRequest.ServiceType\022-\n\tfr" +
+      "om_time\030\004 \001(\0132\032.google.protobuf.Timestam" +
+      "p\022+\n\007to_time\030\005 \001(\0132\032.google.protobuf.Tim" +
+      "estamp\022\035\n\tpage_size\030\006 \001(\003B\n\372\3071\0060-1000\022\035\n" +
+      "\npage_token\030\007 \001(\tB\t\212\3101\005<=100\"6\n\013ServiceT" +
+      "ype\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\t\n\005RED" +
+      "IS\020\001\"f\n\027ListClusterLogsResponse\0222\n\004logs\030" +
+      "\001 \003(\0132$.yandex.cloud.mdb.redis.v1.LogRec" +
+      "ord\022\027\n\017next_page_token\030\002 \001(\t\"b\n\017StreamLo" +
+      "gRecord\0224\n\006record\030\001 \001(\0132$.yandex.cloud.m" +
+      "db.redis.v1.LogRecord\022\031\n\021next_record_tok" +
+      "en\030\002 \001(\t\"\373\002\n\030StreamClusterLogsRequest\022 \n" +
+      "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolum" +
+      "n_filter\030\002 \003(\t\022U\n\014service_type\030\003 \001(\0162?.y" +
+      "andex.cloud.mdb.redis.v1.StreamClusterLo" +
+      "gsRequest.ServiceType\022-\n\tfrom_time\030\004 \001(\013" +
+      "2\032.google.protobuf.Timestamp\022+\n\007to_time\030" +
+      "\005 \001(\0132\032.google.protobuf.Timestamp\022\037\n\014rec" +
+      "ord_token\030\006 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\007 \001" +
+      "(\tB\n\212\3101\006<=1000\"6\n\013ServiceType\022\034\n\030SERVICE" +
+      "_TYPE_UNSPECIFIED\020\000\022\t\n\005REDIS\020\001\"~\n\034ListCl" +
+      "usterOperationsRequest\022 \n\ncluster_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
+      "\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"o" +
+      "\n\035ListClusterOperationsResponse\0225\n\nopera" +
+      "tions\030\001 \003(\0132!.yandex.cloud.operation.Ope" +
+      "ration\022\027\n\017next_page_token\030\002 \001(\t\"{\n\031ListC" +
+      "lusterBackupsRequest\022 \n\ncluster_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060" +
+      "-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"i\n\032" +
+      "ListClusterBackupsResponse\0222\n\007backups\030\001 " +
+      "\003(\0132!.yandex.cloud.mdb.redis.v1.Backup\022\027" +
+      "\n\017next_page_token\030\002 \001(\t\"y\n\027ListClusterHo" +
+      "stsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
       "<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\np" +
-      "age_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListCluste" +
-      "rOperationsResponse\0225\n\noperations\030\001 \003(\0132" +
-      "!.yandex.cloud.operation.Operation\022\027\n\017ne" +
-      "xt_page_token\030\002 \001(\t\"{\n\031ListClusterBackup" +
-      "sRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npag" +
-      "e_token\030\003 \001(\tB\t\212\3101\005<=100\"i\n\032ListClusterB" +
-      "ackupsResponse\0222\n\007backups\030\001 \003(\0132!.yandex" +
-      ".cloud.mdb.redis.v1.Backup\022\027\n\017next_page_" +
-      "token\030\002 \001(\t\"y\n\027ListClusterHostsRequest\022 " +
-      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
-      "_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 " +
-      "\001(\tB\t\212\3101\005<=100\"c\n\030ListClusterHostsRespon" +
-      "se\022.\n\005hosts\030\001 \003(\0132\037.yandex.cloud.mdb.red" +
-      "is.v1.Host\022\027\n\017next_page_token\030\002 \001(\t\"{\n\026A" +
-      "ddClusterHostsRequest\022 \n\ncluster_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\022?\n\nhost_specs\030\002 \003(\0132#.ya" +
-      "ndex.cloud.mdb.redis.v1.HostSpecB\006\202\3101\002>0" +
-      "\"A\n\027AddClusterHostsMetadata\022\022\n\ncluster_i" +
-      "d\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"b\n\031DeleteClu" +
-      "sterHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022#\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0\212\310" +
-      "1\005<=253\"D\n\032DeleteClusterHostsMetadata\022\022\n" +
-      "\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"n\n" +
-      "\026GetClusterShardRequest\022 \n\ncluster_id\030\001 " +
+      "age_token\030\003 \001(\tB\t\212\3101\005<=100\"c\n\030ListCluste" +
+      "rHostsResponse\022.\n\005hosts\030\001 \003(\0132\037.yandex.c" +
+      "loud.mdb.redis.v1.Host\022\027\n\017next_page_toke" +
+      "n\030\002 \001(\t\"{\n\026AddClusterHostsRequest\022 \n\nclu" +
+      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022?\n\nhost_spec" +
+      "s\030\002 \003(\0132#.yandex.cloud.mdb.redis.v1.Host" +
+      "SpecB\006\202\3101\002>0\"A\n\027AddClusterHostsMetadata\022" +
+      "\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"" +
+      "b\n\031DeleteClusterHostsRequest\022 \n\ncluster_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost_names\030\002 \003" +
+      "(\tB\017\202\3101\002>0\212\3101\005<=253\"D\n\032DeleteClusterHost" +
+      "sMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_na" +
+      "mes\030\002 \003(\t\"n\n\026GetClusterShardRequest\022 \n\nc" +
+      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\nshard_n" +
+      "ame\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]" +
+      "*\"z\n\030ListClusterShardsRequest\022 \n\ncluster" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
+      "(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
+      "<=100\"f\n\031ListClusterShardsResponse\0220\n\006sh" +
+      "ards\030\001 \003(\0132 .yandex.cloud.mdb.redis.v1.S" +
+      "hard\022\027\n\017next_page_token\030\002 \001(\t\"\257\001\n\026AddClu" +
+      "sterShardRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\0222\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004" +
+      "<=63\362\3071\016[a-zA-Z0-9_-]*\022?\n\nhost_specs\030\004 \003" +
+      "(\0132#.yandex.cloud.mdb.redis.v1.HostSpecB" +
+      "\006\202\3101\002>0\"A\n\027AddClusterShardMetadata\022\022\n\ncl" +
+      "uster_id\030\001 \001(\t\022\022\n\nshard_name\030\002 \001(\t\"q\n\031De" +
+      "leteClusterShardRequest\022 \n\ncluster_id\030\001 " +
       "\001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\nshard_name\030\002 \001(\tB\036\350" +
-      "\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"z\n\030ListClu" +
-      "sterShardsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=10" +
-      "00\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"f\n\031Lis" +
-      "tClusterShardsResponse\0220\n\006shards\030\001 \003(\0132 " +
-      ".yandex.cloud.mdb.redis.v1.Shard\022\027\n\017next" +
-      "_page_token\030\002 \001(\t\"\257\001\n\026AddClusterShardReq" +
-      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222" +
-      "\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-z" +
-      "A-Z0-9_-]*\022?\n\nhost_specs\030\004 \003(\0132#.yandex." +
-      "cloud.mdb.redis.v1.HostSpecB\006\202\3101\002>0\"A\n\027A" +
-      "ddClusterShardMetadata\022\022\n\ncluster_id\030\001 \001" +
-      "(\t\022\022\n\nshard_name\030\002 \001(\t\"q\n\031DeleteClusterS" +
-      "hardRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\0222\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362" +
-      "\3071\016[a-zA-Z0-9_-]*\"D\n\032DeleteClusterShardM" +
-      "etadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nshard_nam" +
-      "e\030\002 \001(\t\";\n\027RebalanceClusterRequest\022 \n\ncl" +
-      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\".\n\030Rebalanc" +
-      "eClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"^\n\010" +
-      "HostSpec\022\017\n\007zone_id\030\001 \001(\t\022\021\n\tsubnet_id\030\002" +
-      " \001(\t\022.\n\nshard_name\030\003 \001(\tB\032\212\3101\004<=63\362\3071\016[a" +
-      "-zA-Z0-9_-]*\"\351\003\n\nConfigSpec\022\017\n\007version\030\001" +
-      " \001(\t\022]\n\020redis_config_5_0\030\002 \001(\01320.yandex." +
-      "cloud.mdb.redis.v1.config.RedisConfig5_0" +
-      "H\000R\017redisConfig_5_0\022]\n\020redis_config_6_0\030" +
-      "\006 \001(\01320.yandex.cloud.mdb.redis.v1.config" +
-      ".RedisConfig6_0H\000R\017redisConfig_6_0\022]\n\020re" +
-      "dis_config_6_2\030\007 \001(\01320.yandex.cloud.mdb." +
-      "redis.v1.config.RedisConfig6_2H\000R\017redisC" +
-      "onfig_6_2\0227\n\tresources\030\003 \001(\0132$.yandex.cl" +
-      "oud.mdb.redis.v1.Resources\0223\n\023backup_win" +
-      "dow_start\030\004 \001(\0132\026.google.type.TimeOfDay\022" +
-      "1\n\006access\030\005 \001(\0132!.yandex.cloud.mdb.redis" +
-      ".v1.AccessB\014\n\nredis_spec2\253#\n\016ClusterServ" +
-      "ice\022\210\001\n\003Get\022,.yandex.cloud.mdb.redis.v1." +
-      "GetClusterRequest\032\".yandex.cloud.mdb.red" +
-      "is.v1.Cluster\"/\202\323\344\223\002)\022\'/managed-redis/v1" +
-      "/clusters/{cluster_id}\022\213\001\n\004List\022..yandex" +
-      ".cloud.mdb.redis.v1.ListClustersRequest\032" +
-      "/.yandex.cloud.mdb.redis.v1.ListClusters" +
-      "Response\"\"\202\323\344\223\002\034\022\032/managed-redis/v1/clus" +
-      "ters\022\247\001\n\006Create\022/.yandex.cloud.mdb.redis" +
-      ".v1.CreateClusterRequest\032!.yandex.cloud." +
-      "operation.Operation\"I\202\323\344\223\002\037\"\032/managed-re" +
-      "dis/v1/clusters:\001*\262\322* \n\025CreateClusterMet" +
-      "adata\022\007Cluster\022\264\001\n\006Update\022/.yandex.cloud" +
-      ".mdb.redis.v1.UpdateClusterRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"V\202\323\344\223\002,2\'/" +
-      "managed-redis/v1/clusters/{cluster_id}:\001" +
-      "*\262\322* \n\025UpdateClusterMetadata\022\007Cluster\022\277\001" +
-      "\n\006Delete\022/.yandex.cloud.mdb.redis.v1.Del" +
-      "eteClusterRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"a\202\323\344\223\002)*\'/managed-redis/v1/" +
-      "clusters/{cluster_id}\262\322*.\n\025DeleteCluster" +
-      "Metadata\022\025google.protobuf.Empty\022\264\001\n\005Star" +
-      "t\022..yandex.cloud.mdb.redis.v1.StartClust" +
-      "erRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"X\202\323\344\223\002/\"-/managed-redis/v1/clusters" +
-      "/{cluster_id}:start\262\322*\037\n\024StartClusterMet" +
-      "adata\022\007Cluster\022\260\001\n\004Stop\022-.yandex.cloud.m" +
-      "db.redis.v1.StopClusterRequest\032!.yandex." +
-      "cloud.operation.Operation\"V\202\323\344\223\002.\",/mana" +
-      "ged-redis/v1/clusters/{cluster_id}:stop\262" +
-      "\322*\036\n\023StopClusterMetadata\022\007Cluster\022\263\001\n\004Mo" +
-      "ve\022-.yandex.cloud.mdb.redis.v1.MoveClust" +
-      "erRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"Y\202\323\344\223\0021\",/managed-redis/v1/clusters" +
-      "/{cluster_id}:move:\001*\262\322*\036\n\023MoveClusterMe" +
-      "tadata\022\007Cluster\022\270\001\n\006Backup\022/.yandex.clou" +
-      "d.mdb.redis.v1.BackupClusterRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"Z\202\323\344\223\0020\"." +
+      "\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"D\n\032DeleteC" +
+      "lusterShardMetadata\022\022\n\ncluster_id\030\001 \001(\t\022" +
+      "\022\n\nshard_name\030\002 \001(\t\";\n\027RebalanceClusterR" +
+      "equest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\".\n\030RebalanceClusterMetadata\022\022\n\ncluster_" +
+      "id\030\001 \001(\t\"\253\001\n\016UpdateHostSpec\022\027\n\thost_name" +
+      "\030\001 \001(\tB\004\350\3071\001\0225\n\020replica_priority\030\002 \001(\0132\033" +
+      ".google.protobuf.Int64Value\022\030\n\020assign_pu" +
+      "blic_ip\030\003 \001(\010\022/\n\013update_mask\030\004 \001(\0132\032.goo" +
+      "gle.protobuf.FieldMask\"\257\001\n\010HostSpec\022\017\n\007z" +
+      "one_id\030\001 \001(\t\022\021\n\tsubnet_id\030\002 \001(\t\022.\n\nshard" +
+      "_name\030\003 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022" +
+      "5\n\020replica_priority\030\004 \001(\0132\033.google.proto" +
+      "buf.Int64Value\022\030\n\020assign_public_ip\030\005 \001(\010" +
+      "\"\351\003\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022]\n\020redi" +
+      "s_config_5_0\030\002 \001(\01320.yandex.cloud.mdb.re" +
+      "dis.v1.config.RedisConfig5_0H\000R\017redisCon" +
+      "fig_5_0\022]\n\020redis_config_6_0\030\006 \001(\01320.yand" +
+      "ex.cloud.mdb.redis.v1.config.RedisConfig" +
+      "6_0H\000R\017redisConfig_6_0\022]\n\020redis_config_6" +
+      "_2\030\007 \001(\01320.yandex.cloud.mdb.redis.v1.con" +
+      "fig.RedisConfig6_2H\000R\017redisConfig_6_2\0227\n" +
+      "\tresources\030\003 \001(\0132$.yandex.cloud.mdb.redi" +
+      "s.v1.Resources\0223\n\023backup_window_start\030\004 " +
+      "\001(\0132\026.google.type.TimeOfDay\0221\n\006access\030\005 " +
+      "\001(\0132!.yandex.cloud.mdb.redis.v1.AccessB\014" +
+      "\n\nredis_spec2\221%\n\016ClusterService\022\210\001\n\003Get\022" +
+      ",.yandex.cloud.mdb.redis.v1.GetClusterRe" +
+      "quest\032\".yandex.cloud.mdb.redis.v1.Cluste" +
+      "r\"/\202\323\344\223\002)\022\'/managed-redis/v1/clusters/{c" +
+      "luster_id}\022\213\001\n\004List\022..yandex.cloud.mdb.r" +
+      "edis.v1.ListClustersRequest\032/.yandex.clo" +
+      "ud.mdb.redis.v1.ListClustersResponse\"\"\202\323" +
+      "\344\223\002\034\022\032/managed-redis/v1/clusters\022\247\001\n\006Cre" +
+      "ate\022/.yandex.cloud.mdb.redis.v1.CreateCl" +
+      "usterRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"I\202\323\344\223\002\037\"\032/managed-redis/v1/clust" +
+      "ers:\001*\262\322* \n\025CreateClusterMetadata\022\007Clust" +
+      "er\022\264\001\n\006Update\022/.yandex.cloud.mdb.redis.v" +
+      "1.UpdateClusterRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"V\202\323\344\223\002,2\'/managed-redi" +
+      "s/v1/clusters/{cluster_id}:\001*\262\322* \n\025Updat" +
+      "eClusterMetadata\022\007Cluster\022\277\001\n\006Delete\022/.y" +
+      "andex.cloud.mdb.redis.v1.DeleteClusterRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"a\202\323\344\223\002)*\'/managed-redis/v1/clusters/{cl" +
+      "uster_id}\262\322*.\n\025DeleteClusterMetadata\022\025go" +
+      "ogle.protobuf.Empty\022\264\001\n\005Start\022..yandex.c" +
+      "loud.mdb.redis.v1.StartClusterRequest\032!." +
+      "yandex.cloud.operation.Operation\"X\202\323\344\223\002/" +
+      "\"-/managed-redis/v1/clusters/{cluster_id" +
+      "}:start\262\322*\037\n\024StartClusterMetadata\022\007Clust" +
+      "er\022\260\001\n\004Stop\022-.yandex.cloud.mdb.redis.v1." +
+      "StopClusterRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"V\202\323\344\223\002.\",/managed-redis/v1" +
+      "/clusters/{cluster_id}:stop\262\322*\036\n\023StopClu" +
+      "sterMetadata\022\007Cluster\022\263\001\n\004Move\022-.yandex." +
+      "cloud.mdb.redis.v1.MoveClusterRequest\032!." +
+      "yandex.cloud.operation.Operation\"Y\202\323\344\223\0021" +
+      "\",/managed-redis/v1/clusters/{cluster_id" +
+      "}:move:\001*\262\322*\036\n\023MoveClusterMetadata\022\007Clus" +
+      "ter\022\270\001\n\006Backup\022/.yandex.cloud.mdb.redis." +
+      "v1.BackupClusterRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"Z\202\323\344\223\0020\"./managed-red" +
+      "is/v1/clusters/{cluster_id}:backup\262\322* \n\025" +
+      "BackupClusterMetadata\022\007Cluster\022\262\001\n\007Resto" +
+      "re\0220.yandex.cloud.mdb.redis.v1.RestoreCl" +
+      "usterRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"R\202\323\344\223\002\'\"\"/managed-redis/v1/clust" +
+      "ers:restore:\001*\262\322*!\n\026RestoreClusterMetada" +
+      "ta\022\007Cluster\022\351\001\n\025RescheduleMaintenance\0227." +
+      "yandex.cloud.mdb.redis.v1.RescheduleMain" +
+      "tenanceRequest\032!.yandex.cloud.operation." +
+      "Operation\"t\202\323\344\223\002B\"=/managed-redis/v1/clu" +
+      "sters/{cluster_id}:rescheduleMaintenance" +
+      ":\001*\262\322*(\n\035RescheduleMaintenanceMetadata\022\007" +
+      "Cluster\022\327\001\n\rStartFailover\0226.yandex.cloud" +
+      ".mdb.redis.v1.StartClusterFailoverReques" +
+      "t\032!.yandex.cloud.operation.Operation\"k\202\323" +
+      "\344\223\002:\"5/managed-redis/v1/clusters/{cluste" +
+      "r_id}:startFailover:\001*\262\322*\'\n\034StartCluster" +
+      "FailoverMetadata\022\007Cluster\022\247\001\n\010ListLogs\0221" +
+      ".yandex.cloud.mdb.redis.v1.ListClusterLo" +
+      "gsRequest\0322.yandex.cloud.mdb.redis.v1.Li" +
+      "stClusterLogsResponse\"4\202\323\344\223\002.\022,/managed-" +
+      "redis/v1/clusters/{cluster_id}:logs\022\254\001\n\n" +
+      "StreamLogs\0223.yandex.cloud.mdb.redis.v1.S" +
+      "treamClusterLogsRequest\032*.yandex.cloud.m" +
+      "db.redis.v1.StreamLogRecord\";\202\323\344\223\0025\0223/ma" +
+      "naged-redis/v1/clusters/{cluster_id}:str" +
+      "eam_logs0\001\022\277\001\n\016ListOperations\0227.yandex.c" +
+      "loud.mdb.redis.v1.ListClusterOperationsR" +
+      "equest\0328.yandex.cloud.mdb.redis.v1.ListC" +
+      "lusterOperationsResponse\":\202\323\344\223\0024\0222/manag" +
+      "ed-redis/v1/clusters/{cluster_id}/operat" +
+      "ions\022\263\001\n\013ListBackups\0224.yandex.cloud.mdb." +
+      "redis.v1.ListClusterBackupsRequest\0325.yan" +
+      "dex.cloud.mdb.redis.v1.ListClusterBackup" +
+      "sResponse\"7\202\323\344\223\0021\022//managed-redis/v1/clu" +
+      "sters/{cluster_id}/backups\022\253\001\n\tListHosts" +
+      "\0222.yandex.cloud.mdb.redis.v1.ListCluster" +
+      "HostsRequest\0323.yandex.cloud.mdb.redis.v1" +
+      ".ListClusterHostsResponse\"5\202\323\344\223\002/\022-/mana" +
+      "ged-redis/v1/clusters/{cluster_id}/hosts" +
+      "\022\332\001\n\010AddHosts\0221.yandex.cloud.mdb.redis.v" +
+      "1.AddClusterHostsRequest\032!.yandex.cloud." +
+      "operation.Operation\"x\202\323\344\223\002>\"9/managed-re" +
+      "dis/v1/clusters/{cluster_id}/hosts:batch" +
+      "Create:\001*\262\322*0\n\027AddClusterHostsMetadata\022\025" +
+      "google.protobuf.Empty\022\343\001\n\013DeleteHosts\0224." +
+      "yandex.cloud.mdb.redis.v1.DeleteClusterH" +
+      "ostsRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"{\202\323\344\223\002>\"9/managed-redis/v1/cluste" +
+      "rs/{cluster_id}/hosts:batchDelete:\001*\262\322*3" +
+      "\n\032DeleteClusterHostsMetadata\022\025google.pro" +
+      "tobuf.Empty\022\343\001\n\013UpdateHosts\0224.yandex.clo" +
+      "ud.mdb.redis.v1.UpdateClusterHostsReques" +
+      "t\032!.yandex.cloud.operation.Operation\"{\202\323" +
+      "\344\223\002>\"9/managed-redis/v1/clusters/{cluste" +
+      "r_id}/hosts:batchUpdate:\001*\262\322*3\n\032UpdateCl" +
+      "usterHostsMetadata\022\025google.protobuf.Empt" +
+      "y\022\244\001\n\010GetShard\0221.yandex.cloud.mdb.redis." +
+      "v1.GetClusterShardRequest\032 .yandex.cloud" +
+      ".mdb.redis.v1.Shard\"C\202\323\344\223\002=\022;/managed-re" +
+      "dis/v1/clusters/{cluster_id}/shards/{sha" +
+      "rd_name}\022\257\001\n\nListShards\0223.yandex.cloud.m" +
+      "db.redis.v1.ListClusterShardsRequest\0324.y" +
+      "andex.cloud.mdb.redis.v1.ListClusterShar" +
+      "dsResponse\"6\202\323\344\223\0020\022./managed-redis/v1/cl" +
+      "usters/{cluster_id}/shards\022\277\001\n\010AddShard\022" +
+      "1.yandex.cloud.mdb.redis.v1.AddClusterSh" +
+      "ardRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"]\202\323\344\223\0023\"./managed-redis/v1/cluster" +
+      "s/{cluster_id}/shards:\001*\262\322* \n\027AddCluster" +
+      "ShardMetadata\022\005Shard\022\342\001\n\013DeleteShard\0224.y" +
+      "andex.cloud.mdb.redis.v1.DeleteClusterSh" +
+      "ardRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"z\202\323\344\223\002=*;/managed-redis/v1/cluster" +
+      "s/{cluster_id}/shards/{shard_name}\262\322*3\n\032" +
+      "DeleteClusterShardMetadata\022\025google.proto" +
+      "buf.Empty\022\304\001\n\tRebalance\0222.yandex.cloud.m" +
+      "db.redis.v1.RebalanceClusterRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"`\202\323\344\223\0023\"1" +
       "/managed-redis/v1/clusters/{cluster_id}:" +
-      "backup\262\322* \n\025BackupClusterMetadata\022\007Clust" +
-      "er\022\262\001\n\007Restore\0220.yandex.cloud.mdb.redis." +
-      "v1.RestoreClusterRequest\032!.yandex.cloud." +
-      "operation.Operation\"R\202\323\344\223\002\'\"\"/managed-re" +
-      "dis/v1/clusters:restore:\001*\262\322*!\n\026RestoreC" +
-      "lusterMetadata\022\007Cluster\022\351\001\n\025RescheduleMa" +
-      "intenance\0227.yandex.cloud.mdb.redis.v1.Re" +
-      "scheduleMaintenanceRequest\032!.yandex.clou" +
-      "d.operation.Operation\"t\202\323\344\223\002B\"=/managed-" +
-      "redis/v1/clusters/{cluster_id}:reschedul" +
-      "eMaintenance:\001*\262\322*(\n\035RescheduleMaintenan" +
-      "ceMetadata\022\007Cluster\022\327\001\n\rStartFailover\0226." +
-      "yandex.cloud.mdb.redis.v1.StartClusterFa" +
-      "iloverRequest\032!.yandex.cloud.operation.O" +
-      "peration\"k\202\323\344\223\002:\"5/managed-redis/v1/clus" +
-      "ters/{cluster_id}:startFailover:\001*\262\322*\'\n\034" +
-      "StartClusterFailoverMetadata\022\007Cluster\022\247\001" +
-      "\n\010ListLogs\0221.yandex.cloud.mdb.redis.v1.L" +
-      "istClusterLogsRequest\0322.yandex.cloud.mdb" +
-      ".redis.v1.ListClusterLogsResponse\"4\202\323\344\223\002" +
-      ".\022,/managed-redis/v1/clusters/{cluster_i" +
-      "d}:logs\022\254\001\n\nStreamLogs\0223.yandex.cloud.md" +
-      "b.redis.v1.StreamClusterLogsRequest\032*.ya" +
-      "ndex.cloud.mdb.redis.v1.StreamLogRecord\"" +
-      ";\202\323\344\223\0025\0223/managed-redis/v1/clusters/{clu" +
-      "ster_id}:stream_logs0\001\022\277\001\n\016ListOperation" +
-      "s\0227.yandex.cloud.mdb.redis.v1.ListCluste" +
-      "rOperationsRequest\0328.yandex.cloud.mdb.re" +
-      "dis.v1.ListClusterOperationsResponse\":\202\323" +
-      "\344\223\0024\0222/managed-redis/v1/clusters/{cluste" +
-      "r_id}/operations\022\263\001\n\013ListBackups\0224.yande" +
-      "x.cloud.mdb.redis.v1.ListClusterBackupsR" +
-      "equest\0325.yandex.cloud.mdb.redis.v1.ListC" +
-      "lusterBackupsResponse\"7\202\323\344\223\0021\022//managed-" +
-      "redis/v1/clusters/{cluster_id}/backups\022\253" +
-      "\001\n\tListHosts\0222.yandex.cloud.mdb.redis.v1" +
-      ".ListClusterHostsRequest\0323.yandex.cloud." +
-      "mdb.redis.v1.ListClusterHostsResponse\"5\202" +
-      "\323\344\223\002/\022-/managed-redis/v1/clusters/{clust" +
-      "er_id}/hosts\022\332\001\n\010AddHosts\0221.yandex.cloud" +
-      ".mdb.redis.v1.AddClusterHostsRequest\032!.y" +
-      "andex.cloud.operation.Operation\"x\202\323\344\223\002>\"" +
-      "9/managed-redis/v1/clusters/{cluster_id}" +
-      "/hosts:batchCreate:\001*\262\322*0\n\027AddClusterHos" +
-      "tsMetadata\022\025google.protobuf.Empty\022\343\001\n\013De" +
-      "leteHosts\0224.yandex.cloud.mdb.redis.v1.De" +
-      "leteClusterHostsRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"{\202\323\344\223\002>\"9/managed-red" +
-      "is/v1/clusters/{cluster_id}/hosts:batchD" +
-      "elete:\001*\262\322*3\n\032DeleteClusterHostsMetadata" +
-      "\022\025google.protobuf.Empty\022\244\001\n\010GetShard\0221.y" +
-      "andex.cloud.mdb.redis.v1.GetClusterShard" +
-      "Request\032 .yandex.cloud.mdb.redis.v1.Shar" +
-      "d\"C\202\323\344\223\002=\022;/managed-redis/v1/clusters/{c" +
-      "luster_id}/shards/{shard_name}\022\257\001\n\nListS" +
-      "hards\0223.yandex.cloud.mdb.redis.v1.ListCl" +
-      "usterShardsRequest\0324.yandex.cloud.mdb.re" +
-      "dis.v1.ListClusterShardsResponse\"6\202\323\344\223\0020" +
-      "\022./managed-redis/v1/clusters/{cluster_id" +
-      "}/shards\022\277\001\n\010AddShard\0221.yandex.cloud.mdb" +
-      ".redis.v1.AddClusterShardRequest\032!.yande" +
-      "x.cloud.operation.Operation\"]\202\323\344\223\0023\"./ma" +
-      "naged-redis/v1/clusters/{cluster_id}/sha" +
-      "rds:\001*\262\322* \n\027AddClusterShardMetadata\022\005Sha" +
-      "rd\022\342\001\n\013DeleteShard\0224.yandex.cloud.mdb.re" +
-      "dis.v1.DeleteClusterShardRequest\032!.yande" +
-      "x.cloud.operation.Operation\"z\202\323\344\223\002=*;/ma" +
-      "naged-redis/v1/clusters/{cluster_id}/sha" +
-      "rds/{shard_name}\262\322*3\n\032DeleteClusterShard" +
-      "Metadata\022\025google.protobuf.Empty\022\304\001\n\tReba" +
-      "lance\0222.yandex.cloud.mdb.redis.v1.Rebala" +
-      "nceClusterRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"`\202\323\344\223\0023\"1/managed-redis/v1/" +
-      "clusters/{cluster_id}:rebalance\262\322*#\n\030Reb" +
-      "alanceClusterMetadata\022\007ClusterBd\n\035yandex" +
-      ".cloud.api.mdb.redis.v1ZCgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/mdb/re" +
-      "dis/v1;redisb\006proto3"
+      "rebalance\262\322*#\n\030RebalanceClusterMetadata\022" +
+      "\007ClusterBd\n\035yandex.cloud.api.mdb.redis.v" +
+      "1ZCgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/mdb/redis/v1;redisb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -51422,20 +54981,32 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_MoveClusterMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "SourceFolderId", "DestinationFolderId", });
-    internal_static_yandex_cloud_mdb_redis_v1_BackupClusterRequest_descriptor =
+    internal_static_yandex_cloud_mdb_redis_v1_UpdateClusterHostsRequest_descriptor =
       getDescriptor().getMessageTypes().get(15);
+    internal_static_yandex_cloud_mdb_redis_v1_UpdateClusterHostsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_redis_v1_UpdateClusterHostsRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "UpdateHostSpecs", });
+    internal_static_yandex_cloud_mdb_redis_v1_UpdateClusterHostsMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_yandex_cloud_mdb_redis_v1_UpdateClusterHostsMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_redis_v1_UpdateClusterHostsMetadata_descriptor,
+        new java.lang.String[] { "ClusterId", "HostNames", });
+    internal_static_yandex_cloud_mdb_redis_v1_BackupClusterRequest_descriptor =
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_mdb_redis_v1_BackupClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_BackupClusterRequest_descriptor,
         new java.lang.String[] { "ClusterId", });
     internal_static_yandex_cloud_mdb_redis_v1_BackupClusterMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_mdb_redis_v1_BackupClusterMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_BackupClusterMetadata_descriptor,
         new java.lang.String[] { "ClusterId", });
     internal_static_yandex_cloud_mdb_redis_v1_RestoreClusterRequest_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_mdb_redis_v1_RestoreClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_RestoreClusterRequest_descriptor,
@@ -51447,37 +55018,37 @@ public final class ClusterServiceOuterClass {
         internal_static_yandex_cloud_mdb_redis_v1_RestoreClusterRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_mdb_redis_v1_RestoreClusterMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_mdb_redis_v1_RestoreClusterMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_RestoreClusterMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "BackupId", });
     internal_static_yandex_cloud_mdb_redis_v1_StartClusterFailoverRequest_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_mdb_redis_v1_StartClusterFailoverRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_StartClusterFailoverRequest_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_redis_v1_StartClusterFailoverMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_mdb_redis_v1_StartClusterFailoverMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_StartClusterFailoverMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_redis_v1_RescheduleMaintenanceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_yandex_cloud_mdb_redis_v1_RescheduleMaintenanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_RescheduleMaintenanceRequest_descriptor,
         new java.lang.String[] { "ClusterId", "RescheduleType", "DelayedUntil", });
     internal_static_yandex_cloud_mdb_redis_v1_RescheduleMaintenanceMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_yandex_cloud_mdb_redis_v1_RescheduleMaintenanceMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_RescheduleMaintenanceMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "DelayedUntil", });
     internal_static_yandex_cloud_mdb_redis_v1_LogRecord_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_yandex_cloud_mdb_redis_v1_LogRecord_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_LogRecord_descriptor,
@@ -51489,151 +55060,157 @@ public final class ClusterServiceOuterClass {
         internal_static_yandex_cloud_mdb_redis_v1_LogRecord_MessageEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_mdb_redis_v1_ListClusterLogsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_yandex_cloud_mdb_redis_v1_ListClusterLogsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_ListClusterLogsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ColumnFilter", "ServiceType", "FromTime", "ToTime", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_redis_v1_ListClusterLogsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_yandex_cloud_mdb_redis_v1_ListClusterLogsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_ListClusterLogsResponse_descriptor,
         new java.lang.String[] { "Logs", "NextPageToken", });
     internal_static_yandex_cloud_mdb_redis_v1_StreamLogRecord_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_yandex_cloud_mdb_redis_v1_StreamLogRecord_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_StreamLogRecord_descriptor,
         new java.lang.String[] { "Record", "NextRecordToken", });
     internal_static_yandex_cloud_mdb_redis_v1_StreamClusterLogsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_yandex_cloud_mdb_redis_v1_StreamClusterLogsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_StreamClusterLogsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ColumnFilter", "ServiceType", "FromTime", "ToTime", "RecordToken", "Filter", });
     internal_static_yandex_cloud_mdb_redis_v1_ListClusterOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_yandex_cloud_mdb_redis_v1_ListClusterOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_ListClusterOperationsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_redis_v1_ListClusterOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_yandex_cloud_mdb_redis_v1_ListClusterOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_ListClusterOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
     internal_static_yandex_cloud_mdb_redis_v1_ListClusterBackupsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_yandex_cloud_mdb_redis_v1_ListClusterBackupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_ListClusterBackupsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_redis_v1_ListClusterBackupsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_yandex_cloud_mdb_redis_v1_ListClusterBackupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_ListClusterBackupsResponse_descriptor,
         new java.lang.String[] { "Backups", "NextPageToken", });
     internal_static_yandex_cloud_mdb_redis_v1_ListClusterHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_yandex_cloud_mdb_redis_v1_ListClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_ListClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_redis_v1_ListClusterHostsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_yandex_cloud_mdb_redis_v1_ListClusterHostsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_ListClusterHostsResponse_descriptor,
         new java.lang.String[] { "Hosts", "NextPageToken", });
     internal_static_yandex_cloud_mdb_redis_v1_AddClusterHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_yandex_cloud_mdb_redis_v1_AddClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_AddClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "HostSpecs", });
     internal_static_yandex_cloud_mdb_redis_v1_AddClusterHostsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_yandex_cloud_mdb_redis_v1_AddClusterHostsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_AddClusterHostsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_redis_v1_DeleteClusterHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_yandex_cloud_mdb_redis_v1_DeleteClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_DeleteClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_redis_v1_DeleteClusterHostsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_yandex_cloud_mdb_redis_v1_DeleteClusterHostsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_DeleteClusterHostsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_redis_v1_GetClusterShardRequest_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_yandex_cloud_mdb_redis_v1_GetClusterShardRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_GetClusterShardRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ShardName", });
     internal_static_yandex_cloud_mdb_redis_v1_ListClusterShardsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_yandex_cloud_mdb_redis_v1_ListClusterShardsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_ListClusterShardsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_redis_v1_ListClusterShardsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_yandex_cloud_mdb_redis_v1_ListClusterShardsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_ListClusterShardsResponse_descriptor,
         new java.lang.String[] { "Shards", "NextPageToken", });
     internal_static_yandex_cloud_mdb_redis_v1_AddClusterShardRequest_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_yandex_cloud_mdb_redis_v1_AddClusterShardRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_AddClusterShardRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ShardName", "HostSpecs", });
     internal_static_yandex_cloud_mdb_redis_v1_AddClusterShardMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_yandex_cloud_mdb_redis_v1_AddClusterShardMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_AddClusterShardMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "ShardName", });
     internal_static_yandex_cloud_mdb_redis_v1_DeleteClusterShardRequest_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_yandex_cloud_mdb_redis_v1_DeleteClusterShardRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_DeleteClusterShardRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ShardName", });
     internal_static_yandex_cloud_mdb_redis_v1_DeleteClusterShardMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_yandex_cloud_mdb_redis_v1_DeleteClusterShardMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_DeleteClusterShardMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "ShardName", });
     internal_static_yandex_cloud_mdb_redis_v1_RebalanceClusterRequest_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_yandex_cloud_mdb_redis_v1_RebalanceClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_RebalanceClusterRequest_descriptor,
         new java.lang.String[] { "ClusterId", });
     internal_static_yandex_cloud_mdb_redis_v1_RebalanceClusterMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_yandex_cloud_mdb_redis_v1_RebalanceClusterMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_RebalanceClusterMetadata_descriptor,
         new java.lang.String[] { "ClusterId", });
+    internal_static_yandex_cloud_mdb_redis_v1_UpdateHostSpec_descriptor =
+      getDescriptor().getMessageTypes().get(49);
+    internal_static_yandex_cloud_mdb_redis_v1_UpdateHostSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_redis_v1_UpdateHostSpec_descriptor,
+        new java.lang.String[] { "HostName", "ReplicaPriority", "AssignPublicIp", "UpdateMask", });
     internal_static_yandex_cloud_mdb_redis_v1_HostSpec_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_yandex_cloud_mdb_redis_v1_HostSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_HostSpec_descriptor,
-        new java.lang.String[] { "ZoneId", "SubnetId", "ShardName", });
+        new java.lang.String[] { "ZoneId", "SubnetId", "ShardName", "ReplicaPriority", "AssignPublicIp", });
     internal_static_yandex_cloud_mdb_redis_v1_ConfigSpec_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_yandex_cloud_mdb_redis_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_ConfigSpec_descriptor,

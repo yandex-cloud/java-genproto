@@ -17,7 +17,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * A set of methods for managing user accounts. Currently applicable only for [Yandex.Passport accounts](/docs/iam/concepts/#passport).
+ * A set of methods for managing user accounts. Currently applicable only for [Yandex accounts](/docs/iam/concepts/#passport).
  * </pre>
  */
 @javax.annotation.Generated(
@@ -87,7 +87,7 @@ public final class UserAccountServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing user accounts. Currently applicable only for [Yandex.Passport accounts](/docs/iam/concepts/#passport).
+   * A set of methods for managing user accounts. Currently applicable only for [Yandex accounts](/docs/iam/concepts/#passport).
    * </pre>
    */
   public static abstract class UserAccountServiceImplBase implements io.grpc.BindableService {
@@ -117,7 +117,7 @@ public final class UserAccountServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing user accounts. Currently applicable only for [Yandex.Passport accounts](/docs/iam/concepts/#passport).
+   * A set of methods for managing user accounts. Currently applicable only for [Yandex accounts](/docs/iam/concepts/#passport).
    * </pre>
    */
   public static final class UserAccountServiceStub extends io.grpc.stub.AbstractStub<UserAccountServiceStub> {
@@ -150,7 +150,7 @@ public final class UserAccountServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing user accounts. Currently applicable only for [Yandex.Passport accounts](/docs/iam/concepts/#passport).
+   * A set of methods for managing user accounts. Currently applicable only for [Yandex accounts](/docs/iam/concepts/#passport).
    * </pre>
    */
   public static final class UserAccountServiceBlockingStub extends io.grpc.stub.AbstractStub<UserAccountServiceBlockingStub> {
@@ -182,7 +182,7 @@ public final class UserAccountServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing user accounts. Currently applicable only for [Yandex.Passport accounts](/docs/iam/concepts/#passport).
+   * A set of methods for managing user accounts. Currently applicable only for [Yandex accounts](/docs/iam/concepts/#passport).
    * </pre>
    */
   public static final class UserAccountServiceFutureStub extends io.grpc.stub.AbstractStub<UserAccountServiceFutureStub> {

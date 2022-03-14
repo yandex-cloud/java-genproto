@@ -1382,7 +1382,7 @@ public final class Mysql80 {
      * The size of the binary log to hold.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+     * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
      */
     boolean hasMdbPreserveBinlogBytes();
     /**
@@ -1390,7 +1390,7 @@ public final class Mysql80 {
      * The size of the binary log to hold.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+     * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
      */
     com.google.protobuf.Int64Value getMdbPreserveBinlogBytes();
     /**
@@ -1398,7 +1398,7 @@ public final class Mysql80 {
      * The size of the binary log to hold.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+     * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMdbPreserveBinlogBytesOrBuilder();
 
@@ -1748,7 +1748,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Specifies the page size for InnoDB tablespaces.
-     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_page_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
@@ -1757,7 +1757,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Specifies the page size for InnoDB tablespaces.
-     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_page_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
@@ -1766,12 +1766,124 @@ public final class Mysql80 {
     /**
      * <pre>
      * Specifies the page size for InnoDB tablespaces.
-     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_page_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getInnodbPageSizeOrBuilder();
+
+    /**
+     * <pre>
+     * The limit in bytes on the size of the temporary log files used during online DDL operations
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_online_alter_log_max_size) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+     */
+    boolean hasInnodbOnlineAlterLogMaxSize();
+    /**
+     * <pre>
+     * The limit in bytes on the size of the temporary log files used during online DDL operations
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_online_alter_log_max_size) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+     */
+    com.google.protobuf.Int64Value getInnodbOnlineAlterLogMaxSize();
+    /**
+     * <pre>
+     * The limit in bytes on the size of the temporary log files used during online DDL operations
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_online_alter_log_max_size) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getInnodbOnlineAlterLogMaxSizeOrBuilder();
+
+    /**
+     * <pre>
+     * Minimum length of words that are stored in an InnoDB FULLTEXT index
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_min_token_size) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+     */
+    boolean hasInnodbFtMinTokenSize();
+    /**
+     * <pre>
+     * Minimum length of words that are stored in an InnoDB FULLTEXT index
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_min_token_size) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+     */
+    com.google.protobuf.Int64Value getInnodbFtMinTokenSize();
+    /**
+     * <pre>
+     * Minimum length of words that are stored in an InnoDB FULLTEXT index
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_min_token_size) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getInnodbFtMinTokenSizeOrBuilder();
+
+    /**
+     * <pre>
+     * Maximum length of words that are stored in an InnoDB FULLTEXT index
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_max_token_size) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+     */
+    boolean hasInnodbFtMaxTokenSize();
+    /**
+     * <pre>
+     * Maximum length of words that are stored in an InnoDB FULLTEXT index
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_max_token_size) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+     */
+    com.google.protobuf.Int64Value getInnodbFtMaxTokenSize();
+    /**
+     * <pre>
+     * Maximum length of words that are stored in an InnoDB FULLTEXT index
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_max_token_size) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getInnodbFtMaxTokenSizeOrBuilder();
+
+    /**
+     * <pre>
+     * Table names storage and comparison strategy
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lower_case_table_names) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+     */
+    boolean hasLowerCaseTableNames();
+    /**
+     * <pre>
+     * Table names storage and comparison strategy
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lower_case_table_names) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+     */
+    com.google.protobuf.Int64Value getLowerCaseTableNames();
+    /**
+     * <pre>
+     * Table names storage and comparison strategy
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lower_case_table_names) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getLowerCaseTableNamesOrBuilder();
   }
   /**
    * <pre>
@@ -1817,6 +1929,7 @@ public final class Mysql80 {
       }
       int mutable_bitField0_ = 0;
       int mutable_bitField1_ = 0;
+      int mutable_bitField2_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2619,6 +2732,58 @@ public final class Mysql80 {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(innodbPageSize_);
                 innodbPageSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 522: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (innodbOnlineAlterLogMaxSize_ != null) {
+                subBuilder = innodbOnlineAlterLogMaxSize_.toBuilder();
+              }
+              innodbOnlineAlterLogMaxSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(innodbOnlineAlterLogMaxSize_);
+                innodbOnlineAlterLogMaxSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 530: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (innodbFtMinTokenSize_ != null) {
+                subBuilder = innodbFtMinTokenSize_.toBuilder();
+              }
+              innodbFtMinTokenSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(innodbFtMinTokenSize_);
+                innodbFtMinTokenSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 538: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (innodbFtMaxTokenSize_ != null) {
+                subBuilder = innodbFtMaxTokenSize_.toBuilder();
+              }
+              innodbFtMaxTokenSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(innodbFtMaxTokenSize_);
+                innodbFtMaxTokenSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 546: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (lowerCaseTableNames_ != null) {
+                subBuilder = lowerCaseTableNames_.toBuilder();
+              }
+              lowerCaseTableNames_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lowerCaseTableNames_);
+                lowerCaseTableNames_ = subBuilder.buildPartial();
               }
 
               break;
@@ -3670,6 +3835,7 @@ public final class Mysql80 {
 
     private int bitField0_;
     private int bitField1_;
+    private int bitField2_;
     public static final int INNODB_BUFFER_POOL_SIZE_FIELD_NUMBER = 1;
     private com.google.protobuf.Int64Value innodbBufferPoolSize_;
     /**
@@ -5500,7 +5666,7 @@ public final class Mysql80 {
      * The size of the binary log to hold.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+     * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
      */
     public boolean hasMdbPreserveBinlogBytes() {
       return mdbPreserveBinlogBytes_ != null;
@@ -5510,7 +5676,7 @@ public final class Mysql80 {
      * The size of the binary log to hold.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+     * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
      */
     public com.google.protobuf.Int64Value getMdbPreserveBinlogBytes() {
       return mdbPreserveBinlogBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mdbPreserveBinlogBytes_;
@@ -5520,7 +5686,7 @@ public final class Mysql80 {
      * The size of the binary log to hold.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+     * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getMdbPreserveBinlogBytesOrBuilder() {
       return getMdbPreserveBinlogBytes();
@@ -5986,7 +6152,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Specifies the page size for InnoDB tablespaces.
-     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_page_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
@@ -5997,7 +6163,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Specifies the page size for InnoDB tablespaces.
-     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_page_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
@@ -6008,13 +6174,157 @@ public final class Mysql80 {
     /**
      * <pre>
      * Specifies the page size for InnoDB tablespaces.
-     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_page_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getInnodbPageSizeOrBuilder() {
       return getInnodbPageSize();
+    }
+
+    public static final int INNODB_ONLINE_ALTER_LOG_MAX_SIZE_FIELD_NUMBER = 65;
+    private com.google.protobuf.Int64Value innodbOnlineAlterLogMaxSize_;
+    /**
+     * <pre>
+     * The limit in bytes on the size of the temporary log files used during online DDL operations
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_online_alter_log_max_size) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+     */
+    public boolean hasInnodbOnlineAlterLogMaxSize() {
+      return innodbOnlineAlterLogMaxSize_ != null;
+    }
+    /**
+     * <pre>
+     * The limit in bytes on the size of the temporary log files used during online DDL operations
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_online_alter_log_max_size) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+     */
+    public com.google.protobuf.Int64Value getInnodbOnlineAlterLogMaxSize() {
+      return innodbOnlineAlterLogMaxSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbOnlineAlterLogMaxSize_;
+    }
+    /**
+     * <pre>
+     * The limit in bytes on the size of the temporary log files used during online DDL operations
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_online_alter_log_max_size) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getInnodbOnlineAlterLogMaxSizeOrBuilder() {
+      return getInnodbOnlineAlterLogMaxSize();
+    }
+
+    public static final int INNODB_FT_MIN_TOKEN_SIZE_FIELD_NUMBER = 66;
+    private com.google.protobuf.Int64Value innodbFtMinTokenSize_;
+    /**
+     * <pre>
+     * Minimum length of words that are stored in an InnoDB FULLTEXT index
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_min_token_size) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+     */
+    public boolean hasInnodbFtMinTokenSize() {
+      return innodbFtMinTokenSize_ != null;
+    }
+    /**
+     * <pre>
+     * Minimum length of words that are stored in an InnoDB FULLTEXT index
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_min_token_size) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+     */
+    public com.google.protobuf.Int64Value getInnodbFtMinTokenSize() {
+      return innodbFtMinTokenSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbFtMinTokenSize_;
+    }
+    /**
+     * <pre>
+     * Minimum length of words that are stored in an InnoDB FULLTEXT index
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_min_token_size) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getInnodbFtMinTokenSizeOrBuilder() {
+      return getInnodbFtMinTokenSize();
+    }
+
+    public static final int INNODB_FT_MAX_TOKEN_SIZE_FIELD_NUMBER = 67;
+    private com.google.protobuf.Int64Value innodbFtMaxTokenSize_;
+    /**
+     * <pre>
+     * Maximum length of words that are stored in an InnoDB FULLTEXT index
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_max_token_size) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+     */
+    public boolean hasInnodbFtMaxTokenSize() {
+      return innodbFtMaxTokenSize_ != null;
+    }
+    /**
+     * <pre>
+     * Maximum length of words that are stored in an InnoDB FULLTEXT index
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_max_token_size) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+     */
+    public com.google.protobuf.Int64Value getInnodbFtMaxTokenSize() {
+      return innodbFtMaxTokenSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbFtMaxTokenSize_;
+    }
+    /**
+     * <pre>
+     * Maximum length of words that are stored in an InnoDB FULLTEXT index
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_max_token_size) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getInnodbFtMaxTokenSizeOrBuilder() {
+      return getInnodbFtMaxTokenSize();
+    }
+
+    public static final int LOWER_CASE_TABLE_NAMES_FIELD_NUMBER = 68;
+    private com.google.protobuf.Int64Value lowerCaseTableNames_;
+    /**
+     * <pre>
+     * Table names storage and comparison strategy
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lower_case_table_names) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+     */
+    public boolean hasLowerCaseTableNames() {
+      return lowerCaseTableNames_ != null;
+    }
+    /**
+     * <pre>
+     * Table names storage and comparison strategy
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lower_case_table_names) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+     */
+    public com.google.protobuf.Int64Value getLowerCaseTableNames() {
+      return lowerCaseTableNames_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : lowerCaseTableNames_;
+    }
+    /**
+     * <pre>
+     * Table names storage and comparison strategy
+     * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lower_case_table_names) for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getLowerCaseTableNamesOrBuilder() {
+      return getLowerCaseTableNames();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -6231,6 +6541,18 @@ public final class Mysql80 {
       }
       if (innodbPageSize_ != null) {
         output.writeMessage(64, getInnodbPageSize());
+      }
+      if (innodbOnlineAlterLogMaxSize_ != null) {
+        output.writeMessage(65, getInnodbOnlineAlterLogMaxSize());
+      }
+      if (innodbFtMinTokenSize_ != null) {
+        output.writeMessage(66, getInnodbFtMinTokenSize());
+      }
+      if (innodbFtMaxTokenSize_ != null) {
+        output.writeMessage(67, getInnodbFtMaxTokenSize());
+      }
+      if (lowerCaseTableNames_ != null) {
+        output.writeMessage(68, getLowerCaseTableNames());
       }
       unknownFields.writeTo(output);
     }
@@ -6509,6 +6831,22 @@ public final class Mysql80 {
       if (innodbPageSize_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(64, getInnodbPageSize());
+      }
+      if (innodbOnlineAlterLogMaxSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(65, getInnodbOnlineAlterLogMaxSize());
+      }
+      if (innodbFtMinTokenSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(66, getInnodbFtMinTokenSize());
+      }
+      if (innodbFtMaxTokenSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(67, getInnodbFtMaxTokenSize());
+      }
+      if (lowerCaseTableNames_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(68, getLowerCaseTableNames());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6809,6 +7147,26 @@ public final class Mysql80 {
         result = result && getInnodbPageSize()
             .equals(other.getInnodbPageSize());
       }
+      result = result && (hasInnodbOnlineAlterLogMaxSize() == other.hasInnodbOnlineAlterLogMaxSize());
+      if (hasInnodbOnlineAlterLogMaxSize()) {
+        result = result && getInnodbOnlineAlterLogMaxSize()
+            .equals(other.getInnodbOnlineAlterLogMaxSize());
+      }
+      result = result && (hasInnodbFtMinTokenSize() == other.hasInnodbFtMinTokenSize());
+      if (hasInnodbFtMinTokenSize()) {
+        result = result && getInnodbFtMinTokenSize()
+            .equals(other.getInnodbFtMinTokenSize());
+      }
+      result = result && (hasInnodbFtMaxTokenSize() == other.hasInnodbFtMaxTokenSize());
+      if (hasInnodbFtMaxTokenSize()) {
+        result = result && getInnodbFtMaxTokenSize()
+            .equals(other.getInnodbFtMaxTokenSize());
+      }
+      result = result && (hasLowerCaseTableNames() == other.hasLowerCaseTableNames());
+      if (hasLowerCaseTableNames()) {
+        result = result && getLowerCaseTableNames()
+            .equals(other.getLowerCaseTableNames());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -7059,6 +7417,22 @@ public final class Mysql80 {
       if (hasInnodbPageSize()) {
         hash = (37 * hash) + INNODB_PAGE_SIZE_FIELD_NUMBER;
         hash = (53 * hash) + getInnodbPageSize().hashCode();
+      }
+      if (hasInnodbOnlineAlterLogMaxSize()) {
+        hash = (37 * hash) + INNODB_ONLINE_ALTER_LOG_MAX_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getInnodbOnlineAlterLogMaxSize().hashCode();
+      }
+      if (hasInnodbFtMinTokenSize()) {
+        hash = (37 * hash) + INNODB_FT_MIN_TOKEN_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getInnodbFtMinTokenSize().hashCode();
+      }
+      if (hasInnodbFtMaxTokenSize()) {
+        hash = (37 * hash) + INNODB_FT_MAX_TOKEN_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getInnodbFtMaxTokenSize().hashCode();
+      }
+      if (hasLowerCaseTableNames()) {
+        hash = (37 * hash) + LOWER_CASE_TABLE_NAMES_FIELD_NUMBER;
+        hash = (53 * hash) + getLowerCaseTableNames().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7541,6 +7915,30 @@ public final class Mysql80 {
           innodbPageSize_ = null;
           innodbPageSizeBuilder_ = null;
         }
+        if (innodbOnlineAlterLogMaxSizeBuilder_ == null) {
+          innodbOnlineAlterLogMaxSize_ = null;
+        } else {
+          innodbOnlineAlterLogMaxSize_ = null;
+          innodbOnlineAlterLogMaxSizeBuilder_ = null;
+        }
+        if (innodbFtMinTokenSizeBuilder_ == null) {
+          innodbFtMinTokenSize_ = null;
+        } else {
+          innodbFtMinTokenSize_ = null;
+          innodbFtMinTokenSizeBuilder_ = null;
+        }
+        if (innodbFtMaxTokenSizeBuilder_ == null) {
+          innodbFtMaxTokenSize_ = null;
+        } else {
+          innodbFtMaxTokenSize_ = null;
+          innodbFtMaxTokenSizeBuilder_ = null;
+        }
+        if (lowerCaseTableNamesBuilder_ == null) {
+          lowerCaseTableNames_ = null;
+        } else {
+          lowerCaseTableNames_ = null;
+          lowerCaseTableNamesBuilder_ = null;
+        }
         return this;
       }
 
@@ -7569,8 +7967,10 @@ public final class Mysql80 {
         yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 result = new yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0(this);
         int from_bitField0_ = bitField0_;
         int from_bitField1_ = bitField1_;
+        int from_bitField2_ = bitField2_;
         int to_bitField0_ = 0;
         int to_bitField1_ = 0;
+        int to_bitField2_ = 0;
         if (innodbBufferPoolSizeBuilder_ == null) {
           result.innodbBufferPoolSize_ = innodbBufferPoolSize_;
         } else {
@@ -7859,8 +8259,29 @@ public final class Mysql80 {
         } else {
           result.innodbPageSize_ = innodbPageSizeBuilder_.build();
         }
+        if (innodbOnlineAlterLogMaxSizeBuilder_ == null) {
+          result.innodbOnlineAlterLogMaxSize_ = innodbOnlineAlterLogMaxSize_;
+        } else {
+          result.innodbOnlineAlterLogMaxSize_ = innodbOnlineAlterLogMaxSizeBuilder_.build();
+        }
+        if (innodbFtMinTokenSizeBuilder_ == null) {
+          result.innodbFtMinTokenSize_ = innodbFtMinTokenSize_;
+        } else {
+          result.innodbFtMinTokenSize_ = innodbFtMinTokenSizeBuilder_.build();
+        }
+        if (innodbFtMaxTokenSizeBuilder_ == null) {
+          result.innodbFtMaxTokenSize_ = innodbFtMaxTokenSize_;
+        } else {
+          result.innodbFtMaxTokenSize_ = innodbFtMaxTokenSizeBuilder_.build();
+        }
+        if (lowerCaseTableNamesBuilder_ == null) {
+          result.lowerCaseTableNames_ = lowerCaseTableNames_;
+        } else {
+          result.lowerCaseTableNames_ = lowerCaseTableNamesBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
+        result.bitField2_ = to_bitField2_;
         onBuilt();
         return result;
       }
@@ -8118,6 +8539,18 @@ public final class Mysql80 {
         if (other.hasInnodbPageSize()) {
           mergeInnodbPageSize(other.getInnodbPageSize());
         }
+        if (other.hasInnodbOnlineAlterLogMaxSize()) {
+          mergeInnodbOnlineAlterLogMaxSize(other.getInnodbOnlineAlterLogMaxSize());
+        }
+        if (other.hasInnodbFtMinTokenSize()) {
+          mergeInnodbFtMinTokenSize(other.getInnodbFtMinTokenSize());
+        }
+        if (other.hasInnodbFtMaxTokenSize()) {
+          mergeInnodbFtMaxTokenSize(other.getInnodbFtMaxTokenSize());
+        }
+        if (other.hasLowerCaseTableNames()) {
+          mergeLowerCaseTableNames(other.getLowerCaseTableNames());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -8148,6 +8581,7 @@ public final class Mysql80 {
       }
       private int bitField0_;
       private int bitField1_;
+      private int bitField2_;
 
       private com.google.protobuf.Int64Value innodbBufferPoolSize_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -15701,7 +16135,7 @@ public final class Mysql80 {
        * The size of the binary log to hold.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
        */
       public boolean hasMdbPreserveBinlogBytes() {
         return mdbPreserveBinlogBytesBuilder_ != null || mdbPreserveBinlogBytes_ != null;
@@ -15711,7 +16145,7 @@ public final class Mysql80 {
        * The size of the binary log to hold.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
        */
       public com.google.protobuf.Int64Value getMdbPreserveBinlogBytes() {
         if (mdbPreserveBinlogBytesBuilder_ == null) {
@@ -15725,7 +16159,7 @@ public final class Mysql80 {
        * The size of the binary log to hold.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
        */
       public Builder setMdbPreserveBinlogBytes(com.google.protobuf.Int64Value value) {
         if (mdbPreserveBinlogBytesBuilder_ == null) {
@@ -15745,7 +16179,7 @@ public final class Mysql80 {
        * The size of the binary log to hold.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
        */
       public Builder setMdbPreserveBinlogBytes(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -15763,7 +16197,7 @@ public final class Mysql80 {
        * The size of the binary log to hold.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
        */
       public Builder mergeMdbPreserveBinlogBytes(com.google.protobuf.Int64Value value) {
         if (mdbPreserveBinlogBytesBuilder_ == null) {
@@ -15785,7 +16219,7 @@ public final class Mysql80 {
        * The size of the binary log to hold.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
        */
       public Builder clearMdbPreserveBinlogBytes() {
         if (mdbPreserveBinlogBytesBuilder_ == null) {
@@ -15803,7 +16237,7 @@ public final class Mysql80 {
        * The size of the binary log to hold.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getMdbPreserveBinlogBytesBuilder() {
         
@@ -15815,7 +16249,7 @@ public final class Mysql80 {
        * The size of the binary log to hold.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMdbPreserveBinlogBytesOrBuilder() {
         if (mdbPreserveBinlogBytesBuilder_ != null) {
@@ -15830,7 +16264,7 @@ public final class Mysql80 {
        * The size of the binary log to hold.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-1099511627776"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -17711,7 +18145,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Specifies the page size for InnoDB tablespaces.
-       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_page_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
@@ -17722,7 +18156,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Specifies the page size for InnoDB tablespaces.
-       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_page_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
@@ -17737,7 +18171,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Specifies the page size for InnoDB tablespaces.
-       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_page_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
@@ -17758,7 +18192,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Specifies the page size for InnoDB tablespaces.
-       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_page_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
@@ -17777,7 +18211,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Specifies the page size for InnoDB tablespaces.
-       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_page_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
@@ -17800,7 +18234,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Specifies the page size for InnoDB tablespaces.
-       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_page_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
@@ -17819,7 +18253,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Specifies the page size for InnoDB tablespaces.
-       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_page_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
@@ -17832,7 +18266,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Specifies the page size for InnoDB tablespaces.
-       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_page_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
@@ -17848,7 +18282,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Specifies the page size for InnoDB tablespaces.
-       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_page_size).
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_page_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_page_size = 64 [(.yandex.cloud.value) = "4096-65536"];</code>
@@ -17865,6 +18299,654 @@ public final class Mysql80 {
           innodbPageSize_ = null;
         }
         return innodbPageSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value innodbOnlineAlterLogMaxSize_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbOnlineAlterLogMaxSizeBuilder_;
+      /**
+       * <pre>
+       * The limit in bytes on the size of the temporary log files used during online DDL operations
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_online_alter_log_max_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+       */
+      public boolean hasInnodbOnlineAlterLogMaxSize() {
+        return innodbOnlineAlterLogMaxSizeBuilder_ != null || innodbOnlineAlterLogMaxSize_ != null;
+      }
+      /**
+       * <pre>
+       * The limit in bytes on the size of the temporary log files used during online DDL operations
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_online_alter_log_max_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+       */
+      public com.google.protobuf.Int64Value getInnodbOnlineAlterLogMaxSize() {
+        if (innodbOnlineAlterLogMaxSizeBuilder_ == null) {
+          return innodbOnlineAlterLogMaxSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbOnlineAlterLogMaxSize_;
+        } else {
+          return innodbOnlineAlterLogMaxSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The limit in bytes on the size of the temporary log files used during online DDL operations
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_online_alter_log_max_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+       */
+      public Builder setInnodbOnlineAlterLogMaxSize(com.google.protobuf.Int64Value value) {
+        if (innodbOnlineAlterLogMaxSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          innodbOnlineAlterLogMaxSize_ = value;
+          onChanged();
+        } else {
+          innodbOnlineAlterLogMaxSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The limit in bytes on the size of the temporary log files used during online DDL operations
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_online_alter_log_max_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+       */
+      public Builder setInnodbOnlineAlterLogMaxSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (innodbOnlineAlterLogMaxSizeBuilder_ == null) {
+          innodbOnlineAlterLogMaxSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          innodbOnlineAlterLogMaxSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The limit in bytes on the size of the temporary log files used during online DDL operations
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_online_alter_log_max_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+       */
+      public Builder mergeInnodbOnlineAlterLogMaxSize(com.google.protobuf.Int64Value value) {
+        if (innodbOnlineAlterLogMaxSizeBuilder_ == null) {
+          if (innodbOnlineAlterLogMaxSize_ != null) {
+            innodbOnlineAlterLogMaxSize_ =
+              com.google.protobuf.Int64Value.newBuilder(innodbOnlineAlterLogMaxSize_).mergeFrom(value).buildPartial();
+          } else {
+            innodbOnlineAlterLogMaxSize_ = value;
+          }
+          onChanged();
+        } else {
+          innodbOnlineAlterLogMaxSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The limit in bytes on the size of the temporary log files used during online DDL operations
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_online_alter_log_max_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+       */
+      public Builder clearInnodbOnlineAlterLogMaxSize() {
+        if (innodbOnlineAlterLogMaxSizeBuilder_ == null) {
+          innodbOnlineAlterLogMaxSize_ = null;
+          onChanged();
+        } else {
+          innodbOnlineAlterLogMaxSize_ = null;
+          innodbOnlineAlterLogMaxSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The limit in bytes on the size of the temporary log files used during online DDL operations
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_online_alter_log_max_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getInnodbOnlineAlterLogMaxSizeBuilder() {
+        
+        onChanged();
+        return getInnodbOnlineAlterLogMaxSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The limit in bytes on the size of the temporary log files used during online DDL operations
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_online_alter_log_max_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getInnodbOnlineAlterLogMaxSizeOrBuilder() {
+        if (innodbOnlineAlterLogMaxSizeBuilder_ != null) {
+          return innodbOnlineAlterLogMaxSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return innodbOnlineAlterLogMaxSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : innodbOnlineAlterLogMaxSize_;
+        }
+      }
+      /**
+       * <pre>
+       * The limit in bytes on the size of the temporary log files used during online DDL operations
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_online_alter_log_max_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_online_alter_log_max_size = 65 [(.yandex.cloud.value) = "65536-107374182400"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getInnodbOnlineAlterLogMaxSizeFieldBuilder() {
+        if (innodbOnlineAlterLogMaxSizeBuilder_ == null) {
+          innodbOnlineAlterLogMaxSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getInnodbOnlineAlterLogMaxSize(),
+                  getParentForChildren(),
+                  isClean());
+          innodbOnlineAlterLogMaxSize_ = null;
+        }
+        return innodbOnlineAlterLogMaxSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value innodbFtMinTokenSize_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbFtMinTokenSizeBuilder_;
+      /**
+       * <pre>
+       * Minimum length of words that are stored in an InnoDB FULLTEXT index
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_min_token_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+       */
+      public boolean hasInnodbFtMinTokenSize() {
+        return innodbFtMinTokenSizeBuilder_ != null || innodbFtMinTokenSize_ != null;
+      }
+      /**
+       * <pre>
+       * Minimum length of words that are stored in an InnoDB FULLTEXT index
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_min_token_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+       */
+      public com.google.protobuf.Int64Value getInnodbFtMinTokenSize() {
+        if (innodbFtMinTokenSizeBuilder_ == null) {
+          return innodbFtMinTokenSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbFtMinTokenSize_;
+        } else {
+          return innodbFtMinTokenSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Minimum length of words that are stored in an InnoDB FULLTEXT index
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_min_token_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+       */
+      public Builder setInnodbFtMinTokenSize(com.google.protobuf.Int64Value value) {
+        if (innodbFtMinTokenSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          innodbFtMinTokenSize_ = value;
+          onChanged();
+        } else {
+          innodbFtMinTokenSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum length of words that are stored in an InnoDB FULLTEXT index
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_min_token_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+       */
+      public Builder setInnodbFtMinTokenSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (innodbFtMinTokenSizeBuilder_ == null) {
+          innodbFtMinTokenSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          innodbFtMinTokenSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum length of words that are stored in an InnoDB FULLTEXT index
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_min_token_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+       */
+      public Builder mergeInnodbFtMinTokenSize(com.google.protobuf.Int64Value value) {
+        if (innodbFtMinTokenSizeBuilder_ == null) {
+          if (innodbFtMinTokenSize_ != null) {
+            innodbFtMinTokenSize_ =
+              com.google.protobuf.Int64Value.newBuilder(innodbFtMinTokenSize_).mergeFrom(value).buildPartial();
+          } else {
+            innodbFtMinTokenSize_ = value;
+          }
+          onChanged();
+        } else {
+          innodbFtMinTokenSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum length of words that are stored in an InnoDB FULLTEXT index
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_min_token_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+       */
+      public Builder clearInnodbFtMinTokenSize() {
+        if (innodbFtMinTokenSizeBuilder_ == null) {
+          innodbFtMinTokenSize_ = null;
+          onChanged();
+        } else {
+          innodbFtMinTokenSize_ = null;
+          innodbFtMinTokenSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum length of words that are stored in an InnoDB FULLTEXT index
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_min_token_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getInnodbFtMinTokenSizeBuilder() {
+        
+        onChanged();
+        return getInnodbFtMinTokenSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Minimum length of words that are stored in an InnoDB FULLTEXT index
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_min_token_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getInnodbFtMinTokenSizeOrBuilder() {
+        if (innodbFtMinTokenSizeBuilder_ != null) {
+          return innodbFtMinTokenSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return innodbFtMinTokenSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : innodbFtMinTokenSize_;
+        }
+      }
+      /**
+       * <pre>
+       * Minimum length of words that are stored in an InnoDB FULLTEXT index
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_min_token_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_ft_min_token_size = 66 [(.yandex.cloud.value) = "0-16"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getInnodbFtMinTokenSizeFieldBuilder() {
+        if (innodbFtMinTokenSizeBuilder_ == null) {
+          innodbFtMinTokenSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getInnodbFtMinTokenSize(),
+                  getParentForChildren(),
+                  isClean());
+          innodbFtMinTokenSize_ = null;
+        }
+        return innodbFtMinTokenSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value innodbFtMaxTokenSize_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbFtMaxTokenSizeBuilder_;
+      /**
+       * <pre>
+       * Maximum length of words that are stored in an InnoDB FULLTEXT index
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_max_token_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+       */
+      public boolean hasInnodbFtMaxTokenSize() {
+        return innodbFtMaxTokenSizeBuilder_ != null || innodbFtMaxTokenSize_ != null;
+      }
+      /**
+       * <pre>
+       * Maximum length of words that are stored in an InnoDB FULLTEXT index
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_max_token_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+       */
+      public com.google.protobuf.Int64Value getInnodbFtMaxTokenSize() {
+        if (innodbFtMaxTokenSizeBuilder_ == null) {
+          return innodbFtMaxTokenSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbFtMaxTokenSize_;
+        } else {
+          return innodbFtMaxTokenSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Maximum length of words that are stored in an InnoDB FULLTEXT index
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_max_token_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+       */
+      public Builder setInnodbFtMaxTokenSize(com.google.protobuf.Int64Value value) {
+        if (innodbFtMaxTokenSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          innodbFtMaxTokenSize_ = value;
+          onChanged();
+        } else {
+          innodbFtMaxTokenSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum length of words that are stored in an InnoDB FULLTEXT index
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_max_token_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+       */
+      public Builder setInnodbFtMaxTokenSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (innodbFtMaxTokenSizeBuilder_ == null) {
+          innodbFtMaxTokenSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          innodbFtMaxTokenSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum length of words that are stored in an InnoDB FULLTEXT index
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_max_token_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+       */
+      public Builder mergeInnodbFtMaxTokenSize(com.google.protobuf.Int64Value value) {
+        if (innodbFtMaxTokenSizeBuilder_ == null) {
+          if (innodbFtMaxTokenSize_ != null) {
+            innodbFtMaxTokenSize_ =
+              com.google.protobuf.Int64Value.newBuilder(innodbFtMaxTokenSize_).mergeFrom(value).buildPartial();
+          } else {
+            innodbFtMaxTokenSize_ = value;
+          }
+          onChanged();
+        } else {
+          innodbFtMaxTokenSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum length of words that are stored in an InnoDB FULLTEXT index
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_max_token_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+       */
+      public Builder clearInnodbFtMaxTokenSize() {
+        if (innodbFtMaxTokenSizeBuilder_ == null) {
+          innodbFtMaxTokenSize_ = null;
+          onChanged();
+        } else {
+          innodbFtMaxTokenSize_ = null;
+          innodbFtMaxTokenSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum length of words that are stored in an InnoDB FULLTEXT index
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_max_token_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getInnodbFtMaxTokenSizeBuilder() {
+        
+        onChanged();
+        return getInnodbFtMaxTokenSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Maximum length of words that are stored in an InnoDB FULLTEXT index
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_max_token_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getInnodbFtMaxTokenSizeOrBuilder() {
+        if (innodbFtMaxTokenSizeBuilder_ != null) {
+          return innodbFtMaxTokenSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return innodbFtMaxTokenSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : innodbFtMaxTokenSize_;
+        }
+      }
+      /**
+       * <pre>
+       * Maximum length of words that are stored in an InnoDB FULLTEXT index
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ft_max_token_size) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_ft_max_token_size = 67 [(.yandex.cloud.value) = "10-84"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getInnodbFtMaxTokenSizeFieldBuilder() {
+        if (innodbFtMaxTokenSizeBuilder_ == null) {
+          innodbFtMaxTokenSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getInnodbFtMaxTokenSize(),
+                  getParentForChildren(),
+                  isClean());
+          innodbFtMaxTokenSize_ = null;
+        }
+        return innodbFtMaxTokenSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value lowerCaseTableNames_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> lowerCaseTableNamesBuilder_;
+      /**
+       * <pre>
+       * Table names storage and comparison strategy
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lower_case_table_names) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+       */
+      public boolean hasLowerCaseTableNames() {
+        return lowerCaseTableNamesBuilder_ != null || lowerCaseTableNames_ != null;
+      }
+      /**
+       * <pre>
+       * Table names storage and comparison strategy
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lower_case_table_names) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+       */
+      public com.google.protobuf.Int64Value getLowerCaseTableNames() {
+        if (lowerCaseTableNamesBuilder_ == null) {
+          return lowerCaseTableNames_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : lowerCaseTableNames_;
+        } else {
+          return lowerCaseTableNamesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Table names storage and comparison strategy
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lower_case_table_names) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+       */
+      public Builder setLowerCaseTableNames(com.google.protobuf.Int64Value value) {
+        if (lowerCaseTableNamesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lowerCaseTableNames_ = value;
+          onChanged();
+        } else {
+          lowerCaseTableNamesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Table names storage and comparison strategy
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lower_case_table_names) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+       */
+      public Builder setLowerCaseTableNames(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (lowerCaseTableNamesBuilder_ == null) {
+          lowerCaseTableNames_ = builderForValue.build();
+          onChanged();
+        } else {
+          lowerCaseTableNamesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Table names storage and comparison strategy
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lower_case_table_names) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+       */
+      public Builder mergeLowerCaseTableNames(com.google.protobuf.Int64Value value) {
+        if (lowerCaseTableNamesBuilder_ == null) {
+          if (lowerCaseTableNames_ != null) {
+            lowerCaseTableNames_ =
+              com.google.protobuf.Int64Value.newBuilder(lowerCaseTableNames_).mergeFrom(value).buildPartial();
+          } else {
+            lowerCaseTableNames_ = value;
+          }
+          onChanged();
+        } else {
+          lowerCaseTableNamesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Table names storage and comparison strategy
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lower_case_table_names) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+       */
+      public Builder clearLowerCaseTableNames() {
+        if (lowerCaseTableNamesBuilder_ == null) {
+          lowerCaseTableNames_ = null;
+          onChanged();
+        } else {
+          lowerCaseTableNames_ = null;
+          lowerCaseTableNamesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Table names storage and comparison strategy
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lower_case_table_names) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getLowerCaseTableNamesBuilder() {
+        
+        onChanged();
+        return getLowerCaseTableNamesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Table names storage and comparison strategy
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lower_case_table_names) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getLowerCaseTableNamesOrBuilder() {
+        if (lowerCaseTableNamesBuilder_ != null) {
+          return lowerCaseTableNamesBuilder_.getMessageOrBuilder();
+        } else {
+          return lowerCaseTableNames_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : lowerCaseTableNames_;
+        }
+      }
+      /**
+       * <pre>
+       * Table names storage and comparison strategy
+       * See [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lower_case_table_names) for details.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lower_case_table_names = 68 [(.yandex.cloud.value) = "0-1"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getLowerCaseTableNamesFieldBuilder() {
+        if (lowerCaseTableNamesBuilder_ == null) {
+          lowerCaseTableNamesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getLowerCaseTableNames(),
+                  getParentForChildren(),
+                  isClean());
+          lowerCaseTableNames_ = null;
+        }
+        return lowerCaseTableNamesBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -19131,7 +20213,7 @@ public final class Mysql80 {
       "\n/yandex/cloud/mdb/mysql/v1/config/mysql" +
       "8_0.proto\022 yandex.cloud.mdb.mysql.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\326-\n\016MysqlConf" +
+      "dex/cloud/validation.proto\"\2170\n\016MysqlConf" +
       "ig8_0\022K\n\027innodb_buffer_pool_size\030\001 \001(\0132\033" +
       ".google.protobuf.Int64ValueB\r\372\3071\t>=52428" +
       "80\022B\n\017max_connections\030\002 \001(\0132\033.google.pro" +
@@ -19221,73 +20303,80 @@ public final class Mysql80 {
       "ve_parallel_workers\0301 \001(\0132\033.google.proto" +
       "buf.Int64ValueB\010\372\3071\0040-64\022E\n\021regexp_time_" +
       "limit\0302 \001(\0132\033.google.protobuf.Int64Value" +
-      "B\r\372\3071\t0-1048576\022[\n\031mdb_preserve_binlog_b" +
+      "B\r\372\3071\t0-1048576\022\\\n\031mdb_preserve_binlog_b" +
       "ytes\0303 \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\033\372\3071\0271073741824-107374182400\022G\n\023interact" +
-      "ive_timeout\0304 \001(\0132\033.google.protobuf.Int6" +
-      "4ValueB\r\372\3071\t600-86400\022@\n\014wait_timeout\0305 " +
-      "\001(\0132\033.google.protobuf.Int64ValueB\r\372\3071\t60" +
-      "0-86400\022P\n\033mdb_offline_mode_enable_lag\0306" +
-      " \001(\0132\033.google.protobuf.Int64ValueB\016\372\3071\n6" +
-      "00-432000\022O\n\034mdb_offline_mode_disable_la" +
-      "g\0307 \001(\0132\033.google.protobuf.Int64ValueB\014\372\307" +
-      "1\01060-86400\022X\n\034range_optimizer_max_mem_si" +
-      "ze\0308 \001(\0132\033.google.protobuf.Int64ValueB\025\372" +
-      "\3071\0211048576-268435456\0222\n\016slow_query_log\0309" +
-      " \001(\0132\032.google.protobuf.BoolValue\022F\n slow" +
-      "_query_log_always_write_time\030: \001(\0132\034.goo" +
-      "gle.protobuf.DoubleValue\022\\\n\022log_slow_rat" +
-      "e_type\030; \001(\0162@.yandex.cloud.mdb.mysql.v1" +
-      ".config.MysqlConfig8_0.LogSlowRateType\022D" +
-      "\n\023log_slow_rate_limit\030< \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\n\372\3071\0061-1000\022:\n\026log_slow" +
-      "_sp_statements\030= \001(\0132\032.google.protobuf.B" +
-      "oolValue\022[\n\017log_slow_filter\030> \003(\0162B.yand" +
-      "ex.cloud.mdb.mysql.v1.config.MysqlConfig" +
-      "8_0.LogSlowFilterType\022M\n\033mdb_priority_ch" +
-      "oice_max_lag\030? \001(\0132\033.google.protobuf.Int" +
-      "64ValueB\013\372\3071\0070-86400\022E\n\020innodb_page_size" +
-      "\030@ \001(\0132\033.google.protobuf.Int64ValueB\016\372\3071" +
-      "\n4096-65536\"\210\004\n\007SQLMode\022\027\n\023SQLMODE_UNSPE" +
-      "CIFIED\020\000\022\027\n\023ALLOW_INVALID_DATES\020\001\022\017\n\013ANS" +
-      "I_QUOTES\020\002\022\036\n\032ERROR_FOR_DIVISION_BY_ZERO" +
-      "\020\003\022\027\n\023HIGH_NOT_PRECEDENCE\020\004\022\020\n\014IGNORE_SP" +
-      "ACE\020\005\022\031\n\025NO_AUTO_VALUE_ON_ZERO\020\006\022\030\n\024NO_B" +
-      "ACKSLASH_ESCAPES\020\007\022\032\n\026NO_ENGINE_SUBSTITU" +
-      "TION\020\010\022\033\n\027NO_UNSIGNED_SUBTRACTION\020\t\022\020\n\014N" +
-      "O_ZERO_DATE\020\n\022\023\n\017NO_ZERO_IN_DATE\020\013\022\026\n\022ON" +
-      "LY_FULL_GROUP_BY\020\017\022\033\n\027PAD_CHAR_TO_FULL_L" +
-      "ENGTH\020\020\022\023\n\017PIPES_AS_CONCAT\020\021\022\021\n\rREAL_AS_" +
-      "FLOAT\020\022\022\025\n\021STRICT_ALL_TABLES\020\023\022\027\n\023STRICT" +
-      "_TRANS_TABLES\020\024\022\034\n\030TIME_TRUNCATE_FRACTIO" +
-      "NAL\020\025\022\010\n\004ANSI\020\026\022\017\n\013TRADITIONAL\020\027\022\024\n\020NO_D" +
-      "IR_IN_CREATE\020\030\"t\n\nAuthPlugin\022\033\n\027AUTH_PLU" +
-      "GIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NATIVE_PASSWO" +
-      "RD\020\001\022\031\n\025CACHING_SHA2_PASSWORD\020\002\022\023\n\017SHA25" +
-      "6_PASSWORD\020\003\"x\n\024TransactionIsolation\022%\n!" +
-      "TRANSACTION_ISOLATION_UNSPECIFIED\020\000\022\022\n\016R" +
-      "EAD_COMMITTED\020\001\022\023\n\017REPEATABLE_READ\020\002\022\020\n\014" +
-      "SERIALIZABLE\020\003\"U\n\016BinlogRowImage\022 \n\034BINL" +
-      "OG_ROW_IMAGE_UNSPECIFIED\020\000\022\010\n\004FULL\020\001\022\013\n\007" +
-      "MINIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021SlaveParallelTy" +
-      "pe\022#\n\037SLAVE_PARALLEL_TYPE_UNSPECIFIED\020\000\022" +
-      "\014\n\010DATABASE\020\001\022\021\n\rLOGICAL_CLOCK\020\002\"M\n\017LogS" +
-      "lowRateType\022\"\n\036LOG_SLOW_RATE_TYPE_UNSPEC" +
-      "IFIED\020\000\022\013\n\007SESSION\020\001\022\t\n\005QUERY\020\002\"\241\001\n\021LogS" +
-      "lowFilterType\022$\n LOG_SLOW_FILTER_TYPE_UN" +
-      "SPECIFIED\020\000\022\r\n\tFULL_SCAN\020\001\022\r\n\tFULL_JOIN\020" +
-      "\002\022\r\n\tTMP_TABLE\020\003\022\025\n\021TMP_TABLE_ON_DISK\020\004\022" +
-      "\014\n\010FILESORT\020\005\022\024\n\020FILESORT_ON_DISK\020\006\"\360\001\n\021" +
-      "MysqlConfigSet8_0\022J\n\020effective_config\030\001 " +
-      "\001(\01320.yandex.cloud.mdb.mysql.v1.config.M" +
-      "ysqlConfig8_0\022E\n\013user_config\030\002 \001(\01320.yan" +
+      "\034\372\3071\0301073741824-1099511627776\022G\n\023interac" +
+      "tive_timeout\0304 \001(\0132\033.google.protobuf.Int" +
+      "64ValueB\r\372\3071\t600-86400\022@\n\014wait_timeout\0305" +
+      " \001(\0132\033.google.protobuf.Int64ValueB\r\372\3071\t6" +
+      "00-86400\022P\n\033mdb_offline_mode_enable_lag\030" +
+      "6 \001(\0132\033.google.protobuf.Int64ValueB\016\372\3071\n" +
+      "600-432000\022O\n\034mdb_offline_mode_disable_l" +
+      "ag\0307 \001(\0132\033.google.protobuf.Int64ValueB\014\372" +
+      "\3071\01060-86400\022X\n\034range_optimizer_max_mem_s" +
+      "ize\0308 \001(\0132\033.google.protobuf.Int64ValueB\025" +
+      "\372\3071\0211048576-268435456\0222\n\016slow_query_log\030" +
+      "9 \001(\0132\032.google.protobuf.BoolValue\022F\n slo" +
+      "w_query_log_always_write_time\030: \001(\0132\034.go" +
+      "ogle.protobuf.DoubleValue\022\\\n\022log_slow_ra" +
+      "te_type\030; \001(\0162@.yandex.cloud.mdb.mysql.v" +
+      "1.config.MysqlConfig8_0.LogSlowRateType\022" +
+      "D\n\023log_slow_rate_limit\030< \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\n\372\3071\0061-1000\022:\n\026log_slo" +
+      "w_sp_statements\030= \001(\0132\032.google.protobuf." +
+      "BoolValue\022[\n\017log_slow_filter\030> \003(\0162B.yan" +
       "dex.cloud.mdb.mysql.v1.config.MysqlConfi" +
-      "g8_0\022H\n\016default_config\030\003 \001(\01320.yandex.cl" +
-      "oud.mdb.mysql.v1.config.MysqlConfig8_0Br" +
-      "\n$yandex.cloud.api.mdb.mysql.v1.configZJ" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/mdb/mysql/v1/config;mysqlb\006prot" +
-      "o3"
+      "g8_0.LogSlowFilterType\022M\n\033mdb_priority_c" +
+      "hoice_max_lag\030? \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\013\372\3071\0070-86400\022E\n\020innodb_page_siz" +
+      "e\030@ \001(\0132\033.google.protobuf.Int64ValueB\016\372\307" +
+      "1\n4096-65536\022]\n innodb_online_alter_log_" +
+      "max_size\030A \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\026\372\3071\02265536-107374182400\022G\n\030innodb_ft" +
+      "_min_token_size\030B \001(\0132\033.google.protobuf." +
+      "Int64ValueB\010\372\3071\0040-16\022H\n\030innodb_ft_max_to" +
+      "ken_size\030C \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\t\372\3071\00510-84\022D\n\026lower_case_table_names" +
+      "\030D \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
+      "\0030-1\"\210\004\n\007SQLMode\022\027\n\023SQLMODE_UNSPECIFIED\020" +
+      "\000\022\027\n\023ALLOW_INVALID_DATES\020\001\022\017\n\013ANSI_QUOTE" +
+      "S\020\002\022\036\n\032ERROR_FOR_DIVISION_BY_ZERO\020\003\022\027\n\023H" +
+      "IGH_NOT_PRECEDENCE\020\004\022\020\n\014IGNORE_SPACE\020\005\022\031" +
+      "\n\025NO_AUTO_VALUE_ON_ZERO\020\006\022\030\n\024NO_BACKSLAS" +
+      "H_ESCAPES\020\007\022\032\n\026NO_ENGINE_SUBSTITUTION\020\010\022" +
+      "\033\n\027NO_UNSIGNED_SUBTRACTION\020\t\022\020\n\014NO_ZERO_" +
+      "DATE\020\n\022\023\n\017NO_ZERO_IN_DATE\020\013\022\026\n\022ONLY_FULL" +
+      "_GROUP_BY\020\017\022\033\n\027PAD_CHAR_TO_FULL_LENGTH\020\020" +
+      "\022\023\n\017PIPES_AS_CONCAT\020\021\022\021\n\rREAL_AS_FLOAT\020\022" +
+      "\022\025\n\021STRICT_ALL_TABLES\020\023\022\027\n\023STRICT_TRANS_" +
+      "TABLES\020\024\022\034\n\030TIME_TRUNCATE_FRACTIONAL\020\025\022\010" +
+      "\n\004ANSI\020\026\022\017\n\013TRADITIONAL\020\027\022\024\n\020NO_DIR_IN_C" +
+      "REATE\020\030\"t\n\nAuthPlugin\022\033\n\027AUTH_PLUGIN_UNS" +
+      "PECIFIED\020\000\022\031\n\025MYSQL_NATIVE_PASSWORD\020\001\022\031\n" +
+      "\025CACHING_SHA2_PASSWORD\020\002\022\023\n\017SHA256_PASSW" +
+      "ORD\020\003\"x\n\024TransactionIsolation\022%\n!TRANSAC" +
+      "TION_ISOLATION_UNSPECIFIED\020\000\022\022\n\016READ_COM" +
+      "MITTED\020\001\022\023\n\017REPEATABLE_READ\020\002\022\020\n\014SERIALI" +
+      "ZABLE\020\003\"U\n\016BinlogRowImage\022 \n\034BINLOG_ROW_" +
+      "IMAGE_UNSPECIFIED\020\000\022\010\n\004FULL\020\001\022\013\n\007MINIMAL" +
+      "\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021SlaveParallelType\022#\n\037S" +
+      "LAVE_PARALLEL_TYPE_UNSPECIFIED\020\000\022\014\n\010DATA" +
+      "BASE\020\001\022\021\n\rLOGICAL_CLOCK\020\002\"M\n\017LogSlowRate" +
+      "Type\022\"\n\036LOG_SLOW_RATE_TYPE_UNSPECIFIED\020\000" +
+      "\022\013\n\007SESSION\020\001\022\t\n\005QUERY\020\002\"\241\001\n\021LogSlowFilt" +
+      "erType\022$\n LOG_SLOW_FILTER_TYPE_UNSPECIFI" +
+      "ED\020\000\022\r\n\tFULL_SCAN\020\001\022\r\n\tFULL_JOIN\020\002\022\r\n\tTM" +
+      "P_TABLE\020\003\022\025\n\021TMP_TABLE_ON_DISK\020\004\022\014\n\010FILE" +
+      "SORT\020\005\022\024\n\020FILESORT_ON_DISK\020\006\"\360\001\n\021MysqlCo" +
+      "nfigSet8_0\022J\n\020effective_config\030\001 \001(\01320.y" +
+      "andex.cloud.mdb.mysql.v1.config.MysqlCon" +
+      "fig8_0\022E\n\013user_config\030\002 \001(\01320.yandex.clo" +
+      "ud.mdb.mysql.v1.config.MysqlConfig8_0\022H\n" +
+      "\016default_config\030\003 \001(\01320.yandex.cloud.mdb" +
+      ".mysql.v1.config.MysqlConfig8_0Br\n$yande" +
+      "x.cloud.api.mdb.mysql.v1.configZJgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/mdb/mysql/v1/config;mysqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -19308,7 +20397,7 @@ public final class Mysql80 {
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig8_0_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig8_0_descriptor,
-        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "RegexpTimeLimit", "MdbPreserveBinlogBytes", "InteractiveTimeout", "WaitTimeout", "MdbOfflineModeEnableLag", "MdbOfflineModeDisableLag", "RangeOptimizerMaxMemSize", "SlowQueryLog", "SlowQueryLogAlwaysWriteTime", "LogSlowRateType", "LogSlowRateLimit", "LogSlowSpStatements", "LogSlowFilter", "MdbPriorityChoiceMaxLag", "InnodbPageSize", });
+        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "RegexpTimeLimit", "MdbPreserveBinlogBytes", "InteractiveTimeout", "WaitTimeout", "MdbOfflineModeEnableLag", "MdbOfflineModeDisableLag", "RangeOptimizerMaxMemSize", "SlowQueryLog", "SlowQueryLogAlwaysWriteTime", "LogSlowRateType", "LogSlowRateLimit", "LogSlowSpStatements", "LogSlowFilter", "MdbPriorityChoiceMaxLag", "InnodbPageSize", "InnodbOnlineAlterLogMaxSize", "InnodbFtMinTokenSize", "InnodbFtMaxTokenSize", "LowerCaseTableNames", });
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet8_0_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet8_0_fieldAccessorTable = new

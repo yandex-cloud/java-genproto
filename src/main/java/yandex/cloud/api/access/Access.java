@@ -177,7 +177,7 @@ public final class Access {
      * <pre>
      * Type of the subject.
      * It can contain one of the following values:
-     * * `userAccount`: An account on Yandex or Yandex.Connect, added to Yandex.Cloud.
+     * * `userAccount`: An account on Yandex or Yandex Connect, added to Yandex Cloud.
      * * `serviceAccount`: A service account. This type represents the [yandex.cloud.iam.v1.ServiceAccount] resource.
      * * `federatedUser`: A federated account. This type represents a user from an identity federation, like Active Directory.
      * * `system`: System group. This type represents several accounts with a common system identifier.
@@ -191,7 +191,7 @@ public final class Access {
      * <pre>
      * Type of the subject.
      * It can contain one of the following values:
-     * * `userAccount`: An account on Yandex or Yandex.Connect, added to Yandex.Cloud.
+     * * `userAccount`: An account on Yandex or Yandex Connect, added to Yandex Cloud.
      * * `serviceAccount`: A service account. This type represents the [yandex.cloud.iam.v1.ServiceAccount] resource.
      * * `federatedUser`: A federated account. This type represents a user from an identity federation, like Active Directory.
      * * `system`: System group. This type represents several accounts with a common system identifier.
@@ -350,7 +350,7 @@ public final class Access {
      * <pre>
      * Type of the subject.
      * It can contain one of the following values:
-     * * `userAccount`: An account on Yandex or Yandex.Connect, added to Yandex.Cloud.
+     * * `userAccount`: An account on Yandex or Yandex Connect, added to Yandex Cloud.
      * * `serviceAccount`: A service account. This type represents the [yandex.cloud.iam.v1.ServiceAccount] resource.
      * * `federatedUser`: A federated account. This type represents a user from an identity federation, like Active Directory.
      * * `system`: System group. This type represents several accounts with a common system identifier.
@@ -375,7 +375,7 @@ public final class Access {
      * <pre>
      * Type of the subject.
      * It can contain one of the following values:
-     * * `userAccount`: An account on Yandex or Yandex.Connect, added to Yandex.Cloud.
+     * * `userAccount`: An account on Yandex or Yandex Connect, added to Yandex Cloud.
      * * `serviceAccount`: A service account. This type represents the [yandex.cloud.iam.v1.ServiceAccount] resource.
      * * `federatedUser`: A federated account. This type represents a user from an identity federation, like Active Directory.
      * * `system`: System group. This type represents several accounts with a common system identifier.
@@ -847,7 +847,7 @@ public final class Access {
        * <pre>
        * Type of the subject.
        * It can contain one of the following values:
-       * * `userAccount`: An account on Yandex or Yandex.Connect, added to Yandex.Cloud.
+       * * `userAccount`: An account on Yandex or Yandex Connect, added to Yandex Cloud.
        * * `serviceAccount`: A service account. This type represents the [yandex.cloud.iam.v1.ServiceAccount] resource.
        * * `federatedUser`: A federated account. This type represents a user from an identity federation, like Active Directory.
        * * `system`: System group. This type represents several accounts with a common system identifier.
@@ -872,7 +872,7 @@ public final class Access {
        * <pre>
        * Type of the subject.
        * It can contain one of the following values:
-       * * `userAccount`: An account on Yandex or Yandex.Connect, added to Yandex.Cloud.
+       * * `userAccount`: An account on Yandex or Yandex Connect, added to Yandex Cloud.
        * * `serviceAccount`: A service account. This type represents the [yandex.cloud.iam.v1.ServiceAccount] resource.
        * * `federatedUser`: A federated account. This type represents a user from an identity federation, like Active Directory.
        * * `system`: System group. This type represents several accounts with a common system identifier.
@@ -898,7 +898,7 @@ public final class Access {
        * <pre>
        * Type of the subject.
        * It can contain one of the following values:
-       * * `userAccount`: An account on Yandex or Yandex.Connect, added to Yandex.Cloud.
+       * * `userAccount`: An account on Yandex or Yandex Connect, added to Yandex Cloud.
        * * `serviceAccount`: A service account. This type represents the [yandex.cloud.iam.v1.ServiceAccount] resource.
        * * `federatedUser`: A federated account. This type represents a user from an identity federation, like Active Directory.
        * * `system`: System group. This type represents several accounts with a common system identifier.
@@ -921,7 +921,7 @@ public final class Access {
        * <pre>
        * Type of the subject.
        * It can contain one of the following values:
-       * * `userAccount`: An account on Yandex or Yandex.Connect, added to Yandex.Cloud.
+       * * `userAccount`: An account on Yandex or Yandex Connect, added to Yandex Cloud.
        * * `serviceAccount`: A service account. This type represents the [yandex.cloud.iam.v1.ServiceAccount] resource.
        * * `federatedUser`: A federated account. This type represents a user from an identity federation, like Active Directory.
        * * `system`: System group. This type represents several accounts with a common system identifier.
@@ -940,7 +940,7 @@ public final class Access {
        * <pre>
        * Type of the subject.
        * It can contain one of the following values:
-       * * `userAccount`: An account on Yandex or Yandex.Connect, added to Yandex.Cloud.
+       * * `userAccount`: An account on Yandex or Yandex Connect, added to Yandex Cloud.
        * * `serviceAccount`: A service account. This type represents the [yandex.cloud.iam.v1.ServiceAccount] resource.
        * * `federatedUser`: A federated account. This type represents a user from an identity federation, like Active Directory.
        * * `system`: System group. This type represents several accounts with a common system identifier.

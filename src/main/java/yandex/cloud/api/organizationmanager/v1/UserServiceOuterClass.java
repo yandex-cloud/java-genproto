@@ -1059,7 +1059,7 @@ public final class UserServiceOuterClass {
 
       /**
        * <pre>
-       * OpenID standard claims with additional Yandex.Organization claims.
+       * OpenID standard claims with additional Yandex Cloud Organization claims.
        * </pre>
        *
        * <code>.yandex.cloud.oauth.SubjectClaims subject_claims = 1;</code>
@@ -1067,7 +1067,7 @@ public final class UserServiceOuterClass {
       boolean hasSubjectClaims();
       /**
        * <pre>
-       * OpenID standard claims with additional Yandex.Organization claims.
+       * OpenID standard claims with additional Yandex Cloud Organization claims.
        * </pre>
        *
        * <code>.yandex.cloud.oauth.SubjectClaims subject_claims = 1;</code>
@@ -1075,7 +1075,7 @@ public final class UserServiceOuterClass {
       yandex.cloud.api.oauth.v1.Claims.SubjectClaims getSubjectClaims();
       /**
        * <pre>
-       * OpenID standard claims with additional Yandex.Organization claims.
+       * OpenID standard claims with additional Yandex Cloud Organization claims.
        * </pre>
        *
        * <code>.yandex.cloud.oauth.SubjectClaims subject_claims = 1;</code>
@@ -1170,7 +1170,7 @@ public final class UserServiceOuterClass {
       private yandex.cloud.api.oauth.v1.Claims.SubjectClaims subjectClaims_;
       /**
        * <pre>
-       * OpenID standard claims with additional Yandex.Organization claims.
+       * OpenID standard claims with additional Yandex Cloud Organization claims.
        * </pre>
        *
        * <code>.yandex.cloud.oauth.SubjectClaims subject_claims = 1;</code>
@@ -1180,7 +1180,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * OpenID standard claims with additional Yandex.Organization claims.
+       * OpenID standard claims with additional Yandex Cloud Organization claims.
        * </pre>
        *
        * <code>.yandex.cloud.oauth.SubjectClaims subject_claims = 1;</code>
@@ -1190,7 +1190,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * OpenID standard claims with additional Yandex.Organization claims.
+       * OpenID standard claims with additional Yandex Cloud Organization claims.
        * </pre>
        *
        * <code>.yandex.cloud.oauth.SubjectClaims subject_claims = 1;</code>
@@ -1520,7 +1520,7 @@ public final class UserServiceOuterClass {
             yandex.cloud.api.oauth.v1.Claims.SubjectClaims, yandex.cloud.api.oauth.v1.Claims.SubjectClaims.Builder, yandex.cloud.api.oauth.v1.Claims.SubjectClaimsOrBuilder> subjectClaimsBuilder_;
         /**
          * <pre>
-         * OpenID standard claims with additional Yandex.Organization claims.
+         * OpenID standard claims with additional Yandex Cloud Organization claims.
          * </pre>
          *
          * <code>.yandex.cloud.oauth.SubjectClaims subject_claims = 1;</code>
@@ -1530,7 +1530,7 @@ public final class UserServiceOuterClass {
         }
         /**
          * <pre>
-         * OpenID standard claims with additional Yandex.Organization claims.
+         * OpenID standard claims with additional Yandex Cloud Organization claims.
          * </pre>
          *
          * <code>.yandex.cloud.oauth.SubjectClaims subject_claims = 1;</code>
@@ -1544,7 +1544,7 @@ public final class UserServiceOuterClass {
         }
         /**
          * <pre>
-         * OpenID standard claims with additional Yandex.Organization claims.
+         * OpenID standard claims with additional Yandex Cloud Organization claims.
          * </pre>
          *
          * <code>.yandex.cloud.oauth.SubjectClaims subject_claims = 1;</code>
@@ -1564,7 +1564,7 @@ public final class UserServiceOuterClass {
         }
         /**
          * <pre>
-         * OpenID standard claims with additional Yandex.Organization claims.
+         * OpenID standard claims with additional Yandex Cloud Organization claims.
          * </pre>
          *
          * <code>.yandex.cloud.oauth.SubjectClaims subject_claims = 1;</code>
@@ -1582,7 +1582,7 @@ public final class UserServiceOuterClass {
         }
         /**
          * <pre>
-         * OpenID standard claims with additional Yandex.Organization claims.
+         * OpenID standard claims with additional Yandex Cloud Organization claims.
          * </pre>
          *
          * <code>.yandex.cloud.oauth.SubjectClaims subject_claims = 1;</code>
@@ -1604,7 +1604,7 @@ public final class UserServiceOuterClass {
         }
         /**
          * <pre>
-         * OpenID standard claims with additional Yandex.Organization claims.
+         * OpenID standard claims with additional Yandex Cloud Organization claims.
          * </pre>
          *
          * <code>.yandex.cloud.oauth.SubjectClaims subject_claims = 1;</code>
@@ -1622,7 +1622,7 @@ public final class UserServiceOuterClass {
         }
         /**
          * <pre>
-         * OpenID standard claims with additional Yandex.Organization claims.
+         * OpenID standard claims with additional Yandex Cloud Organization claims.
          * </pre>
          *
          * <code>.yandex.cloud.oauth.SubjectClaims subject_claims = 1;</code>
@@ -1634,7 +1634,7 @@ public final class UserServiceOuterClass {
         }
         /**
          * <pre>
-         * OpenID standard claims with additional Yandex.Organization claims.
+         * OpenID standard claims with additional Yandex Cloud Organization claims.
          * </pre>
          *
          * <code>.yandex.cloud.oauth.SubjectClaims subject_claims = 1;</code>
@@ -1649,7 +1649,7 @@ public final class UserServiceOuterClass {
         }
         /**
          * <pre>
-         * OpenID standard claims with additional Yandex.Organization claims.
+         * OpenID standard claims with additional Yandex Cloud Organization claims.
          * </pre>
          *
          * <code>.yandex.cloud.oauth.SubjectClaims subject_claims = 1;</code>

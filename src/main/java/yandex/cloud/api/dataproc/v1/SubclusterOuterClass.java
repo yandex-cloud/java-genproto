@@ -4123,7 +4123,7 @@ public final class SubclusterOuterClass {
      * <pre>
      * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
      * and cannot be changed. The name is generated to be unique across all existing Data Proc
-     * hosts in Yandex.Cloud, as it defines the FQDN of the host.
+     * hosts in Yandex Cloud, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -4133,7 +4133,7 @@ public final class SubclusterOuterClass {
      * <pre>
      * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
      * and cannot be changed. The name is generated to be unique across all existing Data Proc
-     * hosts in Yandex.Cloud, as it defines the FQDN of the host.
+     * hosts in Yandex Cloud, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -4327,7 +4327,7 @@ public final class SubclusterOuterClass {
      * <pre>
      * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
      * and cannot be changed. The name is generated to be unique across all existing Data Proc
-     * hosts in Yandex.Cloud, as it defines the FQDN of the host.
+     * hosts in Yandex Cloud, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -4348,7 +4348,7 @@ public final class SubclusterOuterClass {
      * <pre>
      * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
      * and cannot be changed. The name is generated to be unique across all existing Data Proc
-     * hosts in Yandex.Cloud, as it defines the FQDN of the host.
+     * hosts in Yandex Cloud, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -4879,7 +4879,7 @@ public final class SubclusterOuterClass {
        * <pre>
        * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
        * and cannot be changed. The name is generated to be unique across all existing Data Proc
-       * hosts in Yandex.Cloud, as it defines the FQDN of the host.
+       * hosts in Yandex Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -4900,7 +4900,7 @@ public final class SubclusterOuterClass {
        * <pre>
        * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
        * and cannot be changed. The name is generated to be unique across all existing Data Proc
-       * hosts in Yandex.Cloud, as it defines the FQDN of the host.
+       * hosts in Yandex Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -4922,7 +4922,7 @@ public final class SubclusterOuterClass {
        * <pre>
        * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
        * and cannot be changed. The name is generated to be unique across all existing Data Proc
-       * hosts in Yandex.Cloud, as it defines the FQDN of the host.
+       * hosts in Yandex Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -4941,7 +4941,7 @@ public final class SubclusterOuterClass {
        * <pre>
        * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
        * and cannot be changed. The name is generated to be unique across all existing Data Proc
-       * hosts in Yandex.Cloud, as it defines the FQDN of the host.
+       * hosts in Yandex Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -4956,7 +4956,7 @@ public final class SubclusterOuterClass {
        * <pre>
        * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
        * and cannot be changed. The name is generated to be unique across all existing Data Proc
-       * hosts in Yandex.Cloud, as it defines the FQDN of the host.
+       * hosts in Yandex Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>

@@ -90,7 +90,7 @@ public final class UserAccountOuterClass {
   }
   /**
    * <pre>
-   * Currently represents only [Yandex.Passport account](/docs/iam/concepts/#passport).
+   * Currently represents only [Yandex account](/docs/iam/concepts/#passport).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.iam.v1.UserAccount}
@@ -552,7 +552,7 @@ public final class UserAccountOuterClass {
     }
     /**
      * <pre>
-     * Currently represents only [Yandex.Passport account](/docs/iam/concepts/#passport).
+     * Currently represents only [Yandex account](/docs/iam/concepts/#passport).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.iam.v1.UserAccount}
@@ -1238,7 +1238,7 @@ public final class UserAccountOuterClass {
 
     /**
      * <pre>
-     * Login of the Yandex.Passport user account.
+     * Login of the Yandex user account.
      * </pre>
      *
      * <code>string login = 1;</code>
@@ -1246,7 +1246,7 @@ public final class UserAccountOuterClass {
     java.lang.String getLogin();
     /**
      * <pre>
-     * Login of the Yandex.Passport user account.
+     * Login of the Yandex user account.
      * </pre>
      *
      * <code>string login = 1;</code>
@@ -1256,7 +1256,7 @@ public final class UserAccountOuterClass {
 
     /**
      * <pre>
-     * Default email of the Yandex.Passport user account.
+     * Default email of the Yandex user account.
      * </pre>
      *
      * <code>string default_email = 2;</code>
@@ -1264,7 +1264,7 @@ public final class UserAccountOuterClass {
     java.lang.String getDefaultEmail();
     /**
      * <pre>
-     * Default email of the Yandex.Passport user account.
+     * Default email of the Yandex user account.
      * </pre>
      *
      * <code>string default_email = 2;</code>
@@ -1275,7 +1275,7 @@ public final class UserAccountOuterClass {
   /**
    * <pre>
    * A YandexPassportUserAccount resource.
-   * For more information, see [Yandex.Passport account](/docs/iam/concepts/#passport).
+   * For more information, see [Yandex account](/docs/iam/concepts/#passport).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.iam.v1.YandexPassportUserAccount}
@@ -1366,7 +1366,7 @@ public final class UserAccountOuterClass {
     private volatile java.lang.Object login_;
     /**
      * <pre>
-     * Login of the Yandex.Passport user account.
+     * Login of the Yandex user account.
      * </pre>
      *
      * <code>string login = 1;</code>
@@ -1385,7 +1385,7 @@ public final class UserAccountOuterClass {
     }
     /**
      * <pre>
-     * Login of the Yandex.Passport user account.
+     * Login of the Yandex user account.
      * </pre>
      *
      * <code>string login = 1;</code>
@@ -1408,7 +1408,7 @@ public final class UserAccountOuterClass {
     private volatile java.lang.Object defaultEmail_;
     /**
      * <pre>
-     * Default email of the Yandex.Passport user account.
+     * Default email of the Yandex user account.
      * </pre>
      *
      * <code>string default_email = 2;</code>
@@ -1427,7 +1427,7 @@ public final class UserAccountOuterClass {
     }
     /**
      * <pre>
-     * Default email of the Yandex.Passport user account.
+     * Default email of the Yandex user account.
      * </pre>
      *
      * <code>string default_email = 2;</code>
@@ -1614,7 +1614,7 @@ public final class UserAccountOuterClass {
     /**
      * <pre>
      * A YandexPassportUserAccount resource.
-     * For more information, see [Yandex.Passport account](/docs/iam/concepts/#passport).
+     * For more information, see [Yandex account](/docs/iam/concepts/#passport).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.iam.v1.YandexPassportUserAccount}
@@ -1774,7 +1774,7 @@ public final class UserAccountOuterClass {
       private java.lang.Object login_ = "";
       /**
        * <pre>
-       * Login of the Yandex.Passport user account.
+       * Login of the Yandex user account.
        * </pre>
        *
        * <code>string login = 1;</code>
@@ -1793,7 +1793,7 @@ public final class UserAccountOuterClass {
       }
       /**
        * <pre>
-       * Login of the Yandex.Passport user account.
+       * Login of the Yandex user account.
        * </pre>
        *
        * <code>string login = 1;</code>
@@ -1813,7 +1813,7 @@ public final class UserAccountOuterClass {
       }
       /**
        * <pre>
-       * Login of the Yandex.Passport user account.
+       * Login of the Yandex user account.
        * </pre>
        *
        * <code>string login = 1;</code>
@@ -1830,7 +1830,7 @@ public final class UserAccountOuterClass {
       }
       /**
        * <pre>
-       * Login of the Yandex.Passport user account.
+       * Login of the Yandex user account.
        * </pre>
        *
        * <code>string login = 1;</code>
@@ -1843,7 +1843,7 @@ public final class UserAccountOuterClass {
       }
       /**
        * <pre>
-       * Login of the Yandex.Passport user account.
+       * Login of the Yandex user account.
        * </pre>
        *
        * <code>string login = 1;</code>
@@ -1863,7 +1863,7 @@ public final class UserAccountOuterClass {
       private java.lang.Object defaultEmail_ = "";
       /**
        * <pre>
-       * Default email of the Yandex.Passport user account.
+       * Default email of the Yandex user account.
        * </pre>
        *
        * <code>string default_email = 2;</code>
@@ -1882,7 +1882,7 @@ public final class UserAccountOuterClass {
       }
       /**
        * <pre>
-       * Default email of the Yandex.Passport user account.
+       * Default email of the Yandex user account.
        * </pre>
        *
        * <code>string default_email = 2;</code>
@@ -1902,7 +1902,7 @@ public final class UserAccountOuterClass {
       }
       /**
        * <pre>
-       * Default email of the Yandex.Passport user account.
+       * Default email of the Yandex user account.
        * </pre>
        *
        * <code>string default_email = 2;</code>
@@ -1919,7 +1919,7 @@ public final class UserAccountOuterClass {
       }
       /**
        * <pre>
-       * Default email of the Yandex.Passport user account.
+       * Default email of the Yandex user account.
        * </pre>
        *
        * <code>string default_email = 2;</code>
@@ -1932,7 +1932,7 @@ public final class UserAccountOuterClass {
       }
       /**
        * <pre>
-       * Default email of the Yandex.Passport user account.
+       * Default email of the Yandex user account.
        * </pre>
        *
        * <code>string default_email = 2;</code>

@@ -20,9 +20,9 @@ public final class HostOuterClass {
 
     /**
      * <pre>
-     * Name of the Greenplum® host. The host name is assigned by Yandex.Cloud at creation time and cannot be changed.
+     * Name of the Greenplum® host. The host name is assigned by Yandex Cloud at creation time and cannot be changed.
      * 1-63 characters long.
-     * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
+     * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -30,9 +30,9 @@ public final class HostOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the Greenplum® host. The host name is assigned by Yandex.Cloud at creation time and cannot be changed.
+     * Name of the Greenplum® host. The host name is assigned by Yandex Cloud at creation time and cannot be changed.
      * 1-63 characters long.
-     * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
+     * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -42,7 +42,7 @@ public final class HostOuterClass {
 
     /**
      * <pre>
-     * ID of the Greenplum® cluster. The ID is assigned by Yandex.Cloud at creation time.
+     * ID of the Greenplum® cluster. The ID is assigned by Yandex Cloud at creation time.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -50,7 +50,7 @@ public final class HostOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Greenplum® cluster. The ID is assigned by Yandex.Cloud at creation time.
+     * ID of the Greenplum® cluster. The ID is assigned by Yandex Cloud at creation time.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -623,9 +623,9 @@ public final class HostOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the Greenplum® host. The host name is assigned by Yandex.Cloud at creation time and cannot be changed.
+     * Name of the Greenplum® host. The host name is assigned by Yandex Cloud at creation time and cannot be changed.
      * 1-63 characters long.
-     * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
+     * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -644,9 +644,9 @@ public final class HostOuterClass {
     }
     /**
      * <pre>
-     * Name of the Greenplum® host. The host name is assigned by Yandex.Cloud at creation time and cannot be changed.
+     * Name of the Greenplum® host. The host name is assigned by Yandex Cloud at creation time and cannot be changed.
      * 1-63 characters long.
-     * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
+     * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -669,7 +669,7 @@ public final class HostOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Greenplum® cluster. The ID is assigned by Yandex.Cloud at creation time.
+     * ID of the Greenplum® cluster. The ID is assigned by Yandex Cloud at creation time.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -688,7 +688,7 @@ public final class HostOuterClass {
     }
     /**
      * <pre>
-     * ID of the Greenplum® cluster. The ID is assigned by Yandex.Cloud at creation time.
+     * ID of the Greenplum® cluster. The ID is assigned by Yandex Cloud at creation time.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -1328,9 +1328,9 @@ public final class HostOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the Greenplum® host. The host name is assigned by Yandex.Cloud at creation time and cannot be changed.
+       * Name of the Greenplum® host. The host name is assigned by Yandex Cloud at creation time and cannot be changed.
        * 1-63 characters long.
-       * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
+       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -1349,9 +1349,9 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * Name of the Greenplum® host. The host name is assigned by Yandex.Cloud at creation time and cannot be changed.
+       * Name of the Greenplum® host. The host name is assigned by Yandex Cloud at creation time and cannot be changed.
        * 1-63 characters long.
-       * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
+       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -1371,9 +1371,9 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * Name of the Greenplum® host. The host name is assigned by Yandex.Cloud at creation time and cannot be changed.
+       * Name of the Greenplum® host. The host name is assigned by Yandex Cloud at creation time and cannot be changed.
        * 1-63 characters long.
-       * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
+       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -1390,9 +1390,9 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * Name of the Greenplum® host. The host name is assigned by Yandex.Cloud at creation time and cannot be changed.
+       * Name of the Greenplum® host. The host name is assigned by Yandex Cloud at creation time and cannot be changed.
        * 1-63 characters long.
-       * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
+       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -1405,9 +1405,9 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * Name of the Greenplum® host. The host name is assigned by Yandex.Cloud at creation time and cannot be changed.
+       * Name of the Greenplum® host. The host name is assigned by Yandex Cloud at creation time and cannot be changed.
        * 1-63 characters long.
-       * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
+       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -1427,7 +1427,7 @@ public final class HostOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Greenplum® cluster. The ID is assigned by Yandex.Cloud at creation time.
+       * ID of the Greenplum® cluster. The ID is assigned by Yandex Cloud at creation time.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1446,7 +1446,7 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum® cluster. The ID is assigned by Yandex.Cloud at creation time.
+       * ID of the Greenplum® cluster. The ID is assigned by Yandex Cloud at creation time.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1466,7 +1466,7 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum® cluster. The ID is assigned by Yandex.Cloud at creation time.
+       * ID of the Greenplum® cluster. The ID is assigned by Yandex Cloud at creation time.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1483,7 +1483,7 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum® cluster. The ID is assigned by Yandex.Cloud at creation time.
+       * ID of the Greenplum® cluster. The ID is assigned by Yandex Cloud at creation time.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1496,7 +1496,7 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum® cluster. The ID is assigned by Yandex.Cloud at creation time.
+       * ID of the Greenplum® cluster. The ID is assigned by Yandex Cloud at creation time.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>

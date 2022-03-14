@@ -8762,7 +8762,7 @@ public final class ClusterOuterClass {
      * <pre>
      * Name of the Redis host. The host name is assigned by MDB at creation time, and cannot be changed.
      * 1-63 characters long.
-     * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
+     * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -8772,7 +8772,7 @@ public final class ClusterOuterClass {
      * <pre>
      * Name of the Redis host. The host name is assigned by MDB at creation time, and cannot be changed.
      * 1-63 characters long.
-     * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
+     * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -8946,6 +8946,46 @@ public final class ClusterOuterClass {
      */
     com.google.protobuf.ByteString
         getShardNameBytes();
+
+    /**
+     * <pre>
+     * A replica with a low priority number is considered better for promotion.
+     * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+     * Works only for non-sharded clusters. Default value is 100.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_priority = 10;</code>
+     */
+    boolean hasReplicaPriority();
+    /**
+     * <pre>
+     * A replica with a low priority number is considered better for promotion.
+     * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+     * Works only for non-sharded clusters. Default value is 100.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_priority = 10;</code>
+     */
+    com.google.protobuf.Int64Value getReplicaPriority();
+    /**
+     * <pre>
+     * A replica with a low priority number is considered better for promotion.
+     * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+     * Works only for non-sharded clusters. Default value is 100.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_priority = 10;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getReplicaPriorityOrBuilder();
+
+    /**
+     * <pre>
+     * Flag showing public IP assignment status to this host.
+     * </pre>
+     *
+     * <code>bool assign_public_ip = 11;</code>
+     */
+    boolean getAssignPublicIp();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.redis.v1.Host}
@@ -8968,6 +9008,7 @@ public final class ClusterOuterClass {
       health_ = 0;
       services_ = java.util.Collections.emptyList();
       shardName_ = "";
+      assignPublicIp_ = false;
     }
 
     @java.lang.Override
@@ -9056,6 +9097,24 @@ public final class ClusterOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               shardName_ = s;
+              break;
+            }
+            case 82: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (replicaPriority_ != null) {
+                subBuilder = replicaPriority_.toBuilder();
+              }
+              replicaPriority_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(replicaPriority_);
+                replicaPriority_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 88: {
+
+              assignPublicIp_ = input.readBool();
               break;
             }
             default: {
@@ -9379,7 +9438,7 @@ public final class ClusterOuterClass {
      * <pre>
      * Name of the Redis host. The host name is assigned by MDB at creation time, and cannot be changed.
      * 1-63 characters long.
-     * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
+     * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -9400,7 +9459,7 @@ public final class ClusterOuterClass {
      * <pre>
      * Name of the Redis host. The host name is assigned by MDB at creation time, and cannot be changed.
      * 1-63 characters long.
-     * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
+     * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -9717,6 +9776,58 @@ public final class ClusterOuterClass {
       }
     }
 
+    public static final int REPLICA_PRIORITY_FIELD_NUMBER = 10;
+    private com.google.protobuf.Int64Value replicaPriority_;
+    /**
+     * <pre>
+     * A replica with a low priority number is considered better for promotion.
+     * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+     * Works only for non-sharded clusters. Default value is 100.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_priority = 10;</code>
+     */
+    public boolean hasReplicaPriority() {
+      return replicaPriority_ != null;
+    }
+    /**
+     * <pre>
+     * A replica with a low priority number is considered better for promotion.
+     * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+     * Works only for non-sharded clusters. Default value is 100.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_priority = 10;</code>
+     */
+    public com.google.protobuf.Int64Value getReplicaPriority() {
+      return replicaPriority_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicaPriority_;
+    }
+    /**
+     * <pre>
+     * A replica with a low priority number is considered better for promotion.
+     * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+     * Works only for non-sharded clusters. Default value is 100.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_priority = 10;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getReplicaPriorityOrBuilder() {
+      return getReplicaPriority();
+    }
+
+    public static final int ASSIGN_PUBLIC_IP_FIELD_NUMBER = 11;
+    private boolean assignPublicIp_;
+    /**
+     * <pre>
+     * Flag showing public IP assignment status to this host.
+     * </pre>
+     *
+     * <code>bool assign_public_ip = 11;</code>
+     */
+    public boolean getAssignPublicIp() {
+      return assignPublicIp_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9758,6 +9869,12 @@ public final class ClusterOuterClass {
       if (!getShardNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, shardName_);
       }
+      if (replicaPriority_ != null) {
+        output.writeMessage(10, getReplicaPriority());
+      }
+      if (assignPublicIp_ != false) {
+        output.writeBool(11, assignPublicIp_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9798,6 +9915,14 @@ public final class ClusterOuterClass {
       if (!getShardNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, shardName_);
       }
+      if (replicaPriority_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getReplicaPriority());
+      }
+      if (assignPublicIp_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, assignPublicIp_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -9833,6 +9958,13 @@ public final class ClusterOuterClass {
           .equals(other.getServicesList());
       result = result && getShardName()
           .equals(other.getShardName());
+      result = result && (hasReplicaPriority() == other.hasReplicaPriority());
+      if (hasReplicaPriority()) {
+        result = result && getReplicaPriority()
+            .equals(other.getReplicaPriority());
+      }
+      result = result && (getAssignPublicIp()
+          == other.getAssignPublicIp());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -9866,6 +9998,13 @@ public final class ClusterOuterClass {
       }
       hash = (37 * hash) + SHARD_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getShardName().hashCode();
+      if (hasReplicaPriority()) {
+        hash = (37 * hash) + REPLICA_PRIORITY_FIELD_NUMBER;
+        hash = (53 * hash) + getReplicaPriority().hashCode();
+      }
+      hash = (37 * hash) + ASSIGN_PUBLIC_IP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAssignPublicIp());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10026,6 +10165,14 @@ public final class ClusterOuterClass {
         }
         shardName_ = "";
 
+        if (replicaPriorityBuilder_ == null) {
+          replicaPriority_ = null;
+        } else {
+          replicaPriority_ = null;
+          replicaPriorityBuilder_ = null;
+        }
+        assignPublicIp_ = false;
+
         return this;
       }
 
@@ -10075,6 +10222,12 @@ public final class ClusterOuterClass {
           result.services_ = servicesBuilder_.build();
         }
         result.shardName_ = shardName_;
+        if (replicaPriorityBuilder_ == null) {
+          result.replicaPriority_ = replicaPriority_;
+        } else {
+          result.replicaPriority_ = replicaPriorityBuilder_.build();
+        }
+        result.assignPublicIp_ = assignPublicIp_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -10179,6 +10332,12 @@ public final class ClusterOuterClass {
           shardName_ = other.shardName_;
           onChanged();
         }
+        if (other.hasReplicaPriority()) {
+          mergeReplicaPriority(other.getReplicaPriority());
+        }
+        if (other.getAssignPublicIp() != false) {
+          setAssignPublicIp(other.getAssignPublicIp());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -10214,7 +10373,7 @@ public final class ClusterOuterClass {
        * <pre>
        * Name of the Redis host. The host name is assigned by MDB at creation time, and cannot be changed.
        * 1-63 characters long.
-       * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
+       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -10235,7 +10394,7 @@ public final class ClusterOuterClass {
        * <pre>
        * Name of the Redis host. The host name is assigned by MDB at creation time, and cannot be changed.
        * 1-63 characters long.
-       * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
+       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -10257,7 +10416,7 @@ public final class ClusterOuterClass {
        * <pre>
        * Name of the Redis host. The host name is assigned by MDB at creation time, and cannot be changed.
        * 1-63 characters long.
-       * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
+       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -10276,7 +10435,7 @@ public final class ClusterOuterClass {
        * <pre>
        * Name of the Redis host. The host name is assigned by MDB at creation time, and cannot be changed.
        * 1-63 characters long.
-       * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
+       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -10291,7 +10450,7 @@ public final class ClusterOuterClass {
        * <pre>
        * Name of the Redis host. The host name is assigned by MDB at creation time, and cannot be changed.
        * 1-63 characters long.
-       * The name is unique across all existing MDB hosts in Yandex.Cloud, as it defines the FQDN of the host.
+       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -11235,6 +11394,215 @@ public final class ClusterOuterClass {
   checkByteStringIsUtf8(value);
         
         shardName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value replicaPriority_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replicaPriorityBuilder_;
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 10;</code>
+       */
+      public boolean hasReplicaPriority() {
+        return replicaPriorityBuilder_ != null || replicaPriority_ != null;
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 10;</code>
+       */
+      public com.google.protobuf.Int64Value getReplicaPriority() {
+        if (replicaPriorityBuilder_ == null) {
+          return replicaPriority_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicaPriority_;
+        } else {
+          return replicaPriorityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 10;</code>
+       */
+      public Builder setReplicaPriority(com.google.protobuf.Int64Value value) {
+        if (replicaPriorityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          replicaPriority_ = value;
+          onChanged();
+        } else {
+          replicaPriorityBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 10;</code>
+       */
+      public Builder setReplicaPriority(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (replicaPriorityBuilder_ == null) {
+          replicaPriority_ = builderForValue.build();
+          onChanged();
+        } else {
+          replicaPriorityBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 10;</code>
+       */
+      public Builder mergeReplicaPriority(com.google.protobuf.Int64Value value) {
+        if (replicaPriorityBuilder_ == null) {
+          if (replicaPriority_ != null) {
+            replicaPriority_ =
+              com.google.protobuf.Int64Value.newBuilder(replicaPriority_).mergeFrom(value).buildPartial();
+          } else {
+            replicaPriority_ = value;
+          }
+          onChanged();
+        } else {
+          replicaPriorityBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 10;</code>
+       */
+      public Builder clearReplicaPriority() {
+        if (replicaPriorityBuilder_ == null) {
+          replicaPriority_ = null;
+          onChanged();
+        } else {
+          replicaPriority_ = null;
+          replicaPriorityBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 10;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getReplicaPriorityBuilder() {
+        
+        onChanged();
+        return getReplicaPriorityFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 10;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getReplicaPriorityOrBuilder() {
+        if (replicaPriorityBuilder_ != null) {
+          return replicaPriorityBuilder_.getMessageOrBuilder();
+        } else {
+          return replicaPriority_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : replicaPriority_;
+        }
+      }
+      /**
+       * <pre>
+       * A replica with a low priority number is considered better for promotion.
+       * A replica with priority of 0 will never be selected by Redis Sentinel for promotion.
+       * Works only for non-sharded clusters. Default value is 100.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_priority = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getReplicaPriorityFieldBuilder() {
+        if (replicaPriorityBuilder_ == null) {
+          replicaPriorityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getReplicaPriority(),
+                  getParentForChildren(),
+                  isClean());
+          replicaPriority_ = null;
+        }
+        return replicaPriorityBuilder_;
+      }
+
+      private boolean assignPublicIp_ ;
+      /**
+       * <pre>
+       * Flag showing public IP assignment status to this host.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 11;</code>
+       */
+      public boolean getAssignPublicIp() {
+        return assignPublicIp_;
+      }
+      /**
+       * <pre>
+       * Flag showing public IP assignment status to this host.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 11;</code>
+       */
+      public Builder setAssignPublicIp(boolean value) {
+        
+        assignPublicIp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Flag showing public IP assignment status to this host.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 11;</code>
+       */
+      public Builder clearAssignPublicIp() {
+        
+        assignPublicIp_ = false;
         onChanged();
         return this;
       }
@@ -13667,80 +14035,83 @@ public final class ClusterOuterClass {
     java.lang.String[] descriptorData = {
       "\n\'yandex/cloud/mdb/redis/v1/cluster.prot" +
       "o\022\031yandex.cloud.mdb.redis.v1\032\037google/pro" +
-      "tobuf/timestamp.proto\032\033google/type/timeo" +
-      "fday.proto\032/yandex/cloud/mdb/redis/v1/co" +
-      "nfig/redis5_0.proto\032/yandex/cloud/mdb/re" +
-      "dis/v1/config/redis6_0.proto\032/yandex/clo" +
-      "ud/mdb/redis/v1/config/redis6_2.proto\032+y" +
-      "andex/cloud/mdb/redis/v1/maintenance.pro" +
-      "to\"\234\t\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030" +
-      "\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.proto" +
-      "buf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descripti" +
-      "on\030\005 \001(\t\022>\n\006labels\030\006 \003(\0132..yandex.cloud." +
-      "mdb.redis.v1.Cluster.LabelsEntry\022C\n\013envi" +
-      "ronment\030\007 \001(\0162..yandex.cloud.mdb.redis.v" +
-      "1.Cluster.Environment\0229\n\nmonitoring\030\010 \003(" +
-      "\0132%.yandex.cloud.mdb.redis.v1.Monitoring" +
-      "\0228\n\006config\030\t \001(\0132(.yandex.cloud.mdb.redi" +
-      "s.v1.ClusterConfig\022\022\n\nnetwork_id\030\n \001(\t\0229" +
-      "\n\006health\030\013 \001(\0162).yandex.cloud.mdb.redis." +
-      "v1.Cluster.Health\0229\n\006status\030\014 \001(\0162).yand" +
-      "ex.cloud.mdb.redis.v1.Cluster.Status\022\017\n\007" +
-      "sharded\030\r \001(\010\022H\n\022maintenance_window\030\016 \001(" +
-      "\0132,.yandex.cloud.mdb.redis.v1.Maintenanc" +
-      "eWindow\022J\n\021planned_operation\030\017 \001(\0132/.yan" +
-      "dex.cloud.mdb.redis.v1.MaintenanceOperat" +
-      "ion\022\032\n\022security_group_ids\030\020 \003(\t\022\023\n\013tls_e" +
-      "nabled\030\021 \001(\010\022\033\n\023deletion_protection\030\022 \001(" +
-      "\010\022L\n\020persistence_mode\030\023 \001(\01622.yandex.clo" +
-      "ud.mdb.redis.v1.Cluster.PersistenceMode\032" +
-      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UNS" +
-      "PECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020" +
-      "\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE" +
-      "\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016" +
-      "STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNIN" +
-      "G\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING" +
-      "\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"\"\n\017Persist" +
-      "enceMode\022\006\n\002ON\020\000\022\007\n\003OFF\020\001\"=\n\nMonitoring\022" +
-      "\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004li" +
-      "nk\030\003 \001(\t\"\367\003\n\rClusterConfig\022\017\n\007version\030\001 " +
-      "\001(\t\022`\n\020redis_config_5_0\030\002 \001(\01323.yandex.c" +
-      "loud.mdb.redis.v1.config.RedisConfigSet5" +
-      "_0H\000R\017redisConfig_5_0\022`\n\020redis_config_6_" +
-      "0\030\006 \001(\01323.yandex.cloud.mdb.redis.v1.conf" +
-      "ig.RedisConfigSet6_0H\000R\017redisConfig_6_0\022" +
-      "`\n\020redis_config_6_2\030\007 \001(\01323.yandex.cloud" +
-      ".mdb.redis.v1.config.RedisConfigSet6_2H\000" +
-      "R\017redisConfig_6_2\0227\n\tresources\030\003 \001(\0132$.y" +
-      "andex.cloud.mdb.redis.v1.Resources\0223\n\023ba" +
-      "ckup_window_start\030\004 \001(\0132\026.google.type.Ti" +
-      "meOfDay\0221\n\006access\030\005 \001(\0132!.yandex.cloud.m" +
-      "db.redis.v1.AccessB\016\n\014redis_config\")\n\005Sh" +
-      "ard\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\"\257\003" +
-      "\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t" +
-      "\022\017\n\007zone_id\030\003 \001(\t\022\021\n\tsubnet_id\030\004 \001(\t\0227\n\t" +
-      "resources\030\005 \001(\0132$.yandex.cloud.mdb.redis" +
-      ".v1.Resources\0222\n\004role\030\006 \001(\0162$.yandex.clo" +
-      "ud.mdb.redis.v1.Host.Role\0226\n\006health\030\007 \001(" +
-      "\0162&.yandex.cloud.mdb.redis.v1.Host.Healt" +
-      "h\0224\n\010services\030\010 \003(\0132\".yandex.cloud.mdb.r" +
-      "edis.v1.Service\022\022\n\nshard_name\030\t \001(\t\"1\n\004R" +
-      "ole\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007REP" +
-      "LICA\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005" +
-      "ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\367\001\n\007Serv" +
-      "ice\0225\n\004type\030\001 \001(\0162\'.yandex.cloud.mdb.red" +
-      "is.v1.Service.Type\0229\n\006health\030\002 \001(\0162).yan" +
-      "dex.cloud.mdb.redis.v1.Service.Health\"G\n" +
-      "\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005REDIS\020\001\022\013" +
-      "\n\007ARBITER\020\002\022\021\n\rREDIS_CLUSTER\020\003\"1\n\006Health" +
-      "\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020" +
-      "\002\"P\n\tResources\022\032\n\022resource_preset_id\030\001 \001" +
-      "(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 " +
-      "\001(\t\"\033\n\006Access\022\021\n\tdata_lens\030\001 \001(\010Bd\n\035yand" +
-      "ex.cloud.api.mdb.redis.v1ZCgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/mdb/" +
-      "redis/v1;redisb\006proto3"
+      "tobuf/timestamp.proto\032\036google/protobuf/w" +
+      "rappers.proto\032\033google/type/timeofday.pro" +
+      "to\032/yandex/cloud/mdb/redis/v1/config/red" +
+      "is5_0.proto\032/yandex/cloud/mdb/redis/v1/c" +
+      "onfig/redis6_0.proto\032/yandex/cloud/mdb/r" +
+      "edis/v1/config/redis6_2.proto\032+yandex/cl" +
+      "oud/mdb/redis/v1/maintenance.proto\"\234\t\n\007C" +
+      "luster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n" +
+      "\ncreated_at\030\003 \001(\0132\032.google.protobuf.Time" +
+      "stamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t" +
+      "\022>\n\006labels\030\006 \003(\0132..yandex.cloud.mdb.redi" +
+      "s.v1.Cluster.LabelsEntry\022C\n\013environment\030" +
+      "\007 \001(\0162..yandex.cloud.mdb.redis.v1.Cluste" +
+      "r.Environment\0229\n\nmonitoring\030\010 \003(\0132%.yand" +
+      "ex.cloud.mdb.redis.v1.Monitoring\0228\n\006conf" +
+      "ig\030\t \001(\0132(.yandex.cloud.mdb.redis.v1.Clu" +
+      "sterConfig\022\022\n\nnetwork_id\030\n \001(\t\0229\n\006health" +
+      "\030\013 \001(\0162).yandex.cloud.mdb.redis.v1.Clust" +
+      "er.Health\0229\n\006status\030\014 \001(\0162).yandex.cloud" +
+      ".mdb.redis.v1.Cluster.Status\022\017\n\007sharded\030" +
+      "\r \001(\010\022H\n\022maintenance_window\030\016 \001(\0132,.yand" +
+      "ex.cloud.mdb.redis.v1.MaintenanceWindow\022" +
+      "J\n\021planned_operation\030\017 \001(\0132/.yandex.clou" +
+      "d.mdb.redis.v1.MaintenanceOperation\022\032\n\022s" +
+      "ecurity_group_ids\030\020 \003(\t\022\023\n\013tls_enabled\030\021" +
+      " \001(\010\022\033\n\023deletion_protection\030\022 \001(\010\022L\n\020per" +
+      "sistence_mode\030\023 \001(\01622.yandex.cloud.mdb.r" +
+      "edis.v1.Cluster.PersistenceMode\032-\n\013Label" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I" +
+      "\n\013Environment\022\033\n\027ENVIRONMENT_UNSPECIFIED" +
+      "\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Hea" +
+      "lth\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DE" +
+      "AD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_U" +
+      "NKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005E" +
+      "RROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007ST" +
+      "OPPED\020\006\022\014\n\010STARTING\020\007\"\"\n\017PersistenceMode" +
+      "\022\006\n\002ON\020\000\022\007\n\003OFF\020\001\"=\n\nMonitoring\022\014\n\004name\030" +
+      "\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t" +
+      "\"\367\003\n\rClusterConfig\022\017\n\007version\030\001 \001(\t\022`\n\020r" +
+      "edis_config_5_0\030\002 \001(\01323.yandex.cloud.mdb" +
+      ".redis.v1.config.RedisConfigSet5_0H\000R\017re" +
+      "disConfig_5_0\022`\n\020redis_config_6_0\030\006 \001(\0132" +
+      "3.yandex.cloud.mdb.redis.v1.config.Redis" +
+      "ConfigSet6_0H\000R\017redisConfig_6_0\022`\n\020redis" +
+      "_config_6_2\030\007 \001(\01323.yandex.cloud.mdb.red" +
+      "is.v1.config.RedisConfigSet6_2H\000R\017redisC" +
+      "onfig_6_2\0227\n\tresources\030\003 \001(\0132$.yandex.cl" +
+      "oud.mdb.redis.v1.Resources\0223\n\023backup_win" +
+      "dow_start\030\004 \001(\0132\026.google.type.TimeOfDay\022" +
+      "1\n\006access\030\005 \001(\0132!.yandex.cloud.mdb.redis" +
+      ".v1.AccessB\016\n\014redis_config\")\n\005Shard\022\014\n\004n" +
+      "ame\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\"\200\004\n\004Host\022\014" +
+      "\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone" +
+      "_id\030\003 \001(\t\022\021\n\tsubnet_id\030\004 \001(\t\0227\n\tresource" +
+      "s\030\005 \001(\0132$.yandex.cloud.mdb.redis.v1.Reso" +
+      "urces\0222\n\004role\030\006 \001(\0162$.yandex.cloud.mdb.r" +
+      "edis.v1.Host.Role\0226\n\006health\030\007 \001(\0162&.yand" +
+      "ex.cloud.mdb.redis.v1.Host.Health\0224\n\010ser" +
+      "vices\030\010 \003(\0132\".yandex.cloud.mdb.redis.v1." +
+      "Service\022\022\n\nshard_name\030\t \001(\t\0225\n\020replica_p" +
+      "riority\030\n \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022\030\n\020assign_public_ip\030\013 \001(\010\"1\n\004Role\022\020\n\014" +
+      "ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"" +
+      "?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001" +
+      "\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\367\001\n\007Service\0225\n\004" +
+      "type\030\001 \001(\0162\'.yandex.cloud.mdb.redis.v1.S" +
+      "ervice.Type\0229\n\006health\030\002 \001(\0162).yandex.clo" +
+      "ud.mdb.redis.v1.Service.Health\"G\n\004Type\022\024" +
+      "\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005REDIS\020\001\022\013\n\007ARBIT" +
+      "ER\020\002\022\021\n\rREDIS_CLUSTER\020\003\"1\n\006Health\022\022\n\016HEA" +
+      "LTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tRe" +
+      "sources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\td" +
+      "isk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\033\n\006" +
+      "Access\022\021\n\tdata_lens\030\001 \001(\010Bd\n\035yandex.clou" +
+      "d.api.mdb.redis.v1ZCgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/mdb/redis/v" +
+      "1;redisb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13754,6 +14125,7 @@ public final class ClusterOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.type.TimeOfDayProto.getDescriptor(),
           yandex.cloud.api.mdb.redis.v1.config.Redis50.getDescriptor(),
           yandex.cloud.api.mdb.redis.v1.config.Redis60.getDescriptor(),
@@ -13795,7 +14167,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_redis_v1_Host_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_Host_descriptor,
-        new java.lang.String[] { "Name", "ClusterId", "ZoneId", "SubnetId", "Resources", "Role", "Health", "Services", "ShardName", });
+        new java.lang.String[] { "Name", "ClusterId", "ZoneId", "SubnetId", "Resources", "Role", "Health", "Services", "ShardName", "ReplicaPriority", "AssignPublicIp", });
     internal_static_yandex_cloud_mdb_redis_v1_Service_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_mdb_redis_v1_Service_fieldAccessorTable = new
@@ -13815,6 +14187,7 @@ public final class ClusterOuterClass {
         internal_static_yandex_cloud_mdb_redis_v1_Access_descriptor,
         new java.lang.String[] { "DataLens", });
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
     com.google.type.TimeOfDayProto.getDescriptor();
     yandex.cloud.api.mdb.redis.v1.config.Redis50.getDescriptor();
     yandex.cloud.api.mdb.redis.v1.config.Redis60.getDescriptor();

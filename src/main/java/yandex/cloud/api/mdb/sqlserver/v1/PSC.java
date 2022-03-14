@@ -7203,7 +7203,7 @@ public final class PSC {
      * <pre>
      * Name of the SQL Server host. The host name is assigned by Managed Service for SQL Server
      * at creation time, and cannot be changed. 1-63 characters long.
-     * The name is unique across all existing database hosts in Yandex.Cloud,
+     * The name is unique across all existing database hosts in Yandex Cloud,
      * as it defines the FQDN of the host.
      * </pre>
      *
@@ -7214,7 +7214,7 @@ public final class PSC {
      * <pre>
      * Name of the SQL Server host. The host name is assigned by Managed Service for SQL Server
      * at creation time, and cannot be changed. 1-63 characters long.
-     * The name is unique across all existing database hosts in Yandex.Cloud,
+     * The name is unique across all existing database hosts in Yandex Cloud,
      * as it defines the FQDN of the host.
      * </pre>
      *
@@ -7822,7 +7822,7 @@ public final class PSC {
      * <pre>
      * Name of the SQL Server host. The host name is assigned by Managed Service for SQL Server
      * at creation time, and cannot be changed. 1-63 characters long.
-     * The name is unique across all existing database hosts in Yandex.Cloud,
+     * The name is unique across all existing database hosts in Yandex Cloud,
      * as it defines the FQDN of the host.
      * </pre>
      *
@@ -7844,7 +7844,7 @@ public final class PSC {
      * <pre>
      * Name of the SQL Server host. The host name is assigned by Managed Service for SQL Server
      * at creation time, and cannot be changed. 1-63 characters long.
-     * The name is unique across all existing database hosts in Yandex.Cloud,
+     * The name is unique across all existing database hosts in Yandex Cloud,
      * as it defines the FQDN of the host.
      * </pre>
      *
@@ -8641,7 +8641,7 @@ public final class PSC {
        * <pre>
        * Name of the SQL Server host. The host name is assigned by Managed Service for SQL Server
        * at creation time, and cannot be changed. 1-63 characters long.
-       * The name is unique across all existing database hosts in Yandex.Cloud,
+       * The name is unique across all existing database hosts in Yandex Cloud,
        * as it defines the FQDN of the host.
        * </pre>
        *
@@ -8663,7 +8663,7 @@ public final class PSC {
        * <pre>
        * Name of the SQL Server host. The host name is assigned by Managed Service for SQL Server
        * at creation time, and cannot be changed. 1-63 characters long.
-       * The name is unique across all existing database hosts in Yandex.Cloud,
+       * The name is unique across all existing database hosts in Yandex Cloud,
        * as it defines the FQDN of the host.
        * </pre>
        *
@@ -8686,7 +8686,7 @@ public final class PSC {
        * <pre>
        * Name of the SQL Server host. The host name is assigned by Managed Service for SQL Server
        * at creation time, and cannot be changed. 1-63 characters long.
-       * The name is unique across all existing database hosts in Yandex.Cloud,
+       * The name is unique across all existing database hosts in Yandex Cloud,
        * as it defines the FQDN of the host.
        * </pre>
        *
@@ -8706,7 +8706,7 @@ public final class PSC {
        * <pre>
        * Name of the SQL Server host. The host name is assigned by Managed Service for SQL Server
        * at creation time, and cannot be changed. 1-63 characters long.
-       * The name is unique across all existing database hosts in Yandex.Cloud,
+       * The name is unique across all existing database hosts in Yandex Cloud,
        * as it defines the FQDN of the host.
        * </pre>
        *
@@ -8722,7 +8722,7 @@ public final class PSC {
        * <pre>
        * Name of the SQL Server host. The host name is assigned by Managed Service for SQL Server
        * at creation time, and cannot be changed. 1-63 characters long.
-       * The name is unique across all existing database hosts in Yandex.Cloud,
+       * The name is unique across all existing database hosts in Yandex Cloud,
        * as it defines the FQDN of the host.
        * </pre>
        *

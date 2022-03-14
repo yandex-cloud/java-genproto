@@ -1198,7 +1198,7 @@ public final class Mysql {
      * <pre>
      * Managed cluster
      * 
-     * Yandex.Cloud Managed MySQL cluster ID
+     * Yandex Managed Service for MySQL cluster ID
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
@@ -1208,7 +1208,7 @@ public final class Mysql {
      * <pre>
      * Managed cluster
      * 
-     * Yandex.Cloud Managed MySQL cluster ID
+     * Yandex Managed Service for MySQL cluster ID
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
@@ -1383,7 +1383,7 @@ public final class Mysql {
      * <pre>
      * Managed cluster
      * 
-     * Yandex.Cloud Managed MySQL cluster ID
+     * Yandex Managed Service for MySQL cluster ID
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
@@ -1409,7 +1409,7 @@ public final class Mysql {
      * <pre>
      * Managed cluster
      * 
-     * Yandex.Cloud Managed MySQL cluster ID
+     * Yandex Managed Service for MySQL cluster ID
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
@@ -1850,7 +1850,7 @@ public final class Mysql {
        * <pre>
        * Managed cluster
        * 
-       * Yandex.Cloud Managed MySQL cluster ID
+       * Yandex Managed Service for MySQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
@@ -1876,7 +1876,7 @@ public final class Mysql {
        * <pre>
        * Managed cluster
        * 
-       * Yandex.Cloud Managed MySQL cluster ID
+       * Yandex Managed Service for MySQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
@@ -1903,7 +1903,7 @@ public final class Mysql {
        * <pre>
        * Managed cluster
        * 
-       * Yandex.Cloud Managed MySQL cluster ID
+       * Yandex Managed Service for MySQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
@@ -1922,7 +1922,7 @@ public final class Mysql {
        * <pre>
        * Managed cluster
        * 
-       * Yandex.Cloud Managed MySQL cluster ID
+       * Yandex Managed Service for MySQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
@@ -1939,7 +1939,7 @@ public final class Mysql {
        * <pre>
        * Managed cluster
        * 
-       * Yandex.Cloud Managed MySQL cluster ID
+       * Yandex Managed Service for MySQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
