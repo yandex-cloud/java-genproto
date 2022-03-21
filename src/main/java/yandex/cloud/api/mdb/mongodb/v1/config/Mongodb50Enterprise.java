@@ -92,6 +92,81 @@ public final class Mongodb50Enterprise {
      * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Network net = 3;</code>
      */
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.NetworkOrBuilder getNetOrBuilder();
+
+    /**
+     * <pre>
+     * `security` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+     */
+    boolean hasSecurity();
+    /**
+     * <pre>
+     * `security` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security getSecurity();
+    /**
+     * <pre>
+     * `security` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SecurityOrBuilder getSecurityOrBuilder();
+
+    /**
+     * <pre>
+     * `AuditLog` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+     */
+    boolean hasAuditLog();
+    /**
+     * <pre>
+     * `AuditLog` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog getAuditLog();
+    /**
+     * <pre>
+     * `AuditLog` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLogOrBuilder getAuditLogOrBuilder();
+
+    /**
+     * <pre>
+     * `SetParameter` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+     */
+    boolean hasSetParameter();
+    /**
+     * <pre>
+     * `SetParameter` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter getSetParameter();
+    /**
+     * <pre>
+     * `SetParameter` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameterOrBuilder getSetParameterOrBuilder();
   }
   /**
    * <pre>
@@ -172,6 +247,45 @@ public final class Mongodb50Enterprise {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(net_);
                 net_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.Builder subBuilder = null;
+              if (security_ != null) {
+                subBuilder = security_.toBuilder();
+              }
+              security_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(security_);
+                security_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog.Builder subBuilder = null;
+              if (auditLog_ != null) {
+                subBuilder = auditLog_.toBuilder();
+              }
+              auditLog_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(auditLog_);
+                auditLog_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter.Builder subBuilder = null;
+              if (setParameter_ != null) {
+                subBuilder = setParameter_.toBuilder();
+              }
+              setParameter_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(setParameter_);
+                setParameter_ = subBuilder.buildPartial();
               }
 
               break;
@@ -5724,6 +5838,3793 @@ public final class Mongodb50Enterprise {
 
     }
 
+    public interface SecurityOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * If encryption at rest should be enabled or not
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+       */
+      boolean hasEnableEncryption();
+      /**
+       * <pre>
+       * If encryption at rest should be enabled or not
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+       */
+      com.google.protobuf.BoolValue getEnableEncryption();
+      /**
+       * <pre>
+       * If encryption at rest should be enabled or not
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+       */
+      com.google.protobuf.BoolValueOrBuilder getEnableEncryptionOrBuilder();
+
+      /**
+       * <pre>
+       * `kmip` section of mongod security config
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+       */
+      boolean hasKmip();
+      /**
+       * <pre>
+       * `kmip` section of mongod security config
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP getKmip();
+      /**
+       * <pre>
+       * `kmip` section of mongod security config
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIPOrBuilder getKmipOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security}
+     */
+    public  static final class Security extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security)
+        SecurityOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Security.newBuilder() to construct.
+      private Security(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Security() {
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Security(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.BoolValue.Builder subBuilder = null;
+                if (enableEncryption_ != null) {
+                  subBuilder = enableEncryption_.toBuilder();
+                }
+                enableEncryption_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(enableEncryption_);
+                  enableEncryption_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP.Builder subBuilder = null;
+                if (kmip_ != null) {
+                  subBuilder = kmip_.toBuilder();
+                }
+                kmip_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(kmip_);
+                  kmip_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.Builder.class);
+      }
+
+      public interface KMIPOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * KMIP server name
+         * </pre>
+         *
+         * <code>string server_name = 1;</code>
+         */
+        java.lang.String getServerName();
+        /**
+         * <pre>
+         * KMIP server name
+         * </pre>
+         *
+         * <code>string server_name = 1;</code>
+         */
+        com.google.protobuf.ByteString
+            getServerNameBytes();
+
+        /**
+         * <pre>
+         * KMIP server port
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value port = 2;</code>
+         */
+        boolean hasPort();
+        /**
+         * <pre>
+         * KMIP server port
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value port = 2;</code>
+         */
+        com.google.protobuf.Int64Value getPort();
+        /**
+         * <pre>
+         * KMIP server port
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value port = 2;</code>
+         */
+        com.google.protobuf.Int64ValueOrBuilder getPortOrBuilder();
+
+        /**
+         * <pre>
+         * KMIP Server CA
+         * </pre>
+         *
+         * <code>string server_ca = 3;</code>
+         */
+        java.lang.String getServerCa();
+        /**
+         * <pre>
+         * KMIP Server CA
+         * </pre>
+         *
+         * <code>string server_ca = 3;</code>
+         */
+        com.google.protobuf.ByteString
+            getServerCaBytes();
+
+        /**
+         * <pre>
+         * KMIP client certificate + private key (unencrypted)
+         * </pre>
+         *
+         * <code>string client_certificate = 4;</code>
+         */
+        java.lang.String getClientCertificate();
+        /**
+         * <pre>
+         * KMIP client certificate + private key (unencrypted)
+         * </pre>
+         *
+         * <code>string client_certificate = 4;</code>
+         */
+        com.google.protobuf.ByteString
+            getClientCertificateBytes();
+
+        /**
+         * <pre>
+         * KMIP Key identifier (if any)
+         * </pre>
+         *
+         * <code>string key_identifier = 5;</code>
+         */
+        java.lang.String getKeyIdentifier();
+        /**
+         * <pre>
+         * KMIP Key identifier (if any)
+         * </pre>
+         *
+         * <code>string key_identifier = 5;</code>
+         */
+        com.google.protobuf.ByteString
+            getKeyIdentifierBytes();
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP}
+       */
+      public  static final class KMIP extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP)
+          KMIPOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use KMIP.newBuilder() to construct.
+        private KMIP(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private KMIP() {
+          serverName_ = "";
+          serverCa_ = "";
+          clientCertificate_ = "";
+          keyIdentifier_ = "";
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private KMIP(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  java.lang.String s = input.readStringRequireUtf8();
+
+                  serverName_ = s;
+                  break;
+                }
+                case 18: {
+                  com.google.protobuf.Int64Value.Builder subBuilder = null;
+                  if (port_ != null) {
+                    subBuilder = port_.toBuilder();
+                  }
+                  port_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom(port_);
+                    port_ = subBuilder.buildPartial();
+                  }
+
+                  break;
+                }
+                case 26: {
+                  java.lang.String s = input.readStringRequireUtf8();
+
+                  serverCa_ = s;
+                  break;
+                }
+                case 34: {
+                  java.lang.String s = input.readStringRequireUtf8();
+
+                  clientCertificate_ = s;
+                  break;
+                }
+                case 42: {
+                  java.lang.String s = input.readStringRequireUtf8();
+
+                  keyIdentifier_ = s;
+                  break;
+                }
+                default: {
+                  if (!parseUnknownFieldProto3(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_KMIP_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_KMIP_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP.Builder.class);
+        }
+
+        public static final int SERVER_NAME_FIELD_NUMBER = 1;
+        private volatile java.lang.Object serverName_;
+        /**
+         * <pre>
+         * KMIP server name
+         * </pre>
+         *
+         * <code>string server_name = 1;</code>
+         */
+        public java.lang.String getServerName() {
+          java.lang.Object ref = serverName_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            serverName_ = s;
+            return s;
+          }
+        }
+        /**
+         * <pre>
+         * KMIP server name
+         * </pre>
+         *
+         * <code>string server_name = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getServerNameBytes() {
+          java.lang.Object ref = serverName_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            serverName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int PORT_FIELD_NUMBER = 2;
+        private com.google.protobuf.Int64Value port_;
+        /**
+         * <pre>
+         * KMIP server port
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value port = 2;</code>
+         */
+        public boolean hasPort() {
+          return port_ != null;
+        }
+        /**
+         * <pre>
+         * KMIP server port
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value port = 2;</code>
+         */
+        public com.google.protobuf.Int64Value getPort() {
+          return port_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : port_;
+        }
+        /**
+         * <pre>
+         * KMIP server port
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value port = 2;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getPortOrBuilder() {
+          return getPort();
+        }
+
+        public static final int SERVER_CA_FIELD_NUMBER = 3;
+        private volatile java.lang.Object serverCa_;
+        /**
+         * <pre>
+         * KMIP Server CA
+         * </pre>
+         *
+         * <code>string server_ca = 3;</code>
+         */
+        public java.lang.String getServerCa() {
+          java.lang.Object ref = serverCa_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            serverCa_ = s;
+            return s;
+          }
+        }
+        /**
+         * <pre>
+         * KMIP Server CA
+         * </pre>
+         *
+         * <code>string server_ca = 3;</code>
+         */
+        public com.google.protobuf.ByteString
+            getServerCaBytes() {
+          java.lang.Object ref = serverCa_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            serverCa_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int CLIENT_CERTIFICATE_FIELD_NUMBER = 4;
+        private volatile java.lang.Object clientCertificate_;
+        /**
+         * <pre>
+         * KMIP client certificate + private key (unencrypted)
+         * </pre>
+         *
+         * <code>string client_certificate = 4;</code>
+         */
+        public java.lang.String getClientCertificate() {
+          java.lang.Object ref = clientCertificate_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            clientCertificate_ = s;
+            return s;
+          }
+        }
+        /**
+         * <pre>
+         * KMIP client certificate + private key (unencrypted)
+         * </pre>
+         *
+         * <code>string client_certificate = 4;</code>
+         */
+        public com.google.protobuf.ByteString
+            getClientCertificateBytes() {
+          java.lang.Object ref = clientCertificate_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            clientCertificate_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int KEY_IDENTIFIER_FIELD_NUMBER = 5;
+        private volatile java.lang.Object keyIdentifier_;
+        /**
+         * <pre>
+         * KMIP Key identifier (if any)
+         * </pre>
+         *
+         * <code>string key_identifier = 5;</code>
+         */
+        public java.lang.String getKeyIdentifier() {
+          java.lang.Object ref = keyIdentifier_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            keyIdentifier_ = s;
+            return s;
+          }
+        }
+        /**
+         * <pre>
+         * KMIP Key identifier (if any)
+         * </pre>
+         *
+         * <code>string key_identifier = 5;</code>
+         */
+        public com.google.protobuf.ByteString
+            getKeyIdentifierBytes() {
+          java.lang.Object ref = keyIdentifier_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            keyIdentifier_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (!getServerNameBytes().isEmpty()) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 1, serverName_);
+          }
+          if (port_ != null) {
+            output.writeMessage(2, getPort());
+          }
+          if (!getServerCaBytes().isEmpty()) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serverCa_);
+          }
+          if (!getClientCertificateBytes().isEmpty()) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 4, clientCertificate_);
+          }
+          if (!getKeyIdentifierBytes().isEmpty()) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 5, keyIdentifier_);
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (!getServerNameBytes().isEmpty()) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, serverName_);
+          }
+          if (port_ != null) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(2, getPort());
+          }
+          if (!getServerCaBytes().isEmpty()) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serverCa_);
+          }
+          if (!getClientCertificateBytes().isEmpty()) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, clientCertificate_);
+          }
+          if (!getKeyIdentifierBytes().isEmpty()) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, keyIdentifier_);
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP)) {
+            return super.equals(obj);
+          }
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP) obj;
+
+          boolean result = true;
+          result = result && getServerName()
+              .equals(other.getServerName());
+          result = result && (hasPort() == other.hasPort());
+          if (hasPort()) {
+            result = result && getPort()
+                .equals(other.getPort());
+          }
+          result = result && getServerCa()
+              .equals(other.getServerCa());
+          result = result && getClientCertificate()
+              .equals(other.getClientCertificate());
+          result = result && getKeyIdentifier()
+              .equals(other.getKeyIdentifier());
+          result = result && unknownFields.equals(other.unknownFields);
+          return result;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          hash = (37 * hash) + SERVER_NAME_FIELD_NUMBER;
+          hash = (53 * hash) + getServerName().hashCode();
+          if (hasPort()) {
+            hash = (37 * hash) + PORT_FIELD_NUMBER;
+            hash = (53 * hash) + getPort().hashCode();
+          }
+          hash = (37 * hash) + SERVER_CA_FIELD_NUMBER;
+          hash = (53 * hash) + getServerCa().hashCode();
+          hash = (37 * hash) + CLIENT_CERTIFICATE_FIELD_NUMBER;
+          hash = (53 * hash) + getClientCertificate().hashCode();
+          hash = (37 * hash) + KEY_IDENTIFIER_FIELD_NUMBER;
+          hash = (53 * hash) + getKeyIdentifier().hashCode();
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP)
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIPOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_KMIP_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_KMIP_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP.Builder.class);
+          }
+
+          // Construct using yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            serverName_ = "";
+
+            if (portBuilder_ == null) {
+              port_ = null;
+            } else {
+              port_ = null;
+              portBuilder_ = null;
+            }
+            serverCa_ = "";
+
+            clientCertificate_ = "";
+
+            keyIdentifier_ = "";
+
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_KMIP_descriptor;
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP getDefaultInstanceForType() {
+            return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP build() {
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP buildPartial() {
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP result = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP(this);
+            result.serverName_ = serverName_;
+            if (portBuilder_ == null) {
+              result.port_ = port_;
+            } else {
+              result.port_ = portBuilder_.build();
+            }
+            result.serverCa_ = serverCa_;
+            result.clientCertificate_ = clientCertificate_;
+            result.keyIdentifier_ = keyIdentifier_;
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return (Builder) super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return (Builder) super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return (Builder) super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return (Builder) super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return (Builder) super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return (Builder) super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP) {
+              return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP other) {
+            if (other == yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP.getDefaultInstance()) return this;
+            if (!other.getServerName().isEmpty()) {
+              serverName_ = other.serverName_;
+              onChanged();
+            }
+            if (other.hasPort()) {
+              mergePort(other.getPort());
+            }
+            if (!other.getServerCa().isEmpty()) {
+              serverCa_ = other.serverCa_;
+              onChanged();
+            }
+            if (!other.getClientCertificate().isEmpty()) {
+              clientCertificate_ = other.clientCertificate_;
+              onChanged();
+            }
+            if (!other.getKeyIdentifier().isEmpty()) {
+              keyIdentifier_ = other.keyIdentifier_;
+              onChanged();
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+
+          private java.lang.Object serverName_ = "";
+          /**
+           * <pre>
+           * KMIP server name
+           * </pre>
+           *
+           * <code>string server_name = 1;</code>
+           */
+          public java.lang.String getServerName() {
+            java.lang.Object ref = serverName_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              serverName_ = s;
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <pre>
+           * KMIP server name
+           * </pre>
+           *
+           * <code>string server_name = 1;</code>
+           */
+          public com.google.protobuf.ByteString
+              getServerNameBytes() {
+            java.lang.Object ref = serverName_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              serverName_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <pre>
+           * KMIP server name
+           * </pre>
+           *
+           * <code>string server_name = 1;</code>
+           */
+          public Builder setServerName(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  
+            serverName_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * KMIP server name
+           * </pre>
+           *
+           * <code>string server_name = 1;</code>
+           */
+          public Builder clearServerName() {
+            
+            serverName_ = getDefaultInstance().getServerName();
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * KMIP server name
+           * </pre>
+           *
+           * <code>string server_name = 1;</code>
+           */
+          public Builder setServerNameBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+            
+            serverName_ = value;
+            onChanged();
+            return this;
+          }
+
+          private com.google.protobuf.Int64Value port_ = null;
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> portBuilder_;
+          /**
+           * <pre>
+           * KMIP server port
+           * </pre>
+           *
+           * <code>.google.protobuf.Int64Value port = 2;</code>
+           */
+          public boolean hasPort() {
+            return portBuilder_ != null || port_ != null;
+          }
+          /**
+           * <pre>
+           * KMIP server port
+           * </pre>
+           *
+           * <code>.google.protobuf.Int64Value port = 2;</code>
+           */
+          public com.google.protobuf.Int64Value getPort() {
+            if (portBuilder_ == null) {
+              return port_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : port_;
+            } else {
+              return portBuilder_.getMessage();
+            }
+          }
+          /**
+           * <pre>
+           * KMIP server port
+           * </pre>
+           *
+           * <code>.google.protobuf.Int64Value port = 2;</code>
+           */
+          public Builder setPort(com.google.protobuf.Int64Value value) {
+            if (portBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              port_ = value;
+              onChanged();
+            } else {
+              portBuilder_.setMessage(value);
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * KMIP server port
+           * </pre>
+           *
+           * <code>.google.protobuf.Int64Value port = 2;</code>
+           */
+          public Builder setPort(
+              com.google.protobuf.Int64Value.Builder builderForValue) {
+            if (portBuilder_ == null) {
+              port_ = builderForValue.build();
+              onChanged();
+            } else {
+              portBuilder_.setMessage(builderForValue.build());
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * KMIP server port
+           * </pre>
+           *
+           * <code>.google.protobuf.Int64Value port = 2;</code>
+           */
+          public Builder mergePort(com.google.protobuf.Int64Value value) {
+            if (portBuilder_ == null) {
+              if (port_ != null) {
+                port_ =
+                  com.google.protobuf.Int64Value.newBuilder(port_).mergeFrom(value).buildPartial();
+              } else {
+                port_ = value;
+              }
+              onChanged();
+            } else {
+              portBuilder_.mergeFrom(value);
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * KMIP server port
+           * </pre>
+           *
+           * <code>.google.protobuf.Int64Value port = 2;</code>
+           */
+          public Builder clearPort() {
+            if (portBuilder_ == null) {
+              port_ = null;
+              onChanged();
+            } else {
+              port_ = null;
+              portBuilder_ = null;
+            }
+
+            return this;
+          }
+          /**
+           * <pre>
+           * KMIP server port
+           * </pre>
+           *
+           * <code>.google.protobuf.Int64Value port = 2;</code>
+           */
+          public com.google.protobuf.Int64Value.Builder getPortBuilder() {
+            
+            onChanged();
+            return getPortFieldBuilder().getBuilder();
+          }
+          /**
+           * <pre>
+           * KMIP server port
+           * </pre>
+           *
+           * <code>.google.protobuf.Int64Value port = 2;</code>
+           */
+          public com.google.protobuf.Int64ValueOrBuilder getPortOrBuilder() {
+            if (portBuilder_ != null) {
+              return portBuilder_.getMessageOrBuilder();
+            } else {
+              return port_ == null ?
+                  com.google.protobuf.Int64Value.getDefaultInstance() : port_;
+            }
+          }
+          /**
+           * <pre>
+           * KMIP server port
+           * </pre>
+           *
+           * <code>.google.protobuf.Int64Value port = 2;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+              getPortFieldBuilder() {
+            if (portBuilder_ == null) {
+              portBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                      getPort(),
+                      getParentForChildren(),
+                      isClean());
+              port_ = null;
+            }
+            return portBuilder_;
+          }
+
+          private java.lang.Object serverCa_ = "";
+          /**
+           * <pre>
+           * KMIP Server CA
+           * </pre>
+           *
+           * <code>string server_ca = 3;</code>
+           */
+          public java.lang.String getServerCa() {
+            java.lang.Object ref = serverCa_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              serverCa_ = s;
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <pre>
+           * KMIP Server CA
+           * </pre>
+           *
+           * <code>string server_ca = 3;</code>
+           */
+          public com.google.protobuf.ByteString
+              getServerCaBytes() {
+            java.lang.Object ref = serverCa_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              serverCa_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <pre>
+           * KMIP Server CA
+           * </pre>
+           *
+           * <code>string server_ca = 3;</code>
+           */
+          public Builder setServerCa(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  
+            serverCa_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * KMIP Server CA
+           * </pre>
+           *
+           * <code>string server_ca = 3;</code>
+           */
+          public Builder clearServerCa() {
+            
+            serverCa_ = getDefaultInstance().getServerCa();
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * KMIP Server CA
+           * </pre>
+           *
+           * <code>string server_ca = 3;</code>
+           */
+          public Builder setServerCaBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+            
+            serverCa_ = value;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object clientCertificate_ = "";
+          /**
+           * <pre>
+           * KMIP client certificate + private key (unencrypted)
+           * </pre>
+           *
+           * <code>string client_certificate = 4;</code>
+           */
+          public java.lang.String getClientCertificate() {
+            java.lang.Object ref = clientCertificate_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              clientCertificate_ = s;
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <pre>
+           * KMIP client certificate + private key (unencrypted)
+           * </pre>
+           *
+           * <code>string client_certificate = 4;</code>
+           */
+          public com.google.protobuf.ByteString
+              getClientCertificateBytes() {
+            java.lang.Object ref = clientCertificate_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              clientCertificate_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <pre>
+           * KMIP client certificate + private key (unencrypted)
+           * </pre>
+           *
+           * <code>string client_certificate = 4;</code>
+           */
+          public Builder setClientCertificate(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  
+            clientCertificate_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * KMIP client certificate + private key (unencrypted)
+           * </pre>
+           *
+           * <code>string client_certificate = 4;</code>
+           */
+          public Builder clearClientCertificate() {
+            
+            clientCertificate_ = getDefaultInstance().getClientCertificate();
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * KMIP client certificate + private key (unencrypted)
+           * </pre>
+           *
+           * <code>string client_certificate = 4;</code>
+           */
+          public Builder setClientCertificateBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+            
+            clientCertificate_ = value;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object keyIdentifier_ = "";
+          /**
+           * <pre>
+           * KMIP Key identifier (if any)
+           * </pre>
+           *
+           * <code>string key_identifier = 5;</code>
+           */
+          public java.lang.String getKeyIdentifier() {
+            java.lang.Object ref = keyIdentifier_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              keyIdentifier_ = s;
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <pre>
+           * KMIP Key identifier (if any)
+           * </pre>
+           *
+           * <code>string key_identifier = 5;</code>
+           */
+          public com.google.protobuf.ByteString
+              getKeyIdentifierBytes() {
+            java.lang.Object ref = keyIdentifier_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              keyIdentifier_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <pre>
+           * KMIP Key identifier (if any)
+           * </pre>
+           *
+           * <code>string key_identifier = 5;</code>
+           */
+          public Builder setKeyIdentifier(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  
+            keyIdentifier_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * KMIP Key identifier (if any)
+           * </pre>
+           *
+           * <code>string key_identifier = 5;</code>
+           */
+          public Builder clearKeyIdentifier() {
+            
+            keyIdentifier_ = getDefaultInstance().getKeyIdentifier();
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * KMIP Key identifier (if any)
+           * </pre>
+           *
+           * <code>string key_identifier = 5;</code>
+           */
+          public Builder setKeyIdentifierBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+            
+            keyIdentifier_ = value;
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFieldsProto3(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP)
+        }
+
+        // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP)
+        private static final yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP();
+        }
+
+        public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<KMIP>
+            PARSER = new com.google.protobuf.AbstractParser<KMIP>() {
+          @java.lang.Override
+          public KMIP parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new KMIP(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<KMIP> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<KMIP> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public static final int ENABLE_ENCRYPTION_FIELD_NUMBER = 1;
+      private com.google.protobuf.BoolValue enableEncryption_;
+      /**
+       * <pre>
+       * If encryption at rest should be enabled or not
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+       */
+      public boolean hasEnableEncryption() {
+        return enableEncryption_ != null;
+      }
+      /**
+       * <pre>
+       * If encryption at rest should be enabled or not
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+       */
+      public com.google.protobuf.BoolValue getEnableEncryption() {
+        return enableEncryption_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableEncryption_;
+      }
+      /**
+       * <pre>
+       * If encryption at rest should be enabled or not
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getEnableEncryptionOrBuilder() {
+        return getEnableEncryption();
+      }
+
+      public static final int KMIP_FIELD_NUMBER = 2;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP kmip_;
+      /**
+       * <pre>
+       * `kmip` section of mongod security config
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+       */
+      public boolean hasKmip() {
+        return kmip_ != null;
+      }
+      /**
+       * <pre>
+       * `kmip` section of mongod security config
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP getKmip() {
+        return kmip_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP.getDefaultInstance() : kmip_;
+      }
+      /**
+       * <pre>
+       * `kmip` section of mongod security config
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIPOrBuilder getKmipOrBuilder() {
+        return getKmip();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (enableEncryption_ != null) {
+          output.writeMessage(1, getEnableEncryption());
+        }
+        if (kmip_ != null) {
+          output.writeMessage(2, getKmip());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (enableEncryption_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getEnableEncryption());
+        }
+        if (kmip_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getKmip());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security) obj;
+
+        boolean result = true;
+        result = result && (hasEnableEncryption() == other.hasEnableEncryption());
+        if (hasEnableEncryption()) {
+          result = result && getEnableEncryption()
+              .equals(other.getEnableEncryption());
+        }
+        result = result && (hasKmip() == other.hasKmip());
+        if (hasKmip()) {
+          result = result && getKmip()
+              .equals(other.getKmip());
+        }
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasEnableEncryption()) {
+          hash = (37 * hash) + ENABLE_ENCRYPTION_FIELD_NUMBER;
+          hash = (53 * hash) + getEnableEncryption().hashCode();
+        }
+        if (hasKmip()) {
+          hash = (37 * hash) + KMIP_FIELD_NUMBER;
+          hash = (53 * hash) + getKmip().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security)
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SecurityOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (enableEncryptionBuilder_ == null) {
+            enableEncryption_ = null;
+          } else {
+            enableEncryption_ = null;
+            enableEncryptionBuilder_ = null;
+          }
+          if (kmipBuilder_ == null) {
+            kmip_ = null;
+          } else {
+            kmip_ = null;
+            kmipBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security build() {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security buildPartial() {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security result = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security(this);
+          if (enableEncryptionBuilder_ == null) {
+            result.enableEncryption_ = enableEncryption_;
+          } else {
+            result.enableEncryption_ = enableEncryptionBuilder_.build();
+          }
+          if (kmipBuilder_ == null) {
+            result.kmip_ = kmip_;
+          } else {
+            result.kmip_ = kmipBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security) {
+            return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security other) {
+          if (other == yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.getDefaultInstance()) return this;
+          if (other.hasEnableEncryption()) {
+            mergeEnableEncryption(other.getEnableEncryption());
+          }
+          if (other.hasKmip()) {
+            mergeKmip(other.getKmip());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private com.google.protobuf.BoolValue enableEncryption_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableEncryptionBuilder_;
+        /**
+         * <pre>
+         * If encryption at rest should be enabled or not
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+         */
+        public boolean hasEnableEncryption() {
+          return enableEncryptionBuilder_ != null || enableEncryption_ != null;
+        }
+        /**
+         * <pre>
+         * If encryption at rest should be enabled or not
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+         */
+        public com.google.protobuf.BoolValue getEnableEncryption() {
+          if (enableEncryptionBuilder_ == null) {
+            return enableEncryption_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableEncryption_;
+          } else {
+            return enableEncryptionBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * If encryption at rest should be enabled or not
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+         */
+        public Builder setEnableEncryption(com.google.protobuf.BoolValue value) {
+          if (enableEncryptionBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            enableEncryption_ = value;
+            onChanged();
+          } else {
+            enableEncryptionBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * If encryption at rest should be enabled or not
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+         */
+        public Builder setEnableEncryption(
+            com.google.protobuf.BoolValue.Builder builderForValue) {
+          if (enableEncryptionBuilder_ == null) {
+            enableEncryption_ = builderForValue.build();
+            onChanged();
+          } else {
+            enableEncryptionBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * If encryption at rest should be enabled or not
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+         */
+        public Builder mergeEnableEncryption(com.google.protobuf.BoolValue value) {
+          if (enableEncryptionBuilder_ == null) {
+            if (enableEncryption_ != null) {
+              enableEncryption_ =
+                com.google.protobuf.BoolValue.newBuilder(enableEncryption_).mergeFrom(value).buildPartial();
+            } else {
+              enableEncryption_ = value;
+            }
+            onChanged();
+          } else {
+            enableEncryptionBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * If encryption at rest should be enabled or not
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+         */
+        public Builder clearEnableEncryption() {
+          if (enableEncryptionBuilder_ == null) {
+            enableEncryption_ = null;
+            onChanged();
+          } else {
+            enableEncryption_ = null;
+            enableEncryptionBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * If encryption at rest should be enabled or not
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+         */
+        public com.google.protobuf.BoolValue.Builder getEnableEncryptionBuilder() {
+          
+          onChanged();
+          return getEnableEncryptionFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * If encryption at rest should be enabled or not
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+         */
+        public com.google.protobuf.BoolValueOrBuilder getEnableEncryptionOrBuilder() {
+          if (enableEncryptionBuilder_ != null) {
+            return enableEncryptionBuilder_.getMessageOrBuilder();
+          } else {
+            return enableEncryption_ == null ?
+                com.google.protobuf.BoolValue.getDefaultInstance() : enableEncryption_;
+          }
+        }
+        /**
+         * <pre>
+         * If encryption at rest should be enabled or not
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue enable_encryption = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+            getEnableEncryptionFieldBuilder() {
+          if (enableEncryptionBuilder_ == null) {
+            enableEncryptionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                    getEnableEncryption(),
+                    getParentForChildren(),
+                    isClean());
+            enableEncryption_ = null;
+          }
+          return enableEncryptionBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP kmip_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIPOrBuilder> kmipBuilder_;
+        /**
+         * <pre>
+         * `kmip` section of mongod security config
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+         */
+        public boolean hasKmip() {
+          return kmipBuilder_ != null || kmip_ != null;
+        }
+        /**
+         * <pre>
+         * `kmip` section of mongod security config
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP getKmip() {
+          if (kmipBuilder_ == null) {
+            return kmip_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP.getDefaultInstance() : kmip_;
+          } else {
+            return kmipBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * `kmip` section of mongod security config
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+         */
+        public Builder setKmip(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP value) {
+          if (kmipBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            kmip_ = value;
+            onChanged();
+          } else {
+            kmipBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * `kmip` section of mongod security config
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+         */
+        public Builder setKmip(
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP.Builder builderForValue) {
+          if (kmipBuilder_ == null) {
+            kmip_ = builderForValue.build();
+            onChanged();
+          } else {
+            kmipBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * `kmip` section of mongod security config
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+         */
+        public Builder mergeKmip(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP value) {
+          if (kmipBuilder_ == null) {
+            if (kmip_ != null) {
+              kmip_ =
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP.newBuilder(kmip_).mergeFrom(value).buildPartial();
+            } else {
+              kmip_ = value;
+            }
+            onChanged();
+          } else {
+            kmipBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * `kmip` section of mongod security config
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+         */
+        public Builder clearKmip() {
+          if (kmipBuilder_ == null) {
+            kmip_ = null;
+            onChanged();
+          } else {
+            kmip_ = null;
+            kmipBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * `kmip` section of mongod security config
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP.Builder getKmipBuilder() {
+          
+          onChanged();
+          return getKmipFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * `kmip` section of mongod security config
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIPOrBuilder getKmipOrBuilder() {
+          if (kmipBuilder_ != null) {
+            return kmipBuilder_.getMessageOrBuilder();
+          } else {
+            return kmip_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP.getDefaultInstance() : kmip_;
+          }
+        }
+        /**
+         * <pre>
+         * `kmip` section of mongod security config
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security.KMIP kmip = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIPOrBuilder> 
+            getKmipFieldBuilder() {
+          if (kmipBuilder_ == null) {
+            kmipBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIP.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.KMIPOrBuilder>(
+                    getKmip(),
+                    getParentForChildren(),
+                    isClean());
+            kmip_ = null;
+          }
+          return kmipBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security)
+      private static final yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security();
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Security>
+          PARSER = new com.google.protobuf.AbstractParser<Security>() {
+        @java.lang.Override
+        public Security parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Security(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Security> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Security> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface AuditLogOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Audit filter
+       * </pre>
+       *
+       * <code>string filter = 1;</code>
+       */
+      java.lang.String getFilter();
+      /**
+       * <pre>
+       * Audit filter
+       * </pre>
+       *
+       * <code>string filter = 1;</code>
+       */
+      com.google.protobuf.ByteString
+          getFilterBytes();
+
+      /**
+       * <pre>
+       * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+       */
+      boolean hasRuntimeConfiguration();
+      /**
+       * <pre>
+       * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+       */
+      com.google.protobuf.BoolValue getRuntimeConfiguration();
+      /**
+       * <pre>
+       * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+       */
+      com.google.protobuf.BoolValueOrBuilder getRuntimeConfigurationOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog}
+     */
+    public  static final class AuditLog extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog)
+        AuditLogOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use AuditLog.newBuilder() to construct.
+      private AuditLog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private AuditLog() {
+        filter_ = "";
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private AuditLog(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                filter_ = s;
+                break;
+              }
+              case 18: {
+                com.google.protobuf.BoolValue.Builder subBuilder = null;
+                if (runtimeConfiguration_ != null) {
+                  subBuilder = runtimeConfiguration_.toBuilder();
+                }
+                runtimeConfiguration_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(runtimeConfiguration_);
+                  runtimeConfiguration_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_AuditLog_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_AuditLog_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog.Builder.class);
+      }
+
+      public static final int FILTER_FIELD_NUMBER = 1;
+      private volatile java.lang.Object filter_;
+      /**
+       * <pre>
+       * Audit filter
+       * </pre>
+       *
+       * <code>string filter = 1;</code>
+       */
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Audit filter
+       * </pre>
+       *
+       * <code>string filter = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int RUNTIME_CONFIGURATION_FIELD_NUMBER = 2;
+      private com.google.protobuf.BoolValue runtimeConfiguration_;
+      /**
+       * <pre>
+       * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+       */
+      public boolean hasRuntimeConfiguration() {
+        return runtimeConfiguration_ != null;
+      }
+      /**
+       * <pre>
+       * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+       */
+      public com.google.protobuf.BoolValue getRuntimeConfiguration() {
+        return runtimeConfiguration_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : runtimeConfiguration_;
+      }
+      /**
+       * <pre>
+       * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getRuntimeConfigurationOrBuilder() {
+        return getRuntimeConfiguration();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getFilterBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, filter_);
+        }
+        if (runtimeConfiguration_ != null) {
+          output.writeMessage(2, getRuntimeConfiguration());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getFilterBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, filter_);
+        }
+        if (runtimeConfiguration_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getRuntimeConfiguration());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog) obj;
+
+        boolean result = true;
+        result = result && getFilter()
+            .equals(other.getFilter());
+        result = result && (hasRuntimeConfiguration() == other.hasRuntimeConfiguration());
+        if (hasRuntimeConfiguration()) {
+          result = result && getRuntimeConfiguration()
+              .equals(other.getRuntimeConfiguration());
+        }
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + FILTER_FIELD_NUMBER;
+        hash = (53 * hash) + getFilter().hashCode();
+        if (hasRuntimeConfiguration()) {
+          hash = (37 * hash) + RUNTIME_CONFIGURATION_FIELD_NUMBER;
+          hash = (53 * hash) + getRuntimeConfiguration().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog)
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLogOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_AuditLog_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_AuditLog_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          filter_ = "";
+
+          if (runtimeConfigurationBuilder_ == null) {
+            runtimeConfiguration_ = null;
+          } else {
+            runtimeConfiguration_ = null;
+            runtimeConfigurationBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_AuditLog_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog build() {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog buildPartial() {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog result = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog(this);
+          result.filter_ = filter_;
+          if (runtimeConfigurationBuilder_ == null) {
+            result.runtimeConfiguration_ = runtimeConfiguration_;
+          } else {
+            result.runtimeConfiguration_ = runtimeConfigurationBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog) {
+            return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog other) {
+          if (other == yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog.getDefaultInstance()) return this;
+          if (!other.getFilter().isEmpty()) {
+            filter_ = other.filter_;
+            onChanged();
+          }
+          if (other.hasRuntimeConfiguration()) {
+            mergeRuntimeConfiguration(other.getRuntimeConfiguration());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object filter_ = "";
+        /**
+         * <pre>
+         * Audit filter
+         * </pre>
+         *
+         * <code>string filter = 1;</code>
+         */
+        public java.lang.String getFilter() {
+          java.lang.Object ref = filter_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            filter_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Audit filter
+         * </pre>
+         *
+         * <code>string filter = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getFilterBytes() {
+          java.lang.Object ref = filter_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            filter_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Audit filter
+         * </pre>
+         *
+         * <code>string filter = 1;</code>
+         */
+        public Builder setFilter(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          filter_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Audit filter
+         * </pre>
+         *
+         * <code>string filter = 1;</code>
+         */
+        public Builder clearFilter() {
+          
+          filter_ = getDefaultInstance().getFilter();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Audit filter
+         * </pre>
+         *
+         * <code>string filter = 1;</code>
+         */
+        public Builder setFilterBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          filter_ = value;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.BoolValue runtimeConfiguration_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> runtimeConfigurationBuilder_;
+        /**
+         * <pre>
+         * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+         */
+        public boolean hasRuntimeConfiguration() {
+          return runtimeConfigurationBuilder_ != null || runtimeConfiguration_ != null;
+        }
+        /**
+         * <pre>
+         * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+         */
+        public com.google.protobuf.BoolValue getRuntimeConfiguration() {
+          if (runtimeConfigurationBuilder_ == null) {
+            return runtimeConfiguration_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : runtimeConfiguration_;
+          } else {
+            return runtimeConfigurationBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+         */
+        public Builder setRuntimeConfiguration(com.google.protobuf.BoolValue value) {
+          if (runtimeConfigurationBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            runtimeConfiguration_ = value;
+            onChanged();
+          } else {
+            runtimeConfigurationBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+         */
+        public Builder setRuntimeConfiguration(
+            com.google.protobuf.BoolValue.Builder builderForValue) {
+          if (runtimeConfigurationBuilder_ == null) {
+            runtimeConfiguration_ = builderForValue.build();
+            onChanged();
+          } else {
+            runtimeConfigurationBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+         */
+        public Builder mergeRuntimeConfiguration(com.google.protobuf.BoolValue value) {
+          if (runtimeConfigurationBuilder_ == null) {
+            if (runtimeConfiguration_ != null) {
+              runtimeConfiguration_ =
+                com.google.protobuf.BoolValue.newBuilder(runtimeConfiguration_).mergeFrom(value).buildPartial();
+            } else {
+              runtimeConfiguration_ = value;
+            }
+            onChanged();
+          } else {
+            runtimeConfigurationBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+         */
+        public Builder clearRuntimeConfiguration() {
+          if (runtimeConfigurationBuilder_ == null) {
+            runtimeConfiguration_ = null;
+            onChanged();
+          } else {
+            runtimeConfiguration_ = null;
+            runtimeConfigurationBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+         */
+        public com.google.protobuf.BoolValue.Builder getRuntimeConfigurationBuilder() {
+          
+          onChanged();
+          return getRuntimeConfigurationFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+         */
+        public com.google.protobuf.BoolValueOrBuilder getRuntimeConfigurationOrBuilder() {
+          if (runtimeConfigurationBuilder_ != null) {
+            return runtimeConfigurationBuilder_.getMessageOrBuilder();
+          } else {
+            return runtimeConfiguration_ == null ?
+                com.google.protobuf.BoolValue.getDefaultInstance() : runtimeConfiguration_;
+          }
+        }
+        /**
+         * <pre>
+         * Allows runtime configuration of audit filter and auditAuthorizationSuccess
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue runtime_configuration = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+            getRuntimeConfigurationFieldBuilder() {
+          if (runtimeConfigurationBuilder_ == null) {
+            runtimeConfigurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                    getRuntimeConfiguration(),
+                    getParentForChildren(),
+                    isClean());
+            runtimeConfiguration_ = null;
+          }
+          return runtimeConfigurationBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog)
+      private static final yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog();
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<AuditLog>
+          PARSER = new com.google.protobuf.AbstractParser<AuditLog>() {
+        @java.lang.Override
+        public AuditLog parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AuditLog(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<AuditLog> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AuditLog> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface SetParameterOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Enables the auditing of authorization successes
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+       */
+      boolean hasAuditAuthorizationSuccess();
+      /**
+       * <pre>
+       * Enables the auditing of authorization successes
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+       */
+      com.google.protobuf.BoolValue getAuditAuthorizationSuccess();
+      /**
+       * <pre>
+       * Enables the auditing of authorization successes
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+       */
+      com.google.protobuf.BoolValueOrBuilder getAuditAuthorizationSuccessOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter}
+     */
+    public  static final class SetParameter extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter)
+        SetParameterOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use SetParameter.newBuilder() to construct.
+      private SetParameter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private SetParameter() {
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private SetParameter(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.BoolValue.Builder subBuilder = null;
+                if (auditAuthorizationSuccess_ != null) {
+                  subBuilder = auditAuthorizationSuccess_.toBuilder();
+                }
+                auditAuthorizationSuccess_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(auditAuthorizationSuccess_);
+                  auditAuthorizationSuccess_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_SetParameter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_SetParameter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter.Builder.class);
+      }
+
+      public static final int AUDIT_AUTHORIZATION_SUCCESS_FIELD_NUMBER = 1;
+      private com.google.protobuf.BoolValue auditAuthorizationSuccess_;
+      /**
+       * <pre>
+       * Enables the auditing of authorization successes
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+       */
+      public boolean hasAuditAuthorizationSuccess() {
+        return auditAuthorizationSuccess_ != null;
+      }
+      /**
+       * <pre>
+       * Enables the auditing of authorization successes
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+       */
+      public com.google.protobuf.BoolValue getAuditAuthorizationSuccess() {
+        return auditAuthorizationSuccess_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : auditAuthorizationSuccess_;
+      }
+      /**
+       * <pre>
+       * Enables the auditing of authorization successes
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getAuditAuthorizationSuccessOrBuilder() {
+        return getAuditAuthorizationSuccess();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (auditAuthorizationSuccess_ != null) {
+          output.writeMessage(1, getAuditAuthorizationSuccess());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (auditAuthorizationSuccess_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getAuditAuthorizationSuccess());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter other = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter) obj;
+
+        boolean result = true;
+        result = result && (hasAuditAuthorizationSuccess() == other.hasAuditAuthorizationSuccess());
+        if (hasAuditAuthorizationSuccess()) {
+          result = result && getAuditAuthorizationSuccess()
+              .equals(other.getAuditAuthorizationSuccess());
+        }
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasAuditAuthorizationSuccess()) {
+          hash = (37 * hash) + AUDIT_AUTHORIZATION_SUCCESS_FIELD_NUMBER;
+          hash = (53 * hash) + getAuditAuthorizationSuccess().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter)
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameterOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_SetParameter_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_SetParameter_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter.class, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            auditAuthorizationSuccess_ = null;
+          } else {
+            auditAuthorizationSuccess_ = null;
+            auditAuthorizationSuccessBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_SetParameter_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter build() {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter buildPartial() {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter result = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter(this);
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            result.auditAuthorizationSuccess_ = auditAuthorizationSuccess_;
+          } else {
+            result.auditAuthorizationSuccess_ = auditAuthorizationSuccessBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter) {
+            return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter other) {
+          if (other == yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter.getDefaultInstance()) return this;
+          if (other.hasAuditAuthorizationSuccess()) {
+            mergeAuditAuthorizationSuccess(other.getAuditAuthorizationSuccess());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private com.google.protobuf.BoolValue auditAuthorizationSuccess_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> auditAuthorizationSuccessBuilder_;
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+         */
+        public boolean hasAuditAuthorizationSuccess() {
+          return auditAuthorizationSuccessBuilder_ != null || auditAuthorizationSuccess_ != null;
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+         */
+        public com.google.protobuf.BoolValue getAuditAuthorizationSuccess() {
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            return auditAuthorizationSuccess_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : auditAuthorizationSuccess_;
+          } else {
+            return auditAuthorizationSuccessBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+         */
+        public Builder setAuditAuthorizationSuccess(com.google.protobuf.BoolValue value) {
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            auditAuthorizationSuccess_ = value;
+            onChanged();
+          } else {
+            auditAuthorizationSuccessBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+         */
+        public Builder setAuditAuthorizationSuccess(
+            com.google.protobuf.BoolValue.Builder builderForValue) {
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            auditAuthorizationSuccess_ = builderForValue.build();
+            onChanged();
+          } else {
+            auditAuthorizationSuccessBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+         */
+        public Builder mergeAuditAuthorizationSuccess(com.google.protobuf.BoolValue value) {
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            if (auditAuthorizationSuccess_ != null) {
+              auditAuthorizationSuccess_ =
+                com.google.protobuf.BoolValue.newBuilder(auditAuthorizationSuccess_).mergeFrom(value).buildPartial();
+            } else {
+              auditAuthorizationSuccess_ = value;
+            }
+            onChanged();
+          } else {
+            auditAuthorizationSuccessBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+         */
+        public Builder clearAuditAuthorizationSuccess() {
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            auditAuthorizationSuccess_ = null;
+            onChanged();
+          } else {
+            auditAuthorizationSuccess_ = null;
+            auditAuthorizationSuccessBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+         */
+        public com.google.protobuf.BoolValue.Builder getAuditAuthorizationSuccessBuilder() {
+          
+          onChanged();
+          return getAuditAuthorizationSuccessFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+         */
+        public com.google.protobuf.BoolValueOrBuilder getAuditAuthorizationSuccessOrBuilder() {
+          if (auditAuthorizationSuccessBuilder_ != null) {
+            return auditAuthorizationSuccessBuilder_.getMessageOrBuilder();
+          } else {
+            return auditAuthorizationSuccess_ == null ?
+                com.google.protobuf.BoolValue.getDefaultInstance() : auditAuthorizationSuccess_;
+          }
+        }
+        /**
+         * <pre>
+         * Enables the auditing of authorization successes
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue audit_authorization_success = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+            getAuditAuthorizationSuccessFieldBuilder() {
+          if (auditAuthorizationSuccessBuilder_ == null) {
+            auditAuthorizationSuccessBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                    getAuditAuthorizationSuccess(),
+                    getParentForChildren(),
+                    isClean());
+            auditAuthorizationSuccess_ = null;
+          }
+          return auditAuthorizationSuccessBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter)
+      private static final yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter();
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<SetParameter>
+          PARSER = new com.google.protobuf.AbstractParser<SetParameter>() {
+        @java.lang.Override
+        public SetParameter parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new SetParameter(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<SetParameter> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<SetParameter> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int STORAGE_FIELD_NUMBER = 1;
     private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Storage storage_;
     /**
@@ -5823,6 +9724,105 @@ public final class Mongodb50Enterprise {
       return getNet();
     }
 
+    public static final int SECURITY_FIELD_NUMBER = 4;
+    private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security security_;
+    /**
+     * <pre>
+     * `security` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+     */
+    public boolean hasSecurity() {
+      return security_ != null;
+    }
+    /**
+     * <pre>
+     * `security` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+     */
+    public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security getSecurity() {
+      return security_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.getDefaultInstance() : security_;
+    }
+    /**
+     * <pre>
+     * `security` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+     */
+    public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SecurityOrBuilder getSecurityOrBuilder() {
+      return getSecurity();
+    }
+
+    public static final int AUDIT_LOG_FIELD_NUMBER = 5;
+    private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog auditLog_;
+    /**
+     * <pre>
+     * `AuditLog` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+     */
+    public boolean hasAuditLog() {
+      return auditLog_ != null;
+    }
+    /**
+     * <pre>
+     * `AuditLog` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+     */
+    public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog getAuditLog() {
+      return auditLog_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog.getDefaultInstance() : auditLog_;
+    }
+    /**
+     * <pre>
+     * `AuditLog` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+     */
+    public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLogOrBuilder getAuditLogOrBuilder() {
+      return getAuditLog();
+    }
+
+    public static final int SET_PARAMETER_FIELD_NUMBER = 6;
+    private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter setParameter_;
+    /**
+     * <pre>
+     * `SetParameter` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+     */
+    public boolean hasSetParameter() {
+      return setParameter_ != null;
+    }
+    /**
+     * <pre>
+     * `SetParameter` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+     */
+    public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter getSetParameter() {
+      return setParameter_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter.getDefaultInstance() : setParameter_;
+    }
+    /**
+     * <pre>
+     * `SetParameter` section of mongod configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+     */
+    public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameterOrBuilder getSetParameterOrBuilder() {
+      return getSetParameter();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5846,6 +9846,15 @@ public final class Mongodb50Enterprise {
       if (net_ != null) {
         output.writeMessage(3, getNet());
       }
+      if (security_ != null) {
+        output.writeMessage(4, getSecurity());
+      }
+      if (auditLog_ != null) {
+        output.writeMessage(5, getAuditLog());
+      }
+      if (setParameter_ != null) {
+        output.writeMessage(6, getSetParameter());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5866,6 +9875,18 @@ public final class Mongodb50Enterprise {
       if (net_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getNet());
+      }
+      if (security_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getSecurity());
+      }
+      if (auditLog_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getAuditLog());
+      }
+      if (setParameter_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getSetParameter());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5898,6 +9919,21 @@ public final class Mongodb50Enterprise {
         result = result && getNet()
             .equals(other.getNet());
       }
+      result = result && (hasSecurity() == other.hasSecurity());
+      if (hasSecurity()) {
+        result = result && getSecurity()
+            .equals(other.getSecurity());
+      }
+      result = result && (hasAuditLog() == other.hasAuditLog());
+      if (hasAuditLog()) {
+        result = result && getAuditLog()
+            .equals(other.getAuditLog());
+      }
+      result = result && (hasSetParameter() == other.hasSetParameter());
+      if (hasSetParameter()) {
+        result = result && getSetParameter()
+            .equals(other.getSetParameter());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5920,6 +9956,18 @@ public final class Mongodb50Enterprise {
       if (hasNet()) {
         hash = (37 * hash) + NET_FIELD_NUMBER;
         hash = (53 * hash) + getNet().hashCode();
+      }
+      if (hasSecurity()) {
+        hash = (37 * hash) + SECURITY_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurity().hashCode();
+      }
+      if (hasAuditLog()) {
+        hash = (37 * hash) + AUDIT_LOG_FIELD_NUMBER;
+        hash = (53 * hash) + getAuditLog().hashCode();
+      }
+      if (hasSetParameter()) {
+        hash = (37 * hash) + SET_PARAMETER_FIELD_NUMBER;
+        hash = (53 * hash) + getSetParameter().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -6077,6 +10125,24 @@ public final class Mongodb50Enterprise {
           net_ = null;
           netBuilder_ = null;
         }
+        if (securityBuilder_ == null) {
+          security_ = null;
+        } else {
+          security_ = null;
+          securityBuilder_ = null;
+        }
+        if (auditLogBuilder_ == null) {
+          auditLog_ = null;
+        } else {
+          auditLog_ = null;
+          auditLogBuilder_ = null;
+        }
+        if (setParameterBuilder_ == null) {
+          setParameter_ = null;
+        } else {
+          setParameter_ = null;
+          setParameterBuilder_ = null;
+        }
         return this;
       }
 
@@ -6117,6 +10183,21 @@ public final class Mongodb50Enterprise {
           result.net_ = net_;
         } else {
           result.net_ = netBuilder_.build();
+        }
+        if (securityBuilder_ == null) {
+          result.security_ = security_;
+        } else {
+          result.security_ = securityBuilder_.build();
+        }
+        if (auditLogBuilder_ == null) {
+          result.auditLog_ = auditLog_;
+        } else {
+          result.auditLog_ = auditLogBuilder_.build();
+        }
+        if (setParameterBuilder_ == null) {
+          result.setParameter_ = setParameter_;
+        } else {
+          result.setParameter_ = setParameterBuilder_.build();
         }
         onBuilt();
         return result;
@@ -6174,6 +10255,15 @@ public final class Mongodb50Enterprise {
         }
         if (other.hasNet()) {
           mergeNet(other.getNet());
+        }
+        if (other.hasSecurity()) {
+          mergeSecurity(other.getSecurity());
+        }
+        if (other.hasAuditLog()) {
+          mergeAuditLog(other.getAuditLog());
+        }
+        if (other.hasSetParameter()) {
+          mergeSetParameter(other.getSetParameter());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6661,6 +10751,465 @@ public final class Mongodb50Enterprise {
           net_ = null;
         }
         return netBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security security_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SecurityOrBuilder> securityBuilder_;
+      /**
+       * <pre>
+       * `security` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+       */
+      public boolean hasSecurity() {
+        return securityBuilder_ != null || security_ != null;
+      }
+      /**
+       * <pre>
+       * `security` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security getSecurity() {
+        if (securityBuilder_ == null) {
+          return security_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.getDefaultInstance() : security_;
+        } else {
+          return securityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * `security` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+       */
+      public Builder setSecurity(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security value) {
+        if (securityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          security_ = value;
+          onChanged();
+        } else {
+          securityBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `security` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+       */
+      public Builder setSecurity(
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.Builder builderForValue) {
+        if (securityBuilder_ == null) {
+          security_ = builderForValue.build();
+          onChanged();
+        } else {
+          securityBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `security` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+       */
+      public Builder mergeSecurity(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security value) {
+        if (securityBuilder_ == null) {
+          if (security_ != null) {
+            security_ =
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.newBuilder(security_).mergeFrom(value).buildPartial();
+          } else {
+            security_ = value;
+          }
+          onChanged();
+        } else {
+          securityBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `security` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+       */
+      public Builder clearSecurity() {
+        if (securityBuilder_ == null) {
+          security_ = null;
+          onChanged();
+        } else {
+          security_ = null;
+          securityBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `security` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.Builder getSecurityBuilder() {
+        
+        onChanged();
+        return getSecurityFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * `security` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SecurityOrBuilder getSecurityOrBuilder() {
+        if (securityBuilder_ != null) {
+          return securityBuilder_.getMessageOrBuilder();
+        } else {
+          return security_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.getDefaultInstance() : security_;
+        }
+      }
+      /**
+       * <pre>
+       * `security` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.Security security = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SecurityOrBuilder> 
+          getSecurityFieldBuilder() {
+        if (securityBuilder_ == null) {
+          securityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.Security.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SecurityOrBuilder>(
+                  getSecurity(),
+                  getParentForChildren(),
+                  isClean());
+          security_ = null;
+        }
+        return securityBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog auditLog_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLogOrBuilder> auditLogBuilder_;
+      /**
+       * <pre>
+       * `AuditLog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+       */
+      public boolean hasAuditLog() {
+        return auditLogBuilder_ != null || auditLog_ != null;
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog getAuditLog() {
+        if (auditLogBuilder_ == null) {
+          return auditLog_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog.getDefaultInstance() : auditLog_;
+        } else {
+          return auditLogBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+       */
+      public Builder setAuditLog(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog value) {
+        if (auditLogBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          auditLog_ = value;
+          onChanged();
+        } else {
+          auditLogBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+       */
+      public Builder setAuditLog(
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog.Builder builderForValue) {
+        if (auditLogBuilder_ == null) {
+          auditLog_ = builderForValue.build();
+          onChanged();
+        } else {
+          auditLogBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+       */
+      public Builder mergeAuditLog(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog value) {
+        if (auditLogBuilder_ == null) {
+          if (auditLog_ != null) {
+            auditLog_ =
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog.newBuilder(auditLog_).mergeFrom(value).buildPartial();
+          } else {
+            auditLog_ = value;
+          }
+          onChanged();
+        } else {
+          auditLogBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+       */
+      public Builder clearAuditLog() {
+        if (auditLogBuilder_ == null) {
+          auditLog_ = null;
+          onChanged();
+        } else {
+          auditLog_ = null;
+          auditLogBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog.Builder getAuditLogBuilder() {
+        
+        onChanged();
+        return getAuditLogFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLogOrBuilder getAuditLogOrBuilder() {
+        if (auditLogBuilder_ != null) {
+          return auditLogBuilder_.getMessageOrBuilder();
+        } else {
+          return auditLog_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog.getDefaultInstance() : auditLog_;
+        }
+      }
+      /**
+       * <pre>
+       * `AuditLog` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.AuditLog audit_log = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLogOrBuilder> 
+          getAuditLogFieldBuilder() {
+        if (auditLogBuilder_ == null) {
+          auditLogBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLog.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.AuditLogOrBuilder>(
+                  getAuditLog(),
+                  getParentForChildren(),
+                  isClean());
+          auditLog_ = null;
+        }
+        return auditLogBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter setParameter_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameterOrBuilder> setParameterBuilder_;
+      /**
+       * <pre>
+       * `SetParameter` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+       */
+      public boolean hasSetParameter() {
+        return setParameterBuilder_ != null || setParameter_ != null;
+      }
+      /**
+       * <pre>
+       * `SetParameter` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter getSetParameter() {
+        if (setParameterBuilder_ == null) {
+          return setParameter_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter.getDefaultInstance() : setParameter_;
+        } else {
+          return setParameterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * `SetParameter` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+       */
+      public Builder setSetParameter(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter value) {
+        if (setParameterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          setParameter_ = value;
+          onChanged();
+        } else {
+          setParameterBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `SetParameter` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+       */
+      public Builder setSetParameter(
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter.Builder builderForValue) {
+        if (setParameterBuilder_ == null) {
+          setParameter_ = builderForValue.build();
+          onChanged();
+        } else {
+          setParameterBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `SetParameter` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+       */
+      public Builder mergeSetParameter(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter value) {
+        if (setParameterBuilder_ == null) {
+          if (setParameter_ != null) {
+            setParameter_ =
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter.newBuilder(setParameter_).mergeFrom(value).buildPartial();
+          } else {
+            setParameter_ = value;
+          }
+          onChanged();
+        } else {
+          setParameterBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `SetParameter` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+       */
+      public Builder clearSetParameter() {
+        if (setParameterBuilder_ == null) {
+          setParameter_ = null;
+          onChanged();
+        } else {
+          setParameter_ = null;
+          setParameterBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * `SetParameter` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter.Builder getSetParameterBuilder() {
+        
+        onChanged();
+        return getSetParameterFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * `SetParameter` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameterOrBuilder getSetParameterOrBuilder() {
+        if (setParameterBuilder_ != null) {
+          return setParameterBuilder_.getMessageOrBuilder();
+        } else {
+          return setParameter_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter.getDefaultInstance() : setParameter_;
+        }
+      }
+      /**
+       * <pre>
+       * `SetParameter` section of mongod configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfig5_0_enterprise.SetParameter set_parameter = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameterOrBuilder> 
+          getSetParameterFieldBuilder() {
+        if (setParameterBuilder_ == null) {
+          setParameterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameter.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.MongodConfig5_0_enterprise.SetParameterOrBuilder>(
+                  getSetParameter(),
+                  getParentForChildren(),
+                  isClean());
+          setParameter_ = null;
+        }
+        return setParameterBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -16478,6 +21027,26 @@ public final class Mongodb50Enterprise {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Network_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_KMIP_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_KMIP_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_AuditLog_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_AuditLog_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_SetParameter_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_SetParameter_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig5_0_enterprise_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -16545,7 +21114,7 @@ public final class Mongodb50Enterprise {
       "godb5_0_enterprise.proto\022\"yandex.cloud.m" +
       "db.mongodb.v1.config\032\036google/protobuf/wr" +
       "appers.proto\032\035yandex/cloud/validation.pr" +
-      "oto\"\340\013\n\032MongodConfig5_0_enterprise\022W\n\007st" +
+      "oto\"\323\021\n\032MongodConfig5_0_enterprise\022W\n\007st" +
       "orage\030\001 \001(\0132F.yandex.cloud.mdb.mongodb.v" +
       "1.config.MongodConfig5_0_enterprise.Stor" +
       "age\022n\n\023operation_profiling\030\002 \001(\0132Q.yande" +
@@ -16553,92 +21122,111 @@ public final class Mongodb50Enterprise {
       "ig5_0_enterprise.OperationProfiling\022S\n\003n" +
       "et\030\003 \001(\0132F.yandex.cloud.mdb.mongodb.v1.c" +
       "onfig.MongodConfig5_0_enterprise.Network" +
-      "\032\321\006\n\007Storage\022f\n\013wired_tiger\030\001 \001(\0132Q.yand" +
-      "ex.cloud.mdb.mongodb.v1.config.MongodCon" +
-      "fig5_0_enterprise.Storage.WiredTiger\022_\n\007" +
-      "journal\030\002 \001(\0132N.yandex.cloud.mdb.mongodb" +
-      ".v1.config.MongodConfig5_0_enterprise.St" +
-      "orage.Journal\032\260\004\n\nWiredTiger\022u\n\rengine_c" +
-      "onfig\030\001 \001(\0132^.yandex.cloud.mdb.mongodb.v" +
-      "1.config.MongodConfig5_0_enterprise.Stor" +
-      "age.WiredTiger.EngineConfig\022}\n\021collectio" +
-      "n_config\030\002 \001(\0132b.yandex.cloud.mdb.mongod" +
+      "\022Y\n\010security\030\004 \001(\0132G.yandex.cloud.mdb.mo" +
+      "ngodb.v1.config.MongodConfig5_0_enterpri" +
+      "se.Security\022Z\n\taudit_log\030\005 \001(\0132G.yandex." +
+      "cloud.mdb.mongodb.v1.config.MongodConfig" +
+      "5_0_enterprise.AuditLog\022b\n\rset_parameter" +
+      "\030\006 \001(\0132K.yandex.cloud.mdb.mongodb.v1.con" +
+      "fig.MongodConfig5_0_enterprise.SetParame" +
+      "ter\032\321\006\n\007Storage\022f\n\013wired_tiger\030\001 \001(\0132Q.y" +
+      "andex.cloud.mdb.mongodb.v1.config.Mongod" +
+      "Config5_0_enterprise.Storage.WiredTiger\022" +
+      "_\n\007journal\030\002 \001(\0132N.yandex.cloud.mdb.mong" +
+      "odb.v1.config.MongodConfig5_0_enterprise" +
+      ".Storage.Journal\032\260\004\n\nWiredTiger\022u\n\rengin" +
+      "e_config\030\001 \001(\0132^.yandex.cloud.mdb.mongod" +
       "b.v1.config.MongodConfig5_0_enterprise.S" +
-      "torage.WiredTiger.CollectionConfig\032C\n\014En" +
-      "gineConfig\0223\n\rcache_size_gb\030\001 \001(\0132\034.goog" +
-      "le.protobuf.DoubleValue\032\346\001\n\020CollectionCo" +
-      "nfig\022\207\001\n\020block_compressor\030\001 \001(\0162m.yandex" +
-      ".cloud.mdb.mongodb.v1.config.MongodConfi" +
-      "g5_0_enterprise.Storage.WiredTiger.Colle" +
-      "ctionConfig.Compressor\"H\n\nCompressor\022\032\n\026" +
-      "COMPRESSOR_UNSPECIFIED\020\000\022\010\n\004NONE\020\001\022\n\n\006SN" +
-      "APPY\020\002\022\010\n\004ZLIB\020\003\032J\n\007Journal\022?\n\017commit_in" +
-      "terval\030\001 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\t\372\3071\0051-500\032\367\001\n\022OperationProfiling\022d\n\004m" +
-      "ode\030\001 \001(\0162V.yandex.cloud.mdb.mongodb.v1." +
-      "config.MongodConfig5_0_enterprise.Operat" +
-      "ionProfiling.Mode\022>\n\021slow_op_threshold\030\002" +
-      " \001(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>" +
-      "0\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\007\n\003OFF\020\001" +
-      "\022\013\n\007SLOW_OP\020\002\022\007\n\003ALL\020\003\032V\n\007Network\022K\n\030max" +
-      "_incoming_connections\030\001 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\014\372\3071\01010-16384\"\331\007\n\034Mongo" +
-      "CfgConfig5_0_enterprise\022Y\n\007storage\030\001 \001(\013" +
-      "2H.yandex.cloud.mdb.mongodb.v1.config.Mo" +
-      "ngoCfgConfig5_0_enterprise.Storage\022p\n\023op" +
-      "eration_profiling\030\002 \001(\0132S.yandex.cloud.m" +
-      "db.mongodb.v1.config.MongoCfgConfig5_0_e" +
-      "nterprise.OperationProfiling\022U\n\003net\030\003 \001(" +
-      "\0132H.yandex.cloud.mdb.mongodb.v1.config.M" +
-      "ongoCfgConfig5_0_enterprise.Network\032\300\002\n\007" +
-      "Storage\022h\n\013wired_tiger\030\001 \001(\0132S.yandex.cl" +
-      "oud.mdb.mongodb.v1.config.MongoCfgConfig" +
-      "5_0_enterprise.Storage.WiredTiger\032\312\001\n\nWi" +
-      "redTiger\022w\n\rengine_config\030\001 \001(\0132`.yandex" +
-      ".cloud.mdb.mongodb.v1.config.MongoCfgCon" +
-      "fig5_0_enterprise.Storage.WiredTiger.Eng" +
-      "ineConfig\032C\n\014EngineConfig\0223\n\rcache_size_" +
-      "gb\030\001 \001(\0132\034.google.protobuf.DoubleValue\032\371" +
-      "\001\n\022OperationProfiling\022f\n\004mode\030\001 \001(\0162X.ya" +
+      "torage.WiredTiger.EngineConfig\022}\n\021collec" +
+      "tion_config\030\002 \001(\0132b.yandex.cloud.mdb.mon" +
+      "godb.v1.config.MongodConfig5_0_enterpris" +
+      "e.Storage.WiredTiger.CollectionConfig\032C\n" +
+      "\014EngineConfig\0223\n\rcache_size_gb\030\001 \001(\0132\034.g" +
+      "oogle.protobuf.DoubleValue\032\346\001\n\020Collectio" +
+      "nConfig\022\207\001\n\020block_compressor\030\001 \001(\0162m.yan" +
+      "dex.cloud.mdb.mongodb.v1.config.MongodCo" +
+      "nfig5_0_enterprise.Storage.WiredTiger.Co" +
+      "llectionConfig.Compressor\"H\n\nCompressor\022" +
+      "\032\n\026COMPRESSOR_UNSPECIFIED\020\000\022\010\n\004NONE\020\001\022\n\n" +
+      "\006SNAPPY\020\002\022\010\n\004ZLIB\020\003\032J\n\007Journal\022?\n\017commit" +
+      "_interval\030\001 \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\t\372\3071\0051-500\032\367\001\n\022OperationProfiling\022d" +
+      "\n\004mode\030\001 \001(\0162V.yandex.cloud.mdb.mongodb." +
+      "v1.config.MongodConfig5_0_enterprise.Ope" +
+      "rationProfiling.Mode\022>\n\021slow_op_threshol" +
+      "d\030\002 \001(\0132\033.google.protobuf.Int64ValueB\006\372\307" +
+      "1\002>0\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\007\n\003OF" +
+      "F\020\001\022\013\n\007SLOW_OP\020\002\022\007\n\003ALL\020\003\032V\n\007Network\022K\n\030" +
+      "max_incoming_connections\030\001 \001(\0132\033.google." +
+      "protobuf.Int64ValueB\014\372\3071\01010-16384\032\255\002\n\010Se" +
+      "curity\0225\n\021enable_encryption\030\001 \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\022Z\n\004kmip\030\002 \001(\0132L.ya" +
+      "ndex.cloud.mdb.mongodb.v1.config.MongodC" +
+      "onfig5_0_enterprise.Security.KMIP\032\215\001\n\004KM" +
+      "IP\022\023\n\013server_name\030\001 \001(\t\022)\n\004port\030\002 \001(\0132\033." +
+      "google.protobuf.Int64Value\022\021\n\tserver_ca\030" +
+      "\003 \001(\t\022\032\n\022client_certificate\030\004 \001(\t\022\026\n\016key" +
+      "_identifier\030\005 \001(\t\032U\n\010AuditLog\022\016\n\006filter\030" +
+      "\001 \001(\t\0229\n\025runtime_configuration\030\002 \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\032O\n\014SetParameter" +
+      "\022?\n\033audit_authorization_success\030\001 \001(\0132\032." +
+      "google.protobuf.BoolValue\"\331\007\n\034MongoCfgCo" +
+      "nfig5_0_enterprise\022Y\n\007storage\030\001 \001(\0132H.ya" +
       "ndex.cloud.mdb.mongodb.v1.config.MongoCf" +
-      "gConfig5_0_enterprise.OperationProfiling" +
-      ".Mode\022>\n\021slow_op_threshold\030\002 \001(\0132\033.googl" +
-      "e.protobuf.Int64ValueB\006\372\3071\002>0\";\n\004Mode\022\024\n" +
-      "\020MODE_UNSPECIFIED\020\000\022\007\n\003OFF\020\001\022\013\n\007SLOW_OP\020" +
-      "\002\022\007\n\003ALL\020\003\032V\n\007Network\022K\n\030max_incoming_co" +
-      "nnections\030\001 \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\014\372\3071\01010-16384\"\311\001\n\032MongosConfig5_0_e" +
-      "nterprise\022S\n\003net\030\001 \001(\0132F.yandex.cloud.md" +
-      "b.mongodb.v1.config.MongosConfig5_0_ente" +
-      "rprise.Network\032V\n\007Network\022K\n\030max_incomin" +
-      "g_connections\030\001 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\014\372\3071\01010-16384\"\246\002\n\035MongodConfigS" +
-      "et5_0_enterprise\022X\n\020effective_config\030\001 \001" +
-      "(\0132>.yandex.cloud.mdb.mongodb.v1.config." +
-      "MongodConfig5_0_enterprise\022S\n\013user_confi" +
-      "g\030\002 \001(\0132>.yandex.cloud.mdb.mongodb.v1.co" +
-      "nfig.MongodConfig5_0_enterprise\022V\n\016defau" +
-      "lt_config\030\003 \001(\0132>.yandex.cloud.mdb.mongo" +
-      "db.v1.config.MongodConfig5_0_enterprise\"" +
-      "\256\002\n\037MongoCfgConfigSet5_0_enterprise\022Z\n\020e" +
-      "ffective_config\030\001 \001(\0132@.yandex.cloud.mdb" +
-      ".mongodb.v1.config.MongoCfgConfig5_0_ent" +
-      "erprise\022U\n\013user_config\030\002 \001(\0132@.yandex.cl" +
-      "oud.mdb.mongodb.v1.config.MongoCfgConfig" +
-      "5_0_enterprise\022X\n\016default_config\030\003 \001(\0132@" +
-      ".yandex.cloud.mdb.mongodb.v1.config.Mong" +
-      "oCfgConfig5_0_enterprise\"\246\002\n\035MongosConfi" +
-      "gSet5_0_enterprise\022X\n\020effective_config\030\001" +
-      " \001(\0132>.yandex.cloud.mdb.mongodb.v1.confi" +
-      "g.MongosConfig5_0_enterprise\022S\n\013user_con" +
-      "fig\030\002 \001(\0132>.yandex.cloud.mdb.mongodb.v1." +
-      "config.MongosConfig5_0_enterprise\022V\n\016def" +
-      "ault_config\030\003 \001(\0132>.yandex.cloud.mdb.mon" +
+      "gConfig5_0_enterprise.Storage\022p\n\023operati" +
+      "on_profiling\030\002 \001(\0132S.yandex.cloud.mdb.mo" +
+      "ngodb.v1.config.MongoCfgConfig5_0_enterp" +
+      "rise.OperationProfiling\022U\n\003net\030\003 \001(\0132H.y" +
+      "andex.cloud.mdb.mongodb.v1.config.MongoC" +
+      "fgConfig5_0_enterprise.Network\032\300\002\n\007Stora" +
+      "ge\022h\n\013wired_tiger\030\001 \001(\0132S.yandex.cloud.m" +
+      "db.mongodb.v1.config.MongoCfgConfig5_0_e" +
+      "nterprise.Storage.WiredTiger\032\312\001\n\nWiredTi" +
+      "ger\022w\n\rengine_config\030\001 \001(\0132`.yandex.clou" +
+      "d.mdb.mongodb.v1.config.MongoCfgConfig5_" +
+      "0_enterprise.Storage.WiredTiger.EngineCo" +
+      "nfig\032C\n\014EngineConfig\0223\n\rcache_size_gb\030\001 " +
+      "\001(\0132\034.google.protobuf.DoubleValue\032\371\001\n\022Op" +
+      "erationProfiling\022f\n\004mode\030\001 \001(\0162X.yandex." +
+      "cloud.mdb.mongodb.v1.config.MongoCfgConf" +
+      "ig5_0_enterprise.OperationProfiling.Mode" +
+      "\022>\n\021slow_op_threshold\030\002 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\006\372\3071\002>0\";\n\004Mode\022\024\n\020MODE" +
+      "_UNSPECIFIED\020\000\022\007\n\003OFF\020\001\022\013\n\007SLOW_OP\020\002\022\007\n\003" +
+      "ALL\020\003\032V\n\007Network\022K\n\030max_incoming_connect" +
+      "ions\030\001 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\014\372\3071\01010-16384\"\311\001\n\032MongosConfig5_0_enterp" +
+      "rise\022S\n\003net\030\001 \001(\0132F.yandex.cloud.mdb.mon" +
       "godb.v1.config.MongosConfig5_0_enterpris" +
-      "eBx\n&yandex.cloud.api.mdb.mongodb.v1.con" +
-      "figZNgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/mdb/mongodb/v1/config;mong" +
-      "odbb\006proto3"
+      "e.Network\032V\n\007Network\022K\n\030max_incoming_con" +
+      "nections\030\001 \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\014\372\3071\01010-16384\"\246\002\n\035MongodConfigSet5_0" +
+      "_enterprise\022X\n\020effective_config\030\001 \001(\0132>." +
+      "yandex.cloud.mdb.mongodb.v1.config.Mongo" +
+      "dConfig5_0_enterprise\022S\n\013user_config\030\002 \001" +
+      "(\0132>.yandex.cloud.mdb.mongodb.v1.config." +
+      "MongodConfig5_0_enterprise\022V\n\016default_co" +
+      "nfig\030\003 \001(\0132>.yandex.cloud.mdb.mongodb.v1" +
+      ".config.MongodConfig5_0_enterprise\"\256\002\n\037M" +
+      "ongoCfgConfigSet5_0_enterprise\022Z\n\020effect" +
+      "ive_config\030\001 \001(\0132@.yandex.cloud.mdb.mong" +
+      "odb.v1.config.MongoCfgConfig5_0_enterpri" +
+      "se\022U\n\013user_config\030\002 \001(\0132@.yandex.cloud.m" +
+      "db.mongodb.v1.config.MongoCfgConfig5_0_e" +
+      "nterprise\022X\n\016default_config\030\003 \001(\0132@.yand" +
+      "ex.cloud.mdb.mongodb.v1.config.MongoCfgC" +
+      "onfig5_0_enterprise\"\246\002\n\035MongosConfigSet5" +
+      "_0_enterprise\022X\n\020effective_config\030\001 \001(\0132" +
+      ">.yandex.cloud.mdb.mongodb.v1.config.Mon" +
+      "gosConfig5_0_enterprise\022S\n\013user_config\030\002" +
+      " \001(\0132>.yandex.cloud.mdb.mongodb.v1.confi" +
+      "g.MongosConfig5_0_enterprise\022V\n\016default_" +
+      "config\030\003 \001(\0132>.yandex.cloud.mdb.mongodb." +
+      "v1.config.MongosConfig5_0_enterpriseBx\n&" +
+      "yandex.cloud.api.mdb.mongodb.v1.configZN" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/mdb/mongodb/v1/config;mongodbb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16659,7 +21247,7 @@ public final class Mongodb50Enterprise {
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_descriptor,
-        new java.lang.String[] { "Storage", "OperationProfiling", "Net", });
+        new java.lang.String[] { "Storage", "OperationProfiling", "Net", "Security", "AuditLog", "SetParameter", });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Storage_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Storage_fieldAccessorTable = new
@@ -16702,6 +21290,30 @@ public final class Mongodb50Enterprise {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Network_descriptor,
         new java.lang.String[] { "MaxIncomingConnections", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_descriptor.getNestedTypes().get(3);
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_descriptor,
+        new java.lang.String[] { "EnableEncryption", "Kmip", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_KMIP_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_KMIP_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_Security_KMIP_descriptor,
+        new java.lang.String[] { "ServerName", "Port", "ServerCa", "ClientCertificate", "KeyIdentifier", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_AuditLog_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_descriptor.getNestedTypes().get(4);
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_AuditLog_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_AuditLog_descriptor,
+        new java.lang.String[] { "Filter", "RuntimeConfiguration", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_SetParameter_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_descriptor.getNestedTypes().get(5);
+    internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_SetParameter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig5_0_enterprise_SetParameter_descriptor,
+        new java.lang.String[] { "AuditAuthorizationSuccess", });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig5_0_enterprise_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig5_0_enterprise_fieldAccessorTable = new
