@@ -4161,7 +4161,7 @@ public final class SubclusterOuterClass {
 
     /**
      * <pre>
-     * Host status code.
+     * Status code of the aggregated health of the host.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Health health = 3;</code>
@@ -4169,7 +4169,7 @@ public final class SubclusterOuterClass {
     int getHealthValue();
     /**
      * <pre>
-     * Host status code.
+     * Status code of the aggregated health of the host.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Health health = 3;</code>
@@ -4413,7 +4413,7 @@ public final class SubclusterOuterClass {
     private int health_;
     /**
      * <pre>
-     * Host status code.
+     * Status code of the aggregated health of the host.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Health health = 3;</code>
@@ -4423,7 +4423,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * Host status code.
+     * Status code of the aggregated health of the host.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Health health = 3;</code>
@@ -5065,7 +5065,7 @@ public final class SubclusterOuterClass {
       private int health_ = 0;
       /**
        * <pre>
-       * Host status code.
+       * Status code of the aggregated health of the host.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Health health = 3;</code>
@@ -5075,7 +5075,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Host status code.
+       * Status code of the aggregated health of the host.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Health health = 3;</code>
@@ -5087,7 +5087,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Host status code.
+       * Status code of the aggregated health of the host.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Health health = 3;</code>
@@ -5099,7 +5099,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Host status code.
+       * Status code of the aggregated health of the host.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Health health = 3;</code>
@@ -5115,7 +5115,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Host status code.
+       * Status code of the aggregated health of the host.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Health health = 3;</code>

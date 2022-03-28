@@ -661,10 +661,6 @@ public final class ClusterOuterClass {
     }
 
     /**
-     * <pre>
-     * Deployment environment.
-     * </pre>
-     *
      * Protobuf enum {@code yandex.cloud.mdb.mongodb.v1.Cluster.Environment}
      */
     public enum Environment
@@ -51179,6 +51175,15 @@ public final class ClusterOuterClass {
      * <code>bool data_lens = 1;</code>
      */
     boolean getDataLens();
+
+    /**
+     * <pre>
+     * Allow access for DataTransfer.
+     * </pre>
+     *
+     * <code>bool data_transfer = 3;</code>
+     */
+    boolean getDataTransfer();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Access}
@@ -51194,6 +51199,7 @@ public final class ClusterOuterClass {
     }
     private Access() {
       dataLens_ = false;
+      dataTransfer_ = false;
     }
 
     @java.lang.Override
@@ -51223,6 +51229,11 @@ public final class ClusterOuterClass {
             case 8: {
 
               dataLens_ = input.readBool();
+              break;
+            }
+            case 24: {
+
+              dataTransfer_ = input.readBool();
               break;
             }
             default: {
@@ -51270,6 +51281,19 @@ public final class ClusterOuterClass {
       return dataLens_;
     }
 
+    public static final int DATA_TRANSFER_FIELD_NUMBER = 3;
+    private boolean dataTransfer_;
+    /**
+     * <pre>
+     * Allow access for DataTransfer.
+     * </pre>
+     *
+     * <code>bool data_transfer = 3;</code>
+     */
+    public boolean getDataTransfer() {
+      return dataTransfer_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -51287,6 +51311,9 @@ public final class ClusterOuterClass {
       if (dataLens_ != false) {
         output.writeBool(1, dataLens_);
       }
+      if (dataTransfer_ != false) {
+        output.writeBool(3, dataTransfer_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -51299,6 +51326,10 @@ public final class ClusterOuterClass {
       if (dataLens_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, dataLens_);
+      }
+      if (dataTransfer_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, dataTransfer_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -51318,6 +51349,8 @@ public final class ClusterOuterClass {
       boolean result = true;
       result = result && (getDataLens()
           == other.getDataLens());
+      result = result && (getDataTransfer()
+          == other.getDataTransfer());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -51332,6 +51365,9 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + DATA_LENS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDataLens());
+      hash = (37 * hash) + DATA_TRANSFER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDataTransfer());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -51467,6 +51503,8 @@ public final class ClusterOuterClass {
         super.clear();
         dataLens_ = false;
 
+        dataTransfer_ = false;
+
         return this;
       }
 
@@ -51494,6 +51532,7 @@ public final class ClusterOuterClass {
       public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Access buildPartial() {
         yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Access result = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Access(this);
         result.dataLens_ = dataLens_;
+        result.dataTransfer_ = dataTransfer_;
         onBuilt();
         return result;
       }
@@ -51544,6 +51583,9 @@ public final class ClusterOuterClass {
         if (other == yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Access.getDefaultInstance()) return this;
         if (other.getDataLens() != false) {
           setDataLens(other.getDataLens());
+        }
+        if (other.getDataTransfer() != false) {
+          setDataTransfer(other.getDataTransfer());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -51608,6 +51650,44 @@ public final class ClusterOuterClass {
       public Builder clearDataLens() {
         
         dataLens_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean dataTransfer_ ;
+      /**
+       * <pre>
+       * Allow access for DataTransfer.
+       * </pre>
+       *
+       * <code>bool data_transfer = 3;</code>
+       */
+      public boolean getDataTransfer() {
+        return dataTransfer_;
+      }
+      /**
+       * <pre>
+       * Allow access for DataTransfer.
+       * </pre>
+       *
+       * <code>bool data_transfer = 3;</code>
+       */
+      public Builder setDataTransfer(boolean value) {
+        
+        dataTransfer_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Allow access for DataTransfer.
+       * </pre>
+       *
+       * <code>bool data_transfer = 3;</code>
+       */
+      public Builder clearDataTransfer() {
+        
+        dataTransfer_ = false;
         onChanged();
         return this;
       }
@@ -52154,10 +52234,11 @@ public final class ClusterOuterClass {
       "HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n" +
       "\tResources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021" +
       "\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"" +
-      "\033\n\006Access\022\021\n\tdata_lens\030\001 \001(\010Bj\n\037yandex.c" +
-      "loud.api.mdb.mongodb.v1ZGgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/mdb/mo" +
-      "ngodb/v1;mongodbb\006proto3"
+      "2\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\025\n\rdata_tra" +
+      "nsfer\030\003 \001(\010Bj\n\037yandex.cloud.api.mdb.mong" +
+      "odb.v1ZGgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/mdb/mongodb/v1;mongodbb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -52445,7 +52526,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mongodb_v1_Access_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Access_descriptor,
-        new java.lang.String[] { "DataLens", });
+        new java.lang.String[] { "DataLens", "DataTransfer", });
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.type.TimeOfDayProto.getDescriptor();

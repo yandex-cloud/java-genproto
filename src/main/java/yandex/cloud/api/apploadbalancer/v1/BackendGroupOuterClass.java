@@ -384,7 +384,7 @@ public final class BackendGroupOuterClass {
 
     /**
      * <pre>
-     * List of stream backends that the backend group consist of.
+     * List of stream (TCP) backends that the backend group consists of.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
@@ -392,7 +392,7 @@ public final class BackendGroupOuterClass {
     boolean hasStream();
     /**
      * <pre>
-     * List of stream backends that the backend group consist of.
+     * List of stream (TCP) backends that the backend group consists of.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
@@ -400,7 +400,7 @@ public final class BackendGroupOuterClass {
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup getStream();
     /**
      * <pre>
-     * List of stream backends that the backend group consist of.
+     * List of stream (TCP) backends that the backend group consists of.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
@@ -1006,7 +1006,7 @@ public final class BackendGroupOuterClass {
     public static final int STREAM_FIELD_NUMBER = 10;
     /**
      * <pre>
-     * List of stream backends that the backend group consist of.
+     * List of stream (TCP) backends that the backend group consists of.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
@@ -1016,7 +1016,7 @@ public final class BackendGroupOuterClass {
     }
     /**
      * <pre>
-     * List of stream backends that the backend group consist of.
+     * List of stream (TCP) backends that the backend group consists of.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
@@ -1029,7 +1029,7 @@ public final class BackendGroupOuterClass {
     }
     /**
      * <pre>
-     * List of stream backends that the backend group consist of.
+     * List of stream (TCP) backends that the backend group consists of.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
@@ -2497,7 +2497,7 @@ public final class BackendGroupOuterClass {
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroupOrBuilder> streamBuilder_;
       /**
        * <pre>
-       * List of stream backends that the backend group consist of.
+       * List of stream (TCP) backends that the backend group consists of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
@@ -2507,7 +2507,7 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * List of stream backends that the backend group consist of.
+       * List of stream (TCP) backends that the backend group consists of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
@@ -2527,7 +2527,7 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * List of stream backends that the backend group consist of.
+       * List of stream (TCP) backends that the backend group consists of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
@@ -2547,7 +2547,7 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * List of stream backends that the backend group consist of.
+       * List of stream (TCP) backends that the backend group consists of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
@@ -2565,7 +2565,7 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * List of stream backends that the backend group consist of.
+       * List of stream (TCP) backends that the backend group consists of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
@@ -2591,7 +2591,7 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * List of stream backends that the backend group consist of.
+       * List of stream (TCP) backends that the backend group consists of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
@@ -2614,7 +2614,7 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * List of stream backends that the backend group consist of.
+       * List of stream (TCP) backends that the backend group consists of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
@@ -2624,7 +2624,7 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * List of stream backends that the backend group consist of.
+       * List of stream (TCP) backends that the backend group consists of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
@@ -2641,7 +2641,7 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * List of stream backends that the backend group consist of.
+       * List of stream (TCP) backends that the backend group consists of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 10;</code>
@@ -2875,38 +2875,73 @@ public final class BackendGroupOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of stream (TCP) backends.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend> 
         getBackendsList();
     /**
+     * <pre>
+     * List of stream (TCP) backends.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend getBackends(int index);
     /**
+     * <pre>
+     * List of stream (TCP) backends.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
      */
     int getBackendsCount();
     /**
+     * <pre>
+     * List of stream (TCP) backends.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendOrBuilder> 
         getBackendsOrBuilderList();
     /**
+     * <pre>
+     * List of stream (TCP) backends.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendOrBuilder getBackendsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Connection-based session affinity configuration.
+     * For now, a connection is defined only by an IP address of the client.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
     boolean hasConnection();
     /**
+     * <pre>
+     * Connection-based session affinity configuration.
+     * For now, a connection is defined only by an IP address of the client.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection();
     /**
+     * <pre>
+     * Connection-based session affinity configuration.
+     * For now, a connection is defined only by an IP address of the client.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder();
@@ -2915,7 +2950,7 @@ public final class BackendGroupOuterClass {
   }
   /**
    * <pre>
-   * A Stream backend group resource.
+   * A stream (TCP) backend group resource.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StreamBackendGroup}
@@ -3055,12 +3090,20 @@ public final class BackendGroupOuterClass {
     public static final int BACKENDS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend> backends_;
     /**
+     * <pre>
+     * List of stream (TCP) backends.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
      */
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend> getBackendsList() {
       return backends_;
     }
     /**
+     * <pre>
+     * List of stream (TCP) backends.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendOrBuilder> 
@@ -3068,18 +3111,30 @@ public final class BackendGroupOuterClass {
       return backends_;
     }
     /**
+     * <pre>
+     * List of stream (TCP) backends.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
      */
     public int getBackendsCount() {
       return backends_.size();
     }
     /**
+     * <pre>
+     * List of stream (TCP) backends.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend getBackends(int index) {
       return backends_.get(index);
     }
     /**
+     * <pre>
+     * List of stream (TCP) backends.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendOrBuilder getBackendsOrBuilder(
@@ -3089,12 +3144,22 @@ public final class BackendGroupOuterClass {
 
     public static final int CONNECTION_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Connection-based session affinity configuration.
+     * For now, a connection is defined only by an IP address of the client.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
     public boolean hasConnection() {
       return sessionAffinityCase_ == 2;
     }
     /**
+     * <pre>
+     * Connection-based session affinity configuration.
+     * For now, a connection is defined only by an IP address of the client.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection() {
@@ -3104,6 +3169,11 @@ public final class BackendGroupOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Connection-based session affinity configuration.
+     * For now, a connection is defined only by an IP address of the client.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder() {
@@ -3299,7 +3369,7 @@ public final class BackendGroupOuterClass {
     }
     /**
      * <pre>
-     * A Stream backend group resource.
+     * A stream (TCP) backend group resource.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StreamBackendGroup}
@@ -3535,6 +3605,10 @@ public final class BackendGroupOuterClass {
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendOrBuilder> backendsBuilder_;
 
       /**
+       * <pre>
+       * List of stream (TCP) backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend> getBackendsList() {
@@ -3545,6 +3619,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of stream (TCP) backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
        */
       public int getBackendsCount() {
@@ -3555,6 +3633,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of stream (TCP) backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend getBackends(int index) {
@@ -3565,6 +3647,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of stream (TCP) backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
        */
       public Builder setBackends(
@@ -3582,6 +3668,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of stream (TCP) backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
        */
       public Builder setBackends(
@@ -3596,6 +3686,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of stream (TCP) backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
        */
       public Builder addBackends(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend value) {
@@ -3612,6 +3706,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of stream (TCP) backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
        */
       public Builder addBackends(
@@ -3629,6 +3727,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of stream (TCP) backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
        */
       public Builder addBackends(
@@ -3643,6 +3745,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of stream (TCP) backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
        */
       public Builder addBackends(
@@ -3657,6 +3763,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of stream (TCP) backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
        */
       public Builder addAllBackends(
@@ -3672,6 +3782,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of stream (TCP) backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
        */
       public Builder clearBackends() {
@@ -3685,6 +3799,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of stream (TCP) backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
        */
       public Builder removeBackends(int index) {
@@ -3698,6 +3816,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of stream (TCP) backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend.Builder getBackendsBuilder(
@@ -3705,6 +3827,10 @@ public final class BackendGroupOuterClass {
         return getBackendsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of stream (TCP) backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendOrBuilder getBackendsOrBuilder(
@@ -3715,6 +3841,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of stream (TCP) backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendOrBuilder> 
@@ -3726,6 +3856,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of stream (TCP) backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend.Builder addBackendsBuilder() {
@@ -3733,6 +3867,10 @@ public final class BackendGroupOuterClass {
             yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of stream (TCP) backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend.Builder addBackendsBuilder(
@@ -3741,6 +3879,10 @@ public final class BackendGroupOuterClass {
             index, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of stream (TCP) backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.StreamBackend backends = 1;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend.Builder> 
@@ -3765,12 +3907,22 @@ public final class BackendGroupOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder> connectionBuilder_;
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public boolean hasConnection() {
         return sessionAffinityCase_ == 2;
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection() {
@@ -3787,6 +3939,11 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public Builder setConnection(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity value) {
@@ -3803,6 +3960,11 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public Builder setConnection(
@@ -3817,6 +3979,11 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public Builder mergeConnection(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity value) {
@@ -3839,6 +4006,11 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public Builder clearConnection() {
@@ -3858,12 +4030,22 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.Builder getConnectionBuilder() {
         return getConnectionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder() {
@@ -3877,6 +4059,11 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection-based session affinity configuration.
+       * For now, a connection is defined only by an IP address of the client.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -10500,10 +10687,18 @@ public final class BackendGroupOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Name of the backend.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the backend.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     com.google.protobuf.ByteString
@@ -10511,7 +10706,10 @@ public final class BackendGroupOuterClass {
 
     /**
      * <pre>
-     * If not set, backend will be disabled.
+     * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
+     * Weights must be set either for all backends in a group or for none of them.
+     * Setting no weights is the same as setting equal non-zero weights for all backends.
+     * If the weight is non-positive, traffic is not sent to the backend.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -10519,7 +10717,10 @@ public final class BackendGroupOuterClass {
     boolean hasBackendWeight();
     /**
      * <pre>
-     * If not set, backend will be disabled.
+     * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
+     * Weights must be set either for all backends in a group or for none of them.
+     * Setting no weights is the same as setting equal non-zero weights for all backends.
+     * If the weight is non-positive, traffic is not sent to the backend.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -10527,7 +10728,10 @@ public final class BackendGroupOuterClass {
     com.google.protobuf.Int64Value getBackendWeight();
     /**
      * <pre>
-     * If not set, backend will be disabled.
+     * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
+     * Weights must be set either for all backends in a group or for none of them.
+     * Setting no weights is the same as setting equal non-zero weights for all backends.
+     * If the weight is non-positive, traffic is not sent to the backend.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -10535,21 +10739,33 @@ public final class BackendGroupOuterClass {
     com.google.protobuf.Int64ValueOrBuilder getBackendWeightOrBuilder();
 
     /**
+     * <pre>
+     * Load balancing configuration for the backend.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
      */
     boolean hasLoadBalancingConfig();
     /**
+     * <pre>
+     * Load balancing configuration for the backend.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig getLoadBalancingConfig();
     /**
+     * <pre>
+     * Load balancing configuration for the backend.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfigOrBuilder getLoadBalancingConfigOrBuilder();
 
     /**
      * <pre>
-     * Optional alternative port for all targets.
+     * Port used by all targets to receive traffic.
      * </pre>
      *
      * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
@@ -10557,51 +10773,117 @@ public final class BackendGroupOuterClass {
     long getPort();
 
     /**
+     * <pre>
+     * Target groups that belong to the backend. For details about target groups, see
+     * [documentation](/docs/application-load-balancer/concepts/target-group).
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
      */
     boolean hasTargetGroups();
     /**
+     * <pre>
+     * Target groups that belong to the backend. For details about target groups, see
+     * [documentation](/docs/application-load-balancer/concepts/target-group).
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend getTargetGroups();
     /**
+     * <pre>
+     * Target groups that belong to the backend. For details about target groups, see
+     * [documentation](/docs/application-load-balancer/concepts/target-group).
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackendOrBuilder getTargetGroupsOrBuilder();
 
     /**
+     * <pre>
+     * Health checks to perform on targets from target groups.
+     * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+     * If no health checks are specified, active health checking is not performed.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck> 
         getHealthchecksList();
     /**
+     * <pre>
+     * Health checks to perform on targets from target groups.
+     * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+     * If no health checks are specified, active health checking is not performed.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck getHealthchecks(int index);
     /**
+     * <pre>
+     * Health checks to perform on targets from target groups.
+     * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+     * If no health checks are specified, active health checking is not performed.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
      */
     int getHealthchecksCount();
     /**
+     * <pre>
+     * Health checks to perform on targets from target groups.
+     * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+     * If no health checks are specified, active health checking is not performed.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheckOrBuilder> 
         getHealthchecksOrBuilderList();
     /**
+     * <pre>
+     * Health checks to perform on targets from target groups.
+     * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+     * If no health checks are specified, active health checking is not performed.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheckOrBuilder getHealthchecksOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Settings for TLS connections between load balancer nodes and backend targets.
+     * If specified, the load balancer establishes TLS-encrypted TCP connections with targets and compares received
+     * certificates with the one specified in [BackendTls.validation_context].
+     * If not specified, the load balancer establishes unencrypted TCP connections with targets.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
      */
     boolean hasTls();
     /**
+     * <pre>
+     * Settings for TLS connections between load balancer nodes and backend targets.
+     * If specified, the load balancer establishes TLS-encrypted TCP connections with targets and compares received
+     * certificates with the one specified in [BackendTls.validation_context].
+     * If not specified, the load balancer establishes unencrypted TCP connections with targets.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls getTls();
     /**
+     * <pre>
+     * Settings for TLS connections between load balancer nodes and backend targets.
+     * If specified, the load balancer establishes TLS-encrypted TCP connections with targets and compares received
+     * certificates with the one specified in [BackendTls.validation_context].
+     * If not specified, the load balancer establishes unencrypted TCP connections with targets.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTlsOrBuilder getTlsOrBuilder();
@@ -10619,7 +10901,7 @@ public final class BackendGroupOuterClass {
   }
   /**
    * <pre>
-   * A stream backend resource.
+   * A stream (TCP) backend resource.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StreamBackend}
@@ -10817,6 +11099,10 @@ public final class BackendGroupOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the backend.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public java.lang.String getName() {
@@ -10832,6 +11118,10 @@ public final class BackendGroupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the backend.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public com.google.protobuf.ByteString
@@ -10852,7 +11142,10 @@ public final class BackendGroupOuterClass {
     private com.google.protobuf.Int64Value backendWeight_;
     /**
      * <pre>
-     * If not set, backend will be disabled.
+     * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
+     * Weights must be set either for all backends in a group or for none of them.
+     * Setting no weights is the same as setting equal non-zero weights for all backends.
+     * If the weight is non-positive, traffic is not sent to the backend.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -10862,7 +11155,10 @@ public final class BackendGroupOuterClass {
     }
     /**
      * <pre>
-     * If not set, backend will be disabled.
+     * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
+     * Weights must be set either for all backends in a group or for none of them.
+     * Setting no weights is the same as setting equal non-zero weights for all backends.
+     * If the weight is non-positive, traffic is not sent to the backend.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -10872,7 +11168,10 @@ public final class BackendGroupOuterClass {
     }
     /**
      * <pre>
-     * If not set, backend will be disabled.
+     * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
+     * Weights must be set either for all backends in a group or for none of them.
+     * Setting no weights is the same as setting equal non-zero weights for all backends.
+     * If the weight is non-positive, traffic is not sent to the backend.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -10884,18 +11183,30 @@ public final class BackendGroupOuterClass {
     public static final int LOAD_BALANCING_CONFIG_FIELD_NUMBER = 3;
     private yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig loadBalancingConfig_;
     /**
+     * <pre>
+     * Load balancing configuration for the backend.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
      */
     public boolean hasLoadBalancingConfig() {
       return loadBalancingConfig_ != null;
     }
     /**
+     * <pre>
+     * Load balancing configuration for the backend.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig getLoadBalancingConfig() {
       return loadBalancingConfig_ == null ? yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig.getDefaultInstance() : loadBalancingConfig_;
     }
     /**
+     * <pre>
+     * Load balancing configuration for the backend.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfigOrBuilder getLoadBalancingConfigOrBuilder() {
@@ -10906,7 +11217,7 @@ public final class BackendGroupOuterClass {
     private long port_;
     /**
      * <pre>
-     * Optional alternative port for all targets.
+     * Port used by all targets to receive traffic.
      * </pre>
      *
      * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
@@ -10917,12 +11228,22 @@ public final class BackendGroupOuterClass {
 
     public static final int TARGET_GROUPS_FIELD_NUMBER = 5;
     /**
+     * <pre>
+     * Target groups that belong to the backend. For details about target groups, see
+     * [documentation](/docs/application-load-balancer/concepts/target-group).
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
      */
     public boolean hasTargetGroups() {
       return backendTypeCase_ == 5;
     }
     /**
+     * <pre>
+     * Target groups that belong to the backend. For details about target groups, see
+     * [documentation](/docs/application-load-balancer/concepts/target-group).
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend getTargetGroups() {
@@ -10932,6 +11253,11 @@ public final class BackendGroupOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Target groups that belong to the backend. For details about target groups, see
+     * [documentation](/docs/application-load-balancer/concepts/target-group).
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackendOrBuilder getTargetGroupsOrBuilder() {
@@ -10944,12 +11270,24 @@ public final class BackendGroupOuterClass {
     public static final int HEALTHCHECKS_FIELD_NUMBER = 6;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck> healthchecks_;
     /**
+     * <pre>
+     * Health checks to perform on targets from target groups.
+     * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+     * If no health checks are specified, active health checking is not performed.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
      */
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck> getHealthchecksList() {
       return healthchecks_;
     }
     /**
+     * <pre>
+     * Health checks to perform on targets from target groups.
+     * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+     * If no health checks are specified, active health checking is not performed.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
      */
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheckOrBuilder> 
@@ -10957,18 +11295,36 @@ public final class BackendGroupOuterClass {
       return healthchecks_;
     }
     /**
+     * <pre>
+     * Health checks to perform on targets from target groups.
+     * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+     * If no health checks are specified, active health checking is not performed.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
      */
     public int getHealthchecksCount() {
       return healthchecks_.size();
     }
     /**
+     * <pre>
+     * Health checks to perform on targets from target groups.
+     * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+     * If no health checks are specified, active health checking is not performed.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck getHealthchecks(int index) {
       return healthchecks_.get(index);
     }
     /**
+     * <pre>
+     * Health checks to perform on targets from target groups.
+     * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+     * If no health checks are specified, active health checking is not performed.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheckOrBuilder getHealthchecksOrBuilder(
@@ -10979,18 +11335,39 @@ public final class BackendGroupOuterClass {
     public static final int TLS_FIELD_NUMBER = 7;
     private yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls tls_;
     /**
+     * <pre>
+     * Settings for TLS connections between load balancer nodes and backend targets.
+     * If specified, the load balancer establishes TLS-encrypted TCP connections with targets and compares received
+     * certificates with the one specified in [BackendTls.validation_context].
+     * If not specified, the load balancer establishes unencrypted TCP connections with targets.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
      */
     public boolean hasTls() {
       return tls_ != null;
     }
     /**
+     * <pre>
+     * Settings for TLS connections between load balancer nodes and backend targets.
+     * If specified, the load balancer establishes TLS-encrypted TCP connections with targets and compares received
+     * certificates with the one specified in [BackendTls.validation_context].
+     * If not specified, the load balancer establishes unencrypted TCP connections with targets.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls getTls() {
       return tls_ == null ? yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls.getDefaultInstance() : tls_;
     }
     /**
+     * <pre>
+     * Settings for TLS connections between load balancer nodes and backend targets.
+     * If specified, the load balancer establishes TLS-encrypted TCP connections with targets and compares received
+     * certificates with the one specified in [BackendTls.validation_context].
+     * If not specified, the load balancer establishes unencrypted TCP connections with targets.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTlsOrBuilder getTlsOrBuilder() {
@@ -11278,7 +11655,7 @@ public final class BackendGroupOuterClass {
     }
     /**
      * <pre>
-     * A stream backend resource.
+     * A stream (TCP) backend resource.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StreamBackend}
@@ -11564,6 +11941,10 @@ public final class BackendGroupOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the backend.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public java.lang.String getName() {
@@ -11579,6 +11960,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the backend.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public com.google.protobuf.ByteString
@@ -11595,6 +11980,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the backend.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setName(
@@ -11608,6 +11997,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the backend.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder clearName() {
@@ -11617,6 +12010,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the backend.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setNameBytes(
@@ -11636,7 +12033,10 @@ public final class BackendGroupOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backendWeightBuilder_;
       /**
        * <pre>
-       * If not set, backend will be disabled.
+       * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
+       * Weights must be set either for all backends in a group or for none of them.
+       * Setting no weights is the same as setting equal non-zero weights for all backends.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -11646,7 +12046,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * If not set, backend will be disabled.
+       * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
+       * Weights must be set either for all backends in a group or for none of them.
+       * Setting no weights is the same as setting equal non-zero weights for all backends.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -11660,7 +12063,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * If not set, backend will be disabled.
+       * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
+       * Weights must be set either for all backends in a group or for none of them.
+       * Setting no weights is the same as setting equal non-zero weights for all backends.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -11680,7 +12086,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * If not set, backend will be disabled.
+       * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
+       * Weights must be set either for all backends in a group or for none of them.
+       * Setting no weights is the same as setting equal non-zero weights for all backends.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -11698,7 +12107,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * If not set, backend will be disabled.
+       * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
+       * Weights must be set either for all backends in a group or for none of them.
+       * Setting no weights is the same as setting equal non-zero weights for all backends.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -11720,7 +12132,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * If not set, backend will be disabled.
+       * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
+       * Weights must be set either for all backends in a group or for none of them.
+       * Setting no weights is the same as setting equal non-zero weights for all backends.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -11738,7 +12153,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * If not set, backend will be disabled.
+       * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
+       * Weights must be set either for all backends in a group or for none of them.
+       * Setting no weights is the same as setting equal non-zero weights for all backends.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -11750,7 +12168,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * If not set, backend will be disabled.
+       * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
+       * Weights must be set either for all backends in a group or for none of them.
+       * Setting no weights is the same as setting equal non-zero weights for all backends.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -11765,7 +12186,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * If not set, backend will be disabled.
+       * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
+       * Weights must be set either for all backends in a group or for none of them.
+       * Setting no weights is the same as setting equal non-zero weights for all backends.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -11788,12 +12212,20 @@ public final class BackendGroupOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfigOrBuilder> loadBalancingConfigBuilder_;
       /**
+       * <pre>
+       * Load balancing configuration for the backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
        */
       public boolean hasLoadBalancingConfig() {
         return loadBalancingConfigBuilder_ != null || loadBalancingConfig_ != null;
       }
       /**
+       * <pre>
+       * Load balancing configuration for the backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig getLoadBalancingConfig() {
@@ -11804,6 +12236,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Load balancing configuration for the backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
        */
       public Builder setLoadBalancingConfig(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig value) {
@@ -11820,6 +12256,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Load balancing configuration for the backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
        */
       public Builder setLoadBalancingConfig(
@@ -11834,6 +12274,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Load balancing configuration for the backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
        */
       public Builder mergeLoadBalancingConfig(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig value) {
@@ -11852,6 +12296,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Load balancing configuration for the backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
        */
       public Builder clearLoadBalancingConfig() {
@@ -11866,6 +12314,10 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Load balancing configuration for the backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfig.Builder getLoadBalancingConfigBuilder() {
@@ -11874,6 +12326,10 @@ public final class BackendGroupOuterClass {
         return getLoadBalancingConfigFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Load balancing configuration for the backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingConfigOrBuilder getLoadBalancingConfigOrBuilder() {
@@ -11885,6 +12341,10 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Load balancing configuration for the backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingConfig load_balancing_config = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -11904,7 +12364,7 @@ public final class BackendGroupOuterClass {
       private long port_ ;
       /**
        * <pre>
-       * Optional alternative port for all targets.
+       * Port used by all targets to receive traffic.
        * </pre>
        *
        * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
@@ -11914,7 +12374,7 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Optional alternative port for all targets.
+       * Port used by all targets to receive traffic.
        * </pre>
        *
        * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
@@ -11927,7 +12387,7 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Optional alternative port for all targets.
+       * Port used by all targets to receive traffic.
        * </pre>
        *
        * <code>int64 port = 4 [(.yandex.cloud.value) = "0-65535"];</code>
@@ -11942,12 +12402,22 @@ public final class BackendGroupOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackendOrBuilder> targetGroupsBuilder_;
       /**
+       * <pre>
+       * Target groups that belong to the backend. For details about target groups, see
+       * [documentation](/docs/application-load-balancer/concepts/target-group).
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
        */
       public boolean hasTargetGroups() {
         return backendTypeCase_ == 5;
       }
       /**
+       * <pre>
+       * Target groups that belong to the backend. For details about target groups, see
+       * [documentation](/docs/application-load-balancer/concepts/target-group).
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend getTargetGroups() {
@@ -11964,6 +12434,11 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Target groups that belong to the backend. For details about target groups, see
+       * [documentation](/docs/application-load-balancer/concepts/target-group).
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
        */
       public Builder setTargetGroups(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend value) {
@@ -11980,6 +12455,11 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Target groups that belong to the backend. For details about target groups, see
+       * [documentation](/docs/application-load-balancer/concepts/target-group).
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
        */
       public Builder setTargetGroups(
@@ -11994,6 +12474,11 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Target groups that belong to the backend. For details about target groups, see
+       * [documentation](/docs/application-load-balancer/concepts/target-group).
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
        */
       public Builder mergeTargetGroups(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend value) {
@@ -12016,6 +12501,11 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Target groups that belong to the backend. For details about target groups, see
+       * [documentation](/docs/application-load-balancer/concepts/target-group).
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
        */
       public Builder clearTargetGroups() {
@@ -12035,12 +12525,22 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Target groups that belong to the backend. For details about target groups, see
+       * [documentation](/docs/application-load-balancer/concepts/target-group).
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend.Builder getTargetGroupsBuilder() {
         return getTargetGroupsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Target groups that belong to the backend. For details about target groups, see
+       * [documentation](/docs/application-load-balancer/concepts/target-group).
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackendOrBuilder getTargetGroupsOrBuilder() {
@@ -12054,6 +12554,11 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Target groups that belong to the backend. For details about target groups, see
+       * [documentation](/docs/application-load-balancer/concepts/target-group).
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -12088,6 +12593,12 @@ public final class BackendGroupOuterClass {
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheckOrBuilder> healthchecksBuilder_;
 
       /**
+       * <pre>
+       * Health checks to perform on targets from target groups.
+       * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+       * If no health checks are specified, active health checking is not performed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck> getHealthchecksList() {
@@ -12098,6 +12609,12 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Health checks to perform on targets from target groups.
+       * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+       * If no health checks are specified, active health checking is not performed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
        */
       public int getHealthchecksCount() {
@@ -12108,6 +12625,12 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Health checks to perform on targets from target groups.
+       * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+       * If no health checks are specified, active health checking is not performed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck getHealthchecks(int index) {
@@ -12118,6 +12641,12 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Health checks to perform on targets from target groups.
+       * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+       * If no health checks are specified, active health checking is not performed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
        */
       public Builder setHealthchecks(
@@ -12135,6 +12664,12 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Health checks to perform on targets from target groups.
+       * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+       * If no health checks are specified, active health checking is not performed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
        */
       public Builder setHealthchecks(
@@ -12149,6 +12684,12 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Health checks to perform on targets from target groups.
+       * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+       * If no health checks are specified, active health checking is not performed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
        */
       public Builder addHealthchecks(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck value) {
@@ -12165,6 +12706,12 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Health checks to perform on targets from target groups.
+       * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+       * If no health checks are specified, active health checking is not performed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
        */
       public Builder addHealthchecks(
@@ -12182,6 +12729,12 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Health checks to perform on targets from target groups.
+       * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+       * If no health checks are specified, active health checking is not performed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
        */
       public Builder addHealthchecks(
@@ -12196,6 +12749,12 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Health checks to perform on targets from target groups.
+       * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+       * If no health checks are specified, active health checking is not performed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
        */
       public Builder addHealthchecks(
@@ -12210,6 +12769,12 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Health checks to perform on targets from target groups.
+       * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+       * If no health checks are specified, active health checking is not performed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
        */
       public Builder addAllHealthchecks(
@@ -12225,6 +12790,12 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Health checks to perform on targets from target groups.
+       * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+       * If no health checks are specified, active health checking is not performed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
        */
       public Builder clearHealthchecks() {
@@ -12238,6 +12809,12 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Health checks to perform on targets from target groups.
+       * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+       * If no health checks are specified, active health checking is not performed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
        */
       public Builder removeHealthchecks(int index) {
@@ -12251,6 +12828,12 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Health checks to perform on targets from target groups.
+       * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+       * If no health checks are specified, active health checking is not performed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.Builder getHealthchecksBuilder(
@@ -12258,6 +12841,12 @@ public final class BackendGroupOuterClass {
         return getHealthchecksFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Health checks to perform on targets from target groups.
+       * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+       * If no health checks are specified, active health checking is not performed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheckOrBuilder getHealthchecksOrBuilder(
@@ -12268,6 +12857,12 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Health checks to perform on targets from target groups.
+       * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+       * If no health checks are specified, active health checking is not performed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheckOrBuilder> 
@@ -12279,6 +12874,12 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Health checks to perform on targets from target groups.
+       * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+       * If no health checks are specified, active health checking is not performed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.Builder addHealthchecksBuilder() {
@@ -12286,6 +12887,12 @@ public final class BackendGroupOuterClass {
             yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Health checks to perform on targets from target groups.
+       * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+       * If no health checks are specified, active health checking is not performed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.Builder addHealthchecksBuilder(
@@ -12294,6 +12901,12 @@ public final class BackendGroupOuterClass {
             index, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Health checks to perform on targets from target groups.
+       * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
+       * If no health checks are specified, active health checking is not performed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HealthCheck healthchecks = 6;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.Builder> 
@@ -12319,12 +12932,26 @@ public final class BackendGroupOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTlsOrBuilder> tlsBuilder_;
       /**
+       * <pre>
+       * Settings for TLS connections between load balancer nodes and backend targets.
+       * If specified, the load balancer establishes TLS-encrypted TCP connections with targets and compares received
+       * certificates with the one specified in [BackendTls.validation_context].
+       * If not specified, the load balancer establishes unencrypted TCP connections with targets.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
        */
       public boolean hasTls() {
         return tlsBuilder_ != null || tls_ != null;
       }
       /**
+       * <pre>
+       * Settings for TLS connections between load balancer nodes and backend targets.
+       * If specified, the load balancer establishes TLS-encrypted TCP connections with targets and compares received
+       * certificates with the one specified in [BackendTls.validation_context].
+       * If not specified, the load balancer establishes unencrypted TCP connections with targets.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls getTls() {
@@ -12335,6 +12962,13 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Settings for TLS connections between load balancer nodes and backend targets.
+       * If specified, the load balancer establishes TLS-encrypted TCP connections with targets and compares received
+       * certificates with the one specified in [BackendTls.validation_context].
+       * If not specified, the load balancer establishes unencrypted TCP connections with targets.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
        */
       public Builder setTls(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls value) {
@@ -12351,6 +12985,13 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for TLS connections between load balancer nodes and backend targets.
+       * If specified, the load balancer establishes TLS-encrypted TCP connections with targets and compares received
+       * certificates with the one specified in [BackendTls.validation_context].
+       * If not specified, the load balancer establishes unencrypted TCP connections with targets.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
        */
       public Builder setTls(
@@ -12365,6 +13006,13 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for TLS connections between load balancer nodes and backend targets.
+       * If specified, the load balancer establishes TLS-encrypted TCP connections with targets and compares received
+       * certificates with the one specified in [BackendTls.validation_context].
+       * If not specified, the load balancer establishes unencrypted TCP connections with targets.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
        */
       public Builder mergeTls(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls value) {
@@ -12383,6 +13031,13 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for TLS connections between load balancer nodes and backend targets.
+       * If specified, the load balancer establishes TLS-encrypted TCP connections with targets and compares received
+       * certificates with the one specified in [BackendTls.validation_context].
+       * If not specified, the load balancer establishes unencrypted TCP connections with targets.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
        */
       public Builder clearTls() {
@@ -12397,6 +13052,13 @@ public final class BackendGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for TLS connections between load balancer nodes and backend targets.
+       * If specified, the load balancer establishes TLS-encrypted TCP connections with targets and compares received
+       * certificates with the one specified in [BackendTls.validation_context].
+       * If not specified, the load balancer establishes unencrypted TCP connections with targets.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls.Builder getTlsBuilder() {
@@ -12405,6 +13067,13 @@ public final class BackendGroupOuterClass {
         return getTlsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Settings for TLS connections between load balancer nodes and backend targets.
+       * If specified, the load balancer establishes TLS-encrypted TCP connections with targets and compares received
+       * certificates with the one specified in [BackendTls.validation_context].
+       * If not specified, the load balancer establishes unencrypted TCP connections with targets.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTlsOrBuilder getTlsOrBuilder() {
@@ -12416,6 +13085,13 @@ public final class BackendGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Settings for TLS connections between load balancer nodes and backend targets.
+       * If specified, the load balancer establishes TLS-encrypted TCP connections with targets and compares received
+       * certificates with the one specified in [BackendTls.validation_context].
+       * If not specified, the load balancer establishes unencrypted TCP connections with targets.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.BackendTls tls = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

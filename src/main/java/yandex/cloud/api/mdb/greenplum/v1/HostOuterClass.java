@@ -299,10 +299,6 @@ public final class HostOuterClass {
     }
 
     /**
-     * <pre>
-     * Type of the host.
-     * </pre>
-     *
      * Protobuf enum {@code yandex.cloud.mdb.greenplum.v1.Host.Type}
      */
     public enum Type
@@ -451,10 +447,6 @@ public final class HostOuterClass {
     }
 
     /**
-     * <pre>
-     * Status code of the aggregated health of the host.
-     * </pre>
-     *
      * Protobuf enum {@code yandex.cloud.mdb.greenplum.v1.Host.Health}
      */
     public enum Health

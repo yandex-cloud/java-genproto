@@ -12244,6 +12244,15 @@ public final class ClusterOuterClass {
      * <code>bool web_sql = 2;</code>
      */
     boolean getWebSql();
+
+    /**
+     * <pre>
+     * Allow access for DataTransfer.
+     * </pre>
+     *
+     * <code>bool data_transfer = 3;</code>
+     */
+    boolean getDataTransfer();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.Access}
@@ -12260,6 +12269,7 @@ public final class ClusterOuterClass {
     private Access() {
       dataLens_ = false;
       webSql_ = false;
+      dataTransfer_ = false;
     }
 
     @java.lang.Override
@@ -12294,6 +12304,11 @@ public final class ClusterOuterClass {
             case 16: {
 
               webSql_ = input.readBool();
+              break;
+            }
+            case 24: {
+
+              dataTransfer_ = input.readBool();
               break;
             }
             default: {
@@ -12356,6 +12371,19 @@ public final class ClusterOuterClass {
       return webSql_;
     }
 
+    public static final int DATA_TRANSFER_FIELD_NUMBER = 3;
+    private boolean dataTransfer_;
+    /**
+     * <pre>
+     * Allow access for DataTransfer.
+     * </pre>
+     *
+     * <code>bool data_transfer = 3;</code>
+     */
+    public boolean getDataTransfer() {
+      return dataTransfer_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12376,6 +12404,9 @@ public final class ClusterOuterClass {
       if (webSql_ != false) {
         output.writeBool(2, webSql_);
       }
+      if (dataTransfer_ != false) {
+        output.writeBool(3, dataTransfer_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12392,6 +12423,10 @@ public final class ClusterOuterClass {
       if (webSql_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, webSql_);
+      }
+      if (dataTransfer_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, dataTransfer_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12413,6 +12448,8 @@ public final class ClusterOuterClass {
           == other.getDataLens());
       result = result && (getWebSql()
           == other.getWebSql());
+      result = result && (getDataTransfer()
+          == other.getDataTransfer());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -12430,6 +12467,9 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + WEB_SQL_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getWebSql());
+      hash = (37 * hash) + DATA_TRANSFER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDataTransfer());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12567,6 +12607,8 @@ public final class ClusterOuterClass {
 
         webSql_ = false;
 
+        dataTransfer_ = false;
+
         return this;
       }
 
@@ -12595,6 +12637,7 @@ public final class ClusterOuterClass {
         yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Access result = new yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Access(this);
         result.dataLens_ = dataLens_;
         result.webSql_ = webSql_;
+        result.dataTransfer_ = dataTransfer_;
         onBuilt();
         return result;
       }
@@ -12648,6 +12691,9 @@ public final class ClusterOuterClass {
         }
         if (other.getWebSql() != false) {
           setWebSql(other.getWebSql());
+        }
+        if (other.getDataTransfer() != false) {
+          setDataTransfer(other.getDataTransfer());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -12756,6 +12802,44 @@ public final class ClusterOuterClass {
       public Builder clearWebSql() {
         
         webSql_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean dataTransfer_ ;
+      /**
+       * <pre>
+       * Allow access for DataTransfer.
+       * </pre>
+       *
+       * <code>bool data_transfer = 3;</code>
+       */
+      public boolean getDataTransfer() {
+        return dataTransfer_;
+      }
+      /**
+       * <pre>
+       * Allow access for DataTransfer.
+       * </pre>
+       *
+       * <code>bool data_transfer = 3;</code>
+       */
+      public Builder setDataTransfer(boolean value) {
+        
+        dataTransfer_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Allow access for DataTransfer.
+       * </pre>
+       *
+       * <code>bool data_transfer = 3;</code>
+       */
+      public Builder clearDataTransfer() {
+        
+        dataTransfer_ = false;
         onChanged();
         return this;
       }
@@ -13599,14 +13683,15 @@ public final class ClusterOuterClass {
       "\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020" +
       "\002\"P\n\tResources\022\032\n\022resource_preset_id\030\001 \001" +
       "(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 " +
-      "\001(\t\",\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_" +
-      "sql\030\002 \001(\010\"\215\001\n\026PerformanceDiagnostics\022\017\n\007" +
-      "enabled\030\001 \001(\010\022/\n\032sessions_sampling_inter" +
-      "val\030\002 \001(\003B\013\372\3071\0071-86400\0221\n\034statements_sam" +
-      "pling_interval\030\003 \001(\003B\013\372\3071\0071-86400Bd\n\035yan" +
-      "dex.cloud.api.mdb.mysql.v1ZCgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/mdb" +
-      "/mysql/v1;mysqlb\006proto3"
+      "\001(\t\"C\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_" +
+      "sql\030\002 \001(\010\022\025\n\rdata_transfer\030\003 \001(\010\"\215\001\n\026Per" +
+      "formanceDiagnostics\022\017\n\007enabled\030\001 \001(\010\022/\n\032" +
+      "sessions_sampling_interval\030\002 \001(\003B\013\372\3071\0071-" +
+      "86400\0221\n\034statements_sampling_interval\030\003 " +
+      "\001(\003B\013\372\3071\0071-86400Bd\n\035yandex.cloud.api.mdb" +
+      ".mysql.v1ZCgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/mdb/mysql/v1;mysqlb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13673,7 +13758,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mysql_v1_Access_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_Access_descriptor,
-        new java.lang.String[] { "DataLens", "WebSql", });
+        new java.lang.String[] { "DataLens", "WebSql", "DataTransfer", });
     internal_static_yandex_cloud_mdb_mysql_v1_PerformanceDiagnostics_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_mdb_mysql_v1_PerformanceDiagnostics_fieldAccessorTable = new

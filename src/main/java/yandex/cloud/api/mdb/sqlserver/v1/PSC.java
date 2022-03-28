@@ -11507,6 +11507,15 @@ public final class PSC {
      * <code>bool data_lens = 1;</code>
      */
     boolean getDataLens();
+
+    /**
+     * <pre>
+     * Allow access for Web SQL.
+     * </pre>
+     *
+     * <code>bool web_sql = 2;</code>
+     */
+    boolean getWebSql();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.Access}
@@ -11522,6 +11531,7 @@ public final class PSC {
     }
     private Access() {
       dataLens_ = false;
+      webSql_ = false;
     }
 
     @java.lang.Override
@@ -11551,6 +11561,11 @@ public final class PSC {
             case 8: {
 
               dataLens_ = input.readBool();
+              break;
+            }
+            case 16: {
+
+              webSql_ = input.readBool();
               break;
             }
             default: {
@@ -11598,6 +11613,19 @@ public final class PSC {
       return dataLens_;
     }
 
+    public static final int WEB_SQL_FIELD_NUMBER = 2;
+    private boolean webSql_;
+    /**
+     * <pre>
+     * Allow access for Web SQL.
+     * </pre>
+     *
+     * <code>bool web_sql = 2;</code>
+     */
+    public boolean getWebSql() {
+      return webSql_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11615,6 +11643,9 @@ public final class PSC {
       if (dataLens_ != false) {
         output.writeBool(1, dataLens_);
       }
+      if (webSql_ != false) {
+        output.writeBool(2, webSql_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11627,6 +11658,10 @@ public final class PSC {
       if (dataLens_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, dataLens_);
+      }
+      if (webSql_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, webSql_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11646,6 +11681,8 @@ public final class PSC {
       boolean result = true;
       result = result && (getDataLens()
           == other.getDataLens());
+      result = result && (getWebSql()
+          == other.getWebSql());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -11660,6 +11697,9 @@ public final class PSC {
       hash = (37 * hash) + DATA_LENS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDataLens());
+      hash = (37 * hash) + WEB_SQL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getWebSql());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11795,6 +11835,8 @@ public final class PSC {
         super.clear();
         dataLens_ = false;
 
+        webSql_ = false;
+
         return this;
       }
 
@@ -11822,6 +11864,7 @@ public final class PSC {
       public yandex.cloud.api.mdb.sqlserver.v1.PSC.Access buildPartial() {
         yandex.cloud.api.mdb.sqlserver.v1.PSC.Access result = new yandex.cloud.api.mdb.sqlserver.v1.PSC.Access(this);
         result.dataLens_ = dataLens_;
+        result.webSql_ = webSql_;
         onBuilt();
         return result;
       }
@@ -11872,6 +11915,9 @@ public final class PSC {
         if (other == yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.getDefaultInstance()) return this;
         if (other.getDataLens() != false) {
           setDataLens(other.getDataLens());
+        }
+        if (other.getWebSql() != false) {
+          setWebSql(other.getWebSql());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11936,6 +11982,44 @@ public final class PSC {
       public Builder clearDataLens() {
         
         dataLens_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean webSql_ ;
+      /**
+       * <pre>
+       * Allow access for Web SQL.
+       * </pre>
+       *
+       * <code>bool web_sql = 2;</code>
+       */
+      public boolean getWebSql() {
+        return webSql_;
+      }
+      /**
+       * <pre>
+       * Allow access for Web SQL.
+       * </pre>
+       *
+       * <code>bool web_sql = 2;</code>
+       */
+      public Builder setWebSql(boolean value) {
+        
+        webSql_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Allow access for Web SQL.
+       * </pre>
+       *
+       * <code>bool web_sql = 2;</code>
+       */
+      public Builder clearWebSql() {
+        
+        webSql_ = false;
         onChanged();
         return this;
       }
@@ -12102,11 +12186,12 @@ public final class PSC {
       "ECIFIED\020\000\022\r\n\tSQLSERVER\020\001\"1\n\006Health\022\022\n\016HE" +
       "ALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tR" +
       "esources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\t" +
-      "disk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\033\n" +
-      "\006Access\022\021\n\tdata_lens\030\001 \001(\010Bu\n!yandex.clo" +
-      "ud.api.mdb.sqlserver.v1B\003PSCZKgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/m" +
-      "db/sqlserver/v1;sqlserverb\006proto3"
+      "disk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\",\n" +
+      "\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 " +
+      "\001(\010Bu\n!yandex.cloud.api.mdb.sqlserver.v1" +
+      "B\003PSCZKgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/mdb/sqlserver/v1;sqlserv" +
+      "erb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12170,7 +12255,7 @@ public final class PSC {
     internal_static_yandex_cloud_mdb_sqlserver_v1_Access_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_Access_descriptor,
-        new java.lang.String[] { "DataLens", });
+        new java.lang.String[] { "DataLens", "WebSql", });
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.type.TimeOfDayProto.getDescriptor();
     yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.getDescriptor();

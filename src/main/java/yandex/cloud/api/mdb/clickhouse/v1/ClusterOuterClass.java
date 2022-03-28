@@ -672,10 +672,6 @@ public final class ClusterOuterClass {
     }
 
     /**
-     * <pre>
-     * Deployment environment.
-     * </pre>
-     *
      * Protobuf enum {@code yandex.cloud.mdb.clickhouse.v1.Cluster.Environment}
      */
     public enum Environment

@@ -4204,7 +4204,7 @@ public final class BackendGroupServiceOuterClass {
 
     /**
      * <pre>
-     * New list of Stream backends that the backend group will consist of.
+     * New list of stream (TCP) backends that the backend group will consist of.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
@@ -4212,7 +4212,7 @@ public final class BackendGroupServiceOuterClass {
     boolean hasStream();
     /**
      * <pre>
-     * New list of Stream backends that the backend group will consist of.
+     * New list of stream (TCP) backends that the backend group will consist of.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
@@ -4220,7 +4220,7 @@ public final class BackendGroupServiceOuterClass {
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup getStream();
     /**
      * <pre>
-     * New list of Stream backends that the backend group will consist of.
+     * New list of stream (TCP) backends that the backend group will consist of.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
@@ -4800,7 +4800,7 @@ public final class BackendGroupServiceOuterClass {
     public static final int STREAM_FIELD_NUMBER = 8;
     /**
      * <pre>
-     * New list of Stream backends that the backend group will consist of.
+     * New list of stream (TCP) backends that the backend group will consist of.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
@@ -4810,7 +4810,7 @@ public final class BackendGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * New list of Stream backends that the backend group will consist of.
+     * New list of stream (TCP) backends that the backend group will consist of.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
@@ -4823,7 +4823,7 @@ public final class BackendGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * New list of Stream backends that the backend group will consist of.
+     * New list of stream (TCP) backends that the backend group will consist of.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
@@ -6338,7 +6338,7 @@ public final class BackendGroupServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroupOrBuilder> streamBuilder_;
       /**
        * <pre>
-       * New list of Stream backends that the backend group will consist of.
+       * New list of stream (TCP) backends that the backend group will consist of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
@@ -6348,7 +6348,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * New list of Stream backends that the backend group will consist of.
+       * New list of stream (TCP) backends that the backend group will consist of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
@@ -6368,7 +6368,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * New list of Stream backends that the backend group will consist of.
+       * New list of stream (TCP) backends that the backend group will consist of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
@@ -6388,7 +6388,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * New list of Stream backends that the backend group will consist of.
+       * New list of stream (TCP) backends that the backend group will consist of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
@@ -6406,7 +6406,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * New list of Stream backends that the backend group will consist of.
+       * New list of stream (TCP) backends that the backend group will consist of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
@@ -6432,7 +6432,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * New list of Stream backends that the backend group will consist of.
+       * New list of stream (TCP) backends that the backend group will consist of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
@@ -6455,7 +6455,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * New list of Stream backends that the backend group will consist of.
+       * New list of stream (TCP) backends that the backend group will consist of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
@@ -6465,7 +6465,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * New list of Stream backends that the backend group will consist of.
+       * New list of stream (TCP) backends that the backend group will consist of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
@@ -6482,7 +6482,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * New list of Stream backends that the backend group will consist of.
+       * New list of stream (TCP) backends that the backend group will consist of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 8;</code>
@@ -7317,7 +7317,7 @@ public final class BackendGroupServiceOuterClass {
 
     /**
      * <pre>
-     * List of Stream backends that the backend group consists of.
+     * List of stream (TCP) backends that the backend group consists of.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
@@ -7325,7 +7325,7 @@ public final class BackendGroupServiceOuterClass {
     boolean hasStream();
     /**
      * <pre>
-     * List of Stream backends that the backend group consists of.
+     * List of stream (TCP) backends that the backend group consists of.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
@@ -7333,7 +7333,7 @@ public final class BackendGroupServiceOuterClass {
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup getStream();
     /**
      * <pre>
-     * List of Stream backends that the backend group consists of.
+     * List of stream (TCP) backends that the backend group consists of.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
@@ -7847,7 +7847,7 @@ public final class BackendGroupServiceOuterClass {
     public static final int STREAM_FIELD_NUMBER = 7;
     /**
      * <pre>
-     * List of Stream backends that the backend group consists of.
+     * List of stream (TCP) backends that the backend group consists of.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
@@ -7857,7 +7857,7 @@ public final class BackendGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * List of Stream backends that the backend group consists of.
+     * List of stream (TCP) backends that the backend group consists of.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
@@ -7870,7 +7870,7 @@ public final class BackendGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * List of Stream backends that the backend group consists of.
+     * List of stream (TCP) backends that the backend group consists of.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
@@ -9167,7 +9167,7 @@ public final class BackendGroupServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroup.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendGroupOrBuilder> streamBuilder_;
       /**
        * <pre>
-       * List of Stream backends that the backend group consists of.
+       * List of stream (TCP) backends that the backend group consists of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
@@ -9177,7 +9177,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Stream backends that the backend group consists of.
+       * List of stream (TCP) backends that the backend group consists of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
@@ -9197,7 +9197,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Stream backends that the backend group consists of.
+       * List of stream (TCP) backends that the backend group consists of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
@@ -9217,7 +9217,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Stream backends that the backend group consists of.
+       * List of stream (TCP) backends that the backend group consists of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
@@ -9235,7 +9235,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Stream backends that the backend group consists of.
+       * List of stream (TCP) backends that the backend group consists of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
@@ -9261,7 +9261,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Stream backends that the backend group consists of.
+       * List of stream (TCP) backends that the backend group consists of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
@@ -9284,7 +9284,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Stream backends that the backend group consists of.
+       * List of stream (TCP) backends that the backend group consists of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
@@ -9294,7 +9294,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Stream backends that the backend group consists of.
+       * List of stream (TCP) backends that the backend group consists of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
@@ -9311,7 +9311,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Stream backends that the backend group consists of.
+       * List of stream (TCP) backends that the backend group consists of.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackendGroup stream = 7;</code>
@@ -12327,7 +12327,7 @@ public final class BackendGroupServiceOuterClass {
 
     /**
      * <pre>
-     * New settings for the Stream backend.
+     * New settings for the stream (TCP) backend.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackend stream = 5;</code>
@@ -12335,7 +12335,7 @@ public final class BackendGroupServiceOuterClass {
     boolean hasStream();
     /**
      * <pre>
-     * New settings for the Stream backend.
+     * New settings for the stream (TCP) backend.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackend stream = 5;</code>
@@ -12343,7 +12343,7 @@ public final class BackendGroupServiceOuterClass {
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend getStream();
     /**
      * <pre>
-     * New settings for the Stream backend.
+     * New settings for the stream (TCP) backend.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackend stream = 5;</code>
@@ -12679,7 +12679,7 @@ public final class BackendGroupServiceOuterClass {
     public static final int STREAM_FIELD_NUMBER = 5;
     /**
      * <pre>
-     * New settings for the Stream backend.
+     * New settings for the stream (TCP) backend.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackend stream = 5;</code>
@@ -12689,7 +12689,7 @@ public final class BackendGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * New settings for the Stream backend.
+     * New settings for the stream (TCP) backend.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackend stream = 5;</code>
@@ -12702,7 +12702,7 @@ public final class BackendGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * New settings for the Stream backend.
+     * New settings for the stream (TCP) backend.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamBackend stream = 5;</code>
@@ -13749,7 +13749,7 @@ public final class BackendGroupServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackend.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StreamBackendOrBuilder> streamBuilder_;
       /**
        * <pre>
-       * New settings for the Stream backend.
+       * New settings for the stream (TCP) backend.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackend stream = 5;</code>
@@ -13759,7 +13759,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * New settings for the Stream backend.
+       * New settings for the stream (TCP) backend.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackend stream = 5;</code>
@@ -13779,7 +13779,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * New settings for the Stream backend.
+       * New settings for the stream (TCP) backend.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackend stream = 5;</code>
@@ -13799,7 +13799,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * New settings for the Stream backend.
+       * New settings for the stream (TCP) backend.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackend stream = 5;</code>
@@ -13817,7 +13817,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * New settings for the Stream backend.
+       * New settings for the stream (TCP) backend.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackend stream = 5;</code>
@@ -13843,7 +13843,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * New settings for the Stream backend.
+       * New settings for the stream (TCP) backend.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackend stream = 5;</code>
@@ -13866,7 +13866,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * New settings for the Stream backend.
+       * New settings for the stream (TCP) backend.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackend stream = 5;</code>
@@ -13876,7 +13876,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * New settings for the Stream backend.
+       * New settings for the stream (TCP) backend.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackend stream = 5;</code>
@@ -13893,7 +13893,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * New settings for the Stream backend.
+       * New settings for the stream (TCP) backend.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamBackend stream = 5;</code>

@@ -17,7 +17,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * Data Proc manager service defifnition
+ * Data Proc manager service definition.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -87,14 +87,14 @@ public final class DataprocManagerServiceGrpc {
 
   /**
    * <pre>
-   * Data Proc manager service defifnition
+   * Data Proc manager service definition.
    * </pre>
    */
   public static abstract class DataprocManagerServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Sends a status report from a host
+     * Sends a status report from a host.
      * </pre>
      */
     public void report(yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportRequest request,
@@ -117,7 +117,7 @@ public final class DataprocManagerServiceGrpc {
 
   /**
    * <pre>
-   * Data Proc manager service defifnition
+   * Data Proc manager service definition.
    * </pre>
    */
   public static final class DataprocManagerServiceStub extends io.grpc.stub.AbstractStub<DataprocManagerServiceStub> {
@@ -138,7 +138,7 @@ public final class DataprocManagerServiceGrpc {
 
     /**
      * <pre>
-     * Sends a status report from a host
+     * Sends a status report from a host.
      * </pre>
      */
     public void report(yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportRequest request,
@@ -150,7 +150,7 @@ public final class DataprocManagerServiceGrpc {
 
   /**
    * <pre>
-   * Data Proc manager service defifnition
+   * Data Proc manager service definition.
    * </pre>
    */
   public static final class DataprocManagerServiceBlockingStub extends io.grpc.stub.AbstractStub<DataprocManagerServiceBlockingStub> {
@@ -171,7 +171,7 @@ public final class DataprocManagerServiceGrpc {
 
     /**
      * <pre>
-     * Sends a status report from a host
+     * Sends a status report from a host.
      * </pre>
      */
     public yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply report(yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportRequest request) {
@@ -182,7 +182,7 @@ public final class DataprocManagerServiceGrpc {
 
   /**
    * <pre>
-   * Data Proc manager service defifnition
+   * Data Proc manager service definition.
    * </pre>
    */
   public static final class DataprocManagerServiceFutureStub extends io.grpc.stub.AbstractStub<DataprocManagerServiceFutureStub> {
@@ -203,7 +203,7 @@ public final class DataprocManagerServiceGrpc {
 
     /**
      * <pre>
-     * Sends a status report from a host
+     * Sends a status report from a host.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply> report(

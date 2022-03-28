@@ -8846,7 +8846,7 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * HTTP listener settings.
+     * Unencrypted HTTP listener settings.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
@@ -8854,7 +8854,7 @@ public final class LoadBalancerOuterClass {
     boolean hasHttp();
     /**
      * <pre>
-     * HTTP listener settings.
+     * Unencrypted HTTP listener settings.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
@@ -8862,7 +8862,7 @@ public final class LoadBalancerOuterClass {
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListener getHttp();
     /**
      * <pre>
-     * HTTP listener settings.
+     * Unencrypted HTTP listener settings.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
@@ -8871,7 +8871,10 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * HTTPS (HTTP over TLS) listener settings.
+     * TLS-encrypted HTTP or TCP stream listener settings.
+     * All handlers within a listener ([TlsListener.default_handler] and [TlsListener.sni_handlers]) must be of one
+     * type, [HttpHandler] or [StreamHandler]. Mixing HTTP and TCP stream traffic in a TLS-encrypted listener is not
+     * supported.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -8879,7 +8882,10 @@ public final class LoadBalancerOuterClass {
     boolean hasTls();
     /**
      * <pre>
-     * HTTPS (HTTP over TLS) listener settings.
+     * TLS-encrypted HTTP or TCP stream listener settings.
+     * All handlers within a listener ([TlsListener.default_handler] and [TlsListener.sni_handlers]) must be of one
+     * type, [HttpHandler] or [StreamHandler]. Mixing HTTP and TCP stream traffic in a TLS-encrypted listener is not
+     * supported.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -8887,7 +8893,10 @@ public final class LoadBalancerOuterClass {
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener getTls();
     /**
      * <pre>
-     * HTTPS (HTTP over TLS) listener settings.
+     * TLS-encrypted HTTP or TCP stream listener settings.
+     * All handlers within a listener ([TlsListener.default_handler] and [TlsListener.sni_handlers]) must be of one
+     * type, [HttpHandler] or [StreamHandler]. Mixing HTTP and TCP stream traffic in a TLS-encrypted listener is not
+     * supported.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -8896,7 +8905,7 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * Stream listener settings.
+     * Unencrypted stream (TCP) listener settings.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
@@ -8904,7 +8913,7 @@ public final class LoadBalancerOuterClass {
     boolean hasStream();
     /**
      * <pre>
-     * Stream listener settings.
+     * Unencrypted stream (TCP) listener settings.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
@@ -8912,7 +8921,7 @@ public final class LoadBalancerOuterClass {
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener getStream();
     /**
      * <pre>
-     * Stream listener settings.
+     * Unencrypted stream (TCP) listener settings.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
@@ -9207,7 +9216,7 @@ public final class LoadBalancerOuterClass {
     public static final int HTTP_FIELD_NUMBER = 3;
     /**
      * <pre>
-     * HTTP listener settings.
+     * Unencrypted HTTP listener settings.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
@@ -9217,7 +9226,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * HTTP listener settings.
+     * Unencrypted HTTP listener settings.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
@@ -9230,7 +9239,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * HTTP listener settings.
+     * Unencrypted HTTP listener settings.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
@@ -9245,7 +9254,10 @@ public final class LoadBalancerOuterClass {
     public static final int TLS_FIELD_NUMBER = 4;
     /**
      * <pre>
-     * HTTPS (HTTP over TLS) listener settings.
+     * TLS-encrypted HTTP or TCP stream listener settings.
+     * All handlers within a listener ([TlsListener.default_handler] and [TlsListener.sni_handlers]) must be of one
+     * type, [HttpHandler] or [StreamHandler]. Mixing HTTP and TCP stream traffic in a TLS-encrypted listener is not
+     * supported.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -9255,7 +9267,10 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * HTTPS (HTTP over TLS) listener settings.
+     * TLS-encrypted HTTP or TCP stream listener settings.
+     * All handlers within a listener ([TlsListener.default_handler] and [TlsListener.sni_handlers]) must be of one
+     * type, [HttpHandler] or [StreamHandler]. Mixing HTTP and TCP stream traffic in a TLS-encrypted listener is not
+     * supported.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -9268,7 +9283,10 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * HTTPS (HTTP over TLS) listener settings.
+     * TLS-encrypted HTTP or TCP stream listener settings.
+     * All handlers within a listener ([TlsListener.default_handler] and [TlsListener.sni_handlers]) must be of one
+     * type, [HttpHandler] or [StreamHandler]. Mixing HTTP and TCP stream traffic in a TLS-encrypted listener is not
+     * supported.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -9283,7 +9301,7 @@ public final class LoadBalancerOuterClass {
     public static final int STREAM_FIELD_NUMBER = 5;
     /**
      * <pre>
-     * Stream listener settings.
+     * Unencrypted stream (TCP) listener settings.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
@@ -9293,7 +9311,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Stream listener settings.
+     * Unencrypted stream (TCP) listener settings.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
@@ -9306,7 +9324,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Stream listener settings.
+     * Unencrypted stream (TCP) listener settings.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
@@ -10225,7 +10243,7 @@ public final class LoadBalancerOuterClass {
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListener, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListener.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListenerOrBuilder> httpBuilder_;
       /**
        * <pre>
-       * HTTP listener settings.
+       * Unencrypted HTTP listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
@@ -10235,7 +10253,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * HTTP listener settings.
+       * Unencrypted HTTP listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
@@ -10255,7 +10273,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * HTTP listener settings.
+       * Unencrypted HTTP listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
@@ -10275,7 +10293,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * HTTP listener settings.
+       * Unencrypted HTTP listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
@@ -10293,7 +10311,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * HTTP listener settings.
+       * Unencrypted HTTP listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
@@ -10319,7 +10337,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * HTTP listener settings.
+       * Unencrypted HTTP listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
@@ -10342,7 +10360,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * HTTP listener settings.
+       * Unencrypted HTTP listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
@@ -10352,7 +10370,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * HTTP listener settings.
+       * Unencrypted HTTP listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
@@ -10369,7 +10387,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * HTTP listener settings.
+       * Unencrypted HTTP listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
@@ -10397,7 +10415,10 @@ public final class LoadBalancerOuterClass {
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListenerOrBuilder> tlsBuilder_;
       /**
        * <pre>
-       * HTTPS (HTTP over TLS) listener settings.
+       * TLS-encrypted HTTP or TCP stream listener settings.
+       * All handlers within a listener ([TlsListener.default_handler] and [TlsListener.sni_handlers]) must be of one
+       * type, [HttpHandler] or [StreamHandler]. Mixing HTTP and TCP stream traffic in a TLS-encrypted listener is not
+       * supported.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -10407,7 +10428,10 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * HTTPS (HTTP over TLS) listener settings.
+       * TLS-encrypted HTTP or TCP stream listener settings.
+       * All handlers within a listener ([TlsListener.default_handler] and [TlsListener.sni_handlers]) must be of one
+       * type, [HttpHandler] or [StreamHandler]. Mixing HTTP and TCP stream traffic in a TLS-encrypted listener is not
+       * supported.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -10427,7 +10451,10 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * HTTPS (HTTP over TLS) listener settings.
+       * TLS-encrypted HTTP or TCP stream listener settings.
+       * All handlers within a listener ([TlsListener.default_handler] and [TlsListener.sni_handlers]) must be of one
+       * type, [HttpHandler] or [StreamHandler]. Mixing HTTP and TCP stream traffic in a TLS-encrypted listener is not
+       * supported.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -10447,7 +10474,10 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * HTTPS (HTTP over TLS) listener settings.
+       * TLS-encrypted HTTP or TCP stream listener settings.
+       * All handlers within a listener ([TlsListener.default_handler] and [TlsListener.sni_handlers]) must be of one
+       * type, [HttpHandler] or [StreamHandler]. Mixing HTTP and TCP stream traffic in a TLS-encrypted listener is not
+       * supported.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -10465,7 +10495,10 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * HTTPS (HTTP over TLS) listener settings.
+       * TLS-encrypted HTTP or TCP stream listener settings.
+       * All handlers within a listener ([TlsListener.default_handler] and [TlsListener.sni_handlers]) must be of one
+       * type, [HttpHandler] or [StreamHandler]. Mixing HTTP and TCP stream traffic in a TLS-encrypted listener is not
+       * supported.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -10491,7 +10524,10 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * HTTPS (HTTP over TLS) listener settings.
+       * TLS-encrypted HTTP or TCP stream listener settings.
+       * All handlers within a listener ([TlsListener.default_handler] and [TlsListener.sni_handlers]) must be of one
+       * type, [HttpHandler] or [StreamHandler]. Mixing HTTP and TCP stream traffic in a TLS-encrypted listener is not
+       * supported.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -10514,7 +10550,10 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * HTTPS (HTTP over TLS) listener settings.
+       * TLS-encrypted HTTP or TCP stream listener settings.
+       * All handlers within a listener ([TlsListener.default_handler] and [TlsListener.sni_handlers]) must be of one
+       * type, [HttpHandler] or [StreamHandler]. Mixing HTTP and TCP stream traffic in a TLS-encrypted listener is not
+       * supported.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -10524,7 +10563,10 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * HTTPS (HTTP over TLS) listener settings.
+       * TLS-encrypted HTTP or TCP stream listener settings.
+       * All handlers within a listener ([TlsListener.default_handler] and [TlsListener.sni_handlers]) must be of one
+       * type, [HttpHandler] or [StreamHandler]. Mixing HTTP and TCP stream traffic in a TLS-encrypted listener is not
+       * supported.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -10541,7 +10583,10 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * HTTPS (HTTP over TLS) listener settings.
+       * TLS-encrypted HTTP or TCP stream listener settings.
+       * All handlers within a listener ([TlsListener.default_handler] and [TlsListener.sni_handlers]) must be of one
+       * type, [HttpHandler] or [StreamHandler]. Mixing HTTP and TCP stream traffic in a TLS-encrypted listener is not
+       * supported.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
@@ -10569,7 +10614,7 @@ public final class LoadBalancerOuterClass {
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListener.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamListenerOrBuilder> streamBuilder_;
       /**
        * <pre>
-       * Stream listener settings.
+       * Unencrypted stream (TCP) listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
@@ -10579,7 +10624,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Stream listener settings.
+       * Unencrypted stream (TCP) listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
@@ -10599,7 +10644,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Stream listener settings.
+       * Unencrypted stream (TCP) listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
@@ -10619,7 +10664,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Stream listener settings.
+       * Unencrypted stream (TCP) listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
@@ -10637,7 +10682,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Stream listener settings.
+       * Unencrypted stream (TCP) listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
@@ -10663,7 +10708,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Stream listener settings.
+       * Unencrypted stream (TCP) listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
@@ -10686,7 +10731,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Stream listener settings.
+       * Unencrypted stream (TCP) listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
@@ -10696,7 +10741,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Stream listener settings.
+       * Unencrypted stream (TCP) listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
@@ -10713,7 +10758,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Stream listener settings.
+       * Unencrypted stream (TCP) listener settings.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamListener stream = 5;</code>
@@ -12957,7 +13002,7 @@ public final class LoadBalancerOuterClass {
   }
   /**
    * <pre>
-   * An HTTPS (HTTP over TLS) listener resource.
+   * TLS-encrypted (HTTP or TCP stream) listener resource.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.TlsListener}
@@ -13329,7 +13374,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * An HTTPS (HTTP over TLS) listener resource.
+     * TLS-encrypted (HTTP or TCP stream) listener resource.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.TlsListener}
@@ -14081,21 +14126,33 @@ public final class LoadBalancerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Settings for handling stream (TCP) requests.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
      */
     boolean hasHandler();
     /**
+     * <pre>
+     * Settings for handling stream (TCP) requests.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler getHandler();
     /**
+     * <pre>
+     * Settings for handling stream (TCP) requests.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandlerOrBuilder getHandlerOrBuilder();
   }
   /**
    * <pre>
-   * A Stream listener resource.
+   * A stream (TCP) listener resource.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StreamListener}
@@ -14184,18 +14241,30 @@ public final class LoadBalancerOuterClass {
     public static final int HANDLER_FIELD_NUMBER = 1;
     private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler handler_;
     /**
+     * <pre>
+     * Settings for handling stream (TCP) requests.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
      */
     public boolean hasHandler() {
       return handler_ != null;
     }
     /**
+     * <pre>
+     * Settings for handling stream (TCP) requests.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler getHandler() {
       return handler_ == null ? yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler.getDefaultInstance() : handler_;
     }
     /**
+     * <pre>
+     * Settings for handling stream (TCP) requests.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandlerOrBuilder getHandlerOrBuilder() {
@@ -14365,7 +14434,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * A Stream listener resource.
+     * A stream (TCP) listener resource.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StreamListener}
@@ -14526,12 +14595,20 @@ public final class LoadBalancerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandlerOrBuilder> handlerBuilder_;
       /**
+       * <pre>
+       * Settings for handling stream (TCP) requests.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public boolean hasHandler() {
         return handlerBuilder_ != null || handler_ != null;
       }
       /**
+       * <pre>
+       * Settings for handling stream (TCP) requests.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler getHandler() {
@@ -14542,6 +14619,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Settings for handling stream (TCP) requests.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setHandler(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler value) {
@@ -14558,6 +14639,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling stream (TCP) requests.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setHandler(
@@ -14572,6 +14657,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling stream (TCP) requests.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeHandler(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler value) {
@@ -14590,6 +14679,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling stream (TCP) requests.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearHandler() {
@@ -14604,6 +14697,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling stream (TCP) requests.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler.Builder getHandlerBuilder() {
@@ -14612,6 +14709,10 @@ public final class LoadBalancerOuterClass {
         return getHandlerFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Settings for handling stream (TCP) requests.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandlerOrBuilder getHandlerOrBuilder() {
@@ -14623,6 +14724,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Settings for handling stream (TCP) requests.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -15201,10 +15306,24 @@ public final class LoadBalancerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the backend group processing requests. For details about the concept, see
+     * [documentation](/docs/application-load-balancer/concepts/backend-group).
+     * The backend group type, specified via [BackendGroup.backend], must be `stream`.
+     * To get the list of all available backend groups, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getBackendGroupId();
     /**
+     * <pre>
+     * ID of the backend group processing requests. For details about the concept, see
+     * [documentation](/docs/application-load-balancer/concepts/backend-group).
+     * The backend group type, specified via [BackendGroup.backend], must be `stream`.
+     * To get the list of all available backend groups, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -15212,7 +15331,7 @@ public final class LoadBalancerOuterClass {
   }
   /**
    * <pre>
-   *A stream handler resource.
+   * A stream (TCP) handler resource.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StreamHandler}
@@ -15295,6 +15414,13 @@ public final class LoadBalancerOuterClass {
     public static final int BACKEND_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object backendGroupId_;
     /**
+     * <pre>
+     * ID of the backend group processing requests. For details about the concept, see
+     * [documentation](/docs/application-load-balancer/concepts/backend-group).
+     * The backend group type, specified via [BackendGroup.backend], must be `stream`.
+     * To get the list of all available backend groups, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getBackendGroupId() {
@@ -15310,6 +15436,13 @@ public final class LoadBalancerOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the backend group processing requests. For details about the concept, see
+     * [documentation](/docs/application-load-balancer/concepts/backend-group).
+     * The backend group type, specified via [BackendGroup.backend], must be `stream`.
+     * To get the list of all available backend groups, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -15483,7 +15616,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     *A stream handler resource.
+     * A stream (TCP) handler resource.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StreamHandler}
@@ -15635,6 +15768,13 @@ public final class LoadBalancerOuterClass {
 
       private java.lang.Object backendGroupId_ = "";
       /**
+       * <pre>
+       * ID of the backend group processing requests. For details about the concept, see
+       * [documentation](/docs/application-load-balancer/concepts/backend-group).
+       * The backend group type, specified via [BackendGroup.backend], must be `stream`.
+       * To get the list of all available backend groups, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getBackendGroupId() {
@@ -15650,6 +15790,13 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group processing requests. For details about the concept, see
+       * [documentation](/docs/application-load-balancer/concepts/backend-group).
+       * The backend group type, specified via [BackendGroup.backend], must be `stream`.
+       * To get the list of all available backend groups, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -15666,6 +15813,13 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group processing requests. For details about the concept, see
+       * [documentation](/docs/application-load-balancer/concepts/backend-group).
+       * The backend group type, specified via [BackendGroup.backend], must be `stream`.
+       * To get the list of all available backend groups, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setBackendGroupId(
@@ -15679,6 +15833,13 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group processing requests. For details about the concept, see
+       * [documentation](/docs/application-load-balancer/concepts/backend-group).
+       * The backend group type, specified via [BackendGroup.backend], must be `stream`.
+       * To get the list of all available backend groups, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearBackendGroupId() {
@@ -15688,6 +15849,13 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group processing requests. For details about the concept, see
+       * [documentation](/docs/application-load-balancer/concepts/backend-group).
+       * The backend group type, specified via [BackendGroup.backend], must be `stream`.
+       * To get the list of all available backend groups, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setBackendGroupIdBytes(
@@ -15760,8 +15928,9 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * ID of the HTTP router processing requests.
-     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router).
+     * ID of the HTTP router processing requests. For details about the concept, see
+     * [documentation](/docs/application-load-balancer/concepts/http-router).
+     * To get the list of all available HTTP routers, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
@@ -15769,8 +15938,9 @@ public final class LoadBalancerOuterClass {
     java.lang.String getHttpRouterId();
     /**
      * <pre>
-     * ID of the HTTP router processing requests.
-     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router).
+     * ID of the HTTP router processing requests. For details about the concept, see
+     * [documentation](/docs/application-load-balancer/concepts/http-router).
+     * To get the list of all available HTTP routers, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
@@ -15960,8 +16130,9 @@ public final class LoadBalancerOuterClass {
     private volatile java.lang.Object httpRouterId_;
     /**
      * <pre>
-     * ID of the HTTP router processing requests.
-     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router).
+     * ID of the HTTP router processing requests. For details about the concept, see
+     * [documentation](/docs/application-load-balancer/concepts/http-router).
+     * To get the list of all available HTTP routers, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
@@ -15980,8 +16151,9 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * ID of the HTTP router processing requests.
-     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router).
+     * ID of the HTTP router processing requests. For details about the concept, see
+     * [documentation](/docs/application-load-balancer/concepts/http-router).
+     * To get the list of all available HTTP routers, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
@@ -16451,8 +16623,9 @@ public final class LoadBalancerOuterClass {
       private java.lang.Object httpRouterId_ = "";
       /**
        * <pre>
-       * ID of the HTTP router processing requests.
-       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router).
+       * ID of the HTTP router processing requests. For details about the concept, see
+       * [documentation](/docs/application-load-balancer/concepts/http-router).
+       * To get the list of all available HTTP routers, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
@@ -16471,8 +16644,9 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP router processing requests.
-       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router).
+       * ID of the HTTP router processing requests. For details about the concept, see
+       * [documentation](/docs/application-load-balancer/concepts/http-router).
+       * To get the list of all available HTTP routers, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
@@ -16492,8 +16666,9 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP router processing requests.
-       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router).
+       * ID of the HTTP router processing requests. For details about the concept, see
+       * [documentation](/docs/application-load-balancer/concepts/http-router).
+       * To get the list of all available HTTP routers, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
@@ -16510,8 +16685,9 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP router processing requests.
-       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router).
+       * ID of the HTTP router processing requests. For details about the concept, see
+       * [documentation](/docs/application-load-balancer/concepts/http-router).
+       * To get the list of all available HTTP routers, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
@@ -16524,8 +16700,9 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP router processing requests.
-       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router).
+       * ID of the HTTP router processing requests. For details about the concept, see
+       * [documentation](/docs/application-load-balancer/concepts/http-router).
+       * To get the list of all available HTTP routers, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
@@ -18473,7 +18650,7 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * Stream handler
+     * Stream (TCP) handler.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler stream_handler = 4;</code>
@@ -18481,7 +18658,7 @@ public final class LoadBalancerOuterClass {
     boolean hasStreamHandler();
     /**
      * <pre>
-     * Stream handler
+     * Stream (TCP) handler.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler stream_handler = 4;</code>
@@ -18489,7 +18666,7 @@ public final class LoadBalancerOuterClass {
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler getStreamHandler();
     /**
      * <pre>
-     * Stream handler
+     * Stream (TCP) handler.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler stream_handler = 4;</code>
@@ -18539,7 +18716,7 @@ public final class LoadBalancerOuterClass {
   }
   /**
    * <pre>
-   * An HTTPS (HTTP over TLS) handler resource.
+   * A TLS-encrypted (HTTP or TCP stream) handler resource.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.TlsHandler}
@@ -18733,7 +18910,7 @@ public final class LoadBalancerOuterClass {
     public static final int STREAM_HANDLER_FIELD_NUMBER = 4;
     /**
      * <pre>
-     * Stream handler
+     * Stream (TCP) handler.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler stream_handler = 4;</code>
@@ -18743,7 +18920,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Stream handler
+     * Stream (TCP) handler.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler stream_handler = 4;</code>
@@ -18756,7 +18933,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Stream handler
+     * Stream (TCP) handler.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler stream_handler = 4;</code>
@@ -19022,7 +19199,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * An HTTPS (HTTP over TLS) handler resource.
+     * A TLS-encrypted (HTTP or TCP stream) handler resource.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.TlsHandler}
@@ -19407,7 +19584,7 @@ public final class LoadBalancerOuterClass {
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandlerOrBuilder> streamHandlerBuilder_;
       /**
        * <pre>
-       * Stream handler
+       * Stream (TCP) handler.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler stream_handler = 4;</code>
@@ -19417,7 +19594,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Stream handler
+       * Stream (TCP) handler.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler stream_handler = 4;</code>
@@ -19437,7 +19614,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Stream handler
+       * Stream (TCP) handler.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler stream_handler = 4;</code>
@@ -19457,7 +19634,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Stream handler
+       * Stream (TCP) handler.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler stream_handler = 4;</code>
@@ -19475,7 +19652,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Stream handler
+       * Stream (TCP) handler.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler stream_handler = 4;</code>
@@ -19501,7 +19678,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Stream handler
+       * Stream (TCP) handler.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler stream_handler = 4;</code>
@@ -19524,7 +19701,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Stream handler
+       * Stream (TCP) handler.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler stream_handler = 4;</code>
@@ -19534,7 +19711,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Stream handler
+       * Stream (TCP) handler.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler stream_handler = 4;</code>
@@ -19551,7 +19728,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Stream handler
+       * Stream (TCP) handler.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StreamHandler stream_handler = 4;</code>

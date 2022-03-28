@@ -1970,6 +1970,19 @@ public final class ContainerOuterClass {
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.SecretOrBuilder getSecretsOrBuilder(
         int index);
+
+    /**
+     * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
+     */
+    boolean hasConnectivity();
+    /**
+     * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
+     */
+    yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity getConnectivity();
+    /**
+     * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
+     */
+    yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ConnectivityOrBuilder getConnectivityOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.containers.v1.Revision}
@@ -2111,6 +2124,19 @@ public final class ContainerOuterClass {
               }
               secrets_.add(
                   input.readMessage(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.parser(), extensionRegistry));
+              break;
+            }
+            case 98: {
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.Builder subBuilder = null;
+              if (connectivity_ != null) {
+                subBuilder = connectivity_.toBuilder();
+              }
+              connectivity_ = input.readMessage(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(connectivity_);
+                connectivity_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -2546,6 +2572,27 @@ public final class ContainerOuterClass {
       return secrets_.get(index);
     }
 
+    public static final int CONNECTIVITY_FIELD_NUMBER = 12;
+    private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity connectivity_;
+    /**
+     * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
+     */
+    public boolean hasConnectivity() {
+      return connectivity_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
+     */
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity getConnectivity() {
+      return connectivity_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.getDefaultInstance() : connectivity_;
+    }
+    /**
+     * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
+     */
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ConnectivityOrBuilder getConnectivityOrBuilder() {
+      return getConnectivity();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2592,6 +2639,9 @@ public final class ContainerOuterClass {
       }
       for (int i = 0; i < secrets_.size(); i++) {
         output.writeMessage(11, secrets_.get(i));
+      }
+      if (connectivity_ != null) {
+        output.writeMessage(12, getConnectivity());
       }
       unknownFields.writeTo(output);
     }
@@ -2642,6 +2692,10 @@ public final class ContainerOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, secrets_.get(i));
       }
+      if (connectivity_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getConnectivity());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2691,6 +2745,11 @@ public final class ContainerOuterClass {
       result = result && status_ == other.status_;
       result = result && getSecretsList()
           .equals(other.getSecretsList());
+      result = result && (hasConnectivity() == other.hasConnectivity());
+      if (hasConnectivity()) {
+        result = result && getConnectivity()
+            .equals(other.getConnectivity());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2734,6 +2793,10 @@ public final class ContainerOuterClass {
       if (getSecretsCount() > 0) {
         hash = (37 * hash) + SECRETS_FIELD_NUMBER;
         hash = (53 * hash) + getSecretsList().hashCode();
+      }
+      if (hasConnectivity()) {
+        hash = (37 * hash) + CONNECTIVITY_FIELD_NUMBER;
+        hash = (53 * hash) + getConnectivity().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2911,6 +2974,12 @@ public final class ContainerOuterClass {
         } else {
           secretsBuilder_.clear();
         }
+        if (connectivityBuilder_ == null) {
+          connectivity_ = null;
+        } else {
+          connectivity_ = null;
+          connectivityBuilder_ = null;
+        }
         return this;
       }
 
@@ -2973,6 +3042,11 @@ public final class ContainerOuterClass {
           result.secrets_ = secrets_;
         } else {
           result.secrets_ = secretsBuilder_.build();
+        }
+        if (connectivityBuilder_ == null) {
+          result.connectivity_ = connectivity_;
+        } else {
+          result.connectivity_ = connectivityBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -3082,6 +3156,9 @@ public final class ContainerOuterClass {
               secretsBuilder_.addAllMessages(other.secrets_);
             }
           }
+        }
+        if (other.hasConnectivity()) {
+          mergeConnectivity(other.getConnectivity());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4166,6 +4243,123 @@ public final class ContainerOuterClass {
           secrets_ = null;
         }
         return secretsBuilder_;
+      }
+
+      private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity connectivity_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ConnectivityOrBuilder> connectivityBuilder_;
+      /**
+       * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
+       */
+      public boolean hasConnectivity() {
+        return connectivityBuilder_ != null || connectivity_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity getConnectivity() {
+        if (connectivityBuilder_ == null) {
+          return connectivity_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.getDefaultInstance() : connectivity_;
+        } else {
+          return connectivityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
+       */
+      public Builder setConnectivity(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity value) {
+        if (connectivityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          connectivity_ = value;
+          onChanged();
+        } else {
+          connectivityBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
+       */
+      public Builder setConnectivity(
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.Builder builderForValue) {
+        if (connectivityBuilder_ == null) {
+          connectivity_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectivityBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
+       */
+      public Builder mergeConnectivity(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity value) {
+        if (connectivityBuilder_ == null) {
+          if (connectivity_ != null) {
+            connectivity_ =
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.newBuilder(connectivity_).mergeFrom(value).buildPartial();
+          } else {
+            connectivity_ = value;
+          }
+          onChanged();
+        } else {
+          connectivityBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
+       */
+      public Builder clearConnectivity() {
+        if (connectivityBuilder_ == null) {
+          connectivity_ = null;
+          onChanged();
+        } else {
+          connectivity_ = null;
+          connectivityBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.Builder getConnectivityBuilder() {
+        
+        onChanged();
+        return getConnectivityFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ConnectivityOrBuilder getConnectivityOrBuilder() {
+        if (connectivityBuilder_ != null) {
+          return connectivityBuilder_.getMessageOrBuilder();
+        } else {
+          return connectivity_ == null ?
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.getDefaultInstance() : connectivity_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ConnectivityOrBuilder> 
+          getConnectivityFieldBuilder() {
+        if (connectivityBuilder_ == null) {
+          connectivityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ConnectivityOrBuilder>(
+                  getConnectivity(),
+                  getParentForChildren(),
+                  isClean());
+          connectivity_ = null;
+        }
+        return connectivityBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -8615,6 +8809,750 @@ public final class ContainerOuterClass {
 
   }
 
+  public interface ConnectivityOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.containers.v1.Connectivity)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string network_id = 1;</code>
+     */
+    java.lang.String getNetworkId();
+    /**
+     * <code>string network_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNetworkIdBytes();
+
+    /**
+     * <code>repeated string subnet_ids = 2;</code>
+     */
+    java.util.List<java.lang.String>
+        getSubnetIdsList();
+    /**
+     * <code>repeated string subnet_ids = 2;</code>
+     */
+    int getSubnetIdsCount();
+    /**
+     * <code>repeated string subnet_ids = 2;</code>
+     */
+    java.lang.String getSubnetIds(int index);
+    /**
+     * <code>repeated string subnet_ids = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.containers.v1.Connectivity}
+   */
+  public  static final class Connectivity extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.containers.v1.Connectivity)
+      ConnectivityOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Connectivity.newBuilder() to construct.
+    private Connectivity(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Connectivity() {
+      networkId_ = "";
+      subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Connectivity(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              networkId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                subnetIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              subnetIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          subnetIds_ = subnetIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_Connectivity_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_Connectivity_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.class, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NETWORK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object networkId_;
+    /**
+     * <code>string network_id = 1;</code>
+     */
+    public java.lang.String getNetworkId() {
+      java.lang.Object ref = networkId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        networkId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string network_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNetworkIdBytes() {
+      java.lang.Object ref = networkId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        networkId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBNET_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList subnetIds_;
+    /**
+     * <code>repeated string subnet_ids = 2;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSubnetIdsList() {
+      return subnetIds_;
+    }
+    /**
+     * <code>repeated string subnet_ids = 2;</code>
+     */
+    public int getSubnetIdsCount() {
+      return subnetIds_.size();
+    }
+    /**
+     * <code>repeated string subnet_ids = 2;</code>
+     */
+    public java.lang.String getSubnetIds(int index) {
+      return subnetIds_.get(index);
+    }
+    /**
+     * <code>repeated string subnet_ids = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSubnetIdsBytes(int index) {
+      return subnetIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getNetworkIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, networkId_);
+      }
+      for (int i = 0; i < subnetIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subnetIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getNetworkIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, networkId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < subnetIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(subnetIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSubnetIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity other = (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity) obj;
+
+      boolean result = true;
+      result = result && getNetworkId()
+          .equals(other.getNetworkId());
+      result = result && getSubnetIdsList()
+          .equals(other.getSubnetIdsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NETWORK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNetworkId().hashCode();
+      if (getSubnetIdsCount() > 0) {
+        hash = (37 * hash) + SUBNET_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSubnetIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.containers.v1.Connectivity}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.containers.v1.Connectivity)
+        yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ConnectivityOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_Connectivity_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_Connectivity_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.class, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        networkId_ = "";
+
+        subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_Connectivity_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity build() {
+        yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity buildPartial() {
+        yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity result = new yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.networkId_ = networkId_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          subnetIds_ = subnetIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.subnetIds_ = subnetIds_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity) {
+          return mergeFrom((yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity other) {
+        if (other == yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.getDefaultInstance()) return this;
+        if (!other.getNetworkId().isEmpty()) {
+          networkId_ = other.networkId_;
+          onChanged();
+        }
+        if (!other.subnetIds_.isEmpty()) {
+          if (subnetIds_.isEmpty()) {
+            subnetIds_ = other.subnetIds_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureSubnetIdsIsMutable();
+            subnetIds_.addAll(other.subnetIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object networkId_ = "";
+      /**
+       * <code>string network_id = 1;</code>
+       */
+      public java.lang.String getNetworkId() {
+        java.lang.Object ref = networkId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          networkId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string network_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNetworkIdBytes() {
+        java.lang.Object ref = networkId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          networkId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string network_id = 1;</code>
+       */
+      public Builder setNetworkId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        networkId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string network_id = 1;</code>
+       */
+      public Builder clearNetworkId() {
+        
+        networkId_ = getDefaultInstance().getNetworkId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string network_id = 1;</code>
+       */
+      public Builder setNetworkIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        networkId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSubnetIdsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          subnetIds_ = new com.google.protobuf.LazyStringArrayList(subnetIds_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string subnet_ids = 2;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSubnetIdsList() {
+        return subnetIds_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string subnet_ids = 2;</code>
+       */
+      public int getSubnetIdsCount() {
+        return subnetIds_.size();
+      }
+      /**
+       * <code>repeated string subnet_ids = 2;</code>
+       */
+      public java.lang.String getSubnetIds(int index) {
+        return subnetIds_.get(index);
+      }
+      /**
+       * <code>repeated string subnet_ids = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdsBytes(int index) {
+        return subnetIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string subnet_ids = 2;</code>
+       */
+      public Builder setSubnetIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSubnetIdsIsMutable();
+        subnetIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string subnet_ids = 2;</code>
+       */
+      public Builder addSubnetIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSubnetIdsIsMutable();
+        subnetIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string subnet_ids = 2;</code>
+       */
+      public Builder addAllSubnetIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSubnetIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, subnetIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string subnet_ids = 2;</code>
+       */
+      public Builder clearSubnetIds() {
+        subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string subnet_ids = 2;</code>
+       */
+      public Builder addSubnetIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSubnetIdsIsMutable();
+        subnetIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.containers.v1.Connectivity)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.containers.v1.Connectivity)
+    private static final yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity();
+    }
+
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Connectivity>
+        PARSER = new com.google.protobuf.AbstractParser<Connectivity>() {
+      @java.lang.Override
+      public Connectivity parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Connectivity(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Connectivity> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Connectivity> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_containers_v1_Container_descriptor;
   private static final 
@@ -8660,6 +9598,11 @@ public final class ContainerOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_containers_v1_Secret_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_containers_v1_Connectivity_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_containers_v1_Connectivity_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8684,7 +9627,7 @@ public final class ContainerOuterClass {
       "us\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
       "\002 \001(\t:\0028\001\"S\n\006Status\022\026\n\022STATUS_UNSPECIFIE" +
       "D\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETIN" +
-      "G\020\003\022\t\n\005ERROR\020\004\"\254\004\n\010Revision\022\n\n\002id\030\001 \001(\t\022" +
+      "G\020\003\022\t\n\005ERROR\020\004\"\367\004\n\010Revision\022\n\n\002id\030\001 \001(\t\022" +
       "\024\n\014container_id\030\002 \001(\t\022\023\n\013description\030\003 \001" +
       "(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobuf" +
       ".Timestamp\022;\n\005image\030\005 \001(\0132,.yandex.cloud" +
@@ -8696,28 +9639,31 @@ public final class ContainerOuterClass {
       "\001(\t\022F\n\006status\030\n \001(\01626.yandex.cloud.serve" +
       "rless.containers.v1.Revision.Status\022>\n\007s" +
       "ecrets\030\013 \003(\0132-.yandex.cloud.serverless.c" +
-      "ontainers.v1.Secret\"H\n\006Status\022\026\n\022STATUS_" +
-      "UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022" +
-      "\014\n\010OBSOLETE\020\003\"\360\002\n\005Image\022\021\n\timage_url\030\001 \001" +
-      "(\t\022\024\n\014image_digest\030\002 \001(\t\022?\n\007command\030\003 \001(" +
-      "\0132..yandex.cloud.serverless.containers.v" +
-      "1.Command\0229\n\004args\030\004 \001(\0132+.yandex.cloud.s" +
-      "erverless.containers.v1.Args\022y\n\013environm" +
-      "ent\030\005 \003(\0132=.yandex.cloud.serverless.cont" +
-      "ainers.v1.Image.EnvironmentEntryB%\212\3101\006<=" +
-      "4096\262\3101\027\022\025[a-zA-Z][a-zA-Z0-9_]*\022\023\n\013worki" +
-      "ng_dir\030\006 \001(\t\0322\n\020EnvironmentEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\032\n\007Command\022\017\n\007c" +
-      "ommand\030\001 \003(\t\"\024\n\004Args\022\014\n\004args\030\001 \003(\t\"o\n\tRe" +
-      "sources\022(\n\006memory\030\001 \001(\003B\030\372\3071\024134217728-8" +
-      "589934592\022\026\n\005cores\030\002 \001(\003B\007\372\3071\0030-1\022 \n\rcor" +
-      "e_fraction\030\003 \001(\003B\t\372\3071\0050-100\"b\n\006Secret\022\n\n" +
-      "\002id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\022\013\n\003key\030\003 \001" +
-      "(\t\022\036\n\024environment_variable\030\004 \001(\tH\000B\013\n\tre" +
-      "ferenceB\201\001\n)yandex.cloud.api.serverless." +
-      "containers.v1ZTgithub.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/serverless/conta" +
-      "iners/v1;containersb\006proto3"
+      "ontainers.v1.Secret\022I\n\014connectivity\030\014 \001(" +
+      "\01323.yandex.cloud.serverless.containers.v" +
+      "1.Connectivity\"H\n\006Status\022\026\n\022STATUS_UNSPE" +
+      "CIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010OB" +
+      "SOLETE\020\003\"\360\002\n\005Image\022\021\n\timage_url\030\001 \001(\t\022\024\n" +
+      "\014image_digest\030\002 \001(\t\022?\n\007command\030\003 \001(\0132..y" +
+      "andex.cloud.serverless.containers.v1.Com" +
+      "mand\0229\n\004args\030\004 \001(\0132+.yandex.cloud.server" +
+      "less.containers.v1.Args\022y\n\013environment\030\005" +
+      " \003(\0132=.yandex.cloud.serverless.container" +
+      "s.v1.Image.EnvironmentEntryB%\212\3101\006<=4096\262" +
+      "\3101\027\022\025[a-zA-Z][a-zA-Z0-9_]*\022\023\n\013working_di" +
+      "r\030\006 \001(\t\0322\n\020EnvironmentEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\"\032\n\007Command\022\017\n\007comman" +
+      "d\030\001 \003(\t\"\024\n\004Args\022\014\n\004args\030\001 \003(\t\"o\n\tResourc" +
+      "es\022(\n\006memory\030\001 \001(\003B\030\372\3071\024134217728-858993" +
+      "4592\022\026\n\005cores\030\002 \001(\003B\007\372\3071\0030-1\022 \n\rcore_fra" +
+      "ction\030\003 \001(\003B\t\372\3071\0050-100\"b\n\006Secret\022\n\n\002id\030\001" +
+      " \001(\t\022\022\n\nversion_id\030\002 \001(\t\022\013\n\003key\030\003 \001(\t\022\036\n" +
+      "\024environment_variable\030\004 \001(\tH\000B\013\n\treferen" +
+      "ce\"6\n\014Connectivity\022\022\n\nnetwork_id\030\001 \001(\t\022\022" +
+      "\n\nsubnet_ids\030\002 \003(\tB\201\001\n)yandex.cloud.api." +
+      "serverless.containers.v1ZTgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/serve" +
+      "rless/containers/v1;containersb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8751,7 +9697,7 @@ public final class ContainerOuterClass {
     internal_static_yandex_cloud_serverless_containers_v1_Revision_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_containers_v1_Revision_descriptor,
-        new java.lang.String[] { "Id", "ContainerId", "Description", "CreatedAt", "Image", "Resources", "ExecutionTimeout", "Concurrency", "ServiceAccountId", "Status", "Secrets", });
+        new java.lang.String[] { "Id", "ContainerId", "Description", "CreatedAt", "Image", "Resources", "ExecutionTimeout", "Concurrency", "ServiceAccountId", "Status", "Secrets", "Connectivity", });
     internal_static_yandex_cloud_serverless_containers_v1_Image_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_serverless_containers_v1_Image_fieldAccessorTable = new
@@ -8788,6 +9734,12 @@ public final class ContainerOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_containers_v1_Secret_descriptor,
         new java.lang.String[] { "Id", "VersionId", "Key", "EnvironmentVariable", "Reference", });
+    internal_static_yandex_cloud_serverless_containers_v1_Connectivity_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_yandex_cloud_serverless_containers_v1_Connectivity_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_containers_v1_Connectivity_descriptor,
+        new java.lang.String[] { "NetworkId", "SubnetIds", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

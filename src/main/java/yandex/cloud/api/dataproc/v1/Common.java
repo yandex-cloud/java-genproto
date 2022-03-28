@@ -21,7 +21,7 @@ public final class Common {
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <pre>
-     * State of the cluster is unknown ([Host.health] for every host in the cluster is UNKNOWN).
+     * Object is in unknown state (we have no data).
      * </pre>
      *
      * <code>HEALTH_UNKNOWN = 0;</code>
@@ -29,7 +29,7 @@ public final class Common {
     HEALTH_UNKNOWN(0),
     /**
      * <pre>
-     * Cluster is alive and well ([Host.health] for every host in the cluster is ALIVE).
+     * Object is alive and well (for example, all hosts of the cluster are alive).
      * </pre>
      *
      * <code>ALIVE = 1;</code>
@@ -37,7 +37,7 @@ public final class Common {
     ALIVE(1),
     /**
      * <pre>
-     * Cluster is inoperable ([Host.health] for every host in the cluster is DEAD).
+     * Object is inoperable (it cannot perform any of its essential functions).
      * </pre>
      *
      * <code>DEAD = 2;</code>
@@ -45,7 +45,7 @@ public final class Common {
     DEAD(2),
     /**
      * <pre>
-     * Cluster is working below capacity ([Host.health] for at least one host in the cluster is not ALIVE).
+     * Object is partially alive (it can perform some of its essential functions).
      * </pre>
      *
      * <code>DEGRADED = 3;</code>
@@ -56,7 +56,7 @@ public final class Common {
 
     /**
      * <pre>
-     * State of the cluster is unknown ([Host.health] for every host in the cluster is UNKNOWN).
+     * Object is in unknown state (we have no data).
      * </pre>
      *
      * <code>HEALTH_UNKNOWN = 0;</code>
@@ -64,7 +64,7 @@ public final class Common {
     public static final int HEALTH_UNKNOWN_VALUE = 0;
     /**
      * <pre>
-     * Cluster is alive and well ([Host.health] for every host in the cluster is ALIVE).
+     * Object is alive and well (for example, all hosts of the cluster are alive).
      * </pre>
      *
      * <code>ALIVE = 1;</code>
@@ -72,7 +72,7 @@ public final class Common {
     public static final int ALIVE_VALUE = 1;
     /**
      * <pre>
-     * Cluster is inoperable ([Host.health] for every host in the cluster is DEAD).
+     * Object is inoperable (it cannot perform any of its essential functions).
      * </pre>
      *
      * <code>DEAD = 2;</code>
@@ -80,7 +80,7 @@ public final class Common {
     public static final int DEAD_VALUE = 2;
     /**
      * <pre>
-     * Cluster is working below capacity ([Host.health] for at least one host in the cluster is not ALIVE).
+     * Object is partially alive (it can perform some of its essential functions).
      * </pre>
      *
      * <code>DEGRADED = 3;</code>

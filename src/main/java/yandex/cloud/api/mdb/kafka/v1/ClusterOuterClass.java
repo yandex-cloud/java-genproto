@@ -5781,6 +5781,31 @@ public final class ClusterOuterClass {
      * <code>bool schema_registry = 8;</code>
      */
     boolean getSchemaRegistry();
+
+    /**
+     * <pre>
+     * Access policy for external services.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.Access access = 9;</code>
+     */
+    boolean hasAccess();
+    /**
+     * <pre>
+     * Access policy for external services.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.Access access = 9;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access getAccess();
+    /**
+     * <pre>
+     * Access policy for external services.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.Access access = 9;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.AccessOrBuilder getAccessOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConfigSpec}
@@ -5893,6 +5918,19 @@ public final class ClusterOuterClass {
             case 64: {
 
               schemaRegistry_ = input.readBool();
+              break;
+            }
+            case 74: {
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access.Builder subBuilder = null;
+              if (access_ != null) {
+                subBuilder = access_.toBuilder();
+              }
+              access_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(access_);
+                access_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -8212,6 +8250,39 @@ public final class ClusterOuterClass {
       return schemaRegistry_;
     }
 
+    public static final int ACCESS_FIELD_NUMBER = 9;
+    private yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access access_;
+    /**
+     * <pre>
+     * Access policy for external services.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.Access access = 9;</code>
+     */
+    public boolean hasAccess() {
+      return access_ != null;
+    }
+    /**
+     * <pre>
+     * Access policy for external services.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.Access access = 9;</code>
+     */
+    public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access getAccess() {
+      return access_ == null ? yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access.getDefaultInstance() : access_;
+    }
+    /**
+     * <pre>
+     * Access policy for external services.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.Access access = 9;</code>
+     */
+    public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.AccessOrBuilder getAccessOrBuilder() {
+      return getAccess();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8249,6 +8320,9 @@ public final class ClusterOuterClass {
       }
       if (schemaRegistry_ != false) {
         output.writeBool(8, schemaRegistry_);
+      }
+      if (access_ != null) {
+        output.writeMessage(9, getAccess());
       }
       unknownFields.writeTo(output);
     }
@@ -8294,6 +8368,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, schemaRegistry_);
       }
+      if (access_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getAccess());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -8335,6 +8413,11 @@ public final class ClusterOuterClass {
           == other.getUnmanagedTopics());
       result = result && (getSchemaRegistry()
           == other.getSchemaRegistry());
+      result = result && (hasAccess() == other.hasAccess());
+      if (hasAccess()) {
+        result = result && getAccess()
+            .equals(other.getAccess());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -8373,6 +8456,10 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + SCHEMA_REGISTRY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getSchemaRegistry());
+      if (hasAccess()) {
+        hash = (37 * hash) + ACCESS_FIELD_NUMBER;
+        hash = (53 * hash) + getAccess().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8534,6 +8621,12 @@ public final class ClusterOuterClass {
 
         schemaRegistry_ = false;
 
+        if (accessBuilder_ == null) {
+          access_ = null;
+        } else {
+          access_ = null;
+          accessBuilder_ = null;
+        }
         return this;
       }
 
@@ -8586,6 +8679,11 @@ public final class ClusterOuterClass {
         result.assignPublicIp_ = assignPublicIp_;
         result.unmanagedTopics_ = unmanagedTopics_;
         result.schemaRegistry_ = schemaRegistry_;
+        if (accessBuilder_ == null) {
+          result.access_ = access_;
+        } else {
+          result.access_ = accessBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -8666,6 +8764,9 @@ public final class ClusterOuterClass {
         }
         if (other.getSchemaRegistry() != false) {
           setSchemaRegistry(other.getSchemaRegistry());
+        }
+        if (other.hasAccess()) {
+          mergeAccess(other.getAccess());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9490,6 +9591,159 @@ public final class ClusterOuterClass {
         schemaRegistry_ = false;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access access_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.AccessOrBuilder> accessBuilder_;
+      /**
+       * <pre>
+       * Access policy for external services.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Access access = 9;</code>
+       */
+      public boolean hasAccess() {
+        return accessBuilder_ != null || access_ != null;
+      }
+      /**
+       * <pre>
+       * Access policy for external services.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Access access = 9;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access getAccess() {
+        if (accessBuilder_ == null) {
+          return access_ == null ? yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access.getDefaultInstance() : access_;
+        } else {
+          return accessBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Access policy for external services.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Access access = 9;</code>
+       */
+      public Builder setAccess(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access value) {
+        if (accessBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          access_ = value;
+          onChanged();
+        } else {
+          accessBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy for external services.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Access access = 9;</code>
+       */
+      public Builder setAccess(
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access.Builder builderForValue) {
+        if (accessBuilder_ == null) {
+          access_ = builderForValue.build();
+          onChanged();
+        } else {
+          accessBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy for external services.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Access access = 9;</code>
+       */
+      public Builder mergeAccess(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access value) {
+        if (accessBuilder_ == null) {
+          if (access_ != null) {
+            access_ =
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access.newBuilder(access_).mergeFrom(value).buildPartial();
+          } else {
+            access_ = value;
+          }
+          onChanged();
+        } else {
+          accessBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy for external services.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Access access = 9;</code>
+       */
+      public Builder clearAccess() {
+        if (accessBuilder_ == null) {
+          access_ = null;
+          onChanged();
+        } else {
+          access_ = null;
+          accessBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy for external services.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Access access = 9;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access.Builder getAccessBuilder() {
+        
+        onChanged();
+        return getAccessFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Access policy for external services.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Access access = 9;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.AccessOrBuilder getAccessOrBuilder() {
+        if (accessBuilder_ != null) {
+          return accessBuilder_.getMessageOrBuilder();
+        } else {
+          return access_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access.getDefaultInstance() : access_;
+        }
+      }
+      /**
+       * <pre>
+       * Access policy for external services.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Access access = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.AccessOrBuilder> 
+          getAccessFieldBuilder() {
+        if (accessBuilder_ == null) {
+          accessBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.AccessOrBuilder>(
+                  getAccess(),
+                  getParentForChildren(),
+                  isClean());
+          access_ = null;
+        }
+        return accessBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -25199,6 +25453,503 @@ public final class ClusterOuterClass {
 
   }
 
+  public interface AccessOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.Access)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Allow access for DataTransfer.
+     * </pre>
+     *
+     * <code>bool data_transfer = 1;</code>
+     */
+    boolean getDataTransfer();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.Access}
+   */
+  public  static final class Access extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.Access)
+      AccessOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Access.newBuilder() to construct.
+    private Access(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Access() {
+      dataTransfer_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Access(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              dataTransfer_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_Access_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_Access_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access.class, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access.Builder.class);
+    }
+
+    public static final int DATA_TRANSFER_FIELD_NUMBER = 1;
+    private boolean dataTransfer_;
+    /**
+     * <pre>
+     * Allow access for DataTransfer.
+     * </pre>
+     *
+     * <code>bool data_transfer = 1;</code>
+     */
+    public boolean getDataTransfer() {
+      return dataTransfer_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (dataTransfer_ != false) {
+        output.writeBool(1, dataTransfer_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (dataTransfer_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, dataTransfer_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access other = (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access) obj;
+
+      boolean result = true;
+      result = result && (getDataTransfer()
+          == other.getDataTransfer());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DATA_TRANSFER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDataTransfer());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.Access}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.Access)
+        yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.AccessOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_Access_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_Access_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access.class, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        dataTransfer_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_Access_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access build() {
+        yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access result = new yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access(this);
+        result.dataTransfer_ = dataTransfer_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access.getDefaultInstance()) return this;
+        if (other.getDataTransfer() != false) {
+          setDataTransfer(other.getDataTransfer());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean dataTransfer_ ;
+      /**
+       * <pre>
+       * Allow access for DataTransfer.
+       * </pre>
+       *
+       * <code>bool data_transfer = 1;</code>
+       */
+      public boolean getDataTransfer() {
+        return dataTransfer_;
+      }
+      /**
+       * <pre>
+       * Allow access for DataTransfer.
+       * </pre>
+       *
+       * <code>bool data_transfer = 1;</code>
+       */
+      public Builder setDataTransfer(boolean value) {
+        
+        dataTransfer_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Allow access for DataTransfer.
+       * </pre>
+       *
+       * <code>bool data_transfer = 1;</code>
+       */
+      public Builder clearDataTransfer() {
+        
+        dataTransfer_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.Access)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.Access)
+    private static final yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Access>
+        PARSER = new com.google.protobuf.AbstractParser<Access>() {
+      @java.lang.Override
+      public Access parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Access(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Access> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Access> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Access getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_kafka_v1_Cluster_descriptor;
   private static final 
@@ -25254,6 +26005,11 @@ public final class ClusterOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_kafka_v1_Host_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_Access_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_Access_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -25296,109 +26052,112 @@ public final class ClusterOuterClass {
       "NG\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPIN" +
       "G\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonito" +
       "ring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022" +
-      "\014\n\004link\030\003 \001(\t\"\320\005\n\nConfigSpec\022\017\n\007version\030" +
+      "\014\n\004link\030\003 \001(\t\"\203\006\n\nConfigSpec\022\017\n\007version\030" +
       "\001 \001(\t\022:\n\005kafka\030\002 \001(\0132+.yandex.cloud.mdb." +
       "kafka.v1.ConfigSpec.Kafka\022B\n\tzookeeper\030\003" +
       " \001(\0132/.yandex.cloud.mdb.kafka.v1.ConfigS" +
       "pec.Zookeeper\022\017\n\007zone_id\030\004 \003(\t\0222\n\rbroker" +
       "s_count\030\005 \001(\0132\033.google.protobuf.Int64Val" +
       "ue\022\030\n\020assign_public_ip\030\006 \001(\010\022\030\n\020unmanage" +
-      "d_topics\030\007 \001(\010\022\027\n\017schema_registry\030\010 \001(\010\032" +
-      "\330\002\n\005Kafka\0227\n\tresources\030\001 \001(\0132$.yandex.cl" +
-      "oud.mdb.kafka.v1.Resources\022V\n\020kafka_conf" +
-      "ig_2_1\030\002 \001(\0132).yandex.cloud.mdb.kafka.v1" +
-      ".KafkaConfig2_1H\000R\017kafkaConfig_2_1\022V\n\020ka" +
-      "fka_config_2_6\030\003 \001(\0132).yandex.cloud.mdb." +
-      "kafka.v1.KafkaConfig2_6H\000R\017kafkaConfig_2" +
-      "_6\022V\n\020kafka_config_2_8\030\004 \001(\0132).yandex.cl" +
-      "oud.mdb.kafka.v1.KafkaConfig2_8H\000R\017kafka" +
-      "Config_2_8B\016\n\014kafka_config\032D\n\tZookeeper\022" +
-      "7\n\tresources\030\001 \001(\0132$.yandex.cloud.mdb.ka" +
-      "fka.v1.Resources\"P\n\tResources\022\032\n\022resourc" +
-      "e_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014" +
-      "disk_type_id\030\003 \001(\t\"\244\007\n\016KafkaConfig2_1\022D\n" +
-      "\020compression_type\030\001 \001(\0162*.yandex.cloud.m" +
-      "db.kafka.v1.CompressionType\022@\n\033log_flush" +
-      "_interval_messages\030\002 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022:\n\025log_flush_interval_ms\030\003" +
-      " \001(\0132\033.google.protobuf.Int64Value\022D\n\037log" +
-      "_flush_scheduler_interval_ms\030\004 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\0228\n\023log_retention" +
-      "_bytes\030\005 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\0228\n\023log_retention_hours\030\006 \001(\0132\033.google." +
-      "protobuf.Int64Value\022:\n\025log_retention_min" +
-      "utes\030\007 \001(\0132\033.google.protobuf.Int64Value\022" +
-      "5\n\020log_retention_ms\030\010 \001(\0132\033.google.proto" +
-      "buf.Int64Value\0226\n\021log_segment_bytes\030\t \001(" +
-      "\0132\033.google.protobuf.Int64Value\0223\n\017log_pr" +
-      "eallocate\030\n \001(\0132\032.google.protobuf.BoolVa" +
-      "lue\022=\n\030socket_send_buffer_bytes\030\013 \001(\0132\033." +
-      "google.protobuf.Int64Value\022@\n\033socket_rec" +
-      "eive_buffer_bytes\030\014 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022=\n\031auto_create_topics_enabl" +
-      "e\030\r \001(\0132\032.google.protobuf.BoolValue\0223\n\016n" +
-      "um_partitions\030\016 \001(\0132\033.google.protobuf.In" +
-      "t64Value\022?\n\032default_replication_factor\030\017" +
-      " \001(\0132\033.google.protobuf.Int64Value\"\244\007\n\016Ka" +
-      "fkaConfig2_6\022D\n\020compression_type\030\001 \001(\0162*" +
-      ".yandex.cloud.mdb.kafka.v1.CompressionTy" +
-      "pe\022@\n\033log_flush_interval_messages\030\002 \001(\0132" +
-      "\033.google.protobuf.Int64Value\022:\n\025log_flus" +
-      "h_interval_ms\030\003 \001(\0132\033.google.protobuf.In" +
-      "t64Value\022D\n\037log_flush_scheduler_interval" +
-      "_ms\030\004 \001(\0132\033.google.protobuf.Int64Value\0228" +
-      "\n\023log_retention_bytes\030\005 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\0228\n\023log_retention_hours\030" +
-      "\006 \001(\0132\033.google.protobuf.Int64Value\022:\n\025lo" +
-      "g_retention_minutes\030\007 \001(\0132\033.google.proto" +
-      "buf.Int64Value\0225\n\020log_retention_ms\030\010 \001(\013" +
-      "2\033.google.protobuf.Int64Value\0226\n\021log_seg" +
-      "ment_bytes\030\t \001(\0132\033.google.protobuf.Int64" +
-      "Value\0223\n\017log_preallocate\030\n \001(\0132\032.google." +
-      "protobuf.BoolValue\022=\n\030socket_send_buffer" +
-      "_bytes\030\013 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022@\n\033socket_receive_buffer_bytes\030\014 \001(\0132\033" +
-      ".google.protobuf.Int64Value\022=\n\031auto_crea" +
-      "te_topics_enable\030\r \001(\0132\032.google.protobuf" +
-      ".BoolValue\0223\n\016num_partitions\030\016 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022?\n\032default_repli" +
-      "cation_factor\030\017 \001(\0132\033.google.protobuf.In" +
-      "t64Value\"\244\007\n\016KafkaConfig2_8\022D\n\020compressi" +
-      "on_type\030\001 \001(\0162*.yandex.cloud.mdb.kafka.v" +
-      "1.CompressionType\022@\n\033log_flush_interval_" +
-      "messages\030\002 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\022:\n\025log_flush_interval_ms\030\003 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022D\n\037log_flush_sch" +
-      "eduler_interval_ms\030\004 \001(\0132\033.google.protob" +
-      "uf.Int64Value\0228\n\023log_retention_bytes\030\005 \001" +
-      "(\0132\033.google.protobuf.Int64Value\0228\n\023log_r" +
-      "etention_hours\030\006 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022:\n\025log_retention_minutes\030\007 \001(\013" +
-      "2\033.google.protobuf.Int64Value\0225\n\020log_ret" +
-      "ention_ms\030\010 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\0226\n\021log_segment_bytes\030\t \001(\0132\033.google" +
-      ".protobuf.Int64Value\0223\n\017log_preallocate\030" +
-      "\n \001(\0132\032.google.protobuf.BoolValue\022=\n\030soc" +
-      "ket_send_buffer_bytes\030\013 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022@\n\033socket_receive_buffe" +
-      "r_bytes\030\014 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022=\n\031auto_create_topics_enable\030\r \001(\0132\032." +
-      "google.protobuf.BoolValue\0223\n\016num_partiti" +
-      "ons\030\016 \001(\0132\033.google.protobuf.Int64Value\022?" +
-      "\n\032default_replication_factor\030\017 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\"\375\002\n\004Host\022\014\n\004name" +
-      "\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 " +
-      "\001(\t\0222\n\004role\030\004 \001(\0162$.yandex.cloud.mdb.kaf" +
-      "ka.v1.Host.Role\0227\n\tresources\030\005 \001(\0132$.yan" +
-      "dex.cloud.mdb.kafka.v1.Resources\0226\n\006heal" +
-      "th\030\006 \001(\0162&.yandex.cloud.mdb.kafka.v1.Hos" +
-      "t.Health\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_pu" +
-      "blic_ip\030\t \001(\010\"6\n\004Role\022\024\n\020ROLE_UNSPECIFIE" +
-      "D\020\000\022\t\n\005KAFKA\020\001\022\r\n\tZOOKEEPER\020\002\"8\n\006Health\022" +
-      "\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEG" +
-      "RADED\020\003Bd\n\035yandex.cloud.api.mdb.kafka.v1" +
-      "ZCgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/mdb/kafka/v1;kafkab\006proto3"
+      "d_topics\030\007 \001(\010\022\027\n\017schema_registry\030\010 \001(\010\022" +
+      "1\n\006access\030\t \001(\0132!.yandex.cloud.mdb.kafka" +
+      ".v1.Access\032\330\002\n\005Kafka\0227\n\tresources\030\001 \001(\0132" +
+      "$.yandex.cloud.mdb.kafka.v1.Resources\022V\n" +
+      "\020kafka_config_2_1\030\002 \001(\0132).yandex.cloud.m" +
+      "db.kafka.v1.KafkaConfig2_1H\000R\017kafkaConfi" +
+      "g_2_1\022V\n\020kafka_config_2_6\030\003 \001(\0132).yandex" +
+      ".cloud.mdb.kafka.v1.KafkaConfig2_6H\000R\017ka" +
+      "fkaConfig_2_6\022V\n\020kafka_config_2_8\030\004 \001(\0132" +
+      ").yandex.cloud.mdb.kafka.v1.KafkaConfig2" +
+      "_8H\000R\017kafkaConfig_2_8B\016\n\014kafka_config\032D\n" +
+      "\tZookeeper\0227\n\tresources\030\001 \001(\0132$.yandex.c" +
+      "loud.mdb.kafka.v1.Resources\"P\n\tResources" +
+      "\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_siz" +
+      "e\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\244\007\n\016KafkaC" +
+      "onfig2_1\022D\n\020compression_type\030\001 \001(\0162*.yan" +
+      "dex.cloud.mdb.kafka.v1.CompressionType\022@" +
+      "\n\033log_flush_interval_messages\030\002 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\022:\n\025log_flush_in" +
+      "terval_ms\030\003 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\022D\n\037log_flush_scheduler_interval_ms\030" +
+      "\004 \001(\0132\033.google.protobuf.Int64Value\0228\n\023lo" +
+      "g_retention_bytes\030\005 \001(\0132\033.google.protobu" +
+      "f.Int64Value\0228\n\023log_retention_hours\030\006 \001(" +
+      "\0132\033.google.protobuf.Int64Value\022:\n\025log_re" +
+      "tention_minutes\030\007 \001(\0132\033.google.protobuf." +
+      "Int64Value\0225\n\020log_retention_ms\030\010 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\0226\n\021log_segment" +
+      "_bytes\030\t \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\0223\n\017log_preallocate\030\n \001(\0132\032.google.prot" +
+      "obuf.BoolValue\022=\n\030socket_send_buffer_byt" +
+      "es\030\013 \001(\0132\033.google.protobuf.Int64Value\022@\n" +
+      "\033socket_receive_buffer_bytes\030\014 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\022=\n\031auto_create_t" +
+      "opics_enable\030\r \001(\0132\032.google.protobuf.Boo" +
+      "lValue\0223\n\016num_partitions\030\016 \001(\0132\033.google." +
+      "protobuf.Int64Value\022?\n\032default_replicati" +
+      "on_factor\030\017 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\"\244\007\n\016KafkaConfig2_6\022D\n\020compression_t" +
+      "ype\030\001 \001(\0162*.yandex.cloud.mdb.kafka.v1.Co" +
+      "mpressionType\022@\n\033log_flush_interval_mess" +
+      "ages\030\002 \001(\0132\033.google.protobuf.Int64Value\022" +
+      ":\n\025log_flush_interval_ms\030\003 \001(\0132\033.google." +
+      "protobuf.Int64Value\022D\n\037log_flush_schedul" +
+      "er_interval_ms\030\004 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\0228\n\023log_retention_bytes\030\005 \001(\0132\033" +
+      ".google.protobuf.Int64Value\0228\n\023log_reten" +
+      "tion_hours\030\006 \001(\0132\033.google.protobuf.Int64" +
+      "Value\022:\n\025log_retention_minutes\030\007 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\0225\n\020log_retenti" +
+      "on_ms\030\010 \001(\0132\033.google.protobuf.Int64Value" +
+      "\0226\n\021log_segment_bytes\030\t \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\0223\n\017log_preallocate\030\n \001(" +
+      "\0132\032.google.protobuf.BoolValue\022=\n\030socket_" +
+      "send_buffer_bytes\030\013 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022@\n\033socket_receive_buffer_by" +
+      "tes\030\014 \001(\0132\033.google.protobuf.Int64Value\022=" +
+      "\n\031auto_create_topics_enable\030\r \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\0223\n\016num_partitions\030" +
+      "\016 \001(\0132\033.google.protobuf.Int64Value\022?\n\032de" +
+      "fault_replication_factor\030\017 \001(\0132\033.google." +
+      "protobuf.Int64Value\"\244\007\n\016KafkaConfig2_8\022D" +
+      "\n\020compression_type\030\001 \001(\0162*.yandex.cloud." +
+      "mdb.kafka.v1.CompressionType\022@\n\033log_flus" +
+      "h_interval_messages\030\002 \001(\0132\033.google.proto" +
+      "buf.Int64Value\022:\n\025log_flush_interval_ms\030" +
+      "\003 \001(\0132\033.google.protobuf.Int64Value\022D\n\037lo" +
+      "g_flush_scheduler_interval_ms\030\004 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\0228\n\023log_retentio" +
+      "n_bytes\030\005 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\0228\n\023log_retention_hours\030\006 \001(\0132\033.google" +
+      ".protobuf.Int64Value\022:\n\025log_retention_mi" +
+      "nutes\030\007 \001(\0132\033.google.protobuf.Int64Value" +
+      "\0225\n\020log_retention_ms\030\010 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\0226\n\021log_segment_bytes\030\t \001" +
+      "(\0132\033.google.protobuf.Int64Value\0223\n\017log_p" +
+      "reallocate\030\n \001(\0132\032.google.protobuf.BoolV" +
+      "alue\022=\n\030socket_send_buffer_bytes\030\013 \001(\0132\033" +
+      ".google.protobuf.Int64Value\022@\n\033socket_re" +
+      "ceive_buffer_bytes\030\014 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022=\n\031auto_create_topics_enab" +
+      "le\030\r \001(\0132\032.google.protobuf.BoolValue\0223\n\016" +
+      "num_partitions\030\016 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\022?\n\032default_replication_factor\030" +
+      "\017 \001(\0132\033.google.protobuf.Int64Value\"\375\002\n\004H" +
+      "ost\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n" +
+      "\007zone_id\030\003 \001(\t\0222\n\004role\030\004 \001(\0162$.yandex.cl" +
+      "oud.mdb.kafka.v1.Host.Role\0227\n\tresources\030" +
+      "\005 \001(\0132$.yandex.cloud.mdb.kafka.v1.Resour" +
+      "ces\0226\n\006health\030\006 \001(\0162&.yandex.cloud.mdb.k" +
+      "afka.v1.Host.Health\022\021\n\tsubnet_id\030\010 \001(\t\022\030" +
+      "\n\020assign_public_ip\030\t \001(\010\"6\n\004Role\022\024\n\020ROLE" +
+      "_UNSPECIFIED\020\000\022\t\n\005KAFKA\020\001\022\r\n\tZOOKEEPER\020\002" +
+      "\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DE" +
+      "AD\020\002\022\014\n\010DEGRADED\020\003\"\037\n\006Access\022\025\n\rdata_tra" +
+      "nsfer\030\001 \001(\010Bd\n\035yandex.cloud.api.mdb.kafk" +
+      "a.v1ZCgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/mdb/kafka/v1;kafkab\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -25439,7 +26198,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_descriptor,
-        new java.lang.String[] { "Version", "Kafka", "Zookeeper", "ZoneId", "BrokersCount", "AssignPublicIp", "UnmanagedTopics", "SchemaRegistry", });
+        new java.lang.String[] { "Version", "Kafka", "Zookeeper", "ZoneId", "BrokersCount", "AssignPublicIp", "UnmanagedTopics", "SchemaRegistry", "Access", });
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Kafka_descriptor =
       internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Kafka_fieldAccessorTable = new
@@ -25482,6 +26241,12 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_Host_descriptor,
         new java.lang.String[] { "Name", "ClusterId", "ZoneId", "Role", "Resources", "Health", "SubnetId", "AssignPublicIp", });
+    internal_static_yandex_cloud_mdb_kafka_v1_Access_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_mdb_kafka_v1_Access_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_Access_descriptor,
+        new java.lang.String[] { "DataTransfer", });
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.mdb.kafka.v1.Common.getDescriptor();

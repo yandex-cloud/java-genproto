@@ -878,10 +878,6 @@ public final class ClusterOuterClass {
     }
 
     /**
-     * <pre>
-     * Deployment environment.
-     * </pre>
-     *
      * Protobuf enum {@code yandex.cloud.mdb.greenplum.v1.Cluster.Environment}
      */
     public enum Environment
@@ -1009,10 +1005,6 @@ public final class ClusterOuterClass {
     }
 
     /**
-     * <pre>
-     * Aggregated health of the cluster.
-     * </pre>
-     *
      * Protobuf enum {@code yandex.cloud.mdb.greenplum.v1.Cluster.Health}
      */
     public enum Health
@@ -9571,6 +9563,15 @@ public final class ClusterOuterClass {
      * <code>bool web_sql = 2;</code>
      */
     boolean getWebSql();
+
+    /**
+     * <pre>
+     * Allow access for DataTransfer.
+     * </pre>
+     *
+     * <code>bool data_transfer = 3;</code>
+     */
+    boolean getDataTransfer();
   }
   /**
    * <pre>
@@ -9591,6 +9592,7 @@ public final class ClusterOuterClass {
     private Access() {
       dataLens_ = false;
       webSql_ = false;
+      dataTransfer_ = false;
     }
 
     @java.lang.Override
@@ -9625,6 +9627,11 @@ public final class ClusterOuterClass {
             case 16: {
 
               webSql_ = input.readBool();
+              break;
+            }
+            case 24: {
+
+              dataTransfer_ = input.readBool();
               break;
             }
             default: {
@@ -9685,6 +9692,19 @@ public final class ClusterOuterClass {
       return webSql_;
     }
 
+    public static final int DATA_TRANSFER_FIELD_NUMBER = 3;
+    private boolean dataTransfer_;
+    /**
+     * <pre>
+     * Allow access for DataTransfer.
+     * </pre>
+     *
+     * <code>bool data_transfer = 3;</code>
+     */
+    public boolean getDataTransfer() {
+      return dataTransfer_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9705,6 +9725,9 @@ public final class ClusterOuterClass {
       if (webSql_ != false) {
         output.writeBool(2, webSql_);
       }
+      if (dataTransfer_ != false) {
+        output.writeBool(3, dataTransfer_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9721,6 +9744,10 @@ public final class ClusterOuterClass {
       if (webSql_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, webSql_);
+      }
+      if (dataTransfer_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, dataTransfer_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9742,6 +9769,8 @@ public final class ClusterOuterClass {
           == other.getDataLens());
       result = result && (getWebSql()
           == other.getWebSql());
+      result = result && (getDataTransfer()
+          == other.getDataTransfer());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -9759,6 +9788,9 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + WEB_SQL_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getWebSql());
+      hash = (37 * hash) + DATA_TRANSFER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDataTransfer());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9900,6 +9932,8 @@ public final class ClusterOuterClass {
 
         webSql_ = false;
 
+        dataTransfer_ = false;
+
         return this;
       }
 
@@ -9928,6 +9962,7 @@ public final class ClusterOuterClass {
         yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.Access result = new yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.Access(this);
         result.dataLens_ = dataLens_;
         result.webSql_ = webSql_;
+        result.dataTransfer_ = dataTransfer_;
         onBuilt();
         return result;
       }
@@ -9981,6 +10016,9 @@ public final class ClusterOuterClass {
         }
         if (other.getWebSql() != false) {
           setWebSql(other.getWebSql());
+        }
+        if (other.getDataTransfer() != false) {
+          setDataTransfer(other.getDataTransfer());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10083,6 +10121,44 @@ public final class ClusterOuterClass {
       public Builder clearWebSql() {
         
         webSql_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean dataTransfer_ ;
+      /**
+       * <pre>
+       * Allow access for DataTransfer.
+       * </pre>
+       *
+       * <code>bool data_transfer = 3;</code>
+       */
+      public boolean getDataTransfer() {
+        return dataTransfer_;
+      }
+      /**
+       * <pre>
+       * Allow access for DataTransfer.
+       * </pre>
+       *
+       * <code>bool data_transfer = 3;</code>
+       */
+      public Builder setDataTransfer(boolean value) {
+        
+        dataTransfer_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Allow access for DataTransfer.
+       * </pre>
+       *
+       * <code>bool data_transfer = 3;</code>
+       */
+      public Builder clearDataTransfer() {
+        
+        dataTransfer_ = false;
         onChanged();
         return this;
       }
@@ -12319,18 +12395,19 @@ public final class ClusterOuterClass {
       "e.TimeOfDay\0225\n\006access\030\003 \001(\0132%.yandex.clo" +
       "ud.mdb.greenplum.v1.Access\022\031\n\007zone_id\030\004 " +
       "\001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\005 \001(\tB\010\212\3101\004<=" +
-      "50\022\030\n\020assign_public_ip\030\006 \001(\010\",\n\006Access\022\021" +
-      "\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\"\326\001\n\026G" +
-      "reenplumRestoreConfig\0223\n\023backup_window_s" +
-      "tart\030\001 \001(\0132\026.google.type.TimeOfDay\0225\n\006ac" +
-      "cess\030\002 \001(\0132%.yandex.cloud.mdb.greenplum." +
-      "v1.Access\022\031\n\007zone_id\030\003 \001(\tB\010\212\3101\004<=50\022\033\n\t" +
-      "subnet_id\030\004 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_publ" +
-      "ic_ip\030\005 \001(\010\"A\n\020RestoreResources\022\032\n\022resou" +
-      "rce_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003Bp" +
-      "\n!yandex.cloud.api.mdb.greenplum.v1ZKgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/mdb/greenplum/v1;greenplumb\006proto3"
+      "50\022\030\n\020assign_public_ip\030\006 \001(\010\"C\n\006Access\022\021" +
+      "\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\025\n\rda" +
+      "ta_transfer\030\003 \001(\010\"\326\001\n\026GreenplumRestoreCo" +
+      "nfig\0223\n\023backup_window_start\030\001 \001(\0132\026.goog" +
+      "le.type.TimeOfDay\0225\n\006access\030\002 \001(\0132%.yand" +
+      "ex.cloud.mdb.greenplum.v1.Access\022\031\n\007zone" +
+      "_id\030\003 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\004 \001(\tB\010" +
+      "\212\3101\004<=50\022\030\n\020assign_public_ip\030\005 \001(\010\"A\n\020Re" +
+      "storeResources\022\032\n\022resource_preset_id\030\001 \001" +
+      "(\t\022\021\n\tdisk_size\030\002 \001(\003Bp\n!yandex.cloud.ap" +
+      "i.mdb.greenplum.v1ZKgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/mdb/greenpl" +
+      "um/v1;greenplumb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12384,7 +12461,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_greenplum_v1_Access_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_Access_descriptor,
-        new java.lang.String[] { "DataLens", "WebSql", });
+        new java.lang.String[] { "DataLens", "WebSql", "DataTransfer", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumRestoreConfig_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumRestoreConfig_fieldAccessorTable = new

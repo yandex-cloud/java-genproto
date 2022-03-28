@@ -15727,6 +15727,7 @@ public final class VirtualHostOuterClass {
     /**
      * <pre>
      * Backend group to forward requests to.
+     * Stream (TCP) backend groups are not supported.
      * </pre>
      *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -15735,6 +15736,7 @@ public final class VirtualHostOuterClass {
     /**
      * <pre>
      * Backend group to forward requests to.
+     * Stream (TCP) backend groups are not supported.
      * </pre>
      *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -16089,6 +16091,7 @@ public final class VirtualHostOuterClass {
     /**
      * <pre>
      * Backend group to forward requests to.
+     * Stream (TCP) backend groups are not supported.
      * </pre>
      *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -16108,6 +16111,7 @@ public final class VirtualHostOuterClass {
     /**
      * <pre>
      * Backend group to forward requests to.
+     * Stream (TCP) backend groups are not supported.
      * </pre>
      *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -16885,6 +16889,7 @@ public final class VirtualHostOuterClass {
       /**
        * <pre>
        * Backend group to forward requests to.
+       * Stream (TCP) backend groups are not supported.
        * </pre>
        *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -16904,6 +16909,7 @@ public final class VirtualHostOuterClass {
       /**
        * <pre>
        * Backend group to forward requests to.
+       * Stream (TCP) backend groups are not supported.
        * </pre>
        *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -16924,6 +16930,7 @@ public final class VirtualHostOuterClass {
       /**
        * <pre>
        * Backend group to forward requests to.
+       * Stream (TCP) backend groups are not supported.
        * </pre>
        *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -16941,6 +16948,7 @@ public final class VirtualHostOuterClass {
       /**
        * <pre>
        * Backend group to forward requests to.
+       * Stream (TCP) backend groups are not supported.
        * </pre>
        *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -16954,6 +16962,7 @@ public final class VirtualHostOuterClass {
       /**
        * <pre>
        * Backend group to forward requests to.
+       * Stream (TCP) backend groups are not supported.
        * </pre>
        *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
