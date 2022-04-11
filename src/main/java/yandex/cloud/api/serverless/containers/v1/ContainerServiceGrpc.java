@@ -219,6 +219,38 @@ public final class ContainerServiceGrpc {
      return getDeployRevisionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRollbackMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Rollback",
+      requestType = yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRollbackMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getRollbackMethod;
+    if ((getRollbackMethod = ContainerServiceGrpc.getRollbackMethod) == null) {
+      synchronized (ContainerServiceGrpc.class) {
+        if ((getRollbackMethod = ContainerServiceGrpc.getRollbackMethod) == null) {
+          ContainerServiceGrpc.getRollbackMethod = getRollbackMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.serverless.containers.v1.ContainerService", "Rollback"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new ContainerServiceMethodDescriptorSupplier("Rollback"))
+                  .build();
+          }
+        }
+     }
+     return getRollbackMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRevisionRequest,
       yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision> getGetRevisionMethod;
 
@@ -482,6 +514,13 @@ public final class ContainerServiceGrpc {
 
     /**
      */
+    public void rollback(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getRollbackMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void getRevision(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRevisionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision> responseObserver) {
       asyncUnimplementedUnaryCall(getGetRevisionMethod(), responseObserver);
@@ -566,6 +605,13 @@ public final class ContainerServiceGrpc {
                 yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeployContainerRevisionRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DEPLOY_REVISION)))
+          .addMethod(
+            getRollbackMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_ROLLBACK)))
           .addMethod(
             getGetRevisionMethod(),
             asyncUnaryCall(
@@ -680,6 +726,14 @@ public final class ContainerServiceGrpc {
 
     /**
      */
+    public void rollback(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getRollbackMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void getRevision(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRevisionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision> responseObserver) {
       asyncUnaryCall(
@@ -785,6 +839,13 @@ public final class ContainerServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation deployRevision(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeployContainerRevisionRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeployRevisionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation rollback(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getRollbackMethod(), getCallOptions(), request);
     }
 
     /**
@@ -898,6 +959,14 @@ public final class ContainerServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> rollback(
+        yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getRollbackMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision> getRevision(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRevisionRequest request) {
       return futureUnaryCall(
@@ -951,12 +1020,13 @@ public final class ContainerServiceGrpc {
   private static final int METHODID_UPDATE = 3;
   private static final int METHODID_DELETE = 4;
   private static final int METHODID_DEPLOY_REVISION = 5;
-  private static final int METHODID_GET_REVISION = 6;
-  private static final int METHODID_LIST_REVISIONS = 7;
-  private static final int METHODID_LIST_OPERATIONS = 8;
-  private static final int METHODID_LIST_ACCESS_BINDINGS = 9;
-  private static final int METHODID_SET_ACCESS_BINDINGS = 10;
-  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 11;
+  private static final int METHODID_ROLLBACK = 6;
+  private static final int METHODID_GET_REVISION = 7;
+  private static final int METHODID_LIST_REVISIONS = 8;
+  private static final int METHODID_LIST_OPERATIONS = 9;
+  private static final int METHODID_LIST_ACCESS_BINDINGS = 10;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 11;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -997,6 +1067,10 @@ public final class ContainerServiceGrpc {
           break;
         case METHODID_DEPLOY_REVISION:
           serviceImpl.deployRevision((yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeployContainerRevisionRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_ROLLBACK:
+          serviceImpl.rollback((yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_GET_REVISION:
@@ -1090,6 +1164,7 @@ public final class ContainerServiceGrpc {
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getDeployRevisionMethod())
+              .addMethod(getRollbackMethod())
               .addMethod(getGetRevisionMethod())
               .addMethod(getListRevisionsMethod())
               .addMethod(getListOperationsMethod())

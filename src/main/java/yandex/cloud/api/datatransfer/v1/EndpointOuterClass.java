@@ -1512,6 +1512,32 @@ public final class EndpointOuterClass {
     yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresSourceOrBuilder getPostgresSourceOrBuilder();
 
     /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+     */
+    boolean hasMongoSource();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource getMongoSource();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSourceOrBuilder getMongoSourceOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+     */
+    boolean hasClickhouseSource();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource getClickhouseSource();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSourceOrBuilder getClickhouseSourceOrBuilder();
+
+    /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlTarget mysql_target = 101;</code>
      */
     boolean hasMysqlTarget();
@@ -1536,6 +1562,32 @@ public final class EndpointOuterClass {
      * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresTarget postgres_target = 102;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresTargetOrBuilder getPostgresTargetOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+     */
+    boolean hasClickhouseTarget();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget getClickhouseTarget();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTargetOrBuilder getClickhouseTargetOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+     */
+    boolean hasMongoTarget();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget getMongoTarget();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTargetOrBuilder getMongoTargetOrBuilder();
 
     public yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings.SettingsCase getSettingsCase();
   }
@@ -1606,6 +1658,34 @@ public final class EndpointOuterClass {
               settingsCase_ = 2;
               break;
             }
+            case 74: {
+              yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource.Builder subBuilder = null;
+              if (settingsCase_ == 9) {
+                subBuilder = ((yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource) settings_).toBuilder();
+              }
+              settings_ =
+                  input.readMessage(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource) settings_);
+                settings_ = subBuilder.buildPartial();
+              }
+              settingsCase_ = 9;
+              break;
+            }
+            case 130: {
+              yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource.Builder subBuilder = null;
+              if (settingsCase_ == 16) {
+                subBuilder = ((yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource) settings_).toBuilder();
+              }
+              settings_ =
+                  input.readMessage(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource) settings_);
+                settings_ = subBuilder.buildPartial();
+              }
+              settingsCase_ = 16;
+              break;
+            }
             case 810: {
               yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget.Builder subBuilder = null;
               if (settingsCase_ == 101) {
@@ -1632,6 +1712,34 @@ public final class EndpointOuterClass {
                 settings_ = subBuilder.buildPartial();
               }
               settingsCase_ = 102;
+              break;
+            }
+            case 834: {
+              yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget.Builder subBuilder = null;
+              if (settingsCase_ == 104) {
+                subBuilder = ((yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget) settings_).toBuilder();
+              }
+              settings_ =
+                  input.readMessage(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget) settings_);
+                settings_ = subBuilder.buildPartial();
+              }
+              settingsCase_ = 104;
+              break;
+            }
+            case 890: {
+              yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget.Builder subBuilder = null;
+              if (settingsCase_ == 111) {
+                subBuilder = ((yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget) settings_).toBuilder();
+              }
+              settings_ =
+                  input.readMessage(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget) settings_);
+                settings_ = subBuilder.buildPartial();
+              }
+              settingsCase_ = 111;
               break;
             }
             default: {
@@ -1672,8 +1780,12 @@ public final class EndpointOuterClass {
         implements com.google.protobuf.Internal.EnumLite {
       MYSQL_SOURCE(1),
       POSTGRES_SOURCE(2),
+      MONGO_SOURCE(9),
+      CLICKHOUSE_SOURCE(16),
       MYSQL_TARGET(101),
       POSTGRES_TARGET(102),
+      CLICKHOUSE_TARGET(104),
+      MONGO_TARGET(111),
       SETTINGS_NOT_SET(0);
       private final int value;
       private SettingsCase(int value) {
@@ -1691,8 +1803,12 @@ public final class EndpointOuterClass {
         switch (value) {
           case 1: return MYSQL_SOURCE;
           case 2: return POSTGRES_SOURCE;
+          case 9: return MONGO_SOURCE;
+          case 16: return CLICKHOUSE_SOURCE;
           case 101: return MYSQL_TARGET;
           case 102: return POSTGRES_TARGET;
+          case 104: return CLICKHOUSE_TARGET;
+          case 111: return MONGO_TARGET;
           case 0: return SETTINGS_NOT_SET;
           default: return null;
         }
@@ -1760,6 +1876,58 @@ public final class EndpointOuterClass {
       return yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresSource.getDefaultInstance();
     }
 
+    public static final int MONGO_SOURCE_FIELD_NUMBER = 9;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+     */
+    public boolean hasMongoSource() {
+      return settingsCase_ == 9;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+     */
+    public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource getMongoSource() {
+      if (settingsCase_ == 9) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource) settings_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+     */
+    public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSourceOrBuilder getMongoSourceOrBuilder() {
+      if (settingsCase_ == 9) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource) settings_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource.getDefaultInstance();
+    }
+
+    public static final int CLICKHOUSE_SOURCE_FIELD_NUMBER = 16;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+     */
+    public boolean hasClickhouseSource() {
+      return settingsCase_ == 16;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+     */
+    public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource getClickhouseSource() {
+      if (settingsCase_ == 16) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource) settings_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+     */
+    public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSourceOrBuilder getClickhouseSourceOrBuilder() {
+      if (settingsCase_ == 16) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource) settings_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource.getDefaultInstance();
+    }
+
     public static final int MYSQL_TARGET_FIELD_NUMBER = 101;
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlTarget mysql_target = 101;</code>
@@ -1812,6 +1980,58 @@ public final class EndpointOuterClass {
       return yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresTarget.getDefaultInstance();
     }
 
+    public static final int CLICKHOUSE_TARGET_FIELD_NUMBER = 104;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+     */
+    public boolean hasClickhouseTarget() {
+      return settingsCase_ == 104;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+     */
+    public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget getClickhouseTarget() {
+      if (settingsCase_ == 104) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget) settings_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+     */
+    public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTargetOrBuilder getClickhouseTargetOrBuilder() {
+      if (settingsCase_ == 104) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget) settings_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget.getDefaultInstance();
+    }
+
+    public static final int MONGO_TARGET_FIELD_NUMBER = 111;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+     */
+    public boolean hasMongoTarget() {
+      return settingsCase_ == 111;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+     */
+    public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget getMongoTarget() {
+      if (settingsCase_ == 111) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget) settings_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+     */
+    public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTargetOrBuilder getMongoTargetOrBuilder() {
+      if (settingsCase_ == 111) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget) settings_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1832,11 +2052,23 @@ public final class EndpointOuterClass {
       if (settingsCase_ == 2) {
         output.writeMessage(2, (yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresSource) settings_);
       }
+      if (settingsCase_ == 9) {
+        output.writeMessage(9, (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource) settings_);
+      }
+      if (settingsCase_ == 16) {
+        output.writeMessage(16, (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource) settings_);
+      }
       if (settingsCase_ == 101) {
         output.writeMessage(101, (yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget) settings_);
       }
       if (settingsCase_ == 102) {
         output.writeMessage(102, (yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresTarget) settings_);
+      }
+      if (settingsCase_ == 104) {
+        output.writeMessage(104, (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget) settings_);
+      }
+      if (settingsCase_ == 111) {
+        output.writeMessage(111, (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget) settings_);
       }
       unknownFields.writeTo(output);
     }
@@ -1855,6 +2087,14 @@ public final class EndpointOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, (yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresSource) settings_);
       }
+      if (settingsCase_ == 9) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource) settings_);
+      }
+      if (settingsCase_ == 16) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource) settings_);
+      }
       if (settingsCase_ == 101) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(101, (yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget) settings_);
@@ -1862,6 +2102,14 @@ public final class EndpointOuterClass {
       if (settingsCase_ == 102) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(102, (yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresTarget) settings_);
+      }
+      if (settingsCase_ == 104) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(104, (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget) settings_);
+      }
+      if (settingsCase_ == 111) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(111, (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget) settings_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1891,6 +2139,14 @@ public final class EndpointOuterClass {
           result = result && getPostgresSource()
               .equals(other.getPostgresSource());
           break;
+        case 9:
+          result = result && getMongoSource()
+              .equals(other.getMongoSource());
+          break;
+        case 16:
+          result = result && getClickhouseSource()
+              .equals(other.getClickhouseSource());
+          break;
         case 101:
           result = result && getMysqlTarget()
               .equals(other.getMysqlTarget());
@@ -1898,6 +2154,14 @@ public final class EndpointOuterClass {
         case 102:
           result = result && getPostgresTarget()
               .equals(other.getPostgresTarget());
+          break;
+        case 104:
+          result = result && getClickhouseTarget()
+              .equals(other.getClickhouseTarget());
+          break;
+        case 111:
+          result = result && getMongoTarget()
+              .equals(other.getMongoTarget());
           break;
         case 0:
         default:
@@ -1922,6 +2186,14 @@ public final class EndpointOuterClass {
           hash = (37 * hash) + POSTGRES_SOURCE_FIELD_NUMBER;
           hash = (53 * hash) + getPostgresSource().hashCode();
           break;
+        case 9:
+          hash = (37 * hash) + MONGO_SOURCE_FIELD_NUMBER;
+          hash = (53 * hash) + getMongoSource().hashCode();
+          break;
+        case 16:
+          hash = (37 * hash) + CLICKHOUSE_SOURCE_FIELD_NUMBER;
+          hash = (53 * hash) + getClickhouseSource().hashCode();
+          break;
         case 101:
           hash = (37 * hash) + MYSQL_TARGET_FIELD_NUMBER;
           hash = (53 * hash) + getMysqlTarget().hashCode();
@@ -1929,6 +2201,14 @@ public final class EndpointOuterClass {
         case 102:
           hash = (37 * hash) + POSTGRES_TARGET_FIELD_NUMBER;
           hash = (53 * hash) + getPostgresTarget().hashCode();
+          break;
+        case 104:
+          hash = (37 * hash) + CLICKHOUSE_TARGET_FIELD_NUMBER;
+          hash = (53 * hash) + getClickhouseTarget().hashCode();
+          break;
+        case 111:
+          hash = (37 * hash) + MONGO_TARGET_FIELD_NUMBER;
+          hash = (53 * hash) + getMongoTarget().hashCode();
           break;
         case 0:
         default:
@@ -2108,6 +2388,20 @@ public final class EndpointOuterClass {
             result.settings_ = postgresSourceBuilder_.build();
           }
         }
+        if (settingsCase_ == 9) {
+          if (mongoSourceBuilder_ == null) {
+            result.settings_ = settings_;
+          } else {
+            result.settings_ = mongoSourceBuilder_.build();
+          }
+        }
+        if (settingsCase_ == 16) {
+          if (clickhouseSourceBuilder_ == null) {
+            result.settings_ = settings_;
+          } else {
+            result.settings_ = clickhouseSourceBuilder_.build();
+          }
+        }
         if (settingsCase_ == 101) {
           if (mysqlTargetBuilder_ == null) {
             result.settings_ = settings_;
@@ -2120,6 +2414,20 @@ public final class EndpointOuterClass {
             result.settings_ = settings_;
           } else {
             result.settings_ = postgresTargetBuilder_.build();
+          }
+        }
+        if (settingsCase_ == 104) {
+          if (clickhouseTargetBuilder_ == null) {
+            result.settings_ = settings_;
+          } else {
+            result.settings_ = clickhouseTargetBuilder_.build();
+          }
+        }
+        if (settingsCase_ == 111) {
+          if (mongoTargetBuilder_ == null) {
+            result.settings_ = settings_;
+          } else {
+            result.settings_ = mongoTargetBuilder_.build();
           }
         }
         result.settingsCase_ = settingsCase_;
@@ -2180,12 +2488,28 @@ public final class EndpointOuterClass {
             mergePostgresSource(other.getPostgresSource());
             break;
           }
+          case MONGO_SOURCE: {
+            mergeMongoSource(other.getMongoSource());
+            break;
+          }
+          case CLICKHOUSE_SOURCE: {
+            mergeClickhouseSource(other.getClickhouseSource());
+            break;
+          }
           case MYSQL_TARGET: {
             mergeMysqlTarget(other.getMysqlTarget());
             break;
           }
           case POSTGRES_TARGET: {
             mergePostgresTarget(other.getPostgresTarget());
+            break;
+          }
+          case CLICKHOUSE_TARGET: {
+            mergeClickhouseTarget(other.getClickhouseTarget());
+            break;
+          }
+          case MONGO_TARGET: {
+            mergeMongoTarget(other.getMongoTarget());
             break;
           }
           case SETTINGS_NOT_SET: {
@@ -2509,6 +2833,278 @@ public final class EndpointOuterClass {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSourceOrBuilder> mongoSourceBuilder_;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+       */
+      public boolean hasMongoSource() {
+        return settingsCase_ == 9;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource getMongoSource() {
+        if (mongoSourceBuilder_ == null) {
+          if (settingsCase_ == 9) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource) settings_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource.getDefaultInstance();
+        } else {
+          if (settingsCase_ == 9) {
+            return mongoSourceBuilder_.getMessage();
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+       */
+      public Builder setMongoSource(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource value) {
+        if (mongoSourceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          settings_ = value;
+          onChanged();
+        } else {
+          mongoSourceBuilder_.setMessage(value);
+        }
+        settingsCase_ = 9;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+       */
+      public Builder setMongoSource(
+          yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource.Builder builderForValue) {
+        if (mongoSourceBuilder_ == null) {
+          settings_ = builderForValue.build();
+          onChanged();
+        } else {
+          mongoSourceBuilder_.setMessage(builderForValue.build());
+        }
+        settingsCase_ = 9;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+       */
+      public Builder mergeMongoSource(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource value) {
+        if (mongoSourceBuilder_ == null) {
+          if (settingsCase_ == 9 &&
+              settings_ != yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource.getDefaultInstance()) {
+            settings_ = yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource.newBuilder((yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource) settings_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            settings_ = value;
+          }
+          onChanged();
+        } else {
+          if (settingsCase_ == 9) {
+            mongoSourceBuilder_.mergeFrom(value);
+          }
+          mongoSourceBuilder_.setMessage(value);
+        }
+        settingsCase_ = 9;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+       */
+      public Builder clearMongoSource() {
+        if (mongoSourceBuilder_ == null) {
+          if (settingsCase_ == 9) {
+            settingsCase_ = 0;
+            settings_ = null;
+            onChanged();
+          }
+        } else {
+          if (settingsCase_ == 9) {
+            settingsCase_ = 0;
+            settings_ = null;
+          }
+          mongoSourceBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource.Builder getMongoSourceBuilder() {
+        return getMongoSourceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSourceOrBuilder getMongoSourceOrBuilder() {
+        if ((settingsCase_ == 9) && (mongoSourceBuilder_ != null)) {
+          return mongoSourceBuilder_.getMessageOrBuilder();
+        } else {
+          if (settingsCase_ == 9) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource) settings_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoSource mongo_source = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSourceOrBuilder> 
+          getMongoSourceFieldBuilder() {
+        if (mongoSourceBuilder_ == null) {
+          if (!(settingsCase_ == 9)) {
+            settings_ = yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource.getDefaultInstance();
+          }
+          mongoSourceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSourceOrBuilder>(
+                  (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoSource) settings_,
+                  getParentForChildren(),
+                  isClean());
+          settings_ = null;
+        }
+        settingsCase_ = 9;
+        onChanged();;
+        return mongoSourceBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSourceOrBuilder> clickhouseSourceBuilder_;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+       */
+      public boolean hasClickhouseSource() {
+        return settingsCase_ == 16;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource getClickhouseSource() {
+        if (clickhouseSourceBuilder_ == null) {
+          if (settingsCase_ == 16) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource) settings_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource.getDefaultInstance();
+        } else {
+          if (settingsCase_ == 16) {
+            return clickhouseSourceBuilder_.getMessage();
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+       */
+      public Builder setClickhouseSource(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource value) {
+        if (clickhouseSourceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          settings_ = value;
+          onChanged();
+        } else {
+          clickhouseSourceBuilder_.setMessage(value);
+        }
+        settingsCase_ = 16;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+       */
+      public Builder setClickhouseSource(
+          yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource.Builder builderForValue) {
+        if (clickhouseSourceBuilder_ == null) {
+          settings_ = builderForValue.build();
+          onChanged();
+        } else {
+          clickhouseSourceBuilder_.setMessage(builderForValue.build());
+        }
+        settingsCase_ = 16;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+       */
+      public Builder mergeClickhouseSource(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource value) {
+        if (clickhouseSourceBuilder_ == null) {
+          if (settingsCase_ == 16 &&
+              settings_ != yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource.getDefaultInstance()) {
+            settings_ = yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource.newBuilder((yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource) settings_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            settings_ = value;
+          }
+          onChanged();
+        } else {
+          if (settingsCase_ == 16) {
+            clickhouseSourceBuilder_.mergeFrom(value);
+          }
+          clickhouseSourceBuilder_.setMessage(value);
+        }
+        settingsCase_ = 16;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+       */
+      public Builder clearClickhouseSource() {
+        if (clickhouseSourceBuilder_ == null) {
+          if (settingsCase_ == 16) {
+            settingsCase_ = 0;
+            settings_ = null;
+            onChanged();
+          }
+        } else {
+          if (settingsCase_ == 16) {
+            settingsCase_ = 0;
+            settings_ = null;
+          }
+          clickhouseSourceBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource.Builder getClickhouseSourceBuilder() {
+        return getClickhouseSourceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSourceOrBuilder getClickhouseSourceOrBuilder() {
+        if ((settingsCase_ == 16) && (clickhouseSourceBuilder_ != null)) {
+          return clickhouseSourceBuilder_.getMessageOrBuilder();
+        } else {
+          if (settingsCase_ == 16) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource) settings_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource clickhouse_source = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSourceOrBuilder> 
+          getClickhouseSourceFieldBuilder() {
+        if (clickhouseSourceBuilder_ == null) {
+          if (!(settingsCase_ == 16)) {
+            settings_ = yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource.getDefaultInstance();
+          }
+          clickhouseSourceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSourceOrBuilder>(
+                  (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSource) settings_,
+                  getParentForChildren(),
+                  isClean());
+          settings_ = null;
+        }
+        settingsCase_ = 16;
+        onChanged();;
+        return clickhouseSourceBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTargetOrBuilder> mysqlTargetBuilder_;
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlTarget mysql_target = 101;</code>
@@ -2779,6 +3375,278 @@ public final class EndpointOuterClass {
         onChanged();;
         return postgresTargetBuilder_;
       }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTargetOrBuilder> clickhouseTargetBuilder_;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+       */
+      public boolean hasClickhouseTarget() {
+        return settingsCase_ == 104;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget getClickhouseTarget() {
+        if (clickhouseTargetBuilder_ == null) {
+          if (settingsCase_ == 104) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget) settings_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget.getDefaultInstance();
+        } else {
+          if (settingsCase_ == 104) {
+            return clickhouseTargetBuilder_.getMessage();
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+       */
+      public Builder setClickhouseTarget(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget value) {
+        if (clickhouseTargetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          settings_ = value;
+          onChanged();
+        } else {
+          clickhouseTargetBuilder_.setMessage(value);
+        }
+        settingsCase_ = 104;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+       */
+      public Builder setClickhouseTarget(
+          yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget.Builder builderForValue) {
+        if (clickhouseTargetBuilder_ == null) {
+          settings_ = builderForValue.build();
+          onChanged();
+        } else {
+          clickhouseTargetBuilder_.setMessage(builderForValue.build());
+        }
+        settingsCase_ = 104;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+       */
+      public Builder mergeClickhouseTarget(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget value) {
+        if (clickhouseTargetBuilder_ == null) {
+          if (settingsCase_ == 104 &&
+              settings_ != yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget.getDefaultInstance()) {
+            settings_ = yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget.newBuilder((yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget) settings_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            settings_ = value;
+          }
+          onChanged();
+        } else {
+          if (settingsCase_ == 104) {
+            clickhouseTargetBuilder_.mergeFrom(value);
+          }
+          clickhouseTargetBuilder_.setMessage(value);
+        }
+        settingsCase_ = 104;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+       */
+      public Builder clearClickhouseTarget() {
+        if (clickhouseTargetBuilder_ == null) {
+          if (settingsCase_ == 104) {
+            settingsCase_ = 0;
+            settings_ = null;
+            onChanged();
+          }
+        } else {
+          if (settingsCase_ == 104) {
+            settingsCase_ = 0;
+            settings_ = null;
+          }
+          clickhouseTargetBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget.Builder getClickhouseTargetBuilder() {
+        return getClickhouseTargetFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTargetOrBuilder getClickhouseTargetOrBuilder() {
+        if ((settingsCase_ == 104) && (clickhouseTargetBuilder_ != null)) {
+          return clickhouseTargetBuilder_.getMessageOrBuilder();
+        } else {
+          if (settingsCase_ == 104) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget) settings_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTargetOrBuilder> 
+          getClickhouseTargetFieldBuilder() {
+        if (clickhouseTargetBuilder_ == null) {
+          if (!(settingsCase_ == 104)) {
+            settings_ = yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget.getDefaultInstance();
+          }
+          clickhouseTargetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTargetOrBuilder>(
+                  (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget) settings_,
+                  getParentForChildren(),
+                  isClean());
+          settings_ = null;
+        }
+        settingsCase_ = 104;
+        onChanged();;
+        return clickhouseTargetBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTargetOrBuilder> mongoTargetBuilder_;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+       */
+      public boolean hasMongoTarget() {
+        return settingsCase_ == 111;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget getMongoTarget() {
+        if (mongoTargetBuilder_ == null) {
+          if (settingsCase_ == 111) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget) settings_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget.getDefaultInstance();
+        } else {
+          if (settingsCase_ == 111) {
+            return mongoTargetBuilder_.getMessage();
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+       */
+      public Builder setMongoTarget(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget value) {
+        if (mongoTargetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          settings_ = value;
+          onChanged();
+        } else {
+          mongoTargetBuilder_.setMessage(value);
+        }
+        settingsCase_ = 111;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+       */
+      public Builder setMongoTarget(
+          yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget.Builder builderForValue) {
+        if (mongoTargetBuilder_ == null) {
+          settings_ = builderForValue.build();
+          onChanged();
+        } else {
+          mongoTargetBuilder_.setMessage(builderForValue.build());
+        }
+        settingsCase_ = 111;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+       */
+      public Builder mergeMongoTarget(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget value) {
+        if (mongoTargetBuilder_ == null) {
+          if (settingsCase_ == 111 &&
+              settings_ != yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget.getDefaultInstance()) {
+            settings_ = yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget.newBuilder((yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget) settings_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            settings_ = value;
+          }
+          onChanged();
+        } else {
+          if (settingsCase_ == 111) {
+            mongoTargetBuilder_.mergeFrom(value);
+          }
+          mongoTargetBuilder_.setMessage(value);
+        }
+        settingsCase_ = 111;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+       */
+      public Builder clearMongoTarget() {
+        if (mongoTargetBuilder_ == null) {
+          if (settingsCase_ == 111) {
+            settingsCase_ = 0;
+            settings_ = null;
+            onChanged();
+          }
+        } else {
+          if (settingsCase_ == 111) {
+            settingsCase_ = 0;
+            settings_ = null;
+          }
+          mongoTargetBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget.Builder getMongoTargetBuilder() {
+        return getMongoTargetFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTargetOrBuilder getMongoTargetOrBuilder() {
+        if ((settingsCase_ == 111) && (mongoTargetBuilder_ != null)) {
+          return mongoTargetBuilder_.getMessageOrBuilder();
+        } else {
+          if (settingsCase_ == 111) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget) settings_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoTarget mongo_target = 111;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTargetOrBuilder> 
+          getMongoTargetFieldBuilder() {
+        if (mongoTargetBuilder_ == null) {
+          if (!(settingsCase_ == 111)) {
+            settings_ = yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget.getDefaultInstance();
+          }
+          mongoTargetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTargetOrBuilder>(
+                  (yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoTarget) settings_,
+                  getParentForChildren(),
+                  isClean());
+          settings_ = null;
+        }
+        settingsCase_ = 111;
+        onChanged();;
+        return mongoTargetBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2857,30 +3725,40 @@ public final class EndpointOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n+yandex/cloud/datatransfer/v1/endpoint." +
-      "proto\022\034yandex.cloud.datatransfer.v1\0322yan" +
-      "dex/cloud/datatransfer/v1/endpoint/commo" +
-      "n.proto\0321yandex/cloud/datatransfer/v1/en" +
-      "dpoint/mysql.proto\0324yandex/cloud/datatra" +
-      "nsfer/v1/endpoint/postgres.proto\"\201\002\n\010End" +
-      "point\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022\014\n\004" +
-      "name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022B\n\006label" +
-      "s\030\006 \003(\01322.yandex.cloud.datatransfer.v1.E" +
-      "ndpoint.LabelsEntry\022@\n\010settings\0304 \001(\0132.." +
-      "yandex.cloud.datatransfer.v1.EndpointSet" +
-      "tings\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\"\332\002\n\020EndpointSettings\022J\n\014mys" +
-      "ql_source\030\001 \001(\01322.yandex.cloud.datatrans" +
-      "fer.v1.endpoint.MysqlSourceH\000\022P\n\017postgre" +
-      "s_source\030\002 \001(\01325.yandex.cloud.datatransf" +
-      "er.v1.endpoint.PostgresSourceH\000\022J\n\014mysql" +
-      "_target\030e \001(\01322.yandex.cloud.datatransfe" +
-      "r.v1.endpoint.MysqlTargetH\000\022P\n\017postgres_" +
-      "target\030f \001(\01325.yandex.cloud.datatransfer" +
-      ".v1.endpoint.PostgresTargetH\000B\n\n\010setting" +
-      "sBq\n yandex.cloud.api.datatransfer.v1ZMg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/datatransfer/v1;datatransferb\006pr" +
-      "oto3"
+      "proto\022\034yandex.cloud.datatransfer.v1\0326yan" +
+      "dex/cloud/datatransfer/v1/endpoint/click" +
+      "house.proto\0322yandex/cloud/datatransfer/v" +
+      "1/endpoint/common.proto\0321yandex/cloud/da" +
+      "tatransfer/v1/endpoint/mongo.proto\0321yand" +
+      "ex/cloud/datatransfer/v1/endpoint/mysql." +
+      "proto\0324yandex/cloud/datatransfer/v1/endp" +
+      "oint/postgres.proto\"\201\002\n\010Endpoint\022\n\n\002id\030\001" +
+      " \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022\014\n\004name\030\004 \001(\t\022\023\n" +
+      "\013description\030\005 \001(\t\022B\n\006labels\030\006 \003(\01322.yan" +
+      "dex.cloud.datatransfer.v1.Endpoint.Label" +
+      "sEntry\022@\n\010settings\0304 \001(\0132..yandex.cloud." +
+      "datatransfer.v1.EndpointSettings\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "\236\005\n\020EndpointSettings\022J\n\014mysql_source\030\001 \001" +
+      "(\01322.yandex.cloud.datatransfer.v1.endpoi" +
+      "nt.MysqlSourceH\000\022P\n\017postgres_source\030\002 \001(" +
+      "\01325.yandex.cloud.datatransfer.v1.endpoin" +
+      "t.PostgresSourceH\000\022J\n\014mongo_source\030\t \001(\013" +
+      "22.yandex.cloud.datatransfer.v1.endpoint" +
+      ".MongoSourceH\000\022T\n\021clickhouse_source\030\020 \001(" +
+      "\01327.yandex.cloud.datatransfer.v1.endpoin" +
+      "t.ClickhouseSourceH\000\022J\n\014mysql_target\030e \001" +
+      "(\01322.yandex.cloud.datatransfer.v1.endpoi" +
+      "nt.MysqlTargetH\000\022P\n\017postgres_target\030f \001(" +
+      "\01325.yandex.cloud.datatransfer.v1.endpoin" +
+      "t.PostgresTargetH\000\022T\n\021clickhouse_target\030" +
+      "h \001(\01327.yandex.cloud.datatransfer.v1.end" +
+      "point.ClickhouseTargetH\000\022J\n\014mongo_target" +
+      "\030o \001(\01322.yandex.cloud.datatransfer.v1.en" +
+      "dpoint.MongoTargetH\000B\n\n\010settingsBq\n yand" +
+      "ex.cloud.api.datatransfer.v1ZMgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/d" +
+      "atatransfer/v1;datatransferb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2893,7 +3771,9 @@ public final class EndpointOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.getDescriptor(),
           yandex.cloud.api.datatransfer.v1.endpoint.Common.getDescriptor(),
+          yandex.cloud.api.datatransfer.v1.endpoint.Mongo.getDescriptor(),
           yandex.cloud.api.datatransfer.v1.endpoint.Mysql.getDescriptor(),
           yandex.cloud.api.datatransfer.v1.endpoint.Postgres.getDescriptor(),
         }, assigner);
@@ -2914,8 +3794,10 @@ public final class EndpointOuterClass {
     internal_static_yandex_cloud_datatransfer_v1_EndpointSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_EndpointSettings_descriptor,
-        new java.lang.String[] { "MysqlSource", "PostgresSource", "MysqlTarget", "PostgresTarget", "Settings", });
+        new java.lang.String[] { "MysqlSource", "PostgresSource", "MongoSource", "ClickhouseSource", "MysqlTarget", "PostgresTarget", "ClickhouseTarget", "MongoTarget", "Settings", });
+    yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.getDescriptor();
     yandex.cloud.api.datatransfer.v1.endpoint.Common.getDescriptor();
+    yandex.cloud.api.datatransfer.v1.endpoint.Mongo.getDescriptor();
     yandex.cloud.api.datatransfer.v1.endpoint.Mysql.getDescriptor();
     yandex.cloud.api.datatransfer.v1.endpoint.Postgres.getDescriptor();
   }

@@ -13634,6 +13634,1380 @@ public final class ContainerServiceOuterClass {
 
   }
 
+  public interface RollbackContainerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.containers.v1.RollbackContainerRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getContainerId();
+    /**
+     * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getContainerIdBytes();
+
+    /**
+     * <code>string revision_id = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getRevisionId();
+    /**
+     * <code>string revision_id = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getRevisionIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.containers.v1.RollbackContainerRequest}
+   */
+  public  static final class RollbackContainerRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.containers.v1.RollbackContainerRequest)
+      RollbackContainerRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RollbackContainerRequest.newBuilder() to construct.
+    private RollbackContainerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RollbackContainerRequest() {
+      containerId_ = "";
+      revisionId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RollbackContainerRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              containerId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              revisionId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.internal_static_yandex_cloud_serverless_containers_v1_RollbackContainerRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.internal_static_yandex_cloud_serverless_containers_v1_RollbackContainerRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest.class, yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest.Builder.class);
+    }
+
+    public static final int CONTAINER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object containerId_;
+    /**
+     * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getContainerId() {
+      java.lang.Object ref = containerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        containerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getContainerIdBytes() {
+      java.lang.Object ref = containerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        containerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REVISION_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object revisionId_;
+    /**
+     * <code>string revision_id = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getRevisionId() {
+      java.lang.Object ref = revisionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        revisionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string revision_id = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getRevisionIdBytes() {
+      java.lang.Object ref = revisionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        revisionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getContainerIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, containerId_);
+      }
+      if (!getRevisionIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, revisionId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getContainerIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, containerId_);
+      }
+      if (!getRevisionIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, revisionId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest other = (yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest) obj;
+
+      boolean result = true;
+      result = result && getContainerId()
+          .equals(other.getContainerId());
+      result = result && getRevisionId()
+          .equals(other.getRevisionId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTAINER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getContainerId().hashCode();
+      hash = (37 * hash) + REVISION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRevisionId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.containers.v1.RollbackContainerRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.containers.v1.RollbackContainerRequest)
+        yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.internal_static_yandex_cloud_serverless_containers_v1_RollbackContainerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.internal_static_yandex_cloud_serverless_containers_v1_RollbackContainerRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest.class, yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        containerId_ = "";
+
+        revisionId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.internal_static_yandex_cloud_serverless_containers_v1_RollbackContainerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest build() {
+        yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest buildPartial() {
+        yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest result = new yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest(this);
+        result.containerId_ = containerId_;
+        result.revisionId_ = revisionId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest) {
+          return mergeFrom((yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest other) {
+        if (other == yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest.getDefaultInstance()) return this;
+        if (!other.getContainerId().isEmpty()) {
+          containerId_ = other.containerId_;
+          onChanged();
+        }
+        if (!other.getRevisionId().isEmpty()) {
+          revisionId_ = other.revisionId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object containerId_ = "";
+      /**
+       * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getContainerId() {
+        java.lang.Object ref = containerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          containerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getContainerIdBytes() {
+        java.lang.Object ref = containerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          containerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setContainerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        containerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearContainerId() {
+        
+        containerId_ = getDefaultInstance().getContainerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setContainerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        containerId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object revisionId_ = "";
+      /**
+       * <code>string revision_id = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getRevisionId() {
+        java.lang.Object ref = revisionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          revisionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string revision_id = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getRevisionIdBytes() {
+        java.lang.Object ref = revisionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          revisionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string revision_id = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setRevisionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        revisionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string revision_id = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearRevisionId() {
+        
+        revisionId_ = getDefaultInstance().getRevisionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string revision_id = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setRevisionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        revisionId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.containers.v1.RollbackContainerRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.containers.v1.RollbackContainerRequest)
+    private static final yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest();
+    }
+
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RollbackContainerRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RollbackContainerRequest>() {
+      @java.lang.Override
+      public RollbackContainerRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RollbackContainerRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RollbackContainerRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RollbackContainerRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RollbackContainerMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.containers.v1.RollbackContainerMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string container_id = 1;</code>
+     */
+    java.lang.String getContainerId();
+    /**
+     * <code>string container_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getContainerIdBytes();
+
+    /**
+     * <code>string revision_id = 2;</code>
+     */
+    java.lang.String getRevisionId();
+    /**
+     * <code>string revision_id = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getRevisionIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.containers.v1.RollbackContainerMetadata}
+   */
+  public  static final class RollbackContainerMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.containers.v1.RollbackContainerMetadata)
+      RollbackContainerMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RollbackContainerMetadata.newBuilder() to construct.
+    private RollbackContainerMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RollbackContainerMetadata() {
+      containerId_ = "";
+      revisionId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RollbackContainerMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              containerId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              revisionId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.internal_static_yandex_cloud_serverless_containers_v1_RollbackContainerMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.internal_static_yandex_cloud_serverless_containers_v1_RollbackContainerMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata.class, yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata.Builder.class);
+    }
+
+    public static final int CONTAINER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object containerId_;
+    /**
+     * <code>string container_id = 1;</code>
+     */
+    public java.lang.String getContainerId() {
+      java.lang.Object ref = containerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        containerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string container_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getContainerIdBytes() {
+      java.lang.Object ref = containerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        containerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REVISION_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object revisionId_;
+    /**
+     * <code>string revision_id = 2;</code>
+     */
+    public java.lang.String getRevisionId() {
+      java.lang.Object ref = revisionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        revisionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string revision_id = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRevisionIdBytes() {
+      java.lang.Object ref = revisionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        revisionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getContainerIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, containerId_);
+      }
+      if (!getRevisionIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, revisionId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getContainerIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, containerId_);
+      }
+      if (!getRevisionIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, revisionId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata other = (yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata) obj;
+
+      boolean result = true;
+      result = result && getContainerId()
+          .equals(other.getContainerId());
+      result = result && getRevisionId()
+          .equals(other.getRevisionId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTAINER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getContainerId().hashCode();
+      hash = (37 * hash) + REVISION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRevisionId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.containers.v1.RollbackContainerMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.containers.v1.RollbackContainerMetadata)
+        yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.internal_static_yandex_cloud_serverless_containers_v1_RollbackContainerMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.internal_static_yandex_cloud_serverless_containers_v1_RollbackContainerMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata.class, yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        containerId_ = "";
+
+        revisionId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.internal_static_yandex_cloud_serverless_containers_v1_RollbackContainerMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata build() {
+        yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata buildPartial() {
+        yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata result = new yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata(this);
+        result.containerId_ = containerId_;
+        result.revisionId_ = revisionId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata) {
+          return mergeFrom((yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata other) {
+        if (other == yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata.getDefaultInstance()) return this;
+        if (!other.getContainerId().isEmpty()) {
+          containerId_ = other.containerId_;
+          onChanged();
+        }
+        if (!other.getRevisionId().isEmpty()) {
+          revisionId_ = other.revisionId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object containerId_ = "";
+      /**
+       * <code>string container_id = 1;</code>
+       */
+      public java.lang.String getContainerId() {
+        java.lang.Object ref = containerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          containerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string container_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getContainerIdBytes() {
+        java.lang.Object ref = containerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          containerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string container_id = 1;</code>
+       */
+      public Builder setContainerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        containerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string container_id = 1;</code>
+       */
+      public Builder clearContainerId() {
+        
+        containerId_ = getDefaultInstance().getContainerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string container_id = 1;</code>
+       */
+      public Builder setContainerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        containerId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object revisionId_ = "";
+      /**
+       * <code>string revision_id = 2;</code>
+       */
+      public java.lang.String getRevisionId() {
+        java.lang.Object ref = revisionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          revisionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string revision_id = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRevisionIdBytes() {
+        java.lang.Object ref = revisionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          revisionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string revision_id = 2;</code>
+       */
+      public Builder setRevisionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        revisionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string revision_id = 2;</code>
+       */
+      public Builder clearRevisionId() {
+        
+        revisionId_ = getDefaultInstance().getRevisionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string revision_id = 2;</code>
+       */
+      public Builder setRevisionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        revisionId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.containers.v1.RollbackContainerMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.containers.v1.RollbackContainerMetadata)
+    private static final yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata();
+    }
+
+    public static yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RollbackContainerMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<RollbackContainerMetadata>() {
+      @java.lang.Override
+      public RollbackContainerMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RollbackContainerMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RollbackContainerMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RollbackContainerMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ListContainerOperationsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.containers.v1.ListContainerOperationsRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -15535,6 +16909,16 @@ public final class ContainerServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_containers_v1_DeployContainerRevisionMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_containers_v1_RollbackContainerRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_containers_v1_RollbackContainerRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_containers_v1_RollbackContainerMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_containers_v1_RollbackContainerMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_containers_v1_ListContainerOperationsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -15625,78 +17009,88 @@ public final class ContainerServiceOuterClass {
       "king_dir\030\005 \001(\t\0322\n\020EnvironmentEntry\022\013\n\003ke" +
       "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"@\n\037DeployCont" +
       "ainerRevisionMetadata\022\035\n\025container_revis" +
-      "ion_id\030\001 \001(\t\"\226\001\n\036ListContainerOperations" +
-      "Request\022\032\n\014container_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tp" +
-      "age_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token" +
-      "\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<" +
-      "=1000\"q\n\037ListContainerOperationsResponse" +
-      "\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.oper" +
-      "ation.Operation\022\027\n\017next_page_token\030\002 \001(\t" +
-      "2\224\023\n\020ContainerService\022\245\001\n\003Get\022:.yandex.c" +
-      "loud.serverless.containers.v1.GetContain" +
-      "erRequest\0320.yandex.cloud.serverless.cont" +
-      "ainers.v1.Container\"0\202\323\344\223\002*\022(/containers" +
-      "/v1/containers/{container_id}\022\246\001\n\004List\022<" +
-      ".yandex.cloud.serverless.containers.v1.L" +
-      "istContainersRequest\032=.yandex.cloud.serv" +
-      "erless.containers.v1.ListContainersRespo" +
-      "nse\"!\202\323\344\223\002\033\022\031/containers/v1/containers\022\270" +
-      "\001\n\006Create\022=.yandex.cloud.serverless.cont" +
-      "ainers.v1.CreateContainerRequest\032!.yande" +
-      "x.cloud.operation.Operation\"L\202\323\344\223\002\036\"\031/co" +
-      "ntainers/v1/containers:\001*\262\322*$\n\027CreateCon" +
-      "tainerMetadata\022\tContainer\022\307\001\n\006Update\022=.y" +
-      "andex.cloud.serverless.containers.v1.Upd" +
-      "ateContainerRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"[\202\323\344\223\002-2(/containers/v1/c" +
-      "ontainers/{container_id}:\001*\262\322*$\n\027UpdateC" +
-      "ontainerMetadata\022\tContainer\022\320\001\n\006Delete\022=" +
-      ".yandex.cloud.serverless.containers.v1.D" +
-      "eleteContainerRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"d\202\323\344\223\002**(/containers/v1" +
-      "/containers/{container_id}\262\322*0\n\027DeleteCo" +
-      "ntainerMetadata\022\025google.protobuf.Empty\022\325" +
-      "\001\n\016DeployRevision\022E.yandex.cloud.serverl" +
-      "ess.containers.v1.DeployContainerRevisio" +
-      "nRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"Y\202\323\344\223\002$\"\037/containers/v1/revisions:de" +
-      "ploy:\001*\262\322*+\n\037DeployContainerRevisionMeta" +
-      "data\022\010Revision\022\274\001\n\013GetRevision\022B.yandex." +
-      "cloud.serverless.containers.v1.GetContai" +
-      "nerRevisionRequest\032/.yandex.cloud.server" +
-      "less.containers.v1.Revision\"8\202\323\344\223\0022\0220/co" +
-      "ntainers/v1/revisions/{container_revisio" +
-      "n_id}\022\300\001\n\rListRevisions\022E.yandex.cloud.s" +
-      "erverless.containers.v1.ListContainersRe" +
-      "visionsRequest\032F.yandex.cloud.serverless" +
-      ".containers.v1.ListContainersRevisionsRe" +
-      "sponse\" \202\323\344\223\002\032\022\030/containers/v1/revisions" +
-      "\022\334\001\n\016ListOperations\022E.yandex.cloud.serve" +
-      "rless.containers.v1.ListContainerOperati" +
-      "onsRequest\032F.yandex.cloud.serverless.con" +
-      "tainers.v1.ListContainerOperationsRespon" +
-      "se\";\202\323\344\223\0025\0223/containers/v1/containers/{c" +
-      "ontainer_id}/operations\022\271\001\n\022ListAccessBi" +
-      "ndings\022..yandex.cloud.access.ListAccessB" +
-      "indingsRequest\032/.yandex.cloud.access.Lis" +
-      "tAccessBindingsResponse\"B\202\323\344\223\002<\022:/contai" +
-      "ners/v1/containers/{resource_id}:listAcc" +
-      "essBindings\022\351\001\n\021SetAccessBindings\022-.yand" +
-      "ex.cloud.access.SetAccessBindingsRequest" +
-      "\032!.yandex.cloud.operation.Operation\"\201\001\202\323" +
-      "\344\223\002>\"9/containers/v1/containers/{resourc" +
-      "e_id}:setAccessBindings:\001*\262\322*9\n access.S" +
-      "etAccessBindingsMetadata\022\025google.protobu" +
-      "f.Empty\022\365\001\n\024UpdateAccessBindings\0220.yande" +
-      "x.cloud.access.UpdateAccessBindingsReque" +
-      "st\032!.yandex.cloud.operation.Operation\"\207\001" +
-      "\202\323\344\223\002A\"</containers/v1/containers/{resou" +
-      "rce_id}:updateAccessBindings:\001*\262\322*<\n#acc" +
-      "ess.UpdateAccessBindingsMetadata\022\025google" +
-      ".protobuf.EmptyB\201\001\n)yandex.cloud.api.ser" +
-      "verless.containers.v1ZTgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/serverle" +
-      "ss/containers/v1;containersb\006proto3"
+      "ion_id\030\001 \001(\t\"Q\n\030RollbackContainerRequest" +
+      "\022\032\n\014container_id\030\001 \001(\tB\004\350\3071\001\022\031\n\013revision" +
+      "_id\030\002 \001(\tB\004\350\3071\001\"F\n\031RollbackContainerMeta" +
+      "data\022\024\n\014container_id\030\001 \001(\t\022\023\n\013revision_i" +
+      "d\030\002 \001(\t\"\226\001\n\036ListContainerOperationsReque" +
+      "st\022\032\n\014container_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_s" +
+      "ize\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(" +
+      "\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000" +
+      "\"q\n\037ListContainerOperationsResponse\0225\n\no" +
+      "perations\030\001 \003(\0132!.yandex.cloud.operation" +
+      ".Operation\022\027\n\017next_page_token\030\002 \001(\t2\355\024\n\020" +
+      "ContainerService\022\245\001\n\003Get\022:.yandex.cloud." +
+      "serverless.containers.v1.GetContainerReq" +
+      "uest\0320.yandex.cloud.serverless.container" +
+      "s.v1.Container\"0\202\323\344\223\002*\022(/containers/v1/c" +
+      "ontainers/{container_id}\022\246\001\n\004List\022<.yand" +
+      "ex.cloud.serverless.containers.v1.ListCo" +
+      "ntainersRequest\032=.yandex.cloud.serverles" +
+      "s.containers.v1.ListContainersResponse\"!" +
+      "\202\323\344\223\002\033\022\031/containers/v1/containers\022\270\001\n\006Cr" +
+      "eate\022=.yandex.cloud.serverless.container" +
+      "s.v1.CreateContainerRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"L\202\323\344\223\002\036\"\031/contain" +
+      "ers/v1/containers:\001*\262\322*$\n\027CreateContaine" +
+      "rMetadata\022\tContainer\022\307\001\n\006Update\022=.yandex" +
+      ".cloud.serverless.containers.v1.UpdateCo" +
+      "ntainerRequest\032!.yandex.cloud.operation." +
+      "Operation\"[\202\323\344\223\002-2(/containers/v1/contai" +
+      "ners/{container_id}:\001*\262\322*$\n\027UpdateContai" +
+      "nerMetadata\022\tContainer\022\320\001\n\006Delete\022=.yand" +
+      "ex.cloud.serverless.containers.v1.Delete" +
+      "ContainerRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"d\202\323\344\223\002**(/containers/v1/cont" +
+      "ainers/{container_id}\262\322*0\n\027DeleteContain" +
+      "erMetadata\022\025google.protobuf.Empty\022\325\001\n\016De" +
+      "ployRevision\022E.yandex.cloud.serverless.c" +
+      "ontainers.v1.DeployContainerRevisionRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"Y" +
+      "\202\323\344\223\002$\"\037/containers/v1/revisions:deploy:" +
+      "\001*\262\322*+\n\037DeployContainerRevisionMetadata\022" +
+      "\010Revision\022\326\001\n\010Rollback\022?.yandex.cloud.se" +
+      "rverless.containers.v1.RollbackContainer" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"f\202\323\344\223\0026\"1/containers/v1/containers/{c" +
+      "ontainer_id}:rollback:\001*\262\322*&\n\031RollbackCo" +
+      "ntainerMetadata\022\tContainer\022\274\001\n\013GetRevisi" +
+      "on\022B.yandex.cloud.serverless.containers." +
+      "v1.GetContainerRevisionRequest\032/.yandex." +
+      "cloud.serverless.containers.v1.Revision\"" +
+      "8\202\323\344\223\0022\0220/containers/v1/revisions/{conta" +
+      "iner_revision_id}\022\300\001\n\rListRevisions\022E.ya" +
+      "ndex.cloud.serverless.containers.v1.List" +
+      "ContainersRevisionsRequest\032F.yandex.clou" +
+      "d.serverless.containers.v1.ListContainer" +
+      "sRevisionsResponse\" \202\323\344\223\002\032\022\030/containers/" +
+      "v1/revisions\022\334\001\n\016ListOperations\022E.yandex" +
+      ".cloud.serverless.containers.v1.ListCont" +
+      "ainerOperationsRequest\032F.yandex.cloud.se" +
+      "rverless.containers.v1.ListContainerOper" +
+      "ationsResponse\";\202\323\344\223\0025\0223/containers/v1/c" +
+      "ontainers/{container_id}/operations\022\271\001\n\022" +
+      "ListAccessBindings\022..yandex.cloud.access" +
+      ".ListAccessBindingsRequest\032/.yandex.clou" +
+      "d.access.ListAccessBindingsResponse\"B\202\323\344" +
+      "\223\002<\022:/containers/v1/containers/{resource" +
+      "_id}:listAccessBindings\022\351\001\n\021SetAccessBin" +
+      "dings\022-.yandex.cloud.access.SetAccessBin" +
+      "dingsRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"\201\001\202\323\344\223\002>\"9/containers/v1/contain" +
+      "ers/{resource_id}:setAccessBindings:\001*\262\322" +
+      "*9\n access.SetAccessBindingsMetadata\022\025go" +
+      "ogle.protobuf.Empty\022\365\001\n\024UpdateAccessBind" +
+      "ings\0220.yandex.cloud.access.UpdateAccessB" +
+      "indingsRequest\032!.yandex.cloud.operation." +
+      "Operation\"\207\001\202\323\344\223\002A\"</containers/v1/conta" +
+      "iners/{resource_id}:updateAccessBindings" +
+      ":\001*\262\322*<\n#access.UpdateAccessBindingsMeta" +
+      "data\022\025google.protobuf.EmptyB\201\001\n)yandex.c" +
+      "loud.api.serverless.containers.v1ZTgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/serverless/containers/v1;containersb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15826,14 +17220,26 @@ public final class ContainerServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_containers_v1_DeployContainerRevisionMetadata_descriptor,
         new java.lang.String[] { "ContainerRevisionId", });
-    internal_static_yandex_cloud_serverless_containers_v1_ListContainerOperationsRequest_descriptor =
+    internal_static_yandex_cloud_serverless_containers_v1_RollbackContainerRequest_descriptor =
       getDescriptor().getMessageTypes().get(15);
+    internal_static_yandex_cloud_serverless_containers_v1_RollbackContainerRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_containers_v1_RollbackContainerRequest_descriptor,
+        new java.lang.String[] { "ContainerId", "RevisionId", });
+    internal_static_yandex_cloud_serverless_containers_v1_RollbackContainerMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_yandex_cloud_serverless_containers_v1_RollbackContainerMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_containers_v1_RollbackContainerMetadata_descriptor,
+        new java.lang.String[] { "ContainerId", "RevisionId", });
+    internal_static_yandex_cloud_serverless_containers_v1_ListContainerOperationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_serverless_containers_v1_ListContainerOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_containers_v1_ListContainerOperationsRequest_descriptor,
         new java.lang.String[] { "ContainerId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_serverless_containers_v1_ListContainerOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_serverless_containers_v1_ListContainerOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_containers_v1_ListContainerOperationsResponse_descriptor,

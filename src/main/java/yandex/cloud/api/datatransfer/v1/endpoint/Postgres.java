@@ -353,6 +353,27 @@ public final class Postgres {
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage cast = 16;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getCast();
+
+    /**
+     * <pre>
+     * Materialized views
+     * 
+     * CREATE MATERIALIZED VIEW ...
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+     */
+    int getMaterializedViewValue();
+    /**
+     * <pre>
+     * Materialized views
+     * 
+     * CREATE MATERIALIZED VIEW ...
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getMaterializedView();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.PostgresObjectTransferSettings}
@@ -383,6 +404,7 @@ public final class Postgres {
       collation_ = 0;
       policy_ = 0;
       cast_ = 0;
+      materializedView_ = 0;
     }
 
     @java.lang.Override
@@ -503,6 +525,12 @@ public final class Postgres {
               int rawValue = input.readEnum();
 
               cast_ = rawValue;
+              break;
+            }
+            case 136: {
+              int rawValue = input.readEnum();
+
+              materializedView_ = rawValue;
               break;
             }
             default: {
@@ -1001,6 +1029,35 @@ public final class Postgres {
       return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
     }
 
+    public static final int MATERIALIZED_VIEW_FIELD_NUMBER = 17;
+    private int materializedView_;
+    /**
+     * <pre>
+     * Materialized views
+     * 
+     * CREATE MATERIALIZED VIEW ...
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+     */
+    public int getMaterializedViewValue() {
+      return materializedView_;
+    }
+    /**
+     * <pre>
+     * Materialized views
+     * 
+     * CREATE MATERIALIZED VIEW ...
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+     */
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getMaterializedView() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(materializedView_);
+      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1062,6 +1119,9 @@ public final class Postgres {
       }
       if (cast_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.OBJECT_TRANSFER_STAGE_UNSPECIFIED.getNumber()) {
         output.writeEnum(16, cast_);
+      }
+      if (materializedView_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.OBJECT_TRANSFER_STAGE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(17, materializedView_);
       }
       unknownFields.writeTo(output);
     }
@@ -1136,6 +1196,10 @@ public final class Postgres {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(16, cast_);
       }
+      if (materializedView_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.OBJECT_TRANSFER_STAGE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(17, materializedView_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1168,6 +1232,7 @@ public final class Postgres {
       result = result && collation_ == other.collation_;
       result = result && policy_ == other.policy_;
       result = result && cast_ == other.cast_;
+      result = result && materializedView_ == other.materializedView_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1211,6 +1276,8 @@ public final class Postgres {
       hash = (53 * hash) + policy_;
       hash = (37 * hash) + CAST_FIELD_NUMBER;
       hash = (53 * hash) + cast_;
+      hash = (37 * hash) + MATERIALIZED_VIEW_FIELD_NUMBER;
+      hash = (53 * hash) + materializedView_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1376,6 +1443,8 @@ public final class Postgres {
 
         cast_ = 0;
 
+        materializedView_ = 0;
+
         return this;
       }
 
@@ -1418,6 +1487,7 @@ public final class Postgres {
         result.collation_ = collation_;
         result.policy_ = policy_;
         result.cast_ = cast_;
+        result.materializedView_ = materializedView_;
         onBuilt();
         return result;
       }
@@ -1513,6 +1583,9 @@ public final class Postgres {
         }
         if (other.cast_ != 0) {
           setCastValue(other.getCastValue());
+        }
+        if (other.materializedView_ != 0) {
+          setMaterializedViewValue(other.getMaterializedViewValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2739,6 +2812,81 @@ public final class Postgres {
       public Builder clearCast() {
         
         cast_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int materializedView_ = 0;
+      /**
+       * <pre>
+       * Materialized views
+       * 
+       * CREATE MATERIALIZED VIEW ...
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+       */
+      public int getMaterializedViewValue() {
+        return materializedView_;
+      }
+      /**
+       * <pre>
+       * Materialized views
+       * 
+       * CREATE MATERIALIZED VIEW ...
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+       */
+      public Builder setMaterializedViewValue(int value) {
+        materializedView_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Materialized views
+       * 
+       * CREATE MATERIALIZED VIEW ...
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getMaterializedView() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(materializedView_);
+        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Materialized views
+       * 
+       * CREATE MATERIALIZED VIEW ...
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+       */
+      public Builder setMaterializedView(yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        materializedView_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Materialized views
+       * 
+       * CREATE MATERIALIZED VIEW ...
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+       */
+      public Builder clearMaterializedView() {
+        
+        materializedView_ = 0;
         onChanged();
         return this;
       }
@@ -3979,7 +4127,7 @@ public final class Postgres {
      * <pre>
      * Managed cluster
      * 
-     * Yandex Managed Service for PostgreSQL cluster ID
+     * Yandex.Cloud Managed PostgreSQL cluster ID
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
@@ -3989,7 +4137,7 @@ public final class Postgres {
      * <pre>
      * Managed cluster
      * 
-     * Yandex Managed Service for PostgreSQL cluster ID
+     * Yandex.Cloud Managed PostgreSQL cluster ID
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
@@ -4164,7 +4312,7 @@ public final class Postgres {
      * <pre>
      * Managed cluster
      * 
-     * Yandex Managed Service for PostgreSQL cluster ID
+     * Yandex.Cloud Managed PostgreSQL cluster ID
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
@@ -4190,7 +4338,7 @@ public final class Postgres {
      * <pre>
      * Managed cluster
      * 
-     * Yandex Managed Service for PostgreSQL cluster ID
+     * Yandex.Cloud Managed PostgreSQL cluster ID
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
@@ -4631,7 +4779,7 @@ public final class Postgres {
        * <pre>
        * Managed cluster
        * 
-       * Yandex Managed Service for PostgreSQL cluster ID
+       * Yandex.Cloud Managed PostgreSQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
@@ -4657,7 +4805,7 @@ public final class Postgres {
        * <pre>
        * Managed cluster
        * 
-       * Yandex Managed Service for PostgreSQL cluster ID
+       * Yandex.Cloud Managed PostgreSQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
@@ -4684,7 +4832,7 @@ public final class Postgres {
        * <pre>
        * Managed cluster
        * 
-       * Yandex Managed Service for PostgreSQL cluster ID
+       * Yandex.Cloud Managed PostgreSQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
@@ -4703,7 +4851,7 @@ public final class Postgres {
        * <pre>
        * Managed cluster
        * 
-       * Yandex Managed Service for PostgreSQL cluster ID
+       * Yandex.Cloud Managed PostgreSQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
@@ -4720,7 +4868,7 @@ public final class Postgres {
        * <pre>
        * Managed cluster
        * 
-       * Yandex Managed Service for PostgreSQL cluster ID
+       * Yandex.Cloud Managed PostgreSQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
@@ -5016,6 +5164,41 @@ public final class Postgres {
 
     /**
      * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupsList();
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     */
+    int getSecurityGroupsCount();
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     */
+    java.lang.String getSecurityGroups(int index);
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index);
+
+    /**
+     * <pre>
      * Database name
      * </pre>
      *
@@ -5194,7 +5377,7 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Database schema for service table
+     * Database schema for service tables
      * 
      * Default: public. Here created technical tables (__consumer_keeper,
      * __data_transfer_mole_finder).
@@ -5205,7 +5388,7 @@ public final class Postgres {
     java.lang.String getServiceSchema();
     /**
      * <pre>
-     * Database schema for service table
+     * Database schema for service tables
      * 
      * Default: public. Here created technical tables (__consumer_keeper,
      * __data_transfer_mole_finder).
@@ -5260,6 +5443,7 @@ public final class Postgres {
       super(builder);
     }
     private PostgresSource() {
+      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       database_ = "";
       user_ = "";
       includeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -5332,18 +5516,18 @@ public final class Postgres {
             }
             case 42: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
                 includeTables_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000020;
               }
               includeTables_.add(s);
               break;
             }
             case 50: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
                 excludeTables_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000040;
               }
               excludeTables_.add(s);
               break;
@@ -5372,6 +5556,15 @@ public final class Postgres {
 
               break;
             }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                securityGroups_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              securityGroups_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5387,11 +5580,14 @@ public final class Postgres {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
           includeTables_ = includeTables_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
           excludeTables_ = excludeTables_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          securityGroups_ = securityGroups_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -5448,6 +5644,51 @@ public final class Postgres {
      */
     public yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresConnectionOrBuilder getConnectionOrBuilder() {
       return getConnection();
+    }
+
+    public static final int SECURITY_GROUPS_FIELD_NUMBER = 14;
+    private com.google.protobuf.LazyStringList securityGroups_;
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupsList() {
+      return securityGroups_;
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     */
+    public int getSecurityGroupsCount() {
+      return securityGroups_.size();
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     */
+    public java.lang.String getSecurityGroups(int index) {
+      return securityGroups_.get(index);
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index) {
+      return securityGroups_.getByteString(index);
     }
 
     public static final int DATABASE_FIELD_NUMBER = 2;
@@ -5712,7 +5953,7 @@ public final class Postgres {
     private volatile java.lang.Object serviceSchema_;
     /**
      * <pre>
-     * Database schema for service table
+     * Database schema for service tables
      * 
      * Default: public. Here created technical tables (__consumer_keeper,
      * __data_transfer_mole_finder).
@@ -5734,7 +5975,7 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Database schema for service table
+     * Database schema for service tables
      * 
      * Default: public. Here created technical tables (__consumer_keeper,
      * __data_transfer_mole_finder).
@@ -5836,6 +6077,9 @@ public final class Postgres {
       if (objectTransferSettings_ != null) {
         output.writeMessage(13, getObjectTransferSettings());
       }
+      for (int i = 0; i < securityGroups_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, securityGroups_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5886,6 +6130,14 @@ public final class Postgres {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getObjectTransferSettings());
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < securityGroups_.size(); i++) {
+          dataSize += computeStringSizeNoTag(securityGroups_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSecurityGroupsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5907,6 +6159,8 @@ public final class Postgres {
         result = result && getConnection()
             .equals(other.getConnection());
       }
+      result = result && getSecurityGroupsList()
+          .equals(other.getSecurityGroupsList());
       result = result && getDatabase()
           .equals(other.getDatabase());
       result = result && getUser()
@@ -5943,6 +6197,10 @@ public final class Postgres {
       if (hasConnection()) {
         hash = (37 * hash) + CONNECTION_FIELD_NUMBER;
         hash = (53 * hash) + getConnection().hashCode();
+      }
+      if (getSecurityGroupsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupsList().hashCode();
       }
       hash = (37 * hash) + DATABASE_FIELD_NUMBER;
       hash = (53 * hash) + getDatabase().hashCode();
@@ -6108,6 +6366,8 @@ public final class Postgres {
           connection_ = null;
           connectionBuilder_ = null;
         }
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
         database_ = "";
 
         user_ = "";
@@ -6119,9 +6379,9 @@ public final class Postgres {
           passwordBuilder_ = null;
         }
         includeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
-        excludeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000020);
+        excludeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000040);
         slotByteLagLimit_ = 0L;
 
         serviceSchema_ = "";
@@ -6165,6 +6425,11 @@ public final class Postgres {
         } else {
           result.connection_ = connectionBuilder_.build();
         }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          securityGroups_ = securityGroups_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.securityGroups_ = securityGroups_;
         result.database_ = database_;
         result.user_ = user_;
         if (passwordBuilder_ == null) {
@@ -6172,14 +6437,14 @@ public final class Postgres {
         } else {
           result.password_ = passwordBuilder_.build();
         }
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
           includeTables_ = includeTables_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.includeTables_ = includeTables_;
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
           excludeTables_ = excludeTables_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.excludeTables_ = excludeTables_;
         result.slotByteLagLimit_ = slotByteLagLimit_;
@@ -6241,6 +6506,16 @@ public final class Postgres {
         if (other.hasConnection()) {
           mergeConnection(other.getConnection());
         }
+        if (!other.securityGroups_.isEmpty()) {
+          if (securityGroups_.isEmpty()) {
+            securityGroups_ = other.securityGroups_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureSecurityGroupsIsMutable();
+            securityGroups_.addAll(other.securityGroups_);
+          }
+          onChanged();
+        }
         if (!other.getDatabase().isEmpty()) {
           database_ = other.database_;
           onChanged();
@@ -6255,7 +6530,7 @@ public final class Postgres {
         if (!other.includeTables_.isEmpty()) {
           if (includeTables_.isEmpty()) {
             includeTables_ = other.includeTables_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureIncludeTablesIsMutable();
             includeTables_.addAll(other.includeTables_);
@@ -6265,7 +6540,7 @@ public final class Postgres {
         if (!other.excludeTables_.isEmpty()) {
           if (excludeTables_.isEmpty()) {
             excludeTables_ = other.excludeTables_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureExcludeTablesIsMutable();
             excludeTables_.addAll(other.excludeTables_);
@@ -6481,6 +6756,136 @@ public final class Postgres {
           connection_ = null;
         }
         return connectionBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          securityGroups_ = new com.google.protobuf.LazyStringArrayList(securityGroups_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupsList() {
+        return securityGroups_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       */
+      public int getSecurityGroupsCount() {
+        return securityGroups_.size();
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       */
+      public java.lang.String getSecurityGroups(int index) {
+        return securityGroups_.get(index);
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupsBytes(int index) {
+        return securityGroups_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       */
+      public Builder setSecurityGroups(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       */
+      public Builder addSecurityGroups(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       */
+      public Builder addAllSecurityGroups(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroups_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       */
+      public Builder clearSecurityGroups() {
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       */
+      public Builder addSecurityGroupsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
+        onChanged();
+        return this;
       }
 
       private java.lang.Object database_ = "";
@@ -6844,9 +7249,9 @@ public final class Postgres {
 
       private com.google.protobuf.LazyStringList includeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureIncludeTablesIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
           includeTables_ = new com.google.protobuf.LazyStringArrayList(includeTables_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000020;
          }
       }
       /**
@@ -6973,7 +7378,7 @@ public final class Postgres {
        */
       public Builder clearIncludeTables() {
         includeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -7001,9 +7406,9 @@ public final class Postgres {
 
       private com.google.protobuf.LazyStringList excludeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureExcludeTablesIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
           excludeTables_ = new com.google.protobuf.LazyStringArrayList(excludeTables_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000040;
          }
       }
       /**
@@ -7130,7 +7535,7 @@ public final class Postgres {
        */
       public Builder clearExcludeTables() {
         excludeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -7209,7 +7614,7 @@ public final class Postgres {
       private java.lang.Object serviceSchema_ = "";
       /**
        * <pre>
-       * Database schema for service table
+       * Database schema for service tables
        * 
        * Default: public. Here created technical tables (__consumer_keeper,
        * __data_transfer_mole_finder).
@@ -7231,7 +7636,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database schema for service table
+       * Database schema for service tables
        * 
        * Default: public. Here created technical tables (__consumer_keeper,
        * __data_transfer_mole_finder).
@@ -7254,7 +7659,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database schema for service table
+       * Database schema for service tables
        * 
        * Default: public. Here created technical tables (__consumer_keeper,
        * __data_transfer_mole_finder).
@@ -7274,7 +7679,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database schema for service table
+       * Database schema for service tables
        * 
        * Default: public. Here created technical tables (__consumer_keeper,
        * __data_transfer_mole_finder).
@@ -7290,7 +7695,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database schema for service table
+       * Database schema for service tables
        * 
        * Default: public. Here created technical tables (__consumer_keeper,
        * __data_transfer_mole_finder).
@@ -7570,6 +7975,41 @@ public final class Postgres {
 
     /**
      * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 7;</code>
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupsList();
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 7;</code>
+     */
+    int getSecurityGroupsCount();
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 7;</code>
+     */
+    java.lang.String getSecurityGroups(int index);
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index);
+
+    /**
+     * <pre>
      * Database name
      * </pre>
      *
@@ -7675,6 +8115,7 @@ public final class Postgres {
       super(builder);
     }
     private PostgresTarget() {
+      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       database_ = "";
       user_ = "";
       cleanupPolicy_ = 0;
@@ -7748,6 +8189,15 @@ public final class Postgres {
               cleanupPolicy_ = rawValue;
               break;
             }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                securityGroups_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              securityGroups_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -7763,6 +8213,9 @@ public final class Postgres {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          securityGroups_ = securityGroups_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -7780,6 +8233,7 @@ public final class Postgres {
               yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresTarget.class, yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresTarget.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONNECTION_FIELD_NUMBER = 1;
     private yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresConnection connection_;
     /**
@@ -7817,6 +8271,51 @@ public final class Postgres {
      */
     public yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresConnectionOrBuilder getConnectionOrBuilder() {
       return getConnection();
+    }
+
+    public static final int SECURITY_GROUPS_FIELD_NUMBER = 7;
+    private com.google.protobuf.LazyStringList securityGroups_;
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 7;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupsList() {
+      return securityGroups_;
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 7;</code>
+     */
+    public int getSecurityGroupsCount() {
+      return securityGroups_.size();
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 7;</code>
+     */
+    public java.lang.String getSecurityGroups(int index) {
+      return securityGroups_.get(index);
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index) {
+      return securityGroups_.getByteString(index);
     }
 
     public static final int DATABASE_FIELD_NUMBER = 2;
@@ -8006,6 +8505,9 @@ public final class Postgres {
       if (cleanupPolicy_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.CLEANUP_POLICY_UNSPECIFIED.getNumber()) {
         output.writeEnum(5, cleanupPolicy_);
       }
+      for (int i = 0; i < securityGroups_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, securityGroups_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8033,6 +8535,14 @@ public final class Postgres {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, cleanupPolicy_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < securityGroups_.size(); i++) {
+          dataSize += computeStringSizeNoTag(securityGroups_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSecurityGroupsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -8054,6 +8564,8 @@ public final class Postgres {
         result = result && getConnection()
             .equals(other.getConnection());
       }
+      result = result && getSecurityGroupsList()
+          .equals(other.getSecurityGroupsList());
       result = result && getDatabase()
           .equals(other.getDatabase());
       result = result && getUser()
@@ -8078,6 +8590,10 @@ public final class Postgres {
       if (hasConnection()) {
         hash = (37 * hash) + CONNECTION_FIELD_NUMBER;
         hash = (53 * hash) + getConnection().hashCode();
+      }
+      if (getSecurityGroupsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupsList().hashCode();
       }
       hash = (37 * hash) + DATABASE_FIELD_NUMBER;
       hash = (53 * hash) + getDatabase().hashCode();
@@ -8228,6 +8744,8 @@ public final class Postgres {
           connection_ = null;
           connectionBuilder_ = null;
         }
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
         database_ = "";
 
         user_ = "";
@@ -8266,11 +8784,18 @@ public final class Postgres {
       @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresTarget buildPartial() {
         yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresTarget result = new yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresTarget(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (connectionBuilder_ == null) {
           result.connection_ = connection_;
         } else {
           result.connection_ = connectionBuilder_.build();
         }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          securityGroups_ = securityGroups_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.securityGroups_ = securityGroups_;
         result.database_ = database_;
         result.user_ = user_;
         if (passwordBuilder_ == null) {
@@ -8279,6 +8804,7 @@ public final class Postgres {
           result.password_ = passwordBuilder_.build();
         }
         result.cleanupPolicy_ = cleanupPolicy_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -8330,6 +8856,16 @@ public final class Postgres {
         if (other.hasConnection()) {
           mergeConnection(other.getConnection());
         }
+        if (!other.securityGroups_.isEmpty()) {
+          if (securityGroups_.isEmpty()) {
+            securityGroups_ = other.securityGroups_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureSecurityGroupsIsMutable();
+            securityGroups_.addAll(other.securityGroups_);
+          }
+          onChanged();
+        }
         if (!other.getDatabase().isEmpty()) {
           database_ = other.database_;
           onChanged();
@@ -8372,6 +8908,7 @@ public final class Postgres {
         }
         return this;
       }
+      private int bitField0_;
 
       private yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresConnection connection_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8542,6 +9079,136 @@ public final class Postgres {
           connection_ = null;
         }
         return connectionBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          securityGroups_ = new com.google.protobuf.LazyStringArrayList(securityGroups_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 7;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupsList() {
+        return securityGroups_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 7;</code>
+       */
+      public int getSecurityGroupsCount() {
+        return securityGroups_.size();
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 7;</code>
+       */
+      public java.lang.String getSecurityGroups(int index) {
+        return securityGroups_.get(index);
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 7;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupsBytes(int index) {
+        return securityGroups_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 7;</code>
+       */
+      public Builder setSecurityGroups(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 7;</code>
+       */
+      public Builder addSecurityGroups(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 7;</code>
+       */
+      public Builder addAllSecurityGroups(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroups_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 7;</code>
+       */
+      public Builder clearSecurityGroups() {
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 7;</code>
+       */
+      public Builder addSecurityGroupsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
+        onChanged();
+        return this;
       }
 
       private java.lang.Object database_ = "";
@@ -9072,7 +9739,7 @@ public final class Postgres {
       "\n4yandex/cloud/datatransfer/v1/endpoint/" +
       "postgres.proto\022%yandex.cloud.datatransfe" +
       "r.v1.endpoint\0322yandex/cloud/datatransfer" +
-      "/v1/endpoint/common.proto\"\201\n\n\036PostgresOb" +
+      "/v1/endpoint/common.proto\"\330\n\n\036PostgresOb" +
       "jectTransferSettings\022L\n\010sequence\030\001 \001(\0162:" +
       ".yandex.cloud.datatransfer.v1.endpoint.O" +
       "bjectTransferStage\022U\n\021sequence_owned_by\030" +
@@ -9104,35 +9771,39 @@ public final class Postgres {
       "J\n\006policy\030\017 \001(\0162:.yandex.cloud.datatrans" +
       "fer.v1.endpoint.ObjectTransferStage\022H\n\004c" +
       "ast\030\020 \001(\0162:.yandex.cloud.datatransfer.v1" +
-      ".endpoint.ObjectTransferStage\"\205\001\n\021OnPrem" +
-      "isePostgres\022\r\n\005hosts\030\005 \003(\t\022\014\n\004port\030\002 \001(\003" +
-      "\022@\n\010tls_mode\030\006 \001(\0132..yandex.cloud.datatr" +
-      "ansfer.v1.endpoint.TLSMode\022\021\n\tsubnet_id\030" +
-      "\004 \001(\t\"\214\001\n\022PostgresConnection\022\030\n\016mdb_clus" +
-      "ter_id\030\001 \001(\tH\000\022N\n\non_premise\030\002 \001(\01328.yan" +
-      "dex.cloud.datatransfer.v1.endpoint.OnPre" +
-      "misePostgresH\000B\014\n\nconnection\"\216\003\n\016Postgre" +
-      "sSource\022M\n\nconnection\030\001 \001(\01329.yandex.clo" +
-      "ud.datatransfer.v1.endpoint.PostgresConn" +
-      "ection\022\020\n\010database\030\002 \001(\t\022\014\n\004user\030\003 \001(\t\022?" +
-      "\n\010password\030\004 \001(\0132-.yandex.cloud.datatran" +
-      "sfer.v1.endpoint.Secret\022\026\n\016include_table" +
-      "s\030\005 \003(\t\022\026\n\016exclude_tables\030\006 \003(\t\022\033\n\023slot_" +
-      "byte_lag_limit\030\010 \001(\003\022\026\n\016service_schema\030\t" +
-      " \001(\t\022g\n\030object_transfer_settings\030\r \001(\0132E" +
-      ".yandex.cloud.datatransfer.v1.endpoint.P" +
-      "ostgresObjectTransferSettings\"\216\002\n\016Postgr" +
-      "esTarget\022M\n\nconnection\030\001 \001(\01329.yandex.cl" +
-      "oud.datatransfer.v1.endpoint.PostgresCon" +
-      "nection\022\020\n\010database\030\002 \001(\t\022\014\n\004user\030\003 \001(\t\022" +
-      "?\n\010password\030\004 \001(\0132-.yandex.cloud.datatra" +
-      "nsfer.v1.endpoint.Secret\022L\n\016cleanup_poli" +
-      "cy\030\005 \001(\01624.yandex.cloud.datatransfer.v1." +
-      "endpoint.CleanupPolicyB\247\001\n)yandex.cloud." +
-      "api.datatransfer.v1.endpointZRgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/d" +
-      "atatransfer/v1/endpoint;endpoint\252\002%Yande" +
-      "x.Cloud.Datatransfer.V1.EndPointb\006proto3"
+      ".endpoint.ObjectTransferStage\022U\n\021materia" +
+      "lized_view\030\021 \001(\0162:.yandex.cloud.datatran" +
+      "sfer.v1.endpoint.ObjectTransferStage\"\205\001\n" +
+      "\021OnPremisePostgres\022\r\n\005hosts\030\005 \003(\t\022\014\n\004por" +
+      "t\030\002 \001(\003\022@\n\010tls_mode\030\006 \001(\0132..yandex.cloud" +
+      ".datatransfer.v1.endpoint.TLSMode\022\021\n\tsub" +
+      "net_id\030\004 \001(\t\"\214\001\n\022PostgresConnection\022\030\n\016m" +
+      "db_cluster_id\030\001 \001(\tH\000\022N\n\non_premise\030\002 \001(" +
+      "\01328.yandex.cloud.datatransfer.v1.endpoin" +
+      "t.OnPremisePostgresH\000B\014\n\nconnection\"\247\003\n\016" +
+      "PostgresSource\022M\n\nconnection\030\001 \001(\01329.yan" +
+      "dex.cloud.datatransfer.v1.endpoint.Postg" +
+      "resConnection\022\027\n\017security_groups\030\016 \003(\t\022\020" +
+      "\n\010database\030\002 \001(\t\022\014\n\004user\030\003 \001(\t\022?\n\010passwo" +
+      "rd\030\004 \001(\0132-.yandex.cloud.datatransfer.v1." +
+      "endpoint.Secret\022\026\n\016include_tables\030\005 \003(\t\022" +
+      "\026\n\016exclude_tables\030\006 \003(\t\022\033\n\023slot_byte_lag" +
+      "_limit\030\010 \001(\003\022\026\n\016service_schema\030\t \001(\t\022g\n\030" +
+      "object_transfer_settings\030\r \001(\0132E.yandex." +
+      "cloud.datatransfer.v1.endpoint.PostgresO" +
+      "bjectTransferSettings\"\247\002\n\016PostgresTarget" +
+      "\022M\n\nconnection\030\001 \001(\01329.yandex.cloud.data" +
+      "transfer.v1.endpoint.PostgresConnection\022" +
+      "\027\n\017security_groups\030\007 \003(\t\022\020\n\010database\030\002 \001" +
+      "(\t\022\014\n\004user\030\003 \001(\t\022?\n\010password\030\004 \001(\0132-.yan" +
+      "dex.cloud.datatransfer.v1.endpoint.Secre" +
+      "t\022L\n\016cleanup_policy\030\005 \001(\01624.yandex.cloud" +
+      ".datatransfer.v1.endpoint.CleanupPolicyB" +
+      "\247\001\n)yandex.cloud.api.datatransfer.v1.end" +
+      "pointZRgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/datatransfer/v1/endpoint" +
+      ";endpoint\252\002%Yandex.Cloud.Datatransfer.V1" +
+      ".EndPointb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9152,7 +9823,7 @@ public final class Postgres {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresObjectTransferSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresObjectTransferSettings_descriptor,
-        new java.lang.String[] { "Sequence", "SequenceOwnedBy", "Table", "PrimaryKey", "FkConstraint", "DefaultValues", "Constraint", "Index", "View", "Function", "Trigger", "Type", "Rule", "Collation", "Policy", "Cast", });
+        new java.lang.String[] { "Sequence", "SequenceOwnedBy", "Table", "PrimaryKey", "FkConstraint", "DefaultValues", "Constraint", "Index", "View", "Function", "Trigger", "Type", "Rule", "Collation", "Policy", "Cast", "MaterializedView", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_OnPremisePostgres_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_OnPremisePostgres_fieldAccessorTable = new
@@ -9170,13 +9841,13 @@ public final class Postgres {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresSource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresSource_descriptor,
-        new java.lang.String[] { "Connection", "Database", "User", "Password", "IncludeTables", "ExcludeTables", "SlotByteLagLimit", "ServiceSchema", "ObjectTransferSettings", });
+        new java.lang.String[] { "Connection", "SecurityGroups", "Database", "User", "Password", "IncludeTables", "ExcludeTables", "SlotByteLagLimit", "ServiceSchema", "ObjectTransferSettings", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresTarget_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresTarget_descriptor,
-        new java.lang.String[] { "Connection", "Database", "User", "Password", "CleanupPolicy", });
+        new java.lang.String[] { "Connection", "SecurityGroups", "Database", "User", "Password", "CleanupPolicy", });
     yandex.cloud.api.datatransfer.v1.endpoint.Common.getDescriptor();
   }
 

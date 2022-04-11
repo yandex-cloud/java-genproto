@@ -1198,7 +1198,7 @@ public final class Mysql {
      * <pre>
      * Managed cluster
      * 
-     * Yandex Managed Service for MySQL cluster ID
+     * Yandex.Cloud Managed MySQL cluster ID
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
@@ -1208,7 +1208,7 @@ public final class Mysql {
      * <pre>
      * Managed cluster
      * 
-     * Yandex Managed Service for MySQL cluster ID
+     * Yandex.Cloud Managed MySQL cluster ID
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
@@ -1383,7 +1383,7 @@ public final class Mysql {
      * <pre>
      * Managed cluster
      * 
-     * Yandex Managed Service for MySQL cluster ID
+     * Yandex.Cloud Managed MySQL cluster ID
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
@@ -1409,7 +1409,7 @@ public final class Mysql {
      * <pre>
      * Managed cluster
      * 
-     * Yandex Managed Service for MySQL cluster ID
+     * Yandex.Cloud Managed MySQL cluster ID
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
@@ -1850,7 +1850,7 @@ public final class Mysql {
        * <pre>
        * Managed cluster
        * 
-       * Yandex Managed Service for MySQL cluster ID
+       * Yandex.Cloud Managed MySQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
@@ -1876,7 +1876,7 @@ public final class Mysql {
        * <pre>
        * Managed cluster
        * 
-       * Yandex Managed Service for MySQL cluster ID
+       * Yandex.Cloud Managed MySQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
@@ -1903,7 +1903,7 @@ public final class Mysql {
        * <pre>
        * Managed cluster
        * 
-       * Yandex Managed Service for MySQL cluster ID
+       * Yandex.Cloud Managed MySQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
@@ -1922,7 +1922,7 @@ public final class Mysql {
        * <pre>
        * Managed cluster
        * 
-       * Yandex Managed Service for MySQL cluster ID
+       * Yandex.Cloud Managed MySQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
@@ -1939,7 +1939,7 @@ public final class Mysql {
        * <pre>
        * Managed cluster
        * 
-       * Yandex Managed Service for MySQL cluster ID
+       * Yandex.Cloud Managed MySQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
@@ -3092,6 +3092,41 @@ public final class Mysql {
 
     /**
      * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupsList();
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     */
+    int getSecurityGroupsCount();
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     */
+    java.lang.String getSecurityGroups(int index);
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index);
+
+    /**
+     * <pre>
      * Database name
      * 
      * You can leave it empty, then it will be possible to transfer tables from several
@@ -3113,6 +3148,30 @@ public final class Mysql {
      */
     com.google.protobuf.ByteString
         getDatabaseBytes();
+
+    /**
+     * <pre>
+     * Database for service tables
+     * 
+     * Default: data source database. Here created technical tables (__tm_keeper,
+     * __tm_gtid_keeper).
+     * </pre>
+     *
+     * <code>string service_database = 15;</code>
+     */
+    java.lang.String getServiceDatabase();
+    /**
+     * <pre>
+     * Database for service tables
+     * 
+     * Default: data source database. Here created technical tables (__tm_keeper,
+     * __tm_gtid_keeper).
+     * </pre>
+     *
+     * <code>string service_database = 15;</code>
+     */
+    com.google.protobuf.ByteString
+        getServiceDatabaseBytes();
 
     /**
      * <pre>
@@ -3273,7 +3332,9 @@ public final class Mysql {
       super(builder);
     }
     private MysqlSource() {
+      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       database_ = "";
+      serviceDatabase_ = "";
       user_ = "";
       includeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       excludeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -3363,20 +3424,35 @@ public final class Mysql {
             }
             case 98: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
                 includeTablesRegex_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000040;
               }
               includeTablesRegex_.add(s);
               break;
             }
             case 106: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
                 excludeTablesRegex_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000080;
               }
               excludeTablesRegex_.add(s);
+              break;
+            }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                securityGroups_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              securityGroups_.add(s);
+              break;
+            }
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceDatabase_ = s;
               break;
             }
             default: {
@@ -3394,11 +3470,14 @@ public final class Mysql {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
           includeTablesRegex_ = includeTablesRegex_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
           excludeTablesRegex_ = excludeTablesRegex_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          securityGroups_ = securityGroups_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -3457,6 +3536,51 @@ public final class Mysql {
       return getConnection();
     }
 
+    public static final int SECURITY_GROUPS_FIELD_NUMBER = 14;
+    private com.google.protobuf.LazyStringList securityGroups_;
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupsList() {
+      return securityGroups_;
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     */
+    public int getSecurityGroupsCount() {
+      return securityGroups_.size();
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     */
+    public java.lang.String getSecurityGroups(int index) {
+      return securityGroups_.get(index);
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index) {
+      return securityGroups_.getByteString(index);
+    }
+
     public static final int DATABASE_FIELD_NUMBER = 2;
     private volatile java.lang.Object database_;
     /**
@@ -3499,6 +3623,54 @@ public final class Mysql {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         database_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_DATABASE_FIELD_NUMBER = 15;
+    private volatile java.lang.Object serviceDatabase_;
+    /**
+     * <pre>
+     * Database for service tables
+     * 
+     * Default: data source database. Here created technical tables (__tm_keeper,
+     * __tm_gtid_keeper).
+     * </pre>
+     *
+     * <code>string service_database = 15;</code>
+     */
+    public java.lang.String getServiceDatabase() {
+      java.lang.Object ref = serviceDatabase_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceDatabase_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Database for service tables
+     * 
+     * Default: data source database. Here created technical tables (__tm_keeper,
+     * __tm_gtid_keeper).
+     * </pre>
+     *
+     * <code>string service_database = 15;</code>
+     */
+    public com.google.protobuf.ByteString
+        getServiceDatabaseBytes() {
+      java.lang.Object ref = serviceDatabase_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceDatabase_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -3773,6 +3945,12 @@ public final class Mysql {
       for (int i = 0; i < excludeTablesRegex_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 13, excludeTablesRegex_.getRaw(i));
       }
+      for (int i = 0; i < securityGroups_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, securityGroups_.getRaw(i));
+      }
+      if (!getServiceDatabaseBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, serviceDatabase_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3819,6 +3997,17 @@ public final class Mysql {
         size += dataSize;
         size += 1 * getExcludeTablesRegexList().size();
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < securityGroups_.size(); i++) {
+          dataSize += computeStringSizeNoTag(securityGroups_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSecurityGroupsList().size();
+      }
+      if (!getServiceDatabaseBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, serviceDatabase_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3840,8 +4029,12 @@ public final class Mysql {
         result = result && getConnection()
             .equals(other.getConnection());
       }
+      result = result && getSecurityGroupsList()
+          .equals(other.getSecurityGroupsList());
       result = result && getDatabase()
           .equals(other.getDatabase());
+      result = result && getServiceDatabase()
+          .equals(other.getServiceDatabase());
       result = result && getUser()
           .equals(other.getUser());
       result = result && (hasPassword() == other.hasPassword());
@@ -3875,8 +4068,14 @@ public final class Mysql {
         hash = (37 * hash) + CONNECTION_FIELD_NUMBER;
         hash = (53 * hash) + getConnection().hashCode();
       }
+      if (getSecurityGroupsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupsList().hashCode();
+      }
       hash = (37 * hash) + DATABASE_FIELD_NUMBER;
       hash = (53 * hash) + getDatabase().hashCode();
+      hash = (37 * hash) + SERVICE_DATABASE_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceDatabase().hashCode();
       hash = (37 * hash) + USER_FIELD_NUMBER;
       hash = (53 * hash) + getUser().hashCode();
       if (hasPassword()) {
@@ -4036,7 +4235,11 @@ public final class Mysql {
           connection_ = null;
           connectionBuilder_ = null;
         }
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
         database_ = "";
+
+        serviceDatabase_ = "";
 
         user_ = "";
 
@@ -4047,9 +4250,9 @@ public final class Mysql {
           passwordBuilder_ = null;
         }
         includeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000040);
         excludeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000080);
         timezone_ = "";
 
         if (objectTransferSettingsBuilder_ == null) {
@@ -4091,21 +4294,27 @@ public final class Mysql {
         } else {
           result.connection_ = connectionBuilder_.build();
         }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          securityGroups_ = securityGroups_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.securityGroups_ = securityGroups_;
         result.database_ = database_;
+        result.serviceDatabase_ = serviceDatabase_;
         result.user_ = user_;
         if (passwordBuilder_ == null) {
           result.password_ = password_;
         } else {
           result.password_ = passwordBuilder_.build();
         }
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
           includeTablesRegex_ = includeTablesRegex_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.includeTablesRegex_ = includeTablesRegex_;
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((bitField0_ & 0x00000080) == 0x00000080)) {
           excludeTablesRegex_ = excludeTablesRegex_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000080);
         }
         result.excludeTablesRegex_ = excludeTablesRegex_;
         result.timezone_ = timezone_;
@@ -4166,8 +4375,22 @@ public final class Mysql {
         if (other.hasConnection()) {
           mergeConnection(other.getConnection());
         }
+        if (!other.securityGroups_.isEmpty()) {
+          if (securityGroups_.isEmpty()) {
+            securityGroups_ = other.securityGroups_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureSecurityGroupsIsMutable();
+            securityGroups_.addAll(other.securityGroups_);
+          }
+          onChanged();
+        }
         if (!other.getDatabase().isEmpty()) {
           database_ = other.database_;
+          onChanged();
+        }
+        if (!other.getServiceDatabase().isEmpty()) {
+          serviceDatabase_ = other.serviceDatabase_;
           onChanged();
         }
         if (!other.getUser().isEmpty()) {
@@ -4180,7 +4403,7 @@ public final class Mysql {
         if (!other.includeTablesRegex_.isEmpty()) {
           if (includeTablesRegex_.isEmpty()) {
             includeTablesRegex_ = other.includeTablesRegex_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureIncludeTablesRegexIsMutable();
             includeTablesRegex_.addAll(other.includeTablesRegex_);
@@ -4190,7 +4413,7 @@ public final class Mysql {
         if (!other.excludeTablesRegex_.isEmpty()) {
           if (excludeTablesRegex_.isEmpty()) {
             excludeTablesRegex_ = other.excludeTablesRegex_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000080);
           } else {
             ensureExcludeTablesRegexIsMutable();
             excludeTablesRegex_.addAll(other.excludeTablesRegex_);
@@ -4405,6 +4628,136 @@ public final class Mysql {
         return connectionBuilder_;
       }
 
+      private com.google.protobuf.LazyStringList securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          securityGroups_ = new com.google.protobuf.LazyStringArrayList(securityGroups_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupsList() {
+        return securityGroups_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       */
+      public int getSecurityGroupsCount() {
+        return securityGroups_.size();
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       */
+      public java.lang.String getSecurityGroups(int index) {
+        return securityGroups_.get(index);
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupsBytes(int index) {
+        return securityGroups_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       */
+      public Builder setSecurityGroups(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       */
+      public Builder addSecurityGroups(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       */
+      public Builder addAllSecurityGroups(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroups_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       */
+      public Builder clearSecurityGroups() {
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       */
+      public Builder addSecurityGroupsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object database_ = "";
       /**
        * <pre>
@@ -4505,6 +4858,110 @@ public final class Mysql {
   checkByteStringIsUtf8(value);
         
         database_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceDatabase_ = "";
+      /**
+       * <pre>
+       * Database for service tables
+       * 
+       * Default: data source database. Here created technical tables (__tm_keeper,
+       * __tm_gtid_keeper).
+       * </pre>
+       *
+       * <code>string service_database = 15;</code>
+       */
+      public java.lang.String getServiceDatabase() {
+        java.lang.Object ref = serviceDatabase_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceDatabase_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Database for service tables
+       * 
+       * Default: data source database. Here created technical tables (__tm_keeper,
+       * __tm_gtid_keeper).
+       * </pre>
+       *
+       * <code>string service_database = 15;</code>
+       */
+      public com.google.protobuf.ByteString
+          getServiceDatabaseBytes() {
+        java.lang.Object ref = serviceDatabase_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceDatabase_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Database for service tables
+       * 
+       * Default: data source database. Here created technical tables (__tm_keeper,
+       * __tm_gtid_keeper).
+       * </pre>
+       *
+       * <code>string service_database = 15;</code>
+       */
+      public Builder setServiceDatabase(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceDatabase_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Database for service tables
+       * 
+       * Default: data source database. Here created technical tables (__tm_keeper,
+       * __tm_gtid_keeper).
+       * </pre>
+       *
+       * <code>string service_database = 15;</code>
+       */
+      public Builder clearServiceDatabase() {
+        
+        serviceDatabase_ = getDefaultInstance().getServiceDatabase();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Database for service tables
+       * 
+       * Default: data source database. Here created technical tables (__tm_keeper,
+       * __tm_gtid_keeper).
+       * </pre>
+       *
+       * <code>string service_database = 15;</code>
+       */
+      public Builder setServiceDatabaseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceDatabase_ = value;
         onChanged();
         return this;
       }
@@ -4781,9 +5238,9 @@ public final class Mysql {
 
       private com.google.protobuf.LazyStringList includeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureIncludeTablesRegexIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
           includeTablesRegex_ = new com.google.protobuf.LazyStringArrayList(includeTablesRegex_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000040;
          }
       }
       /**
@@ -4854,7 +5311,7 @@ public final class Mysql {
        */
       public Builder clearIncludeTablesRegex() {
         includeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -4875,9 +5332,9 @@ public final class Mysql {
 
       private com.google.protobuf.LazyStringList excludeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureExcludeTablesRegexIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
           excludeTablesRegex_ = new com.google.protobuf.LazyStringArrayList(excludeTablesRegex_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000080;
          }
       }
       /**
@@ -4948,7 +5405,7 @@ public final class Mysql {
        */
       public Builder clearExcludeTablesRegex() {
         excludeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -5331,6 +5788,41 @@ public final class Mysql {
 
     /**
      * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 16;</code>
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupsList();
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 16;</code>
+     */
+    int getSecurityGroupsCount();
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 16;</code>
+     */
+    java.lang.String getSecurityGroups(int index);
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 16;</code>
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index);
+
+    /**
+     * <pre>
      * Database name
      * 
      * Allowed to leave it empty, then the tables will be created in databases with the
@@ -5525,6 +6017,7 @@ public final class Mysql {
       super(builder);
     }
     private MysqlTarget() {
+      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       database_ = "";
       user_ = "";
       sqlMode_ = "";
@@ -5625,6 +6118,15 @@ public final class Mysql {
               serviceDatabase_ = s;
               break;
             }
+            case 130: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                securityGroups_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              securityGroups_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5640,6 +6142,9 @@ public final class Mysql {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          securityGroups_ = securityGroups_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -5657,6 +6162,7 @@ public final class Mysql {
               yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget.class, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONNECTION_FIELD_NUMBER = 1;
     private yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection connection_;
     /**
@@ -5694,6 +6200,51 @@ public final class Mysql {
      */
     public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnectionOrBuilder getConnectionOrBuilder() {
       return getConnection();
+    }
+
+    public static final int SECURITY_GROUPS_FIELD_NUMBER = 16;
+    private com.google.protobuf.LazyStringList securityGroups_;
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 16;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupsList() {
+      return securityGroups_;
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 16;</code>
+     */
+    public int getSecurityGroupsCount() {
+      return securityGroups_.size();
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 16;</code>
+     */
+    public java.lang.String getSecurityGroups(int index) {
+      return securityGroups_.get(index);
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 16;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index) {
+      return securityGroups_.getByteString(index);
     }
 
     public static final int DATABASE_FIELD_NUMBER = 2;
@@ -6060,6 +6611,9 @@ public final class Mysql {
       if (!getServiceDatabaseBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 15, serviceDatabase_);
       }
+      for (int i = 0; i < securityGroups_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, securityGroups_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6100,6 +6654,14 @@ public final class Mysql {
       if (!getServiceDatabaseBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, serviceDatabase_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < securityGroups_.size(); i++) {
+          dataSize += computeStringSizeNoTag(securityGroups_.getRaw(i));
+        }
+        size += dataSize;
+        size += 2 * getSecurityGroupsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6121,6 +6683,8 @@ public final class Mysql {
         result = result && getConnection()
             .equals(other.getConnection());
       }
+      result = result && getSecurityGroupsList()
+          .equals(other.getSecurityGroupsList());
       result = result && getDatabase()
           .equals(other.getDatabase());
       result = result && getUser()
@@ -6153,6 +6717,10 @@ public final class Mysql {
       if (hasConnection()) {
         hash = (37 * hash) + CONNECTION_FIELD_NUMBER;
         hash = (53 * hash) + getConnection().hashCode();
+      }
+      if (getSecurityGroupsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupsList().hashCode();
       }
       hash = (37 * hash) + DATABASE_FIELD_NUMBER;
       hash = (53 * hash) + getDatabase().hashCode();
@@ -6312,6 +6880,8 @@ public final class Mysql {
           connection_ = null;
           connectionBuilder_ = null;
         }
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
         database_ = "";
 
         user_ = "";
@@ -6358,11 +6928,18 @@ public final class Mysql {
       @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget buildPartial() {
         yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget result = new yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (connectionBuilder_ == null) {
           result.connection_ = connection_;
         } else {
           result.connection_ = connectionBuilder_.build();
         }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          securityGroups_ = securityGroups_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.securityGroups_ = securityGroups_;
         result.database_ = database_;
         result.user_ = user_;
         if (passwordBuilder_ == null) {
@@ -6375,6 +6952,7 @@ public final class Mysql {
         result.timezone_ = timezone_;
         result.cleanupPolicy_ = cleanupPolicy_;
         result.serviceDatabase_ = serviceDatabase_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -6425,6 +7003,16 @@ public final class Mysql {
         if (other == yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlTarget.getDefaultInstance()) return this;
         if (other.hasConnection()) {
           mergeConnection(other.getConnection());
+        }
+        if (!other.securityGroups_.isEmpty()) {
+          if (securityGroups_.isEmpty()) {
+            securityGroups_ = other.securityGroups_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureSecurityGroupsIsMutable();
+            securityGroups_.addAll(other.securityGroups_);
+          }
+          onChanged();
         }
         if (!other.getDatabase().isEmpty()) {
           database_ = other.database_;
@@ -6483,6 +7071,7 @@ public final class Mysql {
         }
         return this;
       }
+      private int bitField0_;
 
       private yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection connection_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6653,6 +7242,136 @@ public final class Mysql {
           connection_ = null;
         }
         return connectionBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          securityGroups_ = new com.google.protobuf.LazyStringArrayList(securityGroups_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 16;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupsList() {
+        return securityGroups_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 16;</code>
+       */
+      public int getSecurityGroupsCount() {
+        return securityGroups_.size();
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 16;</code>
+       */
+      public java.lang.String getSecurityGroups(int index) {
+        return securityGroups_.get(index);
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 16;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupsBytes(int index) {
+        return securityGroups_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 16;</code>
+       */
+      public Builder setSecurityGroups(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 16;</code>
+       */
+      public Builder addSecurityGroups(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 16;</code>
+       */
+      public Builder addAllSecurityGroups(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroups_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 16;</code>
+       */
+      public Builder clearSecurityGroups() {
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 16;</code>
+       */
+      public Builder addSecurityGroupsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
+        onChanged();
+        return this;
       }
 
       private java.lang.Object database_ = "";
@@ -7568,30 +8287,32 @@ public final class Mysql {
       "\n\007routine\030\002 \001(\0162:.yandex.cloud.datatrans" +
       "fer.v1.endpoint.ObjectTransferStage\022K\n\007t" +
       "rigger\030\003 \001(\0162:.yandex.cloud.datatransfer" +
-      ".v1.endpoint.ObjectTransferStage\"\356\002\n\013Mys" +
+      ".v1.endpoint.ObjectTransferStage\"\241\003\n\013Mys" +
       "qlSource\022J\n\nconnection\030\001 \001(\01326.yandex.cl" +
       "oud.datatransfer.v1.endpoint.MysqlConnec" +
-      "tion\022\020\n\010database\030\002 \001(\t\022\014\n\004user\030\003 \001(\t\022?\n\010" +
-      "password\030\004 \001(\0132-.yandex.cloud.datatransf" +
-      "er.v1.endpoint.Secret\022\034\n\024include_tables_" +
-      "regex\030\014 \003(\t\022\034\n\024exclude_tables_regex\030\r \003(" +
-      "\t\022\020\n\010timezone\030\010 \001(\t\022d\n\030object_transfer_s" +
-      "ettings\030\013 \001(\0132B.yandex.cloud.datatransfe" +
-      "r.v1.endpoint.MysqlObjectTransferSetting" +
-      "s\"\346\002\n\013MysqlTarget\022J\n\nconnection\030\001 \001(\01326." +
-      "yandex.cloud.datatransfer.v1.endpoint.My" +
-      "sqlConnection\022\020\n\010database\030\002 \001(\t\022\014\n\004user\030" +
-      "\003 \001(\t\022?\n\010password\030\004 \001(\0132-.yandex.cloud.d" +
-      "atatransfer.v1.endpoint.Secret\022\020\n\010sql_mo" +
-      "de\030\005 \001(\t\022\036\n\026skip_constraint_checks\030\006 \001(\010" +
-      "\022\020\n\010timezone\030\007 \001(\t\022L\n\016cleanup_policy\030\010 \001" +
-      "(\01624.yandex.cloud.datatransfer.v1.endpoi" +
-      "nt.CleanupPolicy\022\030\n\020service_database\030\017 \001" +
-      "(\tB\247\001\n)yandex.cloud.api.datatransfer.v1." +
-      "endpointZRgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/datatransfer/v1/endpo" +
-      "int;endpoint\252\002%Yandex.Cloud.Datatransfer" +
-      ".V1.EndPointb\006proto3"
+      "tion\022\027\n\017security_groups\030\016 \003(\t\022\020\n\010databas" +
+      "e\030\002 \001(\t\022\030\n\020service_database\030\017 \001(\t\022\014\n\004use" +
+      "r\030\003 \001(\t\022?\n\010password\030\004 \001(\0132-.yandex.cloud" +
+      ".datatransfer.v1.endpoint.Secret\022\034\n\024incl" +
+      "ude_tables_regex\030\014 \003(\t\022\034\n\024exclude_tables" +
+      "_regex\030\r \003(\t\022\020\n\010timezone\030\010 \001(\t\022d\n\030object" +
+      "_transfer_settings\030\013 \001(\0132B.yandex.cloud." +
+      "datatransfer.v1.endpoint.MysqlObjectTran" +
+      "sferSettings\"\377\002\n\013MysqlTarget\022J\n\nconnecti" +
+      "on\030\001 \001(\01326.yandex.cloud.datatransfer.v1." +
+      "endpoint.MysqlConnection\022\027\n\017security_gro" +
+      "ups\030\020 \003(\t\022\020\n\010database\030\002 \001(\t\022\014\n\004user\030\003 \001(" +
+      "\t\022?\n\010password\030\004 \001(\0132-.yandex.cloud.datat" +
+      "ransfer.v1.endpoint.Secret\022\020\n\010sql_mode\030\005" +
+      " \001(\t\022\036\n\026skip_constraint_checks\030\006 \001(\010\022\020\n\010" +
+      "timezone\030\007 \001(\t\022L\n\016cleanup_policy\030\010 \001(\01624" +
+      ".yandex.cloud.datatransfer.v1.endpoint.C" +
+      "leanupPolicy\022\030\n\020service_database\030\017 \001(\tB\247" +
+      "\001\n)yandex.cloud.api.datatransfer.v1.endp" +
+      "ointZRgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/datatransfer/v1/endpoint;" +
+      "endpoint\252\002%Yandex.Cloud.Datatransfer.V1." +
+      "EndPointb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7629,13 +8350,13 @@ public final class Mysql {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlSource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlSource_descriptor,
-        new java.lang.String[] { "Connection", "Database", "User", "Password", "IncludeTablesRegex", "ExcludeTablesRegex", "Timezone", "ObjectTransferSettings", });
+        new java.lang.String[] { "Connection", "SecurityGroups", "Database", "ServiceDatabase", "User", "Password", "IncludeTablesRegex", "ExcludeTablesRegex", "Timezone", "ObjectTransferSettings", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlTarget_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlTarget_descriptor,
-        new java.lang.String[] { "Connection", "Database", "User", "Password", "SqlMode", "SkipConstraintChecks", "Timezone", "CleanupPolicy", "ServiceDatabase", });
+        new java.lang.String[] { "Connection", "SecurityGroups", "Database", "User", "Password", "SqlMode", "SkipConstraintChecks", "Timezone", "CleanupPolicy", "ServiceDatabase", });
     yandex.cloud.api.datatransfer.v1.endpoint.Common.getDescriptor();
   }
 
