@@ -3121,6 +3121,41 @@ public final class ClusterServiceOuterClass {
      * <code>bool deletion_protection = 12;</code>
      */
     boolean getDeletionProtection();
+
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 13;</code>
+     */
+    java.util.List<java.lang.String>
+        getHostGroupIdsList();
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 13;</code>
+     */
+    int getHostGroupIdsCount();
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 13;</code>
+     */
+    java.lang.String getHostGroupIds(int index);
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 13;</code>
+     */
+    com.google.protobuf.ByteString
+        getHostGroupIdsBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.CreateClusterRequest}
@@ -3145,6 +3180,7 @@ public final class ClusterServiceOuterClass {
       networkId_ = "";
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       deletionProtection_ = false;
+      hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -3268,6 +3304,15 @@ public final class ClusterServiceOuterClass {
               deletionProtection_ = input.readBool();
               break;
             }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+                hostGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00001000;
+              }
+              hostGroupIds_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3294,6 +3339,9 @@ public final class ClusterServiceOuterClass {
         }
         if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+          hostGroupIds_ = hostGroupIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -3868,6 +3916,51 @@ public final class ClusterServiceOuterClass {
       return deletionProtection_;
     }
 
+    public static final int HOST_GROUP_IDS_FIELD_NUMBER = 13;
+    private com.google.protobuf.LazyStringList hostGroupIds_;
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 13;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getHostGroupIdsList() {
+      return hostGroupIds_;
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 13;</code>
+     */
+    public int getHostGroupIdsCount() {
+      return hostGroupIds_.size();
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 13;</code>
+     */
+    public java.lang.String getHostGroupIds(int index) {
+      return hostGroupIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 13;</code>
+     */
+    public com.google.protobuf.ByteString
+        getHostGroupIdsBytes(int index) {
+      return hostGroupIds_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3920,6 +4013,9 @@ public final class ClusterServiceOuterClass {
       }
       if (deletionProtection_ != false) {
         output.writeBool(12, deletionProtection_);
+      }
+      for (int i = 0; i < hostGroupIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, hostGroupIds_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -3984,6 +4080,14 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, deletionProtection_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < hostGroupIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(hostGroupIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getHostGroupIdsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4026,6 +4130,8 @@ public final class ClusterServiceOuterClass {
           .equals(other.getSecurityGroupIdsList());
       result = result && (getDeletionProtection()
           == other.getDeletionProtection());
+      result = result && getHostGroupIdsList()
+          .equals(other.getHostGroupIdsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -4074,6 +4180,10 @@ public final class ClusterServiceOuterClass {
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
+      if (getHostGroupIdsCount() > 0) {
+        hash = (37 * hash) + HOST_GROUP_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getHostGroupIdsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4271,6 +4381,8 @@ public final class ClusterServiceOuterClass {
         bitField0_ = (bitField0_ & ~0x00000400);
         deletionProtection_ = false;
 
+        hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00001000);
         return this;
       }
 
@@ -4344,6 +4456,11 @@ public final class ClusterServiceOuterClass {
         }
         result.securityGroupIds_ = securityGroupIds_;
         result.deletionProtection_ = deletionProtection_;
+        if (((bitField0_ & 0x00001000) == 0x00001000)) {
+          hostGroupIds_ = hostGroupIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00001000);
+        }
+        result.hostGroupIds_ = hostGroupIds_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4507,6 +4624,16 @@ public final class ClusterServiceOuterClass {
         }
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
+        }
+        if (!other.hostGroupIds_.isEmpty()) {
+          if (hostGroupIds_.isEmpty()) {
+            hostGroupIds_ = other.hostGroupIds_;
+            bitField0_ = (bitField0_ & ~0x00001000);
+          } else {
+            ensureHostGroupIdsIsMutable();
+            hostGroupIds_.addAll(other.hostGroupIds_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6368,6 +6495,136 @@ public final class ClusterServiceOuterClass {
       public Builder clearDeletionProtection() {
         
         deletionProtection_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureHostGroupIdsIsMutable() {
+        if (!((bitField0_ & 0x00001000) == 0x00001000)) {
+          hostGroupIds_ = new com.google.protobuf.LazyStringArrayList(hostGroupIds_);
+          bitField0_ |= 0x00001000;
+         }
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 13;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getHostGroupIdsList() {
+        return hostGroupIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 13;</code>
+       */
+      public int getHostGroupIdsCount() {
+        return hostGroupIds_.size();
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 13;</code>
+       */
+      public java.lang.String getHostGroupIds(int index) {
+        return hostGroupIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 13;</code>
+       */
+      public com.google.protobuf.ByteString
+          getHostGroupIdsBytes(int index) {
+        return hostGroupIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 13;</code>
+       */
+      public Builder setHostGroupIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostGroupIdsIsMutable();
+        hostGroupIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 13;</code>
+       */
+      public Builder addHostGroupIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostGroupIdsIsMutable();
+        hostGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 13;</code>
+       */
+      public Builder addAllHostGroupIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureHostGroupIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, hostGroupIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 13;</code>
+       */
+      public Builder clearHostGroupIds() {
+        hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 13;</code>
+       */
+      public Builder addHostGroupIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureHostGroupIdsIsMutable();
+        hostGroupIds_.add(value);
         onChanged();
         return this;
       }
@@ -12705,6 +12962,50 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the cluster
+     * </pre>
+     *
+     * <code>bool deletion_protection = 13;</code>
+     */
+    boolean getDeletionProtection();
+
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 14;</code>
+     */
+    java.util.List<java.lang.String>
+        getHostGroupIdsList();
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 14;</code>
+     */
+    int getHostGroupIdsCount();
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 14;</code>
+     */
+    java.lang.String getHostGroupIds(int index);
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 14;</code>
+     */
+    com.google.protobuf.ByteString
+        getHostGroupIdsBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.RestoreClusterRequest}
@@ -12727,6 +13028,8 @@ public final class ClusterServiceOuterClass {
       networkId_ = "";
       folderId_ = "";
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      deletionProtection_ = false;
+      hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -12846,6 +13149,20 @@ public final class ClusterServiceOuterClass {
               securityGroupIds_.add(s);
               break;
             }
+            case 104: {
+
+              deletionProtection_ = input.readBool();
+              break;
+            }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+                hostGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00001000;
+              }
+              hostGroupIds_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -12866,6 +13183,9 @@ public final class ClusterServiceOuterClass {
         }
         if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+          hostGroupIds_ = hostGroupIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -13392,6 +13712,64 @@ public final class ClusterServiceOuterClass {
       return securityGroupIds_.getByteString(index);
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 13;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the cluster
+     * </pre>
+     *
+     * <code>bool deletion_protection = 13;</code>
+     */
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
+    public static final int HOST_GROUP_IDS_FIELD_NUMBER = 14;
+    private com.google.protobuf.LazyStringList hostGroupIds_;
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 14;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getHostGroupIdsList() {
+      return hostGroupIds_;
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 14;</code>
+     */
+    public int getHostGroupIdsCount() {
+      return hostGroupIds_.size();
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 14;</code>
+     */
+    public java.lang.String getHostGroupIds(int index) {
+      return hostGroupIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 14;</code>
+     */
+    public com.google.protobuf.ByteString
+        getHostGroupIdsBytes(int index) {
+      return hostGroupIds_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13441,6 +13819,12 @@ public final class ClusterServiceOuterClass {
       }
       for (int i = 0; i < securityGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, securityGroupIds_.getRaw(i));
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(13, deletionProtection_);
+      }
+      for (int i = 0; i < hostGroupIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, hostGroupIds_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -13500,6 +13884,18 @@ public final class ClusterServiceOuterClass {
         size += dataSize;
         size += 1 * getSecurityGroupIdsList().size();
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(13, deletionProtection_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < hostGroupIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(hostGroupIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getHostGroupIdsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -13543,6 +13939,10 @@ public final class ClusterServiceOuterClass {
           .equals(other.getFolderId());
       result = result && getSecurityGroupIdsList()
           .equals(other.getSecurityGroupIdsList());
+      result = result && (getDeletionProtection()
+          == other.getDeletionProtection());
+      result = result && getHostGroupIdsList()
+          .equals(other.getHostGroupIdsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -13585,6 +13985,13 @@ public final class ClusterServiceOuterClass {
       if (getSecurityGroupIdsCount() > 0) {
         hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
+      }
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
+      if (getHostGroupIdsCount() > 0) {
+        hash = (37 * hash) + HOST_GROUP_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getHostGroupIdsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -13775,6 +14182,10 @@ public final class ClusterServiceOuterClass {
 
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000400);
+        deletionProtection_ = false;
+
+        hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00001000);
         return this;
       }
 
@@ -13835,6 +14246,12 @@ public final class ClusterServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000400);
         }
         result.securityGroupIds_ = securityGroupIds_;
+        result.deletionProtection_ = deletionProtection_;
+        if (((bitField0_ & 0x00001000) == 0x00001000)) {
+          hostGroupIds_ = hostGroupIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00001000);
+        }
+        result.hostGroupIds_ = hostGroupIds_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -13948,6 +14365,19 @@ public final class ClusterServiceOuterClass {
           } else {
             ensureSecurityGroupIdsIsMutable();
             securityGroupIds_.addAll(other.securityGroupIds_);
+          }
+          onChanged();
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
+        }
+        if (!other.hostGroupIds_.isEmpty()) {
+          if (hostGroupIds_.isEmpty()) {
+            hostGroupIds_ = other.hostGroupIds_;
+            bitField0_ = (bitField0_ & ~0x00001000);
+          } else {
+            ensureHostGroupIdsIsMutable();
+            hostGroupIds_.addAll(other.hostGroupIds_);
           }
           onChanged();
         }
@@ -15391,6 +15821,174 @@ public final class ClusterServiceOuterClass {
   checkByteStringIsUtf8(value);
         ensureSecurityGroupIdsIsMutable();
         securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 13;</code>
+       */
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 13;</code>
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 13;</code>
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureHostGroupIdsIsMutable() {
+        if (!((bitField0_ & 0x00001000) == 0x00001000)) {
+          hostGroupIds_ = new com.google.protobuf.LazyStringArrayList(hostGroupIds_);
+          bitField0_ |= 0x00001000;
+         }
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 14;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getHostGroupIdsList() {
+        return hostGroupIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 14;</code>
+       */
+      public int getHostGroupIdsCount() {
+        return hostGroupIds_.size();
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 14;</code>
+       */
+      public java.lang.String getHostGroupIds(int index) {
+        return hostGroupIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 14;</code>
+       */
+      public com.google.protobuf.ByteString
+          getHostGroupIdsBytes(int index) {
+        return hostGroupIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 14;</code>
+       */
+      public Builder setHostGroupIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostGroupIdsIsMutable();
+        hostGroupIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 14;</code>
+       */
+      public Builder addHostGroupIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostGroupIdsIsMutable();
+        hostGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 14;</code>
+       */
+      public Builder addAllHostGroupIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureHostGroupIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, hostGroupIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 14;</code>
+       */
+      public Builder clearHostGroupIds() {
+        hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 14;</code>
+       */
+      public Builder addHostGroupIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureHostGroupIdsIsMutable();
+        hostGroupIds_.add(value);
         onChanged();
         return this;
       }
@@ -47274,7 +47872,7 @@ public final class ClusterServiceOuterClass {
       "ge_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(" +
       "\tB\n\212\3101\006<=1000\"e\n\024ListClustersResponse\0224\n" +
       "\010clusters\030\001 \003(\0132\".yandex.cloud.mdb.mysql" +
-      ".v1.Cluster\022\027\n\017next_page_token\030\002 \001(\t\"\316\005\n" +
+      ".v1.Cluster\022\027\n\017next_page_token\030\002 \001(\t\"\346\005\n" +
       "\024CreateClusterRequest\022\037\n\tfolder_id\030\001 \001(\t" +
       "B\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=" +
       "63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013description\030\003 \001(" +
@@ -47291,256 +47889,258 @@ public final class ClusterServiceOuterClass {
       "erSpec\0227\n\nhost_specs\030\t \003(\0132#.yandex.clou" +
       "d.mdb.mysql.v1.HostSpec\022\034\n\nnetwork_id\030\n " +
       "\001(\tB\010\212\3101\004<=50\022\032\n\022security_group_ids\030\013 \003(" +
-      "\t\022\033\n\023deletion_protection\030\014 \001(\010\032-\n\013Labels" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n" +
-      "\025CreateClusterMetadata\022\022\n\ncluster_id\030\001 \001" +
-      "(\t\"\260\004\n\024UpdateClusterRequest\022 \n\ncluster_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001" +
-      "(\0132\032.google.protobuf.FieldMask\022\036\n\013descri" +
-      "ption\030\003 \001(\tB\t\212\3101\005<=256\022\214\001\n\006labels\030\004 \003(\0132" +
-      ";.yandex.cloud.mdb.mysql.v1.UpdateCluste" +
-      "rRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\307" +
-      "1\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9" +
-      "a-z]*\022:\n\013config_spec\030\005 \001(\0132%.yandex.clou" +
-      "d.mdb.mysql.v1.ConfigSpec\022(\n\004name\030\006 \001(\tB" +
-      "\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022H\n\022maintenan" +
-      "ce_window\030\007 \001(\0132,.yandex.cloud.mdb.mysql" +
-      ".v1.MaintenanceWindow\022\032\n\022security_group_" +
-      "ids\030\010 \003(\t\022\033\n\023deletion_protection\030\t \001(\010\032-" +
-      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"+\n\025UpdateClusterMetadata\022\022\n\ncluste" +
-      "r_id\030\001 \001(\t\"8\n\024DeleteClusterRequest\022 \n\ncl" +
-      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteCl" +
-      "usterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024Bac" +
-      "kupClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\"+\n\025BackupClusterMetadata\022\022\n\n" +
-      "cluster_id\030\001 \001(\t\"\366\004\n\025RestoreClusterReque" +
-      "st\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\022.\n\004time\030\002 \001(" +
-      "\0132\032.google.protobuf.TimestampB\004\350\3071\001\022$\n\004n" +
-      "ame\030\004 \001(\tB\026\350\3071\001\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013des" +
-      "cription\030\005 \001(\tB\t\212\3101\005<=256\022\215\001\n\006labels\030\006 \003" +
-      "(\0132<.yandex.cloud.mdb.mysql.v1.RestoreCl" +
-      "usterRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=" +
-      "63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-" +
-      "_0-9a-z]*\022C\n\013environment\030\007 \001(\0162..yandex." +
-      "cloud.mdb.mysql.v1.Cluster.Environment\022:" +
-      "\n\013config_spec\030\010 \001(\0132%.yandex.cloud.mdb.m" +
-      "ysql.v1.ConfigSpec\0227\n\nhost_specs\030\t \003(\0132#" +
-      ".yandex.cloud.mdb.mysql.v1.HostSpec\022\034\n\nn" +
-      "etwork_id\030\n \001(\tB\010\212\3101\004<=50\022\033\n\tfolder_id\030\013" +
-      " \001(\tB\010\212\3101\004<=50\022\032\n\022security_group_ids\030\014 \003" +
-      "(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\"?\n\026RestoreClusterMetadata\022\022\n\nc" +
-      "luster_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"]\n\033St" +
-      "artClusterFailoverRequest\022 \n\ncluster_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\034\n\thost_name\030\002 \001(\tB\t" +
-      "\212\3101\005<=253\"2\n\034StartClusterFailoverMetadat" +
-      "a\022\022\n\ncluster_id\030\001 \001(\t\"\312\002\n\034RescheduleMain" +
-      "tenanceRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022e\n\017reschedule_type\030\002 \001(\0162F.yand" +
-      "ex.cloud.mdb.mysql.v1.RescheduleMaintena" +
-      "nceRequest.RescheduleTypeB\004\350\3071\001\0221\n\rdelay" +
-      "ed_until\030\003 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\"n\n\016RescheduleType\022\037\n\033RESCHEDULE_TYPE_" +
-      "UNSPECIFIED\020\000\022\r\n\tIMMEDIATE\020\001\022\031\n\025NEXT_AVA" +
-      "ILABLE_WINDOW\020\002\022\021\n\rSPECIFIC_TIME\020\003\"f\n\035Re" +
-      "scheduleMaintenanceMetadata\022\022\n\ncluster_i" +
-      "d\030\001 \001(\t\0221\n\rdelayed_until\030\004 \001(\0132\032.google." +
-      "protobuf.Timestamp\"\256\001\n\tLogRecord\022-\n\ttime" +
-      "stamp\030\001 \001(\0132\032.google.protobuf.Timestamp\022" +
-      "B\n\007message\030\002 \003(\01321.yandex.cloud.mdb.mysq" +
-      "l.v1.LogRecord.MessageEntry\032.\n\014MessageEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\330\003\n\026" +
-      "ListClusterLogsRequest\022 \n\ncluster_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022" +
-      "S\n\014service_type\030\003 \001(\0162=.yandex.cloud.mdb" +
-      ".mysql.v1.ListClusterLogsRequest.Service" +
+      "\t\022\033\n\023deletion_protection\030\014 \001(\010\022\026\n\016host_g" +
+      "roup_ids\030\r \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateClusterMe" +
+      "tadata\022\022\n\ncluster_id\030\001 \001(\t\"\260\004\n\024UpdateClu" +
+      "sterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.prot" +
+      "obuf.FieldMask\022\036\n\013description\030\003 \001(\tB\t\212\3101" +
+      "\005<=256\022\214\001\n\006labels\030\004 \003(\0132;.yandex.cloud.m" +
+      "db.mysql.v1.UpdateClusterRequest.LabelsE" +
+      "ntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101" +
+      "\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022:\n\013config_" +
+      "spec\030\005 \001(\0132%.yandex.cloud.mdb.mysql.v1.C" +
+      "onfigSpec\022(\n\004name\030\006 \001(\tB\032\212\3101\004<=63\362\3071\016[a-" +
+      "zA-Z0-9_-]*\022H\n\022maintenance_window\030\007 \001(\0132" +
+      ",.yandex.cloud.mdb.mysql.v1.MaintenanceW" +
+      "indow\022\032\n\022security_group_ids\030\010 \003(\t\022\033\n\023del" +
+      "etion_protection\030\t \001(\010\032-\n\013LabelsEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateC" +
+      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024De" +
+      "leteClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\"+\n\025DeleteClusterMetadata\022\022\n" +
+      "\ncluster_id\030\001 \001(\t\"8\n\024BackupClusterReques" +
+      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025B" +
+      "ackupClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
+      "\"\253\005\n\025RestoreClusterRequest\022\027\n\tbackup_id\030" +
+      "\001 \001(\tB\004\350\3071\001\022.\n\004time\030\002 \001(\0132\032.google.proto" +
+      "buf.TimestampB\004\350\3071\001\022$\n\004name\030\004 \001(\tB\026\350\3071\001\362" +
+      "\3071\016[a-zA-Z0-9_-]*\022\036\n\013description\030\005 \001(\tB\t" +
+      "\212\3101\005<=256\022\215\001\n\006labels\030\006 \003(\0132<.yandex.clou" +
+      "d.mdb.mysql.v1.RestoreClusterRequest.Lab" +
+      "elsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]" +
+      "*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022C\n\013env" +
+      "ironment\030\007 \001(\0162..yandex.cloud.mdb.mysql." +
+      "v1.Cluster.Environment\022:\n\013config_spec\030\010 " +
+      "\001(\0132%.yandex.cloud.mdb.mysql.v1.ConfigSp" +
+      "ec\0227\n\nhost_specs\030\t \003(\0132#.yandex.cloud.md" +
+      "b.mysql.v1.HostSpec\022\034\n\nnetwork_id\030\n \001(\tB" +
+      "\010\212\3101\004<=50\022\033\n\tfolder_id\030\013 \001(\tB\010\212\3101\004<=50\022\032" +
+      "\n\022security_group_ids\030\014 \003(\t\022\033\n\023deletion_p" +
+      "rotection\030\r \001(\010\022\026\n\016host_group_ids\030\016 \003(\t\032" +
+      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001\"?\n\026RestoreClusterMetadata\022\022\n\nclus" +
+      "ter_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"]\n\033Start" +
+      "ClusterFailoverRequest\022 \n\ncluster_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022\034\n\thost_name\030\002 \001(\tB\t\212\3101" +
+      "\005<=253\"2\n\034StartClusterFailoverMetadata\022\022" +
+      "\n\ncluster_id\030\001 \001(\t\"\312\002\n\034RescheduleMainten" +
+      "anceRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022e\n\017reschedule_type\030\002 \001(\0162F.yandex." +
+      "cloud.mdb.mysql.v1.RescheduleMaintenance" +
+      "Request.RescheduleTypeB\004\350\3071\001\0221\n\rdelayed_" +
+      "until\030\003 \001(\0132\032.google.protobuf.Timestamp\"" +
+      "n\n\016RescheduleType\022\037\n\033RESCHEDULE_TYPE_UNS" +
+      "PECIFIED\020\000\022\r\n\tIMMEDIATE\020\001\022\031\n\025NEXT_AVAILA" +
+      "BLE_WINDOW\020\002\022\021\n\rSPECIFIC_TIME\020\003\"f\n\035Resch" +
+      "eduleMaintenanceMetadata\022\022\n\ncluster_id\030\001" +
+      " \001(\t\0221\n\rdelayed_until\030\004 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\"\256\001\n\tLogRecord\022-\n\ttimesta" +
+      "mp\030\001 \001(\0132\032.google.protobuf.Timestamp\022B\n\007" +
+      "message\030\002 \003(\01321.yandex.cloud.mdb.mysql.v" +
+      "1.LogRecord.MessageEntry\032.\n\014MessageEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\330\003\n\026Lis" +
+      "tClusterLogsRequest\022 \n\ncluster_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022S\n\014" +
+      "service_type\030\003 \001(\0162=.yandex.cloud.mdb.my" +
+      "sql.v1.ListClusterLogsRequest.ServiceTyp" +
+      "e\022-\n\tfrom_time\030\004 \001(\0132\032.google.protobuf.T" +
+      "imestamp\022+\n\007to_time\030\005 \001(\0132\032.google.proto" +
+      "buf.Timestamp\022\035\n\tpage_size\030\006 \001(\003B\n\372\3071\0060-" +
+      "1000\022\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<=100\022\036\n\026a" +
+      "lways_next_page_token\030\010 \001(\010\"v\n\013ServiceTy" +
+      "pe\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\017\n\013MYSQ" +
+      "L_ERROR\020\001\022\021\n\rMYSQL_GENERAL\020\002\022\024\n\020MYSQL_SL" +
+      "OW_QUERY\020\003\022\017\n\013MYSQL_AUDIT\020\004\"f\n\027ListClust" +
+      "erLogsResponse\0222\n\004logs\030\001 \003(\0132$.yandex.cl" +
+      "oud.mdb.mysql.v1.LogRecord\022\027\n\017next_page_" +
+      "token\030\002 \001(\t\"b\n\017StreamLogRecord\0224\n\006record" +
+      "\030\001 \001(\0132$.yandex.cloud.mdb.mysql.v1.LogRe" +
+      "cord\022\031\n\021next_record_token\030\002 \001(\t\"\273\003\n\030Stre" +
+      "amClusterLogsRequest\022 \n\ncluster_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022U\n" +
+      "\014service_type\030\003 \001(\0162?.yandex.cloud.mdb.m" +
+      "ysql.v1.StreamClusterLogsRequest.Service" +
       "Type\022-\n\tfrom_time\030\004 \001(\0132\032.google.protobu" +
       "f.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\022\035\n\tpage_size\030\006 \001(\003B\n\372\3071" +
-      "\0060-1000\022\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<=100\022\036" +
-      "\n\026always_next_page_token\030\010 \001(\010\"v\n\013Servic" +
-      "eType\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\017\n\013M" +
-      "YSQL_ERROR\020\001\022\021\n\rMYSQL_GENERAL\020\002\022\024\n\020MYSQL" +
-      "_SLOW_QUERY\020\003\022\017\n\013MYSQL_AUDIT\020\004\"f\n\027ListCl" +
-      "usterLogsResponse\0222\n\004logs\030\001 \003(\0132$.yandex" +
-      ".cloud.mdb.mysql.v1.LogRecord\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t\"b\n\017StreamLogRecord\0224\n\006rec" +
-      "ord\030\001 \001(\0132$.yandex.cloud.mdb.mysql.v1.Lo" +
-      "gRecord\022\031\n\021next_record_token\030\002 \001(\t\"\273\003\n\030S" +
-      "treamClusterLogsRequest\022 \n\ncluster_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t" +
-      "\022U\n\014service_type\030\003 \001(\0162?.yandex.cloud.md" +
-      "b.mysql.v1.StreamClusterLogsRequest.Serv" +
-      "iceType\022-\n\tfrom_time\030\004 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.google" +
-      ".protobuf.Timestamp\022\037\n\014record_token\030\006 \001(" +
-      "\tB\t\212\3101\005<=100\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=1000" +
-      "\"v\n\013ServiceType\022\034\n\030SERVICE_TYPE_UNSPECIF" +
-      "IED\020\000\022\017\n\013MYSQL_ERROR\020\001\022\021\n\rMYSQL_GENERAL\020" +
-      "\002\022\024\n\020MYSQL_SLOW_QUERY\020\003\022\017\n\013MYSQL_AUDIT\020\004" +
-      "\"~\n\034ListClusterOperationsRequest\022 \n\nclus" +
-      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030" +
-      "\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212" +
-      "\3101\005<=100\"o\n\035ListClusterOperationsRespons" +
-      "e\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.ope" +
-      "ration.Operation\022\027\n\017next_page_token\030\002 \001(" +
-      "\t\"{\n\031ListClusterBackupsRequest\022 \n\ncluste" +
-      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
-      "\001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
-      "\005<=100\"i\n\032ListClusterBackupsResponse\0222\n\007" +
-      "backups\030\001 \003(\0132!.yandex.cloud.mdb.mysql.v" +
-      "1.Backup\022\027\n\017next_page_token\030\002 \001(\t\"y\n\027Lis" +
-      "tClusterHostsRequest\022 \n\ncluster_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060" +
-      "-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"c\n\030" +
-      "ListClusterHostsResponse\022.\n\005hosts\030\001 \003(\0132" +
-      "\037.yandex.cloud.mdb.mysql.v1.Host\022\027\n\017next" +
-      "_page_token\030\002 \001(\t\"{\n\026AddClusterHostsRequ" +
-      "est\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022?\n" +
-      "\nhost_specs\030\002 \003(\0132#.yandex.cloud.mdb.mys" +
-      "ql.v1.HostSpecB\006\202\3101\002>0\"A\n\027AddClusterHost" +
-      "sMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_na" +
-      "mes\030\002 \003(\t\"b\n\031DeleteClusterHostsRequest\022 " +
-      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost" +
-      "_names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\"D\n\032DeleteC" +
-      "lusterHostsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022" +
-      "\022\n\nhost_names\030\002 \003(\t\"7\n\023StartClusterReque" +
-      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024" +
-      "StartClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
-      "\"6\n\022StopClusterRequest\022 \n\ncluster_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopClusterMetadata\022" +
-      "\022\n\ncluster_id\030\001 \001(\t\"c\n\022MoveClusterReques" +
-      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025d" +
-      "estination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\"b\n\023MoveClusterMetadata\022\022\n\ncluster_id\030\001 " +
-      "\001(\t\022\030\n\020source_folder_id\030\002 \001(\t\022\035\n\025destina" +
-      "tion_folder_id\030\003 \001(\t\"\213\001\n\031UpdateClusterHo" +
-      "stsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022L\n\021update_host_specs\030\002 \003(\0132).yandex" +
-      ".cloud.mdb.mysql.v1.UpdateHostSpecB\006\202\3101\002" +
-      ">0\"D\n\032UpdateClusterHostsMetadata\022\022\n\nclus" +
-      "ter_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\321\001\n\016Upd" +
-      "ateHostSpec\022\027\n\thost_name\030\001 \001(\tB\004\350\3071\001\022\032\n\022" +
-      "replication_source\030\002 \001(\t\022/\n\013update_mask\030" +
-      "\003 \001(\0132\032.google.protobuf.FieldMask\022\"\n\017bac" +
-      "kup_priority\030\004 \001(\003B\t\372\3071\0050-100\022\030\n\020assign_" +
-      "public_ip\030\005 \001(\010\022\033\n\010priority\030\006 \001(\003B\t\372\3071\0050" +
-      "-100\"\271\001\n\010HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004" +
-      "<=50\022\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020ass" +
-      "ign_public_ip\030\003 \001(\010\022\032\n\022replication_sourc" +
-      "e\030\004 \001(\t\022\"\n\017backup_priority\030\005 \001(\003B\t\372\3071\0050-" +
-      "100\022\033\n\010priority\030\006 \001(\003B\t\372\3071\0050-100\"\340\003\n\nCon" +
-      "figSpec\022\017\n\007version\030\001 \001(\t\022]\n\020mysql_config" +
-      "_5_7\030\002 \001(\01320.yandex.cloud.mdb.mysql.v1.c" +
-      "onfig.MysqlConfig5_7H\000R\017mysqlConfig_5_7\022" +
-      "]\n\020mysql_config_8_0\030\006 \001(\01320.yandex.cloud" +
-      ".mdb.mysql.v1.config.MysqlConfig8_0H\000R\017m" +
-      "ysqlConfig_8_0\0227\n\tresources\030\003 \001(\0132$.yand" +
-      "ex.cloud.mdb.mysql.v1.Resources\0223\n\023backu" +
-      "p_window_start\030\004 \001(\0132\026.google.type.TimeO" +
-      "fDay\0221\n\006access\030\005 \001(\0132!.yandex.cloud.mdb." +
-      "mysql.v1.Access\022R\n\027performance_diagnosti" +
-      "cs\030\007 \001(\01321.yandex.cloud.mdb.mysql.v1.Per" +
-      "formanceDiagnosticsB\016\n\014mysql_config2\312\035\n\016" +
-      "ClusterService\022\210\001\n\003Get\022,.yandex.cloud.md" +
-      "b.mysql.v1.GetClusterRequest\032\".yandex.cl" +
-      "oud.mdb.mysql.v1.Cluster\"/\202\323\344\223\002)\022\'/manag" +
-      "ed-mysql/v1/clusters/{cluster_id}\022\213\001\n\004Li" +
-      "st\022..yandex.cloud.mdb.mysql.v1.ListClust" +
-      "ersRequest\032/.yandex.cloud.mdb.mysql.v1.L" +
-      "istClustersResponse\"\"\202\323\344\223\002\034\022\032/managed-my" +
-      "sql/v1/clusters\022\247\001\n\006Create\022/.yandex.clou" +
-      "d.mdb.mysql.v1.CreateClusterRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"I\202\323\344\223\002\037\"\032" +
-      "/managed-mysql/v1/clusters:\001*\262\322* \n\025Creat" +
-      "eClusterMetadata\022\007Cluster\022\264\001\n\006Update\022/.y" +
-      "andex.cloud.mdb.mysql.v1.UpdateClusterRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"V\202\323\344\223\002,2\'/managed-mysql/v1/clusters/{cl" +
-      "uster_id}:\001*\262\322* \n\025UpdateClusterMetadata\022" +
-      "\007Cluster\022\277\001\n\006Delete\022/.yandex.cloud.mdb.m" +
-      "ysql.v1.DeleteClusterRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"a\202\323\344\223\002)*\'/manage" +
-      "d-mysql/v1/clusters/{cluster_id}\262\322*.\n\025De" +
-      "leteClusterMetadata\022\025google.protobuf.Emp" +
-      "ty\022\264\001\n\005Start\022..yandex.cloud.mdb.mysql.v1" +
-      ".StartClusterRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"X\202\323\344\223\002/\"-/managed-mysql/" +
-      "v1/clusters/{cluster_id}:start\262\322*\037\n\024Star" +
-      "tClusterMetadata\022\007Cluster\022\260\001\n\004Stop\022-.yan" +
-      "dex.cloud.mdb.mysql.v1.StopClusterReques" +
-      "t\032!.yandex.cloud.operation.Operation\"V\202\323" +
-      "\344\223\002.\",/managed-mysql/v1/clusters/{cluste" +
-      "r_id}:stop\262\322*\036\n\023StopClusterMetadata\022\007Clu" +
-      "ster\022\263\001\n\004Move\022-.yandex.cloud.mdb.mysql.v" +
-      "1.MoveClusterRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"Y\202\323\344\223\0021\",/managed-mysql/" +
-      "v1/clusters/{cluster_id}:move:\001*\262\322*\036\n\023Mo" +
-      "veClusterMetadata\022\007Cluster\022\270\001\n\006Backup\022/." +
-      "yandex.cloud.mdb.mysql.v1.BackupClusterR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"Z\202\323\344\223\0020\"./managed-mysql/v1/clusters/{c" +
-      "luster_id}:backup\262\322* \n\025BackupClusterMeta" +
-      "data\022\007Cluster\022\262\001\n\007Restore\0220.yandex.cloud" +
-      ".mdb.mysql.v1.RestoreClusterRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"R\202\323\344\223\002\'\"\"" +
-      "/managed-mysql/v1/clusters:restore:\001*\262\322*" +
-      "!\n\026RestoreClusterMetadata\022\007Cluster\022\351\001\n\025R" +
-      "escheduleMaintenance\0227.yandex.cloud.mdb." +
-      "mysql.v1.RescheduleMaintenanceRequest\032!." +
-      "yandex.cloud.operation.Operation\"t\202\323\344\223\002B" +
-      "\"=/managed-mysql/v1/clusters/{cluster_id" +
-      "}:rescheduleMaintenance:\001*\262\322*(\n\035Reschedu" +
-      "leMaintenanceMetadata\022\007Cluster\022\327\001\n\rStart" +
-      "Failover\0226.yandex.cloud.mdb.mysql.v1.Sta" +
-      "rtClusterFailoverRequest\032!.yandex.cloud." +
-      "operation.Operation\"k\202\323\344\223\002:\"5/managed-my" +
-      "sql/v1/clusters/{cluster_id}:startFailov" +
-      "er:\001*\262\322*\'\n\034StartClusterFailoverMetadata\022" +
-      "\007Cluster\022\247\001\n\010ListLogs\0221.yandex.cloud.mdb" +
-      ".mysql.v1.ListClusterLogsRequest\0322.yande" +
-      "x.cloud.mdb.mysql.v1.ListClusterLogsResp" +
-      "onse\"4\202\323\344\223\002.\022,/managed-mysql/v1/clusters" +
-      "/{cluster_id}:logs\022\254\001\n\nStreamLogs\0223.yand" +
-      "ex.cloud.mdb.mysql.v1.StreamClusterLogsR" +
-      "equest\032*.yandex.cloud.mdb.mysql.v1.Strea" +
-      "mLogRecord\";\202\323\344\223\0025\0223/managed-mysql/v1/cl" +
-      "usters/{cluster_id}:stream_logs0\001\022\277\001\n\016Li" +
-      "stOperations\0227.yandex.cloud.mdb.mysql.v1" +
-      ".ListClusterOperationsRequest\0328.yandex.c" +
-      "loud.mdb.mysql.v1.ListClusterOperationsR" +
-      "esponse\":\202\323\344\223\0024\0222/managed-mysql/v1/clust" +
-      "ers/{cluster_id}/operations\022\263\001\n\013ListBack" +
-      "ups\0224.yandex.cloud.mdb.mysql.v1.ListClus" +
-      "terBackupsRequest\0325.yandex.cloud.mdb.mys" +
-      "ql.v1.ListClusterBackupsResponse\"7\202\323\344\223\0021" +
-      "\022//managed-mysql/v1/clusters/{cluster_id" +
-      "}/backups\022\253\001\n\tListHosts\0222.yandex.cloud.m" +
-      "db.mysql.v1.ListClusterHostsRequest\0323.ya" +
-      "ndex.cloud.mdb.mysql.v1.ListClusterHosts" +
-      "Response\"5\202\323\344\223\002/\022-/managed-mysql/v1/clus" +
-      "ters/{cluster_id}/hosts\022\332\001\n\010AddHosts\0221.y" +
-      "andex.cloud.mdb.mysql.v1.AddClusterHosts" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"x\202\323\344\223\002>\"9/managed-mysql/v1/clusters/{" +
-      "cluster_id}/hosts:batchCreate:\001*\262\322*0\n\027Ad" +
-      "dClusterHostsMetadata\022\025google.protobuf.E" +
-      "mpty\022\343\001\n\013UpdateHosts\0224.yandex.cloud.mdb." +
-      "mysql.v1.UpdateClusterHostsRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"{\202\323\344\223\002>\"9/" +
-      "managed-mysql/v1/clusters/{cluster_id}/h" +
-      "osts:batchUpdate:\001*\262\322*3\n\032UpdateClusterHo" +
-      "stsMetadata\022\025google.protobuf.Empty\022\343\001\n\013D" +
-      "eleteHosts\0224.yandex.cloud.mdb.mysql.v1.D" +
-      "eleteClusterHostsRequest\032!.yandex.cloud." +
-      "operation.Operation\"{\202\323\344\223\002>\"9/managed-my" +
-      "sql/v1/clusters/{cluster_id}/hosts:batch" +
-      "Delete:\001*\262\322*3\n\032DeleteClusterHostsMetadat" +
-      "a\022\025google.protobuf.EmptyBd\n\035yandex.cloud" +
-      ".api.mdb.mysql.v1ZCgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/mdb/mysql/v1" +
-      ";mysqlb\006proto3"
+      "otobuf.Timestamp\022\037\n\014record_token\030\006 \001(\tB\t" +
+      "\212\3101\005<=100\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=1000\"v\n" +
+      "\013ServiceType\022\034\n\030SERVICE_TYPE_UNSPECIFIED" +
+      "\020\000\022\017\n\013MYSQL_ERROR\020\001\022\021\n\rMYSQL_GENERAL\020\002\022\024" +
+      "\n\020MYSQL_SLOW_QUERY\020\003\022\017\n\013MYSQL_AUDIT\020\004\"~\n" +
+      "\034ListClusterOperationsRequest\022 \n\ncluster" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
+      "(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
+      "<=100\"o\n\035ListClusterOperationsResponse\0225" +
+      "\n\noperations\030\001 \003(\0132!.yandex.cloud.operat" +
+      "ion.Operation\022\027\n\017next_page_token\030\002 \001(\t\"{" +
+      "\n\031ListClusterBackupsRequest\022 \n\ncluster_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003" +
+      "B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=" +
+      "100\"i\n\032ListClusterBackupsResponse\0222\n\007bac" +
+      "kups\030\001 \003(\0132!.yandex.cloud.mdb.mysql.v1.B" +
+      "ackup\022\027\n\017next_page_token\030\002 \001(\t\"y\n\027ListCl" +
+      "usterHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-10" +
+      "00\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"c\n\030Lis" +
+      "tClusterHostsResponse\022.\n\005hosts\030\001 \003(\0132\037.y" +
+      "andex.cloud.mdb.mysql.v1.Host\022\027\n\017next_pa" +
+      "ge_token\030\002 \001(\t\"{\n\026AddClusterHostsRequest" +
+      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022?\n\nho" +
+      "st_specs\030\002 \003(\0132#.yandex.cloud.mdb.mysql." +
+      "v1.HostSpecB\006\202\3101\002>0\"A\n\027AddClusterHostsMe" +
+      "tadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names" +
+      "\030\002 \003(\t\"b\n\031DeleteClusterHostsRequest\022 \n\nc" +
+      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost_na" +
+      "mes\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\"D\n\032DeleteClus" +
+      "terHostsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\n" +
+      "host_names\030\002 \003(\t\"7\n\023StartClusterRequest\022" +
+      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024Sta" +
+      "rtClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n" +
+      "\022StopClusterRequest\022 \n\ncluster_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\")\n\023StopClusterMetadata\022\022\n\n" +
+      "cluster_id\030\001 \001(\t\"c\n\022MoveClusterRequest\022 " +
+      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025dest" +
+      "ination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n" +
+      "\023MoveClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
+      "\022\030\n\020source_folder_id\030\002 \001(\t\022\035\n\025destinatio" +
+      "n_folder_id\030\003 \001(\t\"\213\001\n\031UpdateClusterHosts" +
+      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\022L\n\021update_host_specs\030\002 \003(\0132).yandex.cl" +
+      "oud.mdb.mysql.v1.UpdateHostSpecB\006\202\3101\002>0\"" +
+      "D\n\032UpdateClusterHostsMetadata\022\022\n\ncluster" +
+      "_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\321\001\n\016Update" +
+      "HostSpec\022\027\n\thost_name\030\001 \001(\tB\004\350\3071\001\022\032\n\022rep" +
+      "lication_source\030\002 \001(\t\022/\n\013update_mask\030\003 \001" +
+      "(\0132\032.google.protobuf.FieldMask\022\"\n\017backup" +
+      "_priority\030\004 \001(\003B\t\372\3071\0050-100\022\030\n\020assign_pub" +
+      "lic_ip\030\005 \001(\010\022\033\n\010priority\030\006 \001(\003B\t\372\3071\0050-10" +
+      "0\"\271\001\n\010HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=5" +
+      "0\022\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020assign" +
+      "_public_ip\030\003 \001(\010\022\032\n\022replication_source\030\004" +
+      " \001(\t\022\"\n\017backup_priority\030\005 \001(\003B\t\372\3071\0050-100" +
+      "\022\033\n\010priority\030\006 \001(\003B\t\372\3071\0050-100\"\340\003\n\nConfig" +
+      "Spec\022\017\n\007version\030\001 \001(\t\022]\n\020mysql_config_5_" +
+      "7\030\002 \001(\01320.yandex.cloud.mdb.mysql.v1.conf" +
+      "ig.MysqlConfig5_7H\000R\017mysqlConfig_5_7\022]\n\020" +
+      "mysql_config_8_0\030\006 \001(\01320.yandex.cloud.md" +
+      "b.mysql.v1.config.MysqlConfig8_0H\000R\017mysq" +
+      "lConfig_8_0\0227\n\tresources\030\003 \001(\0132$.yandex." +
+      "cloud.mdb.mysql.v1.Resources\0223\n\023backup_w" +
+      "indow_start\030\004 \001(\0132\026.google.type.TimeOfDa" +
+      "y\0221\n\006access\030\005 \001(\0132!.yandex.cloud.mdb.mys" +
+      "ql.v1.Access\022R\n\027performance_diagnostics\030" +
+      "\007 \001(\01321.yandex.cloud.mdb.mysql.v1.Perfor" +
+      "manceDiagnosticsB\016\n\014mysql_config2\312\035\n\016Clu" +
+      "sterService\022\210\001\n\003Get\022,.yandex.cloud.mdb.m" +
+      "ysql.v1.GetClusterRequest\032\".yandex.cloud" +
+      ".mdb.mysql.v1.Cluster\"/\202\323\344\223\002)\022\'/managed-" +
+      "mysql/v1/clusters/{cluster_id}\022\213\001\n\004List\022" +
+      "..yandex.cloud.mdb.mysql.v1.ListClusters" +
+      "Request\032/.yandex.cloud.mdb.mysql.v1.List" +
+      "ClustersResponse\"\"\202\323\344\223\002\034\022\032/managed-mysql" +
+      "/v1/clusters\022\247\001\n\006Create\022/.yandex.cloud.m" +
+      "db.mysql.v1.CreateClusterRequest\032!.yande" +
+      "x.cloud.operation.Operation\"I\202\323\344\223\002\037\"\032/ma" +
+      "naged-mysql/v1/clusters:\001*\262\322* \n\025CreateCl" +
+      "usterMetadata\022\007Cluster\022\264\001\n\006Update\022/.yand" +
+      "ex.cloud.mdb.mysql.v1.UpdateClusterReque" +
+      "st\032!.yandex.cloud.operation.Operation\"V\202" +
+      "\323\344\223\002,2\'/managed-mysql/v1/clusters/{clust" +
+      "er_id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Cl" +
+      "uster\022\277\001\n\006Delete\022/.yandex.cloud.mdb.mysq" +
+      "l.v1.DeleteClusterRequest\032!.yandex.cloud" +
+      ".operation.Operation\"a\202\323\344\223\002)*\'/managed-m" +
+      "ysql/v1/clusters/{cluster_id}\262\322*.\n\025Delet" +
+      "eClusterMetadata\022\025google.protobuf.Empty\022" +
+      "\264\001\n\005Start\022..yandex.cloud.mdb.mysql.v1.St" +
+      "artClusterRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"X\202\323\344\223\002/\"-/managed-mysql/v1/" +
+      "clusters/{cluster_id}:start\262\322*\037\n\024StartCl" +
+      "usterMetadata\022\007Cluster\022\260\001\n\004Stop\022-.yandex" +
+      ".cloud.mdb.mysql.v1.StopClusterRequest\032!" +
+      ".yandex.cloud.operation.Operation\"V\202\323\344\223\002" +
+      ".\",/managed-mysql/v1/clusters/{cluster_i" +
+      "d}:stop\262\322*\036\n\023StopClusterMetadata\022\007Cluste" +
+      "r\022\263\001\n\004Move\022-.yandex.cloud.mdb.mysql.v1.M" +
+      "oveClusterRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"Y\202\323\344\223\0021\",/managed-mysql/v1/" +
+      "clusters/{cluster_id}:move:\001*\262\322*\036\n\023MoveC" +
+      "lusterMetadata\022\007Cluster\022\270\001\n\006Backup\022/.yan" +
+      "dex.cloud.mdb.mysql.v1.BackupClusterRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"Z" +
+      "\202\323\344\223\0020\"./managed-mysql/v1/clusters/{clus" +
+      "ter_id}:backup\262\322* \n\025BackupClusterMetadat" +
+      "a\022\007Cluster\022\262\001\n\007Restore\0220.yandex.cloud.md" +
+      "b.mysql.v1.RestoreClusterRequest\032!.yande" +
+      "x.cloud.operation.Operation\"R\202\323\344\223\002\'\"\"/ma" +
+      "naged-mysql/v1/clusters:restore:\001*\262\322*!\n\026" +
+      "RestoreClusterMetadata\022\007Cluster\022\351\001\n\025Resc" +
+      "heduleMaintenance\0227.yandex.cloud.mdb.mys" +
+      "ql.v1.RescheduleMaintenanceRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"t\202\323\344\223\002B\"=/" +
+      "managed-mysql/v1/clusters/{cluster_id}:r" +
+      "escheduleMaintenance:\001*\262\322*(\n\035RescheduleM" +
+      "aintenanceMetadata\022\007Cluster\022\327\001\n\rStartFai" +
+      "lover\0226.yandex.cloud.mdb.mysql.v1.StartC" +
+      "lusterFailoverRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"k\202\323\344\223\002:\"5/managed-mysql" +
+      "/v1/clusters/{cluster_id}:startFailover:" +
+      "\001*\262\322*\'\n\034StartClusterFailoverMetadata\022\007Cl" +
+      "uster\022\247\001\n\010ListLogs\0221.yandex.cloud.mdb.my" +
+      "sql.v1.ListClusterLogsRequest\0322.yandex.c" +
+      "loud.mdb.mysql.v1.ListClusterLogsRespons" +
+      "e\"4\202\323\344\223\002.\022,/managed-mysql/v1/clusters/{c" +
+      "luster_id}:logs\022\254\001\n\nStreamLogs\0223.yandex." +
+      "cloud.mdb.mysql.v1.StreamClusterLogsRequ" +
+      "est\032*.yandex.cloud.mdb.mysql.v1.StreamLo" +
+      "gRecord\";\202\323\344\223\0025\0223/managed-mysql/v1/clust" +
+      "ers/{cluster_id}:stream_logs0\001\022\277\001\n\016ListO" +
+      "perations\0227.yandex.cloud.mdb.mysql.v1.Li" +
+      "stClusterOperationsRequest\0328.yandex.clou" +
+      "d.mdb.mysql.v1.ListClusterOperationsResp" +
+      "onse\":\202\323\344\223\0024\0222/managed-mysql/v1/clusters" +
+      "/{cluster_id}/operations\022\263\001\n\013ListBackups" +
+      "\0224.yandex.cloud.mdb.mysql.v1.ListCluster" +
+      "BackupsRequest\0325.yandex.cloud.mdb.mysql." +
+      "v1.ListClusterBackupsResponse\"7\202\323\344\223\0021\022//" +
+      "managed-mysql/v1/clusters/{cluster_id}/b" +
+      "ackups\022\253\001\n\tListHosts\0222.yandex.cloud.mdb." +
+      "mysql.v1.ListClusterHostsRequest\0323.yande" +
+      "x.cloud.mdb.mysql.v1.ListClusterHostsRes" +
+      "ponse\"5\202\323\344\223\002/\022-/managed-mysql/v1/cluster" +
+      "s/{cluster_id}/hosts\022\332\001\n\010AddHosts\0221.yand" +
+      "ex.cloud.mdb.mysql.v1.AddClusterHostsReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "x\202\323\344\223\002>\"9/managed-mysql/v1/clusters/{clu" +
+      "ster_id}/hosts:batchCreate:\001*\262\322*0\n\027AddCl" +
+      "usterHostsMetadata\022\025google.protobuf.Empt" +
+      "y\022\343\001\n\013UpdateHosts\0224.yandex.cloud.mdb.mys" +
+      "ql.v1.UpdateClusterHostsRequest\032!.yandex" +
+      ".cloud.operation.Operation\"{\202\323\344\223\002>\"9/man" +
+      "aged-mysql/v1/clusters/{cluster_id}/host" +
+      "s:batchUpdate:\001*\262\322*3\n\032UpdateClusterHosts" +
+      "Metadata\022\025google.protobuf.Empty\022\343\001\n\013Dele" +
+      "teHosts\0224.yandex.cloud.mdb.mysql.v1.Dele" +
+      "teClusterHostsRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"{\202\323\344\223\002>\"9/managed-mysql" +
+      "/v1/clusters/{cluster_id}/hosts:batchDel" +
+      "ete:\001*\262\322*3\n\032DeleteClusterHostsMetadata\022\025" +
+      "google.protobuf.EmptyBd\n\035yandex.cloud.ap" +
+      "i.mdb.mysql.v1ZCgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/mdb/mysql/v1;my" +
+      "sqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -47591,7 +48191,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_mysql_v1_CreateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_CreateClusterRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "DatabaseSpecs", "UserSpecs", "HostSpecs", "NetworkId", "SecurityGroupIds", "DeletionProtection", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "DatabaseSpecs", "UserSpecs", "HostSpecs", "NetworkId", "SecurityGroupIds", "DeletionProtection", "HostGroupIds", });
     internal_static_yandex_cloud_mdb_mysql_v1_CreateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_mysql_v1_CreateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_mysql_v1_CreateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -47651,7 +48251,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_mysql_v1_RestoreClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_RestoreClusterRequest_descriptor,
-        new java.lang.String[] { "BackupId", "Time", "Name", "Description", "Labels", "Environment", "ConfigSpec", "HostSpecs", "NetworkId", "FolderId", "SecurityGroupIds", });
+        new java.lang.String[] { "BackupId", "Time", "Name", "Description", "Labels", "Environment", "ConfigSpec", "HostSpecs", "NetworkId", "FolderId", "SecurityGroupIds", "DeletionProtection", "HostGroupIds", });
     internal_static_yandex_cloud_mdb_mysql_v1_RestoreClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_mysql_v1_RestoreClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_mysql_v1_RestoreClusterRequest_LabelsEntry_fieldAccessorTable = new

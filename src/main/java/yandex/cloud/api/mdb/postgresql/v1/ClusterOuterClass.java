@@ -409,6 +409,41 @@ public final class ClusterOuterClass {
      * <code>bool deletion_protection = 16;</code>
      */
     boolean getDeletionProtection();
+
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 17;</code>
+     */
+    java.util.List<java.lang.String>
+        getHostGroupIdsList();
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 17;</code>
+     */
+    int getHostGroupIdsCount();
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 17;</code>
+     */
+    java.lang.String getHostGroupIds(int index);
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 17;</code>
+     */
+    com.google.protobuf.ByteString
+        getHostGroupIdsBytes(int index);
   }
   /**
    * <pre>
@@ -439,6 +474,7 @@ public final class ClusterOuterClass {
       status_ = 0;
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       deletionProtection_ = false;
+      hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -601,6 +637,15 @@ public final class ClusterOuterClass {
               deletionProtection_ = input.readBool();
               break;
             }
+            case 138: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+                hostGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00010000;
+              }
+              hostGroupIds_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -621,6 +666,9 @@ public final class ClusterOuterClass {
         }
         if (((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+          hostGroupIds_ = hostGroupIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1773,6 +1821,51 @@ public final class ClusterOuterClass {
       return deletionProtection_;
     }
 
+    public static final int HOST_GROUP_IDS_FIELD_NUMBER = 17;
+    private com.google.protobuf.LazyStringList hostGroupIds_;
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 17;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getHostGroupIdsList() {
+      return hostGroupIds_;
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 17;</code>
+     */
+    public int getHostGroupIdsCount() {
+      return hostGroupIds_.size();
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 17;</code>
+     */
+    public java.lang.String getHostGroupIds(int index) {
+      return hostGroupIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 17;</code>
+     */
+    public com.google.protobuf.ByteString
+        getHostGroupIdsBytes(int index) {
+      return hostGroupIds_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1837,6 +1930,9 @@ public final class ClusterOuterClass {
       }
       if (deletionProtection_ != false) {
         output.writeBool(16, deletionProtection_);
+      }
+      for (int i = 0; i < hostGroupIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, hostGroupIds_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -1916,6 +2012,14 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(16, deletionProtection_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < hostGroupIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(hostGroupIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 2 * getHostGroupIdsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1973,6 +2077,8 @@ public final class ClusterOuterClass {
           .equals(other.getSecurityGroupIdsList());
       result = result && (getDeletionProtection()
           == other.getDeletionProtection());
+      result = result && getHostGroupIdsList()
+          .equals(other.getHostGroupIdsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2031,6 +2137,10 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
+      if (getHostGroupIdsCount() > 0) {
+        hash = (37 * hash) + HOST_GROUP_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getHostGroupIdsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2243,6 +2353,8 @@ public final class ClusterOuterClass {
         bitField0_ = (bitField0_ & ~0x00004000);
         deletionProtection_ = false;
 
+        hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00010000);
         return this;
       }
 
@@ -2316,6 +2428,11 @@ public final class ClusterOuterClass {
         }
         result.securityGroupIds_ = securityGroupIds_;
         result.deletionProtection_ = deletionProtection_;
+        if (((bitField0_ & 0x00010000) == 0x00010000)) {
+          hostGroupIds_ = hostGroupIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00010000);
+        }
+        result.hostGroupIds_ = hostGroupIds_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2446,6 +2563,16 @@ public final class ClusterOuterClass {
         }
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
+        }
+        if (!other.hostGroupIds_.isEmpty()) {
+          if (hostGroupIds_.isEmpty()) {
+            hostGroupIds_ = other.hostGroupIds_;
+            bitField0_ = (bitField0_ & ~0x00010000);
+          } else {
+            ensureHostGroupIdsIsMutable();
+            hostGroupIds_.addAll(other.hostGroupIds_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4373,6 +4500,136 @@ public final class ClusterOuterClass {
       public Builder clearDeletionProtection() {
         
         deletionProtection_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureHostGroupIdsIsMutable() {
+        if (!((bitField0_ & 0x00010000) == 0x00010000)) {
+          hostGroupIds_ = new com.google.protobuf.LazyStringArrayList(hostGroupIds_);
+          bitField0_ |= 0x00010000;
+         }
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 17;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getHostGroupIdsList() {
+        return hostGroupIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 17;</code>
+       */
+      public int getHostGroupIdsCount() {
+        return hostGroupIds_.size();
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 17;</code>
+       */
+      public java.lang.String getHostGroupIds(int index) {
+        return hostGroupIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 17;</code>
+       */
+      public com.google.protobuf.ByteString
+          getHostGroupIdsBytes(int index) {
+        return hostGroupIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 17;</code>
+       */
+      public Builder setHostGroupIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostGroupIdsIsMutable();
+        hostGroupIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 17;</code>
+       */
+      public Builder addHostGroupIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostGroupIdsIsMutable();
+        hostGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 17;</code>
+       */
+      public Builder addAllHostGroupIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureHostGroupIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, hostGroupIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 17;</code>
+       */
+      public Builder clearHostGroupIds() {
+        hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00010000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 17;</code>
+       */
+      public Builder addHostGroupIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureHostGroupIdsIsMutable();
+        hostGroupIds_.add(value);
         onChanged();
         return this;
       }
@@ -20975,7 +21232,7 @@ public final class ClusterOuterClass {
       "/mdb/postgresql/v1/config/host14.proto\0325" +
       "yandex/cloud/mdb/postgresql/v1/config/ho" +
       "st12_1c.proto\0320yandex/cloud/mdb/postgres" +
-      "ql/v1/maintenance.proto\"\254\010\n\007Cluster\022\n\n\002i" +
+      "ql/v1/maintenance.proto\"\304\010\n\007Cluster\022\n\n\002i" +
       "d\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at" +
       "\030\003 \001(\0132\032.google.protobuf.Timestamp\022\014\n\004na" +
       "me\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022C\n\006labels\030" +
@@ -20994,127 +21251,127 @@ public final class ClusterOuterClass {
       "Window\022O\n\021planned_operation\030\016 \001(\01324.yand" +
       "ex.cloud.mdb.postgresql.v1.MaintenanceOp" +
       "eration\022\032\n\022security_group_ids\030\017 \003(\t\022\033\n\023d" +
-      "eletion_protection\030\020 \001(\010\032-\n\013LabelsEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013Envir" +
-      "onment\022\033\n\027ENVIRONMENT_UNSPECIFIED\020\000\022\016\n\nP" +
-      "RODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Health\022\022\n\016" +
-      "HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n" +
-      "\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_UNKNOWN\020" +
-      "\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022" +
-      "\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006" +
-      "\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004name\030\001 \001" +
-      "(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\255\014" +
-      "\n\rClusterConfig\022\017\n\007version\030\001 \001(\t\022t\n\025post" +
-      "gresql_config_9_6\030\002 \001(\0132=.yandex.cloud.m" +
-      "db.postgresql.v1.config.PostgresqlConfig" +
-      "Set9_6H\000R\024postgresqlConfig_9_6\022z\n\027postgr" +
-      "esql_config_10_1c\030\n \001(\0132?.yandex.cloud.m" +
-      "db.postgresql.v1.config.PostgresqlConfig" +
-      "Set10_1CH\000R\026postgresqlConfig_10_1c\022q\n\024po" +
-      "stgresql_config_10\030\003 \001(\0132<.yandex.cloud." +
-      "mdb.postgresql.v1.config.PostgresqlConfi" +
-      "gSet10H\000R\023postgresqlConfig_10\022q\n\024postgre" +
-      "sql_config_11\030\010 \001(\0132<.yandex.cloud.mdb.p" +
-      "ostgresql.v1.config.PostgresqlConfigSet1" +
-      "1H\000R\023postgresqlConfig_11\022z\n\027postgresql_c" +
-      "onfig_11_1c\030\r \001(\0132?.yandex.cloud.mdb.pos" +
-      "tgresql.v1.config.PostgresqlConfigSet11_" +
-      "1CH\000R\026postgresqlConfig_11_1c\022q\n\024postgres" +
-      "ql_config_12\030\013 \001(\0132<.yandex.cloud.mdb.po" +
-      "stgresql.v1.config.PostgresqlConfigSet12" +
-      "H\000R\023postgresqlConfig_12\022z\n\027postgresql_co" +
-      "nfig_12_1c\030\016 \001(\0132?.yandex.cloud.mdb.post" +
-      "gresql.v1.config.PostgresqlConfigSet12_1" +
-      "CH\000R\026postgresqlConfig_12_1c\022q\n\024postgresq" +
-      "l_config_13\030\017 \001(\0132<.yandex.cloud.mdb.pos" +
-      "tgresql.v1.config.PostgresqlConfigSet13H" +
-      "\000R\023postgresqlConfig_13\022q\n\024postgresql_con" +
-      "fig_14\030\020 \001(\0132<.yandex.cloud.mdb.postgres" +
-      "ql.v1.config.PostgresqlConfigSet14H\000R\023po" +
-      "stgresqlConfig_14\022M\n\rpooler_config\030\004 \001(\013" +
-      "26.yandex.cloud.mdb.postgresql.v1.Connec" +
-      "tionPoolerConfig\022<\n\tresources\030\005 \001(\0132).ya" +
-      "ndex.cloud.mdb.postgresql.v1.Resources\0220" +
-      "\n\014autofailover\030\006 \001(\0132\032.google.protobuf.B" +
-      "oolValue\0223\n\023backup_window_start\030\007 \001(\0132\026." +
-      "google.type.TimeOfDay\022H\n\031backup_retain_p" +
-      "eriod_days\030\021 \001(\0132\033.google.protobuf.Int64" +
-      "ValueB\010\372\3071\0047-60\0226\n\006access\030\t \001(\0132&.yandex" +
-      ".cloud.mdb.postgresql.v1.Access\022W\n\027perfo" +
-      "rmance_diagnostics\030\014 \001(\01326.yandex.cloud." +
-      "mdb.postgresql.v1.PerformanceDiagnostics" +
-      "B\023\n\021postgresql_config\"\376\001\n\026ConnectionPool" +
-      "erConfig\022X\n\014pooling_mode\030\001 \001(\0162B.yandex." +
-      "cloud.mdb.postgresql.v1.ConnectionPooler" +
-      "Config.PoolingMode\0220\n\014pool_discard\030\002 \001(\013" +
-      "2\032.google.protobuf.BoolValue\"X\n\013PoolingM" +
-      "ode\022\034\n\030POOLING_MODE_UNSPECIFIED\020\000\022\013\n\007SES" +
-      "SION\020\001\022\017\n\013TRANSACTION\020\002\022\r\n\tSTATEMENT\020\003\"\342" +
-      "\005\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(" +
-      "\t\022\017\n\007zone_id\030\003 \001(\t\022<\n\tresources\030\004 \001(\0132)." +
-      "yandex.cloud.mdb.postgresql.v1.Resources" +
-      "\0227\n\004role\030\005 \001(\0162).yandex.cloud.mdb.postgr" +
-      "esql.v1.Host.Role\022;\n\006health\030\006 \001(\0162+.yand" +
-      "ex.cloud.mdb.postgresql.v1.Host.Health\0229" +
-      "\n\010services\030\007 \003(\0132\'.yandex.cloud.mdb.post" +
-      "gresql.v1.Service\022\021\n\tsubnet_id\030\010 \001(\t\022\032\n\022" +
-      "replication_source\030\t \001(\t\022-\n\010priority\030\n \001" +
-      "(\0132\033.google.protobuf.Int64Value\022:\n\006confi" +
-      "g\030\013 \001(\0132*.yandex.cloud.mdb.postgresql.v1" +
-      ".HostConfig\022\030\n\020assign_public_ip\030\014 \001(\010\022F\n" +
-      "\014replica_type\030\r \001(\01620.yandex.cloud.mdb.p" +
-      "ostgresql.v1.Host.ReplicaType\"1\n\004Role\022\020\n" +
-      "\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002" +
-      "\"H\n\013ReplicaType\022\030\n\024REPLICA_TYPE_UNKNOWN\020" +
-      "\000\022\t\n\005ASYNC\020\001\022\010\n\004SYNC\020\002\022\n\n\006QUORUM\020\003\"?\n\006He" +
-      "alth\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004D" +
-      "EAD\020\002\022\014\n\010DEGRADED\020\003\"\367\010\n\nHostConfig\022y\n\025po" +
-      "stgresql_config_9_6\030\001 \001(\0132>.yandex.cloud" +
-      ".mdb.postgresql.v1.config.PostgresqlHost" +
-      "Config9_6H\000R\030postgresqlHostConfig_9_6\022\177\n" +
-      "\027postgresql_config_10_1c\030\004 \001(\0132@.yandex." +
-      "cloud.mdb.postgresql.v1.config.Postgresq" +
-      "lHostConfig10_1CH\000R\032postgresqlHostConfig" +
-      "_10_1c\022v\n\024postgresql_config_10\030\002 \001(\0132=.y" +
+      "eletion_protection\030\020 \001(\010\022\026\n\016host_group_i" +
+      "ds\030\021 \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRO" +
+      "NMENT_UNSPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tP" +
+      "RESTABLE\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000" +
+      "\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006S" +
+      "tatus\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022" +
+      "\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n" +
+      "\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=" +
+      "\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013descriptio" +
+      "n\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\255\014\n\rClusterConfig\022" +
+      "\017\n\007version\030\001 \001(\t\022t\n\025postgresql_config_9_" +
+      "6\030\002 \001(\0132=.yandex.cloud.mdb.postgresql.v1" +
+      ".config.PostgresqlConfigSet9_6H\000R\024postgr" +
+      "esqlConfig_9_6\022z\n\027postgresql_config_10_1" +
+      "c\030\n \001(\0132?.yandex.cloud.mdb.postgresql.v1" +
+      ".config.PostgresqlConfigSet10_1CH\000R\026post" +
+      "gresqlConfig_10_1c\022q\n\024postgresql_config_" +
+      "10\030\003 \001(\0132<.yandex.cloud.mdb.postgresql.v" +
+      "1.config.PostgresqlConfigSet10H\000R\023postgr" +
+      "esqlConfig_10\022q\n\024postgresql_config_11\030\010 " +
+      "\001(\0132<.yandex.cloud.mdb.postgresql.v1.con" +
+      "fig.PostgresqlConfigSet11H\000R\023postgresqlC" +
+      "onfig_11\022z\n\027postgresql_config_11_1c\030\r \001(" +
+      "\0132?.yandex.cloud.mdb.postgresql.v1.confi" +
+      "g.PostgresqlConfigSet11_1CH\000R\026postgresql" +
+      "Config_11_1c\022q\n\024postgresql_config_12\030\013 \001" +
+      "(\0132<.yandex.cloud.mdb.postgresql.v1.conf" +
+      "ig.PostgresqlConfigSet12H\000R\023postgresqlCo" +
+      "nfig_12\022z\n\027postgresql_config_12_1c\030\016 \001(\013" +
+      "2?.yandex.cloud.mdb.postgresql.v1.config" +
+      ".PostgresqlConfigSet12_1CH\000R\026postgresqlC" +
+      "onfig_12_1c\022q\n\024postgresql_config_13\030\017 \001(" +
+      "\0132<.yandex.cloud.mdb.postgresql.v1.confi" +
+      "g.PostgresqlConfigSet13H\000R\023postgresqlCon" +
+      "fig_13\022q\n\024postgresql_config_14\030\020 \001(\0132<.y" +
       "andex.cloud.mdb.postgresql.v1.config.Pos" +
-      "tgresqlHostConfig10H\000R\027postgresqlHostCon" +
-      "fig_10\022v\n\024postgresql_config_11\030\003 \001(\0132=.y" +
-      "andex.cloud.mdb.postgresql.v1.config.Pos" +
-      "tgresqlHostConfig11H\000R\027postgresqlHostCon" +
-      "fig_11\022\177\n\027postgresql_config_11_1c\030\006 \001(\0132" +
-      "@.yandex.cloud.mdb.postgresql.v1.config." +
-      "PostgresqlHostConfig11_1CH\000R\032postgresqlH" +
-      "ostConfig_11_1c\022v\n\024postgresql_config_12\030" +
-      "\005 \001(\0132=.yandex.cloud.mdb.postgresql.v1.c" +
-      "onfig.PostgresqlHostConfig12H\000R\027postgres" +
-      "qlHostConfig_12\022\177\n\027postgresql_config_12_" +
-      "1c\030\007 \001(\0132@.yandex.cloud.mdb.postgresql.v" +
-      "1.config.PostgresqlHostConfig12_1CH\000R\032po" +
-      "stgresqlHostConfig_12_1c\022v\n\024postgresql_c" +
-      "onfig_13\030\010 \001(\0132=.yandex.cloud.mdb.postgr" +
-      "esql.v1.config.PostgresqlHostConfig13H\000R" +
-      "\027postgresqlHostConfig_13\022v\n\024postgresql_c" +
-      "onfig_14\030\t \001(\0132=.yandex.cloud.mdb.postgr" +
-      "esql.v1.config.PostgresqlHostConfig14H\000R" +
-      "\027postgresqlHostConfig_14B\023\n\021postgresql_c" +
-      "onfig\"\362\001\n\007Service\022:\n\004type\030\001 \001(\0162,.yandex" +
-      ".cloud.mdb.postgresql.v1.Service.Type\022>\n" +
-      "\006health\030\002 \001(\0162..yandex.cloud.mdb.postgre" +
-      "sql.v1.Service.Health\"8\n\004Type\022\024\n\020TYPE_UN" +
-      "SPECIFIED\020\000\022\016\n\nPOSTGRESQL\020\001\022\n\n\006POOLER\020\002\"" +
-      "1\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001" +
-      "\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resource_pres" +
-      "et_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_t" +
-      "ype_id\030\003 \001(\t\"W\n\006Access\022\021\n\tdata_lens\030\001 \001(" +
-      "\010\022\017\n\007web_sql\030\002 \001(\010\022\022\n\nserverless\030\003 \001(\010\022\025" +
-      "\n\rdata_transfer\030\004 \001(\010\"\215\001\n\026PerformanceDia" +
-      "gnostics\022\017\n\007enabled\030\001 \001(\010\022/\n\032sessions_sa" +
-      "mpling_interval\030\002 \001(\003B\013\372\3071\0071-86400\0221\n\034st" +
-      "atements_sampling_interval\030\003 \001(\003B\013\372\3071\0071-" +
-      "86400Bs\n\"yandex.cloud.api.mdb.postgresql" +
-      ".v1ZMgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/mdb/postgresql/v1;postgres" +
-      "qlb\006proto3"
+      "tgresqlConfigSet14H\000R\023postgresqlConfig_1" +
+      "4\022M\n\rpooler_config\030\004 \001(\01326.yandex.cloud." +
+      "mdb.postgresql.v1.ConnectionPoolerConfig" +
+      "\022<\n\tresources\030\005 \001(\0132).yandex.cloud.mdb.p" +
+      "ostgresql.v1.Resources\0220\n\014autofailover\030\006" +
+      " \001(\0132\032.google.protobuf.BoolValue\0223\n\023back" +
+      "up_window_start\030\007 \001(\0132\026.google.type.Time" +
+      "OfDay\022H\n\031backup_retain_period_days\030\021 \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\010\372\3071\0047-60\022" +
+      "6\n\006access\030\t \001(\0132&.yandex.cloud.mdb.postg" +
+      "resql.v1.Access\022W\n\027performance_diagnosti" +
+      "cs\030\014 \001(\01326.yandex.cloud.mdb.postgresql.v" +
+      "1.PerformanceDiagnosticsB\023\n\021postgresql_c" +
+      "onfig\"\376\001\n\026ConnectionPoolerConfig\022X\n\014pool" +
+      "ing_mode\030\001 \001(\0162B.yandex.cloud.mdb.postgr" +
+      "esql.v1.ConnectionPoolerConfig.PoolingMo" +
+      "de\0220\n\014pool_discard\030\002 \001(\0132\032.google.protob" +
+      "uf.BoolValue\"X\n\013PoolingMode\022\034\n\030POOLING_M" +
+      "ODE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\017\n\013TRANSA" +
+      "CTION\020\002\022\r\n\tSTATEMENT\020\003\"\342\005\n\004Host\022\014\n\004name\030" +
+      "\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001" +
+      "(\t\022<\n\tresources\030\004 \001(\0132).yandex.cloud.mdb" +
+      ".postgresql.v1.Resources\0227\n\004role\030\005 \001(\0162)" +
+      ".yandex.cloud.mdb.postgresql.v1.Host.Rol" +
+      "e\022;\n\006health\030\006 \001(\0162+.yandex.cloud.mdb.pos" +
+      "tgresql.v1.Host.Health\0229\n\010services\030\007 \003(\013" +
+      "2\'.yandex.cloud.mdb.postgresql.v1.Servic" +
+      "e\022\021\n\tsubnet_id\030\010 \001(\t\022\032\n\022replication_sour" +
+      "ce\030\t \001(\t\022-\n\010priority\030\n \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022:\n\006config\030\013 \001(\0132*.yandex" +
+      ".cloud.mdb.postgresql.v1.HostConfig\022\030\n\020a" +
+      "ssign_public_ip\030\014 \001(\010\022F\n\014replica_type\030\r " +
+      "\001(\01620.yandex.cloud.mdb.postgresql.v1.Hos" +
+      "t.ReplicaType\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022" +
+      "\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"H\n\013ReplicaType\022" +
+      "\030\n\024REPLICA_TYPE_UNKNOWN\020\000\022\t\n\005ASYNC\020\001\022\010\n\004" +
+      "SYNC\020\002\022\n\n\006QUORUM\020\003\"?\n\006Health\022\022\n\016HEALTH_U" +
+      "NKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADE" +
+      "D\020\003\"\367\010\n\nHostConfig\022y\n\025postgresql_config_" +
+      "9_6\030\001 \001(\0132>.yandex.cloud.mdb.postgresql." +
+      "v1.config.PostgresqlHostConfig9_6H\000R\030pos" +
+      "tgresqlHostConfig_9_6\022\177\n\027postgresql_conf" +
+      "ig_10_1c\030\004 \001(\0132@.yandex.cloud.mdb.postgr" +
+      "esql.v1.config.PostgresqlHostConfig10_1C" +
+      "H\000R\032postgresqlHostConfig_10_1c\022v\n\024postgr" +
+      "esql_config_10\030\002 \001(\0132=.yandex.cloud.mdb." +
+      "postgresql.v1.config.PostgresqlHostConfi" +
+      "g10H\000R\027postgresqlHostConfig_10\022v\n\024postgr" +
+      "esql_config_11\030\003 \001(\0132=.yandex.cloud.mdb." +
+      "postgresql.v1.config.PostgresqlHostConfi" +
+      "g11H\000R\027postgresqlHostConfig_11\022\177\n\027postgr" +
+      "esql_config_11_1c\030\006 \001(\0132@.yandex.cloud.m" +
+      "db.postgresql.v1.config.PostgresqlHostCo" +
+      "nfig11_1CH\000R\032postgresqlHostConfig_11_1c\022" +
+      "v\n\024postgresql_config_12\030\005 \001(\0132=.yandex.c" +
+      "loud.mdb.postgresql.v1.config.Postgresql" +
+      "HostConfig12H\000R\027postgresqlHostConfig_12\022" +
+      "\177\n\027postgresql_config_12_1c\030\007 \001(\0132@.yande" +
+      "x.cloud.mdb.postgresql.v1.config.Postgre" +
+      "sqlHostConfig12_1CH\000R\032postgresqlHostConf" +
+      "ig_12_1c\022v\n\024postgresql_config_13\030\010 \001(\0132=" +
+      ".yandex.cloud.mdb.postgresql.v1.config.P" +
+      "ostgresqlHostConfig13H\000R\027postgresqlHostC" +
+      "onfig_13\022v\n\024postgresql_config_14\030\t \001(\0132=" +
+      ".yandex.cloud.mdb.postgresql.v1.config.P" +
+      "ostgresqlHostConfig14H\000R\027postgresqlHostC" +
+      "onfig_14B\023\n\021postgresql_config\"\362\001\n\007Servic" +
+      "e\022:\n\004type\030\001 \001(\0162,.yandex.cloud.mdb.postg" +
+      "resql.v1.Service.Type\022>\n\006health\030\002 \001(\0162.." +
+      "yandex.cloud.mdb.postgresql.v1.Service.H" +
+      "ealth\"8\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\016\n\nP" +
+      "OSTGRESQL\020\001\022\n\n\006POOLER\020\002\"1\n\006Health\022\022\n\016HEA" +
+      "LTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tRe" +
+      "sources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\td" +
+      "isk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"W\n\006" +
+      "Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001" +
+      "(\010\022\022\n\nserverless\030\003 \001(\010\022\025\n\rdata_transfer\030" +
+      "\004 \001(\010\"\215\001\n\026PerformanceDiagnostics\022\017\n\007enab" +
+      "led\030\001 \001(\010\022/\n\032sessions_sampling_interval\030" +
+      "\002 \001(\003B\013\372\3071\0071-86400\0221\n\034statements_samplin" +
+      "g_interval\030\003 \001(\003B\013\372\3071\0071-86400Bs\n\"yandex." +
+      "cloud.api.mdb.postgresql.v1ZMgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/md" +
+      "b/postgresql/v1;postgresqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -21156,7 +21413,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "MaintenanceWindow", "PlannedOperation", "SecurityGroupIds", "DeletionProtection", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "MaintenanceWindow", "PlannedOperation", "SecurityGroupIds", "DeletionProtection", "HostGroupIds", });
     internal_static_yandex_cloud_mdb_postgresql_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_postgresql_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_postgresql_v1_Cluster_LabelsEntry_fieldAccessorTable = new

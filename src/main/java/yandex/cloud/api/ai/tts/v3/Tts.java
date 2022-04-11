@@ -9773,6 +9773,26 @@ public final class Tts {
 
     /**
      * <pre>
+     * The name of the model.
+     * Specifies basic synthesis functionality. Currently should be empty. Do not use it
+     * </pre>
+     *
+     * <code>string model = 1;</code>
+     */
+    java.lang.String getModel();
+    /**
+     * <pre>
+     * The name of the model.
+     * Specifies basic synthesis functionality. Currently should be empty. Do not use it
+     * </pre>
+     *
+     * <code>string model = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getModelBytes();
+
+    /**
+     * <pre>
      * Raw text (e.g. "Hello, Alice").
      * </pre>
      *
@@ -9924,6 +9944,7 @@ public final class Tts {
       super(builder);
     }
     private UtteranceSynthesisRequest() {
+      model_ = "";
       hints_ = java.util.Collections.emptyList();
       loudnessNormalizationType_ = 0;
       unsafeMode_ = false;
@@ -9953,6 +9974,12 @@ public final class Tts {
             case 0:
               done = true;
               break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              model_ = s;
+              break;
+            }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
               utteranceCase_ = 2;
@@ -9974,9 +10001,9 @@ public final class Tts {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
                 hints_ = new java.util.ArrayList<yandex.cloud.api.ai.tts.v3.Tts.Hints>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000008;
               }
               hints_.add(
                   input.readMessage(yandex.cloud.api.ai.tts.v3.Tts.Hints.parser(), extensionRegistry));
@@ -10021,7 +10048,7 @@ public final class Tts {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           hints_ = java.util.Collections.unmodifiableList(hints_);
         }
         this.unknownFields = unknownFields.build();
@@ -10189,6 +10216,50 @@ public final class Tts {
     getUtteranceCase() {
       return UtteranceCase.forNumber(
           utteranceCase_);
+    }
+
+    public static final int MODEL_FIELD_NUMBER = 1;
+    private volatile java.lang.Object model_;
+    /**
+     * <pre>
+     * The name of the model.
+     * Specifies basic synthesis functionality. Currently should be empty. Do not use it
+     * </pre>
+     *
+     * <code>string model = 1;</code>
+     */
+    public java.lang.String getModel() {
+      java.lang.Object ref = model_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        model_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The name of the model.
+     * Specifies basic synthesis functionality. Currently should be empty. Do not use it
+     * </pre>
+     *
+     * <code>string model = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getModelBytes() {
+      java.lang.Object ref = model_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        model_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int TEXT_FIELD_NUMBER = 2;
@@ -10420,6 +10491,9 @@ public final class Tts {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getModelBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, model_);
+      }
       if (utteranceCase_ == 2) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, utterance_);
       }
@@ -10447,6 +10521,9 @@ public final class Tts {
       if (size != -1) return size;
 
       size = 0;
+      if (!getModelBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, model_);
+      }
       if (utteranceCase_ == 2) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, utterance_);
       }
@@ -10486,6 +10563,8 @@ public final class Tts {
       yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest other = (yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest) obj;
 
       boolean result = true;
+      result = result && getModel()
+          .equals(other.getModel());
       result = result && getHintsList()
           .equals(other.getHintsList());
       result = result && (hasOutputAudioSpec() == other.hasOutputAudioSpec());
@@ -10522,6 +10601,8 @@ public final class Tts {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODEL_FIELD_NUMBER;
+      hash = (53 * hash) + getModel().hashCode();
       if (getHintsCount() > 0) {
         hash = (37 * hash) + HINTS_FIELD_NUMBER;
         hash = (53 * hash) + getHintsList().hashCode();
@@ -10681,9 +10762,11 @@ public final class Tts {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        model_ = "";
+
         if (hintsBuilder_ == null) {
           hints_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           hintsBuilder_.clear();
         }
@@ -10727,6 +10810,7 @@ public final class Tts {
         yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest result = new yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
+        result.model_ = model_;
         if (utteranceCase_ == 2) {
           result.utterance_ = utterance_;
         }
@@ -10738,9 +10822,9 @@ public final class Tts {
           }
         }
         if (hintsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
             hints_ = java.util.Collections.unmodifiableList(hints_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.hints_ = hints_;
         } else {
@@ -10803,11 +10887,15 @@ public final class Tts {
 
       public Builder mergeFrom(yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest other) {
         if (other == yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.getDefaultInstance()) return this;
+        if (!other.getModel().isEmpty()) {
+          model_ = other.model_;
+          onChanged();
+        }
         if (hintsBuilder_ == null) {
           if (!other.hints_.isEmpty()) {
             if (hints_.isEmpty()) {
               hints_ = other.hints_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureHintsIsMutable();
               hints_.addAll(other.hints_);
@@ -10820,7 +10908,7 @@ public final class Tts {
               hintsBuilder_.dispose();
               hintsBuilder_ = null;
               hints_ = other.hints_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
               hintsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getHintsFieldBuilder() : null;
@@ -10897,6 +10985,100 @@ public final class Tts {
       }
 
       private int bitField0_;
+
+      private java.lang.Object model_ = "";
+      /**
+       * <pre>
+       * The name of the model.
+       * Specifies basic synthesis functionality. Currently should be empty. Do not use it
+       * </pre>
+       *
+       * <code>string model = 1;</code>
+       */
+      public java.lang.String getModel() {
+        java.lang.Object ref = model_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          model_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the model.
+       * Specifies basic synthesis functionality. Currently should be empty. Do not use it
+       * </pre>
+       *
+       * <code>string model = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getModelBytes() {
+        java.lang.Object ref = model_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          model_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the model.
+       * Specifies basic synthesis functionality. Currently should be empty. Do not use it
+       * </pre>
+       *
+       * <code>string model = 1;</code>
+       */
+      public Builder setModel(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        model_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the model.
+       * Specifies basic synthesis functionality. Currently should be empty. Do not use it
+       * </pre>
+       *
+       * <code>string model = 1;</code>
+       */
+      public Builder clearModel() {
+        
+        model_ = getDefaultInstance().getModel();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the model.
+       * Specifies basic synthesis functionality. Currently should be empty. Do not use it
+       * </pre>
+       *
+       * <code>string model = 1;</code>
+       */
+      public Builder setModelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        model_ = value;
+        onChanged();
+        return this;
+      }
 
       /**
        * <pre>
@@ -11173,9 +11355,9 @@ public final class Tts {
       private java.util.List<yandex.cloud.api.ai.tts.v3.Tts.Hints> hints_ =
         java.util.Collections.emptyList();
       private void ensureHintsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
           hints_ = new java.util.ArrayList<yandex.cloud.api.ai.tts.v3.Tts.Hints>(hints_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -11369,7 +11551,7 @@ public final class Tts {
       public Builder clearHints() {
         if (hintsBuilder_ == null) {
           hints_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           hintsBuilder_.clear();
@@ -11474,7 +11656,7 @@ public final class Tts {
           hintsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.tts.v3.Tts.Hints, yandex.cloud.api.ai.tts.v3.Tts.Hints.Builder, yandex.cloud.api.ai.tts.v3.Tts.HintsOrBuilder>(
                   hints_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000008) == 0x00000008),
                   getParentForChildren(),
                   isClean());
           hints_ = null;
@@ -11892,21 +12074,21 @@ public final class Tts {
       "able\"\216\001\n\005Hints\022\017\n\005voice\030\001 \001(\tH\000\0229\n\016audio" +
       "_template\030\002 \001(\0132\037.speechkit.tts.v3.Audio" +
       "TemplateH\000\022\017\n\005speed\030\003 \001(\001H\000\022\020\n\006volume\030\004 " +
-      "\001(\001H\000\022\016\n\004role\030\005 \001(\tH\000B\006\n\004Hint\"\303\003\n\031Uttera" +
-      "nceSynthesisRequest\022\016\n\004text\030\002 \001(\tH\000\0227\n\rt" +
-      "ext_template\030\003 \001(\0132\036.speechkit.tts.v3.Te" +
-      "xtTemplateH\000\022&\n\005hints\030\004 \003(\0132\027.speechkit." +
-      "tts.v3.Hints\022?\n\021output_audio_spec\030\005 \001(\0132" +
-      "$.speechkit.tts.v3.AudioFormatOptions\022j\n" +
-      "\033loudness_normalization_type\030\006 \001(\0162E.spe" +
-      "echkit.tts.v3.UtteranceSynthesisRequest." +
-      "LoudnessNormalizationType\022\023\n\013unsafe_mode" +
-      "\030\007 \001(\010\"`\n\031LoudnessNormalizationType\022+\n\'L" +
-      "OUDNESS_NORMALIZATION_TYPE_UNSPECIFIED\020\000" +
-      "\022\014\n\010MAX_PEAK\020\001\022\010\n\004LUFS\020\002B\013\n\tUtteranceJ\004\010" +
-      "\001\020\002B\\\n\032yandex.cloud.api.ai.tts.v3Z>githu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/ai/tts/v3;ttsb\006proto3"
+      "\001(\001H\000\022\016\n\004role\030\005 \001(\tH\000B\006\n\004Hint\"\314\003\n\031Uttera" +
+      "nceSynthesisRequest\022\r\n\005model\030\001 \001(\t\022\016\n\004te" +
+      "xt\030\002 \001(\tH\000\0227\n\rtext_template\030\003 \001(\0132\036.spee" +
+      "chkit.tts.v3.TextTemplateH\000\022&\n\005hints\030\004 \003" +
+      "(\0132\027.speechkit.tts.v3.Hints\022?\n\021output_au" +
+      "dio_spec\030\005 \001(\0132$.speechkit.tts.v3.AudioF" +
+      "ormatOptions\022j\n\033loudness_normalization_t" +
+      "ype\030\006 \001(\0162E.speechkit.tts.v3.UtteranceSy" +
+      "nthesisRequest.LoudnessNormalizationType" +
+      "\022\023\n\013unsafe_mode\030\007 \001(\010\"`\n\031LoudnessNormali" +
+      "zationType\022+\n\'LOUDNESS_NORMALIZATION_TYP" +
+      "E_UNSPECIFIED\020\000\022\014\n\010MAX_PEAK\020\001\022\010\n\004LUFS\020\002B" +
+      "\013\n\tUtteranceB\\\n\032yandex.cloud.api.ai.tts." +
+      "v3Z>github.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/ai/tts/v3;ttsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11991,7 +12173,7 @@ public final class Tts {
     internal_static_speechkit_tts_v3_UtteranceSynthesisRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_tts_v3_UtteranceSynthesisRequest_descriptor,
-        new java.lang.String[] { "Text", "TextTemplate", "Hints", "OutputAudioSpec", "LoudnessNormalizationType", "UnsafeMode", "Utterance", });
+        new java.lang.String[] { "Model", "Text", "TextTemplate", "Hints", "OutputAudioSpec", "LoudnessNormalizationType", "UnsafeMode", "Utterance", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
