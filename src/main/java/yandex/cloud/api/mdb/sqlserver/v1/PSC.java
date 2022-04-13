@@ -400,6 +400,24 @@ public final class PSC {
      */
     com.google.protobuf.ByteString
         getHostGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 17;</code>
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 17;</code>
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
   }
   /**
    * <pre>
@@ -432,6 +450,7 @@ public final class PSC {
       deletionProtection_ = false;
       sqlcollation_ = "";
       hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      serviceAccountId_ = "";
     }
 
     @java.lang.Override
@@ -581,6 +600,12 @@ public final class PSC {
                 mutable_bitField0_ |= 0x00008000;
               }
               hostGroupIds_.add(s);
+              break;
+            }
+            case 138: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountId_ = s;
               break;
             }
             default: {
@@ -1767,6 +1792,48 @@ public final class PSC {
       return hostGroupIds_.getByteString(index);
     }
 
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 17;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 17;</code>
+     */
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 17;</code>
+     */
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1831,6 +1898,9 @@ public final class PSC {
       }
       for (int i = 0; i < hostGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 16, hostGroupIds_.getRaw(i));
+      }
+      if (!getServiceAccountIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, serviceAccountId_);
       }
       unknownFields.writeTo(output);
     }
@@ -1913,6 +1983,9 @@ public final class PSC {
         size += dataSize;
         size += 2 * getHostGroupIdsList().size();
       }
+      if (!getServiceAccountIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, serviceAccountId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1964,6 +2037,8 @@ public final class PSC {
           .equals(other.getSqlcollation());
       result = result && getHostGroupIdsList()
           .equals(other.getHostGroupIdsList());
+      result = result && getServiceAccountId()
+          .equals(other.getServiceAccountId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2020,6 +2095,8 @@ public final class PSC {
         hash = (37 * hash) + HOST_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getHostGroupIdsList().hashCode();
       }
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2224,6 +2301,8 @@ public final class PSC {
 
         hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00008000);
+        serviceAccountId_ = "";
+
         return this;
       }
 
@@ -2293,6 +2372,7 @@ public final class PSC {
           bitField0_ = (bitField0_ & ~0x00008000);
         }
         result.hostGroupIds_ = hostGroupIds_;
+        result.serviceAccountId_ = serviceAccountId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2430,6 +2510,10 @@ public final class PSC {
             ensureHostGroupIdsIsMutable();
             hostGroupIds_.addAll(other.hostGroupIds_);
           }
+          onChanged();
+        }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -4235,6 +4319,95 @@ public final class PSC {
   checkByteStringIsUtf8(value);
         ensureHostGroupIdsIsMutable();
         hostGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 17;</code>
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 17;</code>
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 17;</code>
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 17;</code>
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 17;</code>
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
         onChanged();
         return this;
       }
@@ -12130,7 +12303,7 @@ public final class PSC {
       "ogle/protobuf/timestamp.proto\032\033google/ty" +
       "pe/timeofday.proto\032;yandex/cloud/mdb/sql" +
       "server/v1/config/sqlserver2016sp2.proto\"" +
-      "\264\007\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001" +
+      "\320\007\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001" +
       "(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobuf" +
       ".Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030" +
       "\005 \001(\t\022B\n\006labels\030\006 \003(\01322.yandex.cloud.mdb" +
@@ -12146,52 +12319,52 @@ public final class PSC {
       "v1.Cluster.Status\022\032\n\022security_group_ids\030" +
       "\r \003(\t\022\033\n\023deletion_protection\030\016 \001(\010\022\024\n\014sq" +
       "lcollation\030\017 \001(\t\022\026\n\016host_group_ids\030\020 \003(\t" +
-      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UN" +
-      "SPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE" +
-      "\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIV" +
-      "E\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n" +
-      "\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNI" +
-      "NG\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPIN" +
-      "G\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonito" +
-      "ring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022" +
-      "\014\n\004link\030\003 \001(\t\"\355\003\n\rClusterConfig\022\017\n\007versi" +
-      "on\030\001 \001(\t\022\205\001\n\033sqlserver_config_2016sp2std" +
-      "\030\002 \001(\0132B.yandex.cloud.mdb.sqlserver.v1.c" +
-      "onfig.SQLServerConfigSet2016sp2stdH\000R\032sq" +
-      "lserverConfig_2016sp2std\022\205\001\n\033sqlserver_c" +
-      "onfig_2016sp2ent\030\005 \001(\0132B.yandex.cloud.md" +
-      "b.sqlserver.v1.config.SQLServerConfigSet" +
-      "2016sp2entH\000R\032sqlserverConfig_2016sp2ent" +
-      "\022;\n\tresources\030\003 \001(\0132(.yandex.cloud.mdb.s" +
-      "qlserver.v1.Resources\0223\n\023backup_window_s" +
-      "tart\030\004 \001(\0132\026.google.type.TimeOfDay\0225\n\006ac" +
-      "cess\030\006 \001(\0132%.yandex.cloud.mdb.sqlserver." +
-      "v1.AccessB\022\n\020sqlserver_config\"\305\003\n\004Host\022\014" +
-      "\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone" +
-      "_id\030\003 \001(\t\022;\n\tresources\030\004 \001(\0132(.yandex.cl" +
-      "oud.mdb.sqlserver.v1.Resources\0226\n\004role\030\005" +
-      " \001(\0162(.yandex.cloud.mdb.sqlserver.v1.Hos" +
-      "t.Role\022:\n\006health\030\006 \001(\0162*.yandex.cloud.md" +
-      "b.sqlserver.v1.Host.Health\0228\n\010services\030\007" +
-      " \003(\0132&.yandex.cloud.mdb.sqlserver.v1.Ser" +
-      "vice\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_public" +
-      "_ip\030\t \001(\010\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006M" +
-      "ASTER\020\001\022\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH" +
-      "_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRA" +
-      "DED\020\003\"\343\001\n\007Service\0229\n\004type\030\001 \001(\0162+.yandex" +
-      ".cloud.mdb.sqlserver.v1.Service.Type\022=\n\006" +
-      "health\030\002 \001(\0162-.yandex.cloud.mdb.sqlserve" +
-      "r.v1.Service.Health\"+\n\004Type\022\024\n\020TYPE_UNSP" +
-      "ECIFIED\020\000\022\r\n\tSQLSERVER\020\001\"1\n\006Health\022\022\n\016HE" +
-      "ALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tR" +
-      "esources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\t" +
-      "disk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\",\n" +
-      "\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 " +
-      "\001(\010Bu\n!yandex.cloud.api.mdb.sqlserver.v1" +
-      "B\003PSCZKgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/mdb/sqlserver/v1;sqlserv" +
-      "erb\006proto3"
+      "\022\032\n\022service_account_id\030\021 \001(\t\032-\n\013LabelsEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013E" +
+      "nvironment\022\033\n\027ENVIRONMENT_UNSPECIFIED\020\000\022" +
+      "\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Health" +
+      "\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020" +
+      "\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_UNKN" +
+      "OWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERRO" +
+      "R\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPP" +
+      "ED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004name" +
+      "\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(" +
+      "\t\"\355\003\n\rClusterConfig\022\017\n\007version\030\001 \001(\t\022\205\001\n" +
+      "\033sqlserver_config_2016sp2std\030\002 \001(\0132B.yan" +
+      "dex.cloud.mdb.sqlserver.v1.config.SQLSer" +
+      "verConfigSet2016sp2stdH\000R\032sqlserverConfi" +
+      "g_2016sp2std\022\205\001\n\033sqlserver_config_2016sp" +
+      "2ent\030\005 \001(\0132B.yandex.cloud.mdb.sqlserver." +
+      "v1.config.SQLServerConfigSet2016sp2entH\000" +
+      "R\032sqlserverConfig_2016sp2ent\022;\n\tresource" +
+      "s\030\003 \001(\0132(.yandex.cloud.mdb.sqlserver.v1." +
+      "Resources\0223\n\023backup_window_start\030\004 \001(\0132\026" +
+      ".google.type.TimeOfDay\0225\n\006access\030\006 \001(\0132%" +
+      ".yandex.cloud.mdb.sqlserver.v1.AccessB\022\n" +
+      "\020sqlserver_config\"\305\003\n\004Host\022\014\n\004name\030\001 \001(\t" +
+      "\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022;\n" +
+      "\tresources\030\004 \001(\0132(.yandex.cloud.mdb.sqls" +
+      "erver.v1.Resources\0226\n\004role\030\005 \001(\0162(.yande" +
+      "x.cloud.mdb.sqlserver.v1.Host.Role\022:\n\006he" +
+      "alth\030\006 \001(\0162*.yandex.cloud.mdb.sqlserver." +
+      "v1.Host.Health\0228\n\010services\030\007 \003(\0132&.yande" +
+      "x.cloud.mdb.sqlserver.v1.Service\022\021\n\tsubn" +
+      "et_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\"1\n" +
+      "\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007R" +
+      "EPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t" +
+      "\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\343\001\n\007Se" +
+      "rvice\0229\n\004type\030\001 \001(\0162+.yandex.cloud.mdb.s" +
+      "qlserver.v1.Service.Type\022=\n\006health\030\002 \001(\016" +
+      "2-.yandex.cloud.mdb.sqlserver.v1.Service" +
+      ".Health\"+\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\r\n" +
+      "\tSQLSERVER\020\001\"1\n\006Health\022\022\n\016HEALTH_UNKNOWN" +
+      "\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022" +
+      "resource_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 " +
+      "\001(\003\022\024\n\014disk_type_id\030\003 \001(\t\",\n\006Access\022\021\n\td" +
+      "ata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010Bu\n!yande" +
+      "x.cloud.api.mdb.sqlserver.v1B\003PSCZKgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/mdb/sqlserver/v1;sqlserverb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12213,7 +12386,7 @@ public final class PSC {
     internal_static_yandex_cloud_mdb_sqlserver_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "SecurityGroupIds", "DeletionProtection", "Sqlcollation", "HostGroupIds", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "SecurityGroupIds", "DeletionProtection", "Sqlcollation", "HostGroupIds", "ServiceAccountId", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_sqlserver_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_sqlserver_v1_Cluster_LabelsEntry_fieldAccessorTable = new

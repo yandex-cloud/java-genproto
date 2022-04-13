@@ -3202,6 +3202,24 @@ public final class PSCS {
      */
     com.google.protobuf.ByteString
         getHostGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 15;</code>
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 15;</code>
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.CreateClusterRequest}
@@ -3228,6 +3246,7 @@ public final class PSCS {
       deletionProtection_ = false;
       sqlcollation_ = "";
       hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      serviceAccountId_ = "";
     }
 
     @java.lang.Override
@@ -3364,6 +3383,12 @@ public final class PSCS {
                 mutable_bitField0_ |= 0x00002000;
               }
               hostGroupIds_.add(s);
+              break;
+            }
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountId_ = s;
               break;
             }
             default: {
@@ -4060,6 +4085,48 @@ public final class PSCS {
       return hostGroupIds_.getByteString(index);
     }
 
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 15;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 15;</code>
+     */
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 15;</code>
+     */
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4118,6 +4185,9 @@ public final class PSCS {
       }
       for (int i = 0; i < hostGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 14, hostGroupIds_.getRaw(i));
+      }
+      if (!getServiceAccountIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, serviceAccountId_);
       }
       unknownFields.writeTo(output);
     }
@@ -4193,6 +4263,9 @@ public final class PSCS {
         size += dataSize;
         size += 1 * getHostGroupIdsList().size();
       }
+      if (!getServiceAccountIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, serviceAccountId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4239,6 +4312,8 @@ public final class PSCS {
           .equals(other.getSqlcollation());
       result = result && getHostGroupIdsList()
           .equals(other.getHostGroupIdsList());
+      result = result && getServiceAccountId()
+          .equals(other.getServiceAccountId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -4293,6 +4368,8 @@ public final class PSCS {
         hash = (37 * hash) + HOST_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getHostGroupIdsList().hashCode();
       }
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4494,6 +4571,8 @@ public final class PSCS {
 
         hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00002000);
+        serviceAccountId_ = "";
+
         return this;
       }
 
@@ -4573,6 +4652,7 @@ public final class PSCS {
           bitField0_ = (bitField0_ & ~0x00002000);
         }
         result.hostGroupIds_ = hostGroupIds_;
+        result.serviceAccountId_ = serviceAccountId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4749,6 +4829,10 @@ public final class PSCS {
             ensureHostGroupIdsIsMutable();
             hostGroupIds_.addAll(other.hostGroupIds_);
           }
+          onChanged();
+        }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -6840,6 +6924,95 @@ public final class PSCS {
         onChanged();
         return this;
       }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 15;</code>
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 15;</code>
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 15;</code>
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 15;</code>
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 15;</code>
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7701,6 +7874,24 @@ public final class PSCS {
      * <code>bool deletion_protection = 8;</code>
      */
     boolean getDeletionProtection();
+
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 9;</code>
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 9;</code>
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.UpdateClusterRequest}
@@ -7720,6 +7911,7 @@ public final class PSCS {
       name_ = "";
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       deletionProtection_ = false;
+      serviceAccountId_ = "";
     }
 
     @java.lang.Override
@@ -7815,6 +8007,12 @@ public final class PSCS {
             case 64: {
 
               deletionProtection_ = input.readBool();
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountId_ = s;
               break;
             }
             default: {
@@ -8221,6 +8419,48 @@ public final class PSCS {
       return deletionProtection_;
     }
 
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 9;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 9;</code>
+     */
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 9;</code>
+     */
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8261,6 +8501,9 @@ public final class PSCS {
       }
       if (deletionProtection_ != false) {
         output.writeBool(8, deletionProtection_);
+      }
+      if (!getServiceAccountIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, serviceAccountId_);
       }
       unknownFields.writeTo(output);
     }
@@ -8310,6 +8553,9 @@ public final class PSCS {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, deletionProtection_);
       }
+      if (!getServiceAccountIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, serviceAccountId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -8348,6 +8594,8 @@ public final class PSCS {
           .equals(other.getSecurityGroupIdsList());
       result = result && (getDeletionProtection()
           == other.getDeletionProtection());
+      result = result && getServiceAccountId()
+          .equals(other.getServiceAccountId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -8384,6 +8632,8 @@ public final class PSCS {
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8562,6 +8812,8 @@ public final class PSCS {
         bitField0_ = (bitField0_ & ~0x00000040);
         deletionProtection_ = false;
 
+        serviceAccountId_ = "";
+
         return this;
       }
 
@@ -8611,6 +8863,7 @@ public final class PSCS {
         }
         result.securityGroupIds_ = securityGroupIds_;
         result.deletionProtection_ = deletionProtection_;
+        result.serviceAccountId_ = serviceAccountId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -8692,6 +8945,10 @@ public final class PSCS {
         }
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
+        }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9637,6 +9894,95 @@ public final class PSCS {
       public Builder clearDeletionProtection() {
         
         deletionProtection_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 9;</code>
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 9;</code>
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 9;</code>
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 9;</code>
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 9;</code>
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
         onChanged();
         return this;
       }
@@ -12987,6 +13333,24 @@ public final class PSCS {
      */
     com.google.protobuf.ByteString
         getHostGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 15;</code>
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 15;</code>
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.RestoreClusterRequest}
@@ -13011,6 +13375,7 @@ public final class PSCS {
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       deletionProtection_ = false;
       hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      serviceAccountId_ = "";
     }
 
     @java.lang.Override
@@ -13142,6 +13507,12 @@ public final class PSCS {
                 mutable_bitField0_ |= 0x00001000;
               }
               hostGroupIds_.add(s);
+              break;
+            }
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountId_ = s;
               break;
             }
             default: {
@@ -13757,6 +14128,48 @@ public final class PSCS {
       return hostGroupIds_.getByteString(index);
     }
 
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 15;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 15;</code>
+     */
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 15;</code>
+     */
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13812,6 +14225,9 @@ public final class PSCS {
       }
       for (int i = 0; i < hostGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 14, hostGroupIds_.getRaw(i));
+      }
+      if (!getServiceAccountIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, serviceAccountId_);
       }
       unknownFields.writeTo(output);
     }
@@ -13883,6 +14299,9 @@ public final class PSCS {
         size += dataSize;
         size += 1 * getHostGroupIdsList().size();
       }
+      if (!getServiceAccountIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, serviceAccountId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -13930,6 +14349,8 @@ public final class PSCS {
           == other.getDeletionProtection());
       result = result && getHostGroupIdsList()
           .equals(other.getHostGroupIdsList());
+      result = result && getServiceAccountId()
+          .equals(other.getServiceAccountId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -13980,6 +14401,8 @@ public final class PSCS {
         hash = (37 * hash) + HOST_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getHostGroupIdsList().hashCode();
       }
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -14173,6 +14596,8 @@ public final class PSCS {
 
         hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00001000);
+        serviceAccountId_ = "";
+
         return this;
       }
 
@@ -14239,6 +14664,7 @@ public final class PSCS {
           bitField0_ = (bitField0_ & ~0x00001000);
         }
         result.hostGroupIds_ = hostGroupIds_;
+        result.serviceAccountId_ = serviceAccountId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -14366,6 +14792,10 @@ public final class PSCS {
             ensureHostGroupIdsIsMutable();
             hostGroupIds_.addAll(other.hostGroupIds_);
           }
+          onChanged();
+        }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -15991,6 +16421,95 @@ public final class PSCS {
         onChanged();
         return this;
       }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 15;</code>
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 15;</code>
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 15;</code>
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 15;</code>
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 15;</code>
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -16798,6 +17317,1360 @@ public final class PSCS {
 
     @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.PSCS.RestoreClusterMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StartClusterFailoverRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.sqlserver.v1.StartClusterFailoverRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of sqlserver cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of sqlserver cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Host name to switch master role to.
+     * To get this name, make a [ClusterService.ListHosts] request.
+     * </pre>
+     *
+     * <code>string host_name = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+     */
+    java.lang.String getHostName();
+    /**
+     * <pre>
+     * Host name to switch master role to.
+     * To get this name, make a [ClusterService.ListHosts] request.
+     * </pre>
+     *
+     * <code>string host_name = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+     */
+    com.google.protobuf.ByteString
+        getHostNameBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.StartClusterFailoverRequest}
+   */
+  public  static final class StartClusterFailoverRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.sqlserver.v1.StartClusterFailoverRequest)
+      StartClusterFailoverRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StartClusterFailoverRequest.newBuilder() to construct.
+    private StartClusterFailoverRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StartClusterFailoverRequest() {
+      clusterId_ = "";
+      hostName_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StartClusterFailoverRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              hostName_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.sqlserver.v1.PSCS.internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterFailoverRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.sqlserver.v1.PSCS.internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterFailoverRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest.class, yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of sqlserver cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of sqlserver cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HOST_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object hostName_;
+    /**
+     * <pre>
+     * Host name to switch master role to.
+     * To get this name, make a [ClusterService.ListHosts] request.
+     * </pre>
+     *
+     * <code>string host_name = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+     */
+    public java.lang.String getHostName() {
+      java.lang.Object ref = hostName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Host name to switch master role to.
+     * To get this name, make a [ClusterService.ListHosts] request.
+     * </pre>
+     *
+     * <code>string host_name = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getHostNameBytes() {
+      java.lang.Object ref = hostName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hostName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (!getHostNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, hostName_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (!getHostNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, hostName_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest other = (yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && getHostName()
+          .equals(other.getHostName());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + HOST_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getHostName().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.StartClusterFailoverRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.sqlserver.v1.StartClusterFailoverRequest)
+        yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSCS.internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterFailoverRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSCS.internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterFailoverRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest.class, yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        hostName_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSCS.internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterFailoverRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest build() {
+        yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest buildPartial() {
+        yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest result = new yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest(this);
+        result.clusterId_ = clusterId_;
+        result.hostName_ = hostName_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest other) {
+        if (other == yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.getHostName().isEmpty()) {
+          hostName_ = other.hostName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of sqlserver cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of sqlserver cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of sqlserver cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of sqlserver cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of sqlserver cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object hostName_ = "";
+      /**
+       * <pre>
+       * Host name to switch master role to.
+       * To get this name, make a [ClusterService.ListHosts] request.
+       * </pre>
+       *
+       * <code>string host_name = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public java.lang.String getHostName() {
+        java.lang.Object ref = hostName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hostName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Host name to switch master role to.
+       * To get this name, make a [ClusterService.ListHosts] request.
+       * </pre>
+       *
+       * <code>string host_name = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getHostNameBytes() {
+        java.lang.Object ref = hostName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hostName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Host name to switch master role to.
+       * To get this name, make a [ClusterService.ListHosts] request.
+       * </pre>
+       *
+       * <code>string host_name = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public Builder setHostName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        hostName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host name to switch master role to.
+       * To get this name, make a [ClusterService.ListHosts] request.
+       * </pre>
+       *
+       * <code>string host_name = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public Builder clearHostName() {
+        
+        hostName_ = getDefaultInstance().getHostName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host name to switch master role to.
+       * To get this name, make a [ClusterService.ListHosts] request.
+       * </pre>
+       *
+       * <code>string host_name = 2 [(.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public Builder setHostNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        hostName_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.sqlserver.v1.StartClusterFailoverRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.sqlserver.v1.StartClusterFailoverRequest)
+    private static final yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest();
+    }
+
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StartClusterFailoverRequest>
+        PARSER = new com.google.protobuf.AbstractParser<StartClusterFailoverRequest>() {
+      @java.lang.Override
+      public StartClusterFailoverRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StartClusterFailoverRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StartClusterFailoverRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StartClusterFailoverRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StartClusterFailoverMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.sqlserver.v1.StartClusterFailoverMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the sqlserver cluster being failovered.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the sqlserver cluster being failovered.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.StartClusterFailoverMetadata}
+   */
+  public  static final class StartClusterFailoverMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.sqlserver.v1.StartClusterFailoverMetadata)
+      StartClusterFailoverMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StartClusterFailoverMetadata.newBuilder() to construct.
+    private StartClusterFailoverMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StartClusterFailoverMetadata() {
+      clusterId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StartClusterFailoverMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.sqlserver.v1.PSCS.internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterFailoverMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.sqlserver.v1.PSCS.internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterFailoverMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata.class, yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the sqlserver cluster being failovered.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the sqlserver cluster being failovered.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata other = (yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.StartClusterFailoverMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.sqlserver.v1.StartClusterFailoverMetadata)
+        yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSCS.internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterFailoverMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSCS.internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterFailoverMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata.class, yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSCS.internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterFailoverMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata build() {
+        yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata buildPartial() {
+        yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata result = new yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata(this);
+        result.clusterId_ = clusterId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata) {
+          return mergeFrom((yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata other) {
+        if (other == yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the sqlserver cluster being failovered.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the sqlserver cluster being failovered.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the sqlserver cluster being failovered.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the sqlserver cluster being failovered.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the sqlserver cluster being failovered.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.sqlserver.v1.StartClusterFailoverMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.sqlserver.v1.StartClusterFailoverMetadata)
+    private static final yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata();
+    }
+
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StartClusterFailoverMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<StartClusterFailoverMetadata>() {
+      @java.lang.Override
+      public StartClusterFailoverMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StartClusterFailoverMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StartClusterFailoverMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StartClusterFailoverMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverMetadata getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -34945,6 +36818,16 @@ public final class PSCS {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreClusterMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterFailoverRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterFailoverRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterFailoverMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterFailoverMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_sqlserver_v1_LogRecord_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -35069,7 +36952,7 @@ public final class PSCS {
       "1\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"i\n\024L" +
       "istClustersResponse\0228\n\010clusters\030\001 \003(\0132&." +
       "yandex.cloud.mdb.sqlserver.v1.Cluster\022\027\n" +
-      "\017next_page_token\030\002 \001(\t\"\237\006\n\024CreateCluster" +
+      "\017next_page_token\030\002 \001(\t\"\273\006\n\024CreateCluster" +
       "Request\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
       "\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0" +
       "-9_-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\220" +
@@ -35088,177 +36971,189 @@ public final class PSCS {
       "work_id\030\n \001(\tB\010\212\3101\004<=50\022\032\n\022security_grou" +
       "p_ids\030\013 \003(\t\022\033\n\023deletion_protection\030\014 \001(\010" +
       "\022\037\n\014sqlcollation\030\r \001(\tB\t\212\3101\005<=100\022\026\n\016hos" +
-      "t_group_ids\030\016 \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateCluste" +
-      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\356\003\n\024Update" +
-      "ClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.p" +
-      "rotobuf.FieldMask\022\036\n\013description\030\003 \001(\tB\t" +
-      "\212\3101\005<=256\022\220\001\n\006labels\030\004 \003(\0132?.yandex.clou" +
-      "d.mdb.sqlserver.v1.UpdateClusterRequest." +
-      "LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a" +
-      "-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022>\n\013" +
-      "config_spec\030\005 \001(\0132).yandex.cloud.mdb.sql" +
-      "server.v1.ConfigSpec\022(\n\004name\030\006 \001(\tB\032\212\3101\004" +
-      "<=63\362\3071\016[a-zA-Z0-9_-]*\022\032\n\022security_group" +
-      "_ids\030\007 \003(\t\022\033\n\023deletion_protection\030\010 \001(\010\032" +
-      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"+\n\025UpdateClusterMetadata\022\022\n\nclust" +
-      "er_id\030\001 \001(\t\"8\n\024DeleteClusterRequest\022 \n\nc" +
-      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteC" +
-      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024Ba" +
-      "ckupClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\"+\n\025BackupClusterMetadata\022\022\n" +
-      "\ncluster_id\030\001 \001(\t\"\273\005\n\025RestoreClusterRequ" +
-      "est\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\022.\n\004time\030\002 \001" +
-      "(\0132\032.google.protobuf.TimestampB\004\350\3071\001\022$\n\004" +
-      "name\030\004 \001(\tB\026\350\3071\001\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013de" +
-      "scription\030\005 \001(\tB\t\212\3101\005<=256\022\221\001\n\006labels\030\006 " +
-      "\003(\0132@.yandex.cloud.mdb.sqlserver.v1.Rest" +
-      "oreClusterRequest.LabelsEntryB?\202\3101\004<=64\212" +
-      "\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a" +
-      "-z][-_0-9a-z]*\022G\n\013environment\030\007 \001(\01622.ya" +
-      "ndex.cloud.mdb.sqlserver.v1.Cluster.Envi" +
-      "ronment\022>\n\013config_spec\030\010 \001(\0132).yandex.cl" +
-      "oud.mdb.sqlserver.v1.ConfigSpec\022;\n\nhost_" +
-      "specs\030\t \003(\0132\'.yandex.cloud.mdb.sqlserver" +
-      ".v1.HostSpec\022\034\n\nnetwork_id\030\n \001(\tB\010\212\3101\004<=" +
-      "50\022\033\n\tfolder_id\030\013 \001(\tB\010\212\3101\004<=50\022\032\n\022secur" +
-      "ity_group_ids\030\014 \003(\t\022\033\n\023deletion_protecti" +
-      "on\030\r \001(\010\022\026\n\016host_group_ids\030\016 \003(\t\032-\n\013Labe" +
-      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
-      "?\n\026RestoreClusterMetadata\022\022\n\ncluster_id\030" +
-      "\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"\262\001\n\tLogRecord\022-" +
-      "\n\ttimestamp\030\001 \001(\0132\032.google.protobuf.Time" +
-      "stamp\022F\n\007message\030\002 \003(\01325.yandex.cloud.md" +
-      "b.sqlserver.v1.LogRecord.MessageEntry\032.\n" +
-      "\014MessageEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"\335\003\n\026ListClusterLogsRequest\022 \n\nclus" +
-      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_fil" +
-      "ter\030\002 \003(\t\022W\n\014service_type\030\003 \001(\0162A.yandex" +
-      ".cloud.mdb.sqlserver.v1.ListClusterLogsR" +
-      "equest.ServiceType\022-\n\tfrom_time\030\004 \001(\0132\032." +
-      "google.protobuf.Timestamp\022+\n\007to_time\030\005 \001" +
-      "(\0132\032.google.protobuf.Timestamp\022\035\n\tpage_s" +
-      "ize\030\006 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\007 \001(" +
-      "\tB\t\212\3101\005<=100\022\036\n\026always_next_page_token\030\010" +
-      " \001(\010\022\032\n\006filter\030\t \001(\tB\n\212\3101\006<=1000\"[\n\013Serv" +
-      "iceType\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\023\n" +
-      "\017SQLSERVER_ERROR\020\001\022\031\n\025SQLSERVER_APPLICAT" +
-      "ION\020\002\"j\n\027ListClusterLogsResponse\0226\n\004logs" +
-      "\030\001 \003(\0132(.yandex.cloud.mdb.sqlserver.v1.L" +
-      "ogRecord\022\027\n\017next_page_token\030\002 \001(\t\"~\n\034Lis" +
-      "tClusterOperationsRequest\022 \n\ncluster_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n" +
-      "\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=10" +
-      "0\"o\n\035ListClusterOperationsResponse\0225\n\nop" +
-      "erations\030\001 \003(\0132!.yandex.cloud.operation." +
-      "Operation\022\027\n\017next_page_token\030\002 \001(\t\"{\n\031Li" +
-      "stClusterBackupsRequest\022 \n\ncluster_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\307" +
-      "1\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"" +
-      "m\n\032ListClusterBackupsResponse\0226\n\007backups" +
-      "\030\001 \003(\0132%.yandex.cloud.mdb.sqlserver.v1.B" +
-      "ackup\022\027\n\017next_page_token\030\002 \001(\t\"y\n\027ListCl" +
-      "usterHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-10" +
-      "00\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"g\n\030Lis" +
-      "tClusterHostsResponse\0222\n\005hosts\030\001 \003(\0132#.y" +
-      "andex.cloud.mdb.sqlserver.v1.Host\022\027\n\017nex" +
-      "t_page_token\030\002 \001(\t\"7\n\023StartClusterReques" +
-      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024S" +
-      "tartClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"" +
-      "6\n\022StopClusterRequest\022 \n\ncluster_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopClusterMetadata\022\022" +
-      "\n\ncluster_id\030\001 \001(\t\"c\n\022MoveClusterRequest" +
-      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025de" +
-      "stination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
-      "b\n\023MoveClusterMetadata\022\022\n\ncluster_id\030\001 \001" +
-      "(\t\022\030\n\020source_folder_id\030\002 \001(\t\022\035\n\025destinat" +
-      "ion_folder_id\030\003 \001(\t\"D\n\032UpdateClusterHost" +
-      "sMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_na" +
-      "mes\030\002 \003(\t\"\\\n\010HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010" +
-      "\212\3101\004<=50\022\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n" +
-      "\020assign_public_ip\030\003 \001(\010\"\344\003\n\nConfigSpec\022\017" +
-      "\n\007version\030\001 \001(\t\022\202\001\n\033sqlserver_config_201" +
-      "6sp2std\030\002 \001(\0132?.yandex.cloud.mdb.sqlserv" +
-      "er.v1.config.SQLServerConfig2016sp2stdH\000" +
-      "R\032sqlserverConfig_2016sp2std\022\202\001\n\033sqlserv" +
-      "er_config_2016sp2ent\030\005 \001(\0132?.yandex.clou" +
-      "d.mdb.sqlserver.v1.config.SQLServerConfi" +
-      "g2016sp2entH\000R\032sqlserverConfig_2016sp2en" +
-      "t\022;\n\tresources\030\003 \001(\0132(.yandex.cloud.mdb." +
-      "sqlserver.v1.Resources\0223\n\023backup_window_" +
-      "start\030\004 \001(\0132\026.google.type.TimeOfDay\0225\n\006a" +
-      "ccess\030\006 \001(\0132%.yandex.cloud.mdb.sqlserver" +
-      ".v1.AccessB\022\n\020sqlserver_config2\374\023\n\016Clust" +
-      "erService\022\220\001\n\003Get\0220.yandex.cloud.mdb.sql" +
-      "server.v1.GetClusterRequest\032&.yandex.clo" +
-      "ud.mdb.sqlserver.v1.Cluster\"/\202\323\344\223\002)\022\'/md" +
-      "b/sqlserver/v1/clusters/{cluster_id}\022\223\001\n" +
-      "\004List\0222.yandex.cloud.mdb.sqlserver.v1.Li" +
-      "stClustersRequest\0323.yandex.cloud.mdb.sql" +
-      "server.v1.ListClustersResponse\"\"\202\323\344\223\002\034\022\032" +
-      "/mdb/sqlserver/v1/clusters\022\253\001\n\006Create\0223." +
-      "yandex.cloud.mdb.sqlserver.v1.CreateClus" +
-      "terRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"I\202\323\344\223\002\037\"\032/mdb/sqlserver/v1/cluster" +
-      "s:\001*\262\322* \n\025CreateClusterMetadata\022\007Cluster" +
-      "\022\270\001\n\006Update\0223.yandex.cloud.mdb.sqlserver" +
-      ".v1.UpdateClusterRequest\032!.yandex.cloud." +
-      "operation.Operation\"V\202\323\344\223\002,2\'/mdb/sqlser" +
-      "ver/v1/clusters/{cluster_id}:\001*\262\322* \n\025Upd" +
-      "ateClusterMetadata\022\007Cluster\022\303\001\n\006Delete\0223" +
-      ".yandex.cloud.mdb.sqlserver.v1.DeleteClu" +
-      "sterRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"a\202\323\344\223\002)*\'/mdb/sqlserver/v1/cluste" +
-      "rs/{cluster_id}\262\322*.\n\025DeleteClusterMetada" +
-      "ta\022\025google.protobuf.Empty\022\270\001\n\005Start\0222.ya" +
-      "ndex.cloud.mdb.sqlserver.v1.StartCluster" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"X\202\323\344\223\002/\"-/mdb/sqlserver/v1/clusters/{" +
-      "cluster_id}:start\262\322*\037\n\024StartClusterMetad" +
-      "ata\022\007Cluster\022\264\001\n\004Stop\0221.yandex.cloud.mdb" +
-      ".sqlserver.v1.StopClusterRequest\032!.yande" +
-      "x.cloud.operation.Operation\"V\202\323\344\223\002.\",/md" +
-      "b/sqlserver/v1/clusters/{cluster_id}:sto" +
-      "p\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\267\001\n\004" +
-      "Move\0221.yandex.cloud.mdb.sqlserver.v1.Mov" +
+      "t_group_ids\030\016 \003(\t\022\032\n\022service_account_id\030" +
+      "\017 \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\"+\n\025CreateClusterMetadata\022\022\n" +
+      "\ncluster_id\030\001 \001(\t\"\212\004\n\024UpdateClusterReque" +
+      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013" +
+      "update_mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
+      "dMask\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\220\001" +
+      "\n\006labels\030\004 \003(\0132?.yandex.cloud.mdb.sqlser" +
+      "ver.v1.UpdateClusterRequest.LabelsEntryB" +
+      "?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-" +
+      "63\262\3101\022\022\020[a-z][-_0-9a-z]*\022>\n\013config_spec\030" +
+      "\005 \001(\0132).yandex.cloud.mdb.sqlserver.v1.Co" +
+      "nfigSpec\022(\n\004name\030\006 \001(\tB\032\212\3101\004<=63\362\3071\016[a-z" +
+      "A-Z0-9_-]*\022\032\n\022security_group_ids\030\007 \003(\t\022\033" +
+      "\n\023deletion_protection\030\010 \001(\010\022\032\n\022service_a" +
+      "ccount_id\030\t \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterM" +
+      "etadata\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024DeleteClu" +
+      "sterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\"+\n\025DeleteClusterMetadata\022\022\n\ncluste" +
+      "r_id\030\001 \001(\t\"8\n\024BackupClusterRequest\022 \n\ncl" +
+      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025BackupCl" +
+      "usterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\327\005\n\025Re" +
+      "storeClusterRequest\022\027\n\tbackup_id\030\001 \001(\tB\004" +
+      "\350\3071\001\022.\n\004time\030\002 \001(\0132\032.google.protobuf.Tim" +
+      "estampB\004\350\3071\001\022$\n\004name\030\004 \001(\tB\026\350\3071\001\362\3071\016[a-z" +
+      "A-Z0-9_-]*\022\036\n\013description\030\005 \001(\tB\t\212\3101\005<=2" +
+      "56\022\221\001\n\006labels\030\006 \003(\0132@.yandex.cloud.mdb.s" +
+      "qlserver.v1.RestoreClusterRequest.Labels" +
+      "EntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\310" +
+      "1\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022G\n\013enviro" +
+      "nment\030\007 \001(\01622.yandex.cloud.mdb.sqlserver" +
+      ".v1.Cluster.Environment\022>\n\013config_spec\030\010" +
+      " \001(\0132).yandex.cloud.mdb.sqlserver.v1.Con" +
+      "figSpec\022;\n\nhost_specs\030\t \003(\0132\'.yandex.clo" +
+      "ud.mdb.sqlserver.v1.HostSpec\022\034\n\nnetwork_" +
+      "id\030\n \001(\tB\010\212\3101\004<=50\022\033\n\tfolder_id\030\013 \001(\tB\010\212" +
+      "\3101\004<=50\022\032\n\022security_group_ids\030\014 \003(\t\022\033\n\023d" +
+      "eletion_protection\030\r \001(\010\022\026\n\016host_group_i" +
+      "ds\030\016 \003(\t\022\032\n\022service_account_id\030\017 \001(\t\032-\n\013" +
+      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\"?\n\026RestoreClusterMetadata\022\022\n\ncluster" +
+      "_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"]\n\033StartClu" +
+      "sterFailoverRequest\022 \n\ncluster_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022\034\n\thost_name\030\002 \001(\tB\t\212\3101\005<=" +
+      "253\"2\n\034StartClusterFailoverMetadata\022\022\n\nc" +
+      "luster_id\030\001 \001(\t\"\262\001\n\tLogRecord\022-\n\ttimesta" +
+      "mp\030\001 \001(\0132\032.google.protobuf.Timestamp\022F\n\007" +
+      "message\030\002 \003(\01325.yandex.cloud.mdb.sqlserv" +
+      "er.v1.LogRecord.MessageEntry\032.\n\014MessageE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\335\003\n" +
+      "\026ListClusterLogsRequest\022 \n\ncluster_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t" +
+      "\022W\n\014service_type\030\003 \001(\0162A.yandex.cloud.md" +
+      "b.sqlserver.v1.ListClusterLogsRequest.Se" +
+      "rviceType\022-\n\tfrom_time\030\004 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.goog" +
+      "le.protobuf.Timestamp\022\035\n\tpage_size\030\006 \001(\003" +
+      "B\n\372\3071\0060-1000\022\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<=" +
+      "100\022\036\n\026always_next_page_token\030\010 \001(\010\022\032\n\006f" +
+      "ilter\030\t \001(\tB\n\212\3101\006<=1000\"[\n\013ServiceType\022\034" +
+      "\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\023\n\017SQLSERVE" +
+      "R_ERROR\020\001\022\031\n\025SQLSERVER_APPLICATION\020\002\"j\n\027" +
+      "ListClusterLogsResponse\0226\n\004logs\030\001 \003(\0132(." +
+      "yandex.cloud.mdb.sqlserver.v1.LogRecord\022" +
+      "\027\n\017next_page_token\030\002 \001(\t\"~\n\034ListClusterO" +
+      "perationsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-100" +
+      "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035List" +
+      "ClusterOperationsResponse\0225\n\noperations\030" +
+      "\001 \003(\0132!.yandex.cloud.operation.Operation" +
+      "\022\027\n\017next_page_token\030\002 \001(\t\"{\n\031ListCluster" +
+      "BackupsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022" +
+      "\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"m\n\032ListCl" +
+      "usterBackupsResponse\0226\n\007backups\030\001 \003(\0132%." +
+      "yandex.cloud.mdb.sqlserver.v1.Backup\022\027\n\017" +
+      "next_page_token\030\002 \001(\t\"y\n\027ListClusterHost" +
+      "sRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npag" +
+      "e_token\030\003 \001(\tB\t\212\3101\005<=100\"g\n\030ListClusterH" +
+      "ostsResponse\0222\n\005hosts\030\001 \003(\0132#.yandex.clo" +
+      "ud.mdb.sqlserver.v1.Host\022\027\n\017next_page_to" +
+      "ken\030\002 \001(\t\"7\n\023StartClusterRequest\022 \n\nclus" +
+      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClust" +
+      "erMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopCl" +
+      "usterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\")\n\023StopClusterMetadata\022\022\n\ncluster" +
+      "_id\030\001 \001(\t\"c\n\022MoveClusterRequest\022 \n\nclust" +
+      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination" +
+      "_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023MoveCl" +
+      "usterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020sou" +
+      "rce_folder_id\030\002 \001(\t\022\035\n\025destination_folde" +
+      "r_id\030\003 \001(\t\"D\n\032UpdateClusterHostsMetadata" +
+      "\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t" +
+      "\"\\\n\010HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=50\022" +
+      "\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_p" +
+      "ublic_ip\030\003 \001(\010\"\344\003\n\nConfigSpec\022\017\n\007version" +
+      "\030\001 \001(\t\022\202\001\n\033sqlserver_config_2016sp2std\030\002" +
+      " \001(\0132?.yandex.cloud.mdb.sqlserver.v1.con" +
+      "fig.SQLServerConfig2016sp2stdH\000R\032sqlserv" +
+      "erConfig_2016sp2std\022\202\001\n\033sqlserver_config" +
+      "_2016sp2ent\030\005 \001(\0132?.yandex.cloud.mdb.sql" +
+      "server.v1.config.SQLServerConfig2016sp2e" +
+      "ntH\000R\032sqlserverConfig_2016sp2ent\022;\n\treso" +
+      "urces\030\003 \001(\0132(.yandex.cloud.mdb.sqlserver" +
+      ".v1.Resources\0223\n\023backup_window_start\030\004 \001" +
+      "(\0132\026.google.type.TimeOfDay\0225\n\006access\030\006 \001" +
+      "(\0132%.yandex.cloud.mdb.sqlserver.v1.Acces" +
+      "sB\022\n\020sqlserver_config2\332\025\n\016ClusterService" +
+      "\022\220\001\n\003Get\0220.yandex.cloud.mdb.sqlserver.v1" +
+      ".GetClusterRequest\032&.yandex.cloud.mdb.sq" +
+      "lserver.v1.Cluster\"/\202\323\344\223\002)\022\'/mdb/sqlserv" +
+      "er/v1/clusters/{cluster_id}\022\223\001\n\004List\0222.y" +
+      "andex.cloud.mdb.sqlserver.v1.ListCluster" +
+      "sRequest\0323.yandex.cloud.mdb.sqlserver.v1" +
+      ".ListClustersResponse\"\"\202\323\344\223\002\034\022\032/mdb/sqls" +
+      "erver/v1/clusters\022\253\001\n\006Create\0223.yandex.cl" +
+      "oud.mdb.sqlserver.v1.CreateClusterReques" +
+      "t\032!.yandex.cloud.operation.Operation\"I\202\323" +
+      "\344\223\002\037\"\032/mdb/sqlserver/v1/clusters:\001*\262\322* \n" +
+      "\025CreateClusterMetadata\022\007Cluster\022\270\001\n\006Upda" +
+      "te\0223.yandex.cloud.mdb.sqlserver.v1.Updat" +
       "eClusterRequest\032!.yandex.cloud.operation" +
-      ".Operation\"Y\202\323\344\223\0021\",/mdb/sqlserver/v1/cl" +
-      "usters/{cluster_id}:move:\001*\262\322*\036\n\023MoveClu" +
-      "sterMetadata\022\007Cluster\022\274\001\n\006Backup\0223.yande" +
-      "x.cloud.mdb.sqlserver.v1.BackupClusterRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"Z\202\323\344\223\0020\"./mdb/sqlserver/v1/clusters/{cl" +
-      "uster_id}:backup\262\322* \n\025BackupClusterMetad" +
-      "ata\022\007Cluster\022\266\001\n\007Restore\0224.yandex.cloud." +
-      "mdb.sqlserver.v1.RestoreClusterRequest\032!" +
-      ".yandex.cloud.operation.Operation\"R\202\323\344\223\002" +
-      "\'\"\"/mdb/sqlserver/v1/clusters:restore:\001*" +
-      "\262\322*!\n\026RestoreClusterMetadata\022\007Cluster\022\257\001" +
-      "\n\010ListLogs\0225.yandex.cloud.mdb.sqlserver." +
-      "v1.ListClusterLogsRequest\0326.yandex.cloud" +
-      ".mdb.sqlserver.v1.ListClusterLogsRespons" +
-      "e\"4\202\323\344\223\002.\022,/mdb/sqlserver/v1/clusters/{c" +
-      "luster_id}:logs\022\307\001\n\016ListOperations\022;.yan" +
-      "dex.cloud.mdb.sqlserver.v1.ListClusterOp" +
-      "erationsRequest\032<.yandex.cloud.mdb.sqlse" +
-      "rver.v1.ListClusterOperationsResponse\":\202" +
-      "\323\344\223\0024\0222/mdb/sqlserver/v1/clusters/{clust" +
-      "er_id}/operations\022\273\001\n\013ListBackups\0228.yand" +
-      "ex.cloud.mdb.sqlserver.v1.ListClusterBac" +
-      "kupsRequest\0329.yandex.cloud.mdb.sqlserver" +
-      ".v1.ListClusterBackupsResponse\"7\202\323\344\223\0021\022/" +
-      "/mdb/sqlserver/v1/clusters/{cluster_id}/" +
-      "backups\022\263\001\n\tListHosts\0226.yandex.cloud.mdb" +
-      ".sqlserver.v1.ListClusterHostsRequest\0327." +
-      "yandex.cloud.mdb.sqlserver.v1.ListCluste" +
-      "rHostsResponse\"5\202\323\344\223\002/\022-/mdb/sqlserver/v" +
-      "1/clusters/{cluster_id}/hostsBv\n!yandex." +
-      "cloud.api.mdb.sqlserver.v1B\004PSCSZKgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/mdb/sqlserver/v1;sqlserverb\006proto3"
+      ".Operation\"V\202\323\344\223\002,2\'/mdb/sqlserver/v1/cl" +
+      "usters/{cluster_id}:\001*\262\322* \n\025UpdateCluste" +
+      "rMetadata\022\007Cluster\022\303\001\n\006Delete\0223.yandex.c" +
+      "loud.mdb.sqlserver.v1.DeleteClusterReque" +
+      "st\032!.yandex.cloud.operation.Operation\"a\202" +
+      "\323\344\223\002)*\'/mdb/sqlserver/v1/clusters/{clust" +
+      "er_id}\262\322*.\n\025DeleteClusterMetadata\022\025googl" +
+      "e.protobuf.Empty\022\270\001\n\005Start\0222.yandex.clou" +
+      "d.mdb.sqlserver.v1.StartClusterRequest\032!" +
+      ".yandex.cloud.operation.Operation\"X\202\323\344\223\002" +
+      "/\"-/mdb/sqlserver/v1/clusters/{cluster_i" +
+      "d}:start\262\322*\037\n\024StartClusterMetadata\022\007Clus" +
+      "ter\022\264\001\n\004Stop\0221.yandex.cloud.mdb.sqlserve" +
+      "r.v1.StopClusterRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"V\202\323\344\223\002.\",/mdb/sqlserv" +
+      "er/v1/clusters/{cluster_id}:stop\262\322*\036\n\023St" +
+      "opClusterMetadata\022\007Cluster\022\267\001\n\004Move\0221.ya" +
+      "ndex.cloud.mdb.sqlserver.v1.MoveClusterR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"Y\202\323\344\223\0021\",/mdb/sqlserver/v1/clusters/{c" +
+      "luster_id}:move:\001*\262\322*\036\n\023MoveClusterMetad" +
+      "ata\022\007Cluster\022\274\001\n\006Backup\0223.yandex.cloud.m" +
+      "db.sqlserver.v1.BackupClusterRequest\032!.y" +
+      "andex.cloud.operation.Operation\"Z\202\323\344\223\0020\"" +
+      "./mdb/sqlserver/v1/clusters/{cluster_id}" +
+      ":backup\262\322* \n\025BackupClusterMetadata\022\007Clus" +
+      "ter\022\266\001\n\007Restore\0224.yandex.cloud.mdb.sqlse" +
+      "rver.v1.RestoreClusterRequest\032!.yandex.c" +
+      "loud.operation.Operation\"R\202\323\344\223\002\'\"\"/mdb/s" +
+      "qlserver/v1/clusters:restore:\001*\262\322*!\n\026Res" +
+      "toreClusterMetadata\022\007Cluster\022\333\001\n\rStartFa" +
+      "ilover\022:.yandex.cloud.mdb.sqlserver.v1.S" +
+      "tartClusterFailoverRequest\032!.yandex.clou" +
+      "d.operation.Operation\"k\202\323\344\223\002:\"5/mdb/sqls" +
+      "erver/v1/clusters/{cluster_id}:startFail" +
+      "over:\001*\262\322*\'\n\034StartClusterFailoverMetadat" +
+      "a\022\007Cluster\022\257\001\n\010ListLogs\0225.yandex.cloud.m" +
+      "db.sqlserver.v1.ListClusterLogsRequest\0326" +
+      ".yandex.cloud.mdb.sqlserver.v1.ListClust" +
+      "erLogsResponse\"4\202\323\344\223\002.\022,/mdb/sqlserver/v" +
+      "1/clusters/{cluster_id}:logs\022\307\001\n\016ListOpe" +
+      "rations\022;.yandex.cloud.mdb.sqlserver.v1." +
+      "ListClusterOperationsRequest\032<.yandex.cl" +
+      "oud.mdb.sqlserver.v1.ListClusterOperatio" +
+      "nsResponse\":\202\323\344\223\0024\0222/mdb/sqlserver/v1/cl" +
+      "usters/{cluster_id}/operations\022\273\001\n\013ListB" +
+      "ackups\0228.yandex.cloud.mdb.sqlserver.v1.L" +
+      "istClusterBackupsRequest\0329.yandex.cloud." +
+      "mdb.sqlserver.v1.ListClusterBackupsRespo" +
+      "nse\"7\202\323\344\223\0021\022//mdb/sqlserver/v1/clusters/" +
+      "{cluster_id}/backups\022\263\001\n\tListHosts\0226.yan" +
+      "dex.cloud.mdb.sqlserver.v1.ListClusterHo" +
+      "stsRequest\0327.yandex.cloud.mdb.sqlserver." +
+      "v1.ListClusterHostsResponse\"5\202\323\344\223\002/\022-/md" +
+      "b/sqlserver/v1/clusters/{cluster_id}/hos" +
+      "tsBv\n!yandex.cloud.api.mdb.sqlserver.v1B" +
+      "\004PSCSZKgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/mdb/sqlserver/v1;sqlserv" +
+      "erb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -35307,7 +37202,7 @@ public final class PSCS {
     internal_static_yandex_cloud_mdb_sqlserver_v1_CreateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_CreateClusterRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "DatabaseSpecs", "UserSpecs", "HostSpecs", "NetworkId", "SecurityGroupIds", "DeletionProtection", "Sqlcollation", "HostGroupIds", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "DatabaseSpecs", "UserSpecs", "HostSpecs", "NetworkId", "SecurityGroupIds", "DeletionProtection", "Sqlcollation", "HostGroupIds", "ServiceAccountId", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_CreateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_sqlserver_v1_CreateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_sqlserver_v1_CreateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -35325,7 +37220,7 @@ public final class PSCS {
     internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateClusterRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "ConfigSpec", "Name", "SecurityGroupIds", "DeletionProtection", });
+        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "ConfigSpec", "Name", "SecurityGroupIds", "DeletionProtection", "ServiceAccountId", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -35367,7 +37262,7 @@ public final class PSCS {
     internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreClusterRequest_descriptor,
-        new java.lang.String[] { "BackupId", "Time", "Name", "Description", "Labels", "Environment", "ConfigSpec", "HostSpecs", "NetworkId", "FolderId", "SecurityGroupIds", "DeletionProtection", "HostGroupIds", });
+        new java.lang.String[] { "BackupId", "Time", "Name", "Description", "Labels", "Environment", "ConfigSpec", "HostSpecs", "NetworkId", "FolderId", "SecurityGroupIds", "DeletionProtection", "HostGroupIds", "ServiceAccountId", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -35380,8 +37275,20 @@ public final class PSCS {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreClusterMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "BackupId", });
-    internal_static_yandex_cloud_mdb_sqlserver_v1_LogRecord_descriptor =
+    internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterFailoverRequest_descriptor =
       getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterFailoverRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterFailoverRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "HostName", });
+    internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterFailoverMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterFailoverMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterFailoverMetadata_descriptor,
+        new java.lang.String[] { "ClusterId", });
+    internal_static_yandex_cloud_mdb_sqlserver_v1_LogRecord_descriptor =
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_mdb_sqlserver_v1_LogRecord_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_LogRecord_descriptor,
@@ -35393,103 +37300,103 @@ public final class PSCS {
         internal_static_yandex_cloud_mdb_sqlserver_v1_LogRecord_MessageEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterLogsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterLogsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterLogsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ColumnFilter", "ServiceType", "FromTime", "ToTime", "PageSize", "PageToken", "AlwaysNextPageToken", "Filter", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterLogsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterLogsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterLogsResponse_descriptor,
         new java.lang.String[] { "Logs", "NextPageToken", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterOperationsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterBackupsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterBackupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterBackupsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterBackupsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterBackupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterBackupsResponse_descriptor,
         new java.lang.String[] { "Backups", "NextPageToken", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterHostsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterHostsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_ListClusterHostsResponse_descriptor,
         new java.lang.String[] { "Hosts", "NextPageToken", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterRequest_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterRequest_descriptor,
         new java.lang.String[] { "ClusterId", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_StartClusterMetadata_descriptor,
         new java.lang.String[] { "ClusterId", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_StopClusterRequest_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_yandex_cloud_mdb_sqlserver_v1_StopClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_StopClusterRequest_descriptor,
         new java.lang.String[] { "ClusterId", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_StopClusterMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_yandex_cloud_mdb_sqlserver_v1_StopClusterMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_StopClusterMetadata_descriptor,
         new java.lang.String[] { "ClusterId", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_MoveClusterRequest_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_yandex_cloud_mdb_sqlserver_v1_MoveClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_MoveClusterRequest_descriptor,
         new java.lang.String[] { "ClusterId", "DestinationFolderId", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_MoveClusterMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_yandex_cloud_mdb_sqlserver_v1_MoveClusterMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_MoveClusterMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "SourceFolderId", "DestinationFolderId", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateClusterHostsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateClusterHostsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateClusterHostsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_HostSpec_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_yandex_cloud_mdb_sqlserver_v1_HostSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_HostSpec_descriptor,
         new java.lang.String[] { "ZoneId", "SubnetId", "AssignPublicIp", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_ConfigSpec_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_yandex_cloud_mdb_sqlserver_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_ConfigSpec_descriptor,

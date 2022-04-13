@@ -158,6 +158,70 @@ public final class DatabaseServiceGrpc {
      return getRestoreMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getImportBackupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ImportBackup",
+      requestType = yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getImportBackupMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getImportBackupMethod;
+    if ((getImportBackupMethod = DatabaseServiceGrpc.getImportBackupMethod) == null) {
+      synchronized (DatabaseServiceGrpc.class) {
+        if ((getImportBackupMethod = DatabaseServiceGrpc.getImportBackupMethod) == null) {
+          DatabaseServiceGrpc.getImportBackupMethod = getImportBackupMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.mdb.sqlserver.v1.DatabaseService", "ImportBackup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("ImportBackup"))
+                  .build();
+          }
+        }
+     }
+     return getImportBackupMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getExportBackupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ExportBackup",
+      requestType = yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getExportBackupMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getExportBackupMethod;
+    if ((getExportBackupMethod = DatabaseServiceGrpc.getExportBackupMethod) == null) {
+      synchronized (DatabaseServiceGrpc.class) {
+        if ((getExportBackupMethod = DatabaseServiceGrpc.getExportBackupMethod) == null) {
+          DatabaseServiceGrpc.getExportBackupMethod = getExportBackupMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.mdb.sqlserver.v1.DatabaseService", "ExportBackup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("ExportBackup"))
+                  .build();
+          }
+        }
+     }
+     return getExportBackupMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSDS.DeleteDatabaseRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
 
@@ -263,6 +327,26 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
+     *Imports a new SQL Server database from external backup
+     * </pre>
+     */
+    public void importBackup(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getImportBackupMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     *Exports database backup to external backup
+     * </pre>
+     */
+    public void exportBackup(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getExportBackupMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified SQL Server database.
      * </pre>
      */
@@ -301,6 +385,20 @@ public final class DatabaseServiceGrpc {
                 yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_RESTORE)))
+          .addMethod(
+            getImportBackupMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_IMPORT_BACKUP)))
+          .addMethod(
+            getExportBackupMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_EXPORT_BACKUP)))
           .addMethod(
             getDeleteMethod(),
             asyncUnaryCall(
@@ -380,6 +478,28 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
+     *Imports a new SQL Server database from external backup
+     * </pre>
+     */
+    public void importBackup(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getImportBackupMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *Exports database backup to external backup
+     * </pre>
+     */
+    public void exportBackup(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getExportBackupMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified SQL Server database.
      * </pre>
      */
@@ -450,6 +570,26 @@ public final class DatabaseServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation restore(yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest request) {
       return blockingUnaryCall(
           getChannel(), getRestoreMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     *Imports a new SQL Server database from external backup
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation importBackup(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getImportBackupMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     *Exports database backup to external backup
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation exportBackup(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getExportBackupMethod(), getCallOptions(), request);
     }
 
     /**
@@ -531,6 +671,28 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
+     *Imports a new SQL Server database from external backup
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> importBackup(
+        yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getImportBackupMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     *Exports database backup to external backup
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> exportBackup(
+        yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getExportBackupMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified SQL Server database.
      * </pre>
      */
@@ -545,7 +707,9 @@ public final class DatabaseServiceGrpc {
   private static final int METHODID_LIST = 1;
   private static final int METHODID_CREATE = 2;
   private static final int METHODID_RESTORE = 3;
-  private static final int METHODID_DELETE = 4;
+  private static final int METHODID_IMPORT_BACKUP = 4;
+  private static final int METHODID_EXPORT_BACKUP = 5;
+  private static final int METHODID_DELETE = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -578,6 +742,14 @@ public final class DatabaseServiceGrpc {
           break;
         case METHODID_RESTORE:
           serviceImpl.restore((yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_IMPORT_BACKUP:
+          serviceImpl.importBackup((yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_EXPORT_BACKUP:
+          serviceImpl.exportBackup((yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_DELETE:
@@ -649,6 +821,8 @@ public final class DatabaseServiceGrpc {
               .addMethod(getListMethod())
               .addMethod(getCreateMethod())
               .addMethod(getRestoreMethod())
+              .addMethod(getImportBackupMethod())
+              .addMethod(getExportBackupMethod())
               .addMethod(getDeleteMethod())
               .build();
         }

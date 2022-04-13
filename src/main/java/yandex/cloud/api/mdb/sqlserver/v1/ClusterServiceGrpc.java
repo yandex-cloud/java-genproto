@@ -350,6 +350,38 @@ public final class ClusterServiceGrpc {
      return getRestoreMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getStartFailoverMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "StartFailover",
+      requestType = yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getStartFailoverMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getStartFailoverMethod;
+    if ((getStartFailoverMethod = ClusterServiceGrpc.getStartFailoverMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getStartFailoverMethod = ClusterServiceGrpc.getStartFailoverMethod) == null) {
+          ClusterServiceGrpc.getStartFailoverMethod = getStartFailoverMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.mdb.sqlserver.v1.ClusterService", "StartFailover"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("StartFailover"))
+                  .build();
+          }
+        }
+     }
+     return getStartFailoverMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSCS.ListClusterLogsRequest,
       yandex.cloud.api.mdb.sqlserver.v1.PSCS.ListClusterLogsResponse> getListLogsMethod;
 
@@ -611,6 +643,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Starts a manual failover for a cluster.
+     * </pre>
+     */
+    public void startFailover(yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getStartFailoverMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Retrieves logs for the specified SQL Server cluster.
      * For more information about logs, see the [Logs](/docs/managed-sqlserver/operations/cluster-logs) section in the documentation.
      * </pre>
@@ -722,6 +764,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.sqlserver.v1.PSCS.RestoreClusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_RESTORE)))
+          .addMethod(
+            getStartFailoverMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_START_FAILOVER)))
           .addMethod(
             getListLogsMethod(),
             asyncUnaryCall(
@@ -884,6 +933,17 @@ public final class ClusterServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getRestoreMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Starts a manual failover for a cluster.
+     * </pre>
+     */
+    public void startFailover(yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getStartFailoverMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1052,6 +1112,16 @@ public final class ClusterServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation restore(yandex.cloud.api.mdb.sqlserver.v1.PSCS.RestoreClusterRequest request) {
       return blockingUnaryCall(
           getChannel(), getRestoreMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Starts a manual failover for a cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation startFailover(yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getStartFailoverMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1230,6 +1300,17 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Starts a manual failover for a cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> startFailover(
+        yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getStartFailoverMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Retrieves logs for the specified SQL Server cluster.
      * For more information about logs, see the [Logs](/docs/managed-sqlserver/operations/cluster-logs) section in the documentation.
      * </pre>
@@ -1284,10 +1365,11 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_MOVE = 7;
   private static final int METHODID_BACKUP = 8;
   private static final int METHODID_RESTORE = 9;
-  private static final int METHODID_LIST_LOGS = 10;
-  private static final int METHODID_LIST_OPERATIONS = 11;
-  private static final int METHODID_LIST_BACKUPS = 12;
-  private static final int METHODID_LIST_HOSTS = 13;
+  private static final int METHODID_START_FAILOVER = 10;
+  private static final int METHODID_LIST_LOGS = 11;
+  private static final int METHODID_LIST_OPERATIONS = 12;
+  private static final int METHODID_LIST_BACKUPS = 13;
+  private static final int METHODID_LIST_HOSTS = 14;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1344,6 +1426,10 @@ public final class ClusterServiceGrpc {
           break;
         case METHODID_RESTORE:
           serviceImpl.restore((yandex.cloud.api.mdb.sqlserver.v1.PSCS.RestoreClusterRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_START_FAILOVER:
+          serviceImpl.startFailover((yandex.cloud.api.mdb.sqlserver.v1.PSCS.StartClusterFailoverRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_LIST_LOGS:
@@ -1433,6 +1519,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getMoveMethod())
               .addMethod(getBackupMethod())
               .addMethod(getRestoreMethod())
+              .addMethod(getStartFailoverMethod())
               .addMethod(getListLogsMethod())
               .addMethod(getListOperationsMethod())
               .addMethod(getListBackupsMethod())
