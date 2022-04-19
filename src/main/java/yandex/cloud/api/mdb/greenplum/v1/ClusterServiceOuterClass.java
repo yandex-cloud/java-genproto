@@ -26238,6 +26238,2911 @@ public final class ClusterServiceOuterClass {
 
   }
 
+  public interface StreamLogRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.StreamLogRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * One of the requested log records.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LogRecord record = 1;</code>
+     */
+    boolean hasRecord();
+    /**
+     * <pre>
+     * One of the requested log records.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LogRecord record = 1;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord getRecord();
+    /**
+     * <pre>
+     * One of the requested log records.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LogRecord record = 1;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecordOrBuilder getRecordOrBuilder();
+
+    /**
+     * <pre>
+     * This token allows you to continue streaming logs starting from the exact
+     * same record. To continue streaming, specify value of `next_record_token`
+     * as value for `record_token` parameter in the next StreamLogs request.
+     * This value is interchangeable with `next_page_token` from ListLogs method.
+     * </pre>
+     *
+     * <code>string next_record_token = 2;</code>
+     */
+    java.lang.String getNextRecordToken();
+    /**
+     * <pre>
+     * This token allows you to continue streaming logs starting from the exact
+     * same record. To continue streaming, specify value of `next_record_token`
+     * as value for `record_token` parameter in the next StreamLogs request.
+     * This value is interchangeable with `next_page_token` from ListLogs method.
+     * </pre>
+     *
+     * <code>string next_record_token = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNextRecordTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.StreamLogRecord}
+   */
+  public  static final class StreamLogRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.StreamLogRecord)
+      StreamLogRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StreamLogRecord.newBuilder() to construct.
+    private StreamLogRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StreamLogRecord() {
+      nextRecordToken_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StreamLogRecord(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord.Builder subBuilder = null;
+              if (record_ != null) {
+                subBuilder = record_.toBuilder();
+              }
+              record_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(record_);
+                record_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextRecordToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_greenplum_v1_StreamLogRecord_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_greenplum_v1_StreamLogRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord.class, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord.Builder.class);
+    }
+
+    public static final int RECORD_FIELD_NUMBER = 1;
+    private yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord record_;
+    /**
+     * <pre>
+     * One of the requested log records.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LogRecord record = 1;</code>
+     */
+    public boolean hasRecord() {
+      return record_ != null;
+    }
+    /**
+     * <pre>
+     * One of the requested log records.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LogRecord record = 1;</code>
+     */
+    public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord getRecord() {
+      return record_ == null ? yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord.getDefaultInstance() : record_;
+    }
+    /**
+     * <pre>
+     * One of the requested log records.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LogRecord record = 1;</code>
+     */
+    public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecordOrBuilder getRecordOrBuilder() {
+      return getRecord();
+    }
+
+    public static final int NEXT_RECORD_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextRecordToken_;
+    /**
+     * <pre>
+     * This token allows you to continue streaming logs starting from the exact
+     * same record. To continue streaming, specify value of `next_record_token`
+     * as value for `record_token` parameter in the next StreamLogs request.
+     * This value is interchangeable with `next_page_token` from ListLogs method.
+     * </pre>
+     *
+     * <code>string next_record_token = 2;</code>
+     */
+    public java.lang.String getNextRecordToken() {
+      java.lang.Object ref = nextRecordToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextRecordToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This token allows you to continue streaming logs starting from the exact
+     * same record. To continue streaming, specify value of `next_record_token`
+     * as value for `record_token` parameter in the next StreamLogs request.
+     * This value is interchangeable with `next_page_token` from ListLogs method.
+     * </pre>
+     *
+     * <code>string next_record_token = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNextRecordTokenBytes() {
+      java.lang.Object ref = nextRecordToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextRecordToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (record_ != null) {
+        output.writeMessage(1, getRecord());
+      }
+      if (!getNextRecordTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextRecordToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (record_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getRecord());
+      }
+      if (!getNextRecordTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextRecordToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord other = (yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord) obj;
+
+      boolean result = true;
+      result = result && (hasRecord() == other.hasRecord());
+      if (hasRecord()) {
+        result = result && getRecord()
+            .equals(other.getRecord());
+      }
+      result = result && getNextRecordToken()
+          .equals(other.getNextRecordToken());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRecord()) {
+        hash = (37 * hash) + RECORD_FIELD_NUMBER;
+        hash = (53 * hash) + getRecord().hashCode();
+      }
+      hash = (37 * hash) + NEXT_RECORD_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextRecordToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.StreamLogRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.StreamLogRecord)
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_greenplum_v1_StreamLogRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_greenplum_v1_StreamLogRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord.class, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (recordBuilder_ == null) {
+          record_ = null;
+        } else {
+          record_ = null;
+          recordBuilder_ = null;
+        }
+        nextRecordToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_greenplum_v1_StreamLogRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord build() {
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord result = new yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord(this);
+        if (recordBuilder_ == null) {
+          result.record_ = record_;
+        } else {
+          result.record_ = recordBuilder_.build();
+        }
+        result.nextRecordToken_ = nextRecordToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord.getDefaultInstance()) return this;
+        if (other.hasRecord()) {
+          mergeRecord(other.getRecord());
+        }
+        if (!other.getNextRecordToken().isEmpty()) {
+          nextRecordToken_ = other.nextRecordToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord record_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord.Builder, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecordOrBuilder> recordBuilder_;
+      /**
+       * <pre>
+       * One of the requested log records.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LogRecord record = 1;</code>
+       */
+      public boolean hasRecord() {
+        return recordBuilder_ != null || record_ != null;
+      }
+      /**
+       * <pre>
+       * One of the requested log records.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LogRecord record = 1;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord getRecord() {
+        if (recordBuilder_ == null) {
+          return record_ == null ? yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord.getDefaultInstance() : record_;
+        } else {
+          return recordBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * One of the requested log records.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LogRecord record = 1;</code>
+       */
+      public Builder setRecord(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord value) {
+        if (recordBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          record_ = value;
+          onChanged();
+        } else {
+          recordBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * One of the requested log records.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LogRecord record = 1;</code>
+       */
+      public Builder setRecord(
+          yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord.Builder builderForValue) {
+        if (recordBuilder_ == null) {
+          record_ = builderForValue.build();
+          onChanged();
+        } else {
+          recordBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * One of the requested log records.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LogRecord record = 1;</code>
+       */
+      public Builder mergeRecord(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord value) {
+        if (recordBuilder_ == null) {
+          if (record_ != null) {
+            record_ =
+              yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord.newBuilder(record_).mergeFrom(value).buildPartial();
+          } else {
+            record_ = value;
+          }
+          onChanged();
+        } else {
+          recordBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * One of the requested log records.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LogRecord record = 1;</code>
+       */
+      public Builder clearRecord() {
+        if (recordBuilder_ == null) {
+          record_ = null;
+          onChanged();
+        } else {
+          record_ = null;
+          recordBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * One of the requested log records.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LogRecord record = 1;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord.Builder getRecordBuilder() {
+        
+        onChanged();
+        return getRecordFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * One of the requested log records.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LogRecord record = 1;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecordOrBuilder getRecordOrBuilder() {
+        if (recordBuilder_ != null) {
+          return recordBuilder_.getMessageOrBuilder();
+        } else {
+          return record_ == null ?
+              yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord.getDefaultInstance() : record_;
+        }
+      }
+      /**
+       * <pre>
+       * One of the requested log records.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LogRecord record = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord.Builder, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecordOrBuilder> 
+          getRecordFieldBuilder() {
+        if (recordBuilder_ == null) {
+          recordBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecord.Builder, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.LogRecordOrBuilder>(
+                  getRecord(),
+                  getParentForChildren(),
+                  isClean());
+          record_ = null;
+        }
+        return recordBuilder_;
+      }
+
+      private java.lang.Object nextRecordToken_ = "";
+      /**
+       * <pre>
+       * This token allows you to continue streaming logs starting from the exact
+       * same record. To continue streaming, specify value of `next_record_token`
+       * as value for `record_token` parameter in the next StreamLogs request.
+       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * </pre>
+       *
+       * <code>string next_record_token = 2;</code>
+       */
+      public java.lang.String getNextRecordToken() {
+        java.lang.Object ref = nextRecordToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextRecordToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to continue streaming logs starting from the exact
+       * same record. To continue streaming, specify value of `next_record_token`
+       * as value for `record_token` parameter in the next StreamLogs request.
+       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * </pre>
+       *
+       * <code>string next_record_token = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNextRecordTokenBytes() {
+        java.lang.Object ref = nextRecordToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextRecordToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to continue streaming logs starting from the exact
+       * same record. To continue streaming, specify value of `next_record_token`
+       * as value for `record_token` parameter in the next StreamLogs request.
+       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * </pre>
+       *
+       * <code>string next_record_token = 2;</code>
+       */
+      public Builder setNextRecordToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextRecordToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to continue streaming logs starting from the exact
+       * same record. To continue streaming, specify value of `next_record_token`
+       * as value for `record_token` parameter in the next StreamLogs request.
+       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * </pre>
+       *
+       * <code>string next_record_token = 2;</code>
+       */
+      public Builder clearNextRecordToken() {
+        
+        nextRecordToken_ = getDefaultInstance().getNextRecordToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to continue streaming logs starting from the exact
+       * same record. To continue streaming, specify value of `next_record_token`
+       * as value for `record_token` parameter in the next StreamLogs request.
+       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * </pre>
+       *
+       * <code>string next_record_token = 2;</code>
+       */
+      public Builder setNextRecordTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextRecordToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.StreamLogRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.StreamLogRecord)
+    private static final yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StreamLogRecord>
+        PARSER = new com.google.protobuf.AbstractParser<StreamLogRecord>() {
+      @java.lang.Override
+      public StreamLogRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StreamLogRecord(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StreamLogRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StreamLogRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StreamClusterLogsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. ID of the Greenplum cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * Required. ID of the Greenplum cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Columns from logs table to get in the response.
+     * </pre>
+     *
+     * <code>repeated string column_filter = 2;</code>
+     */
+    java.util.List<java.lang.String>
+        getColumnFilterList();
+    /**
+     * <pre>
+     * Columns from logs table to get in the response.
+     * </pre>
+     *
+     * <code>repeated string column_filter = 2;</code>
+     */
+    int getColumnFilterCount();
+    /**
+     * <pre>
+     * Columns from logs table to get in the response.
+     * </pre>
+     *
+     * <code>repeated string column_filter = 2;</code>
+     */
+    java.lang.String getColumnFilter(int index);
+    /**
+     * <pre>
+     * Columns from logs table to get in the response.
+     * </pre>
+     *
+     * <code>repeated string column_filter = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getColumnFilterBytes(int index);
+
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
+     */
+    int getServiceTypeValue();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.ServiceType getServiceType();
+
+    /**
+     * <pre>
+     * Start timestamp for the logs request.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp from_time = 4;</code>
+     */
+    boolean hasFromTime();
+    /**
+     * <pre>
+     * Start timestamp for the logs request.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp from_time = 4;</code>
+     */
+    com.google.protobuf.Timestamp getFromTime();
+    /**
+     * <pre>
+     * Start timestamp for the logs request.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp from_time = 4;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getFromTimeOrBuilder();
+
+    /**
+     * <pre>
+     * End timestamp for the logs request.
+     * If this field is not set, all existing logs will be sent and then the new ones as
+     * they appear. In essence it has 'tail -f' semantics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp to_time = 5;</code>
+     */
+    boolean hasToTime();
+    /**
+     * <pre>
+     * End timestamp for the logs request.
+     * If this field is not set, all existing logs will be sent and then the new ones as
+     * they appear. In essence it has 'tail -f' semantics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp to_time = 5;</code>
+     */
+    com.google.protobuf.Timestamp getToTime();
+    /**
+     * <pre>
+     * End timestamp for the logs request.
+     * If this field is not set, all existing logs will be sent and then the new ones as
+     * they appear. In essence it has 'tail -f' semantics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp to_time = 5;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getToTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+     * request to start streaming from next log record.
+     * </pre>
+     *
+     * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    java.lang.String getRecordToken();
+    /**
+     * <pre>
+     * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+     * request to start streaming from next log record.
+     * </pre>
+     *
+     * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    com.google.protobuf.ByteString
+        getRecordTokenBytes();
+
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
+     * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+     * Examples of a filter:
+     * `message.hostname='node1.db.cloud.yandex.net'`
+     * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+     * </pre>
+     *
+     * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     */
+    java.lang.String getFilter();
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
+     * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+     * Examples of a filter:
+     * `message.hostname='node1.db.cloud.yandex.net'`
+     * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+     * </pre>
+     *
+     * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     */
+    com.google.protobuf.ByteString
+        getFilterBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest}
+   */
+  public  static final class StreamClusterLogsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest)
+      StreamClusterLogsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StreamClusterLogsRequest.newBuilder() to construct.
+    private StreamClusterLogsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StreamClusterLogsRequest() {
+      clusterId_ = "";
+      columnFilter_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      serviceType_ = 0;
+      recordToken_ = "";
+      filter_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StreamClusterLogsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                columnFilter_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              columnFilter_.add(s);
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              serviceType_ = rawValue;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (fromTime_ != null) {
+                subBuilder = fromTime_.toBuilder();
+              }
+              fromTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(fromTime_);
+                fromTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (toTime_ != null) {
+                subBuilder = toTime_.toBuilder();
+              }
+              toTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(toTime_);
+                toTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              recordToken_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filter_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          columnFilter_ = columnFilter_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_greenplum_v1_StreamClusterLogsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_greenplum_v1_StreamClusterLogsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.class, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest.ServiceType}
+     */
+    public enum ServiceType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * Type is not specified.
+       * </pre>
+       *
+       * <code>SERVICE_TYPE_UNSPECIFIED = 0;</code>
+       */
+      SERVICE_TYPE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Greenplum® activity logs.
+       * </pre>
+       *
+       * <code>GREENPLUM = 1;</code>
+       */
+      GREENPLUM(1),
+      /**
+       * <pre>
+       * Greenplum® pooler logs.
+       * </pre>
+       *
+       * <code>GREENPLUM_POOLER = 2;</code>
+       */
+      GREENPLUM_POOLER(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * Type is not specified.
+       * </pre>
+       *
+       * <code>SERVICE_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int SERVICE_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Greenplum® activity logs.
+       * </pre>
+       *
+       * <code>GREENPLUM = 1;</code>
+       */
+      public static final int GREENPLUM_VALUE = 1;
+      /**
+       * <pre>
+       * Greenplum® pooler logs.
+       * </pre>
+       *
+       * <code>GREENPLUM_POOLER = 2;</code>
+       */
+      public static final int GREENPLUM_POOLER_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ServiceType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ServiceType forNumber(int value) {
+        switch (value) {
+          case 0: return SERVICE_TYPE_UNSPECIFIED;
+          case 1: return GREENPLUM;
+          case 2: return GREENPLUM_POOLER;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ServiceType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ServiceType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ServiceType>() {
+              public ServiceType findValueByNumber(int number) {
+                return ServiceType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final ServiceType[] VALUES = values();
+
+      public static ServiceType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ServiceType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest.ServiceType)
+    }
+
+    private int bitField0_;
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * Required. ID of the Greenplum cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. ID of the Greenplum cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COLUMN_FILTER_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList columnFilter_;
+    /**
+     * <pre>
+     * Columns from logs table to get in the response.
+     * </pre>
+     *
+     * <code>repeated string column_filter = 2;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getColumnFilterList() {
+      return columnFilter_;
+    }
+    /**
+     * <pre>
+     * Columns from logs table to get in the response.
+     * </pre>
+     *
+     * <code>repeated string column_filter = 2;</code>
+     */
+    public int getColumnFilterCount() {
+      return columnFilter_.size();
+    }
+    /**
+     * <pre>
+     * Columns from logs table to get in the response.
+     * </pre>
+     *
+     * <code>repeated string column_filter = 2;</code>
+     */
+    public java.lang.String getColumnFilter(int index) {
+      return columnFilter_.get(index);
+    }
+    /**
+     * <pre>
+     * Columns from logs table to get in the response.
+     * </pre>
+     *
+     * <code>repeated string column_filter = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getColumnFilterBytes(int index) {
+      return columnFilter_.getByteString(index);
+    }
+
+    public static final int SERVICE_TYPE_FIELD_NUMBER = 3;
+    private int serviceType_;
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
+     */
+    public int getServiceTypeValue() {
+      return serviceType_;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
+     */
+    public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.ServiceType getServiceType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.ServiceType result = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.ServiceType.valueOf(serviceType_);
+      return result == null ? yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.ServiceType.UNRECOGNIZED : result;
+    }
+
+    public static final int FROM_TIME_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp fromTime_;
+    /**
+     * <pre>
+     * Start timestamp for the logs request.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp from_time = 4;</code>
+     */
+    public boolean hasFromTime() {
+      return fromTime_ != null;
+    }
+    /**
+     * <pre>
+     * Start timestamp for the logs request.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp from_time = 4;</code>
+     */
+    public com.google.protobuf.Timestamp getFromTime() {
+      return fromTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : fromTime_;
+    }
+    /**
+     * <pre>
+     * Start timestamp for the logs request.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp from_time = 4;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getFromTimeOrBuilder() {
+      return getFromTime();
+    }
+
+    public static final int TO_TIME_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp toTime_;
+    /**
+     * <pre>
+     * End timestamp for the logs request.
+     * If this field is not set, all existing logs will be sent and then the new ones as
+     * they appear. In essence it has 'tail -f' semantics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp to_time = 5;</code>
+     */
+    public boolean hasToTime() {
+      return toTime_ != null;
+    }
+    /**
+     * <pre>
+     * End timestamp for the logs request.
+     * If this field is not set, all existing logs will be sent and then the new ones as
+     * they appear. In essence it has 'tail -f' semantics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp to_time = 5;</code>
+     */
+    public com.google.protobuf.Timestamp getToTime() {
+      return toTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : toTime_;
+    }
+    /**
+     * <pre>
+     * End timestamp for the logs request.
+     * If this field is not set, all existing logs will be sent and then the new ones as
+     * they appear. In essence it has 'tail -f' semantics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp to_time = 5;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getToTimeOrBuilder() {
+      return getToTime();
+    }
+
+    public static final int RECORD_TOKEN_FIELD_NUMBER = 6;
+    private volatile java.lang.Object recordToken_;
+    /**
+     * <pre>
+     * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+     * request to start streaming from next log record.
+     * </pre>
+     *
+     * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    public java.lang.String getRecordToken() {
+      java.lang.Object ref = recordToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recordToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+     * request to start streaming from next log record.
+     * </pre>
+     *
+     * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getRecordTokenBytes() {
+      java.lang.Object ref = recordToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recordToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 7;
+    private volatile java.lang.Object filter_;
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
+     * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+     * Examples of a filter:
+     * `message.hostname='node1.db.cloud.yandex.net'`
+     * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+     * </pre>
+     *
+     * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     */
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
+     * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+     * Examples of a filter:
+     * `message.hostname='node1.db.cloud.yandex.net'`
+     * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+     * </pre>
+     *
+     * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      for (int i = 0; i < columnFilter_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, columnFilter_.getRaw(i));
+      }
+      if (serviceType_ != yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.ServiceType.SERVICE_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, serviceType_);
+      }
+      if (fromTime_ != null) {
+        output.writeMessage(4, getFromTime());
+      }
+      if (toTime_ != null) {
+        output.writeMessage(5, getToTime());
+      }
+      if (!getRecordTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, recordToken_);
+      }
+      if (!getFilterBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, filter_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < columnFilter_.size(); i++) {
+          dataSize += computeStringSizeNoTag(columnFilter_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getColumnFilterList().size();
+      }
+      if (serviceType_ != yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.ServiceType.SERVICE_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, serviceType_);
+      }
+      if (fromTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getFromTime());
+      }
+      if (toTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getToTime());
+      }
+      if (!getRecordTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, recordToken_);
+      }
+      if (!getFilterBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, filter_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest other = (yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && getColumnFilterList()
+          .equals(other.getColumnFilterList());
+      result = result && serviceType_ == other.serviceType_;
+      result = result && (hasFromTime() == other.hasFromTime());
+      if (hasFromTime()) {
+        result = result && getFromTime()
+            .equals(other.getFromTime());
+      }
+      result = result && (hasToTime() == other.hasToTime());
+      if (hasToTime()) {
+        result = result && getToTime()
+            .equals(other.getToTime());
+      }
+      result = result && getRecordToken()
+          .equals(other.getRecordToken());
+      result = result && getFilter()
+          .equals(other.getFilter());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      if (getColumnFilterCount() > 0) {
+        hash = (37 * hash) + COLUMN_FILTER_FIELD_NUMBER;
+        hash = (53 * hash) + getColumnFilterList().hashCode();
+      }
+      hash = (37 * hash) + SERVICE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + serviceType_;
+      if (hasFromTime()) {
+        hash = (37 * hash) + FROM_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getFromTime().hashCode();
+      }
+      if (hasToTime()) {
+        hash = (37 * hash) + TO_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getToTime().hashCode();
+      }
+      hash = (37 * hash) + RECORD_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordToken().hashCode();
+      hash = (37 * hash) + FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getFilter().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest)
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_greenplum_v1_StreamClusterLogsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_greenplum_v1_StreamClusterLogsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.class, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        columnFilter_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        serviceType_ = 0;
+
+        if (fromTimeBuilder_ == null) {
+          fromTime_ = null;
+        } else {
+          fromTime_ = null;
+          fromTimeBuilder_ = null;
+        }
+        if (toTimeBuilder_ == null) {
+          toTime_ = null;
+        } else {
+          toTime_ = null;
+          toTimeBuilder_ = null;
+        }
+        recordToken_ = "";
+
+        filter_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_greenplum_v1_StreamClusterLogsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest build() {
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest result = new yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.clusterId_ = clusterId_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          columnFilter_ = columnFilter_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.columnFilter_ = columnFilter_;
+        result.serviceType_ = serviceType_;
+        if (fromTimeBuilder_ == null) {
+          result.fromTime_ = fromTime_;
+        } else {
+          result.fromTime_ = fromTimeBuilder_.build();
+        }
+        if (toTimeBuilder_ == null) {
+          result.toTime_ = toTime_;
+        } else {
+          result.toTime_ = toTimeBuilder_.build();
+        }
+        result.recordToken_ = recordToken_;
+        result.filter_ = filter_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.columnFilter_.isEmpty()) {
+          if (columnFilter_.isEmpty()) {
+            columnFilter_ = other.columnFilter_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureColumnFilterIsMutable();
+            columnFilter_.addAll(other.columnFilter_);
+          }
+          onChanged();
+        }
+        if (other.serviceType_ != 0) {
+          setServiceTypeValue(other.getServiceTypeValue());
+        }
+        if (other.hasFromTime()) {
+          mergeFromTime(other.getFromTime());
+        }
+        if (other.hasToTime()) {
+          mergeToTime(other.getToTime());
+        }
+        if (!other.getRecordToken().isEmpty()) {
+          recordToken_ = other.recordToken_;
+          onChanged();
+        }
+        if (!other.getFilter().isEmpty()) {
+          filter_ = other.filter_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * Required. ID of the Greenplum cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the Greenplum cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the Greenplum cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the Greenplum cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the Greenplum cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList columnFilter_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureColumnFilterIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          columnFilter_ = new com.google.protobuf.LazyStringArrayList(columnFilter_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * Columns from logs table to get in the response.
+       * </pre>
+       *
+       * <code>repeated string column_filter = 2;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getColumnFilterList() {
+        return columnFilter_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Columns from logs table to get in the response.
+       * </pre>
+       *
+       * <code>repeated string column_filter = 2;</code>
+       */
+      public int getColumnFilterCount() {
+        return columnFilter_.size();
+      }
+      /**
+       * <pre>
+       * Columns from logs table to get in the response.
+       * </pre>
+       *
+       * <code>repeated string column_filter = 2;</code>
+       */
+      public java.lang.String getColumnFilter(int index) {
+        return columnFilter_.get(index);
+      }
+      /**
+       * <pre>
+       * Columns from logs table to get in the response.
+       * </pre>
+       *
+       * <code>repeated string column_filter = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getColumnFilterBytes(int index) {
+        return columnFilter_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Columns from logs table to get in the response.
+       * </pre>
+       *
+       * <code>repeated string column_filter = 2;</code>
+       */
+      public Builder setColumnFilter(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureColumnFilterIsMutable();
+        columnFilter_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Columns from logs table to get in the response.
+       * </pre>
+       *
+       * <code>repeated string column_filter = 2;</code>
+       */
+      public Builder addColumnFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureColumnFilterIsMutable();
+        columnFilter_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Columns from logs table to get in the response.
+       * </pre>
+       *
+       * <code>repeated string column_filter = 2;</code>
+       */
+      public Builder addAllColumnFilter(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureColumnFilterIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, columnFilter_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Columns from logs table to get in the response.
+       * </pre>
+       *
+       * <code>repeated string column_filter = 2;</code>
+       */
+      public Builder clearColumnFilter() {
+        columnFilter_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Columns from logs table to get in the response.
+       * </pre>
+       *
+       * <code>repeated string column_filter = 2;</code>
+       */
+      public Builder addColumnFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureColumnFilterIsMutable();
+        columnFilter_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private int serviceType_ = 0;
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
+       */
+      public int getServiceTypeValue() {
+        return serviceType_;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
+       */
+      public Builder setServiceTypeValue(int value) {
+        serviceType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.ServiceType getServiceType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.ServiceType result = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.ServiceType.valueOf(serviceType_);
+        return result == null ? yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.ServiceType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
+       */
+      public Builder setServiceType(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.ServiceType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        serviceType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
+       */
+      public Builder clearServiceType() {
+        
+        serviceType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp fromTime_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> fromTimeBuilder_;
+      /**
+       * <pre>
+       * Start timestamp for the logs request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp from_time = 4;</code>
+       */
+      public boolean hasFromTime() {
+        return fromTimeBuilder_ != null || fromTime_ != null;
+      }
+      /**
+       * <pre>
+       * Start timestamp for the logs request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp from_time = 4;</code>
+       */
+      public com.google.protobuf.Timestamp getFromTime() {
+        if (fromTimeBuilder_ == null) {
+          return fromTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : fromTime_;
+        } else {
+          return fromTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Start timestamp for the logs request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp from_time = 4;</code>
+       */
+      public Builder setFromTime(com.google.protobuf.Timestamp value) {
+        if (fromTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fromTime_ = value;
+          onChanged();
+        } else {
+          fromTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Start timestamp for the logs request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp from_time = 4;</code>
+       */
+      public Builder setFromTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (fromTimeBuilder_ == null) {
+          fromTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          fromTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Start timestamp for the logs request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp from_time = 4;</code>
+       */
+      public Builder mergeFromTime(com.google.protobuf.Timestamp value) {
+        if (fromTimeBuilder_ == null) {
+          if (fromTime_ != null) {
+            fromTime_ =
+              com.google.protobuf.Timestamp.newBuilder(fromTime_).mergeFrom(value).buildPartial();
+          } else {
+            fromTime_ = value;
+          }
+          onChanged();
+        } else {
+          fromTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Start timestamp for the logs request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp from_time = 4;</code>
+       */
+      public Builder clearFromTime() {
+        if (fromTimeBuilder_ == null) {
+          fromTime_ = null;
+          onChanged();
+        } else {
+          fromTime_ = null;
+          fromTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Start timestamp for the logs request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp from_time = 4;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getFromTimeBuilder() {
+        
+        onChanged();
+        return getFromTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Start timestamp for the logs request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp from_time = 4;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getFromTimeOrBuilder() {
+        if (fromTimeBuilder_ != null) {
+          return fromTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return fromTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : fromTime_;
+        }
+      }
+      /**
+       * <pre>
+       * Start timestamp for the logs request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp from_time = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getFromTimeFieldBuilder() {
+        if (fromTimeBuilder_ == null) {
+          fromTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getFromTime(),
+                  getParentForChildren(),
+                  isClean());
+          fromTime_ = null;
+        }
+        return fromTimeBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp toTime_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> toTimeBuilder_;
+      /**
+       * <pre>
+       * End timestamp for the logs request.
+       * If this field is not set, all existing logs will be sent and then the new ones as
+       * they appear. In essence it has 'tail -f' semantics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp to_time = 5;</code>
+       */
+      public boolean hasToTime() {
+        return toTimeBuilder_ != null || toTime_ != null;
+      }
+      /**
+       * <pre>
+       * End timestamp for the logs request.
+       * If this field is not set, all existing logs will be sent and then the new ones as
+       * they appear. In essence it has 'tail -f' semantics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp to_time = 5;</code>
+       */
+      public com.google.protobuf.Timestamp getToTime() {
+        if (toTimeBuilder_ == null) {
+          return toTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : toTime_;
+        } else {
+          return toTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * End timestamp for the logs request.
+       * If this field is not set, all existing logs will be sent and then the new ones as
+       * they appear. In essence it has 'tail -f' semantics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp to_time = 5;</code>
+       */
+      public Builder setToTime(com.google.protobuf.Timestamp value) {
+        if (toTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          toTime_ = value;
+          onChanged();
+        } else {
+          toTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * End timestamp for the logs request.
+       * If this field is not set, all existing logs will be sent and then the new ones as
+       * they appear. In essence it has 'tail -f' semantics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp to_time = 5;</code>
+       */
+      public Builder setToTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (toTimeBuilder_ == null) {
+          toTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          toTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * End timestamp for the logs request.
+       * If this field is not set, all existing logs will be sent and then the new ones as
+       * they appear. In essence it has 'tail -f' semantics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp to_time = 5;</code>
+       */
+      public Builder mergeToTime(com.google.protobuf.Timestamp value) {
+        if (toTimeBuilder_ == null) {
+          if (toTime_ != null) {
+            toTime_ =
+              com.google.protobuf.Timestamp.newBuilder(toTime_).mergeFrom(value).buildPartial();
+          } else {
+            toTime_ = value;
+          }
+          onChanged();
+        } else {
+          toTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * End timestamp for the logs request.
+       * If this field is not set, all existing logs will be sent and then the new ones as
+       * they appear. In essence it has 'tail -f' semantics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp to_time = 5;</code>
+       */
+      public Builder clearToTime() {
+        if (toTimeBuilder_ == null) {
+          toTime_ = null;
+          onChanged();
+        } else {
+          toTime_ = null;
+          toTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * End timestamp for the logs request.
+       * If this field is not set, all existing logs will be sent and then the new ones as
+       * they appear. In essence it has 'tail -f' semantics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp to_time = 5;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getToTimeBuilder() {
+        
+        onChanged();
+        return getToTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * End timestamp for the logs request.
+       * If this field is not set, all existing logs will be sent and then the new ones as
+       * they appear. In essence it has 'tail -f' semantics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp to_time = 5;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getToTimeOrBuilder() {
+        if (toTimeBuilder_ != null) {
+          return toTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return toTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : toTime_;
+        }
+      }
+      /**
+       * <pre>
+       * End timestamp for the logs request.
+       * If this field is not set, all existing logs will be sent and then the new ones as
+       * they appear. In essence it has 'tail -f' semantics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp to_time = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getToTimeFieldBuilder() {
+        if (toTimeBuilder_ == null) {
+          toTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getToTime(),
+                  getParentForChildren(),
+                  isClean());
+          toTime_ = null;
+        }
+        return toTimeBuilder_;
+      }
+
+      private java.lang.Object recordToken_ = "";
+      /**
+       * <pre>
+       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+       * request to start streaming from next log record.
+       * </pre>
+       *
+       * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public java.lang.String getRecordToken() {
+        java.lang.Object ref = recordToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recordToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+       * request to start streaming from next log record.
+       * </pre>
+       *
+       * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getRecordTokenBytes() {
+        java.lang.Object ref = recordToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recordToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+       * request to start streaming from next log record.
+       * </pre>
+       *
+       * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder setRecordToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        recordToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+       * request to start streaming from next log record.
+       * </pre>
+       *
+       * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder clearRecordToken() {
+        
+        recordToken_ = getDefaultInstance().getRecordToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+       * request to start streaming from next log record.
+       * </pre>
+       *
+       * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder setRecordTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        recordToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object filter_ = "";
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
+       * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+       * Examples of a filter:
+       * `message.hostname='node1.db.cloud.yandex.net'`
+       * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+       * </pre>
+       *
+       * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       */
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
+       * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+       * Examples of a filter:
+       * `message.hostname='node1.db.cloud.yandex.net'`
+       * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+       * </pre>
+       *
+       * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
+       * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+       * Examples of a filter:
+       * `message.hostname='node1.db.cloud.yandex.net'`
+       * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+       * </pre>
+       *
+       * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       */
+      public Builder setFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
+       * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+       * Examples of a filter:
+       * `message.hostname='node1.db.cloud.yandex.net'`
+       * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+       * </pre>
+       *
+       * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       */
+      public Builder clearFilter() {
+        
+        filter_ = getDefaultInstance().getFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
+       * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+       * Examples of a filter:
+       * `message.hostname='node1.db.cloud.yandex.net'`
+       * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+       * </pre>
+       *
+       * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       */
+      public Builder setFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest)
+    private static final yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StreamClusterLogsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<StreamClusterLogsRequest>() {
+      @java.lang.Override
+      public StreamClusterLogsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StreamClusterLogsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StreamClusterLogsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StreamClusterLogsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ListClusterBackupsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.ListClusterBackupsResponse)
       com.google.protobuf.MessageOrBuilder {
@@ -31826,6 +34731,16 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterBackupsRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_StreamLogRecord_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_StreamLogRecord_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_StreamClusterLogsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_StreamClusterLogsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterBackupsResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -31975,97 +34890,114 @@ public final class ClusterServiceOuterClass {
       "stClusterBackupsRequest\022 \n\ncluster_id\030\001 " +
       "\001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\307" +
       "1\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"" +
-      "m\n\032ListClusterBackupsResponse\0226\n\007backups" +
-      "\030\001 \003(\0132%.yandex.cloud.mdb.greenplum.v1.B" +
-      "ackup\022\027\n\017next_page_token\030\002 \001(\t\"\336\006\n\025Resto" +
-      "reClusterRequest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071" +
-      "\001\022\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004na" +
-      "me\030\003 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*" +
-      "\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\221\001\n\006lab" +
-      "els\030\005 \003(\0132@.yandex.cloud.mdb.greenplum.v" +
-      "1.RestoreClusterRequest.LabelsEntryB?\202\3101" +
-      "\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\310" +
-      "1\022\022\020[a-z][-_0-9a-z]*\022M\n\013environment\030\006 \001(" +
-      "\01622.yandex.cloud.mdb.greenplum.v1.Cluste" +
-      "r.EnvironmentB\004\350\3071\001\022E\n\006config\030\007 \001(\01325.ya" +
-      "ndex.cloud.mdb.greenplum.v1.GreenplumRes" +
-      "toreConfig\022B\n\020master_resources\030\010 \001(\0132(.y" +
-      "andex.cloud.mdb.greenplum.v1.Resources\022C" +
-      "\n\021segment_resources\030\t \001(\0132(.yandex.cloud" +
-      ".mdb.greenplum.v1.Resources\022 \n\nnetwork_i" +
-      "d\030\n \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022security_group_" +
-      "ids\030\013 \003(\t\022\033\n\023deletion_protection\030\014 \001(\010\022\026" +
-      "\n\016host_group_ids\030\r \003(\t\022\032\n\022placement_grou" +
-      "p_id\030\016 \001(\t\022L\n\022maintenance_window\030\017 \001(\01320" +
-      ".yandex.cloud.mdb.greenplum.v1.Maintenan" +
-      "ceWindow\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\"?\n\026RestoreClusterMetadat" +
-      "a\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t" +
-      "2\211\023\n\016ClusterService\022\224\001\n\003Get\0220.yandex.clo" +
-      "ud.mdb.greenplum.v1.GetClusterRequest\032&." +
-      "yandex.cloud.mdb.greenplum.v1.Cluster\"3\202" +
-      "\323\344\223\002-\022+/managed-greenplum/v1/clusters/{c" +
-      "luster_id}\022\227\001\n\004List\0222.yandex.cloud.mdb.g" +
-      "reenplum.v1.ListClustersRequest\0323.yandex" +
-      ".cloud.mdb.greenplum.v1.ListClustersResp" +
-      "onse\"&\202\323\344\223\002 \022\036/managed-greenplum/v1/clus" +
-      "ters\022\257\001\n\006Create\0223.yandex.cloud.mdb.green" +
-      "plum.v1.CreateClusterRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"M\202\323\344\223\002#\"\036/manage" +
-      "d-greenplum/v1/clusters:\001*\262\322* \n\025CreateCl" +
-      "usterMetadata\022\007Cluster\022\274\001\n\006Update\0223.yand" +
-      "ex.cloud.mdb.greenplum.v1.UpdateClusterR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"Z\202\323\344\223\00202+/managed-greenplum/v1/cluster" +
-      "s/{cluster_id}:\001*\262\322* \n\025UpdateClusterMeta" +
-      "data\022\007Cluster\022\307\001\n\006Delete\0223.yandex.cloud." +
-      "mdb.greenplum.v1.DeleteClusterRequest\032!." +
-      "yandex.cloud.operation.Operation\"e\202\323\344\223\002-" +
-      "*+/managed-greenplum/v1/clusters/{cluste" +
-      "r_id}\262\322*.\n\025DeleteClusterMetadata\022\025google" +
-      ".protobuf.Empty\022\274\001\n\005Start\0222.yandex.cloud" +
-      ".mdb.greenplum.v1.StartClusterRequest\032!." +
-      "yandex.cloud.operation.Operation\"\\\202\323\344\223\0023" +
-      "\"1/managed-greenplum/v1/clusters/{cluste" +
-      "r_id}:start\262\322*\037\n\024StartClusterMetadata\022\007C" +
-      "luster\022\270\001\n\004Stop\0221.yandex.cloud.mdb.green" +
-      "plum.v1.StopClusterRequest\032!.yandex.clou" +
-      "d.operation.Operation\"Z\202\323\344\223\0022\"0/managed-" +
-      "greenplum/v1/clusters/{cluster_id}:stop\262" +
-      "\322*\036\n\023StopClusterMetadata\022\007Cluster\022\313\001\n\016Li" +
-      "stOperations\022;.yandex.cloud.mdb.greenplu" +
-      "m.v1.ListClusterOperationsRequest\032<.yand" +
-      "ex.cloud.mdb.greenplum.v1.ListClusterOpe" +
-      "rationsResponse\">\202\323\344\223\0028\0226/managed-greenp" +
-      "lum/v1/clusters/{cluster_id}/operations\022" +
-      "\304\001\n\017ListMasterHosts\0226.yandex.cloud.mdb.g" +
-      "reenplum.v1.ListClusterHostsRequest\0327.ya" +
-      "ndex.cloud.mdb.greenplum.v1.ListClusterH" +
-      "ostsResponse\"@\202\323\344\223\002:\0228/managed-greenplum" +
-      "/v1/clusters/{cluster_id}/master-hosts\022\306" +
-      "\001\n\020ListSegmentHosts\0226.yandex.cloud.mdb.g" +
-      "reenplum.v1.ListClusterHostsRequest\0327.ya" +
-      "ndex.cloud.mdb.greenplum.v1.ListClusterH" +
-      "ostsResponse\"A\202\323\344\223\002;\0229/managed-greenplum" +
-      "/v1/clusters/{cluster_id}/segment-hosts\022" +
-      "\263\001\n\010ListLogs\0225.yandex.cloud.mdb.greenplu" +
-      "m.v1.ListClusterLogsRequest\0326.yandex.clo" +
-      "ud.mdb.greenplum.v1.ListClusterLogsRespo" +
-      "nse\"8\202\323\344\223\0022\0220/managed-greenplum/v1/clust" +
-      "ers/{cluster_id}:logs\022\277\001\n\013ListBackups\0228." +
-      "yandex.cloud.mdb.greenplum.v1.ListCluste" +
-      "rBackupsRequest\0329.yandex.cloud.mdb.green" +
-      "plum.v1.ListClusterBackupsResponse\";\202\323\344\223" +
-      "\0025\0223/managed-greenplum/v1/clusters/{clus" +
-      "ter_id}/backups\022\272\001\n\007Restore\0224.yandex.clo" +
-      "ud.mdb.greenplum.v1.RestoreClusterReques" +
-      "t\032!.yandex.cloud.operation.Operation\"V\202\323" +
-      "\344\223\002+\"&/managed-greenplum/v1/clusters:res" +
-      "tore:\001*\262\322*!\n\026RestoreClusterMetadata\022\007Clu" +
-      "sterBp\n!yandex.cloud.api.mdb.greenplum.v" +
-      "1ZKgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/mdb/greenplum/v1;greenplumb\006" +
-      "proto3"
+      "f\n\017StreamLogRecord\0228\n\006record\030\001 \001(\0132(.yan" +
+      "dex.cloud.mdb.greenplum.v1.LogRecord\022\031\n\021" +
+      "next_record_token\030\002 \001(\t\"\231\003\n\030StreamCluste" +
+      "rLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022Y\n\014service" +
+      "_type\030\003 \001(\0162C.yandex.cloud.mdb.greenplum" +
+      ".v1.StreamClusterLogsRequest.ServiceType" +
+      "\022-\n\tfrom_time\030\004 \001(\0132\032.google.protobuf.Ti" +
+      "mestamp\022+\n\007to_time\030\005 \001(\0132\032.google.protob" +
+      "uf.Timestamp\022\037\n\014record_token\030\006 \001(\tB\t\212\3101\005" +
+      "<=100\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=1000\"P\n\013Ser" +
+      "viceType\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\r" +
+      "\n\tGREENPLUM\020\001\022\024\n\020GREENPLUM_POOLER\020\002\"m\n\032L" +
+      "istClusterBackupsResponse\0226\n\007backups\030\001 \003" +
+      "(\0132%.yandex.cloud.mdb.greenplum.v1.Backu" +
+      "p\022\027\n\017next_page_token\030\002 \001(\t\"\336\006\n\025RestoreCl" +
+      "usterRequest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\022\037\n" +
+      "\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\003" +
+      " \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013" +
+      "description\030\004 \001(\tB\t\212\3101\005<=256\022\221\001\n\006labels\030" +
+      "\005 \003(\0132@.yandex.cloud.mdb.greenplum.v1.Re" +
+      "storeClusterRequest.LabelsEntryB?\202\3101\004<=6" +
+      "4\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020" +
+      "[a-z][-_0-9a-z]*\022M\n\013environment\030\006 \001(\01622." +
+      "yandex.cloud.mdb.greenplum.v1.Cluster.En" +
+      "vironmentB\004\350\3071\001\022E\n\006config\030\007 \001(\01325.yandex" +
+      ".cloud.mdb.greenplum.v1.GreenplumRestore" +
+      "Config\022B\n\020master_resources\030\010 \001(\0132(.yande" +
+      "x.cloud.mdb.greenplum.v1.Resources\022C\n\021se" +
+      "gment_resources\030\t \001(\0132(.yandex.cloud.mdb" +
+      ".greenplum.v1.Resources\022 \n\nnetwork_id\030\n " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022security_group_ids\030" +
+      "\013 \003(\t\022\033\n\023deletion_protection\030\014 \001(\010\022\026\n\016ho" +
+      "st_group_ids\030\r \003(\t\022\032\n\022placement_group_id" +
+      "\030\016 \001(\t\022L\n\022maintenance_window\030\017 \001(\01320.yan" +
+      "dex.cloud.mdb.greenplum.v1.MaintenanceWi" +
+      "ndow\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\"?\n\026RestoreClusterMetadata\022\022\n" +
+      "\ncluster_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t2\304\024\n" +
+      "\016ClusterService\022\224\001\n\003Get\0220.yandex.cloud.m" +
+      "db.greenplum.v1.GetClusterRequest\032&.yand" +
+      "ex.cloud.mdb.greenplum.v1.Cluster\"3\202\323\344\223\002" +
+      "-\022+/managed-greenplum/v1/clusters/{clust" +
+      "er_id}\022\227\001\n\004List\0222.yandex.cloud.mdb.green" +
+      "plum.v1.ListClustersRequest\0323.yandex.clo" +
+      "ud.mdb.greenplum.v1.ListClustersResponse" +
+      "\"&\202\323\344\223\002 \022\036/managed-greenplum/v1/clusters" +
+      "\022\257\001\n\006Create\0223.yandex.cloud.mdb.greenplum" +
+      ".v1.CreateClusterRequest\032!.yandex.cloud." +
+      "operation.Operation\"M\202\323\344\223\002#\"\036/managed-gr" +
+      "eenplum/v1/clusters:\001*\262\322* \n\025CreateCluste" +
+      "rMetadata\022\007Cluster\022\274\001\n\006Update\0223.yandex.c" +
+      "loud.mdb.greenplum.v1.UpdateClusterReque" +
+      "st\032!.yandex.cloud.operation.Operation\"Z\202" +
+      "\323\344\223\00202+/managed-greenplum/v1/clusters/{c" +
+      "luster_id}:\001*\262\322* \n\025UpdateClusterMetadata" +
+      "\022\007Cluster\022\307\001\n\006Delete\0223.yandex.cloud.mdb." +
+      "greenplum.v1.DeleteClusterRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"e\202\323\344\223\002-*+/m" +
+      "anaged-greenplum/v1/clusters/{cluster_id" +
+      "}\262\322*.\n\025DeleteClusterMetadata\022\025google.pro" +
+      "tobuf.Empty\022\274\001\n\005Start\0222.yandex.cloud.mdb" +
+      ".greenplum.v1.StartClusterRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"\\\202\323\344\223\0023\"1/m" +
+      "anaged-greenplum/v1/clusters/{cluster_id" +
+      "}:start\262\322*\037\n\024StartClusterMetadata\022\007Clust" +
+      "er\022\270\001\n\004Stop\0221.yandex.cloud.mdb.greenplum" +
+      ".v1.StopClusterRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"Z\202\323\344\223\0022\"0/managed-gree" +
+      "nplum/v1/clusters/{cluster_id}:stop\262\322*\036\n" +
+      "\023StopClusterMetadata\022\007Cluster\022\313\001\n\016ListOp" +
+      "erations\022;.yandex.cloud.mdb.greenplum.v1" +
+      ".ListClusterOperationsRequest\032<.yandex.c" +
+      "loud.mdb.greenplum.v1.ListClusterOperati" +
+      "onsResponse\">\202\323\344\223\0028\0226/managed-greenplum/" +
+      "v1/clusters/{cluster_id}/operations\022\304\001\n\017" +
+      "ListMasterHosts\0226.yandex.cloud.mdb.green" +
+      "plum.v1.ListClusterHostsRequest\0327.yandex" +
+      ".cloud.mdb.greenplum.v1.ListClusterHosts" +
+      "Response\"@\202\323\344\223\002:\0228/managed-greenplum/v1/" +
+      "clusters/{cluster_id}/master-hosts\022\306\001\n\020L" +
+      "istSegmentHosts\0226.yandex.cloud.mdb.green" +
+      "plum.v1.ListClusterHostsRequest\0327.yandex" +
+      ".cloud.mdb.greenplum.v1.ListClusterHosts" +
+      "Response\"A\202\323\344\223\002;\0229/managed-greenplum/v1/" +
+      "clusters/{cluster_id}/segment-hosts\022\263\001\n\010" +
+      "ListLogs\0225.yandex.cloud.mdb.greenplum.v1" +
+      ".ListClusterLogsRequest\0326.yandex.cloud.m" +
+      "db.greenplum.v1.ListClusterLogsResponse\"" +
+      "8\202\323\344\223\0022\0220/managed-greenplum/v1/clusters/" +
+      "{cluster_id}:logs\022\270\001\n\nStreamLogs\0227.yande" +
+      "x.cloud.mdb.greenplum.v1.StreamClusterLo" +
+      "gsRequest\032..yandex.cloud.mdb.greenplum.v" +
+      "1.StreamLogRecord\"?\202\323\344\223\0029\0227/managed-gree" +
+      "nplum/v1/clusters/{cluster_id}:stream_lo" +
+      "gs0\001\022\277\001\n\013ListBackups\0228.yandex.cloud.mdb." +
+      "greenplum.v1.ListClusterBackupsRequest\0329" +
+      ".yandex.cloud.mdb.greenplum.v1.ListClust" +
+      "erBackupsResponse\";\202\323\344\223\0025\0223/managed-gree" +
+      "nplum/v1/clusters/{cluster_id}/backups\022\272" +
+      "\001\n\007Restore\0224.yandex.cloud.mdb.greenplum." +
+      "v1.RestoreClusterRequest\032!.yandex.cloud." +
+      "operation.Operation\"V\202\323\344\223\002+\"&/managed-gr" +
+      "eenplum/v1/clusters:restore:\001*\262\322*!\n\026Rest" +
+      "oreClusterMetadata\022\007ClusterBp\n!yandex.cl" +
+      "oud.api.mdb.greenplum.v1ZKgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/mdb/g" +
+      "reenplum/v1;greenplumb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -32252,14 +35184,26 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterBackupsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
-    internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterBackupsResponse_descriptor =
+    internal_static_yandex_cloud_mdb_greenplum_v1_StreamLogRecord_descriptor =
       getDescriptor().getMessageTypes().get(24);
+    internal_static_yandex_cloud_mdb_greenplum_v1_StreamLogRecord_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_StreamLogRecord_descriptor,
+        new java.lang.String[] { "Record", "NextRecordToken", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_StreamClusterLogsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_yandex_cloud_mdb_greenplum_v1_StreamClusterLogsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_StreamClusterLogsRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "ColumnFilter", "ServiceType", "FromTime", "ToTime", "RecordToken", "Filter", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterBackupsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(26);
     internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterBackupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_ListClusterBackupsResponse_descriptor,
         new java.lang.String[] { "Backups", "NextPageToken", });
     internal_static_yandex_cloud_mdb_greenplum_v1_RestoreClusterRequest_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_yandex_cloud_mdb_greenplum_v1_RestoreClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_RestoreClusterRequest_descriptor,
@@ -32271,7 +35215,7 @@ public final class ClusterServiceOuterClass {
         internal_static_yandex_cloud_mdb_greenplum_v1_RestoreClusterRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_mdb_greenplum_v1_RestoreClusterMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_yandex_cloud_mdb_greenplum_v1_RestoreClusterMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_RestoreClusterMetadata_descriptor,

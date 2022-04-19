@@ -3230,6 +3230,18 @@ public final class Common {
   public interface ColumnValueOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.endpoint.ColumnValue)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string string_value = 1;</code>
+     */
+    java.lang.String getStringValue();
+    /**
+     * <code>string string_value = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getStringValueBytes();
+
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValue.ValueCase getValueCase();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.ColumnValue}
@@ -3259,6 +3271,7 @@ public final class Common {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3269,6 +3282,12 @@ public final class Common {
             case 0:
               done = true;
               break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              valueCase_ = 1;
+              value_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3301,6 +3320,85 @@ public final class Common {
               yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValue.class, yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValue.Builder.class);
     }
 
+    private int valueCase_ = 0;
+    private java.lang.Object value_;
+    public enum ValueCase
+        implements com.google.protobuf.Internal.EnumLite {
+      STRING_VALUE(1),
+      VALUE_NOT_SET(0);
+      private final int value;
+      private ValueCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ValueCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ValueCase forNumber(int value) {
+        switch (value) {
+          case 1: return STRING_VALUE;
+          case 0: return VALUE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ValueCase
+    getValueCase() {
+      return ValueCase.forNumber(
+          valueCase_);
+    }
+
+    public static final int STRING_VALUE_FIELD_NUMBER = 1;
+    /**
+     * <code>string string_value = 1;</code>
+     */
+    public java.lang.String getStringValue() {
+      java.lang.Object ref = "";
+      if (valueCase_ == 1) {
+        ref = value_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (valueCase_ == 1) {
+          value_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string string_value = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getStringValueBytes() {
+      java.lang.Object ref = "";
+      if (valueCase_ == 1) {
+        ref = value_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (valueCase_ == 1) {
+          value_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3315,6 +3413,9 @@ public final class Common {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (valueCase_ == 1) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3324,6 +3425,9 @@ public final class Common {
       if (size != -1) return size;
 
       size = 0;
+      if (valueCase_ == 1) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, value_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3340,6 +3444,17 @@ public final class Common {
       yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValue other = (yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValue) obj;
 
       boolean result = true;
+      result = result && getValueCase().equals(
+          other.getValueCase());
+      if (!result) return false;
+      switch (valueCase_) {
+        case 1:
+          result = result && getStringValue()
+              .equals(other.getStringValue());
+          break;
+        case 0:
+        default:
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3351,6 +3466,14 @@ public final class Common {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      switch (valueCase_) {
+        case 1:
+          hash = (37 * hash) + STRING_VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getStringValue().hashCode();
+          break;
+        case 0:
+        default:
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3484,6 +3607,8 @@ public final class Common {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        valueCase_ = 0;
+        value_ = null;
         return this;
       }
 
@@ -3510,6 +3635,10 @@ public final class Common {
       @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValue buildPartial() {
         yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValue result = new yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValue(this);
+        if (valueCase_ == 1) {
+          result.value_ = value_;
+        }
+        result.valueCase_ = valueCase_;
         onBuilt();
         return result;
       }
@@ -3558,6 +3687,17 @@ public final class Common {
 
       public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValue other) {
         if (other == yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValue.getDefaultInstance()) return this;
+        switch (other.getValueCase()) {
+          case STRING_VALUE: {
+            valueCase_ = 1;
+            value_ = other.value_;
+            onChanged();
+            break;
+          }
+          case VALUE_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3584,6 +3724,101 @@ public final class Common {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+      private int valueCase_ = 0;
+      private java.lang.Object value_;
+      public ValueCase
+          getValueCase() {
+        return ValueCase.forNumber(
+            valueCase_);
+      }
+
+      public Builder clearValue() {
+        valueCase_ = 0;
+        value_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      /**
+       * <code>string string_value = 1;</code>
+       */
+      public java.lang.String getStringValue() {
+        java.lang.Object ref = "";
+        if (valueCase_ == 1) {
+          ref = value_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (valueCase_ == 1) {
+            value_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string string_value = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getStringValueBytes() {
+        java.lang.Object ref = "";
+        if (valueCase_ == 1) {
+          ref = value_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (valueCase_ == 1) {
+            value_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string string_value = 1;</code>
+       */
+      public Builder setStringValue(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  valueCase_ = 1;
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string string_value = 1;</code>
+       */
+      public Builder clearStringValue() {
+        if (valueCase_ == 1) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string string_value = 1;</code>
+       */
+      public Builder setStringValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        valueCase_ = 1;
+        value_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -3682,17 +3917,17 @@ public final class Common {
       ".protobuf.EmptyH\000\022C\n\007enabled\030\002 \001(\01320.yan" +
       "dex.cloud.datatransfer.v1.endpoint.TLSCo" +
       "nfigH\000B\n\n\010tls_mode\"#\n\tTLSConfig\022\026\n\016ca_ce" +
-      "rtificate\030\001 \001(\t\"\r\n\013ColumnValue*h\n\023Object" +
-      "TransferStage\022%\n!OBJECT_TRANSFER_STAGE_U" +
-      "NSPECIFIED\020\000\022\017\n\013BEFORE_DATA\020\001\022\016\n\nAFTER_D" +
-      "ATA\020\002\022\t\n\005NEVER\020\003*U\n\rCleanupPolicy\022\036\n\032CLE" +
-      "ANUP_POLICY_UNSPECIFIED\020\000\022\014\n\010DISABLED\020\001\022" +
-      "\010\n\004DROP\020\002\022\014\n\010TRUNCATE\020\003B\247\001\n)yandex.cloud" +
-      ".api.datatransfer.v1.endpointZRgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "datatransfer/v1/endpoint;endpoint\252\002%Yand" +
-      "ex.Cloud.Datatransfer.V1.EndPointb\006proto" +
-      "3"
+      "rtificate\030\001 \001(\t\".\n\013ColumnValue\022\026\n\014string" +
+      "_value\030\001 \001(\tH\000B\007\n\005value*h\n\023ObjectTransfe" +
+      "rStage\022%\n!OBJECT_TRANSFER_STAGE_UNSPECIF" +
+      "IED\020\000\022\017\n\013BEFORE_DATA\020\001\022\016\n\nAFTER_DATA\020\002\022\t" +
+      "\n\005NEVER\020\003*U\n\rCleanupPolicy\022\036\n\032CLEANUP_PO" +
+      "LICY_UNSPECIFIED\020\000\022\014\n\010DISABLED\020\001\022\010\n\004DROP" +
+      "\020\002\022\014\n\010TRUNCATE\020\003B\247\001\n)yandex.cloud.api.da" +
+      "tatransfer.v1.endpointZRgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/datatra" +
+      "nsfer/v1/endpoint;endpoint\252\002%Yandex.Clou" +
+      "d.Datatransfer.V1.EndPointb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3736,7 +3971,7 @@ public final class Common {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ColumnValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_ColumnValue_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "StringValue", "Value", });
     com.google.protobuf.EmptyProto.getDescriptor();
   }
 

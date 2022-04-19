@@ -53,6 +53,24 @@ public final class HostTypeOuterClass {
      * <code>int64 memory = 3;</code>
      */
     long getMemory();
+
+    /**
+     * <pre>
+     * Number of local disks available for instances
+     * </pre>
+     *
+     * <code>int64 disks = 4;</code>
+     */
+    long getDisks();
+
+    /**
+     * <pre>
+     * Size of each local disk
+     * </pre>
+     *
+     * <code>int64 disk_size = 5;</code>
+     */
+    long getDiskSize();
   }
   /**
    * <pre>
@@ -76,6 +94,8 @@ public final class HostTypeOuterClass {
       id_ = "";
       cores_ = 0L;
       memory_ = 0L;
+      disks_ = 0L;
+      diskSize_ = 0L;
     }
 
     @java.lang.Override
@@ -116,6 +136,16 @@ public final class HostTypeOuterClass {
             case 24: {
 
               memory_ = input.readInt64();
+              break;
+            }
+            case 32: {
+
+              disks_ = input.readInt64();
+              break;
+            }
+            case 40: {
+
+              diskSize_ = input.readInt64();
               break;
             }
             default: {
@@ -218,6 +248,32 @@ public final class HostTypeOuterClass {
       return memory_;
     }
 
+    public static final int DISKS_FIELD_NUMBER = 4;
+    private long disks_;
+    /**
+     * <pre>
+     * Number of local disks available for instances
+     * </pre>
+     *
+     * <code>int64 disks = 4;</code>
+     */
+    public long getDisks() {
+      return disks_;
+    }
+
+    public static final int DISK_SIZE_FIELD_NUMBER = 5;
+    private long diskSize_;
+    /**
+     * <pre>
+     * Size of each local disk
+     * </pre>
+     *
+     * <code>int64 disk_size = 5;</code>
+     */
+    public long getDiskSize() {
+      return diskSize_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -241,6 +297,12 @@ public final class HostTypeOuterClass {
       if (memory_ != 0L) {
         output.writeInt64(3, memory_);
       }
+      if (disks_ != 0L) {
+        output.writeInt64(4, disks_);
+      }
+      if (diskSize_ != 0L) {
+        output.writeInt64(5, diskSize_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -260,6 +322,14 @@ public final class HostTypeOuterClass {
       if (memory_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, memory_);
+      }
+      if (disks_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, disks_);
+      }
+      if (diskSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, diskSize_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -283,6 +353,10 @@ public final class HostTypeOuterClass {
           == other.getCores());
       result = result && (getMemory()
           == other.getMemory());
+      result = result && (getDisks()
+          == other.getDisks());
+      result = result && (getDiskSize()
+          == other.getDiskSize());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -302,6 +376,12 @@ public final class HostTypeOuterClass {
       hash = (37 * hash) + MEMORY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getMemory());
+      hash = (37 * hash) + DISKS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDisks());
+      hash = (37 * hash) + DISK_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDiskSize());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -447,6 +527,10 @@ public final class HostTypeOuterClass {
 
         memory_ = 0L;
 
+        disks_ = 0L;
+
+        diskSize_ = 0L;
+
         return this;
       }
 
@@ -476,6 +560,8 @@ public final class HostTypeOuterClass {
         result.id_ = id_;
         result.cores_ = cores_;
         result.memory_ = memory_;
+        result.disks_ = disks_;
+        result.diskSize_ = diskSize_;
         onBuilt();
         return result;
       }
@@ -533,6 +619,12 @@ public final class HostTypeOuterClass {
         }
         if (other.getMemory() != 0L) {
           setMemory(other.getMemory());
+        }
+        if (other.getDisks() != 0L) {
+          setDisks(other.getDisks());
+        }
+        if (other.getDiskSize() != 0L) {
+          setDiskSize(other.getDiskSize());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -727,6 +819,82 @@ public final class HostTypeOuterClass {
         onChanged();
         return this;
       }
+
+      private long disks_ ;
+      /**
+       * <pre>
+       * Number of local disks available for instances
+       * </pre>
+       *
+       * <code>int64 disks = 4;</code>
+       */
+      public long getDisks() {
+        return disks_;
+      }
+      /**
+       * <pre>
+       * Number of local disks available for instances
+       * </pre>
+       *
+       * <code>int64 disks = 4;</code>
+       */
+      public Builder setDisks(long value) {
+        
+        disks_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of local disks available for instances
+       * </pre>
+       *
+       * <code>int64 disks = 4;</code>
+       */
+      public Builder clearDisks() {
+        
+        disks_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long diskSize_ ;
+      /**
+       * <pre>
+       * Size of each local disk
+       * </pre>
+       *
+       * <code>int64 disk_size = 5;</code>
+       */
+      public long getDiskSize() {
+        return diskSize_;
+      }
+      /**
+       * <pre>
+       * Size of each local disk
+       * </pre>
+       *
+       * <code>int64 disk_size = 5;</code>
+       */
+      public Builder setDiskSize(long value) {
+        
+        diskSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of each local disk
+       * </pre>
+       *
+       * <code>int64 disk_size = 5;</code>
+       */
+      public Builder clearDiskSize() {
+        
+        diskSize_ = 0L;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -795,11 +963,12 @@ public final class HostTypeOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\'yandex/cloud/compute/v1/host_type.prot" +
-      "o\022\027yandex.cloud.compute.v1\"5\n\010HostType\022\n" +
+      "o\022\027yandex.cloud.compute.v1\"W\n\010HostType\022\n" +
       "\n\002id\030\001 \001(\t\022\r\n\005cores\030\002 \001(\003\022\016\n\006memory\030\003 \001(" +
-      "\003Bb\n\033yandex.cloud.api.compute.v1ZCgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/compute/v1;computeb\006proto3"
+      "\003\022\r\n\005disks\030\004 \001(\003\022\021\n\tdisk_size\030\005 \001(\003Bb\n\033y" +
+      "andex.cloud.api.compute.v1ZCgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/com" +
+      "pute/v1;computeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -818,7 +987,7 @@ public final class HostTypeOuterClass {
     internal_static_yandex_cloud_compute_v1_HostType_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_HostType_descriptor,
-        new java.lang.String[] { "Id", "Cores", "Memory", });
+        new java.lang.String[] { "Id", "Cores", "Memory", "Disks", "DiskSize", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

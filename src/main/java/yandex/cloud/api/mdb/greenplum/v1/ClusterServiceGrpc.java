@@ -382,6 +382,38 @@ public final class ClusterServiceGrpc {
      return getListLogsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest,
+      yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord> getStreamLogsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "StreamLogs",
+      requestType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.class,
+      responseType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest,
+      yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord> getStreamLogsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord> getStreamLogsMethod;
+    if ((getStreamLogsMethod = ClusterServiceGrpc.getStreamLogsMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getStreamLogsMethod = ClusterServiceGrpc.getStreamLogsMethod) == null) {
+          ClusterServiceGrpc.getStreamLogsMethod = getStreamLogsMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.mdb.greenplum.v1.ClusterService", "StreamLogs"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord.getDefaultInstance()))
+                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("StreamLogs"))
+                  .build();
+          }
+        }
+     }
+     return getStreamLogsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterBackupsRequest,
       yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterBackupsResponse> getListBackupsMethod;
 
@@ -589,6 +621,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Same as ListLogs but using server-side streaming. Also allows for 'tail -f' semantics.
+     * </pre>
+     */
+    public void streamLogs(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord> responseObserver) {
+      asyncUnimplementedUnaryCall(getStreamLogsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Retrieves the list of available backups for the specified Greenplum cluster.
      * </pre>
      */
@@ -686,6 +728,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsRequest,
                 yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsResponse>(
                   this, METHODID_LIST_LOGS)))
+          .addMethod(
+            getStreamLogsMethod(),
+            asyncServerStreamingCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest,
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord>(
+                  this, METHODID_STREAM_LOGS)))
           .addMethod(
             getListBackupsMethod(),
             asyncUnaryCall(
@@ -849,6 +898,17 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Same as ListLogs but using server-side streaming. Also allows for 'tail -f' semantics.
+     * </pre>
+     */
+    public void streamLogs(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord> responseObserver) {
+      asyncServerStreamingCall(
+          getChannel().newCall(getStreamLogsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Retrieves the list of available backups for the specified Greenplum cluster.
      * </pre>
      */
@@ -1000,6 +1060,17 @@ public final class ClusterServiceGrpc {
     public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsResponse listLogs(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListLogsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Same as ListLogs but using server-side streaming. Also allows for 'tail -f' semantics.
+     * </pre>
+     */
+    public java.util.Iterator<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord> streamLogs(
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest request) {
+      return blockingServerStreamingCall(
+          getChannel(), getStreamLogsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1200,8 +1271,9 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_LIST_MASTER_HOSTS = 8;
   private static final int METHODID_LIST_SEGMENT_HOSTS = 9;
   private static final int METHODID_LIST_LOGS = 10;
-  private static final int METHODID_LIST_BACKUPS = 11;
-  private static final int METHODID_RESTORE = 12;
+  private static final int METHODID_STREAM_LOGS = 11;
+  private static final int METHODID_LIST_BACKUPS = 12;
+  private static final int METHODID_RESTORE = 13;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1263,6 +1335,10 @@ public final class ClusterServiceGrpc {
         case METHODID_LIST_LOGS:
           serviceImpl.listLogs((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterLogsResponse>) responseObserver);
+          break;
+        case METHODID_STREAM_LOGS:
+          serviceImpl.streamLogs((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord>) responseObserver);
           break;
         case METHODID_LIST_BACKUPS:
           serviceImpl.listBackups((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterBackupsRequest) request,
@@ -1344,6 +1420,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getListMasterHostsMethod())
               .addMethod(getListSegmentHostsMethod())
               .addMethod(getListLogsMethod())
+              .addMethod(getStreamLogsMethod())
               .addMethod(getListBackupsMethod())
               .addMethod(getRestoreMethod())
               .build();
