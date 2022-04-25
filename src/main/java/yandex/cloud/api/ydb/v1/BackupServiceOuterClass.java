@@ -5321,38 +5321,50 @@ public final class BackupServiceOuterClass {
       "to\022\023yandex.cloud.ydb.v1\032\034google/api/anno" +
       "tations.proto\032 yandex/cloud/api/operatio" +
       "n.proto\032&yandex/cloud/operation/operatio" +
-      "n.proto\032\035yandex/cloud/validation.proto\032 " +
-      "yandex/cloud/ydb/v1/backup.proto\"q\n\020List" +
-      "PathsRequest\022\037\n\tbackup_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\n" +
-      "page_token\030\003 \001(\tB\t\212\3101\005<=100\";\n\021ListPaths" +
-      "Response\022\r\n\005paths\030\001 \003(\t\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t\"3\n\020GetBackupRequest\022\037\n\tbackup_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"e\n\022ListBackupsRequ" +
-      "est\022\021\n\tfolder_id\030\001 \001(\t\022\035\n\tpage_size\030\002 \001(" +
-      "\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<" +
-      "=100\"\\\n\023ListBackupsResponse\022,\n\007backups\030\001" +
-      " \003(\0132\033.yandex.cloud.ydb.v1.Backup\022\027\n\017nex" +
-      "t_page_token\030\002 \001(\t\"(\n\023DeleteBackupReques" +
-      "t\022\021\n\tbackup_id\030\001 \001(\t\">\n\024DeleteBackupMeta" +
-      "data\022\021\n\tbackup_id\030\001 \001(\t\022\023\n\013database_id\030\002" +
-      " \001(\t2\251\004\n\rBackupService\022n\n\003Get\022%.yandex.c" +
-      "loud.ydb.v1.GetBackupRequest\032\033.yandex.cl" +
-      "oud.ydb.v1.Backup\"#\202\323\344\223\002\035\022\033/ydb/v1/backu" +
-      "ps/{backup_id}\022\205\001\n\tListPaths\022%.yandex.cl" +
-      "oud.ydb.v1.ListPathsRequest\032&.yandex.clo" +
-      "ud.ydb.v1.ListPathsResponse\")\202\323\344\223\002#\022!/yd" +
-      "b/v1/backups/{backup_id}/paths\022r\n\004List\022\'" +
-      ".yandex.cloud.ydb.v1.ListBackupsRequest\032" +
-      "(.yandex.cloud.ydb.v1.ListBackupsRespons" +
-      "e\"\027\202\323\344\223\002\021\022\017/ydb/v1/backups\022\253\001\n\006Delete\022(." +
-      "yandex.cloud.ydb.v1.DeleteBackupRequest\032" +
-      "!.yandex.cloud.operation.Operation\"T\202\323\344\223" +
-      "\002\035*\033/ydb/v1/backups/{backup_id}\262\322*-\n\024Del" +
-      "eteBackupMetadata\022\025google.protobuf.Empty" +
-      "BV\n\027yandex.cloud.api.ydb.v1Z;github.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/yd" +
-      "b/v1;ydbb\006proto3"
+      "n.proto\032 yandex/cloud/access/access.prot" +
+      "o\032\035yandex/cloud/validation.proto\032 yandex" +
+      "/cloud/ydb/v1/backup.proto\"q\n\020ListPathsR" +
+      "equest\022\037\n\tbackup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_t" +
+      "oken\030\003 \001(\tB\t\212\3101\005<=100\";\n\021ListPathsRespon" +
+      "se\022\r\n\005paths\030\001 \003(\t\022\027\n\017next_page_token\030\002 \001" +
+      "(\t\"3\n\020GetBackupRequest\022\037\n\tbackup_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\"e\n\022ListBackupsRequest\022\021\n" +
+      "\tfolder_id\030\001 \001(\t\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
+      "\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"\\" +
+      "\n\023ListBackupsResponse\022,\n\007backups\030\001 \003(\0132\033" +
+      ".yandex.cloud.ydb.v1.Backup\022\027\n\017next_page" +
+      "_token\030\002 \001(\t\"(\n\023DeleteBackupRequest\022\021\n\tb" +
+      "ackup_id\030\001 \001(\t\">\n\024DeleteBackupMetadata\022\021" +
+      "\n\tbackup_id\030\001 \001(\t\022\023\n\013database_id\030\002 \001(\t2\367" +
+      "\007\n\rBackupService\022n\n\003Get\022%.yandex.cloud.y" +
+      "db.v1.GetBackupRequest\032\033.yandex.cloud.yd" +
+      "b.v1.Backup\"#\202\323\344\223\002\035\022\033/ydb/v1/backups/{ba" +
+      "ckup_id}\022\205\001\n\tListPaths\022%.yandex.cloud.yd" +
+      "b.v1.ListPathsRequest\032&.yandex.cloud.ydb" +
+      ".v1.ListPathsResponse\")\202\323\344\223\002#\022!/ydb/v1/b" +
+      "ackups/{backup_id}/paths\022r\n\004List\022\'.yande" +
+      "x.cloud.ydb.v1.ListBackupsRequest\032(.yand" +
+      "ex.cloud.ydb.v1.ListBackupsResponse\"\027\202\323\344" +
+      "\223\002\021\022\017/ydb/v1/backups\022u\n\022ListAccessBindin" +
+      "gs\022..yandex.cloud.access.ListAccessBindi" +
+      "ngsRequest\032/.yandex.cloud.access.ListAcc" +
+      "essBindingsResponse\022\244\001\n\021SetAccessBinding" +
+      "s\022-.yandex.cloud.access.SetAccessBinding" +
+      "sRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"=\262\322*9\n access.SetAccessBindingsMetad" +
+      "ata\022\025google.protobuf.Empty\022\255\001\n\024UpdateAcc" +
+      "essBindings\0220.yandex.cloud.access.Update" +
+      "AccessBindingsRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"@\262\322*<\n#access.UpdateAcc" +
+      "essBindingsMetadata\022\025google.protobuf.Emp" +
+      "ty\022\253\001\n\006Delete\022(.yandex.cloud.ydb.v1.Dele" +
+      "teBackupRequest\032!.yandex.cloud.operation" +
+      ".Operation\"T\202\323\344\223\002\035*\033/ydb/v1/backups/{bac" +
+      "kup_id}\262\322*-\n\024DeleteBackupMetadata\022\025googl" +
+      "e.protobuf.EmptyBV\n\027yandex.cloud.api.ydb" +
+      ".v1Z;github.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/ydb/v1;ydbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5368,6 +5380,7 @@ public final class BackupServiceOuterClass {
           com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.ydb.v1.BackupOuterClass.getDescriptor(),
         }, assigner);
@@ -5425,6 +5438,7 @@ public final class BackupServiceOuterClass {
     com.google.api.AnnotationsProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.ydb.v1.BackupOuterClass.getDescriptor();
   }

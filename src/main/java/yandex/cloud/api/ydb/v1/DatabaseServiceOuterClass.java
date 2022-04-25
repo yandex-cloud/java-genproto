@@ -18558,121 +18558,134 @@ public final class DatabaseServiceOuterClass {
       "roto\022\023yandex.cloud.ydb.v1\032\034google/api/an" +
       "notations.proto\032 google/protobuf/field_m" +
       "ask.proto\032 yandex/cloud/api/operation.pr" +
-      "oto\032&yandex/cloud/operation/operation.pr" +
-      "oto\032\035yandex/cloud/validation.proto\032\"yand" +
-      "ex/cloud/ydb/v1/database.proto\032 yandex/c" +
-      "loud/ydb/v1/backup.proto\"\211\001\n\024RestoreBack" +
-      "upRequest\022\037\n\tbackup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022!\n\013database_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022\030\n" +
-      "\020paths_to_restore\030\003 \003(\t\022\023\n\013target_path\030\004" +
-      " \001(\t\"?\n\025RestoreBackupMetadata\022\021\n\tbackup_" +
-      "id\030\001 \001(\t\022\023\n\013database_id\030\002 \001(\t\"j\n\025BackupD" +
-      "atabaseRequest\022\023\n\013database_id\030\001 \001(\t\022<\n\017b" +
-      "ackup_settings\030\002 \001(\0132#.yandex.cloud.ydb." +
-      "v1.BackupSettings\"@\n\026BackupDatabaseMetad" +
-      "ata\022\021\n\tbackup_id\030\001 \001(\t\022\023\n\013database_id\030\002 " +
-      "\001(\t\"9\n\024StartDatabaseRequest\022!\n\013database_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"C\n\025StartDatabaseM" +
+      "oto\032 yandex/cloud/access/access.proto\032&y" +
+      "andex/cloud/operation/operation.proto\032\035y" +
+      "andex/cloud/validation.proto\032\"yandex/clo" +
+      "ud/ydb/v1/database.proto\032 yandex/cloud/y" +
+      "db/v1/backup.proto\"\211\001\n\024RestoreBackupRequ" +
+      "est\022\037\n\tbackup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013" +
+      "database_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022\030\n\020paths" +
+      "_to_restore\030\003 \003(\t\022\023\n\013target_path\030\004 \001(\t\"?" +
+      "\n\025RestoreBackupMetadata\022\021\n\tbackup_id\030\001 \001" +
+      "(\t\022\023\n\013database_id\030\002 \001(\t\"j\n\025BackupDatabas" +
+      "eRequest\022\023\n\013database_id\030\001 \001(\t\022<\n\017backup_" +
+      "settings\030\002 \001(\0132#.yandex.cloud.ydb.v1.Bac" +
+      "kupSettings\"@\n\026BackupDatabaseMetadata\022\021\n" +
+      "\tbackup_id\030\001 \001(\t\022\023\n\013database_id\030\002 \001(\t\"9\n" +
+      "\024StartDatabaseRequest\022!\n\013database_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"C\n\025StartDatabaseMetadat" +
+      "a\022\023\n\013database_id\030\001 \001(\t\022\025\n\rdatabase_name\030" +
+      "\002 \001(\t\"8\n\023StopDatabaseRequest\022!\n\013database" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"B\n\024StopDatabaseM" +
       "etadata\022\023\n\013database_id\030\001 \001(\t\022\025\n\rdatabase" +
-      "_name\030\002 \001(\t\"8\n\023StopDatabaseRequest\022!\n\013da" +
-      "tabase_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"B\n\024StopDat" +
-      "abaseMetadata\022\023\n\013database_id\030\001 \001(\t\022\025\n\rda" +
-      "tabase_name\030\002 \001(\t\"7\n\022GetDatabaseRequest\022" +
-      "!\n\013database_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"g\n\024Li" +
-      "stDatabasesRequest\022\021\n\tfolder_id\030\001 \001(\t\022\035\n" +
-      "\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_tok" +
-      "en\030\003 \001(\tB\t\212\3101\005<=100\"b\n\025ListDatabasesResp" +
-      "onse\0220\n\tdatabases\030\001 \003(\0132\035.yandex.cloud.y" +
-      "db.v1.Database\022\027\n\017next_page_token\030\002 \001(\t\"" +
-      "\311\006\n\025CreateDatabaseRequest\022\021\n\tfolder_id\030\001" +
-      " \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022" +
-      "\032\n\022resource_preset_id\030\004 \001(\t\022:\n\016storage_c" +
-      "onfig\030\005 \001(\0132\".yandex.cloud.ydb.v1.Storag" +
-      "eConfig\0226\n\014scale_policy\030\006 \001(\0132 .yandex.c" +
-      "loud.ydb.v1.ScalePolicy\022\022\n\nnetwork_id\030\007 " +
-      "\001(\t\022\022\n\nsubnet_ids\030\010 \003(\t\022<\n\016zonal_databas" +
-      "e\030\t \001(\0132\".yandex.cloud.ydb.v1.ZonalDatab" +
-      "aseH\000\022B\n\021regional_database\030\n \001(\0132%.yande" +
-      "x.cloud.ydb.v1.RegionalDatabaseH\000\022D\n\022ded" +
-      "icated_database\030\r \001(\0132&.yandex.cloud.ydb" +
-      ".v1.DedicatedDatabaseH\000\022F\n\023serverless_da" +
-      "tabase\030\016 \001(\0132\'.yandex.cloud.ydb.v1.Serve" +
-      "rlessDatabaseH\000\022\031\n\021assign_public_ips\030\013 \001" +
-      "(\010\022\023\n\013location_id\030\014 \001(\t\022F\n\006labels\030\017 \003(\0132" +
-      "6.yandex.cloud.ydb.v1.CreateDatabaseRequ" +
-      "est.LabelsEntry\0228\n\rbackup_config\030\020 \001(\0132!" +
-      ".yandex.cloud.ydb.v1.BackupConfig\022@\n\021mon" +
-      "itoring_config\030\021 \001(\0132%.yandex.cloud.ydb." +
-      "v1.MonitoringConfig\032-\n\013LabelsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\017\n\rdatabase_t" +
-      "ype\"D\n\026CreateDatabaseMetadata\022\023\n\013databas" +
-      "e_id\030\001 \001(\t\022\025\n\rdatabase_name\030\002 \001(\t\"\217\007\n\025Up" +
-      "dateDatabaseRequest\022\021\n\tfolder_id\030\001 \001(\t\022/" +
-      "\n\013update_mask\030\002 \001(\0132\032.google.protobuf.Fi" +
-      "eldMask\022\023\n\013database_id\030\003 \001(\t\022\014\n\004name\030\004 \001" +
-      "(\t\022\023\n\013description\030\005 \001(\t\022\032\n\022resource_pres" +
-      "et_id\030\006 \001(\t\022:\n\016storage_config\030\007 \001(\0132\".ya" +
-      "ndex.cloud.ydb.v1.StorageConfig\0226\n\014scale" +
-      "_policy\030\010 \001(\0132 .yandex.cloud.ydb.v1.Scal" +
-      "ePolicy\022\022\n\nnetwork_id\030\t \001(\t\022\022\n\nsubnet_id" +
-      "s\030\n \003(\t\022<\n\016zonal_database\030\013 \001(\0132\".yandex" +
-      ".cloud.ydb.v1.ZonalDatabaseH\000\022B\n\021regiona" +
-      "l_database\030\014 \001(\0132%.yandex.cloud.ydb.v1.R" +
-      "egionalDatabaseH\000\022D\n\022dedicated_database\030" +
-      "\017 \001(\0132&.yandex.cloud.ydb.v1.DedicatedDat" +
-      "abaseH\000\022F\n\023serverless_database\030\020 \001(\0132\'.y" +
-      "andex.cloud.ydb.v1.ServerlessDatabaseH\000\022" +
-      "\031\n\021assign_public_ips\030\r \001(\010\022\023\n\013location_i" +
-      "d\030\016 \001(\t\022F\n\006labels\030\021 \003(\01326.yandex.cloud.y" +
-      "db.v1.UpdateDatabaseRequest.LabelsEntry\022" +
-      "8\n\rbackup_config\030\022 \001(\0132!.yandex.cloud.yd" +
-      "b.v1.BackupConfig\022@\n\021monitoring_config\030\023" +
-      " \001(\0132%.yandex.cloud.ydb.v1.MonitoringCon" +
-      "fig\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001B\017\n\rdatabase_type\"D\n\026UpdateDat" +
-      "abaseMetadata\022\023\n\013database_id\030\001 \001(\t\022\025\n\rda" +
-      "tabase_name\030\002 \001(\t\",\n\025DeleteDatabaseReque" +
-      "st\022\023\n\013database_id\030\001 \001(\t\"D\n\026DeleteDatabas" +
-      "eMetadata\022\023\n\013database_id\030\001 \001(\t\022\025\n\rdataba" +
-      "se_name\030\002 \001(\t2\241\013\n\017DatabaseService\022v\n\003Get" +
-      "\022\'.yandex.cloud.ydb.v1.GetDatabaseReques" +
-      "t\032\035.yandex.cloud.ydb.v1.Database\"\'\202\323\344\223\002!" +
-      "\022\037/ydb/v1/databases/{database_id}\022x\n\004Lis" +
-      "t\022).yandex.cloud.ydb.v1.ListDatabasesReq" +
-      "uest\032*.yandex.cloud.ydb.v1.ListDatabases" +
-      "Response\"\031\202\323\344\223\002\023\022\021/ydb/v1/databases\022\233\001\n\006" +
-      "Create\022*.yandex.cloud.ydb.v1.CreateDatab" +
-      "aseRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"B\202\323\344\223\002\026\"\021/ydb/v1/databases:\001*\262\322*\"\n" +
-      "\026CreateDatabaseMetadata\022\010Database\022\251\001\n\006Up" +
-      "date\022*.yandex.cloud.ydb.v1.UpdateDatabas" +
-      "eRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"P\202\323\344\223\002$2\037/ydb/v1/databases/{database" +
-      "_id}:\001*\262\322*\"\n\026UpdateDatabaseMetadata\022\010Dat" +
-      "abase\022\251\001\n\005Start\022).yandex.cloud.ydb.v1.St" +
-      "artDatabaseRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"R\202\323\344\223\002\'\"%/ydb/v1/databases" +
-      "/{database_id}:start\262\322*!\n\025StartDatabaseM" +
-      "etadata\022\010Database\022\245\001\n\004Stop\022(.yandex.clou" +
-      "d.ydb.v1.StopDatabaseRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"P\202\323\344\223\002&\"$/ydb/v1" +
-      "/databases/{database_id}:stop\262\322* \n\024StopD" +
-      "atabaseMetadata\022\010Database\022\263\001\n\006Delete\022*.y" +
-      "andex.cloud.ydb.v1.DeleteDatabaseRequest" +
-      "\032!.yandex.cloud.operation.Operation\"Z\202\323\344" +
-      "\223\002!*\037/ydb/v1/databases/{database_id}\262\322*/" +
-      "\n\026DeleteDatabaseMetadata\022\025google.protobu" +
-      "f.Empty\022\242\001\n\007Restore\022).yandex.cloud.ydb.v" +
-      "1.RestoreBackupRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"I\202\323\344\223\002\036\"\031/ydb/v1/datab" +
-      "ases:restore:\001*\262\322*!\n\025RestoreBackupMetada" +
-      "ta\022\010Database\022\242\001\n\006Backup\022*.yandex.cloud.y" +
-      "db.v1.BackupDatabaseRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"I\202\323\344\223\002\035\"\030/ydb/v1/" +
-      "databases:backup:\001*\262\322*\"\n\026BackupDatabaseM" +
-      "etadata\022\010DatabaseBV\n\027yandex.cloud.api.yd" +
-      "b.v1Z;github.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/ydb/v1;ydbb\006proto3"
+      "_name\030\002 \001(\t\"7\n\022GetDatabaseRequest\022!\n\013dat" +
+      "abase_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"g\n\024ListData" +
+      "basesRequest\022\021\n\tfolder_id\030\001 \001(\t\022\035\n\tpage_" +
+      "size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001" +
+      "(\tB\t\212\3101\005<=100\"b\n\025ListDatabasesResponse\0220" +
+      "\n\tdatabases\030\001 \003(\0132\035.yandex.cloud.ydb.v1." +
+      "Database\022\027\n\017next_page_token\030\002 \001(\t\"\311\006\n\025Cr" +
+      "eateDatabaseRequest\022\021\n\tfolder_id\030\001 \001(\t\022\014" +
+      "\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\032\n\022res" +
+      "ource_preset_id\030\004 \001(\t\022:\n\016storage_config\030" +
+      "\005 \001(\0132\".yandex.cloud.ydb.v1.StorageConfi" +
+      "g\0226\n\014scale_policy\030\006 \001(\0132 .yandex.cloud.y" +
+      "db.v1.ScalePolicy\022\022\n\nnetwork_id\030\007 \001(\t\022\022\n" +
+      "\nsubnet_ids\030\010 \003(\t\022<\n\016zonal_database\030\t \001(" +
+      "\0132\".yandex.cloud.ydb.v1.ZonalDatabaseH\000\022" +
+      "B\n\021regional_database\030\n \001(\0132%.yandex.clou" +
+      "d.ydb.v1.RegionalDatabaseH\000\022D\n\022dedicated" +
+      "_database\030\r \001(\0132&.yandex.cloud.ydb.v1.De" +
+      "dicatedDatabaseH\000\022F\n\023serverless_database" +
+      "\030\016 \001(\0132\'.yandex.cloud.ydb.v1.ServerlessD" +
+      "atabaseH\000\022\031\n\021assign_public_ips\030\013 \001(\010\022\023\n\013" +
+      "location_id\030\014 \001(\t\022F\n\006labels\030\017 \003(\01326.yand" +
+      "ex.cloud.ydb.v1.CreateDatabaseRequest.La" +
+      "belsEntry\0228\n\rbackup_config\030\020 \001(\0132!.yande" +
+      "x.cloud.ydb.v1.BackupConfig\022@\n\021monitorin" +
+      "g_config\030\021 \001(\0132%.yandex.cloud.ydb.v1.Mon" +
+      "itoringConfig\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001B\017\n\rdatabase_type\"D\n" +
+      "\026CreateDatabaseMetadata\022\023\n\013database_id\030\001" +
+      " \001(\t\022\025\n\rdatabase_name\030\002 \001(\t\"\217\007\n\025UpdateDa" +
+      "tabaseRequest\022\021\n\tfolder_id\030\001 \001(\t\022/\n\013upda" +
+      "te_mask\030\002 \001(\0132\032.google.protobuf.FieldMas" +
+      "k\022\023\n\013database_id\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\022\023\n\013" +
+      "description\030\005 \001(\t\022\032\n\022resource_preset_id\030" +
+      "\006 \001(\t\022:\n\016storage_config\030\007 \001(\0132\".yandex.c" +
+      "loud.ydb.v1.StorageConfig\0226\n\014scale_polic" +
+      "y\030\010 \001(\0132 .yandex.cloud.ydb.v1.ScalePolic" +
+      "y\022\022\n\nnetwork_id\030\t \001(\t\022\022\n\nsubnet_ids\030\n \003(" +
+      "\t\022<\n\016zonal_database\030\013 \001(\0132\".yandex.cloud" +
+      ".ydb.v1.ZonalDatabaseH\000\022B\n\021regional_data" +
+      "base\030\014 \001(\0132%.yandex.cloud.ydb.v1.Regiona" +
+      "lDatabaseH\000\022D\n\022dedicated_database\030\017 \001(\0132" +
+      "&.yandex.cloud.ydb.v1.DedicatedDatabaseH" +
+      "\000\022F\n\023serverless_database\030\020 \001(\0132\'.yandex." +
+      "cloud.ydb.v1.ServerlessDatabaseH\000\022\031\n\021ass" +
+      "ign_public_ips\030\r \001(\010\022\023\n\013location_id\030\016 \001(" +
+      "\t\022F\n\006labels\030\021 \003(\01326.yandex.cloud.ydb.v1." +
+      "UpdateDatabaseRequest.LabelsEntry\0228\n\rbac" +
+      "kup_config\030\022 \001(\0132!.yandex.cloud.ydb.v1.B" +
+      "ackupConfig\022@\n\021monitoring_config\030\023 \001(\0132%" +
+      ".yandex.cloud.ydb.v1.MonitoringConfig\032-\n" +
+      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001B\017\n\rdatabase_type\"D\n\026UpdateDatabaseM" +
+      "etadata\022\023\n\013database_id\030\001 \001(\t\022\025\n\rdatabase" +
+      "_name\030\002 \001(\t\",\n\025DeleteDatabaseRequest\022\023\n\013" +
+      "database_id\030\001 \001(\t\"D\n\026DeleteDatabaseMetad" +
+      "ata\022\023\n\013database_id\030\001 \001(\t\022\025\n\rdatabase_nam" +
+      "e\030\002 \001(\t2\357\016\n\017DatabaseService\022v\n\003Get\022\'.yan" +
+      "dex.cloud.ydb.v1.GetDatabaseRequest\032\035.ya" +
+      "ndex.cloud.ydb.v1.Database\"\'\202\323\344\223\002!\022\037/ydb" +
+      "/v1/databases/{database_id}\022x\n\004List\022).ya" +
+      "ndex.cloud.ydb.v1.ListDatabasesRequest\032*" +
+      ".yandex.cloud.ydb.v1.ListDatabasesRespon" +
+      "se\"\031\202\323\344\223\002\023\022\021/ydb/v1/databases\022\233\001\n\006Create" +
+      "\022*.yandex.cloud.ydb.v1.CreateDatabaseReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "B\202\323\344\223\002\026\"\021/ydb/v1/databases:\001*\262\322*\"\n\026Creat" +
+      "eDatabaseMetadata\022\010Database\022\251\001\n\006Update\022*" +
+      ".yandex.cloud.ydb.v1.UpdateDatabaseReque" +
+      "st\032!.yandex.cloud.operation.Operation\"P\202" +
+      "\323\344\223\002$2\037/ydb/v1/databases/{database_id}:\001" +
+      "*\262\322*\"\n\026UpdateDatabaseMetadata\022\010Database\022" +
+      "\251\001\n\005Start\022).yandex.cloud.ydb.v1.StartDat" +
+      "abaseRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"R\202\323\344\223\002\'\"%/ydb/v1/databases/{data" +
+      "base_id}:start\262\322*!\n\025StartDatabaseMetadat" +
+      "a\022\010Database\022\245\001\n\004Stop\022(.yandex.cloud.ydb." +
+      "v1.StopDatabaseRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"P\202\323\344\223\002&\"$/ydb/v1/datab" +
+      "ases/{database_id}:stop\262\322* \n\024StopDatabas" +
+      "eMetadata\022\010Database\022u\n\022ListAccessBinding" +
+      "s\022..yandex.cloud.access.ListAccessBindin" +
+      "gsRequest\032/.yandex.cloud.access.ListAcce" +
+      "ssBindingsResponse\022\244\001\n\021SetAccessBindings" +
+      "\022-.yandex.cloud.access.SetAccessBindings" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"=\262\322*9\n access.SetAccessBindingsMetada" +
+      "ta\022\025google.protobuf.Empty\022\255\001\n\024UpdateAcce" +
+      "ssBindings\0220.yandex.cloud.access.UpdateA" +
+      "ccessBindingsRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"@\262\322*<\n#access.UpdateAcce" +
+      "ssBindingsMetadata\022\025google.protobuf.Empt" +
+      "y\022\263\001\n\006Delete\022*.yandex.cloud.ydb.v1.Delet" +
+      "eDatabaseRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"Z\202\323\344\223\002!*\037/ydb/v1/databases/{" +
+      "database_id}\262\322*/\n\026DeleteDatabaseMetadata" +
+      "\022\025google.protobuf.Empty\022\242\001\n\007Restore\022).ya" +
+      "ndex.cloud.ydb.v1.RestoreBackupRequest\032!" +
+      ".yandex.cloud.operation.Operation\"I\202\323\344\223\002" +
+      "\036\"\031/ydb/v1/databases:restore:\001*\262\322*!\n\025Res" +
+      "toreBackupMetadata\022\010Database\022\242\001\n\006Backup\022" +
+      "*.yandex.cloud.ydb.v1.BackupDatabaseRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"I" +
+      "\202\323\344\223\002\035\"\030/ydb/v1/databases:backup:\001*\262\322*\"\n" +
+      "\026BackupDatabaseMetadata\022\010DatabaseBV\n\027yan" +
+      "dex.cloud.api.ydb.v1Z;github.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/ydb/v1;yd" +
+      "bb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -18688,6 +18701,7 @@ public final class DatabaseServiceOuterClass {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.ydb.v1.DatabaseOuterClass.getDescriptor(),
@@ -18819,6 +18833,7 @@ public final class DatabaseServiceOuterClass {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.ydb.v1.DatabaseOuterClass.getDescriptor();

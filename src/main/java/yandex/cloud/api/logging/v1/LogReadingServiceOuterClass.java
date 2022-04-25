@@ -2693,6 +2693,16 @@ public final class LogReadingServiceOuterClass {
      * <code>int64 page_size = 8 [(.yandex.cloud.value) = "1-1000"];</code>
      */
     long getPageSize();
+
+    /**
+     * <pre>
+     * Limits response to maximum size in bytes. Prevents gRPC resource exhaustion.
+     * Default value for max response size is 3.5 MiB
+     * </pre>
+     *
+     * <code>int64 max_response_size = 9 [(.yandex.cloud.value) = "0-10485760"];</code>
+     */
+    long getMaxResponseSize();
   }
   /**
    * <pre>
@@ -2717,6 +2727,7 @@ public final class LogReadingServiceOuterClass {
       levels_ = java.util.Collections.emptyList();
       filter_ = "";
       pageSize_ = 0L;
+      maxResponseSize_ = 0L;
     }
 
     @java.lang.Override
@@ -2825,6 +2836,11 @@ public final class LogReadingServiceOuterClass {
             case 64: {
 
               pageSize_ = input.readInt64();
+              break;
+            }
+            case 72: {
+
+              maxResponseSize_ = input.readInt64();
               break;
             }
             default: {
@@ -3203,6 +3219,20 @@ public final class LogReadingServiceOuterClass {
       return pageSize_;
     }
 
+    public static final int MAX_RESPONSE_SIZE_FIELD_NUMBER = 9;
+    private long maxResponseSize_;
+    /**
+     * <pre>
+     * Limits response to maximum size in bytes. Prevents gRPC resource exhaustion.
+     * Default value for max response size is 3.5 MiB
+     * </pre>
+     *
+     * <code>int64 max_response_size = 9 [(.yandex.cloud.value) = "0-10485760"];</code>
+     */
+    public long getMaxResponseSize() {
+      return maxResponseSize_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3245,6 +3275,9 @@ public final class LogReadingServiceOuterClass {
       }
       if (pageSize_ != 0L) {
         output.writeInt64(8, pageSize_);
+      }
+      if (maxResponseSize_ != 0L) {
+        output.writeInt64(9, maxResponseSize_);
       }
       unknownFields.writeTo(output);
     }
@@ -3301,6 +3334,10 @@ public final class LogReadingServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(8, pageSize_);
       }
+      if (maxResponseSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(9, maxResponseSize_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3338,6 +3375,8 @@ public final class LogReadingServiceOuterClass {
           .equals(other.getFilter());
       result = result && (getPageSize()
           == other.getPageSize());
+      result = result && (getMaxResponseSize()
+          == other.getMaxResponseSize());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3376,6 +3415,9 @@ public final class LogReadingServiceOuterClass {
       hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getPageSize());
+      hash = (37 * hash) + MAX_RESPONSE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxResponseSize());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3537,6 +3579,8 @@ public final class LogReadingServiceOuterClass {
 
         pageSize_ = 0L;
 
+        maxResponseSize_ = 0L;
+
         return this;
       }
 
@@ -3593,6 +3637,7 @@ public final class LogReadingServiceOuterClass {
         result.levels_ = levels_;
         result.filter_ = filter_;
         result.pageSize_ = pageSize_;
+        result.maxResponseSize_ = maxResponseSize_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3688,6 +3733,9 @@ public final class LogReadingServiceOuterClass {
         }
         if (other.getPageSize() != 0L) {
           setPageSize(other.getPageSize());
+        }
+        if (other.getMaxResponseSize() != 0L) {
+          setMaxResponseSize(other.getMaxResponseSize());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4701,6 +4749,47 @@ public final class LogReadingServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private long maxResponseSize_ ;
+      /**
+       * <pre>
+       * Limits response to maximum size in bytes. Prevents gRPC resource exhaustion.
+       * Default value for max response size is 3.5 MiB
+       * </pre>
+       *
+       * <code>int64 max_response_size = 9 [(.yandex.cloud.value) = "0-10485760"];</code>
+       */
+      public long getMaxResponseSize() {
+        return maxResponseSize_;
+      }
+      /**
+       * <pre>
+       * Limits response to maximum size in bytes. Prevents gRPC resource exhaustion.
+       * Default value for max response size is 3.5 MiB
+       * </pre>
+       *
+       * <code>int64 max_response_size = 9 [(.yandex.cloud.value) = "0-10485760"];</code>
+       */
+      public Builder setMaxResponseSize(long value) {
+        
+        maxResponseSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits response to maximum size in bytes. Prevents gRPC resource exhaustion.
+       * Default value for max response size is 3.5 MiB
+       * </pre>
+       *
+       * <code>int64 max_response_size = 9 [(.yandex.cloud.value) = "0-10485760"];</code>
+       */
+      public Builder clearMaxResponseSize() {
+        
+        maxResponseSize_ = 0L;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4788,7 +4877,7 @@ public final class LogReadingServiceOuterClass {
       "ector\"\216\001\n\014ReadResponse\022\024\n\014log_group_id\030\001" +
       " \001(\t\0222\n\007entries\030\002 \003(\0132!.yandex.cloud.log" +
       "ging.v1.LogEntry\022\027\n\017next_page_token\030\003 \001(" +
-      "\t\022\033\n\023previous_page_token\030\004 \001(\t\"\213\003\n\010Crite" +
+      "\t\022\033\n\023previous_page_token\030\004 \001(\t\"\266\003\n\010Crite" +
       "ria\022\"\n\014log_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022" +
       "B\n\016resource_types\030\002 \003(\tB*\362\3071\035|[a-zA-Z][-" +
       "a-zA-Z0-9_.]{0,63}\202\3101\005<=100\022C\n\014resource_" +
@@ -4798,13 +4887,14 @@ public final class LogReadingServiceOuterClass {
       "gle.protobuf.Timestamp\022A\n\006levels\030\006 \003(\0162\'" +
       ".yandex.cloud.logging.v1.LogLevel.LevelB" +
       "\010\202\3101\004<=10\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=1000\022\035\n" +
-      "\tpage_size\030\010 \001(\003B\n\372\3071\0061-10002h\n\021LogReadi" +
-      "ngService\022S\n\004Read\022$.yandex.cloud.logging" +
-      ".v1.ReadRequest\032%.yandex.cloud.logging.v" +
-      "1.ReadResponseBb\n\033yandex.cloud.api.loggi" +
-      "ng.v1ZCgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/logging/v1;loggingb\006prot" +
-      "o3"
+      "\tpage_size\030\010 \001(\003B\n\372\3071\0061-1000\022)\n\021max_resp" +
+      "onse_size\030\t \001(\003B\016\372\3071\n0-104857602h\n\021LogRe" +
+      "adingService\022S\n\004Read\022$.yandex.cloud.logg" +
+      "ing.v1.ReadRequest\032%.yandex.cloud.loggin" +
+      "g.v1.ReadResponseBb\n\033yandex.cloud.api.lo" +
+      "gging.v1ZCgithub.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/logging/v1;loggingb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4838,7 +4928,7 @@ public final class LogReadingServiceOuterClass {
     internal_static_yandex_cloud_logging_v1_Criteria_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_Criteria_descriptor,
-        new java.lang.String[] { "LogGroupId", "ResourceTypes", "ResourceIds", "Since", "Until", "Levels", "Filter", "PageSize", });
+        new java.lang.String[] { "LogGroupId", "ResourceTypes", "ResourceIds", "Since", "Until", "Levels", "Filter", "PageSize", "MaxResponseSize", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);
