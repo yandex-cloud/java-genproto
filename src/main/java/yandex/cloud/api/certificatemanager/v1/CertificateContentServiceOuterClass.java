@@ -1056,6 +1056,24 @@ public final class CertificateContentServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getCertificateIdBytes();
+
+    /**
+     * <pre>
+     * Optional ID of the version.
+     * </pre>
+     *
+     * <code>string version_id = 2;</code>
+     */
+    java.lang.String getVersionId();
+    /**
+     * <pre>
+     * Optional ID of the version.
+     * </pre>
+     *
+     * <code>string version_id = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getVersionIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.certificatemanager.v1.GetCertificateContentRequest}
@@ -1071,6 +1089,7 @@ public final class CertificateContentServiceOuterClass {
     }
     private GetCertificateContentRequest() {
       certificateId_ = "";
+      versionId_ = "";
     }
 
     @java.lang.Override
@@ -1101,6 +1120,12 @@ public final class CertificateContentServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               certificateId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              versionId_ = s;
               break;
             }
             default: {
@@ -1177,6 +1202,48 @@ public final class CertificateContentServiceOuterClass {
       }
     }
 
+    public static final int VERSION_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object versionId_;
+    /**
+     * <pre>
+     * Optional ID of the version.
+     * </pre>
+     *
+     * <code>string version_id = 2;</code>
+     */
+    public java.lang.String getVersionId() {
+      java.lang.Object ref = versionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        versionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional ID of the version.
+     * </pre>
+     *
+     * <code>string version_id = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getVersionIdBytes() {
+      java.lang.Object ref = versionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        versionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1194,6 +1261,9 @@ public final class CertificateContentServiceOuterClass {
       if (!getCertificateIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, certificateId_);
       }
+      if (!getVersionIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, versionId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1205,6 +1275,9 @@ public final class CertificateContentServiceOuterClass {
       size = 0;
       if (!getCertificateIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, certificateId_);
+      }
+      if (!getVersionIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, versionId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1224,6 +1297,8 @@ public final class CertificateContentServiceOuterClass {
       boolean result = true;
       result = result && getCertificateId()
           .equals(other.getCertificateId());
+      result = result && getVersionId()
+          .equals(other.getVersionId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1237,6 +1312,8 @@ public final class CertificateContentServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CERTIFICATE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getCertificateId().hashCode();
+      hash = (37 * hash) + VERSION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getVersionId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1372,6 +1449,8 @@ public final class CertificateContentServiceOuterClass {
         super.clear();
         certificateId_ = "";
 
+        versionId_ = "";
+
         return this;
       }
 
@@ -1399,6 +1478,7 @@ public final class CertificateContentServiceOuterClass {
       public yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest buildPartial() {
         yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest result = new yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest(this);
         result.certificateId_ = certificateId_;
+        result.versionId_ = versionId_;
         onBuilt();
         return result;
       }
@@ -1449,6 +1529,10 @@ public final class CertificateContentServiceOuterClass {
         if (other == yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest.getDefaultInstance()) return this;
         if (!other.getCertificateId().isEmpty()) {
           certificateId_ = other.certificateId_;
+          onChanged();
+        }
+        if (!other.getVersionId().isEmpty()) {
+          versionId_ = other.versionId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1568,6 +1652,95 @@ public final class CertificateContentServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object versionId_ = "";
+      /**
+       * <pre>
+       * Optional ID of the version.
+       * </pre>
+       *
+       * <code>string version_id = 2;</code>
+       */
+      public java.lang.String getVersionId() {
+        java.lang.Object ref = versionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          versionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional ID of the version.
+       * </pre>
+       *
+       * <code>string version_id = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getVersionIdBytes() {
+        java.lang.Object ref = versionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          versionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional ID of the version.
+       * </pre>
+       *
+       * <code>string version_id = 2;</code>
+       */
+      public Builder setVersionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        versionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional ID of the version.
+       * </pre>
+       *
+       * <code>string version_id = 2;</code>
+       */
+      public Builder clearVersionId() {
+        
+        versionId_ = getDefaultInstance().getVersionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional ID of the version.
+       * </pre>
+       *
+       * <code>string version_id = 2;</code>
+       */
+      public Builder setVersionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        versionId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1646,18 +1819,18 @@ public final class CertificateContentServiceOuterClass {
       "nnotations.proto\"g\n\035GetCertificateConten" +
       "tResponse\022\026\n\016certificate_id\030\001 \001(\t\022\031\n\021cer" +
       "tificate_chain\030\003 \003(\t\022\023\n\013private_key\030\004 \001(" +
-      "\t\"6\n\034GetCertificateContentRequest\022\026\n\016cer" +
-      "tificate_id\030\001 \001(\t2\362\001\n\031CertificateContent" +
-      "Service\022\324\001\n\003Get\022@.yandex.cloud.certifica" +
-      "temanager.v1.GetCertificateContentReques" +
-      "t\032A.yandex.cloud.certificatemanager.v1.G" +
-      "etCertificateContentResponse\"H\202\323\344\223\002B\022@/c" +
-      "ertificate-manager/v1/certificates/{cert" +
-      "ificate_id}:getContentB\203\001\n&yandex.cloud." +
-      "api.certificatemanager.v1ZYgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/cert" +
-      "ificatemanager/v1;certificatemanagerb\006pr" +
-      "oto3"
+      "\t\"J\n\034GetCertificateContentRequest\022\026\n\016cer" +
+      "tificate_id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t2\362\001" +
+      "\n\031CertificateContentService\022\324\001\n\003Get\022@.ya" +
+      "ndex.cloud.certificatemanager.v1.GetCert" +
+      "ificateContentRequest\032A.yandex.cloud.cer" +
+      "tificatemanager.v1.GetCertificateContent" +
+      "Response\"H\202\323\344\223\002B\022@/certificate-manager/v" +
+      "1/certificates/{certificate_id}:getConte" +
+      "ntB\203\001\n&yandex.cloud.api.certificatemanag" +
+      "er.v1ZYgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/certificatemanager/v1;ce" +
+      "rtificatemanagerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1683,7 +1856,7 @@ public final class CertificateContentServiceOuterClass {
     internal_static_yandex_cloud_certificatemanager_v1_GetCertificateContentRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_certificatemanager_v1_GetCertificateContentRequest_descriptor,
-        new java.lang.String[] { "CertificateId", });
+        new java.lang.String[] { "CertificateId", "VersionId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

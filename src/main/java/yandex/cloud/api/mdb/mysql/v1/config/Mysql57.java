@@ -1912,6 +1912,34 @@ public final class Mysql57 {
      * <code>.google.protobuf.Int64Value max_sp_recursion_depth = 69 [(.yandex.cloud.value) = "0-255"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxSpRecursionDepthOrBuilder();
+
+    /**
+     * <pre>
+     * The level of zlib compression to use for InnoDB compressed tables and indexes.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_compression_level).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+     */
+    boolean hasInnodbCompressionLevel();
+    /**
+     * <pre>
+     * The level of zlib compression to use for InnoDB compressed tables and indexes.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_compression_level).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+     */
+    com.google.protobuf.Int64Value getInnodbCompressionLevel();
+    /**
+     * <pre>
+     * The level of zlib compression to use for InnoDB compressed tables and indexes.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_compression_level).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getInnodbCompressionLevelOrBuilder();
   }
   /**
    * <pre>
@@ -2825,6 +2853,19 @@ public final class Mysql57 {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(maxSpRecursionDepth_);
                 maxSpRecursionDepth_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 562: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (innodbCompressionLevel_ != null) {
+                subBuilder = innodbCompressionLevel_.toBuilder();
+              }
+              innodbCompressionLevel_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(innodbCompressionLevel_);
+                innodbCompressionLevel_ = subBuilder.buildPartial();
               }
 
               break;
@@ -6487,6 +6528,42 @@ public final class Mysql57 {
       return getMaxSpRecursionDepth();
     }
 
+    public static final int INNODB_COMPRESSION_LEVEL_FIELD_NUMBER = 70;
+    private com.google.protobuf.Int64Value innodbCompressionLevel_;
+    /**
+     * <pre>
+     * The level of zlib compression to use for InnoDB compressed tables and indexes.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_compression_level).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+     */
+    public boolean hasInnodbCompressionLevel() {
+      return innodbCompressionLevel_ != null;
+    }
+    /**
+     * <pre>
+     * The level of zlib compression to use for InnoDB compressed tables and indexes.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_compression_level).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+     */
+    public com.google.protobuf.Int64Value getInnodbCompressionLevel() {
+      return innodbCompressionLevel_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbCompressionLevel_;
+    }
+    /**
+     * <pre>
+     * The level of zlib compression to use for InnoDB compressed tables and indexes.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_compression_level).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getInnodbCompressionLevelOrBuilder() {
+      return getInnodbCompressionLevel();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6716,6 +6793,9 @@ public final class Mysql57 {
       }
       if (maxSpRecursionDepth_ != null) {
         output.writeMessage(69, getMaxSpRecursionDepth());
+      }
+      if (innodbCompressionLevel_ != null) {
+        output.writeMessage(70, getInnodbCompressionLevel());
       }
       unknownFields.writeTo(output);
     }
@@ -7014,6 +7094,10 @@ public final class Mysql57 {
       if (maxSpRecursionDepth_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(69, getMaxSpRecursionDepth());
+      }
+      if (innodbCompressionLevel_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(70, getInnodbCompressionLevel());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7339,6 +7423,11 @@ public final class Mysql57 {
         result = result && getMaxSpRecursionDepth()
             .equals(other.getMaxSpRecursionDepth());
       }
+      result = result && (hasInnodbCompressionLevel() == other.hasInnodbCompressionLevel());
+      if (hasInnodbCompressionLevel()) {
+        result = result && getInnodbCompressionLevel()
+            .equals(other.getInnodbCompressionLevel());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -7609,6 +7698,10 @@ public final class Mysql57 {
       if (hasMaxSpRecursionDepth()) {
         hash = (37 * hash) + MAX_SP_RECURSION_DEPTH_FIELD_NUMBER;
         hash = (53 * hash) + getMaxSpRecursionDepth().hashCode();
+      }
+      if (hasInnodbCompressionLevel()) {
+        hash = (37 * hash) + INNODB_COMPRESSION_LEVEL_FIELD_NUMBER;
+        hash = (53 * hash) + getInnodbCompressionLevel().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8121,6 +8214,12 @@ public final class Mysql57 {
           maxSpRecursionDepth_ = null;
           maxSpRecursionDepthBuilder_ = null;
         }
+        if (innodbCompressionLevelBuilder_ == null) {
+          innodbCompressionLevel_ = null;
+        } else {
+          innodbCompressionLevel_ = null;
+          innodbCompressionLevelBuilder_ = null;
+        }
         return this;
       }
 
@@ -8466,6 +8565,11 @@ public final class Mysql57 {
         } else {
           result.maxSpRecursionDepth_ = maxSpRecursionDepthBuilder_.build();
         }
+        if (innodbCompressionLevelBuilder_ == null) {
+          result.innodbCompressionLevel_ = innodbCompressionLevel_;
+        } else {
+          result.innodbCompressionLevel_ = innodbCompressionLevelBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         result.bitField2_ = to_bitField2_;
@@ -8740,6 +8844,9 @@ public final class Mysql57 {
         }
         if (other.hasMaxSpRecursionDepth()) {
           mergeMaxSpRecursionDepth(other.getMaxSpRecursionDepth());
+        }
+        if (other.hasInnodbCompressionLevel()) {
+          mergeInnodbCompressionLevel(other.getInnodbCompressionLevel());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -19300,6 +19407,168 @@ public final class Mysql57 {
         }
         return maxSpRecursionDepthBuilder_;
       }
+
+      private com.google.protobuf.Int64Value innodbCompressionLevel_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbCompressionLevelBuilder_;
+      /**
+       * <pre>
+       * The level of zlib compression to use for InnoDB compressed tables and indexes.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_compression_level).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+       */
+      public boolean hasInnodbCompressionLevel() {
+        return innodbCompressionLevelBuilder_ != null || innodbCompressionLevel_ != null;
+      }
+      /**
+       * <pre>
+       * The level of zlib compression to use for InnoDB compressed tables and indexes.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_compression_level).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+       */
+      public com.google.protobuf.Int64Value getInnodbCompressionLevel() {
+        if (innodbCompressionLevelBuilder_ == null) {
+          return innodbCompressionLevel_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbCompressionLevel_;
+        } else {
+          return innodbCompressionLevelBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The level of zlib compression to use for InnoDB compressed tables and indexes.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_compression_level).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+       */
+      public Builder setInnodbCompressionLevel(com.google.protobuf.Int64Value value) {
+        if (innodbCompressionLevelBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          innodbCompressionLevel_ = value;
+          onChanged();
+        } else {
+          innodbCompressionLevelBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The level of zlib compression to use for InnoDB compressed tables and indexes.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_compression_level).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+       */
+      public Builder setInnodbCompressionLevel(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (innodbCompressionLevelBuilder_ == null) {
+          innodbCompressionLevel_ = builderForValue.build();
+          onChanged();
+        } else {
+          innodbCompressionLevelBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The level of zlib compression to use for InnoDB compressed tables and indexes.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_compression_level).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+       */
+      public Builder mergeInnodbCompressionLevel(com.google.protobuf.Int64Value value) {
+        if (innodbCompressionLevelBuilder_ == null) {
+          if (innodbCompressionLevel_ != null) {
+            innodbCompressionLevel_ =
+              com.google.protobuf.Int64Value.newBuilder(innodbCompressionLevel_).mergeFrom(value).buildPartial();
+          } else {
+            innodbCompressionLevel_ = value;
+          }
+          onChanged();
+        } else {
+          innodbCompressionLevelBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The level of zlib compression to use for InnoDB compressed tables and indexes.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_compression_level).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+       */
+      public Builder clearInnodbCompressionLevel() {
+        if (innodbCompressionLevelBuilder_ == null) {
+          innodbCompressionLevel_ = null;
+          onChanged();
+        } else {
+          innodbCompressionLevel_ = null;
+          innodbCompressionLevelBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The level of zlib compression to use for InnoDB compressed tables and indexes.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_compression_level).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getInnodbCompressionLevelBuilder() {
+        
+        onChanged();
+        return getInnodbCompressionLevelFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The level of zlib compression to use for InnoDB compressed tables and indexes.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_compression_level).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getInnodbCompressionLevelOrBuilder() {
+        if (innodbCompressionLevelBuilder_ != null) {
+          return innodbCompressionLevelBuilder_.getMessageOrBuilder();
+        } else {
+          return innodbCompressionLevel_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : innodbCompressionLevel_;
+        }
+      }
+      /**
+       * <pre>
+       * The level of zlib compression to use for InnoDB compressed tables and indexes.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_compression_level).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getInnodbCompressionLevelFieldBuilder() {
+        if (innodbCompressionLevelBuilder_ == null) {
+          innodbCompressionLevelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getInnodbCompressionLevel(),
+                  getParentForChildren(),
+                  isClean());
+          innodbCompressionLevel_ = null;
+        }
+        return innodbCompressionLevelBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -20565,7 +20834,7 @@ public final class Mysql57 {
       "\n/yandex/cloud/mdb/mysql/v1/config/mysql" +
       "5_7.proto\022 yandex.cloud.mdb.mysql.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\2022\n\016MysqlConf" +
+      "dex/cloud/validation.proto\"\3122\n\016MysqlConf" +
       "ig5_7\022K\n\027innodb_buffer_pool_size\030\001 \001(\0132\033" +
       ".google.protobuf.Int64ValueB\r\372\3071\t>=52428" +
       "80\022B\n\017max_connections\030\002 \001(\0132\033.google.pro" +
@@ -20692,49 +20961,51 @@ public final class Mysql57 {
       "ibility_56\030D \001(\0132\032.google.protobuf.BoolV" +
       "alueR\024showCompatibility_56\022F\n\026max_sp_rec" +
       "ursion_depth\030E \001(\0132\033.google.protobuf.Int" +
-      "64ValueB\t\372\3071\0050-255\"\231\005\n\007SQLMode\022\027\n\023SQLMOD" +
-      "E_UNSPECIFIED\020\000\022\027\n\023ALLOW_INVALID_DATES\020\001" +
-      "\022\017\n\013ANSI_QUOTES\020\002\022\036\n\032ERROR_FOR_DIVISION_" +
-      "BY_ZERO\020\003\022\027\n\023HIGH_NOT_PRECEDENCE\020\004\022\020\n\014IG" +
-      "NORE_SPACE\020\005\022\031\n\025NO_AUTO_VALUE_ON_ZERO\020\006\022" +
-      "\030\n\024NO_BACKSLASH_ESCAPES\020\007\022\032\n\026NO_ENGINE_S" +
-      "UBSTITUTION\020\010\022\033\n\027NO_UNSIGNED_SUBTRACTION" +
-      "\020\t\022\020\n\014NO_ZERO_DATE\020\n\022\023\n\017NO_ZERO_IN_DATE\020" +
-      "\013\022\024\n\020NO_FIELD_OPTIONS\020\014\022\022\n\016NO_KEY_OPTION" +
-      "S\020\r\022\024\n\020NO_TABLE_OPTIONS\020\016\022\026\n\022ONLY_FULL_G" +
-      "ROUP_BY\020\017\022\033\n\027PAD_CHAR_TO_FULL_LENGTH\020\020\022\023" +
-      "\n\017PIPES_AS_CONCAT\020\021\022\021\n\rREAL_AS_FLOAT\020\022\022\025" +
-      "\n\021STRICT_ALL_TABLES\020\023\022\027\n\023STRICT_TRANS_TA" +
-      "BLES\020\024\022\010\n\004ANSI\020\025\022\017\n\013TRADITIONAL\020\026\022\007\n\003DB2" +
-      "\020\027\022\t\n\005MAXDB\020\030\022\t\n\005MSSQL\020\031\022\014\n\010MYSQL323\020\032\022\013" +
-      "\n\007MYSQL40\020\033\022\n\n\006ORACLE\020\034\022\016\n\nPOSTGRESQL\020\035\022" +
-      "\027\n\023NO_AUTO_CREATE_USER\020\036\022\024\n\020NO_DIR_IN_CR" +
-      "EATE\020\037\"x\n\nAuthPlugin\022\033\n\027AUTH_PLUGIN_UNSP" +
-      "ECIFIED\020\000\022\031\n\025MYSQL_NATIVE_PASSWORD\020\001\022\035\n\025" +
-      "CACHING_SHA2_PASSWORD\020\002\032\002\010\001\022\023\n\017SHA256_PA" +
-      "SSWORD\020\003\"x\n\024TransactionIsolation\022%\n!TRAN" +
-      "SACTION_ISOLATION_UNSPECIFIED\020\000\022\022\n\016READ_" +
-      "COMMITTED\020\001\022\023\n\017REPEATABLE_READ\020\002\022\020\n\014SERI" +
-      "ALIZABLE\020\003\"U\n\016BinlogRowImage\022 \n\034BINLOG_R" +
-      "OW_IMAGE_UNSPECIFIED\020\000\022\010\n\004FULL\020\001\022\013\n\007MINI" +
-      "MAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021SlaveParallelType\022#" +
-      "\n\037SLAVE_PARALLEL_TYPE_UNSPECIFIED\020\000\022\014\n\010D" +
-      "ATABASE\020\001\022\021\n\rLOGICAL_CLOCK\020\002\"M\n\017LogSlowR" +
-      "ateType\022\"\n\036LOG_SLOW_RATE_TYPE_UNSPECIFIE" +
-      "D\020\000\022\013\n\007SESSION\020\001\022\t\n\005QUERY\020\002\"\241\001\n\021LogSlowF" +
-      "ilterType\022$\n LOG_SLOW_FILTER_TYPE_UNSPEC" +
-      "IFIED\020\000\022\r\n\tFULL_SCAN\020\001\022\r\n\tFULL_JOIN\020\002\022\r\n" +
-      "\tTMP_TABLE\020\003\022\025\n\021TMP_TABLE_ON_DISK\020\004\022\014\n\010F" +
-      "ILESORT\020\005\022\024\n\020FILESORT_ON_DISK\020\006\"\360\001\n\021Mysq" +
-      "lConfigSet5_7\022J\n\020effective_config\030\001 \001(\0132" +
-      "0.yandex.cloud.mdb.mysql.v1.config.Mysql" +
-      "Config5_7\022E\n\013user_config\030\002 \001(\01320.yandex." +
-      "cloud.mdb.mysql.v1.config.MysqlConfig5_7" +
-      "\022H\n\016default_config\030\003 \001(\01320.yandex.cloud." +
-      "mdb.mysql.v1.config.MysqlConfig5_7Br\n$ya" +
-      "ndex.cloud.api.mdb.mysql.v1.configZJgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/mdb/mysql/v1/config;mysqlb\006proto3"
+      "64ValueB\t\372\3071\0050-255\022F\n\030innodb_compression" +
+      "_level\030F \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\007\372\3071\0030-9\"\231\005\n\007SQLMode\022\027\n\023SQLMODE_UNSPEC" +
+      "IFIED\020\000\022\027\n\023ALLOW_INVALID_DATES\020\001\022\017\n\013ANSI" +
+      "_QUOTES\020\002\022\036\n\032ERROR_FOR_DIVISION_BY_ZERO\020" +
+      "\003\022\027\n\023HIGH_NOT_PRECEDENCE\020\004\022\020\n\014IGNORE_SPA" +
+      "CE\020\005\022\031\n\025NO_AUTO_VALUE_ON_ZERO\020\006\022\030\n\024NO_BA" +
+      "CKSLASH_ESCAPES\020\007\022\032\n\026NO_ENGINE_SUBSTITUT" +
+      "ION\020\010\022\033\n\027NO_UNSIGNED_SUBTRACTION\020\t\022\020\n\014NO" +
+      "_ZERO_DATE\020\n\022\023\n\017NO_ZERO_IN_DATE\020\013\022\024\n\020NO_" +
+      "FIELD_OPTIONS\020\014\022\022\n\016NO_KEY_OPTIONS\020\r\022\024\n\020N" +
+      "O_TABLE_OPTIONS\020\016\022\026\n\022ONLY_FULL_GROUP_BY\020" +
+      "\017\022\033\n\027PAD_CHAR_TO_FULL_LENGTH\020\020\022\023\n\017PIPES_" +
+      "AS_CONCAT\020\021\022\021\n\rREAL_AS_FLOAT\020\022\022\025\n\021STRICT" +
+      "_ALL_TABLES\020\023\022\027\n\023STRICT_TRANS_TABLES\020\024\022\010" +
+      "\n\004ANSI\020\025\022\017\n\013TRADITIONAL\020\026\022\007\n\003DB2\020\027\022\t\n\005MA" +
+      "XDB\020\030\022\t\n\005MSSQL\020\031\022\014\n\010MYSQL323\020\032\022\013\n\007MYSQL4" +
+      "0\020\033\022\n\n\006ORACLE\020\034\022\016\n\nPOSTGRESQL\020\035\022\027\n\023NO_AU" +
+      "TO_CREATE_USER\020\036\022\024\n\020NO_DIR_IN_CREATE\020\037\"x" +
+      "\n\nAuthPlugin\022\033\n\027AUTH_PLUGIN_UNSPECIFIED\020" +
+      "\000\022\031\n\025MYSQL_NATIVE_PASSWORD\020\001\022\035\n\025CACHING_" +
+      "SHA2_PASSWORD\020\002\032\002\010\001\022\023\n\017SHA256_PASSWORD\020\003" +
+      "\"x\n\024TransactionIsolation\022%\n!TRANSACTION_" +
+      "ISOLATION_UNSPECIFIED\020\000\022\022\n\016READ_COMMITTE" +
+      "D\020\001\022\023\n\017REPEATABLE_READ\020\002\022\020\n\014SERIALIZABLE" +
+      "\020\003\"U\n\016BinlogRowImage\022 \n\034BINLOG_ROW_IMAGE" +
+      "_UNSPECIFIED\020\000\022\010\n\004FULL\020\001\022\013\n\007MINIMAL\020\002\022\n\n" +
+      "\006NOBLOB\020\003\"Y\n\021SlaveParallelType\022#\n\037SLAVE_" +
+      "PARALLEL_TYPE_UNSPECIFIED\020\000\022\014\n\010DATABASE\020" +
+      "\001\022\021\n\rLOGICAL_CLOCK\020\002\"M\n\017LogSlowRateType\022" +
+      "\"\n\036LOG_SLOW_RATE_TYPE_UNSPECIFIED\020\000\022\013\n\007S" +
+      "ESSION\020\001\022\t\n\005QUERY\020\002\"\241\001\n\021LogSlowFilterTyp" +
+      "e\022$\n LOG_SLOW_FILTER_TYPE_UNSPECIFIED\020\000\022" +
+      "\r\n\tFULL_SCAN\020\001\022\r\n\tFULL_JOIN\020\002\022\r\n\tTMP_TAB" +
+      "LE\020\003\022\025\n\021TMP_TABLE_ON_DISK\020\004\022\014\n\010FILESORT\020" +
+      "\005\022\024\n\020FILESORT_ON_DISK\020\006\"\360\001\n\021MysqlConfigS" +
+      "et5_7\022J\n\020effective_config\030\001 \001(\01320.yandex" +
+      ".cloud.mdb.mysql.v1.config.MysqlConfig5_" +
+      "7\022E\n\013user_config\030\002 \001(\01320.yandex.cloud.md" +
+      "b.mysql.v1.config.MysqlConfig5_7\022H\n\016defa" +
+      "ult_config\030\003 \001(\01320.yandex.cloud.mdb.mysq" +
+      "l.v1.config.MysqlConfig5_7Br\n$yandex.clo" +
+      "ud.api.mdb.mysql.v1.configZJgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/mdb" +
+      "/mysql/v1/config;mysqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -20755,7 +21026,7 @@ public final class Mysql57 {
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig5_7_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig5_7_descriptor,
-        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "MdbPreserveBinlogBytes", "InteractiveTimeout", "WaitTimeout", "MdbOfflineModeEnableLag", "MdbOfflineModeDisableLag", "RangeOptimizerMaxMemSize", "SlowQueryLog", "SlowQueryLogAlwaysWriteTime", "LogSlowRateType", "LogSlowRateLimit", "LogSlowSpStatements", "LogSlowFilter", "MdbPriorityChoiceMaxLag", "InnodbPageSize", "InnodbOnlineAlterLogMaxSize", "InnodbFtMinTokenSize", "InnodbFtMaxTokenSize", "LowerCaseTableNames", "ShowCompatibility56", "MaxSpRecursionDepth", });
+        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "MdbPreserveBinlogBytes", "InteractiveTimeout", "WaitTimeout", "MdbOfflineModeEnableLag", "MdbOfflineModeDisableLag", "RangeOptimizerMaxMemSize", "SlowQueryLog", "SlowQueryLogAlwaysWriteTime", "LogSlowRateType", "LogSlowRateLimit", "LogSlowSpStatements", "LogSlowFilter", "MdbPriorityChoiceMaxLag", "InnodbPageSize", "InnodbOnlineAlterLogMaxSize", "InnodbFtMinTokenSize", "InnodbFtMaxTokenSize", "LowerCaseTableNames", "ShowCompatibility56", "MaxSpRecursionDepth", "InnodbCompressionLevel", });
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet5_7_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet5_7_fieldAccessorTable = new

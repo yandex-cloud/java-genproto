@@ -2956,6 +2956,1969 @@ public final class CertificateServiceOuterClass {
 
   }
 
+  public interface ListVersionsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.certificatemanager.v1.ListVersionsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the certificate to list versions for.
+     * </pre>
+     *
+     * <code>string certificate_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getCertificateId();
+    /**
+     * <pre>
+     * ID of the certificate to list versions for.
+     * </pre>
+     *
+     * <code>string certificate_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getCertificateIdBytes();
+
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListCertificatesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListCertificatesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListCertificatesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.certificatemanager.v1.ListVersionsRequest}
+   */
+  public  static final class ListVersionsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.certificatemanager.v1.ListVersionsRequest)
+      ListVersionsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListVersionsRequest.newBuilder() to construct.
+    private ListVersionsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListVersionsRequest() {
+      certificateId_ = "";
+      pageSize_ = 0L;
+      pageToken_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListVersionsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              certificateId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.internal_static_yandex_cloud_certificatemanager_v1_ListVersionsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.internal_static_yandex_cloud_certificatemanager_v1_ListVersionsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest.class, yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest.Builder.class);
+    }
+
+    public static final int CERTIFICATE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object certificateId_;
+    /**
+     * <pre>
+     * ID of the certificate to list versions for.
+     * </pre>
+     *
+     * <code>string certificate_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getCertificateId() {
+      java.lang.Object ref = certificateId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        certificateId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the certificate to list versions for.
+     * </pre>
+     *
+     * <code>string certificate_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getCertificateIdBytes() {
+      java.lang.Object ref = certificateId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        certificateId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListCertificatesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     */
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListCertificatesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListCertificatesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getCertificateIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, certificateId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!getPageTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getCertificateIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, certificateId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!getPageTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest other = (yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest) obj;
+
+      boolean result = true;
+      result = result && getCertificateId()
+          .equals(other.getCertificateId());
+      result = result && (getPageSize()
+          == other.getPageSize());
+      result = result && getPageToken()
+          .equals(other.getPageToken());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CERTIFICATE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCertificateId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.certificatemanager.v1.ListVersionsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.certificatemanager.v1.ListVersionsRequest)
+        yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.internal_static_yandex_cloud_certificatemanager_v1_ListVersionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.internal_static_yandex_cloud_certificatemanager_v1_ListVersionsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest.class, yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        certificateId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.internal_static_yandex_cloud_certificatemanager_v1_ListVersionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest build() {
+        yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest buildPartial() {
+        yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest result = new yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest(this);
+        result.certificateId_ = certificateId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest) {
+          return mergeFrom((yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest other) {
+        if (other == yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest.getDefaultInstance()) return this;
+        if (!other.getCertificateId().isEmpty()) {
+          certificateId_ = other.certificateId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object certificateId_ = "";
+      /**
+       * <pre>
+       * ID of the certificate to list versions for.
+       * </pre>
+       *
+       * <code>string certificate_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getCertificateId() {
+        java.lang.Object ref = certificateId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          certificateId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the certificate to list versions for.
+       * </pre>
+       *
+       * <code>string certificate_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getCertificateIdBytes() {
+        java.lang.Object ref = certificateId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          certificateId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the certificate to list versions for.
+       * </pre>
+       *
+       * <code>string certificate_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setCertificateId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        certificateId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the certificate to list versions for.
+       * </pre>
+       *
+       * <code>string certificate_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearCertificateId() {
+        
+        certificateId_ = getDefaultInstance().getCertificateId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the certificate to list versions for.
+       * </pre>
+       *
+       * <code>string certificate_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setCertificateIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        certificateId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListCertificatesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       */
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListCertificatesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListCertificatesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListCertificatesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListCertificatesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListCertificatesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListCertificatesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListCertificatesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.certificatemanager.v1.ListVersionsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.certificatemanager.v1.ListVersionsRequest)
+    private static final yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest();
+    }
+
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListVersionsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListVersionsRequest>() {
+      @java.lang.Override
+      public ListVersionsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListVersionsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListVersionsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListVersionsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListVersionsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.certificatemanager.v1.ListVersionsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of versions for the specified certificate.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version> 
+        getVersionsList();
+    /**
+     * <pre>
+     * List of versions for the specified certificate.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+     */
+    yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version getVersions(int index);
+    /**
+     * <pre>
+     * List of versions for the specified certificate.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+     */
+    int getVersionsCount();
+    /**
+     * <pre>
+     * List of versions for the specified certificate.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.VersionOrBuilder> 
+        getVersionsOrBuilderList();
+    /**
+     * <pre>
+     * List of versions for the specified certificate.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+     */
+    yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.VersionOrBuilder getVersionsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number
+     * of results is greater than the specified [ListCertificatesRequest.page_size], use
+     * the `next_page_token` as the value for the [ListCertificatesRequest.page_token] query parameter
+     * in the next list request. Each subsequent list request will have its own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number
+     * of results is greater than the specified [ListCertificatesRequest.page_size], use
+     * the `next_page_token` as the value for the [ListCertificatesRequest.page_token] query parameter
+     * in the next list request. Each subsequent list request will have its own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.certificatemanager.v1.ListVersionsResponse}
+   */
+  public  static final class ListVersionsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.certificatemanager.v1.ListVersionsResponse)
+      ListVersionsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListVersionsResponse.newBuilder() to construct.
+    private ListVersionsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListVersionsResponse() {
+      versions_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListVersionsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                versions_ = new java.util.ArrayList<yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              versions_.add(
+                  input.readMessage(yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          versions_ = java.util.Collections.unmodifiableList(versions_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.internal_static_yandex_cloud_certificatemanager_v1_ListVersionsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.internal_static_yandex_cloud_certificatemanager_v1_ListVersionsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse.class, yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int VERSIONS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version> versions_;
+    /**
+     * <pre>
+     * List of versions for the specified certificate.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+     */
+    public java.util.List<yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version> getVersionsList() {
+      return versions_;
+    }
+    /**
+     * <pre>
+     * List of versions for the specified certificate.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.VersionOrBuilder> 
+        getVersionsOrBuilderList() {
+      return versions_;
+    }
+    /**
+     * <pre>
+     * List of versions for the specified certificate.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+     */
+    public int getVersionsCount() {
+      return versions_.size();
+    }
+    /**
+     * <pre>
+     * List of versions for the specified certificate.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+     */
+    public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version getVersions(int index) {
+      return versions_.get(index);
+    }
+    /**
+     * <pre>
+     * List of versions for the specified certificate.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+     */
+    public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.VersionOrBuilder getVersionsOrBuilder(
+        int index) {
+      return versions_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number
+     * of results is greater than the specified [ListCertificatesRequest.page_size], use
+     * the `next_page_token` as the value for the [ListCertificatesRequest.page_token] query parameter
+     * in the next list request. Each subsequent list request will have its own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number
+     * of results is greater than the specified [ListCertificatesRequest.page_size], use
+     * the `next_page_token` as the value for the [ListCertificatesRequest.page_token] query parameter
+     * in the next list request. Each subsequent list request will have its own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < versions_.size(); i++) {
+        output.writeMessage(1, versions_.get(i));
+      }
+      if (!getNextPageTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < versions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, versions_.get(i));
+      }
+      if (!getNextPageTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse other = (yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse) obj;
+
+      boolean result = true;
+      result = result && getVersionsList()
+          .equals(other.getVersionsList());
+      result = result && getNextPageToken()
+          .equals(other.getNextPageToken());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getVersionsCount() > 0) {
+        hash = (37 * hash) + VERSIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getVersionsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.certificatemanager.v1.ListVersionsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.certificatemanager.v1.ListVersionsResponse)
+        yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.internal_static_yandex_cloud_certificatemanager_v1_ListVersionsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.internal_static_yandex_cloud_certificatemanager_v1_ListVersionsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse.class, yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getVersionsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (versionsBuilder_ == null) {
+          versions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          versionsBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.internal_static_yandex_cloud_certificatemanager_v1_ListVersionsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse build() {
+        yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse buildPartial() {
+        yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse result = new yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (versionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            versions_ = java.util.Collections.unmodifiableList(versions_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.versions_ = versions_;
+        } else {
+          result.versions_ = versionsBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse) {
+          return mergeFrom((yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse other) {
+        if (other == yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse.getDefaultInstance()) return this;
+        if (versionsBuilder_ == null) {
+          if (!other.versions_.isEmpty()) {
+            if (versions_.isEmpty()) {
+              versions_ = other.versions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureVersionsIsMutable();
+              versions_.addAll(other.versions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.versions_.isEmpty()) {
+            if (versionsBuilder_.isEmpty()) {
+              versionsBuilder_.dispose();
+              versionsBuilder_ = null;
+              versions_ = other.versions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              versionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVersionsFieldBuilder() : null;
+            } else {
+              versionsBuilder_.addAllMessages(other.versions_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version> versions_ =
+        java.util.Collections.emptyList();
+      private void ensureVersionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          versions_ = new java.util.ArrayList<yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version>(versions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version, yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version.Builder, yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.VersionOrBuilder> versionsBuilder_;
+
+      /**
+       * <pre>
+       * List of versions for the specified certificate.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version> getVersionsList() {
+        if (versionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(versions_);
+        } else {
+          return versionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of versions for the specified certificate.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+       */
+      public int getVersionsCount() {
+        if (versionsBuilder_ == null) {
+          return versions_.size();
+        } else {
+          return versionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of versions for the specified certificate.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+       */
+      public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version getVersions(int index) {
+        if (versionsBuilder_ == null) {
+          return versions_.get(index);
+        } else {
+          return versionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of versions for the specified certificate.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+       */
+      public Builder setVersions(
+          int index, yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version value) {
+        if (versionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVersionsIsMutable();
+          versions_.set(index, value);
+          onChanged();
+        } else {
+          versionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of versions for the specified certificate.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+       */
+      public Builder setVersions(
+          int index, yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version.Builder builderForValue) {
+        if (versionsBuilder_ == null) {
+          ensureVersionsIsMutable();
+          versions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          versionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of versions for the specified certificate.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+       */
+      public Builder addVersions(yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version value) {
+        if (versionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVersionsIsMutable();
+          versions_.add(value);
+          onChanged();
+        } else {
+          versionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of versions for the specified certificate.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+       */
+      public Builder addVersions(
+          int index, yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version value) {
+        if (versionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVersionsIsMutable();
+          versions_.add(index, value);
+          onChanged();
+        } else {
+          versionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of versions for the specified certificate.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+       */
+      public Builder addVersions(
+          yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version.Builder builderForValue) {
+        if (versionsBuilder_ == null) {
+          ensureVersionsIsMutable();
+          versions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          versionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of versions for the specified certificate.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+       */
+      public Builder addVersions(
+          int index, yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version.Builder builderForValue) {
+        if (versionsBuilder_ == null) {
+          ensureVersionsIsMutable();
+          versions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          versionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of versions for the specified certificate.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+       */
+      public Builder addAllVersions(
+          java.lang.Iterable<? extends yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version> values) {
+        if (versionsBuilder_ == null) {
+          ensureVersionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, versions_);
+          onChanged();
+        } else {
+          versionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of versions for the specified certificate.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+       */
+      public Builder clearVersions() {
+        if (versionsBuilder_ == null) {
+          versions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          versionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of versions for the specified certificate.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+       */
+      public Builder removeVersions(int index) {
+        if (versionsBuilder_ == null) {
+          ensureVersionsIsMutable();
+          versions_.remove(index);
+          onChanged();
+        } else {
+          versionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of versions for the specified certificate.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+       */
+      public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version.Builder getVersionsBuilder(
+          int index) {
+        return getVersionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of versions for the specified certificate.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+       */
+      public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.VersionOrBuilder getVersionsOrBuilder(
+          int index) {
+        if (versionsBuilder_ == null) {
+          return versions_.get(index);  } else {
+          return versionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of versions for the specified certificate.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.VersionOrBuilder> 
+           getVersionsOrBuilderList() {
+        if (versionsBuilder_ != null) {
+          return versionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(versions_);
+        }
+      }
+      /**
+       * <pre>
+       * List of versions for the specified certificate.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+       */
+      public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version.Builder addVersionsBuilder() {
+        return getVersionsFieldBuilder().addBuilder(
+            yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of versions for the specified certificate.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+       */
+      public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version.Builder addVersionsBuilder(
+          int index) {
+        return getVersionsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of versions for the specified certificate.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.certificatemanager.v1.Version versions = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version.Builder> 
+           getVersionsBuilderList() {
+        return getVersionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version, yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version.Builder, yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.VersionOrBuilder> 
+          getVersionsFieldBuilder() {
+        if (versionsBuilder_ == null) {
+          versionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version, yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Version.Builder, yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.VersionOrBuilder>(
+                  versions_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          versions_ = null;
+        }
+        return versionsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number
+       * of results is greater than the specified [ListCertificatesRequest.page_size], use
+       * the `next_page_token` as the value for the [ListCertificatesRequest.page_token] query parameter
+       * in the next list request. Each subsequent list request will have its own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number
+       * of results is greater than the specified [ListCertificatesRequest.page_size], use
+       * the `next_page_token` as the value for the [ListCertificatesRequest.page_token] query parameter
+       * in the next list request. Each subsequent list request will have its own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number
+       * of results is greater than the specified [ListCertificatesRequest.page_size], use
+       * the `next_page_token` as the value for the [ListCertificatesRequest.page_token] query parameter
+       * in the next list request. Each subsequent list request will have its own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number
+       * of results is greater than the specified [ListCertificatesRequest.page_size], use
+       * the `next_page_token` as the value for the [ListCertificatesRequest.page_token] query parameter
+       * in the next list request. Each subsequent list request will have its own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number
+       * of results is greater than the specified [ListCertificatesRequest.page_size], use
+       * the `next_page_token` as the value for the [ListCertificatesRequest.page_token] query parameter
+       * in the next list request. Each subsequent list request will have its own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.certificatemanager.v1.ListVersionsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.certificatemanager.v1.ListVersionsResponse)
+    private static final yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse();
+    }
+
+    public static yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListVersionsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListVersionsResponse>() {
+      @java.lang.Override
+      public ListVersionsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListVersionsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListVersionsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListVersionsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CreateCertificateRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.certificatemanager.v1.CreateCertificateRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -13496,6 +15459,16 @@ public final class CertificateServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_certificatemanager_v1_ListCertificatesResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_certificatemanager_v1_ListVersionsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_certificatemanager_v1_ListVersionsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_certificatemanager_v1_ListVersionsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_certificatemanager_v1_ListVersionsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_certificatemanager_v1_CreateCertificateRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -13589,114 +15562,125 @@ public final class CertificateServiceOuterClass {
       "ListCertificatesResponse\022E\n\014certificates" +
       "\030\001 \003(\0132/.yandex.cloud.certificatemanager" +
       ".v1.Certificate\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\"\302\003\n\030CreateCertificateRequest\022\037\n\tfolder_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\307" +
-      "1 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\037\n\013de" +
-      "scription\030\003 \001(\tB\n\212\3101\006<=1024\022\231\001\n\006labels\030\004" +
-      " \003(\0132H.yandex.cloud.certificatemanager.v" +
-      "1.CreateCertificateRequest.LabelsEntryB?" +
-      "\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=6" +
-      "3\262\3101\022\022\020[a-z][-_0-9a-z]*\022 \n\013certificate\030\005" +
-      " \001(\tB\013\212\3101\007<=32768\022\034\n\005chain\030\006 \001(\tB\r\212\3101\t<=" +
-      "2097152\022%\n\013private_key\030\007 \001(\tB\020\350\3071\001\212\3101\0101-" +
-      "524288\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001\"3\n\031CreateCertificateMetada" +
-      "ta\022\026\n\016certificate_id\030\001 \001(\t\"\364\003\n\030UpdateCer" +
-      "tificateRequest\022$\n\016certificate_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.goo" +
-      "gle.protobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\307" +
-      "1 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\037\n\013de" +
-      "scription\030\004 \001(\tB\n\212\3101\006<=1024\022\231\001\n\006labels\030\005" +
-      " \003(\0132H.yandex.cloud.certificatemanager.v" +
-      "1.UpdateCertificateRequest.LabelsEntryB?" +
-      "\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=6" +
-      "3\262\3101\022\022\020[a-z][-_0-9a-z]*\022 \n\013certificate\030\006" +
-      " \001(\tB\013\212\3101\007<=32768\022\034\n\005chain\030\007 \001(\tB\r\212\3101\t<=" +
-      "2097152\022!\n\013private_key\030\010 \001(\tB\014\212\3101\010<=5242" +
-      "88\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\"3\n\031UpdateCertificateMetadata\022\026" +
-      "\n\016certificate_id\030\001 \001(\t\"@\n\030DeleteCertific" +
+      "\"y\n\023ListVersionsRequest\022$\n\016certificate_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003" +
+      "B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=" +
+      "100\"n\n\024ListVersionsResponse\022=\n\010versions\030" +
+      "\001 \003(\0132+.yandex.cloud.certificatemanager." +
+      "v1.Version\022\027\n\017next_page_token\030\002 \001(\t\"\302\003\n\030" +
+      "CreateCertificateRequest\022\037\n\tfolder_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a" +
+      "-z]([-a-z0-9]{0,61}[a-z0-9])?\022\037\n\013descrip" +
+      "tion\030\003 \001(\tB\n\212\3101\006<=1024\022\231\001\n\006labels\030\004 \003(\0132" +
+      "H.yandex.cloud.certificatemanager.v1.Cre" +
+      "ateCertificateRequest.LabelsEntryB?\202\3101\004<" +
+      "=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022" +
+      "\022\020[a-z][-_0-9a-z]*\022 \n\013certificate\030\005 \001(\tB" +
+      "\013\212\3101\007<=32768\022\034\n\005chain\030\006 \001(\tB\r\212\3101\t<=20971" +
+      "52\022%\n\013private_key\030\007 \001(\tB\020\350\3071\001\212\3101\0101-52428" +
+      "8\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\"3\n\031CreateCertificateMetadata\022\026\n" +
+      "\016certificate_id\030\001 \001(\t\"\364\003\n\030UpdateCertific" +
       "ateRequest\022$\n\016certificate_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\"3\n\031DeleteCertificateMetadata\022\026\n" +
-      "\016certificate_id\030\001 \001(\t\"\277\003\n\034RequestNewCert" +
-      "ificateRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0" +
-      "-9]{0,61}[a-z0-9])?\022\037\n\013description\030\003 \001(\t" +
-      "B\n\212\3101\006<=1024\022\235\001\n\006labels\030\004 \003(\0132L.yandex.c" +
-      "loud.certificatemanager.v1.RequestNewCer" +
-      "tificateRequest.LabelsEntryB?\202\3101\004<=64\212\3101" +
-      "\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z" +
-      "][-_0-9a-z]*\022\017\n\007domains\030\005 \003(\t\022I\n\016challen" +
-      "ge_type\030\006 \001(\01621.yandex.cloud.certificate" +
-      "manager.v1.ChallengeType\032-\n\013LabelsEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"7\n\035Reque" +
-      "stNewCertificateMetadata\022\026\n\016certificate_" +
-      "id\030\001 \001(\t\"\206\001\n ListCertificateOperationsRe" +
+      "\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.p" +
+      "rotobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a" +
+      "-z]([-a-z0-9]{0,61}[a-z0-9])?\022\037\n\013descrip" +
+      "tion\030\004 \001(\tB\n\212\3101\006<=1024\022\231\001\n\006labels\030\005 \003(\0132" +
+      "H.yandex.cloud.certificatemanager.v1.Upd" +
+      "ateCertificateRequest.LabelsEntryB?\202\3101\004<" +
+      "=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022" +
+      "\022\020[a-z][-_0-9a-z]*\022 \n\013certificate\030\006 \001(\tB" +
+      "\013\212\3101\007<=32768\022\034\n\005chain\030\007 \001(\tB\r\212\3101\t<=20971" +
+      "52\022!\n\013private_key\030\010 \001(\tB\014\212\3101\010<=524288\032-\n" +
+      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\"3\n\031UpdateCertificateMetadata\022\026\n\016cer" +
+      "tificate_id\030\001 \001(\t\"@\n\030DeleteCertificateRe" +
       "quest\022$\n\016certificate_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npa" +
-      "ge_token\030\003 \001(\tB\t\212\3101\005<=100\"s\n!ListCertifi" +
-      "cateOperationsResponse\0225\n\noperations\030\001 \003" +
-      "(\0132!.yandex.cloud.operation.Operation\022\027\n" +
-      "\017next_page_token\030\002 \001(\t*&\n\017CertificateVie" +
-      "w\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\0012\376\020\n\022CertificateSe" +
-      "rvice\022\260\001\n\003Get\0229.yandex.cloud.certificate" +
-      "manager.v1.GetCertificateRequest\032/.yande" +
-      "x.cloud.certificatemanager.v1.Certificat" +
-      "e\"=\202\323\344\223\0027\0225/certificate-manager/v1/certi" +
-      "ficates/{certificate_id}\022\257\001\n\004List\022;.yand" +
-      "ex.cloud.certificatemanager.v1.ListCerti" +
-      "ficatesRequest\032<.yandex.cloud.certificat" +
-      "emanager.v1.ListCertificatesResponse\",\202\323" +
-      "\344\223\002&\022$/certificate-manager/v1/certificat" +
-      "es\022\306\001\n\006Create\022<.yandex.cloud.certificate" +
-      "manager.v1.CreateCertificateRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"[\202\323\344\223\002)\"$" +
-      "/certificate-manager/v1/certificates:\001*\262" +
-      "\322*(\n\031CreateCertificateMetadata\022\013Certific" +
-      "ate\022\327\001\n\006Update\022<.yandex.cloud.certificat" +
-      "emanager.v1.UpdateCertificateRequest\032!.y" +
-      "andex.cloud.operation.Operation\"l\202\323\344\223\002:2" +
-      "5/certificate-manager/v1/certificates/{c" +
-      "ertificate_id}:\001*\262\322*(\n\031UpdateCertificate" +
-      "Metadata\022\013Certificate\022\324\001\n\006Delete\022<.yande" +
-      "x.cloud.certificatemanager.v1.DeleteCert" +
-      "ificateRequest\032!.yandex.cloud.operation." +
-      "Operation\"i\202\323\344\223\0027*5/certificate-manager/" +
-      "v1/certificates/{certificate_id}\262\322*(\n\031De" +
-      "leteCertificateMetadata\022\013Certificate\022\335\001\n" +
-      "\nRequestNew\022@.yandex.cloud.certificatema" +
-      "nager.v1.RequestNewCertificateRequest\032!." +
-      "yandex.cloud.operation.Operation\"j\202\323\344\223\0024" +
-      "\"//certificate-manager/v1/certificates/r" +
-      "equestNew:\001*\262\322*,\n\035RequestNewCertificateM" +
-      "etadata\022\013Certificate\022\347\001\n\016ListOperations\022" +
-      "D.yandex.cloud.certificatemanager.v1.Lis" +
-      "tCertificateOperationsRequest\032E.yandex.c" +
-      "loud.certificatemanager.v1.ListCertifica" +
-      "teOperationsResponse\"H\202\323\344\223\002B\022@/certifica" +
-      "te-manager/v1/certificates/{certificate_" +
-      "id}/operations\022\304\001\n\022ListAccessBindings\022.." +
-      "yandex.cloud.access.ListAccessBindingsRe" +
-      "quest\032/.yandex.cloud.access.ListAccessBi" +
-      "ndingsResponse\"M\202\323\344\223\002G\022E/certificate-man" +
-      "ager/v1/certificates/{resource_id}:listA" +
-      "ccessBindings\022\364\001\n\021SetAccessBindings\022-.ya" +
-      "ndex.cloud.access.SetAccessBindingsReque" +
-      "st\032!.yandex.cloud.operation.Operation\"\214\001" +
-      "\202\323\344\223\002I\"D/certificate-manager/v1/certific" +
-      "ates/{resource_id}:setAccessBindings:\001*\262" +
-      "\322*9\n access.SetAccessBindingsMetadata\022\025g" +
-      "oogle.protobuf.Empty\022\200\002\n\024UpdateAccessBin" +
-      "dings\0220.yandex.cloud.access.UpdateAccess" +
-      "BindingsRequest\032!.yandex.cloud.operation" +
-      ".Operation\"\222\001\202\323\344\223\002L\"G/certificate-manage" +
-      "r/v1/certificates/{resource_id}:updateAc" +
-      "cessBindings:\001*\262\322*<\n#access.UpdateAccess" +
-      "BindingsMetadata\022\025google.protobuf.EmptyB" +
-      "\203\001\n&yandex.cloud.api.certificatemanager." +
-      "v1ZYgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/certificatemanager/v1;certi" +
-      "ficatemanagerb\006proto3"
+      "=50\"3\n\031DeleteCertificateMetadata\022\026\n\016cert" +
+      "ificate_id\030\001 \001(\t\"\277\003\n\034RequestNewCertifica" +
+      "teRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0" +
+      ",61}[a-z0-9])?\022\037\n\013description\030\003 \001(\tB\n\212\3101" +
+      "\006<=1024\022\235\001\n\006labels\030\004 \003(\0132L.yandex.cloud." +
+      "certificatemanager.v1.RequestNewCertific" +
+      "ateRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63" +
+      "\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0" +
+      "-9a-z]*\022\017\n\007domains\030\005 \003(\t\022I\n\016challenge_ty" +
+      "pe\030\006 \001(\01621.yandex.cloud.certificatemanag" +
+      "er.v1.ChallengeType\032-\n\013LabelsEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"7\n\035RequestNew" +
+      "CertificateMetadata\022\026\n\016certificate_id\030\001 " +
+      "\001(\t\"\206\001\n ListCertificateOperationsRequest" +
+      "\022$\n\016certificate_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
+      "\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_to" +
+      "ken\030\003 \001(\tB\t\212\3101\005<=100\"s\n!ListCertificateO" +
+      "perationsResponse\0225\n\noperations\030\001 \003(\0132!." +
+      "yandex.cloud.operation.Operation\022\027\n\017next" +
+      "_page_token\030\002 \001(\t*&\n\017CertificateView\022\t\n\005" +
+      "BASIC\020\000\022\010\n\004FULL\020\0012\312\022\n\022CertificateService" +
+      "\022\260\001\n\003Get\0229.yandex.cloud.certificatemanag" +
+      "er.v1.GetCertificateRequest\032/.yandex.clo" +
+      "ud.certificatemanager.v1.Certificate\"=\202\323" +
+      "\344\223\0027\0225/certificate-manager/v1/certificat" +
+      "es/{certificate_id}\022\257\001\n\004List\022;.yandex.cl" +
+      "oud.certificatemanager.v1.ListCertificat" +
+      "esRequest\032<.yandex.cloud.certificatemana" +
+      "ger.v1.ListCertificatesResponse\",\202\323\344\223\002&\022" +
+      "$/certificate-manager/v1/certificates\022\311\001" +
+      "\n\014ListVersions\0227.yandex.cloud.certificat" +
+      "emanager.v1.ListVersionsRequest\0328.yandex" +
+      ".cloud.certificatemanager.v1.ListVersion" +
+      "sResponse\"F\202\323\344\223\002@\022>/certificate-manager/" +
+      "v1/certificates/{certificate_id}/version" +
+      "s\022\306\001\n\006Create\022<.yandex.cloud.certificatem" +
+      "anager.v1.CreateCertificateRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"[\202\323\344\223\002)\"$/" +
+      "certificate-manager/v1/certificates:\001*\262\322" +
+      "*(\n\031CreateCertificateMetadata\022\013Certifica" +
+      "te\022\327\001\n\006Update\022<.yandex.cloud.certificate" +
+      "manager.v1.UpdateCertificateRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"l\202\323\344\223\002:25" +
+      "/certificate-manager/v1/certificates/{ce" +
+      "rtificate_id}:\001*\262\322*(\n\031UpdateCertificateM" +
+      "etadata\022\013Certificate\022\324\001\n\006Delete\022<.yandex" +
+      ".cloud.certificatemanager.v1.DeleteCerti" +
+      "ficateRequest\032!.yandex.cloud.operation.O" +
+      "peration\"i\202\323\344\223\0027*5/certificate-manager/v" +
+      "1/certificates/{certificate_id}\262\322*(\n\031Del" +
+      "eteCertificateMetadata\022\013Certificate\022\335\001\n\n" +
+      "RequestNew\022@.yandex.cloud.certificateman" +
+      "ager.v1.RequestNewCertificateRequest\032!.y" +
+      "andex.cloud.operation.Operation\"j\202\323\344\223\0024\"" +
+      "//certificate-manager/v1/certificates/re" +
+      "questNew:\001*\262\322*,\n\035RequestNewCertificateMe" +
+      "tadata\022\013Certificate\022\347\001\n\016ListOperations\022D" +
+      ".yandex.cloud.certificatemanager.v1.List" +
+      "CertificateOperationsRequest\032E.yandex.cl" +
+      "oud.certificatemanager.v1.ListCertificat" +
+      "eOperationsResponse\"H\202\323\344\223\002B\022@/certificat" +
+      "e-manager/v1/certificates/{certificate_i" +
+      "d}/operations\022\304\001\n\022ListAccessBindings\022..y" +
+      "andex.cloud.access.ListAccessBindingsReq" +
+      "uest\032/.yandex.cloud.access.ListAccessBin" +
+      "dingsResponse\"M\202\323\344\223\002G\022E/certificate-mana" +
+      "ger/v1/certificates/{resource_id}:listAc" +
+      "cessBindings\022\364\001\n\021SetAccessBindings\022-.yan" +
+      "dex.cloud.access.SetAccessBindingsReques" +
+      "t\032!.yandex.cloud.operation.Operation\"\214\001\202" +
+      "\323\344\223\002I\"D/certificate-manager/v1/certifica" +
+      "tes/{resource_id}:setAccessBindings:\001*\262\322" +
+      "*9\n access.SetAccessBindingsMetadata\022\025go" +
+      "ogle.protobuf.Empty\022\200\002\n\024UpdateAccessBind" +
+      "ings\0220.yandex.cloud.access.UpdateAccessB" +
+      "indingsRequest\032!.yandex.cloud.operation." +
+      "Operation\"\222\001\202\323\344\223\002L\"G/certificate-manager" +
+      "/v1/certificates/{resource_id}:updateAcc" +
+      "essBindings:\001*\262\322*<\n#access.UpdateAccessB" +
+      "indingsMetadata\022\025google.protobuf.EmptyB\203" +
+      "\001\n&yandex.cloud.api.certificatemanager.v" +
+      "1ZYgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/certificatemanager/v1;certif" +
+      "icatemanagerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13735,8 +15719,20 @@ public final class CertificateServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_certificatemanager_v1_ListCertificatesResponse_descriptor,
         new java.lang.String[] { "Certificates", "NextPageToken", });
-    internal_static_yandex_cloud_certificatemanager_v1_CreateCertificateRequest_descriptor =
+    internal_static_yandex_cloud_certificatemanager_v1_ListVersionsRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_certificatemanager_v1_ListVersionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_certificatemanager_v1_ListVersionsRequest_descriptor,
+        new java.lang.String[] { "CertificateId", "PageSize", "PageToken", });
+    internal_static_yandex_cloud_certificatemanager_v1_ListVersionsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_certificatemanager_v1_ListVersionsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_certificatemanager_v1_ListVersionsResponse_descriptor,
+        new java.lang.String[] { "Versions", "NextPageToken", });
+    internal_static_yandex_cloud_certificatemanager_v1_CreateCertificateRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_certificatemanager_v1_CreateCertificateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_certificatemanager_v1_CreateCertificateRequest_descriptor,
@@ -13748,13 +15744,13 @@ public final class CertificateServiceOuterClass {
         internal_static_yandex_cloud_certificatemanager_v1_CreateCertificateRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_certificatemanager_v1_CreateCertificateMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_certificatemanager_v1_CreateCertificateMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_certificatemanager_v1_CreateCertificateMetadata_descriptor,
         new java.lang.String[] { "CertificateId", });
     internal_static_yandex_cloud_certificatemanager_v1_UpdateCertificateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_certificatemanager_v1_UpdateCertificateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_certificatemanager_v1_UpdateCertificateRequest_descriptor,
@@ -13766,25 +15762,25 @@ public final class CertificateServiceOuterClass {
         internal_static_yandex_cloud_certificatemanager_v1_UpdateCertificateRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_certificatemanager_v1_UpdateCertificateMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_certificatemanager_v1_UpdateCertificateMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_certificatemanager_v1_UpdateCertificateMetadata_descriptor,
         new java.lang.String[] { "CertificateId", });
     internal_static_yandex_cloud_certificatemanager_v1_DeleteCertificateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_certificatemanager_v1_DeleteCertificateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_certificatemanager_v1_DeleteCertificateRequest_descriptor,
         new java.lang.String[] { "CertificateId", });
     internal_static_yandex_cloud_certificatemanager_v1_DeleteCertificateMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_certificatemanager_v1_DeleteCertificateMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_certificatemanager_v1_DeleteCertificateMetadata_descriptor,
         new java.lang.String[] { "CertificateId", });
     internal_static_yandex_cloud_certificatemanager_v1_RequestNewCertificateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_certificatemanager_v1_RequestNewCertificateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_certificatemanager_v1_RequestNewCertificateRequest_descriptor,
@@ -13796,19 +15792,19 @@ public final class CertificateServiceOuterClass {
         internal_static_yandex_cloud_certificatemanager_v1_RequestNewCertificateRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_certificatemanager_v1_RequestNewCertificateMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_certificatemanager_v1_RequestNewCertificateMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_certificatemanager_v1_RequestNewCertificateMetadata_descriptor,
         new java.lang.String[] { "CertificateId", });
     internal_static_yandex_cloud_certificatemanager_v1_ListCertificateOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_certificatemanager_v1_ListCertificateOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_certificatemanager_v1_ListCertificateOperationsRequest_descriptor,
         new java.lang.String[] { "CertificateId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_certificatemanager_v1_ListCertificateOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_certificatemanager_v1_ListCertificateOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_certificatemanager_v1_ListCertificateOperationsResponse_descriptor,

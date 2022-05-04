@@ -94,6 +94,38 @@ public final class CertificateServiceGrpc {
      return getListMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest,
+      yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse> getListVersionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListVersions",
+      requestType = yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest.class,
+      responseType = yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest,
+      yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse> getListVersionsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest, yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse> getListVersionsMethod;
+    if ((getListVersionsMethod = CertificateServiceGrpc.getListVersionsMethod) == null) {
+      synchronized (CertificateServiceGrpc.class) {
+        if ((getListVersionsMethod = CertificateServiceGrpc.getListVersionsMethod) == null) {
+          CertificateServiceGrpc.getListVersionsMethod = getListVersionsMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest, yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.certificatemanager.v1.CertificateService", "ListVersions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new CertificateServiceMethodDescriptorSupplier("ListVersions"))
+                  .build();
+          }
+        }
+     }
+     return getListVersionsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.CreateCertificateRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
 
@@ -402,6 +434,13 @@ public final class CertificateServiceGrpc {
     }
 
     /**
+     */
+    public void listVersions(yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getListVersionsMethod(), responseObserver);
+    }
+
+    /**
      * <pre>
      * Creates a certificate in the specified folder.
      * </pre>
@@ -497,6 +536,13 @@ public final class CertificateServiceGrpc {
                 yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListCertificatesRequest,
                 yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListCertificatesResponse>(
                   this, METHODID_LIST)))
+          .addMethod(
+            getListVersionsMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest,
+                yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse>(
+                  this, METHODID_LIST_VERSIONS)))
           .addMethod(
             getCreateMethod(),
             asyncUnaryCall(
@@ -599,6 +645,14 @@ public final class CertificateServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListCertificatesResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void listVersions(yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getListVersionsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -733,6 +787,13 @@ public final class CertificateServiceGrpc {
     }
 
     /**
+     */
+    public yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse listVersions(yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getListVersionsMethod(), getCallOptions(), request);
+    }
+
+    /**
      * <pre>
      * Creates a certificate in the specified folder.
      * </pre>
@@ -858,6 +919,14 @@ public final class CertificateServiceGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse> listVersions(
+        yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getListVersionsMethod(), getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      * Creates a certificate in the specified folder.
      * </pre>
@@ -948,14 +1017,15 @@ public final class CertificateServiceGrpc {
 
   private static final int METHODID_GET = 0;
   private static final int METHODID_LIST = 1;
-  private static final int METHODID_CREATE = 2;
-  private static final int METHODID_UPDATE = 3;
-  private static final int METHODID_DELETE = 4;
-  private static final int METHODID_REQUEST_NEW = 5;
-  private static final int METHODID_LIST_OPERATIONS = 6;
-  private static final int METHODID_LIST_ACCESS_BINDINGS = 7;
-  private static final int METHODID_SET_ACCESS_BINDINGS = 8;
-  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 9;
+  private static final int METHODID_LIST_VERSIONS = 2;
+  private static final int METHODID_CREATE = 3;
+  private static final int METHODID_UPDATE = 4;
+  private static final int METHODID_DELETE = 5;
+  private static final int METHODID_REQUEST_NEW = 6;
+  private static final int METHODID_LIST_OPERATIONS = 7;
+  private static final int METHODID_LIST_ACCESS_BINDINGS = 8;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 9;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -981,6 +1051,10 @@ public final class CertificateServiceGrpc {
         case METHODID_LIST:
           serviceImpl.list((yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListCertificatesRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListCertificatesResponse>) responseObserver);
+          break;
+        case METHODID_LIST_VERSIONS:
+          serviceImpl.listVersions((yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.ListVersionsResponse>) responseObserver);
           break;
         case METHODID_CREATE:
           serviceImpl.create((yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.CreateCertificateRequest) request,
@@ -1077,6 +1151,7 @@ public final class CertificateServiceGrpc {
               .setSchemaDescriptor(new CertificateServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
               .addMethod(getListMethod())
+              .addMethod(getListVersionsMethod())
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
