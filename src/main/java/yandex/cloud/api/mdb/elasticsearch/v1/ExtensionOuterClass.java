@@ -38,7 +38,7 @@ public final class ExtensionOuterClass {
 
     /**
      * <pre>
-     * Extension unique ID
+     * Unique ID of the extension.
      * </pre>
      *
      * <code>string id = 2;</code>
@@ -46,7 +46,7 @@ public final class ExtensionOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * Extension unique ID
+     * Unique ID of the extension.
      * </pre>
      *
      * <code>string id = 2;</code>
@@ -74,7 +74,7 @@ public final class ExtensionOuterClass {
 
     /**
      * <pre>
-     * Extension version 
+     * Version of the extension.
      * </pre>
      *
      * <code>int64 version = 4;</code>
@@ -83,7 +83,7 @@ public final class ExtensionOuterClass {
 
     /**
      * <pre>
-     * Flag is extension active now
+     * The flag shows whether the extension is active.
      * </pre>
      *
      * <code>bool active = 5;</code>
@@ -240,7 +240,7 @@ public final class ExtensionOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * Extension unique ID
+     * Unique ID of the extension.
      * </pre>
      *
      * <code>string id = 2;</code>
@@ -259,7 +259,7 @@ public final class ExtensionOuterClass {
     }
     /**
      * <pre>
-     * Extension unique ID
+     * Unique ID of the extension.
      * </pre>
      *
      * <code>string id = 2;</code>
@@ -324,7 +324,7 @@ public final class ExtensionOuterClass {
     private long version_;
     /**
      * <pre>
-     * Extension version 
+     * Version of the extension.
      * </pre>
      *
      * <code>int64 version = 4;</code>
@@ -337,7 +337,7 @@ public final class ExtensionOuterClass {
     private boolean active_;
     /**
      * <pre>
-     * Flag is extension active now
+     * The flag shows whether the extension is active.
      * </pre>
      *
      * <code>bool active = 5;</code>
@@ -811,7 +811,7 @@ public final class ExtensionOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * Extension unique ID
+       * Unique ID of the extension.
        * </pre>
        *
        * <code>string id = 2;</code>
@@ -830,7 +830,7 @@ public final class ExtensionOuterClass {
       }
       /**
        * <pre>
-       * Extension unique ID
+       * Unique ID of the extension.
        * </pre>
        *
        * <code>string id = 2;</code>
@@ -850,7 +850,7 @@ public final class ExtensionOuterClass {
       }
       /**
        * <pre>
-       * Extension unique ID
+       * Unique ID of the extension.
        * </pre>
        *
        * <code>string id = 2;</code>
@@ -867,7 +867,7 @@ public final class ExtensionOuterClass {
       }
       /**
        * <pre>
-       * Extension unique ID
+       * Unique ID of the extension.
        * </pre>
        *
        * <code>string id = 2;</code>
@@ -880,7 +880,7 @@ public final class ExtensionOuterClass {
       }
       /**
        * <pre>
-       * Extension unique ID
+       * Unique ID of the extension.
        * </pre>
        *
        * <code>string id = 2;</code>
@@ -989,7 +989,7 @@ public final class ExtensionOuterClass {
       private long version_ ;
       /**
        * <pre>
-       * Extension version 
+       * Version of the extension.
        * </pre>
        *
        * <code>int64 version = 4;</code>
@@ -999,7 +999,7 @@ public final class ExtensionOuterClass {
       }
       /**
        * <pre>
-       * Extension version 
+       * Version of the extension.
        * </pre>
        *
        * <code>int64 version = 4;</code>
@@ -1012,7 +1012,7 @@ public final class ExtensionOuterClass {
       }
       /**
        * <pre>
-       * Extension version 
+       * Version of the extension.
        * </pre>
        *
        * <code>int64 version = 4;</code>
@@ -1027,7 +1027,7 @@ public final class ExtensionOuterClass {
       private boolean active_ ;
       /**
        * <pre>
-       * Flag is extension active now
+       * The flag shows whether the extension is active.
        * </pre>
        *
        * <code>bool active = 5;</code>
@@ -1037,7 +1037,7 @@ public final class ExtensionOuterClass {
       }
       /**
        * <pre>
-       * Flag is extension active now
+       * The flag shows whether the extension is active.
        * </pre>
        *
        * <code>bool active = 5;</code>
@@ -1050,7 +1050,7 @@ public final class ExtensionOuterClass {
       }
       /**
        * <pre>
-       * Flag is extension active now
+       * The flag shows whether the extension is active.
        * </pre>
        *
        * <code>bool active = 5;</code>
@@ -1138,8 +1138,7 @@ public final class ExtensionOuterClass {
 
     /**
      * <pre>
-     * URI of the zip arhive to create the new extension from.
-     * Currently only supports links that are stored in Yandex Object Storage.
+     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
      * </pre>
      *
      * <code>string uri = 2;</code>
@@ -1147,8 +1146,7 @@ public final class ExtensionOuterClass {
     java.lang.String getUri();
     /**
      * <pre>
-     * URI of the zip arhive to create the new extension from.
-     * Currently only supports links that are stored in Yandex Object Storage.
+     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
      * </pre>
      *
      * <code>string uri = 2;</code>
@@ -1157,6 +1155,10 @@ public final class ExtensionOuterClass {
         getUriBytes();
 
     /**
+     * <pre>
+     * The flag shows whether to create the extension in disabled state. 
+     * </pre>
+     *
      * <code>bool disabled = 3;</code>
      */
     boolean getDisabled();
@@ -1298,8 +1300,7 @@ public final class ExtensionOuterClass {
     private volatile java.lang.Object uri_;
     /**
      * <pre>
-     * URI of the zip arhive to create the new extension from.
-     * Currently only supports links that are stored in Yandex Object Storage.
+     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
      * </pre>
      *
      * <code>string uri = 2;</code>
@@ -1318,8 +1319,7 @@ public final class ExtensionOuterClass {
     }
     /**
      * <pre>
-     * URI of the zip arhive to create the new extension from.
-     * Currently only supports links that are stored in Yandex Object Storage.
+     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
      * </pre>
      *
      * <code>string uri = 2;</code>
@@ -1341,6 +1341,10 @@ public final class ExtensionOuterClass {
     public static final int DISABLED_FIELD_NUMBER = 3;
     private boolean disabled_;
     /**
+     * <pre>
+     * The flag shows whether to create the extension in disabled state. 
+     * </pre>
+     *
      * <code>bool disabled = 3;</code>
      */
     public boolean getDisabled() {
@@ -1777,8 +1781,7 @@ public final class ExtensionOuterClass {
       private java.lang.Object uri_ = "";
       /**
        * <pre>
-       * URI of the zip arhive to create the new extension from.
-       * Currently only supports links that are stored in Yandex Object Storage.
+       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
        * </pre>
        *
        * <code>string uri = 2;</code>
@@ -1797,8 +1800,7 @@ public final class ExtensionOuterClass {
       }
       /**
        * <pre>
-       * URI of the zip arhive to create the new extension from.
-       * Currently only supports links that are stored in Yandex Object Storage.
+       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
        * </pre>
        *
        * <code>string uri = 2;</code>
@@ -1818,8 +1820,7 @@ public final class ExtensionOuterClass {
       }
       /**
        * <pre>
-       * URI of the zip arhive to create the new extension from.
-       * Currently only supports links that are stored in Yandex Object Storage.
+       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
        * </pre>
        *
        * <code>string uri = 2;</code>
@@ -1836,8 +1837,7 @@ public final class ExtensionOuterClass {
       }
       /**
        * <pre>
-       * URI of the zip arhive to create the new extension from.
-       * Currently only supports links that are stored in Yandex Object Storage.
+       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
        * </pre>
        *
        * <code>string uri = 2;</code>
@@ -1850,8 +1850,7 @@ public final class ExtensionOuterClass {
       }
       /**
        * <pre>
-       * URI of the zip arhive to create the new extension from.
-       * Currently only supports links that are stored in Yandex Object Storage.
+       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
        * </pre>
        *
        * <code>string uri = 2;</code>
@@ -1870,12 +1869,20 @@ public final class ExtensionOuterClass {
 
       private boolean disabled_ ;
       /**
+       * <pre>
+       * The flag shows whether to create the extension in disabled state. 
+       * </pre>
+       *
        * <code>bool disabled = 3;</code>
        */
       public boolean getDisabled() {
         return disabled_;
       }
       /**
+       * <pre>
+       * The flag shows whether to create the extension in disabled state. 
+       * </pre>
+       *
        * <code>bool disabled = 3;</code>
        */
       public Builder setDisabled(boolean value) {
@@ -1885,6 +1892,10 @@ public final class ExtensionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The flag shows whether to create the extension in disabled state. 
+       * </pre>
+       *
        * <code>bool disabled = 3;</code>
        */
       public Builder clearDisabled() {

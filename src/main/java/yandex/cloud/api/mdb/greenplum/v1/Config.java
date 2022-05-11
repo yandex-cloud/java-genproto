@@ -14,6 +14,131 @@ public final class Config {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code yandex.cloud.mdb.greenplum.v1.LogStatement}
+   */
+  public enum LogStatement
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>LOG_STATEMENT_UNSPECIFIED = 0;</code>
+     */
+    LOG_STATEMENT_UNSPECIFIED(0),
+    /**
+     * <code>NONE = 1;</code>
+     */
+    NONE(1),
+    /**
+     * <code>DDL = 2;</code>
+     */
+    DDL(2),
+    /**
+     * <code>MOD = 3;</code>
+     */
+    MOD(3),
+    /**
+     * <code>ALL = 4;</code>
+     */
+    ALL(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>LOG_STATEMENT_UNSPECIFIED = 0;</code>
+     */
+    public static final int LOG_STATEMENT_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>NONE = 1;</code>
+     */
+    public static final int NONE_VALUE = 1;
+    /**
+     * <code>DDL = 2;</code>
+     */
+    public static final int DDL_VALUE = 2;
+    /**
+     * <code>MOD = 3;</code>
+     */
+    public static final int MOD_VALUE = 3;
+    /**
+     * <code>ALL = 4;</code>
+     */
+    public static final int ALL_VALUE = 4;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static LogStatement valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static LogStatement forNumber(int value) {
+      switch (value) {
+        case 0: return LOG_STATEMENT_UNSPECIFIED;
+        case 1: return NONE;
+        case 2: return DDL;
+        case 3: return MOD;
+        case 4: return ALL;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<LogStatement>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        LogStatement> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<LogStatement>() {
+            public LogStatement findValueByNumber(int number) {
+              return LogStatement.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.Config.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final LogStatement[] VALUES = values();
+
+    public static LogStatement valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private LogStatement(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.greenplum.v1.LogStatement)
+  }
+
   public interface ResourcesOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.Resources)
       com.google.protobuf.MessageOrBuilder {
@@ -6025,6 +6150,71 @@ public final class Config {
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getGpWorkfileCompressionOrBuilder();
+
+    /**
+     * <pre>
+     * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+     * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+     * (seghost_physical_memory) / (average_number_concurrent_queries)
+     * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+     * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+     * Default value is 2097152000 (2000MB)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+     */
+    boolean hasMaxStatementMem();
+    /**
+     * <pre>
+     * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+     * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+     * (seghost_physical_memory) / (average_number_concurrent_queries)
+     * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+     * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+     * Default value is 2097152000 (2000MB)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+     */
+    com.google.protobuf.Int64Value getMaxStatementMem();
+    /**
+     * <pre>
+     * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+     * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+     * (seghost_physical_memory) / (average_number_concurrent_queries)
+     * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+     * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+     * Default value is 2097152000 (2000MB)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxStatementMemOrBuilder();
+
+    /**
+     * <pre>
+     * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+     * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+     * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+     * Default value is ddl
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+     */
+    int getLogStatementValue();
+    /**
+     * <pre>
+     * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+     * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+     * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+     * Default value is ddl
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement getLogStatement();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19}
@@ -6039,6 +6229,7 @@ public final class Config {
       super(builder);
     }
     private GreenplumConfig6_19() {
+      logStatement_ = 0;
     }
 
     @java.lang.Override
@@ -6154,6 +6345,25 @@ public final class Config {
                 gpWorkfileCompression_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 66: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxStatementMem_ != null) {
+                subBuilder = maxStatementMem_.toBuilder();
+              }
+              maxStatementMem_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxStatementMem_);
+                maxStatementMem_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 72: {
+              int rawValue = input.readEnum();
+
+              logStatement_ = rawValue;
               break;
             }
             default: {
@@ -6455,6 +6665,87 @@ public final class Config {
       return getGpWorkfileCompression();
     }
 
+    public static final int MAX_STATEMENT_MEM_FIELD_NUMBER = 8;
+    private com.google.protobuf.Int64Value maxStatementMem_;
+    /**
+     * <pre>
+     * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+     * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+     * (seghost_physical_memory) / (average_number_concurrent_queries)
+     * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+     * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+     * Default value is 2097152000 (2000MB)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+     */
+    public boolean hasMaxStatementMem() {
+      return maxStatementMem_ != null;
+    }
+    /**
+     * <pre>
+     * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+     * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+     * (seghost_physical_memory) / (average_number_concurrent_queries)
+     * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+     * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+     * Default value is 2097152000 (2000MB)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+     */
+    public com.google.protobuf.Int64Value getMaxStatementMem() {
+      return maxStatementMem_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxStatementMem_;
+    }
+    /**
+     * <pre>
+     * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+     * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+     * (seghost_physical_memory) / (average_number_concurrent_queries)
+     * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+     * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+     * Default value is 2097152000 (2000MB)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMaxStatementMemOrBuilder() {
+      return getMaxStatementMem();
+    }
+
+    public static final int LOG_STATEMENT_FIELD_NUMBER = 9;
+    private int logStatement_;
+    /**
+     * <pre>
+     * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+     * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+     * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+     * Default value is ddl
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+     */
+    public int getLogStatementValue() {
+      return logStatement_;
+    }
+    /**
+     * <pre>
+     * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+     * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+     * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+     * Default value is ddl
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+     */
+    public yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement getLogStatement() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement result = yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement.valueOf(logStatement_);
+      return result == null ? yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6489,6 +6780,12 @@ public final class Config {
       }
       if (gpWorkfileCompression_ != null) {
         output.writeMessage(7, getGpWorkfileCompression());
+      }
+      if (maxStatementMem_ != null) {
+        output.writeMessage(8, getMaxStatementMem());
+      }
+      if (logStatement_ != yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement.LOG_STATEMENT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(9, logStatement_);
       }
       unknownFields.writeTo(output);
     }
@@ -6526,6 +6823,14 @@ public final class Config {
       if (gpWorkfileCompression_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getGpWorkfileCompression());
+      }
+      if (maxStatementMem_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getMaxStatementMem());
+      }
+      if (logStatement_ != yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement.LOG_STATEMENT_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(9, logStatement_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6578,6 +6883,12 @@ public final class Config {
         result = result && getGpWorkfileCompression()
             .equals(other.getGpWorkfileCompression());
       }
+      result = result && (hasMaxStatementMem() == other.hasMaxStatementMem());
+      if (hasMaxStatementMem()) {
+        result = result && getMaxStatementMem()
+            .equals(other.getMaxStatementMem());
+      }
+      result = result && logStatement_ == other.logStatement_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -6617,6 +6928,12 @@ public final class Config {
         hash = (37 * hash) + GP_WORKFILE_COMPRESSION_FIELD_NUMBER;
         hash = (53 * hash) + getGpWorkfileCompression().hashCode();
       }
+      if (hasMaxStatementMem()) {
+        hash = (37 * hash) + MAX_STATEMENT_MEM_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxStatementMem().hashCode();
+      }
+      hash = (37 * hash) + LOG_STATEMENT_FIELD_NUMBER;
+      hash = (53 * hash) + logStatement_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6792,6 +7109,14 @@ public final class Config {
           gpWorkfileCompression_ = null;
           gpWorkfileCompressionBuilder_ = null;
         }
+        if (maxStatementMemBuilder_ == null) {
+          maxStatementMem_ = null;
+        } else {
+          maxStatementMem_ = null;
+          maxStatementMemBuilder_ = null;
+        }
+        logStatement_ = 0;
+
         return this;
       }
 
@@ -6853,6 +7178,12 @@ public final class Config {
         } else {
           result.gpWorkfileCompression_ = gpWorkfileCompressionBuilder_.build();
         }
+        if (maxStatementMemBuilder_ == null) {
+          result.maxStatementMem_ = maxStatementMem_;
+        } else {
+          result.maxStatementMem_ = maxStatementMemBuilder_.build();
+        }
+        result.logStatement_ = logStatement_;
         onBuilt();
         return result;
       }
@@ -6921,6 +7252,12 @@ public final class Config {
         }
         if (other.hasGpWorkfileCompression()) {
           mergeGpWorkfileCompression(other.getGpWorkfileCompression());
+        }
+        if (other.hasMaxStatementMem()) {
+          mergeMaxStatementMem(other.getMaxStatementMem());
+        }
+        if (other.logStatement_ != 0) {
+          setLogStatementValue(other.getLogStatementValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8128,6 +8465,289 @@ public final class Config {
           gpWorkfileCompression_ = null;
         }
         return gpWorkfileCompressionBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxStatementMem_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxStatementMemBuilder_;
+      /**
+       * <pre>
+       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+       * (seghost_physical_memory) / (average_number_concurrent_queries)
+       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+       * Default value is 2097152000 (2000MB)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+       */
+      public boolean hasMaxStatementMem() {
+        return maxStatementMemBuilder_ != null || maxStatementMem_ != null;
+      }
+      /**
+       * <pre>
+       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+       * (seghost_physical_memory) / (average_number_concurrent_queries)
+       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+       * Default value is 2097152000 (2000MB)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+       */
+      public com.google.protobuf.Int64Value getMaxStatementMem() {
+        if (maxStatementMemBuilder_ == null) {
+          return maxStatementMem_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxStatementMem_;
+        } else {
+          return maxStatementMemBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+       * (seghost_physical_memory) / (average_number_concurrent_queries)
+       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+       * Default value is 2097152000 (2000MB)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+       */
+      public Builder setMaxStatementMem(com.google.protobuf.Int64Value value) {
+        if (maxStatementMemBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxStatementMem_ = value;
+          onChanged();
+        } else {
+          maxStatementMemBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+       * (seghost_physical_memory) / (average_number_concurrent_queries)
+       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+       * Default value is 2097152000 (2000MB)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+       */
+      public Builder setMaxStatementMem(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxStatementMemBuilder_ == null) {
+          maxStatementMem_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxStatementMemBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+       * (seghost_physical_memory) / (average_number_concurrent_queries)
+       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+       * Default value is 2097152000 (2000MB)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+       */
+      public Builder mergeMaxStatementMem(com.google.protobuf.Int64Value value) {
+        if (maxStatementMemBuilder_ == null) {
+          if (maxStatementMem_ != null) {
+            maxStatementMem_ =
+              com.google.protobuf.Int64Value.newBuilder(maxStatementMem_).mergeFrom(value).buildPartial();
+          } else {
+            maxStatementMem_ = value;
+          }
+          onChanged();
+        } else {
+          maxStatementMemBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+       * (seghost_physical_memory) / (average_number_concurrent_queries)
+       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+       * Default value is 2097152000 (2000MB)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+       */
+      public Builder clearMaxStatementMem() {
+        if (maxStatementMemBuilder_ == null) {
+          maxStatementMem_ = null;
+          onChanged();
+        } else {
+          maxStatementMem_ = null;
+          maxStatementMemBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+       * (seghost_physical_memory) / (average_number_concurrent_queries)
+       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+       * Default value is 2097152000 (2000MB)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxStatementMemBuilder() {
+        
+        onChanged();
+        return getMaxStatementMemFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+       * (seghost_physical_memory) / (average_number_concurrent_queries)
+       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+       * Default value is 2097152000 (2000MB)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxStatementMemOrBuilder() {
+        if (maxStatementMemBuilder_ != null) {
+          return maxStatementMemBuilder_.getMessageOrBuilder();
+        } else {
+          return maxStatementMem_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxStatementMem_;
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+       * (seghost_physical_memory) / (average_number_concurrent_queries)
+       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+       * Default value is 2097152000 (2000MB)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxStatementMemFieldBuilder() {
+        if (maxStatementMemBuilder_ == null) {
+          maxStatementMemBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxStatementMem(),
+                  getParentForChildren(),
+                  isClean());
+          maxStatementMem_ = null;
+        }
+        return maxStatementMemBuilder_;
+      }
+
+      private int logStatement_ = 0;
+      /**
+       * <pre>
+       * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+       * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+       * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * Default value is ddl
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+       */
+      public int getLogStatementValue() {
+        return logStatement_;
+      }
+      /**
+       * <pre>
+       * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+       * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+       * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * Default value is ddl
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+       */
+      public Builder setLogStatementValue(int value) {
+        logStatement_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+       * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+       * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * Default value is ddl
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement getLogStatement() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement result = yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement.valueOf(logStatement_);
+        return result == null ? yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+       * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+       * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * Default value is ddl
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+       */
+      public Builder setLogStatement(yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        logStatement_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+       * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+       * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * Default value is ddl
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+       */
+      public Builder clearLogStatement() {
+        
+        logStatement_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11834,7 +12454,7 @@ public final class Config {
       "obuf.Int64Value\022>\n\031max_prepared_transact" +
       "ions\030\006 \001(\0132\033.google.protobuf.Int64Value\022" +
       ";\n\027gp_workfile_compression\030\007 \001(\0132\032.googl" +
-      "e.protobuf.BoolValue\"\323\003\n\023GreenplumConfig" +
+      "e.protobuf.BoolValue\"\317\004\n\023GreenplumConfig" +
       "6_19\0224\n\017max_connections\030\001 \001(\0132\033.google.p" +
       "rotobuf.Int64Value\022;\n\026max_slot_wal_keep_" +
       "size\030\002 \001(\0132\033.google.protobuf.Int64Value\022" +
@@ -11846,30 +12466,35 @@ public final class Config {
       "Value\022>\n\031max_prepared_transactions\030\006 \001(\013" +
       "2\033.google.protobuf.Int64Value\022;\n\027gp_work" +
       "file_compression\030\007 \001(\0132\032.google.protobuf" +
-      ".BoolValue\"\201\002\n\026GreenplumConfigSet6_17\022R\n" +
-      "\020effective_config\030\001 \001(\01322.yandex.cloud.m" +
-      "db.greenplum.v1.GreenplumConfig6_17B\004\350\3071" +
-      "\001\022G\n\013user_config\030\002 \001(\01322.yandex.cloud.md" +
-      "b.greenplum.v1.GreenplumConfig6_17\022J\n\016de" +
-      "fault_config\030\003 \001(\01322.yandex.cloud.mdb.gr" +
-      "eenplum.v1.GreenplumConfig6_17\"\201\002\n\026Green" +
-      "plumConfigSet6_19\022R\n\020effective_config\030\001 " +
-      "\001(\01322.yandex.cloud.mdb.greenplum.v1.Gree" +
-      "nplumConfig6_19B\004\350\3071\001\022G\n\013user_config\030\002 \001" +
+      ".BoolValue\0226\n\021max_statement_mem\030\010 \001(\0132\033." +
+      "google.protobuf.Int64Value\022B\n\rlog_statem" +
+      "ent\030\t \001(\0162+.yandex.cloud.mdb.greenplum.v" +
+      "1.LogStatement\"\201\002\n\026GreenplumConfigSet6_1" +
+      "7\022R\n\020effective_config\030\001 \001(\01322.yandex.clo" +
+      "ud.mdb.greenplum.v1.GreenplumConfig6_17B" +
+      "\004\350\3071\001\022G\n\013user_config\030\002 \001(\01322.yandex.clou" +
+      "d.mdb.greenplum.v1.GreenplumConfig6_17\022J" +
+      "\n\016default_config\030\003 \001(\01322.yandex.cloud.md" +
+      "b.greenplum.v1.GreenplumConfig6_17\"\201\002\n\026G" +
+      "reenplumConfigSet6_19\022R\n\020effective_confi" +
+      "g\030\001 \001(\01322.yandex.cloud.mdb.greenplum.v1." +
+      "GreenplumConfig6_19B\004\350\3071\001\022G\n\013user_config" +
+      "\030\002 \001(\01322.yandex.cloud.mdb.greenplum.v1.G" +
+      "reenplumConfig6_19\022J\n\016default_config\030\003 \001" +
       "(\01322.yandex.cloud.mdb.greenplum.v1.Green" +
-      "plumConfig6_19\022J\n\016default_config\030\003 \001(\01322" +
-      ".yandex.cloud.mdb.greenplum.v1.Greenplum" +
-      "Config6_19\"\215\002\n\031ConnectionPoolerConfigSet" +
-      "\022U\n\020effective_config\030\001 \001(\01325.yandex.clou" +
-      "d.mdb.greenplum.v1.ConnectionPoolerConfi" +
-      "gB\004\350\3071\001\022J\n\013user_config\030\002 \001(\01325.yandex.cl" +
-      "oud.mdb.greenplum.v1.ConnectionPoolerCon" +
-      "fig\022M\n\016default_config\030\003 \001(\01325.yandex.clo" +
-      "ud.mdb.greenplum.v1.ConnectionPoolerConf" +
-      "igBp\n!yandex.cloud.api.mdb.greenplum.v1Z" +
-      "Kgithub.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/mdb/greenplum/v1;greenplumb\006pr" +
-      "oto3"
+      "plumConfig6_19\"\215\002\n\031ConnectionPoolerConfi" +
+      "gSet\022U\n\020effective_config\030\001 \001(\01325.yandex." +
+      "cloud.mdb.greenplum.v1.ConnectionPoolerC" +
+      "onfigB\004\350\3071\001\022J\n\013user_config\030\002 \001(\01325.yande" +
+      "x.cloud.mdb.greenplum.v1.ConnectionPoole" +
+      "rConfig\022M\n\016default_config\030\003 \001(\01325.yandex" +
+      ".cloud.mdb.greenplum.v1.ConnectionPooler" +
+      "Config*R\n\014LogStatement\022\035\n\031LOG_STATEMENT_" +
+      "UNSPECIFIED\020\000\022\010\n\004NONE\020\001\022\007\n\003DDL\020\002\022\007\n\003MOD\020" +
+      "\003\022\007\n\003ALL\020\004Bp\n!yandex.cloud.api.mdb.green" +
+      "plum.v1ZKgithub.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/mdb/greenplum/v1;green" +
+      "plumb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11920,7 +12545,7 @@ public final class Config {
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_19_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_19_descriptor,
-        new java.lang.String[] { "MaxConnections", "MaxSlotWalKeepSize", "GpWorkfileLimitPerSegment", "GpWorkfileLimitPerQuery", "GpWorkfileLimitFilesPerQuery", "MaxPreparedTransactions", "GpWorkfileCompression", });
+        new java.lang.String[] { "MaxConnections", "MaxSlotWalKeepSize", "GpWorkfileLimitPerSegment", "GpWorkfileLimitPerQuery", "GpWorkfileLimitFilesPerQuery", "MaxPreparedTransactions", "GpWorkfileCompression", "MaxStatementMem", "LogStatement", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_17_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_17_fieldAccessorTable = new

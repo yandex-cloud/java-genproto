@@ -20,7 +20,7 @@ public final class ExtensionServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -28,7 +28,7 @@ public final class ExtensionServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -38,7 +38,7 @@ public final class ExtensionServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the extension to return.
+     * ID of the extension to return.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -46,7 +46,7 @@ public final class ExtensionServiceOuterClass {
     java.lang.String getExtensionId();
     /**
      * <pre>
-     * Required. ID of the extension to return.
+     * ID of the extension to return.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -143,7 +143,7 @@ public final class ExtensionServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -162,7 +162,7 @@ public final class ExtensionServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -185,7 +185,7 @@ public final class ExtensionServiceOuterClass {
     private volatile java.lang.Object extensionId_;
     /**
      * <pre>
-     * Required. ID of the extension to return.
+     * ID of the extension to return.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -204,7 +204,7 @@ public final class ExtensionServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the extension to return.
+     * ID of the extension to return.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -546,7 +546,7 @@ public final class ExtensionServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -565,7 +565,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -585,7 +585,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -602,7 +602,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -615,7 +615,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -635,7 +635,7 @@ public final class ExtensionServiceOuterClass {
       private java.lang.Object extensionId_ = "";
       /**
        * <pre>
-       * Required. ID of the extension to return.
+       * ID of the extension to return.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -654,7 +654,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension to return.
+       * ID of the extension to return.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -674,7 +674,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension to return.
+       * ID of the extension to return.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -691,7 +691,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension to return.
+       * ID of the extension to return.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -704,7 +704,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension to return.
+       * ID of the extension to return.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -779,7 +779,7 @@ public final class ExtensionServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the cluster to list extensions in.
+     * ID of the cluster to list extensions in.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -787,7 +787,7 @@ public final class ExtensionServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. ID of the cluster to list extensions in.
+     * ID of the cluster to list extensions in.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -797,10 +797,8 @@ public final class ExtensionServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of results per page that should be returned. If the number of available
-     * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-     * to get the next page of results in subsequent ListBackups requests.
-     * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the API returns a [ListExtensionsResponse.next_page_token] that can be used to get the next page of results in subsequent [ExtensionService.List] requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -809,8 +807,8 @@ public final class ExtensionServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListBackups
-     * request to get the next page of results.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListExtensionsResponse.next_page_token] returned by the previous [ExtensionService.List] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -818,8 +816,8 @@ public final class ExtensionServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListBackups
-     * request to get the next page of results.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListExtensionsResponse.next_page_token] returned by the previous [ExtensionService.List] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -922,7 +920,7 @@ public final class ExtensionServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. ID of the cluster to list extensions in.
+     * ID of the cluster to list extensions in.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -941,7 +939,7 @@ public final class ExtensionServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the cluster to list extensions in.
+     * ID of the cluster to list extensions in.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -964,10 +962,8 @@ public final class ExtensionServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page that should be returned. If the number of available
-     * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-     * to get the next page of results in subsequent ListBackups requests.
-     * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the API returns a [ListExtensionsResponse.next_page_token] that can be used to get the next page of results in subsequent [ExtensionService.List] requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -980,8 +976,8 @@ public final class ExtensionServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListBackups
-     * request to get the next page of results.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListExtensionsResponse.next_page_token] returned by the previous [ExtensionService.List] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1000,8 +996,8 @@ public final class ExtensionServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListBackups
-     * request to get the next page of results.
+     * Page token that can be used to iterate through multiple pages of results.
+     * To get the next page of results, set [page_token] to the [ListExtensionsResponse.next_page_token] returned by the previous [ExtensionService.List] request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1361,7 +1357,7 @@ public final class ExtensionServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. ID of the cluster to list extensions in.
+       * ID of the cluster to list extensions in.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1380,7 +1376,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster to list extensions in.
+       * ID of the cluster to list extensions in.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1400,7 +1396,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster to list extensions in.
+       * ID of the cluster to list extensions in.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1417,7 +1413,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster to list extensions in.
+       * ID of the cluster to list extensions in.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1430,7 +1426,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster to list extensions in.
+       * ID of the cluster to list extensions in.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1450,10 +1446,8 @@ public final class ExtensionServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-       * to get the next page of results in subsequent ListBackups requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListExtensionsResponse.next_page_token] that can be used to get the next page of results in subsequent [ExtensionService.List] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1463,10 +1457,8 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-       * to get the next page of results in subsequent ListBackups requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListExtensionsResponse.next_page_token] that can be used to get the next page of results in subsequent [ExtensionService.List] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1479,10 +1471,8 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-       * to get the next page of results in subsequent ListBackups requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the API returns a [ListExtensionsResponse.next_page_token] that can be used to get the next page of results in subsequent [ExtensionService.List] requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1497,8 +1487,8 @@ public final class ExtensionServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListBackups
-       * request to get the next page of results.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListExtensionsResponse.next_page_token] returned by the previous [ExtensionService.List] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1517,8 +1507,8 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListBackups
-       * request to get the next page of results.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListExtensionsResponse.next_page_token] returned by the previous [ExtensionService.List] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1538,8 +1528,8 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListBackups
-       * request to get the next page of results.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListExtensionsResponse.next_page_token] returned by the previous [ExtensionService.List] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1556,8 +1546,8 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListBackups
-       * request to get the next page of results.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListExtensionsResponse.next_page_token] returned by the previous [ExtensionService.List] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1570,8 +1560,8 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListBackups
-       * request to get the next page of results.
+       * Page token that can be used to iterate through multiple pages of results.
+       * To get the next page of results, set [page_token] to the [ListExtensionsResponse.next_page_token] returned by the previous [ExtensionService.List] request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1690,11 +1680,9 @@ public final class ExtensionServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListBackups requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListBackups request. Subsequent ListBackups
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListExtensionsRequest.page_size], use the [next_page_token] as the value for the [ListExtensionsRequest.page_token] in the subsequent [ExtensionService.List] request to iterate through multiple pages of results.
+     * Each of the subsequent [ExtensionService.List] requests should use the [next_page_token] value returned in the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1702,11 +1690,9 @@ public final class ExtensionServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListBackups requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListBackups request. Subsequent ListBackups
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListExtensionsRequest.page_size], use the [next_page_token] as the value for the [ListExtensionsRequest.page_token] in the subsequent [ExtensionService.List] request to iterate through multiple pages of results.
+     * Each of the subsequent [ExtensionService.List] requests should use the [next_page_token] value returned in the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1865,11 +1851,9 @@ public final class ExtensionServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListBackups requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListBackups request. Subsequent ListBackups
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListExtensionsRequest.page_size], use the [next_page_token] as the value for the [ListExtensionsRequest.page_token] in the subsequent [ExtensionService.List] request to iterate through multiple pages of results.
+     * Each of the subsequent [ExtensionService.List] requests should use the [next_page_token] value returned in the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1888,11 +1872,9 @@ public final class ExtensionServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListBackups requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListBackups request. Subsequent ListBackups
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * The token that can be used to get the next page of results.
+     * If the number of results is larger than [ListExtensionsRequest.page_size], use the [next_page_token] as the value for the [ListExtensionsRequest.page_token] in the subsequent [ExtensionService.List] request to iterate through multiple pages of results.
+     * Each of the subsequent [ExtensionService.List] requests should use the [next_page_token] value returned in the previous request to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2588,11 +2570,9 @@ public final class ExtensionServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListBackups requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListBackups request. Subsequent ListBackups
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListExtensionsRequest.page_size], use the [next_page_token] as the value for the [ListExtensionsRequest.page_token] in the subsequent [ExtensionService.List] request to iterate through multiple pages of results.
+       * Each of the subsequent [ExtensionService.List] requests should use the [next_page_token] value returned in the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2611,11 +2591,9 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListBackups requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListBackups request. Subsequent ListBackups
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListExtensionsRequest.page_size], use the [next_page_token] as the value for the [ListExtensionsRequest.page_token] in the subsequent [ExtensionService.List] request to iterate through multiple pages of results.
+       * Each of the subsequent [ExtensionService.List] requests should use the [next_page_token] value returned in the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2635,11 +2613,9 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListBackups requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListBackups request. Subsequent ListBackups
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListExtensionsRequest.page_size], use the [next_page_token] as the value for the [ListExtensionsRequest.page_token] in the subsequent [ExtensionService.List] request to iterate through multiple pages of results.
+       * Each of the subsequent [ExtensionService.List] requests should use the [next_page_token] value returned in the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2656,11 +2632,9 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListBackups requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListBackups request. Subsequent ListBackups
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListExtensionsRequest.page_size], use the [next_page_token] as the value for the [ListExtensionsRequest.page_token] in the subsequent [ExtensionService.List] request to iterate through multiple pages of results.
+       * Each of the subsequent [ExtensionService.List] requests should use the [next_page_token] value returned in the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2673,11 +2647,9 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListBackups requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListBackups request. Subsequent ListBackups
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * The token that can be used to get the next page of results.
+       * If the number of results is larger than [ListExtensionsRequest.page_size], use the [next_page_token] as the value for the [ListExtensionsRequest.page_token] in the subsequent [ExtensionService.List] request to iterate through multiple pages of results.
+       * Each of the subsequent [ExtensionService.List] requests should use the [next_page_token] value returned in the previous request to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2752,7 +2724,7 @@ public final class ExtensionServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2760,7 +2732,7 @@ public final class ExtensionServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2770,7 +2742,7 @@ public final class ExtensionServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the extension to delete.
+     * ID of the extension to delete.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -2778,7 +2750,7 @@ public final class ExtensionServiceOuterClass {
     java.lang.String getExtensionId();
     /**
      * <pre>
-     * Required. ID of the extension to delete.
+     * ID of the extension to delete.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -2875,7 +2847,7 @@ public final class ExtensionServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2894,7 +2866,7 @@ public final class ExtensionServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2917,7 +2889,7 @@ public final class ExtensionServiceOuterClass {
     private volatile java.lang.Object extensionId_;
     /**
      * <pre>
-     * Required. ID of the extension to delete.
+     * ID of the extension to delete.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -2936,7 +2908,7 @@ public final class ExtensionServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the extension to delete.
+     * ID of the extension to delete.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -3278,7 +3250,7 @@ public final class ExtensionServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3297,7 +3269,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3317,7 +3289,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3334,7 +3306,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3347,7 +3319,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3367,7 +3339,7 @@ public final class ExtensionServiceOuterClass {
       private java.lang.Object extensionId_ = "";
       /**
        * <pre>
-       * Required. ID of the extension to delete.
+       * ID of the extension to delete.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -3386,7 +3358,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension to delete.
+       * ID of the extension to delete.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -3406,7 +3378,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension to delete.
+       * ID of the extension to delete.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -3423,7 +3395,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension to delete.
+       * ID of the extension to delete.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -3436,7 +3408,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension to delete.
+       * ID of the extension to delete.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -3511,7 +3483,7 @@ public final class ExtensionServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3519,7 +3491,7 @@ public final class ExtensionServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3529,7 +3501,7 @@ public final class ExtensionServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the extension to delete.
+     * ID of the extension to delete.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -3537,7 +3509,7 @@ public final class ExtensionServiceOuterClass {
     java.lang.String getExtensionId();
     /**
      * <pre>
-     * Required. ID of the extension to delete.
+     * ID of the extension to delete.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -3634,7 +3606,7 @@ public final class ExtensionServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3653,7 +3625,7 @@ public final class ExtensionServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3676,7 +3648,7 @@ public final class ExtensionServiceOuterClass {
     private volatile java.lang.Object extensionId_;
     /**
      * <pre>
-     * Required. ID of the extension to delete.
+     * ID of the extension to delete.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -3695,7 +3667,7 @@ public final class ExtensionServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the extension to delete.
+     * ID of the extension to delete.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -4037,7 +4009,7 @@ public final class ExtensionServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4056,7 +4028,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4076,7 +4048,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4093,7 +4065,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4106,7 +4078,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4126,7 +4098,7 @@ public final class ExtensionServiceOuterClass {
       private java.lang.Object extensionId_ = "";
       /**
        * <pre>
-       * Required. ID of the extension to delete.
+       * ID of the extension to delete.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -4145,7 +4117,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension to delete.
+       * ID of the extension to delete.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -4165,7 +4137,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension to delete.
+       * ID of the extension to delete.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -4182,7 +4154,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension to delete.
+       * ID of the extension to delete.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -4195,7 +4167,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension to delete.
+       * ID of the extension to delete.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -4270,7 +4242,7 @@ public final class ExtensionServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4278,7 +4250,7 @@ public final class ExtensionServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4288,7 +4260,7 @@ public final class ExtensionServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the extension to delete.
+     * ID of the extension to update.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -4296,7 +4268,7 @@ public final class ExtensionServiceOuterClass {
     java.lang.String getExtensionId();
     /**
      * <pre>
-     * Required. ID of the extension to delete.
+     * ID of the extension to update.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -4305,6 +4277,10 @@ public final class ExtensionServiceOuterClass {
         getExtensionIdBytes();
 
     /**
+     * <pre>
+     * The flag shows whether to make the extension active.
+     * </pre>
+     *
      * <code>bool active = 3;</code>
      */
     boolean getActive();
@@ -4404,7 +4380,7 @@ public final class ExtensionServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4423,7 +4399,7 @@ public final class ExtensionServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4446,7 +4422,7 @@ public final class ExtensionServiceOuterClass {
     private volatile java.lang.Object extensionId_;
     /**
      * <pre>
-     * Required. ID of the extension to delete.
+     * ID of the extension to update.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -4465,7 +4441,7 @@ public final class ExtensionServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the extension to delete.
+     * ID of the extension to update.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -4487,6 +4463,10 @@ public final class ExtensionServiceOuterClass {
     public static final int ACTIVE_FIELD_NUMBER = 3;
     private boolean active_;
     /**
+     * <pre>
+     * The flag shows whether to make the extension active.
+     * </pre>
+     *
      * <code>bool active = 3;</code>
      */
     public boolean getActive() {
@@ -4834,7 +4814,7 @@ public final class ExtensionServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4853,7 +4833,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4873,7 +4853,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4890,7 +4870,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4903,7 +4883,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4923,7 +4903,7 @@ public final class ExtensionServiceOuterClass {
       private java.lang.Object extensionId_ = "";
       /**
        * <pre>
-       * Required. ID of the extension to delete.
+       * ID of the extension to update.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -4942,7 +4922,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension to delete.
+       * ID of the extension to update.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -4962,7 +4942,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension to delete.
+       * ID of the extension to update.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -4979,7 +4959,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension to delete.
+       * ID of the extension to update.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -4992,7 +4972,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension to delete.
+       * ID of the extension to update.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -5011,12 +4991,20 @@ public final class ExtensionServiceOuterClass {
 
       private boolean active_ ;
       /**
+       * <pre>
+       * The flag shows whether to make the extension active.
+       * </pre>
+       *
        * <code>bool active = 3;</code>
        */
       public boolean getActive() {
         return active_;
       }
       /**
+       * <pre>
+       * The flag shows whether to make the extension active.
+       * </pre>
+       *
        * <code>bool active = 3;</code>
        */
       public Builder setActive(boolean value) {
@@ -5026,6 +5014,10 @@ public final class ExtensionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The flag shows whether to make the extension active.
+       * </pre>
+       *
        * <code>bool active = 3;</code>
        */
       public Builder clearActive() {
@@ -5093,7 +5085,7 @@ public final class ExtensionServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5101,7 +5093,7 @@ public final class ExtensionServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5111,7 +5103,7 @@ public final class ExtensionServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the extension.
+     * ID of the extension.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -5119,7 +5111,7 @@ public final class ExtensionServiceOuterClass {
     java.lang.String getExtensionId();
     /**
      * <pre>
-     * Required. ID of the extension.
+     * ID of the extension.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -5216,7 +5208,7 @@ public final class ExtensionServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5235,7 +5227,7 @@ public final class ExtensionServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5258,7 +5250,7 @@ public final class ExtensionServiceOuterClass {
     private volatile java.lang.Object extensionId_;
     /**
      * <pre>
-     * Required. ID of the extension.
+     * ID of the extension.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -5277,7 +5269,7 @@ public final class ExtensionServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the extension.
+     * ID of the extension.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -5619,7 +5611,7 @@ public final class ExtensionServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5638,7 +5630,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5658,7 +5650,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5675,7 +5667,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5688,7 +5680,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5708,7 +5700,7 @@ public final class ExtensionServiceOuterClass {
       private java.lang.Object extensionId_ = "";
       /**
        * <pre>
-       * Required. ID of the extension.
+       * ID of the extension.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -5727,7 +5719,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension.
+       * ID of the extension.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -5747,7 +5739,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension.
+       * ID of the extension.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -5764,7 +5756,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension.
+       * ID of the extension.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -5777,7 +5769,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension.
+       * ID of the extension.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -5852,7 +5844,7 @@ public final class ExtensionServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5860,7 +5852,7 @@ public final class ExtensionServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5888,8 +5880,7 @@ public final class ExtensionServiceOuterClass {
 
     /**
      * <pre>
-     * URI of the zip arhive to create the new extension from.
-     * Currently only supports links that are stored in Yandex Object Storage.
+     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
      * </pre>
      *
      * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
@@ -5897,8 +5888,7 @@ public final class ExtensionServiceOuterClass {
     java.lang.String getUri();
     /**
      * <pre>
-     * URI of the zip arhive to create the new extension from.
-     * Currently only supports links that are stored in Yandex Object Storage.
+     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
      * </pre>
      *
      * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
@@ -5907,6 +5897,10 @@ public final class ExtensionServiceOuterClass {
         getUriBytes();
 
     /**
+     * <pre>
+     * The flag that disables the extension.
+     * </pre>
+     *
      * <code>bool disabled = 4;</code>
      */
     boolean getDisabled();
@@ -6013,7 +6007,7 @@ public final class ExtensionServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6032,7 +6026,7 @@ public final class ExtensionServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6097,8 +6091,7 @@ public final class ExtensionServiceOuterClass {
     private volatile java.lang.Object uri_;
     /**
      * <pre>
-     * URI of the zip arhive to create the new extension from.
-     * Currently only supports links that are stored in Yandex Object Storage.
+     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
      * </pre>
      *
      * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
@@ -6117,8 +6110,7 @@ public final class ExtensionServiceOuterClass {
     }
     /**
      * <pre>
-     * URI of the zip arhive to create the new extension from.
-     * Currently only supports links that are stored in Yandex Object Storage.
+     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
      * </pre>
      *
      * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
@@ -6140,6 +6132,10 @@ public final class ExtensionServiceOuterClass {
     public static final int DISABLED_FIELD_NUMBER = 4;
     private boolean disabled_;
     /**
+     * <pre>
+     * The flag that disables the extension.
+     * </pre>
+     *
      * <code>bool disabled = 4;</code>
      */
     public boolean getDisabled() {
@@ -6504,7 +6500,7 @@ public final class ExtensionServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6523,7 +6519,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6543,7 +6539,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6560,7 +6556,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6573,7 +6569,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6682,8 +6678,7 @@ public final class ExtensionServiceOuterClass {
       private java.lang.Object uri_ = "";
       /**
        * <pre>
-       * URI of the zip arhive to create the new extension from.
-       * Currently only supports links that are stored in Yandex Object Storage.
+       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
        * </pre>
        *
        * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
@@ -6702,8 +6697,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * URI of the zip arhive to create the new extension from.
-       * Currently only supports links that are stored in Yandex Object Storage.
+       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
        * </pre>
        *
        * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
@@ -6723,8 +6717,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * URI of the zip arhive to create the new extension from.
-       * Currently only supports links that are stored in Yandex Object Storage.
+       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
        * </pre>
        *
        * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
@@ -6741,8 +6734,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * URI of the zip arhive to create the new extension from.
-       * Currently only supports links that are stored in Yandex Object Storage.
+       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
        * </pre>
        *
        * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
@@ -6755,8 +6747,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * URI of the zip arhive to create the new extension from.
-       * Currently only supports links that are stored in Yandex Object Storage.
+       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
        * </pre>
        *
        * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
@@ -6775,12 +6766,20 @@ public final class ExtensionServiceOuterClass {
 
       private boolean disabled_ ;
       /**
+       * <pre>
+       * The flag that disables the extension.
+       * </pre>
+       *
        * <code>bool disabled = 4;</code>
        */
       public boolean getDisabled() {
         return disabled_;
       }
       /**
+       * <pre>
+       * The flag that disables the extension.
+       * </pre>
+       *
        * <code>bool disabled = 4;</code>
        */
       public Builder setDisabled(boolean value) {
@@ -6790,6 +6789,10 @@ public final class ExtensionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The flag that disables the extension.
+       * </pre>
+       *
        * <code>bool disabled = 4;</code>
        */
       public Builder clearDisabled() {
@@ -6857,7 +6860,7 @@ public final class ExtensionServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6865,7 +6868,7 @@ public final class ExtensionServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6875,7 +6878,7 @@ public final class ExtensionServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the extension.
+     * ID of the extension.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -6883,7 +6886,7 @@ public final class ExtensionServiceOuterClass {
     java.lang.String getExtensionId();
     /**
      * <pre>
-     * Required. ID of the extension.
+     * ID of the extension.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -6980,7 +6983,7 @@ public final class ExtensionServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6999,7 +7002,7 @@ public final class ExtensionServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the cluster.
+     * ID of the cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7022,7 +7025,7 @@ public final class ExtensionServiceOuterClass {
     private volatile java.lang.Object extensionId_;
     /**
      * <pre>
-     * Required. ID of the extension.
+     * ID of the extension.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -7041,7 +7044,7 @@ public final class ExtensionServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the extension.
+     * ID of the extension.
      * </pre>
      *
      * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -7383,7 +7386,7 @@ public final class ExtensionServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7402,7 +7405,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7422,7 +7425,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7439,7 +7442,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7452,7 +7455,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster.
+       * ID of the cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7472,7 +7475,7 @@ public final class ExtensionServiceOuterClass {
       private java.lang.Object extensionId_ = "";
       /**
        * <pre>
-       * Required. ID of the extension.
+       * ID of the extension.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -7491,7 +7494,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension.
+       * ID of the extension.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -7511,7 +7514,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension.
+       * ID of the extension.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -7528,7 +7531,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension.
+       * ID of the extension.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
@@ -7541,7 +7544,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the extension.
+       * ID of the extension.
        * </pre>
        *
        * <code>string extension_id = 2 [(.yandex.cloud.required) = true];</code>
