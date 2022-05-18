@@ -6228,6 +6228,26 @@ public final class ConnectorOuterClass {
      */
     com.google.protobuf.ByteString
         getSecurityProtocolBytes();
+
+    /**
+     * <pre>
+     * CA in PEM format to connect to external cluster.
+     * Lines of certificate separated by '&#92;n' symbol.
+     * </pre>
+     *
+     * <code>string ssl_truststore_certificates = 6;</code>
+     */
+    java.lang.String getSslTruststoreCertificates();
+    /**
+     * <pre>
+     * CA in PEM format to connect to external cluster.
+     * Lines of certificate separated by '&#92;n' symbol.
+     * </pre>
+     *
+     * <code>string ssl_truststore_certificates = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getSslTruststoreCertificatesBytes();
   }
   /**
    * <pre>
@@ -6254,6 +6274,7 @@ public final class ConnectorOuterClass {
       saslPassword_ = "";
       saslMechanism_ = "";
       securityProtocol_ = "";
+      sslTruststoreCertificates_ = "";
     }
 
     @java.lang.Override
@@ -6308,6 +6329,12 @@ public final class ConnectorOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               securityProtocol_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              sslTruststoreCertificates_ = s;
               break;
             }
             default: {
@@ -6564,6 +6591,50 @@ public final class ConnectorOuterClass {
       }
     }
 
+    public static final int SSL_TRUSTSTORE_CERTIFICATES_FIELD_NUMBER = 6;
+    private volatile java.lang.Object sslTruststoreCertificates_;
+    /**
+     * <pre>
+     * CA in PEM format to connect to external cluster.
+     * Lines of certificate separated by '&#92;n' symbol.
+     * </pre>
+     *
+     * <code>string ssl_truststore_certificates = 6;</code>
+     */
+    public java.lang.String getSslTruststoreCertificates() {
+      java.lang.Object ref = sslTruststoreCertificates_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sslTruststoreCertificates_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * CA in PEM format to connect to external cluster.
+     * Lines of certificate separated by '&#92;n' symbol.
+     * </pre>
+     *
+     * <code>string ssl_truststore_certificates = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSslTruststoreCertificatesBytes() {
+      java.lang.Object ref = sslTruststoreCertificates_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sslTruststoreCertificates_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6593,6 +6664,9 @@ public final class ConnectorOuterClass {
       if (!getSecurityProtocolBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, securityProtocol_);
       }
+      if (!getSslTruststoreCertificatesBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, sslTruststoreCertificates_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6616,6 +6690,9 @@ public final class ConnectorOuterClass {
       }
       if (!getSecurityProtocolBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, securityProtocol_);
+      }
+      if (!getSslTruststoreCertificatesBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, sslTruststoreCertificates_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6643,6 +6720,8 @@ public final class ConnectorOuterClass {
           .equals(other.getSaslMechanism());
       result = result && getSecurityProtocol()
           .equals(other.getSecurityProtocol());
+      result = result && getSslTruststoreCertificates()
+          .equals(other.getSslTruststoreCertificates());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -6664,6 +6743,8 @@ public final class ConnectorOuterClass {
       hash = (53 * hash) + getSaslMechanism().hashCode();
       hash = (37 * hash) + SECURITY_PROTOCOL_FIELD_NUMBER;
       hash = (53 * hash) + getSecurityProtocol().hashCode();
+      hash = (37 * hash) + SSL_TRUSTSTORE_CERTIFICATES_FIELD_NUMBER;
+      hash = (53 * hash) + getSslTruststoreCertificates().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6814,6 +6895,8 @@ public final class ConnectorOuterClass {
 
         securityProtocol_ = "";
 
+        sslTruststoreCertificates_ = "";
+
         return this;
       }
 
@@ -6845,6 +6928,7 @@ public final class ConnectorOuterClass {
         result.saslPassword_ = saslPassword_;
         result.saslMechanism_ = saslMechanism_;
         result.securityProtocol_ = securityProtocol_;
+        result.sslTruststoreCertificates_ = sslTruststoreCertificates_;
         onBuilt();
         return result;
       }
@@ -6911,6 +6995,10 @@ public final class ConnectorOuterClass {
         }
         if (!other.getSecurityProtocol().isEmpty()) {
           securityProtocol_ = other.securityProtocol_;
+          onChanged();
+        }
+        if (!other.getSslTruststoreCertificates().isEmpty()) {
+          sslTruststoreCertificates_ = other.sslTruststoreCertificates_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -7413,6 +7501,100 @@ public final class ConnectorOuterClass {
   checkByteStringIsUtf8(value);
         
         securityProtocol_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sslTruststoreCertificates_ = "";
+      /**
+       * <pre>
+       * CA in PEM format to connect to external cluster.
+       * Lines of certificate separated by '&#92;n' symbol.
+       * </pre>
+       *
+       * <code>string ssl_truststore_certificates = 6;</code>
+       */
+      public java.lang.String getSslTruststoreCertificates() {
+        java.lang.Object ref = sslTruststoreCertificates_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sslTruststoreCertificates_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * CA in PEM format to connect to external cluster.
+       * Lines of certificate separated by '&#92;n' symbol.
+       * </pre>
+       *
+       * <code>string ssl_truststore_certificates = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSslTruststoreCertificatesBytes() {
+        java.lang.Object ref = sslTruststoreCertificates_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sslTruststoreCertificates_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * CA in PEM format to connect to external cluster.
+       * Lines of certificate separated by '&#92;n' symbol.
+       * </pre>
+       *
+       * <code>string ssl_truststore_certificates = 6;</code>
+       */
+      public Builder setSslTruststoreCertificates(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sslTruststoreCertificates_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CA in PEM format to connect to external cluster.
+       * Lines of certificate separated by '&#92;n' symbol.
+       * </pre>
+       *
+       * <code>string ssl_truststore_certificates = 6;</code>
+       */
+      public Builder clearSslTruststoreCertificates() {
+        
+        sslTruststoreCertificates_ = getDefaultInstance().getSslTruststoreCertificates();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CA in PEM format to connect to external cluster.
+       * Lines of certificate separated by '&#92;n' symbol.
+       * </pre>
+       *
+       * <code>string ssl_truststore_certificates = 6;</code>
+       */
+      public Builder setSslTruststoreCertificatesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sslTruststoreCertificates_ = value;
         onChanged();
         return this;
       }
@@ -14087,43 +14269,44 @@ public final class ConnectorOuterClass {
       "\000\022T\n\020external_cluster\030\003 \001(\01328.yandex.clo" +
       "ud.mdb.kafka.v1.ExternalClusterConnectio" +
       "nSpecH\000B\024\n\022cluster_connection\"\021\n\017ThisClu" +
-      "sterSpec\"\233\001\n\035ExternalClusterConnectionSp" +
+      "sterSpec\"\300\001\n\035ExternalClusterConnectionSp" +
       "ec\022\031\n\021bootstrap_servers\030\001 \001(\t\022\025\n\rsasl_us" +
       "ername\030\002 \001(\t\022\025\n\rsasl_password\030\003 \001(\t\022\026\n\016s" +
       "asl_mechanism\030\004 \001(\t\022\031\n\021security_protocol" +
-      "\030\005 \001(\t\"\274\004\n\tConnector\022\014\n\004name\030\001 \001(\t\022.\n\tta" +
-      "sks_max\030\002 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022H\n\nproperties\030\003 \003(\01324.yandex.cloud.md" +
-      "b.kafka.v1.Connector.PropertiesEntry\022;\n\006" +
-      "health\030\004 \001(\0162+.yandex.cloud.mdb.kafka.v1" +
-      ".Connector.Health\022;\n\006status\030\005 \001(\0162+.yand" +
-      "ex.cloud.mdb.kafka.v1.Connector.Status\022\022" +
-      "\n\ncluster_id\030\006 \001(\t\022]\n\034connector_config_m" +
-      "irrormaker\030\n \001(\01325.yandex.cloud.mdb.kafk" +
-      "a.v1.ConnectorConfigMirrorMakerH\000\0321\n\017Pro" +
-      "pertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\"1\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005AL" +
-      "IVE\020\001\022\010\n\004DEAD\020\002\"@\n\006Status\022\022\n\016STATUS_UNKN" +
-      "OWN\020\000\022\013\n\007RUNNING\020\001\022\t\n\005ERROR\020\002\022\n\n\006PAUSED\020" +
-      "\003B\022\n\020connector_config\"\361\001\n\032ConnectorConfi" +
-      "gMirrorMaker\022D\n\016source_cluster\030\001 \001(\0132,.y" +
-      "andex.cloud.mdb.kafka.v1.ClusterConnecti" +
-      "on\022D\n\016target_cluster\030\002 \001(\0132,.yandex.clou" +
-      "d.mdb.kafka.v1.ClusterConnection\022\016\n\006topi" +
-      "cs\030\003 \001(\t\0227\n\022replication_factor\030\004 \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\"\312\001\n\021ClusterCon" +
-      "nection\022\r\n\005alias\030\001 \001(\t\022>\n\014this_cluster\030\002" +
-      " \001(\0132&.yandex.cloud.mdb.kafka.v1.ThisClu" +
-      "sterH\000\022P\n\020external_cluster\030\003 \001(\01324.yande" +
-      "x.cloud.mdb.kafka.v1.ExternalClusterConn" +
-      "ectionH\000B\024\n\022cluster_connection\"\r\n\013ThisCl" +
-      "uster\"\200\001\n\031ExternalClusterConnection\022\031\n\021b" +
-      "ootstrap_servers\030\001 \001(\t\022\025\n\rsasl_username\030" +
-      "\002 \001(\t\022\026\n\016sasl_mechanism\030\004 \001(\t\022\031\n\021securit" +
-      "y_protocol\030\005 \001(\tBd\n\035yandex.cloud.api.mdb" +
-      ".kafka.v1ZCgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/mdb/kafka/v1;kafkab\006" +
-      "proto3"
+      "\030\005 \001(\t\022#\n\033ssl_truststore_certificates\030\006 " +
+      "\001(\t\"\274\004\n\tConnector\022\014\n\004name\030\001 \001(\t\022.\n\ttasks" +
+      "_max\030\002 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "H\n\nproperties\030\003 \003(\01324.yandex.cloud.mdb.k" +
+      "afka.v1.Connector.PropertiesEntry\022;\n\006hea" +
+      "lth\030\004 \001(\0162+.yandex.cloud.mdb.kafka.v1.Co" +
+      "nnector.Health\022;\n\006status\030\005 \001(\0162+.yandex." +
+      "cloud.mdb.kafka.v1.Connector.Status\022\022\n\nc" +
+      "luster_id\030\006 \001(\t\022]\n\034connector_config_mirr" +
+      "ormaker\030\n \001(\01325.yandex.cloud.mdb.kafka.v" +
+      "1.ConnectorConfigMirrorMakerH\000\0321\n\017Proper" +
+      "tiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\"1\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE" +
+      "\020\001\022\010\n\004DEAD\020\002\"@\n\006Status\022\022\n\016STATUS_UNKNOWN" +
+      "\020\000\022\013\n\007RUNNING\020\001\022\t\n\005ERROR\020\002\022\n\n\006PAUSED\020\003B\022" +
+      "\n\020connector_config\"\361\001\n\032ConnectorConfigMi" +
+      "rrorMaker\022D\n\016source_cluster\030\001 \001(\0132,.yand" +
+      "ex.cloud.mdb.kafka.v1.ClusterConnection\022" +
+      "D\n\016target_cluster\030\002 \001(\0132,.yandex.cloud.m" +
+      "db.kafka.v1.ClusterConnection\022\016\n\006topics\030" +
+      "\003 \001(\t\0227\n\022replication_factor\030\004 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\"\312\001\n\021ClusterConnec" +
+      "tion\022\r\n\005alias\030\001 \001(\t\022>\n\014this_cluster\030\002 \001(" +
+      "\0132&.yandex.cloud.mdb.kafka.v1.ThisCluste" +
+      "rH\000\022P\n\020external_cluster\030\003 \001(\01324.yandex.c" +
+      "loud.mdb.kafka.v1.ExternalClusterConnect" +
+      "ionH\000B\024\n\022cluster_connection\"\r\n\013ThisClust" +
+      "er\"\200\001\n\031ExternalClusterConnection\022\031\n\021boot" +
+      "strap_servers\030\001 \001(\t\022\025\n\rsasl_username\030\002 \001" +
+      "(\t\022\026\n\016sasl_mechanism\030\004 \001(\t\022\031\n\021security_p" +
+      "rotocol\030\005 \001(\tBd\n\035yandex.cloud.api.mdb.ka" +
+      "fka.v1ZCgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/mdb/kafka/v1;kafkab\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -14185,7 +14368,7 @@ public final class ConnectorOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_ExternalClusterConnectionSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ExternalClusterConnectionSpec_descriptor,
-        new java.lang.String[] { "BootstrapServers", "SaslUsername", "SaslPassword", "SaslMechanism", "SecurityProtocol", });
+        new java.lang.String[] { "BootstrapServers", "SaslUsername", "SaslPassword", "SaslMechanism", "SecurityProtocol", "SslTruststoreCertificates", });
     internal_static_yandex_cloud_mdb_kafka_v1_Connector_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_kafka_v1_Connector_fieldAccessorTable = new

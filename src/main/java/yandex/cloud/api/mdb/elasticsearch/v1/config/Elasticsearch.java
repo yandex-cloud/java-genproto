@@ -80,6 +80,48 @@ public final class Elasticsearch {
      */
     com.google.protobuf.ByteString
         getFielddataCacheSizeBytes();
+
+    /**
+     * <pre>
+     * Remote hosts for reindex have to be explicitly allowed in elasticsearch.yml using the reindex.remote.whitelist property.
+     * It can be set to a comma delimited list of allowed remote host and port combinations.
+     * Scheme is ignored, only the host and port are used.
+     * </pre>
+     *
+     * <code>string reindex_remote_whitelist = 6;</code>
+     */
+    java.lang.String getReindexRemoteWhitelist();
+    /**
+     * <pre>
+     * Remote hosts for reindex have to be explicitly allowed in elasticsearch.yml using the reindex.remote.whitelist property.
+     * It can be set to a comma delimited list of allowed remote host and port combinations.
+     * Scheme is ignored, only the host and port are used.
+     * </pre>
+     *
+     * <code>string reindex_remote_whitelist = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getReindexRemoteWhitelistBytes();
+
+    /**
+     * <pre>
+     * List of paths to PEM encoded certificate files that should be trusted.
+     * See in-depth description in [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html#reindex-ssl)
+     * </pre>
+     *
+     * <code>string reindex_ssl_ca_path = 7;</code>
+     */
+    java.lang.String getReindexSslCaPath();
+    /**
+     * <pre>
+     * List of paths to PEM encoded certificate files that should be trusted.
+     * See in-depth description in [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html#reindex-ssl)
+     * </pre>
+     *
+     * <code>string reindex_ssl_ca_path = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getReindexSslCaPathBytes();
   }
   /**
    * <pre>
@@ -101,6 +143,8 @@ public final class Elasticsearch {
     }
     private ElasticsearchConfig7() {
       fielddataCacheSize_ = "";
+      reindexRemoteWhitelist_ = "";
+      reindexSslCaPath_ = "";
     }
 
     @java.lang.Override
@@ -144,6 +188,18 @@ public final class Elasticsearch {
               java.lang.String s = input.readStringRequireUtf8();
 
               fielddataCacheSize_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              reindexRemoteWhitelist_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              reindexSslCaPath_ = s;
               break;
             }
             default: {
@@ -273,6 +329,96 @@ public final class Elasticsearch {
       }
     }
 
+    public static final int REINDEX_REMOTE_WHITELIST_FIELD_NUMBER = 6;
+    private volatile java.lang.Object reindexRemoteWhitelist_;
+    /**
+     * <pre>
+     * Remote hosts for reindex have to be explicitly allowed in elasticsearch.yml using the reindex.remote.whitelist property.
+     * It can be set to a comma delimited list of allowed remote host and port combinations.
+     * Scheme is ignored, only the host and port are used.
+     * </pre>
+     *
+     * <code>string reindex_remote_whitelist = 6;</code>
+     */
+    public java.lang.String getReindexRemoteWhitelist() {
+      java.lang.Object ref = reindexRemoteWhitelist_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reindexRemoteWhitelist_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Remote hosts for reindex have to be explicitly allowed in elasticsearch.yml using the reindex.remote.whitelist property.
+     * It can be set to a comma delimited list of allowed remote host and port combinations.
+     * Scheme is ignored, only the host and port are used.
+     * </pre>
+     *
+     * <code>string reindex_remote_whitelist = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getReindexRemoteWhitelistBytes() {
+      java.lang.Object ref = reindexRemoteWhitelist_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reindexRemoteWhitelist_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REINDEX_SSL_CA_PATH_FIELD_NUMBER = 7;
+    private volatile java.lang.Object reindexSslCaPath_;
+    /**
+     * <pre>
+     * List of paths to PEM encoded certificate files that should be trusted.
+     * See in-depth description in [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html#reindex-ssl)
+     * </pre>
+     *
+     * <code>string reindex_ssl_ca_path = 7;</code>
+     */
+    public java.lang.String getReindexSslCaPath() {
+      java.lang.Object ref = reindexSslCaPath_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reindexSslCaPath_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * List of paths to PEM encoded certificate files that should be trusted.
+     * See in-depth description in [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html#reindex-ssl)
+     * </pre>
+     *
+     * <code>string reindex_ssl_ca_path = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getReindexSslCaPathBytes() {
+      java.lang.Object ref = reindexSslCaPath_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reindexSslCaPath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -293,6 +439,12 @@ public final class Elasticsearch {
       if (!getFielddataCacheSizeBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, fielddataCacheSize_);
       }
+      if (!getReindexRemoteWhitelistBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, reindexRemoteWhitelist_);
+      }
+      if (!getReindexSslCaPathBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, reindexSslCaPath_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -308,6 +460,12 @@ public final class Elasticsearch {
       }
       if (!getFielddataCacheSizeBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, fielddataCacheSize_);
+      }
+      if (!getReindexRemoteWhitelistBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, reindexRemoteWhitelist_);
+      }
+      if (!getReindexSslCaPathBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, reindexSslCaPath_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -332,6 +490,10 @@ public final class Elasticsearch {
       }
       result = result && getFielddataCacheSize()
           .equals(other.getFielddataCacheSize());
+      result = result && getReindexRemoteWhitelist()
+          .equals(other.getReindexRemoteWhitelist());
+      result = result && getReindexSslCaPath()
+          .equals(other.getReindexSslCaPath());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -349,6 +511,10 @@ public final class Elasticsearch {
       }
       hash = (37 * hash) + FIELDDATA_CACHE_SIZE_FIELD_NUMBER;
       hash = (53 * hash) + getFielddataCacheSize().hashCode();
+      hash = (37 * hash) + REINDEX_REMOTE_WHITELIST_FIELD_NUMBER;
+      hash = (53 * hash) + getReindexRemoteWhitelist().hashCode();
+      hash = (37 * hash) + REINDEX_SSL_CA_PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getReindexSslCaPath().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -496,6 +662,10 @@ public final class Elasticsearch {
         }
         fielddataCacheSize_ = "";
 
+        reindexRemoteWhitelist_ = "";
+
+        reindexSslCaPath_ = "";
+
         return this;
       }
 
@@ -528,6 +698,8 @@ public final class Elasticsearch {
           result.maxClauseCount_ = maxClauseCountBuilder_.build();
         }
         result.fielddataCacheSize_ = fielddataCacheSize_;
+        result.reindexRemoteWhitelist_ = reindexRemoteWhitelist_;
+        result.reindexSslCaPath_ = reindexSslCaPath_;
         onBuilt();
         return result;
       }
@@ -581,6 +753,14 @@ public final class Elasticsearch {
         }
         if (!other.getFielddataCacheSize().isEmpty()) {
           fielddataCacheSize_ = other.fielddataCacheSize_;
+          onChanged();
+        }
+        if (!other.getReindexRemoteWhitelist().isEmpty()) {
+          reindexRemoteWhitelist_ = other.reindexRemoteWhitelist_;
+          onChanged();
+        }
+        if (!other.getReindexSslCaPath().isEmpty()) {
+          reindexSslCaPath_ = other.reindexSslCaPath_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -906,6 +1086,199 @@ public final class Elasticsearch {
   checkByteStringIsUtf8(value);
         
         fielddataCacheSize_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object reindexRemoteWhitelist_ = "";
+      /**
+       * <pre>
+       * Remote hosts for reindex have to be explicitly allowed in elasticsearch.yml using the reindex.remote.whitelist property.
+       * It can be set to a comma delimited list of allowed remote host and port combinations.
+       * Scheme is ignored, only the host and port are used.
+       * </pre>
+       *
+       * <code>string reindex_remote_whitelist = 6;</code>
+       */
+      public java.lang.String getReindexRemoteWhitelist() {
+        java.lang.Object ref = reindexRemoteWhitelist_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reindexRemoteWhitelist_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Remote hosts for reindex have to be explicitly allowed in elasticsearch.yml using the reindex.remote.whitelist property.
+       * It can be set to a comma delimited list of allowed remote host and port combinations.
+       * Scheme is ignored, only the host and port are used.
+       * </pre>
+       *
+       * <code>string reindex_remote_whitelist = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getReindexRemoteWhitelistBytes() {
+        java.lang.Object ref = reindexRemoteWhitelist_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reindexRemoteWhitelist_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Remote hosts for reindex have to be explicitly allowed in elasticsearch.yml using the reindex.remote.whitelist property.
+       * It can be set to a comma delimited list of allowed remote host and port combinations.
+       * Scheme is ignored, only the host and port are used.
+       * </pre>
+       *
+       * <code>string reindex_remote_whitelist = 6;</code>
+       */
+      public Builder setReindexRemoteWhitelist(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        reindexRemoteWhitelist_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Remote hosts for reindex have to be explicitly allowed in elasticsearch.yml using the reindex.remote.whitelist property.
+       * It can be set to a comma delimited list of allowed remote host and port combinations.
+       * Scheme is ignored, only the host and port are used.
+       * </pre>
+       *
+       * <code>string reindex_remote_whitelist = 6;</code>
+       */
+      public Builder clearReindexRemoteWhitelist() {
+        
+        reindexRemoteWhitelist_ = getDefaultInstance().getReindexRemoteWhitelist();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Remote hosts for reindex have to be explicitly allowed in elasticsearch.yml using the reindex.remote.whitelist property.
+       * It can be set to a comma delimited list of allowed remote host and port combinations.
+       * Scheme is ignored, only the host and port are used.
+       * </pre>
+       *
+       * <code>string reindex_remote_whitelist = 6;</code>
+       */
+      public Builder setReindexRemoteWhitelistBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        reindexRemoteWhitelist_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object reindexSslCaPath_ = "";
+      /**
+       * <pre>
+       * List of paths to PEM encoded certificate files that should be trusted.
+       * See in-depth description in [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html#reindex-ssl)
+       * </pre>
+       *
+       * <code>string reindex_ssl_ca_path = 7;</code>
+       */
+      public java.lang.String getReindexSslCaPath() {
+        java.lang.Object ref = reindexSslCaPath_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reindexSslCaPath_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * List of paths to PEM encoded certificate files that should be trusted.
+       * See in-depth description in [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html#reindex-ssl)
+       * </pre>
+       *
+       * <code>string reindex_ssl_ca_path = 7;</code>
+       */
+      public com.google.protobuf.ByteString
+          getReindexSslCaPathBytes() {
+        java.lang.Object ref = reindexSslCaPath_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reindexSslCaPath_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * List of paths to PEM encoded certificate files that should be trusted.
+       * See in-depth description in [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html#reindex-ssl)
+       * </pre>
+       *
+       * <code>string reindex_ssl_ca_path = 7;</code>
+       */
+      public Builder setReindexSslCaPath(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        reindexSslCaPath_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of paths to PEM encoded certificate files that should be trusted.
+       * See in-depth description in [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html#reindex-ssl)
+       * </pre>
+       *
+       * <code>string reindex_ssl_ca_path = 7;</code>
+       */
+      public Builder clearReindexSslCaPath() {
+        
+        reindexSslCaPath_ = getDefaultInstance().getReindexSslCaPath();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of paths to PEM encoded certificate files that should be trusted.
+       * See in-depth description in [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html#reindex-ssl)
+       * </pre>
+       *
+       * <code>string reindex_ssl_ca_path = 7;</code>
+       */
+      public Builder setReindexSslCaPathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        reindexSslCaPath_ = value;
         onChanged();
         return this;
       }
@@ -2168,21 +2541,22 @@ public final class Elasticsearch {
       "ig/elasticsearch.proto\022(yandex.cloud.mdb" +
       ".elasticsearch.v1.config\032\036google/protobu" +
       "f/wrappers.proto\032\035yandex/cloud/validatio" +
-      "n.proto\"k\n\024ElasticsearchConfig7\0225\n\020max_c" +
-      "lause_count\030\003 \001(\0132\033.google.protobuf.Int6" +
-      "4Value\022\034\n\024fielddata_cache_size\030\004 \001(\t\"\246\002\n" +
-      "\027ElasticsearchConfigSet7\022^\n\020effective_co" +
-      "nfig\030\001 \001(\0132>.yandex.cloud.mdb.elasticsea" +
-      "rch.v1.config.ElasticsearchConfig7B\004\350\3071\001" +
-      "\022S\n\013user_config\030\002 \001(\0132>.yandex.cloud.mdb" +
-      ".elasticsearch.v1.config.ElasticsearchCo" +
-      "nfig7\022V\n\016default_config\030\003 \001(\0132>.yandex.c" +
-      "loud.mdb.elasticsearch.v1.config.Elastic" +
-      "searchConfig7B\212\001\n,yandex.cloud.api.mdb.e" +
-      "lasticsearch.v1.configZZgithub.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/mdb/ela" +
-      "sticsearch/v1/config;elasticsearchb\006prot" +
-      "o3"
+      "n.proto\"\252\001\n\024ElasticsearchConfig7\0225\n\020max_" +
+      "clause_count\030\003 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022\034\n\024fielddata_cache_size\030\004 \001(\t\022 \n" +
+      "\030reindex_remote_whitelist\030\006 \001(\t\022\033\n\023reind" +
+      "ex_ssl_ca_path\030\007 \001(\t\"\246\002\n\027ElasticsearchCo" +
+      "nfigSet7\022^\n\020effective_config\030\001 \001(\0132>.yan" +
+      "dex.cloud.mdb.elasticsearch.v1.config.El" +
+      "asticsearchConfig7B\004\350\3071\001\022S\n\013user_config\030" +
+      "\002 \001(\0132>.yandex.cloud.mdb.elasticsearch.v" +
+      "1.config.ElasticsearchConfig7\022V\n\016default" +
+      "_config\030\003 \001(\0132>.yandex.cloud.mdb.elastic" +
+      "search.v1.config.ElasticsearchConfig7B\212\001" +
+      "\n,yandex.cloud.api.mdb.elasticsearch.v1." +
+      "configZZgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/mdb/elasticsearch/v1/co" +
+      "nfig;elasticsearchb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2203,7 +2577,7 @@ public final class Elasticsearch {
     internal_static_yandex_cloud_mdb_elasticsearch_v1_config_ElasticsearchConfig7_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_elasticsearch_v1_config_ElasticsearchConfig7_descriptor,
-        new java.lang.String[] { "MaxClauseCount", "FielddataCacheSize", });
+        new java.lang.String[] { "MaxClauseCount", "FielddataCacheSize", "ReindexRemoteWhitelist", "ReindexSslCaPath", });
     internal_static_yandex_cloud_mdb_elasticsearch_v1_config_ElasticsearchConfigSet7_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_elasticsearch_v1_config_ElasticsearchConfigSet7_fieldAccessorTable = new

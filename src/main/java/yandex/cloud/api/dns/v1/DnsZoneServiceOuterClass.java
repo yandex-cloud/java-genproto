@@ -10360,12 +10360,14 @@ public final class DnsZoneServiceOuterClass {
 
     /**
      * <pre>
-     * A filter expression that filters record sets listed in the response.
-     * The expression must specify: 
-     * 1. The field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields. 
-     * 2. An `=` operator.
-     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
-     * Example of a filter: `name=my-record-set`.
+     * A filter expression that filters record sets listed in the response. The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+     * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where: 
+     * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields.
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+     * 3. `&lt;value&gt;` represents a value.
+     * 3.1. In case of single value condition (`=` or `!=`), the value is a string in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
+     * 3.2. In case of a list of values condition (`IN` or `NOT IN`), the value is `(&lt;string1&gt;, &lt;string2&gt;, .., &lt;stringN&gt;)`, where `&lt;string&gt;` is a string in double (`"`) or single (`'`) quotes.
+     * Examples of a filter: `name="my-record-set"`, `type IN ("MX","A") AND name="works.on.my.machine."`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10373,12 +10375,14 @@ public final class DnsZoneServiceOuterClass {
     java.lang.String getFilter();
     /**
      * <pre>
-     * A filter expression that filters record sets listed in the response.
-     * The expression must specify: 
-     * 1. The field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields. 
-     * 2. An `=` operator.
-     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
-     * Example of a filter: `name=my-record-set`.
+     * A filter expression that filters record sets listed in the response. The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+     * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where: 
+     * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields.
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+     * 3. `&lt;value&gt;` represents a value.
+     * 3.1. In case of single value condition (`=` or `!=`), the value is a string in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
+     * 3.2. In case of a list of values condition (`IN` or `NOT IN`), the value is `(&lt;string1&gt;, &lt;string2&gt;, .., &lt;stringN&gt;)`, where `&lt;string&gt;` is a string in double (`"`) or single (`'`) quotes.
+     * Examples of a filter: `name="my-record-set"`, `type IN ("MX","A") AND name="works.on.my.machine."`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10591,12 +10595,14 @@ public final class DnsZoneServiceOuterClass {
     private volatile java.lang.Object filter_;
     /**
      * <pre>
-     * A filter expression that filters record sets listed in the response.
-     * The expression must specify: 
-     * 1. The field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields. 
-     * 2. An `=` operator.
-     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
-     * Example of a filter: `name=my-record-set`.
+     * A filter expression that filters record sets listed in the response. The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+     * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where: 
+     * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields.
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+     * 3. `&lt;value&gt;` represents a value.
+     * 3.1. In case of single value condition (`=` or `!=`), the value is a string in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
+     * 3.2. In case of a list of values condition (`IN` or `NOT IN`), the value is `(&lt;string1&gt;, &lt;string2&gt;, .., &lt;stringN&gt;)`, where `&lt;string&gt;` is a string in double (`"`) or single (`'`) quotes.
+     * Examples of a filter: `name="my-record-set"`, `type IN ("MX","A") AND name="works.on.my.machine."`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10615,12 +10621,14 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * A filter expression that filters record sets listed in the response.
-     * The expression must specify: 
-     * 1. The field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields. 
-     * 2. An `=` operator.
-     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
-     * Example of a filter: `name=my-record-set`.
+     * A filter expression that filters record sets listed in the response. The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+     * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where: 
+     * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields.
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+     * 3. `&lt;value&gt;` represents a value.
+     * 3.1. In case of single value condition (`=` or `!=`), the value is a string in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
+     * 3.2. In case of a list of values condition (`IN` or `NOT IN`), the value is `(&lt;string1&gt;, &lt;string2&gt;, .., &lt;stringN&gt;)`, where `&lt;string&gt;` is a string in double (`"`) or single (`'`) quotes.
+     * Examples of a filter: `name="my-record-set"`, `type IN ("MX","A") AND name="works.on.my.machine."`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -11229,12 +11237,14 @@ public final class DnsZoneServiceOuterClass {
       private java.lang.Object filter_ = "";
       /**
        * <pre>
-       * A filter expression that filters record sets listed in the response.
-       * The expression must specify: 
-       * 1. The field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields. 
-       * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
-       * Example of a filter: `name=my-record-set`.
+       * A filter expression that filters record sets listed in the response. The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where: 
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * 3.1. In case of single value condition (`=` or `!=`), the value is a string in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
+       * 3.2. In case of a list of values condition (`IN` or `NOT IN`), the value is `(&lt;string1&gt;, &lt;string2&gt;, .., &lt;stringN&gt;)`, where `&lt;string&gt;` is a string in double (`"`) or single (`'`) quotes.
+       * Examples of a filter: `name="my-record-set"`, `type IN ("MX","A") AND name="works.on.my.machine."`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -11253,12 +11263,14 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters record sets listed in the response.
-       * The expression must specify: 
-       * 1. The field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields. 
-       * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
-       * Example of a filter: `name=my-record-set`.
+       * A filter expression that filters record sets listed in the response. The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where: 
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * 3.1. In case of single value condition (`=` or `!=`), the value is a string in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
+       * 3.2. In case of a list of values condition (`IN` or `NOT IN`), the value is `(&lt;string1&gt;, &lt;string2&gt;, .., &lt;stringN&gt;)`, where `&lt;string&gt;` is a string in double (`"`) or single (`'`) quotes.
+       * Examples of a filter: `name="my-record-set"`, `type IN ("MX","A") AND name="works.on.my.machine."`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -11278,12 +11290,14 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters record sets listed in the response.
-       * The expression must specify: 
-       * 1. The field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields. 
-       * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
-       * Example of a filter: `name=my-record-set`.
+       * A filter expression that filters record sets listed in the response. The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where: 
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * 3.1. In case of single value condition (`=` or `!=`), the value is a string in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
+       * 3.2. In case of a list of values condition (`IN` or `NOT IN`), the value is `(&lt;string1&gt;, &lt;string2&gt;, .., &lt;stringN&gt;)`, where `&lt;string&gt;` is a string in double (`"`) or single (`'`) quotes.
+       * Examples of a filter: `name="my-record-set"`, `type IN ("MX","A") AND name="works.on.my.machine."`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -11300,12 +11314,14 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters record sets listed in the response.
-       * The expression must specify: 
-       * 1. The field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields. 
-       * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
-       * Example of a filter: `name=my-record-set`.
+       * A filter expression that filters record sets listed in the response. The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where: 
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * 3.1. In case of single value condition (`=` or `!=`), the value is a string in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
+       * 3.2. In case of a list of values condition (`IN` or `NOT IN`), the value is `(&lt;string1&gt;, &lt;string2&gt;, .., &lt;stringN&gt;)`, where `&lt;string&gt;` is a string in double (`"`) or single (`'`) quotes.
+       * Examples of a filter: `name="my-record-set"`, `type IN ("MX","A") AND name="works.on.my.machine."`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -11318,12 +11334,14 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters record sets listed in the response.
-       * The expression must specify: 
-       * 1. The field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields. 
-       * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
-       * Example of a filter: `name=my-record-set`.
+       * A filter expression that filters record sets listed in the response. The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where: 
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * 3.1. In case of single value condition (`=` or `!=`), the value is a string in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
+       * 3.2. In case of a list of values condition (`IN` or `NOT IN`), the value is `(&lt;string1&gt;, &lt;string2&gt;, .., &lt;stringN&gt;)`, where `&lt;string&gt;` is a string in double (`"`) or single (`'`) quotes.
+       * Examples of a filter: `name="my-record-set"`, `type IN ("MX","A") AND name="works.on.my.machine."`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
