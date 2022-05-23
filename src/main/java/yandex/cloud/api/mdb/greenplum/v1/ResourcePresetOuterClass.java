@@ -108,24 +108,6 @@ public final class ResourcePresetOuterClass {
 
     /**
      * <pre>
-     * Min host count
-     * </pre>
-     *
-     * <code>int64 min_host_count = 6;</code>
-     */
-    long getMinHostCount();
-
-    /**
-     * <pre>
-     * Max host count
-     * </pre>
-     *
-     * <code>int64 max_host_count = 7;</code>
-     */
-    long getMaxHostCount();
-
-    /**
-     * <pre>
      * The number of hosts must be divisible by host_count_divider
      * </pre>
      *
@@ -164,8 +146,6 @@ public final class ResourcePresetOuterClass {
       cores_ = 0L;
       memory_ = 0L;
       type_ = 0;
-      minHostCount_ = 0L;
-      maxHostCount_ = 0L;
       hostCountDivider_ = 0L;
       maxSegmentInHostCount_ = 0L;
     }
@@ -223,16 +203,6 @@ public final class ResourcePresetOuterClass {
               int rawValue = input.readEnum();
 
               type_ = rawValue;
-              break;
-            }
-            case 48: {
-
-              minHostCount_ = input.readInt64();
-              break;
-            }
-            case 56: {
-
-              maxHostCount_ = input.readInt64();
               break;
             }
             case 64: {
@@ -542,32 +512,6 @@ public final class ResourcePresetOuterClass {
       return result == null ? yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type.UNRECOGNIZED : result;
     }
 
-    public static final int MIN_HOST_COUNT_FIELD_NUMBER = 6;
-    private long minHostCount_;
-    /**
-     * <pre>
-     * Min host count
-     * </pre>
-     *
-     * <code>int64 min_host_count = 6;</code>
-     */
-    public long getMinHostCount() {
-      return minHostCount_;
-    }
-
-    public static final int MAX_HOST_COUNT_FIELD_NUMBER = 7;
-    private long maxHostCount_;
-    /**
-     * <pre>
-     * Max host count
-     * </pre>
-     *
-     * <code>int64 max_host_count = 7;</code>
-     */
-    public long getMaxHostCount() {
-      return maxHostCount_;
-    }
-
     public static final int HOST_COUNT_DIVIDER_FIELD_NUMBER = 8;
     private long hostCountDivider_;
     /**
@@ -623,12 +567,6 @@ public final class ResourcePresetOuterClass {
       if (type_ != yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type.TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(5, type_);
       }
-      if (minHostCount_ != 0L) {
-        output.writeInt64(6, minHostCount_);
-      }
-      if (maxHostCount_ != 0L) {
-        output.writeInt64(7, maxHostCount_);
-      }
       if (hostCountDivider_ != 0L) {
         output.writeInt64(8, hostCountDivider_);
       }
@@ -667,14 +605,6 @@ public final class ResourcePresetOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, type_);
       }
-      if (minHostCount_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(6, minHostCount_);
-      }
-      if (maxHostCount_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(7, maxHostCount_);
-      }
       if (hostCountDivider_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(8, hostCountDivider_);
@@ -708,10 +638,6 @@ public final class ResourcePresetOuterClass {
       result = result && (getMemory()
           == other.getMemory());
       result = result && type_ == other.type_;
-      result = result && (getMinHostCount()
-          == other.getMinHostCount());
-      result = result && (getMaxHostCount()
-          == other.getMaxHostCount());
       result = result && (getHostCountDivider()
           == other.getHostCountDivider());
       result = result && (getMaxSegmentInHostCount()
@@ -741,12 +667,6 @@ public final class ResourcePresetOuterClass {
           getMemory());
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + type_;
-      hash = (37 * hash) + MIN_HOST_COUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getMinHostCount());
-      hash = (37 * hash) + MAX_HOST_COUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getMaxHostCount());
       hash = (37 * hash) + HOST_COUNT_DIVIDER_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getHostCountDivider());
@@ -900,10 +820,6 @@ public final class ResourcePresetOuterClass {
 
         type_ = 0;
 
-        minHostCount_ = 0L;
-
-        maxHostCount_ = 0L;
-
         hostCountDivider_ = 0L;
 
         maxSegmentInHostCount_ = 0L;
@@ -945,8 +861,6 @@ public final class ResourcePresetOuterClass {
         result.cores_ = cores_;
         result.memory_ = memory_;
         result.type_ = type_;
-        result.minHostCount_ = minHostCount_;
-        result.maxHostCount_ = maxHostCount_;
         result.hostCountDivider_ = hostCountDivider_;
         result.maxSegmentInHostCount_ = maxSegmentInHostCount_;
         result.bitField0_ = to_bitField0_;
@@ -1020,12 +934,6 @@ public final class ResourcePresetOuterClass {
         }
         if (other.type_ != 0) {
           setTypeValue(other.getTypeValue());
-        }
-        if (other.getMinHostCount() != 0L) {
-          setMinHostCount(other.getMinHostCount());
-        }
-        if (other.getMaxHostCount() != 0L) {
-          setMaxHostCount(other.getMaxHostCount());
         }
         if (other.getHostCountDivider() != 0L) {
           setHostCountDivider(other.getHostCountDivider());
@@ -1423,82 +1331,6 @@ public final class ResourcePresetOuterClass {
         return this;
       }
 
-      private long minHostCount_ ;
-      /**
-       * <pre>
-       * Min host count
-       * </pre>
-       *
-       * <code>int64 min_host_count = 6;</code>
-       */
-      public long getMinHostCount() {
-        return minHostCount_;
-      }
-      /**
-       * <pre>
-       * Min host count
-       * </pre>
-       *
-       * <code>int64 min_host_count = 6;</code>
-       */
-      public Builder setMinHostCount(long value) {
-        
-        minHostCount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Min host count
-       * </pre>
-       *
-       * <code>int64 min_host_count = 6;</code>
-       */
-      public Builder clearMinHostCount() {
-        
-        minHostCount_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long maxHostCount_ ;
-      /**
-       * <pre>
-       * Max host count
-       * </pre>
-       *
-       * <code>int64 max_host_count = 7;</code>
-       */
-      public long getMaxHostCount() {
-        return maxHostCount_;
-      }
-      /**
-       * <pre>
-       * Max host count
-       * </pre>
-       *
-       * <code>int64 max_host_count = 7;</code>
-       */
-      public Builder setMaxHostCount(long value) {
-        
-        maxHostCount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Max host count
-       * </pre>
-       *
-       * <code>int64 max_host_count = 7;</code>
-       */
-      public Builder clearMaxHostCount() {
-        
-        maxHostCount_ = 0L;
-        onChanged();
-        return this;
-      }
-
       private long hostCountDivider_ ;
       /**
        * <pre>
@@ -1643,17 +1475,16 @@ public final class ResourcePresetOuterClass {
     java.lang.String[] descriptorData = {
       "\n3yandex/cloud/mdb/greenplum/v1/resource" +
       "_preset.proto\022\035yandex.cloud.mdb.greenplu" +
-      "m.v1\"\265\002\n\016ResourcePreset\022\n\n\002id\030\001 \001(\t\022\020\n\010z" +
+      "m.v1\"\205\002\n\016ResourcePreset\022\n\n\002id\030\001 \001(\t\022\020\n\010z" +
       "one_ids\030\002 \003(\t\022\r\n\005cores\030\003 \001(\003\022\016\n\006memory\030\004" +
       " \001(\003\022@\n\004type\030\005 \001(\01622.yandex.cloud.mdb.gr" +
-      "eenplum.v1.ResourcePreset.Type\022\026\n\016min_ho" +
-      "st_count\030\006 \001(\003\022\026\n\016max_host_count\030\007 \001(\003\022\032" +
-      "\n\022host_count_divider\030\010 \001(\003\022!\n\031max_segmen" +
-      "t_in_host_count\030\t \001(\003\"5\n\004Type\022\024\n\020TYPE_UN" +
-      "SPECIFIED\020\000\022\n\n\006MASTER\020\001\022\013\n\007SEGMENT\020\002Bp\n!" +
-      "yandex.cloud.api.mdb.greenplum.v1ZKgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/mdb/greenplum/v1;greenplumb\006proto3"
+      "eenplum.v1.ResourcePreset.Type\022\032\n\022host_c" +
+      "ount_divider\030\010 \001(\003\022!\n\031max_segment_in_hos" +
+      "t_count\030\t \001(\003\"5\n\004Type\022\024\n\020TYPE_UNSPECIFIE" +
+      "D\020\000\022\n\n\006MASTER\020\001\022\013\n\007SEGMENT\020\002Bp\n!yandex.c" +
+      "loud.api.mdb.greenplum.v1ZKgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/mdb/" +
+      "greenplum/v1;greenplumb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1672,7 +1503,7 @@ public final class ResourcePresetOuterClass {
     internal_static_yandex_cloud_mdb_greenplum_v1_ResourcePreset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_ResourcePreset_descriptor,
-        new java.lang.String[] { "Id", "ZoneIds", "Cores", "Memory", "Type", "MinHostCount", "MaxHostCount", "HostCountDivider", "MaxSegmentInHostCount", });
+        new java.lang.String[] { "Id", "ZoneIds", "Cores", "Memory", "Type", "HostCountDivider", "MaxSegmentInHostCount", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -34747,6 +34747,2018 @@ public final class PSCS {
 
   }
 
+  public interface UpdateHostSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Name of the host to update.
+     * To get the SQL Server host name, use a [ClusterService.ListHosts] request.
+     * </pre>
+     *
+     * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getHostName();
+    /**
+     * <pre>
+     * Name of the host to update.
+     * To get the SQL Server host name, use a [ClusterService.ListHosts] request.
+     * </pre>
+     *
+     * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getHostNameBytes();
+
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the SQL Server host should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    boolean hasUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the SQL Server host should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    com.google.protobuf.FieldMask getUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the SQL Server host should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
+
+    /**
+     * <pre>
+     * Whether the host should get a public IP address on creation.
+     * </pre>
+     *
+     * <code>bool assign_public_ip = 3;</code>
+     */
+    boolean getAssignPublicIp();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec}
+   */
+  public  static final class UpdateHostSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec)
+      UpdateHostSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateHostSpec.newBuilder() to construct.
+    private UpdateHostSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateHostSpec() {
+      hostName_ = "";
+      assignPublicIp_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateHostSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              hostName_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.FieldMask.Builder subBuilder = null;
+              if (updateMask_ != null) {
+                subBuilder = updateMask_.toBuilder();
+              }
+              updateMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updateMask_);
+                updateMask_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 24: {
+
+              assignPublicIp_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.sqlserver.v1.PSCS.internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateHostSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.sqlserver.v1.PSCS.internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateHostSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec.class, yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec.Builder.class);
+    }
+
+    public static final int HOST_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object hostName_;
+    /**
+     * <pre>
+     * Name of the host to update.
+     * To get the SQL Server host name, use a [ClusterService.ListHosts] request.
+     * </pre>
+     *
+     * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getHostName() {
+      java.lang.Object ref = hostName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the host to update.
+     * To get the SQL Server host name, use a [ClusterService.ListHosts] request.
+     * </pre>
+     *
+     * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getHostNameBytes() {
+      java.lang.Object ref = hostName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hostName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPDATE_MASK_FIELD_NUMBER = 2;
+    private com.google.protobuf.FieldMask updateMask_;
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the SQL Server host should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    public boolean hasUpdateMask() {
+      return updateMask_ != null;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the SQL Server host should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    public com.google.protobuf.FieldMask getUpdateMask() {
+      return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the SQL Server host should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+      return getUpdateMask();
+    }
+
+    public static final int ASSIGN_PUBLIC_IP_FIELD_NUMBER = 3;
+    private boolean assignPublicIp_;
+    /**
+     * <pre>
+     * Whether the host should get a public IP address on creation.
+     * </pre>
+     *
+     * <code>bool assign_public_ip = 3;</code>
+     */
+    public boolean getAssignPublicIp() {
+      return assignPublicIp_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getHostNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hostName_);
+      }
+      if (updateMask_ != null) {
+        output.writeMessage(2, getUpdateMask());
+      }
+      if (assignPublicIp_ != false) {
+        output.writeBool(3, assignPublicIp_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getHostNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hostName_);
+      }
+      if (updateMask_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getUpdateMask());
+      }
+      if (assignPublicIp_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, assignPublicIp_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec other = (yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec) obj;
+
+      boolean result = true;
+      result = result && getHostName()
+          .equals(other.getHostName());
+      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (hasUpdateMask()) {
+        result = result && getUpdateMask()
+            .equals(other.getUpdateMask());
+      }
+      result = result && (getAssignPublicIp()
+          == other.getAssignPublicIp());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HOST_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getHostName().hashCode();
+      if (hasUpdateMask()) {
+        hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdateMask().hashCode();
+      }
+      hash = (37 * hash) + ASSIGN_PUBLIC_IP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAssignPublicIp());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec)
+        yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSCS.internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateHostSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSCS.internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateHostSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec.class, yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        hostName_ = "";
+
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+        assignPublicIp_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSCS.internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateHostSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec build() {
+        yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec buildPartial() {
+        yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec result = new yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec(this);
+        result.hostName_ = hostName_;
+        if (updateMaskBuilder_ == null) {
+          result.updateMask_ = updateMask_;
+        } else {
+          result.updateMask_ = updateMaskBuilder_.build();
+        }
+        result.assignPublicIp_ = assignPublicIp_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec) {
+          return mergeFrom((yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec other) {
+        if (other == yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec.getDefaultInstance()) return this;
+        if (!other.getHostName().isEmpty()) {
+          hostName_ = other.hostName_;
+          onChanged();
+        }
+        if (other.hasUpdateMask()) {
+          mergeUpdateMask(other.getUpdateMask());
+        }
+        if (other.getAssignPublicIp() != false) {
+          setAssignPublicIp(other.getAssignPublicIp());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object hostName_ = "";
+      /**
+       * <pre>
+       * Name of the host to update.
+       * To get the SQL Server host name, use a [ClusterService.ListHosts] request.
+       * </pre>
+       *
+       * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getHostName() {
+        java.lang.Object ref = hostName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hostName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the host to update.
+       * To get the SQL Server host name, use a [ClusterService.ListHosts] request.
+       * </pre>
+       *
+       * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getHostNameBytes() {
+        java.lang.Object ref = hostName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hostName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the host to update.
+       * To get the SQL Server host name, use a [ClusterService.ListHosts] request.
+       * </pre>
+       *
+       * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setHostName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        hostName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the host to update.
+       * To get the SQL Server host name, use a [ClusterService.ListHosts] request.
+       * </pre>
+       *
+       * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearHostName() {
+        
+        hostName_ = getDefaultInstance().getHostName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the host to update.
+       * To get the SQL Server host name, use a [ClusterService.ListHosts] request.
+       * </pre>
+       *
+       * <code>string host_name = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setHostNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        hostName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the SQL Server host should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public boolean hasUpdateMask() {
+        return updateMaskBuilder_ != null || updateMask_ != null;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the SQL Server host should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public com.google.protobuf.FieldMask getUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        } else {
+          return updateMaskBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the SQL Server host should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updateMask_ = value;
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the SQL Server host should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder setUpdateMask(
+          com.google.protobuf.FieldMask.Builder builderForValue) {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = builderForValue.build();
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the SQL Server host should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (updateMask_ != null) {
+            updateMask_ =
+              com.google.protobuf.FieldMask.newBuilder(updateMask_).mergeFrom(value).buildPartial();
+          } else {
+            updateMask_ = value;
+          }
+          onChanged();
+        } else {
+          updateMaskBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the SQL Server host should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder clearUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+          onChanged();
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the SQL Server host should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
+        
+        onChanged();
+        return getUpdateMaskFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the SQL Server host should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+        if (updateMaskBuilder_ != null) {
+          return updateMaskBuilder_.getMessageOrBuilder();
+        } else {
+          return updateMask_ == null ?
+              com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the SQL Server host should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+          getUpdateMaskFieldBuilder() {
+        if (updateMaskBuilder_ == null) {
+          updateMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                  getUpdateMask(),
+                  getParentForChildren(),
+                  isClean());
+          updateMask_ = null;
+        }
+        return updateMaskBuilder_;
+      }
+
+      private boolean assignPublicIp_ ;
+      /**
+       * <pre>
+       * Whether the host should get a public IP address on creation.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 3;</code>
+       */
+      public boolean getAssignPublicIp() {
+        return assignPublicIp_;
+      }
+      /**
+       * <pre>
+       * Whether the host should get a public IP address on creation.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 3;</code>
+       */
+      public Builder setAssignPublicIp(boolean value) {
+        
+        assignPublicIp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the host should get a public IP address on creation.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 3;</code>
+       */
+      public Builder clearAssignPublicIp() {
+        
+        assignPublicIp_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec)
+    private static final yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec();
+    }
+
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateHostSpec>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateHostSpec>() {
+      @java.lang.Override
+      public UpdateHostSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateHostSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateHostSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateHostSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateClusterHostsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.sqlserver.v1.UpdateClusterHostsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the SQL Server cluster to update hosts in.
+     * To get the SQL Server cluster ID, use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the SQL Server cluster to update hosts in.
+     * To get the SQL Server cluster ID, use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * New configurations to apply to hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    java.util.List<yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec> 
+        getUpdateHostSpecsList();
+    /**
+     * <pre>
+     * New configurations to apply to hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec getUpdateHostSpecs(int index);
+    /**
+     * <pre>
+     * New configurations to apply to hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    int getUpdateHostSpecsCount();
+    /**
+     * <pre>
+     * New configurations to apply to hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    java.util.List<? extends yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpecOrBuilder> 
+        getUpdateHostSpecsOrBuilderList();
+    /**
+     * <pre>
+     * New configurations to apply to hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpecOrBuilder getUpdateHostSpecsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.UpdateClusterHostsRequest}
+   */
+  public  static final class UpdateClusterHostsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.sqlserver.v1.UpdateClusterHostsRequest)
+      UpdateClusterHostsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateClusterHostsRequest.newBuilder() to construct.
+    private UpdateClusterHostsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateClusterHostsRequest() {
+      clusterId_ = "";
+      updateHostSpecs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateClusterHostsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                updateHostSpecs_ = new java.util.ArrayList<yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              updateHostSpecs_.add(
+                  input.readMessage(yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          updateHostSpecs_ = java.util.Collections.unmodifiableList(updateHostSpecs_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.sqlserver.v1.PSCS.internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateClusterHostsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.sqlserver.v1.PSCS.internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateClusterHostsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest.class, yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the SQL Server cluster to update hosts in.
+     * To get the SQL Server cluster ID, use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the SQL Server cluster to update hosts in.
+     * To get the SQL Server cluster ID, use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPDATE_HOST_SPECS_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec> updateHostSpecs_;
+    /**
+     * <pre>
+     * New configurations to apply to hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    public java.util.List<yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec> getUpdateHostSpecsList() {
+      return updateHostSpecs_;
+    }
+    /**
+     * <pre>
+     * New configurations to apply to hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpecOrBuilder> 
+        getUpdateHostSpecsOrBuilderList() {
+      return updateHostSpecs_;
+    }
+    /**
+     * <pre>
+     * New configurations to apply to hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    public int getUpdateHostSpecsCount() {
+      return updateHostSpecs_.size();
+    }
+    /**
+     * <pre>
+     * New configurations to apply to hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    public yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec getUpdateHostSpecs(int index) {
+      return updateHostSpecs_.get(index);
+    }
+    /**
+     * <pre>
+     * New configurations to apply to hosts.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    public yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpecOrBuilder getUpdateHostSpecsOrBuilder(
+        int index) {
+      return updateHostSpecs_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      for (int i = 0; i < updateHostSpecs_.size(); i++) {
+        output.writeMessage(2, updateHostSpecs_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      for (int i = 0; i < updateHostSpecs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, updateHostSpecs_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest other = (yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && getUpdateHostSpecsList()
+          .equals(other.getUpdateHostSpecsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      if (getUpdateHostSpecsCount() > 0) {
+        hash = (37 * hash) + UPDATE_HOST_SPECS_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdateHostSpecsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.UpdateClusterHostsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.sqlserver.v1.UpdateClusterHostsRequest)
+        yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSCS.internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateClusterHostsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSCS.internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateClusterHostsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest.class, yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getUpdateHostSpecsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        if (updateHostSpecsBuilder_ == null) {
+          updateHostSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          updateHostSpecsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSCS.internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateClusterHostsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest build() {
+        yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest buildPartial() {
+        yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest result = new yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.clusterId_ = clusterId_;
+        if (updateHostSpecsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            updateHostSpecs_ = java.util.Collections.unmodifiableList(updateHostSpecs_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.updateHostSpecs_ = updateHostSpecs_;
+        } else {
+          result.updateHostSpecs_ = updateHostSpecsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest other) {
+        if (other == yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (updateHostSpecsBuilder_ == null) {
+          if (!other.updateHostSpecs_.isEmpty()) {
+            if (updateHostSpecs_.isEmpty()) {
+              updateHostSpecs_ = other.updateHostSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureUpdateHostSpecsIsMutable();
+              updateHostSpecs_.addAll(other.updateHostSpecs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.updateHostSpecs_.isEmpty()) {
+            if (updateHostSpecsBuilder_.isEmpty()) {
+              updateHostSpecsBuilder_.dispose();
+              updateHostSpecsBuilder_ = null;
+              updateHostSpecs_ = other.updateHostSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              updateHostSpecsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUpdateHostSpecsFieldBuilder() : null;
+            } else {
+              updateHostSpecsBuilder_.addAllMessages(other.updateHostSpecs_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the SQL Server cluster to update hosts in.
+       * To get the SQL Server cluster ID, use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the SQL Server cluster to update hosts in.
+       * To get the SQL Server cluster ID, use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the SQL Server cluster to update hosts in.
+       * To get the SQL Server cluster ID, use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the SQL Server cluster to update hosts in.
+       * To get the SQL Server cluster ID, use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the SQL Server cluster to update hosts in.
+       * To get the SQL Server cluster ID, use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec> updateHostSpecs_ =
+        java.util.Collections.emptyList();
+      private void ensureUpdateHostSpecsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          updateHostSpecs_ = new java.util.ArrayList<yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec>(updateHostSpecs_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec, yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec.Builder, yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpecOrBuilder> updateHostSpecsBuilder_;
+
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec> getUpdateHostSpecsList() {
+        if (updateHostSpecsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(updateHostSpecs_);
+        } else {
+          return updateHostSpecsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public int getUpdateHostSpecsCount() {
+        if (updateHostSpecsBuilder_ == null) {
+          return updateHostSpecs_.size();
+        } else {
+          return updateHostSpecsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec getUpdateHostSpecs(int index) {
+        if (updateHostSpecsBuilder_ == null) {
+          return updateHostSpecs_.get(index);
+        } else {
+          return updateHostSpecsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder setUpdateHostSpecs(
+          int index, yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec value) {
+        if (updateHostSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUpdateHostSpecsIsMutable();
+          updateHostSpecs_.set(index, value);
+          onChanged();
+        } else {
+          updateHostSpecsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder setUpdateHostSpecs(
+          int index, yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec.Builder builderForValue) {
+        if (updateHostSpecsBuilder_ == null) {
+          ensureUpdateHostSpecsIsMutable();
+          updateHostSpecs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          updateHostSpecsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder addUpdateHostSpecs(yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec value) {
+        if (updateHostSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUpdateHostSpecsIsMutable();
+          updateHostSpecs_.add(value);
+          onChanged();
+        } else {
+          updateHostSpecsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder addUpdateHostSpecs(
+          int index, yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec value) {
+        if (updateHostSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUpdateHostSpecsIsMutable();
+          updateHostSpecs_.add(index, value);
+          onChanged();
+        } else {
+          updateHostSpecsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder addUpdateHostSpecs(
+          yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec.Builder builderForValue) {
+        if (updateHostSpecsBuilder_ == null) {
+          ensureUpdateHostSpecsIsMutable();
+          updateHostSpecs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          updateHostSpecsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder addUpdateHostSpecs(
+          int index, yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec.Builder builderForValue) {
+        if (updateHostSpecsBuilder_ == null) {
+          ensureUpdateHostSpecsIsMutable();
+          updateHostSpecs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          updateHostSpecsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder addAllUpdateHostSpecs(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec> values) {
+        if (updateHostSpecsBuilder_ == null) {
+          ensureUpdateHostSpecsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, updateHostSpecs_);
+          onChanged();
+        } else {
+          updateHostSpecsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder clearUpdateHostSpecs() {
+        if (updateHostSpecsBuilder_ == null) {
+          updateHostSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          updateHostSpecsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder removeUpdateHostSpecs(int index) {
+        if (updateHostSpecsBuilder_ == null) {
+          ensureUpdateHostSpecsIsMutable();
+          updateHostSpecs_.remove(index);
+          onChanged();
+        } else {
+          updateHostSpecsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec.Builder getUpdateHostSpecsBuilder(
+          int index) {
+        return getUpdateHostSpecsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpecOrBuilder getUpdateHostSpecsOrBuilder(
+          int index) {
+        if (updateHostSpecsBuilder_ == null) {
+          return updateHostSpecs_.get(index);  } else {
+          return updateHostSpecsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpecOrBuilder> 
+           getUpdateHostSpecsOrBuilderList() {
+        if (updateHostSpecsBuilder_ != null) {
+          return updateHostSpecsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(updateHostSpecs_);
+        }
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec.Builder addUpdateHostSpecsBuilder() {
+        return getUpdateHostSpecsFieldBuilder().addBuilder(
+            yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec.Builder addUpdateHostSpecsBuilder(
+          int index) {
+        return getUpdateHostSpecsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * New configurations to apply to hosts.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.UpdateHostSpec update_host_specs = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec.Builder> 
+           getUpdateHostSpecsBuilderList() {
+        return getUpdateHostSpecsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec, yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec.Builder, yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpecOrBuilder> 
+          getUpdateHostSpecsFieldBuilder() {
+        if (updateHostSpecsBuilder_ == null) {
+          updateHostSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec, yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpec.Builder, yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateHostSpecOrBuilder>(
+                  updateHostSpecs_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          updateHostSpecs_ = null;
+        }
+        return updateHostSpecsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.sqlserver.v1.UpdateClusterHostsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.sqlserver.v1.UpdateClusterHostsRequest)
+    private static final yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest();
+    }
+
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateClusterHostsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateClusterHostsRequest>() {
+      @java.lang.Override
+      public UpdateClusterHostsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateClusterHostsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateClusterHostsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateClusterHostsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ConfigSpecOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.sqlserver.v1.ConfigSpec)
       com.google.protobuf.MessageOrBuilder {
@@ -36918,6 +38930,16 @@ public final class PSCS {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_sqlserver_v1_HostSpec_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateHostSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateHostSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateClusterHostsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateClusterHostsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_sqlserver_v1_ConfigSpec_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -37068,92 +39090,104 @@ public final class PSCS {
       "\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t" +
       "\"\\\n\010HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=50\022" +
       "\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_p" +
-      "ublic_ip\030\003 \001(\010\"\344\003\n\nConfigSpec\022\017\n\007version" +
-      "\030\001 \001(\t\022\202\001\n\033sqlserver_config_2016sp2std\030\002" +
-      " \001(\0132?.yandex.cloud.mdb.sqlserver.v1.con" +
-      "fig.SQLServerConfig2016sp2stdH\000R\032sqlserv" +
-      "erConfig_2016sp2std\022\202\001\n\033sqlserver_config" +
-      "_2016sp2ent\030\005 \001(\0132?.yandex.cloud.mdb.sql" +
-      "server.v1.config.SQLServerConfig2016sp2e" +
-      "ntH\000R\032sqlserverConfig_2016sp2ent\022;\n\treso" +
-      "urces\030\003 \001(\0132(.yandex.cloud.mdb.sqlserver" +
-      ".v1.Resources\0223\n\023backup_window_start\030\004 \001" +
-      "(\0132\026.google.type.TimeOfDay\0225\n\006access\030\006 \001" +
-      "(\0132%.yandex.cloud.mdb.sqlserver.v1.Acces" +
-      "sB\022\n\020sqlserver_config2\332\025\n\016ClusterService" +
-      "\022\220\001\n\003Get\0220.yandex.cloud.mdb.sqlserver.v1" +
-      ".GetClusterRequest\032&.yandex.cloud.mdb.sq" +
-      "lserver.v1.Cluster\"/\202\323\344\223\002)\022\'/mdb/sqlserv" +
-      "er/v1/clusters/{cluster_id}\022\223\001\n\004List\0222.y" +
-      "andex.cloud.mdb.sqlserver.v1.ListCluster" +
-      "sRequest\0323.yandex.cloud.mdb.sqlserver.v1" +
-      ".ListClustersResponse\"\"\202\323\344\223\002\034\022\032/mdb/sqls" +
-      "erver/v1/clusters\022\253\001\n\006Create\0223.yandex.cl" +
-      "oud.mdb.sqlserver.v1.CreateClusterReques" +
-      "t\032!.yandex.cloud.operation.Operation\"I\202\323" +
-      "\344\223\002\037\"\032/mdb/sqlserver/v1/clusters:\001*\262\322* \n" +
-      "\025CreateClusterMetadata\022\007Cluster\022\270\001\n\006Upda" +
-      "te\0223.yandex.cloud.mdb.sqlserver.v1.Updat" +
-      "eClusterRequest\032!.yandex.cloud.operation" +
-      ".Operation\"V\202\323\344\223\002,2\'/mdb/sqlserver/v1/cl" +
-      "usters/{cluster_id}:\001*\262\322* \n\025UpdateCluste" +
-      "rMetadata\022\007Cluster\022\303\001\n\006Delete\0223.yandex.c" +
-      "loud.mdb.sqlserver.v1.DeleteClusterReque" +
-      "st\032!.yandex.cloud.operation.Operation\"a\202" +
-      "\323\344\223\002)*\'/mdb/sqlserver/v1/clusters/{clust" +
-      "er_id}\262\322*.\n\025DeleteClusterMetadata\022\025googl" +
-      "e.protobuf.Empty\022\270\001\n\005Start\0222.yandex.clou" +
-      "d.mdb.sqlserver.v1.StartClusterRequest\032!" +
-      ".yandex.cloud.operation.Operation\"X\202\323\344\223\002" +
-      "/\"-/mdb/sqlserver/v1/clusters/{cluster_i" +
-      "d}:start\262\322*\037\n\024StartClusterMetadata\022\007Clus" +
-      "ter\022\264\001\n\004Stop\0221.yandex.cloud.mdb.sqlserve" +
-      "r.v1.StopClusterRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"V\202\323\344\223\002.\",/mdb/sqlserv" +
-      "er/v1/clusters/{cluster_id}:stop\262\322*\036\n\023St" +
-      "opClusterMetadata\022\007Cluster\022\267\001\n\004Move\0221.ya" +
-      "ndex.cloud.mdb.sqlserver.v1.MoveClusterR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"Y\202\323\344\223\0021\",/mdb/sqlserver/v1/clusters/{c" +
-      "luster_id}:move:\001*\262\322*\036\n\023MoveClusterMetad" +
-      "ata\022\007Cluster\022\274\001\n\006Backup\0223.yandex.cloud.m" +
-      "db.sqlserver.v1.BackupClusterRequest\032!.y" +
-      "andex.cloud.operation.Operation\"Z\202\323\344\223\0020\"" +
-      "./mdb/sqlserver/v1/clusters/{cluster_id}" +
-      ":backup\262\322* \n\025BackupClusterMetadata\022\007Clus" +
-      "ter\022\266\001\n\007Restore\0224.yandex.cloud.mdb.sqlse" +
-      "rver.v1.RestoreClusterRequest\032!.yandex.c" +
-      "loud.operation.Operation\"R\202\323\344\223\002\'\"\"/mdb/s" +
-      "qlserver/v1/clusters:restore:\001*\262\322*!\n\026Res" +
-      "toreClusterMetadata\022\007Cluster\022\333\001\n\rStartFa" +
-      "ilover\022:.yandex.cloud.mdb.sqlserver.v1.S" +
-      "tartClusterFailoverRequest\032!.yandex.clou" +
-      "d.operation.Operation\"k\202\323\344\223\002:\"5/mdb/sqls" +
-      "erver/v1/clusters/{cluster_id}:startFail" +
-      "over:\001*\262\322*\'\n\034StartClusterFailoverMetadat" +
-      "a\022\007Cluster\022\257\001\n\010ListLogs\0225.yandex.cloud.m" +
-      "db.sqlserver.v1.ListClusterLogsRequest\0326" +
-      ".yandex.cloud.mdb.sqlserver.v1.ListClust" +
-      "erLogsResponse\"4\202\323\344\223\002.\022,/mdb/sqlserver/v" +
-      "1/clusters/{cluster_id}:logs\022\307\001\n\016ListOpe" +
-      "rations\022;.yandex.cloud.mdb.sqlserver.v1." +
-      "ListClusterOperationsRequest\032<.yandex.cl" +
-      "oud.mdb.sqlserver.v1.ListClusterOperatio" +
-      "nsResponse\":\202\323\344\223\0024\0222/mdb/sqlserver/v1/cl" +
-      "usters/{cluster_id}/operations\022\273\001\n\013ListB" +
-      "ackups\0228.yandex.cloud.mdb.sqlserver.v1.L" +
-      "istClusterBackupsRequest\0329.yandex.cloud." +
-      "mdb.sqlserver.v1.ListClusterBackupsRespo" +
-      "nse\"7\202\323\344\223\0021\022//mdb/sqlserver/v1/clusters/" +
-      "{cluster_id}/backups\022\263\001\n\tListHosts\0226.yan" +
+      "ublic_ip\030\003 \001(\010\"t\n\016UpdateHostSpec\022\027\n\thost" +
+      "_name\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032" +
+      ".google.protobuf.FieldMask\022\030\n\020assign_pub" +
+      "lic_ip\030\003 \001(\010\"\217\001\n\031UpdateClusterHostsReque" +
+      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022P\n\021" +
+      "update_host_specs\030\002 \003(\0132-.yandex.cloud.m" +
+      "db.sqlserver.v1.UpdateHostSpecB\006\202\3101\002>0\"\344" +
+      "\003\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022\202\001\n\033sqlse" +
+      "rver_config_2016sp2std\030\002 \001(\0132?.yandex.cl" +
+      "oud.mdb.sqlserver.v1.config.SQLServerCon" +
+      "fig2016sp2stdH\000R\032sqlserverConfig_2016sp2" +
+      "std\022\202\001\n\033sqlserver_config_2016sp2ent\030\005 \001(" +
+      "\0132?.yandex.cloud.mdb.sqlserver.v1.config" +
+      ".SQLServerConfig2016sp2entH\000R\032sqlserverC" +
+      "onfig_2016sp2ent\022;\n\tresources\030\003 \001(\0132(.ya" +
+      "ndex.cloud.mdb.sqlserver.v1.Resources\0223\n" +
+      "\023backup_window_start\030\004 \001(\0132\026.google.type" +
+      ".TimeOfDay\0225\n\006access\030\006 \001(\0132%.yandex.clou" +
+      "d.mdb.sqlserver.v1.AccessB\022\n\020sqlserver_c" +
+      "onfig2\304\027\n\016ClusterService\022\220\001\n\003Get\0220.yande" +
+      "x.cloud.mdb.sqlserver.v1.GetClusterReque" +
+      "st\032&.yandex.cloud.mdb.sqlserver.v1.Clust" +
+      "er\"/\202\323\344\223\002)\022\'/mdb/sqlserver/v1/clusters/{" +
+      "cluster_id}\022\223\001\n\004List\0222.yandex.cloud.mdb." +
+      "sqlserver.v1.ListClustersRequest\0323.yande" +
+      "x.cloud.mdb.sqlserver.v1.ListClustersRes" +
+      "ponse\"\"\202\323\344\223\002\034\022\032/mdb/sqlserver/v1/cluster" +
+      "s\022\253\001\n\006Create\0223.yandex.cloud.mdb.sqlserve" +
+      "r.v1.CreateClusterRequest\032!.yandex.cloud" +
+      ".operation.Operation\"I\202\323\344\223\002\037\"\032/mdb/sqlse" +
+      "rver/v1/clusters:\001*\262\322* \n\025CreateClusterMe" +
+      "tadata\022\007Cluster\022\270\001\n\006Update\0223.yandex.clou" +
+      "d.mdb.sqlserver.v1.UpdateClusterRequest\032" +
+      "!.yandex.cloud.operation.Operation\"V\202\323\344\223" +
+      "\002,2\'/mdb/sqlserver/v1/clusters/{cluster_" +
+      "id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Clust" +
+      "er\022\303\001\n\006Delete\0223.yandex.cloud.mdb.sqlserv" +
+      "er.v1.DeleteClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"a\202\323\344\223\002)*\'/mdb/sqls" +
+      "erver/v1/clusters/{cluster_id}\262\322*.\n\025Dele" +
+      "teClusterMetadata\022\025google.protobuf.Empty" +
+      "\022\270\001\n\005Start\0222.yandex.cloud.mdb.sqlserver." +
+      "v1.StartClusterRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"X\202\323\344\223\002/\"-/mdb/sqlserve" +
+      "r/v1/clusters/{cluster_id}:start\262\322*\037\n\024St" +
+      "artClusterMetadata\022\007Cluster\022\264\001\n\004Stop\0221.y" +
+      "andex.cloud.mdb.sqlserver.v1.StopCluster" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"V\202\323\344\223\002.\",/mdb/sqlserver/v1/clusters/{" +
+      "cluster_id}:stop\262\322*\036\n\023StopClusterMetadat" +
+      "a\022\007Cluster\022\267\001\n\004Move\0221.yandex.cloud.mdb.s" +
+      "qlserver.v1.MoveClusterRequest\032!.yandex." +
+      "cloud.operation.Operation\"Y\202\323\344\223\0021\",/mdb/" +
+      "sqlserver/v1/clusters/{cluster_id}:move:" +
+      "\001*\262\322*\036\n\023MoveClusterMetadata\022\007Cluster\022\274\001\n" +
+      "\006Backup\0223.yandex.cloud.mdb.sqlserver.v1." +
+      "BackupClusterRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"Z\202\323\344\223\0020\"./mdb/sqlserver/" +
+      "v1/clusters/{cluster_id}:backup\262\322* \n\025Bac" +
+      "kupClusterMetadata\022\007Cluster\022\266\001\n\007Restore\022" +
+      "4.yandex.cloud.mdb.sqlserver.v1.RestoreC" +
+      "lusterRequest\032!.yandex.cloud.operation.O" +
+      "peration\"R\202\323\344\223\002\'\"\"/mdb/sqlserver/v1/clus" +
+      "ters:restore:\001*\262\322*!\n\026RestoreClusterMetad" +
+      "ata\022\007Cluster\022\333\001\n\rStartFailover\022:.yandex." +
+      "cloud.mdb.sqlserver.v1.StartClusterFailo" +
+      "verRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"k\202\323\344\223\002:\"5/mdb/sqlserver/v1/cluster" +
+      "s/{cluster_id}:startFailover:\001*\262\322*\'\n\034Sta" +
+      "rtClusterFailoverMetadata\022\007Cluster\022\257\001\n\010L" +
+      "istLogs\0225.yandex.cloud.mdb.sqlserver.v1." +
+      "ListClusterLogsRequest\0326.yandex.cloud.md" +
+      "b.sqlserver.v1.ListClusterLogsResponse\"4" +
+      "\202\323\344\223\002.\022,/mdb/sqlserver/v1/clusters/{clus" +
+      "ter_id}:logs\022\307\001\n\016ListOperations\022;.yandex" +
+      ".cloud.mdb.sqlserver.v1.ListClusterOpera" +
+      "tionsRequest\032<.yandex.cloud.mdb.sqlserve" +
+      "r.v1.ListClusterOperationsResponse\":\202\323\344\223" +
+      "\0024\0222/mdb/sqlserver/v1/clusters/{cluster_" +
+      "id}/operations\022\273\001\n\013ListBackups\0228.yandex." +
+      "cloud.mdb.sqlserver.v1.ListClusterBackup" +
+      "sRequest\0329.yandex.cloud.mdb.sqlserver.v1" +
+      ".ListClusterBackupsResponse\"7\202\323\344\223\0021\022//md" +
+      "b/sqlserver/v1/clusters/{cluster_id}/bac" +
+      "kups\022\263\001\n\tListHosts\0226.yandex.cloud.mdb.sq" +
+      "lserver.v1.ListClusterHostsRequest\0327.yan" +
       "dex.cloud.mdb.sqlserver.v1.ListClusterHo" +
-      "stsRequest\0327.yandex.cloud.mdb.sqlserver." +
-      "v1.ListClusterHostsResponse\"5\202\323\344\223\002/\022-/md" +
-      "b/sqlserver/v1/clusters/{cluster_id}/hos" +
-      "tsBv\n!yandex.cloud.api.mdb.sqlserver.v1B" +
-      "\004PSCSZKgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/mdb/sqlserver/v1;sqlserv" +
-      "erb\006proto3"
+      "stsResponse\"5\202\323\344\223\002/\022-/mdb/sqlserver/v1/c" +
+      "lusters/{cluster_id}/hosts\022\347\001\n\013UpdateHos" +
+      "ts\0228.yandex.cloud.mdb.sqlserver.v1.Updat" +
+      "eClusterHostsRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"{\202\323\344\223\002>\"9/mdb/sqlserver/" +
+      "v1/clusters/{cluster_id}/hosts:batchUpda" +
+      "te:\001*\262\322*3\n\032UpdateClusterHostsMetadata\022\025g" +
+      "oogle.protobuf.EmptyBv\n!yandex.cloud.api" +
+      ".mdb.sqlserver.v1B\004PSCSZKgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/mdb/sq" +
+      "lserver/v1;sqlserverb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -37395,8 +39429,20 @@ public final class PSCS {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_HostSpec_descriptor,
         new java.lang.String[] { "ZoneId", "SubnetId", "AssignPublicIp", });
-    internal_static_yandex_cloud_mdb_sqlserver_v1_ConfigSpec_descriptor =
+    internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateHostSpec_descriptor =
       getDescriptor().getMessageTypes().get(32);
+    internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateHostSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateHostSpec_descriptor,
+        new java.lang.String[] { "HostName", "UpdateMask", "AssignPublicIp", });
+    internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateClusterHostsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(33);
+    internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateClusterHostsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_sqlserver_v1_UpdateClusterHostsRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "UpdateHostSpecs", });
+    internal_static_yandex_cloud_mdb_sqlserver_v1_ConfigSpec_descriptor =
+      getDescriptor().getMessageTypes().get(34);
     internal_static_yandex_cloud_mdb_sqlserver_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_ConfigSpec_descriptor,

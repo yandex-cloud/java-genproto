@@ -3911,7 +3911,7 @@ public final class Access {
      * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     java.util.List<yandex.cloud.api.access.Access.AccessBinding> 
         getAccessBindingsList();
@@ -3920,7 +3920,7 @@ public final class Access {
      * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     yandex.cloud.api.access.Access.AccessBinding getAccessBindings(int index);
     /**
@@ -3928,7 +3928,7 @@ public final class Access {
      * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     int getAccessBindingsCount();
     /**
@@ -3936,7 +3936,7 @@ public final class Access {
      * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     java.util.List<? extends yandex.cloud.api.access.Access.AccessBindingOrBuilder> 
         getAccessBindingsOrBuilderList();
@@ -3945,7 +3945,7 @@ public final class Access {
      * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     yandex.cloud.api.access.Access.AccessBindingOrBuilder getAccessBindingsOrBuilder(
         int index);
@@ -4093,7 +4093,7 @@ public final class Access {
      * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     public java.util.List<yandex.cloud.api.access.Access.AccessBinding> getAccessBindingsList() {
       return accessBindings_;
@@ -4103,7 +4103,7 @@ public final class Access {
      * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     public java.util.List<? extends yandex.cloud.api.access.Access.AccessBindingOrBuilder> 
         getAccessBindingsOrBuilderList() {
@@ -4114,7 +4114,7 @@ public final class Access {
      * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     public int getAccessBindingsCount() {
       return accessBindings_.size();
@@ -4124,7 +4124,7 @@ public final class Access {
      * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     public yandex.cloud.api.access.Access.AccessBinding getAccessBindings(int index) {
       return accessBindings_.get(index);
@@ -4134,7 +4134,7 @@ public final class Access {
      * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     public yandex.cloud.api.access.Access.AccessBindingOrBuilder getAccessBindingsOrBuilder(
         int index) {
@@ -4614,7 +4614,7 @@ public final class Access {
        * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public java.util.List<yandex.cloud.api.access.Access.AccessBinding> getAccessBindingsList() {
         if (accessBindingsBuilder_ == null) {
@@ -4628,7 +4628,7 @@ public final class Access {
        * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public int getAccessBindingsCount() {
         if (accessBindingsBuilder_ == null) {
@@ -4642,7 +4642,7 @@ public final class Access {
        * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public yandex.cloud.api.access.Access.AccessBinding getAccessBindings(int index) {
         if (accessBindingsBuilder_ == null) {
@@ -4656,7 +4656,7 @@ public final class Access {
        * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder setAccessBindings(
           int index, yandex.cloud.api.access.Access.AccessBinding value) {
@@ -4677,7 +4677,7 @@ public final class Access {
        * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder setAccessBindings(
           int index, yandex.cloud.api.access.Access.AccessBinding.Builder builderForValue) {
@@ -4695,7 +4695,7 @@ public final class Access {
        * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder addAccessBindings(yandex.cloud.api.access.Access.AccessBinding value) {
         if (accessBindingsBuilder_ == null) {
@@ -4715,7 +4715,7 @@ public final class Access {
        * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder addAccessBindings(
           int index, yandex.cloud.api.access.Access.AccessBinding value) {
@@ -4736,7 +4736,7 @@ public final class Access {
        * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder addAccessBindings(
           yandex.cloud.api.access.Access.AccessBinding.Builder builderForValue) {
@@ -4754,7 +4754,7 @@ public final class Access {
        * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder addAccessBindings(
           int index, yandex.cloud.api.access.Access.AccessBinding.Builder builderForValue) {
@@ -4772,7 +4772,7 @@ public final class Access {
        * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder addAllAccessBindings(
           java.lang.Iterable<? extends yandex.cloud.api.access.Access.AccessBinding> values) {
@@ -4791,7 +4791,7 @@ public final class Access {
        * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder clearAccessBindings() {
         if (accessBindingsBuilder_ == null) {
@@ -4808,7 +4808,7 @@ public final class Access {
        * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder removeAccessBindings(int index) {
         if (accessBindingsBuilder_ == null) {
@@ -4825,7 +4825,7 @@ public final class Access {
        * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public yandex.cloud.api.access.Access.AccessBinding.Builder getAccessBindingsBuilder(
           int index) {
@@ -4836,7 +4836,7 @@ public final class Access {
        * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public yandex.cloud.api.access.Access.AccessBindingOrBuilder getAccessBindingsOrBuilder(
           int index) {
@@ -4850,7 +4850,7 @@ public final class Access {
        * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public java.util.List<? extends yandex.cloud.api.access.Access.AccessBindingOrBuilder> 
            getAccessBindingsOrBuilderList() {
@@ -4865,7 +4865,7 @@ public final class Access {
        * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public yandex.cloud.api.access.Access.AccessBinding.Builder addAccessBindingsBuilder() {
         return getAccessBindingsFieldBuilder().addBuilder(
@@ -4876,7 +4876,7 @@ public final class Access {
        * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public yandex.cloud.api.access.Access.AccessBinding.Builder addAccessBindingsBuilder(
           int index) {
@@ -4888,7 +4888,7 @@ public final class Access {
        * Access bindings to be set. For more information, see [Access Bindings](/docs/iam/concepts/access-control/#access-bindings).
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBinding access_bindings = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public java.util.List<yandex.cloud.api.access.Access.AccessBinding.Builder> 
            getAccessBindingsBuilderList() {
@@ -5574,7 +5574,7 @@ public final class Access {
      * Updates to access bindings.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
      */
     java.util.List<yandex.cloud.api.access.Access.AccessBindingDelta> 
         getAccessBindingDeltasList();
@@ -5583,7 +5583,7 @@ public final class Access {
      * Updates to access bindings.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
      */
     yandex.cloud.api.access.Access.AccessBindingDelta getAccessBindingDeltas(int index);
     /**
@@ -5591,7 +5591,7 @@ public final class Access {
      * Updates to access bindings.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
      */
     int getAccessBindingDeltasCount();
     /**
@@ -5599,7 +5599,7 @@ public final class Access {
      * Updates to access bindings.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
      */
     java.util.List<? extends yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder> 
         getAccessBindingDeltasOrBuilderList();
@@ -5608,7 +5608,7 @@ public final class Access {
      * Updates to access bindings.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
      */
     yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder getAccessBindingDeltasOrBuilder(
         int index);
@@ -5754,7 +5754,7 @@ public final class Access {
      * Updates to access bindings.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
      */
     public java.util.List<yandex.cloud.api.access.Access.AccessBindingDelta> getAccessBindingDeltasList() {
       return accessBindingDeltas_;
@@ -5764,7 +5764,7 @@ public final class Access {
      * Updates to access bindings.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
      */
     public java.util.List<? extends yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder> 
         getAccessBindingDeltasOrBuilderList() {
@@ -5775,7 +5775,7 @@ public final class Access {
      * Updates to access bindings.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
      */
     public int getAccessBindingDeltasCount() {
       return accessBindingDeltas_.size();
@@ -5785,7 +5785,7 @@ public final class Access {
      * Updates to access bindings.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
      */
     public yandex.cloud.api.access.Access.AccessBindingDelta getAccessBindingDeltas(int index) {
       return accessBindingDeltas_.get(index);
@@ -5795,7 +5795,7 @@ public final class Access {
      * Updates to access bindings.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
      */
     public yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder getAccessBindingDeltasOrBuilder(
         int index) {
@@ -6270,7 +6270,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
        */
       public java.util.List<yandex.cloud.api.access.Access.AccessBindingDelta> getAccessBindingDeltasList() {
         if (accessBindingDeltasBuilder_ == null) {
@@ -6284,7 +6284,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
        */
       public int getAccessBindingDeltasCount() {
         if (accessBindingDeltasBuilder_ == null) {
@@ -6298,7 +6298,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
        */
       public yandex.cloud.api.access.Access.AccessBindingDelta getAccessBindingDeltas(int index) {
         if (accessBindingDeltasBuilder_ == null) {
@@ -6312,7 +6312,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
        */
       public Builder setAccessBindingDeltas(
           int index, yandex.cloud.api.access.Access.AccessBindingDelta value) {
@@ -6333,7 +6333,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
        */
       public Builder setAccessBindingDeltas(
           int index, yandex.cloud.api.access.Access.AccessBindingDelta.Builder builderForValue) {
@@ -6351,7 +6351,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
        */
       public Builder addAccessBindingDeltas(yandex.cloud.api.access.Access.AccessBindingDelta value) {
         if (accessBindingDeltasBuilder_ == null) {
@@ -6371,7 +6371,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
        */
       public Builder addAccessBindingDeltas(
           int index, yandex.cloud.api.access.Access.AccessBindingDelta value) {
@@ -6392,7 +6392,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
        */
       public Builder addAccessBindingDeltas(
           yandex.cloud.api.access.Access.AccessBindingDelta.Builder builderForValue) {
@@ -6410,7 +6410,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
        */
       public Builder addAccessBindingDeltas(
           int index, yandex.cloud.api.access.Access.AccessBindingDelta.Builder builderForValue) {
@@ -6428,7 +6428,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
        */
       public Builder addAllAccessBindingDeltas(
           java.lang.Iterable<? extends yandex.cloud.api.access.Access.AccessBindingDelta> values) {
@@ -6447,7 +6447,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
        */
       public Builder clearAccessBindingDeltas() {
         if (accessBindingDeltasBuilder_ == null) {
@@ -6464,7 +6464,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
        */
       public Builder removeAccessBindingDeltas(int index) {
         if (accessBindingDeltasBuilder_ == null) {
@@ -6481,7 +6481,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
        */
       public yandex.cloud.api.access.Access.AccessBindingDelta.Builder getAccessBindingDeltasBuilder(
           int index) {
@@ -6492,7 +6492,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
        */
       public yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder getAccessBindingDeltasOrBuilder(
           int index) {
@@ -6506,7 +6506,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
        */
       public java.util.List<? extends yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder> 
            getAccessBindingDeltasOrBuilderList() {
@@ -6521,7 +6521,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
        */
       public yandex.cloud.api.access.Access.AccessBindingDelta.Builder addAccessBindingDeltasBuilder() {
         return getAccessBindingDeltasFieldBuilder().addBuilder(
@@ -6532,7 +6532,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
        */
       public yandex.cloud.api.access.Access.AccessBindingDelta.Builder addAccessBindingDeltasBuilder(
           int index) {
@@ -6544,7 +6544,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.size) = "1-1000"];</code>
        */
       public java.util.List<yandex.cloud.api.access.Access.AccessBindingDelta.Builder> 
            getAccessBindingDeltasBuilderList() {
@@ -8066,25 +8066,25 @@ public final class Access {
       "en\030\003 \001(\tB\t\212\3101\005<=100\"r\n\032ListAccessBinding" +
       "sResponse\022;\n\017access_bindings\030\001 \003(\0132\".yan" +
       "dex.cloud.access.AccessBinding\022\027\n\017next_p" +
-      "age_token\030\002 \001(\t\"\200\001\n\030SetAccessBindingsReq" +
+      "age_token\030\002 \001(\t\"\206\001\n\030SetAccessBindingsReq" +
       "uest\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "A\n\017access_bindings\030\002 \003(\0132\".yandex.cloud." +
-      "access.AccessBindingB\004\350\3071\001\"0\n\031SetAccessB" +
-      "indingsMetadata\022\023\n\013resource_id\030\001 \001(\t\"\224\001\n" +
-      "\033UpdateAccessBindingsRequest\022!\n\013resource" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022R\n\025access_bindin" +
-      "g_deltas\030\002 \003(\0132\'.yandex.cloud.access.Acc" +
-      "essBindingDeltaB\n\202\3101\002>0\350\3071\001\"3\n\034UpdateAcc" +
-      "essBindingsMetadata\022\023\n\013resource_id\030\001 \001(\t" +
-      "\"\226\001\n\022AccessBindingDelta\022>\n\006action\030\001 \001(\0162" +
-      "(.yandex.cloud.access.AccessBindingActio" +
-      "nB\004\350\3071\001\022@\n\016access_binding\030\002 \001(\0132\".yandex" +
-      ".cloud.access.AccessBindingB\004\350\3071\001*Q\n\023Acc" +
-      "essBindingAction\022%\n!ACCESS_BINDING_ACTIO" +
-      "N_UNSPECIFIED\020\000\022\007\n\003ADD\020\001\022\n\n\006REMOVE\020\002BY\n\027" +
-      "yandex.cloud.api.accessZ>github.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/access" +
-      ";accessb\006proto3"
+      "G\n\017access_bindings\030\002 \003(\0132\".yandex.cloud." +
+      "access.AccessBindingB\n\202\3101\006<=1000\"0\n\031SetA" +
+      "ccessBindingsMetadata\022\023\n\013resource_id\030\001 \001" +
+      "(\t\"\224\001\n\033UpdateAccessBindingsRequest\022!\n\013re" +
+      "source_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022R\n\025access_" +
+      "binding_deltas\030\002 \003(\0132\'.yandex.cloud.acce" +
+      "ss.AccessBindingDeltaB\n\202\3101\0061-1000\"3\n\034Upd" +
+      "ateAccessBindingsMetadata\022\023\n\013resource_id" +
+      "\030\001 \001(\t\"\226\001\n\022AccessBindingDelta\022>\n\006action\030" +
+      "\001 \001(\0162(.yandex.cloud.access.AccessBindin" +
+      "gActionB\004\350\3071\001\022@\n\016access_binding\030\002 \001(\0132\"." +
+      "yandex.cloud.access.AccessBindingB\004\350\3071\001*" +
+      "Q\n\023AccessBindingAction\022%\n!ACCESS_BINDING" +
+      "_ACTION_UNSPECIFIED\020\000\022\007\n\003ADD\020\001\022\n\n\006REMOVE" +
+      "\020\002BY\n\027yandex.cloud.api.accessZ>github.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "access;accessb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

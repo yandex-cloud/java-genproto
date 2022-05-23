@@ -510,6 +510,38 @@ public final class ClusterServiceGrpc {
      return getListHostsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateHostsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateHosts",
+      requestType = yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateHostsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateHostsMethod;
+    if ((getUpdateHostsMethod = ClusterServiceGrpc.getUpdateHostsMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getUpdateHostsMethod = ClusterServiceGrpc.getUpdateHostsMethod) == null) {
+          ClusterServiceGrpc.getUpdateHostsMethod = getUpdateHostsMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.mdb.sqlserver.v1.ClusterService", "UpdateHosts"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("UpdateHosts"))
+                  .build();
+          }
+        }
+     }
+     return getUpdateHostsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -692,6 +724,16 @@ public final class ClusterServiceGrpc {
       asyncUnimplementedUnaryCall(getListHostsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Updates the specified hosts.
+     * </pre>
+     */
+    public void updateHosts(yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getUpdateHostsMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -799,6 +841,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.sqlserver.v1.PSCS.ListClusterHostsRequest,
                 yandex.cloud.api.mdb.sqlserver.v1.PSCS.ListClusterHostsResponse>(
                   this, METHODID_LIST_HOSTS)))
+          .addMethod(
+            getUpdateHostsMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UPDATE_HOSTS)))
           .build();
     }
   }
@@ -990,6 +1039,17 @@ public final class ClusterServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getListHostsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Updates the specified hosts.
+     * </pre>
+     */
+    public void updateHosts(yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getUpdateHostsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1163,6 +1223,16 @@ public final class ClusterServiceGrpc {
     public yandex.cloud.api.mdb.sqlserver.v1.PSCS.ListClusterHostsResponse listHosts(yandex.cloud.api.mdb.sqlserver.v1.PSCS.ListClusterHostsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListHostsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the specified hosts.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation updateHosts(yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getUpdateHostsMethod(), getCallOptions(), request);
     }
   }
 
@@ -1353,6 +1423,17 @@ public final class ClusterServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getListHostsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Updates the specified hosts.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateHosts(
+        yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getUpdateHostsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -1370,6 +1451,7 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_LIST_OPERATIONS = 12;
   private static final int METHODID_LIST_BACKUPS = 13;
   private static final int METHODID_LIST_HOSTS = 14;
+  private static final int METHODID_UPDATE_HOSTS = 15;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1448,6 +1530,10 @@ public final class ClusterServiceGrpc {
           serviceImpl.listHosts((yandex.cloud.api.mdb.sqlserver.v1.PSCS.ListClusterHostsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.sqlserver.v1.PSCS.ListClusterHostsResponse>) responseObserver);
           break;
+        case METHODID_UPDATE_HOSTS:
+          serviceImpl.updateHosts((yandex.cloud.api.mdb.sqlserver.v1.PSCS.UpdateClusterHostsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -1524,6 +1610,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getListOperationsMethod())
               .addMethod(getListBackupsMethod())
               .addMethod(getListHostsMethod())
+              .addMethod(getUpdateHostsMethod())
               .build();
         }
       }

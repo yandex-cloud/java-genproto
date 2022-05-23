@@ -70431,7 +70431,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Relative weight of the shard considered when writing data to the cluster.
-       * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/table_engines/distributed/).
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/operations/table_engines/distributed/).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value weight = 3;</code>
@@ -70440,7 +70440,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Relative weight of the shard considered when writing data to the cluster.
-       * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/table_engines/distributed/).
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/operations/table_engines/distributed/).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value weight = 3;</code>
@@ -70449,7 +70449,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Relative weight of the shard considered when writing data to the cluster.
-       * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/table_engines/distributed/).
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/operations/table_engines/distributed/).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value weight = 3;</code>
@@ -70637,7 +70637,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Relative weight of the shard considered when writing data to the cluster.
-       * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/table_engines/distributed/).
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/operations/table_engines/distributed/).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value weight = 3;</code>
@@ -70648,7 +70648,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Relative weight of the shard considered when writing data to the cluster.
-       * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/table_engines/distributed/).
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/operations/table_engines/distributed/).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value weight = 3;</code>
@@ -70659,7 +70659,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Relative weight of the shard considered when writing data to the cluster.
-       * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/table_engines/distributed/).
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/operations/table_engines/distributed/).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value weight = 3;</code>
@@ -71356,7 +71356,7 @@ public final class ClusterServiceOuterClass {
         /**
          * <pre>
          * Relative weight of the shard considered when writing data to the cluster.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/table_engines/distributed/).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/operations/table_engines/distributed/).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value weight = 3;</code>
@@ -71367,7 +71367,7 @@ public final class ClusterServiceOuterClass {
         /**
          * <pre>
          * Relative weight of the shard considered when writing data to the cluster.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/table_engines/distributed/).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/operations/table_engines/distributed/).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value weight = 3;</code>
@@ -71382,7 +71382,7 @@ public final class ClusterServiceOuterClass {
         /**
          * <pre>
          * Relative weight of the shard considered when writing data to the cluster.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/table_engines/distributed/).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/operations/table_engines/distributed/).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value weight = 3;</code>
@@ -71403,7 +71403,7 @@ public final class ClusterServiceOuterClass {
         /**
          * <pre>
          * Relative weight of the shard considered when writing data to the cluster.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/table_engines/distributed/).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/operations/table_engines/distributed/).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value weight = 3;</code>
@@ -71422,7 +71422,7 @@ public final class ClusterServiceOuterClass {
         /**
          * <pre>
          * Relative weight of the shard considered when writing data to the cluster.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/table_engines/distributed/).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/operations/table_engines/distributed/).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value weight = 3;</code>
@@ -71445,7 +71445,7 @@ public final class ClusterServiceOuterClass {
         /**
          * <pre>
          * Relative weight of the shard considered when writing data to the cluster.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/table_engines/distributed/).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/operations/table_engines/distributed/).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value weight = 3;</code>
@@ -71464,7 +71464,7 @@ public final class ClusterServiceOuterClass {
         /**
          * <pre>
          * Relative weight of the shard considered when writing data to the cluster.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/table_engines/distributed/).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/operations/table_engines/distributed/).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value weight = 3;</code>
@@ -71477,7 +71477,7 @@ public final class ClusterServiceOuterClass {
         /**
          * <pre>
          * Relative weight of the shard considered when writing data to the cluster.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/table_engines/distributed/).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/operations/table_engines/distributed/).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value weight = 3;</code>
@@ -71493,7 +71493,7 @@ public final class ClusterServiceOuterClass {
         /**
          * <pre>
          * Relative weight of the shard considered when writing data to the cluster.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/table_engines/distributed/).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/operations/table_engines/distributed/).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value weight = 3;</code>

@@ -38,7 +38,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Settings for the MergeTree engine.
-     * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#merge_tree).
+     * See description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#merge_tree).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
@@ -47,7 +47,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Settings for the MergeTree engine.
-     * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#merge_tree).
+     * See description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#merge_tree).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
@@ -56,7 +56,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Settings for the MergeTree engine.
-     * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#merge_tree).
+     * See description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#merge_tree).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
@@ -66,7 +66,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Compression settings for the ClickHouse cluster.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -76,7 +76,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Compression settings for the ClickHouse cluster.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -85,7 +85,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Compression settings for the ClickHouse cluster.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -94,7 +94,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Compression settings for the ClickHouse cluster.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -104,7 +104,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Compression settings for the ClickHouse cluster.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -115,7 +115,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Configuration of external dictionaries to be used by the ClickHouse cluster.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -125,7 +125,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Configuration of external dictionaries to be used by the ClickHouse cluster.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -134,7 +134,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Configuration of external dictionaries to be used by the ClickHouse cluster.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -143,7 +143,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Configuration of external dictionaries to be used by the ClickHouse cluster.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -153,7 +153,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Configuration of external dictionaries to be used by the ClickHouse cluster.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -164,7 +164,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Settings for thinning Graphite data.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -174,7 +174,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Settings for thinning Graphite data.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -183,7 +183,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Settings for thinning Graphite data.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -192,7 +192,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Settings for thinning Graphite data.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -202,7 +202,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Settings for thinning Graphite data.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -978,7 +978,7 @@ public final class Clickhouse {
   /**
    * <pre>
    * ClickHouse configuration options. Detailed description for each set of options
-   * is available in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/).
+   * is available in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/).
    * Any options not listed here are not supported.
    * </pre>
    *
@@ -7484,7 +7484,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Set of attributes for the external dictionary.
-       * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/).
+       * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
@@ -7493,7 +7493,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Set of attributes for the external dictionary.
-       * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/).
+       * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
@@ -7502,7 +7502,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Set of attributes for the external dictionary.
-       * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/).
+       * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
@@ -7512,7 +7512,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Layout for storing the dictionary in memory.
-       * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/).
+       * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
@@ -7521,7 +7521,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Layout for storing the dictionary in memory.
-       * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/).
+       * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
@@ -7530,7 +7530,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Layout for storing the dictionary in memory.
-       * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/).
+       * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
@@ -8802,7 +8802,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Query for checking the dictionary status, to pull only updated data.
-         * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
+         * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
          * </pre>
          *
          * <code>string invalidate_query = 8;</code>
@@ -8811,7 +8811,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Query for checking the dictionary status, to pull only updated data.
-         * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
+         * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
          * </pre>
          *
          * <code>string invalidate_query = 8;</code>
@@ -10345,7 +10345,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Query for checking the dictionary status, to pull only updated data.
-         * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
+         * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
          * </pre>
          *
          * <code>string invalidate_query = 8;</code>
@@ -10365,7 +10365,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Query for checking the dictionary status, to pull only updated data.
-         * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
+         * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
          * </pre>
          *
          * <code>string invalidate_query = 8;</code>
@@ -11648,7 +11648,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Query for checking the dictionary status, to pull only updated data.
-           * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
+           * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
            * </pre>
            *
            * <code>string invalidate_query = 8;</code>
@@ -11668,7 +11668,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Query for checking the dictionary status, to pull only updated data.
-           * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
+           * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
            * </pre>
            *
            * <code>string invalidate_query = 8;</code>
@@ -11689,7 +11689,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Query for checking the dictionary status, to pull only updated data.
-           * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
+           * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
            * </pre>
            *
            * <code>string invalidate_query = 8;</code>
@@ -11707,7 +11707,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Query for checking the dictionary status, to pull only updated data.
-           * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
+           * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
            * </pre>
            *
            * <code>string invalidate_query = 8;</code>
@@ -11721,7 +11721,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Query for checking the dictionary status, to pull only updated data.
-           * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
+           * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
            * </pre>
            *
            * <code>string invalidate_query = 8;</code>
@@ -14810,7 +14810,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Query for checking the dictionary status, to pull only updated data.
-         * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
+         * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
          * </pre>
          *
          * <code>string invalidate_query = 7;</code>
@@ -14819,7 +14819,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Query for checking the dictionary status, to pull only updated data.
-         * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
+         * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
          * </pre>
          *
          * <code>string invalidate_query = 7;</code>
@@ -15384,7 +15384,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Query for checking the dictionary status, to pull only updated data.
-         * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
+         * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
          * </pre>
          *
          * <code>string invalidate_query = 7;</code>
@@ -15404,7 +15404,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Query for checking the dictionary status, to pull only updated data.
-         * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
+         * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
          * </pre>
          *
          * <code>string invalidate_query = 7;</code>
@@ -16421,7 +16421,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Query for checking the dictionary status, to pull only updated data.
-           * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
+           * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
            * </pre>
            *
            * <code>string invalidate_query = 7;</code>
@@ -16441,7 +16441,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Query for checking the dictionary status, to pull only updated data.
-           * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
+           * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
            * </pre>
            *
            * <code>string invalidate_query = 7;</code>
@@ -16462,7 +16462,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Query for checking the dictionary status, to pull only updated data.
-           * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
+           * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
            * </pre>
            *
            * <code>string invalidate_query = 7;</code>
@@ -16480,7 +16480,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Query for checking the dictionary status, to pull only updated data.
-           * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
+           * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
            * </pre>
            *
            * <code>string invalidate_query = 7;</code>
@@ -16494,7 +16494,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Query for checking the dictionary status, to pull only updated data.
-           * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
+           * For more details, see [ClickHouse documentation on dictionaries](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_lifetime/).
            * </pre>
            *
            * <code>string invalidate_query = 7;</code>
@@ -16665,7 +16665,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Composite key for the dictionary, containing of one or more key columns.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
@@ -16674,7 +16674,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Composite key for the dictionary, containing of one or more key columns.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
@@ -16683,7 +16683,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Composite key for the dictionary, containing of one or more key columns.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
@@ -16693,7 +16693,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Field holding the beginning of the range for dictionaries with `RANGE_HASHED` layout.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
@@ -16702,7 +16702,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Field holding the beginning of the range for dictionaries with `RANGE_HASHED` layout.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
@@ -16711,7 +16711,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Field holding the beginning of the range for dictionaries with `RANGE_HASHED` layout.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
@@ -16721,7 +16721,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Field holding the end of the range for dictionaries with `RANGE_HASHED` layout.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
@@ -16730,7 +16730,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Field holding the end of the range for dictionaries with `RANGE_HASHED` layout.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
@@ -16739,7 +16739,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Field holding the end of the range for dictionaries with `RANGE_HASHED` layout.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
@@ -16749,7 +16749,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Description of the fields available for database queries.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
          * </pre>
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -16759,7 +16759,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Description of the fields available for database queries.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
          * </pre>
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -16768,7 +16768,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Description of the fields available for database queries.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
          * </pre>
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -16777,7 +16777,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Description of the fields available for database queries.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
          * </pre>
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -16787,7 +16787,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Description of the fields available for database queries.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
          * </pre>
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -19749,7 +19749,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Composite key for the dictionary, containing of one or more key columns.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
@@ -19760,7 +19760,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Composite key for the dictionary, containing of one or more key columns.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
@@ -19771,7 +19771,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Composite key for the dictionary, containing of one or more key columns.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
@@ -19785,7 +19785,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Field holding the beginning of the range for dictionaries with `RANGE_HASHED` layout.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
@@ -19796,7 +19796,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Field holding the beginning of the range for dictionaries with `RANGE_HASHED` layout.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
@@ -19807,7 +19807,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Field holding the beginning of the range for dictionaries with `RANGE_HASHED` layout.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
@@ -19821,7 +19821,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Field holding the end of the range for dictionaries with `RANGE_HASHED` layout.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
@@ -19832,7 +19832,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Field holding the end of the range for dictionaries with `RANGE_HASHED` layout.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
@@ -19843,7 +19843,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Field holding the end of the range for dictionaries with `RANGE_HASHED` layout.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
@@ -19857,7 +19857,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Description of the fields available for database queries.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
          * </pre>
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -19868,7 +19868,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Description of the fields available for database queries.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
          * </pre>
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -19880,7 +19880,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Description of the fields available for database queries.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
          * </pre>
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -19891,7 +19891,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Description of the fields available for database queries.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
          * </pre>
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -19902,7 +19902,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Description of the fields available for database queries.
-         * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+         * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
          * </pre>
          *
          * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -20536,7 +20536,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Composite key for the dictionary, containing of one or more key columns.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
@@ -20547,7 +20547,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Composite key for the dictionary, containing of one or more key columns.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
@@ -20562,7 +20562,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Composite key for the dictionary, containing of one or more key columns.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
@@ -20583,7 +20583,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Composite key for the dictionary, containing of one or more key columns.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
@@ -20602,7 +20602,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Composite key for the dictionary, containing of one or more key columns.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
@@ -20625,7 +20625,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Composite key for the dictionary, containing of one or more key columns.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
@@ -20644,7 +20644,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Composite key for the dictionary, containing of one or more key columns.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
@@ -20657,7 +20657,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Composite key for the dictionary, containing of one or more key columns.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
@@ -20673,7 +20673,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Composite key for the dictionary, containing of one or more key columns.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#composite-key).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Key key = 3;</code>
@@ -20698,7 +20698,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Field holding the beginning of the range for dictionaries with `RANGE_HASHED` layout.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
@@ -20709,7 +20709,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Field holding the beginning of the range for dictionaries with `RANGE_HASHED` layout.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
@@ -20724,7 +20724,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Field holding the beginning of the range for dictionaries with `RANGE_HASHED` layout.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
@@ -20745,7 +20745,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Field holding the beginning of the range for dictionaries with `RANGE_HASHED` layout.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
@@ -20764,7 +20764,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Field holding the beginning of the range for dictionaries with `RANGE_HASHED` layout.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
@@ -20787,7 +20787,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Field holding the beginning of the range for dictionaries with `RANGE_HASHED` layout.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
@@ -20806,7 +20806,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Field holding the beginning of the range for dictionaries with `RANGE_HASHED` layout.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
@@ -20819,7 +20819,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Field holding the beginning of the range for dictionaries with `RANGE_HASHED` layout.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
@@ -20835,7 +20835,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Field holding the beginning of the range for dictionaries with `RANGE_HASHED` layout.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_min = 4;</code>
@@ -20860,7 +20860,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Field holding the end of the range for dictionaries with `RANGE_HASHED` layout.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
@@ -20871,7 +20871,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Field holding the end of the range for dictionaries with `RANGE_HASHED` layout.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
@@ -20886,7 +20886,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Field holding the end of the range for dictionaries with `RANGE_HASHED` layout.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
@@ -20907,7 +20907,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Field holding the end of the range for dictionaries with `RANGE_HASHED` layout.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
@@ -20926,7 +20926,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Field holding the end of the range for dictionaries with `RANGE_HASHED` layout.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
@@ -20949,7 +20949,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Field holding the end of the range for dictionaries with `RANGE_HASHED` layout.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
@@ -20968,7 +20968,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Field holding the end of the range for dictionaries with `RANGE_HASHED` layout.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
@@ -20981,7 +20981,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Field holding the end of the range for dictionaries with `RANGE_HASHED` layout.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
@@ -20997,7 +20997,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Field holding the end of the range for dictionaries with `RANGE_HASHED` layout.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/#range-hashed).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute range_max = 5;</code>
@@ -21031,7 +21031,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Description of the fields available for database queries.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
            * </pre>
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -21046,7 +21046,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Description of the fields available for database queries.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
            * </pre>
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -21061,7 +21061,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Description of the fields available for database queries.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
            * </pre>
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -21076,7 +21076,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Description of the fields available for database queries.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
            * </pre>
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -21098,7 +21098,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Description of the fields available for database queries.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
            * </pre>
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -21117,7 +21117,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Description of the fields available for database queries.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
            * </pre>
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -21138,7 +21138,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Description of the fields available for database queries.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
            * </pre>
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -21160,7 +21160,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Description of the fields available for database queries.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
            * </pre>
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -21179,7 +21179,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Description of the fields available for database queries.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
            * </pre>
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -21198,7 +21198,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Description of the fields available for database queries.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
            * </pre>
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -21218,7 +21218,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Description of the fields available for database queries.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
            * </pre>
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -21236,7 +21236,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Description of the fields available for database queries.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
            * </pre>
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -21254,7 +21254,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Description of the fields available for database queries.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
            * </pre>
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -21266,7 +21266,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Description of the fields available for database queries.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
            * </pre>
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -21281,7 +21281,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Description of the fields available for database queries.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
            * </pre>
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -21297,7 +21297,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Description of the fields available for database queries.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
            * </pre>
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -21309,7 +21309,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Description of the fields available for database queries.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
            * </pre>
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -21322,7 +21322,7 @@ public final class Clickhouse {
           /**
            * <pre>
            * Description of the fields available for database queries.
-           * For details, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
+           * For details, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/#attributes).
            * </pre>
            *
            * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure.Attribute attributes = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -22953,7 +22953,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Set of attributes for the external dictionary.
-       * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/).
+       * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
@@ -22964,7 +22964,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Set of attributes for the external dictionary.
-       * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/).
+       * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
@@ -22975,7 +22975,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Set of attributes for the external dictionary.
-       * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/).
+       * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
@@ -22989,7 +22989,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Layout for storing the dictionary in memory.
-       * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/).
+       * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
@@ -23000,7 +23000,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Layout for storing the dictionary in memory.
-       * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/).
+       * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
@@ -23011,7 +23011,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Layout for storing the dictionary in memory.
-       * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/).
+       * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
@@ -23970,7 +23970,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Set of attributes for the external dictionary.
-         * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/).
+         * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
@@ -23981,7 +23981,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Set of attributes for the external dictionary.
-         * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/).
+         * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
@@ -23996,7 +23996,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Set of attributes for the external dictionary.
-         * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/).
+         * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
@@ -24017,7 +24017,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Set of attributes for the external dictionary.
-         * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/).
+         * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
@@ -24036,7 +24036,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Set of attributes for the external dictionary.
-         * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/).
+         * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
@@ -24059,7 +24059,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Set of attributes for the external dictionary.
-         * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/).
+         * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
@@ -24078,7 +24078,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Set of attributes for the external dictionary.
-         * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/).
+         * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
@@ -24091,7 +24091,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Set of attributes for the external dictionary.
-         * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/).
+         * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
@@ -24107,7 +24107,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Set of attributes for the external dictionary.
-         * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_structure/).
+         * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_structure/).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Structure structure = 2 [(.yandex.cloud.required) = true];</code>
@@ -24132,7 +24132,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Layout for storing the dictionary in memory.
-         * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/).
+         * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
@@ -24143,7 +24143,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Layout for storing the dictionary in memory.
-         * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/).
+         * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
@@ -24158,7 +24158,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Layout for storing the dictionary in memory.
-         * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/).
+         * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
@@ -24179,7 +24179,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Layout for storing the dictionary in memory.
-         * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/).
+         * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
@@ -24198,7 +24198,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Layout for storing the dictionary in memory.
-         * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/).
+         * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
@@ -24221,7 +24221,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Layout for storing the dictionary in memory.
-         * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/).
+         * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
@@ -24240,7 +24240,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Layout for storing the dictionary in memory.
-         * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/).
+         * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
@@ -24253,7 +24253,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Layout for storing the dictionary in memory.
-         * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/).
+         * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
@@ -24269,7 +24269,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * Layout for storing the dictionary in memory.
-         * For in-depth description, see [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts_dict_layout/).
+         * For in-depth description, see [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts_dict_layout/).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.Layout layout = 3 [(.yandex.cloud.required) = true];</code>
@@ -28348,7 +28348,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Settings for the MergeTree engine.
-     * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#merge_tree).
+     * See description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#merge_tree).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
@@ -28359,7 +28359,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Settings for the MergeTree engine.
-     * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#merge_tree).
+     * See description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#merge_tree).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
@@ -28370,7 +28370,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Settings for the MergeTree engine.
-     * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#merge_tree).
+     * See description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#merge_tree).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
@@ -28384,7 +28384,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Compression settings for the ClickHouse cluster.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -28395,7 +28395,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Compression settings for the ClickHouse cluster.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -28407,7 +28407,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Compression settings for the ClickHouse cluster.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -28418,7 +28418,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Compression settings for the ClickHouse cluster.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -28429,7 +28429,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Compression settings for the ClickHouse cluster.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -28444,7 +28444,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Configuration of external dictionaries to be used by the ClickHouse cluster.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -28455,7 +28455,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Configuration of external dictionaries to be used by the ClickHouse cluster.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -28467,7 +28467,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Configuration of external dictionaries to be used by the ClickHouse cluster.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -28478,7 +28478,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Configuration of external dictionaries to be used by the ClickHouse cluster.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -28489,7 +28489,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Configuration of external dictionaries to be used by the ClickHouse cluster.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -28504,7 +28504,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Settings for thinning Graphite data.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -28515,7 +28515,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Settings for thinning Graphite data.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -28527,7 +28527,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Settings for thinning Graphite data.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -28538,7 +28538,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Settings for thinning Graphite data.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -28549,7 +28549,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Settings for thinning Graphite data.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -30319,7 +30319,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * ClickHouse configuration options. Detailed description for each set of options
-     * is available in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/).
+     * is available in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/).
      * Any options not listed here are not supported.
      * </pre>
      *
@@ -31142,7 +31142,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for the MergeTree engine.
-       * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#merge_tree).
+       * See description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#merge_tree).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
@@ -31153,7 +31153,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for the MergeTree engine.
-       * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#merge_tree).
+       * See description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#merge_tree).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
@@ -31168,7 +31168,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for the MergeTree engine.
-       * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#merge_tree).
+       * See description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#merge_tree).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
@@ -31189,7 +31189,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for the MergeTree engine.
-       * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#merge_tree).
+       * See description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#merge_tree).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
@@ -31208,7 +31208,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for the MergeTree engine.
-       * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#merge_tree).
+       * See description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#merge_tree).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
@@ -31231,7 +31231,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for the MergeTree engine.
-       * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#merge_tree).
+       * See description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#merge_tree).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
@@ -31250,7 +31250,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for the MergeTree engine.
-       * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#merge_tree).
+       * See description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#merge_tree).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
@@ -31263,7 +31263,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for the MergeTree engine.
-       * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#merge_tree).
+       * See description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#merge_tree).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
@@ -31279,7 +31279,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for the MergeTree engine.
-       * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#merge_tree).
+       * See description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#merge_tree).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.MergeTree merge_tree = 2;</code>
@@ -31313,7 +31313,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Compression settings for the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -31328,7 +31328,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Compression settings for the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -31343,7 +31343,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Compression settings for the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -31358,7 +31358,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Compression settings for the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -31380,7 +31380,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Compression settings for the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -31399,7 +31399,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Compression settings for the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -31420,7 +31420,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Compression settings for the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -31442,7 +31442,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Compression settings for the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -31461,7 +31461,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Compression settings for the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -31480,7 +31480,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Compression settings for the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -31500,7 +31500,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Compression settings for the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -31518,7 +31518,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Compression settings for the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -31536,7 +31536,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Compression settings for the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -31548,7 +31548,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Compression settings for the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -31563,7 +31563,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Compression settings for the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -31579,7 +31579,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Compression settings for the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -31591,7 +31591,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Compression settings for the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -31604,7 +31604,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Compression settings for the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#compression).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#compression).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression compression = 3;</code>
@@ -31643,7 +31643,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Configuration of external dictionaries to be used by the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -31658,7 +31658,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Configuration of external dictionaries to be used by the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -31673,7 +31673,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Configuration of external dictionaries to be used by the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -31688,7 +31688,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Configuration of external dictionaries to be used by the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -31710,7 +31710,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Configuration of external dictionaries to be used by the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -31729,7 +31729,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Configuration of external dictionaries to be used by the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -31750,7 +31750,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Configuration of external dictionaries to be used by the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -31772,7 +31772,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Configuration of external dictionaries to be used by the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -31791,7 +31791,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Configuration of external dictionaries to be used by the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -31810,7 +31810,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Configuration of external dictionaries to be used by the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -31830,7 +31830,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Configuration of external dictionaries to be used by the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -31848,7 +31848,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Configuration of external dictionaries to be used by the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -31866,7 +31866,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Configuration of external dictionaries to be used by the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -31878,7 +31878,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Configuration of external dictionaries to be used by the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -31893,7 +31893,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Configuration of external dictionaries to be used by the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -31909,7 +31909,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Configuration of external dictionaries to be used by the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -31921,7 +31921,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Configuration of external dictionaries to be used by the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -31934,7 +31934,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Configuration of external dictionaries to be used by the ClickHouse cluster.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/query_language/dicts/external_dicts/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/query_language/dicts/external_dicts/).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary dictionaries = 4;</code>
@@ -31973,7 +31973,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for thinning Graphite data.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -31988,7 +31988,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for thinning Graphite data.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -32003,7 +32003,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for thinning Graphite data.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -32018,7 +32018,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for thinning Graphite data.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -32040,7 +32040,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for thinning Graphite data.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -32059,7 +32059,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for thinning Graphite data.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -32080,7 +32080,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for thinning Graphite data.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -32102,7 +32102,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for thinning Graphite data.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -32121,7 +32121,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for thinning Graphite data.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -32140,7 +32140,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for thinning Graphite data.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -32160,7 +32160,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for thinning Graphite data.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -32178,7 +32178,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for thinning Graphite data.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -32196,7 +32196,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for thinning Graphite data.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -32208,7 +32208,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for thinning Graphite data.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -32223,7 +32223,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for thinning Graphite data.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -32239,7 +32239,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for thinning Graphite data.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -32251,7 +32251,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for thinning Graphite data.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>
@@ -32264,7 +32264,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Settings for thinning Graphite data.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server_settings/settings/#server_settings-graphite_rollup).
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.GraphiteRollup graphite_rollup = 5;</code>

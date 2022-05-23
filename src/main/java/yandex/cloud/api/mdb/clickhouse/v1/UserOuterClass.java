@@ -4452,7 +4452,7 @@ public final class UserOuterClass {
      * * **0** (default)-no restrictions.
      * * **1**-only read data queries are allowed.
      * * **2**-read data and change settings queries are allowed.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -4464,7 +4464,7 @@ public final class UserOuterClass {
      * * **0** (default)-no restrictions.
      * * **1**-only read data queries are allowed.
      * * **2**-read data and change settings queries are allowed.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -4476,7 +4476,7 @@ public final class UserOuterClass {
      * * **0** (default)-no restrictions.
      * * **1**-only read data queries are allowed.
      * * **2**-read data and change settings queries are allowed.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -4487,7 +4487,7 @@ public final class UserOuterClass {
      * <pre>
      * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
      * Default value: **true**.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -4497,7 +4497,7 @@ public final class UserOuterClass {
      * <pre>
      * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
      * Default value: **true**.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -4507,7 +4507,7 @@ public final class UserOuterClass {
      * <pre>
      * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
      * Default value: **true**.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -4522,7 +4522,7 @@ public final class UserOuterClass {
      * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
      * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
      * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -4536,7 +4536,7 @@ public final class UserOuterClass {
      * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
      * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
      * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -4550,7 +4550,7 @@ public final class UserOuterClass {
      * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
      * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
      * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -4707,7 +4707,7 @@ public final class UserOuterClass {
      * <pre>
      * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
      * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -4717,7 +4717,7 @@ public final class UserOuterClass {
      * <pre>
      * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
      * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -4727,7 +4727,7 @@ public final class UserOuterClass {
      * <pre>
      * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
      * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -4740,7 +4740,7 @@ public final class UserOuterClass {
      * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
      * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
      * Default value: **true** (query forcing is enabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -4752,7 +4752,7 @@ public final class UserOuterClass {
      * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
      * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
      * Default value: **true** (query forcing is enabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -4764,7 +4764,7 @@ public final class UserOuterClass {
      * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
      * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
      * Default value: **true** (query forcing is enabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -4777,7 +4777,7 @@ public final class UserOuterClass {
      * * **0**-do not wait for replicas.
      * * **1**-only wait for own execution (default).
      * * **2**-wait for all replicas.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -4789,7 +4789,7 @@ public final class UserOuterClass {
      * * **0**-do not wait for replicas.
      * * **1**-only wait for own execution (default).
      * * **2**-wait for all replicas.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -4801,7 +4801,7 @@ public final class UserOuterClass {
      * * **0**-do not wait for replicas.
      * * **1**-only wait for own execution (default).
      * * **2**-wait for all replicas.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -4811,7 +4811,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determine the behavior of distributed subqueries.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#distributed-product-mode).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#distributed-product-mode).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
@@ -4820,7 +4820,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determine the behavior of distributed subqueries.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#distributed-product-mode).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#distributed-product-mode).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
@@ -4833,7 +4833,7 @@ public final class UserOuterClass {
      * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
      * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
      * Default value: **false** (memory saving mode is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -4845,7 +4845,7 @@ public final class UserOuterClass {
      * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
      * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
      * Default value: **false** (memory saving mode is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -4857,7 +4857,7 @@ public final class UserOuterClass {
      * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
      * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
      * Default value: **false** (memory saving mode is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -4894,7 +4894,7 @@ public final class UserOuterClass {
      * Enables or disables silent skipping of unavailable shards.
      * A shard is considered unavailable if all its replicas are also unavailable.
      * Default value: **false** (silent skipping is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -4905,7 +4905,7 @@ public final class UserOuterClass {
      * Enables or disables silent skipping of unavailable shards.
      * A shard is considered unavailable if all its replicas are also unavailable.
      * Default value: **false** (silent skipping is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -4916,7 +4916,7 @@ public final class UserOuterClass {
      * Enables or disables silent skipping of unavailable shards.
      * A shard is considered unavailable if all its replicas are also unavailable.
      * Default value: **false** (silent skipping is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -4930,7 +4930,7 @@ public final class UserOuterClass {
      * As a result, such queries may be executed faster due to use of queries' compiled parts.
      * Use this setting in combination with [min_count_to_compile] setting.
      * Default value: **false** (compilation is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -4943,7 +4943,7 @@ public final class UserOuterClass {
      * As a result, such queries may be executed faster due to use of queries' compiled parts.
      * Use this setting in combination with [min_count_to_compile] setting.
      * Default value: **false** (compilation is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -4956,7 +4956,7 @@ public final class UserOuterClass {
      * As a result, such queries may be executed faster due to use of queries' compiled parts.
      * Use this setting in combination with [min_count_to_compile] setting.
      * Default value: **false** (compilation is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -4971,7 +4971,7 @@ public final class UserOuterClass {
      * It is recommended to set this value only for testing purposes.
      * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
      * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -4985,7 +4985,7 @@ public final class UserOuterClass {
      * It is recommended to set this value only for testing purposes.
      * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
      * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -4999,7 +4999,7 @@ public final class UserOuterClass {
      * It is recommended to set this value only for testing purposes.
      * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
      * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5090,7 +5090,7 @@ public final class UserOuterClass {
      * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
      * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
      * Value must be greater than **0** (default: **65536**).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5103,7 +5103,7 @@ public final class UserOuterClass {
      * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
      * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
      * Value must be greater than **0** (default: **65536**).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5116,7 +5116,7 @@ public final class UserOuterClass {
      * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
      * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
      * Value must be greater than **0** (default: **65536**).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5190,7 +5190,7 @@ public final class UserOuterClass {
      * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
      * This setting has effect only if server is creating such blocks by itself.
      * Value must be greater than **0** (default: **1048576**).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_insert_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5201,7 +5201,7 @@ public final class UserOuterClass {
      * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
      * This setting has effect only if server is creating such blocks by itself.
      * Value must be greater than **0** (default: **1048576**).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_insert_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5212,7 +5212,7 @@ public final class UserOuterClass {
      * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
      * This setting has effect only if server is creating such blocks by itself.
      * Value must be greater than **0** (default: **1048576**).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_insert_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5266,7 +5266,7 @@ public final class UserOuterClass {
      * Enable this setting for the users who instantiates small queries frequently.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (uncompressed cache is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -5279,7 +5279,7 @@ public final class UserOuterClass {
      * Enable this setting for the users who instantiates small queries frequently.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (uncompressed cache is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -5292,7 +5292,7 @@ public final class UserOuterClass {
      * Enable this setting for the users who instantiates small queries frequently.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (uncompressed cache is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -5443,7 +5443,7 @@ public final class UserOuterClass {
      * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
      * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
      * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
      * See also: the [distributed_aggregation_memory_efficient] setting.
      * </pre>
      *
@@ -5458,7 +5458,7 @@ public final class UserOuterClass {
      * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
      * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
      * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
      * See also: the [distributed_aggregation_memory_efficient] setting.
      * </pre>
      *
@@ -5473,7 +5473,7 @@ public final class UserOuterClass {
      * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
      * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
      * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
      * See also: the [distributed_aggregation_memory_efficient] setting.
      * </pre>
      *
@@ -5610,7 +5610,7 @@ public final class UserOuterClass {
      * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
      * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
      * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_threads).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5621,7 +5621,7 @@ public final class UserOuterClass {
      * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
      * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
      * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_threads).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5632,7 +5632,7 @@ public final class UserOuterClass {
      * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
      * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
      * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_threads).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5647,7 +5647,7 @@ public final class UserOuterClass {
      * Minimal value: **0**, no limitation is set.
      * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
      * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5661,7 +5661,7 @@ public final class UserOuterClass {
      * Minimal value: **0**, no limitation is set.
      * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
      * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5675,7 +5675,7 @@ public final class UserOuterClass {
      * Minimal value: **0**, no limitation is set.
      * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
      * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5777,7 +5777,7 @@ public final class UserOuterClass {
      * If enabled, query is not executed if the ClickHouse can't use index by date.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-force_index_by_date).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -5788,7 +5788,7 @@ public final class UserOuterClass {
      * If enabled, query is not executed if the ClickHouse can't use index by date.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-force_index_by_date).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -5799,7 +5799,7 @@ public final class UserOuterClass {
      * If enabled, query is not executed if the ClickHouse can't use index by date.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-force_index_by_date).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -5811,7 +5811,7 @@ public final class UserOuterClass {
      * If enabled, query is not executed if the ClickHouse can't use index by primary key.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#force-primary-key).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -5822,7 +5822,7 @@ public final class UserOuterClass {
      * If enabled, query is not executed if the ClickHouse can't use index by primary key.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#force-primary-key).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -5833,7 +5833,7 @@ public final class UserOuterClass {
      * If enabled, query is not executed if the ClickHouse can't use index by primary key.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#force-primary-key).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -5844,7 +5844,7 @@ public final class UserOuterClass {
      * <pre>
      * Limits the maximum number of rows that can be read from a table when running a query.
      * Minimal value and default value: **0**, no limitation is set.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-rows-to-read).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5854,7 +5854,7 @@ public final class UserOuterClass {
      * <pre>
      * Limits the maximum number of rows that can be read from a table when running a query.
      * Minimal value and default value: **0**, no limitation is set.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-rows-to-read).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5864,7 +5864,7 @@ public final class UserOuterClass {
      * <pre>
      * Limits the maximum number of rows that can be read from a table when running a query.
      * Minimal value and default value: **0**, no limitation is set.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-rows-to-read).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5901,7 +5901,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -5911,7 +5911,7 @@ public final class UserOuterClass {
     int getReadOverflowModeValue();
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -5953,7 +5953,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * * **any**-perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don't add new keys to the set.
@@ -5964,7 +5964,7 @@ public final class UserOuterClass {
     int getGroupByOverflowModeValue();
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * * **any**-perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don't add new keys to the set.
@@ -6038,7 +6038,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -6048,7 +6048,7 @@ public final class UserOuterClass {
     int getSortOverflowModeValue();
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -6121,7 +6121,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -6131,7 +6131,7 @@ public final class UserOuterClass {
     int getResultOverflowModeValue();
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -6195,7 +6195,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -6205,7 +6205,7 @@ public final class UserOuterClass {
     int getDistinctOverflowModeValue();
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -6275,7 +6275,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -6285,7 +6285,7 @@ public final class UserOuterClass {
     int getTransferOverflowModeValue();
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -6327,7 +6327,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -6337,7 +6337,7 @@ public final class UserOuterClass {
     int getTimeoutOverflowModeValue();
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -6575,7 +6575,7 @@ public final class UserOuterClass {
      * <pre>
      * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
      * Value must be greater than **0** (default: **262144**).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_query_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -6585,7 +6585,7 @@ public final class UserOuterClass {
      * <pre>
      * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
      * Value must be greater than **0** (default: **262144**).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_query_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -6595,7 +6595,7 @@ public final class UserOuterClass {
      * <pre>
      * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
      * Value must be greater than **0** (default: **262144**).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_query_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -6611,7 +6611,7 @@ public final class UserOuterClass {
      * A user can be forced to construct more optimized queries, if this setting is used.
      * Value must be greater than **0** (default: **1000**).
      * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-depth).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -6626,7 +6626,7 @@ public final class UserOuterClass {
      * A user can be forced to construct more optimized queries, if this setting is used.
      * Value must be greater than **0** (default: **1000**).
      * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-depth).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -6641,7 +6641,7 @@ public final class UserOuterClass {
      * A user can be forced to construct more optimized queries, if this setting is used.
      * Value must be greater than **0** (default: **1000**).
      * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-depth).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -6655,7 +6655,7 @@ public final class UserOuterClass {
      * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
      * Value must be greater than **0** (default: **50000**).
      * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-elements).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -6668,7 +6668,7 @@ public final class UserOuterClass {
      * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
      * Value must be greater than **0** (default: **50000**).
      * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-elements).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -6681,7 +6681,7 @@ public final class UserOuterClass {
      * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
      * Value must be greater than **0** (default: **50000**).
      * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-elements).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -6798,9 +6798,9 @@ public final class UserOuterClass {
      * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
      * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
      * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
-     * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+     * This setting has effect only if you use [Values](https://clickhouse.com/docs/en/interfaces/formats/#data-format-values) format when inserting data.
      * Default value: **true** (SQL parser is enabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -6812,9 +6812,9 @@ public final class UserOuterClass {
      * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
      * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
      * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
-     * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+     * This setting has effect only if you use [Values](https://clickhouse.com/docs/en/interfaces/formats/#data-format-values) format when inserting data.
      * Default value: **true** (SQL parser is enabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -6826,9 +6826,9 @@ public final class UserOuterClass {
      * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
      * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
      * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
-     * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+     * This setting has effect only if you use [Values](https://clickhouse.com/docs/en/interfaces/formats/#data-format-values) format when inserting data.
      * Default value: **true** (SQL parser is enabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -7136,7 +7136,7 @@ public final class UserOuterClass {
      * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
      * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
      * Default value: **false** (compression is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/interfaces/http/).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -7150,7 +7150,7 @@ public final class UserOuterClass {
      * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
      * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
      * Default value: **false** (compression is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/interfaces/http/).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -7164,7 +7164,7 @@ public final class UserOuterClass {
      * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
      * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
      * Default value: **false** (compression is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/interfaces/http/).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -7275,7 +7275,7 @@ public final class UserOuterClass {
   /**
    * <pre>
    * ClickHouse user settings. Supported settings are a limited subset of all settings
-   * described in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/settings/).
+   * described in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.UserSettings}
@@ -9125,7 +9125,7 @@ public final class UserOuterClass {
      * * **0** (default)-no restrictions.
      * * **1**-only read data queries are allowed.
      * * **2**-read data and change settings queries are allowed.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -9139,7 +9139,7 @@ public final class UserOuterClass {
      * * **0** (default)-no restrictions.
      * * **1**-only read data queries are allowed.
      * * **2**-read data and change settings queries are allowed.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -9153,7 +9153,7 @@ public final class UserOuterClass {
      * * **0** (default)-no restrictions.
      * * **1**-only read data queries are allowed.
      * * **2**-read data and change settings queries are allowed.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -9168,7 +9168,7 @@ public final class UserOuterClass {
      * <pre>
      * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
      * Default value: **true**.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -9180,7 +9180,7 @@ public final class UserOuterClass {
      * <pre>
      * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
      * Default value: **true**.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -9192,7 +9192,7 @@ public final class UserOuterClass {
      * <pre>
      * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
      * Default value: **true**.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -9211,7 +9211,7 @@ public final class UserOuterClass {
      * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
      * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
      * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9227,7 +9227,7 @@ public final class UserOuterClass {
      * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
      * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
      * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9243,7 +9243,7 @@ public final class UserOuterClass {
      * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
      * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
      * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9444,7 +9444,7 @@ public final class UserOuterClass {
      * <pre>
      * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
      * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -9456,7 +9456,7 @@ public final class UserOuterClass {
      * <pre>
      * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
      * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -9468,7 +9468,7 @@ public final class UserOuterClass {
      * <pre>
      * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
      * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -9485,7 +9485,7 @@ public final class UserOuterClass {
      * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
      * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
      * Default value: **true** (query forcing is enabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -9499,7 +9499,7 @@ public final class UserOuterClass {
      * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
      * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
      * Default value: **true** (query forcing is enabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -9513,7 +9513,7 @@ public final class UserOuterClass {
      * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
      * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
      * Default value: **true** (query forcing is enabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -9530,7 +9530,7 @@ public final class UserOuterClass {
      * * **0**-do not wait for replicas.
      * * **1**-only wait for own execution (default).
      * * **2**-wait for all replicas.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -9544,7 +9544,7 @@ public final class UserOuterClass {
      * * **0**-do not wait for replicas.
      * * **1**-only wait for own execution (default).
      * * **2**-wait for all replicas.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -9558,7 +9558,7 @@ public final class UserOuterClass {
      * * **0**-do not wait for replicas.
      * * **1**-only wait for own execution (default).
      * * **2**-wait for all replicas.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -9572,7 +9572,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determine the behavior of distributed subqueries.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#distributed-product-mode).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#distributed-product-mode).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
@@ -9583,7 +9583,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determine the behavior of distributed subqueries.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#distributed-product-mode).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#distributed-product-mode).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
@@ -9602,7 +9602,7 @@ public final class UserOuterClass {
      * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
      * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
      * Default value: **false** (memory saving mode is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -9616,7 +9616,7 @@ public final class UserOuterClass {
      * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
      * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
      * Default value: **false** (memory saving mode is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -9630,7 +9630,7 @@ public final class UserOuterClass {
      * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
      * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
      * Default value: **false** (memory saving mode is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -9679,7 +9679,7 @@ public final class UserOuterClass {
      * Enables or disables silent skipping of unavailable shards.
      * A shard is considered unavailable if all its replicas are also unavailable.
      * Default value: **false** (silent skipping is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -9692,7 +9692,7 @@ public final class UserOuterClass {
      * Enables or disables silent skipping of unavailable shards.
      * A shard is considered unavailable if all its replicas are also unavailable.
      * Default value: **false** (silent skipping is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -9705,7 +9705,7 @@ public final class UserOuterClass {
      * Enables or disables silent skipping of unavailable shards.
      * A shard is considered unavailable if all its replicas are also unavailable.
      * Default value: **false** (silent skipping is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -9723,7 +9723,7 @@ public final class UserOuterClass {
      * As a result, such queries may be executed faster due to use of queries' compiled parts.
      * Use this setting in combination with [min_count_to_compile] setting.
      * Default value: **false** (compilation is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -9738,7 +9738,7 @@ public final class UserOuterClass {
      * As a result, such queries may be executed faster due to use of queries' compiled parts.
      * Use this setting in combination with [min_count_to_compile] setting.
      * Default value: **false** (compilation is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -9753,7 +9753,7 @@ public final class UserOuterClass {
      * As a result, such queries may be executed faster due to use of queries' compiled parts.
      * Use this setting in combination with [min_count_to_compile] setting.
      * Default value: **false** (compilation is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -9772,7 +9772,7 @@ public final class UserOuterClass {
      * It is recommended to set this value only for testing purposes.
      * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
      * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9788,7 +9788,7 @@ public final class UserOuterClass {
      * It is recommended to set this value only for testing purposes.
      * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
      * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9804,7 +9804,7 @@ public final class UserOuterClass {
      * It is recommended to set this value only for testing purposes.
      * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
      * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9915,7 +9915,7 @@ public final class UserOuterClass {
      * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
      * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
      * Value must be greater than **0** (default: **65536**).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -9930,7 +9930,7 @@ public final class UserOuterClass {
      * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
      * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
      * Value must be greater than **0** (default: **65536**).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -9945,7 +9945,7 @@ public final class UserOuterClass {
      * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
      * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
      * Value must be greater than **0** (default: **65536**).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -10039,7 +10039,7 @@ public final class UserOuterClass {
      * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
      * This setting has effect only if server is creating such blocks by itself.
      * Value must be greater than **0** (default: **1048576**).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_insert_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -10052,7 +10052,7 @@ public final class UserOuterClass {
      * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
      * This setting has effect only if server is creating such blocks by itself.
      * Value must be greater than **0** (default: **1048576**).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_insert_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -10065,7 +10065,7 @@ public final class UserOuterClass {
      * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
      * This setting has effect only if server is creating such blocks by itself.
      * Value must be greater than **0** (default: **1048576**).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_insert_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -10131,7 +10131,7 @@ public final class UserOuterClass {
      * Enable this setting for the users who instantiates small queries frequently.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (uncompressed cache is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -10146,7 +10146,7 @@ public final class UserOuterClass {
      * Enable this setting for the users who instantiates small queries frequently.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (uncompressed cache is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -10161,7 +10161,7 @@ public final class UserOuterClass {
      * Enable this setting for the users who instantiates small queries frequently.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (uncompressed cache is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -10348,7 +10348,7 @@ public final class UserOuterClass {
      * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
      * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
      * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
      * See also: the [distributed_aggregation_memory_efficient] setting.
      * </pre>
      *
@@ -10365,7 +10365,7 @@ public final class UserOuterClass {
      * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
      * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
      * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
      * See also: the [distributed_aggregation_memory_efficient] setting.
      * </pre>
      *
@@ -10382,7 +10382,7 @@ public final class UserOuterClass {
      * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
      * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
      * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
      * See also: the [distributed_aggregation_memory_efficient] setting.
      * </pre>
      *
@@ -10555,7 +10555,7 @@ public final class UserOuterClass {
      * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
      * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
      * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_threads).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -10568,7 +10568,7 @@ public final class UserOuterClass {
      * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
      * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
      * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_threads).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -10581,7 +10581,7 @@ public final class UserOuterClass {
      * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
      * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
      * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_threads).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -10600,7 +10600,7 @@ public final class UserOuterClass {
      * Minimal value: **0**, no limitation is set.
      * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
      * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -10616,7 +10616,7 @@ public final class UserOuterClass {
      * Minimal value: **0**, no limitation is set.
      * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
      * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -10632,7 +10632,7 @@ public final class UserOuterClass {
      * Minimal value: **0**, no limitation is set.
      * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
      * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -10762,7 +10762,7 @@ public final class UserOuterClass {
      * If enabled, query is not executed if the ClickHouse can't use index by date.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-force_index_by_date).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -10775,7 +10775,7 @@ public final class UserOuterClass {
      * If enabled, query is not executed if the ClickHouse can't use index by date.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-force_index_by_date).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -10788,7 +10788,7 @@ public final class UserOuterClass {
      * If enabled, query is not executed if the ClickHouse can't use index by date.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-force_index_by_date).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -10804,7 +10804,7 @@ public final class UserOuterClass {
      * If enabled, query is not executed if the ClickHouse can't use index by primary key.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#force-primary-key).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -10817,7 +10817,7 @@ public final class UserOuterClass {
      * If enabled, query is not executed if the ClickHouse can't use index by primary key.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#force-primary-key).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -10830,7 +10830,7 @@ public final class UserOuterClass {
      * If enabled, query is not executed if the ClickHouse can't use index by primary key.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#force-primary-key).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -10845,7 +10845,7 @@ public final class UserOuterClass {
      * <pre>
      * Limits the maximum number of rows that can be read from a table when running a query.
      * Minimal value and default value: **0**, no limitation is set.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-rows-to-read).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -10857,7 +10857,7 @@ public final class UserOuterClass {
      * <pre>
      * Limits the maximum number of rows that can be read from a table when running a query.
      * Minimal value and default value: **0**, no limitation is set.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-rows-to-read).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -10869,7 +10869,7 @@ public final class UserOuterClass {
      * <pre>
      * Limits the maximum number of rows that can be read from a table when running a query.
      * Minimal value and default value: **0**, no limitation is set.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-rows-to-read).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -10918,7 +10918,7 @@ public final class UserOuterClass {
     private int readOverflowMode_;
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -10930,7 +10930,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -10986,7 +10986,7 @@ public final class UserOuterClass {
     private int groupByOverflowMode_;
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * * **any**-perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don't add new keys to the set.
@@ -10999,7 +10999,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * * **any**-perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don't add new keys to the set.
@@ -11095,7 +11095,7 @@ public final class UserOuterClass {
     private int sortOverflowMode_;
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -11107,7 +11107,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -11202,7 +11202,7 @@ public final class UserOuterClass {
     private int resultOverflowMode_;
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -11214,7 +11214,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -11300,7 +11300,7 @@ public final class UserOuterClass {
     private int distinctOverflowMode_;
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -11312,7 +11312,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -11404,7 +11404,7 @@ public final class UserOuterClass {
     private int transferOverflowMode_;
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -11416,7 +11416,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -11472,7 +11472,7 @@ public final class UserOuterClass {
     private int timeoutOverflowMode_;
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -11484,7 +11484,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
+     * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
      * * **throw**-abort query execution, return an error.
      * * **break**-stop query execution, return partial result.
      * </pre>
@@ -11800,7 +11800,7 @@ public final class UserOuterClass {
      * <pre>
      * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
      * Value must be greater than **0** (default: **262144**).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_query_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -11812,7 +11812,7 @@ public final class UserOuterClass {
      * <pre>
      * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
      * Value must be greater than **0** (default: **262144**).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_query_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -11824,7 +11824,7 @@ public final class UserOuterClass {
      * <pre>
      * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
      * Value must be greater than **0** (default: **262144**).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_query_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -11844,7 +11844,7 @@ public final class UserOuterClass {
      * A user can be forced to construct more optimized queries, if this setting is used.
      * Value must be greater than **0** (default: **1000**).
      * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-depth).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -11861,7 +11861,7 @@ public final class UserOuterClass {
      * A user can be forced to construct more optimized queries, if this setting is used.
      * Value must be greater than **0** (default: **1000**).
      * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-depth).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -11878,7 +11878,7 @@ public final class UserOuterClass {
      * A user can be forced to construct more optimized queries, if this setting is used.
      * Value must be greater than **0** (default: **1000**).
      * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-depth).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -11896,7 +11896,7 @@ public final class UserOuterClass {
      * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
      * Value must be greater than **0** (default: **50000**).
      * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-elements).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -11911,7 +11911,7 @@ public final class UserOuterClass {
      * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
      * Value must be greater than **0** (default: **50000**).
      * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-elements).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -11926,7 +11926,7 @@ public final class UserOuterClass {
      * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
      * Value must be greater than **0** (default: **50000**).
      * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-elements).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -12079,9 +12079,9 @@ public final class UserOuterClass {
      * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
      * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
      * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
-     * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+     * This setting has effect only if you use [Values](https://clickhouse.com/docs/en/interfaces/formats/#data-format-values) format when inserting data.
      * Default value: **true** (SQL parser is enabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -12095,9 +12095,9 @@ public final class UserOuterClass {
      * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
      * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
      * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
-     * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+     * This setting has effect only if you use [Values](https://clickhouse.com/docs/en/interfaces/formats/#data-format-values) format when inserting data.
      * Default value: **true** (SQL parser is enabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -12111,9 +12111,9 @@ public final class UserOuterClass {
      * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
      * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
      * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
-     * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+     * This setting has effect only if you use [Values](https://clickhouse.com/docs/en/interfaces/formats/#data-format-values) format when inserting data.
      * Default value: **true** (SQL parser is enabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -12513,7 +12513,7 @@ public final class UserOuterClass {
      * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
      * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
      * Default value: **false** (compression is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/interfaces/http/).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -12529,7 +12529,7 @@ public final class UserOuterClass {
      * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
      * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
      * Default value: **false** (compression is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/interfaces/http/).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -12545,7 +12545,7 @@ public final class UserOuterClass {
      * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
      * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
      * Default value: **false** (compression is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/interfaces/http/).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -14251,7 +14251,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * ClickHouse user settings. Supported settings are a limited subset of all settings
-     * described in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/settings/).
+     * described in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.UserSettings}
@@ -15609,7 +15609,7 @@ public final class UserOuterClass {
        * * **0** (default)-no restrictions.
        * * **1**-only read data queries are allowed.
        * * **2**-read data and change settings queries are allowed.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -15623,7 +15623,7 @@ public final class UserOuterClass {
        * * **0** (default)-no restrictions.
        * * **1**-only read data queries are allowed.
        * * **2**-read data and change settings queries are allowed.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -15641,7 +15641,7 @@ public final class UserOuterClass {
        * * **0** (default)-no restrictions.
        * * **1**-only read data queries are allowed.
        * * **2**-read data and change settings queries are allowed.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -15665,7 +15665,7 @@ public final class UserOuterClass {
        * * **0** (default)-no restrictions.
        * * **1**-only read data queries are allowed.
        * * **2**-read data and change settings queries are allowed.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -15687,7 +15687,7 @@ public final class UserOuterClass {
        * * **0** (default)-no restrictions.
        * * **1**-only read data queries are allowed.
        * * **2**-read data and change settings queries are allowed.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -15713,7 +15713,7 @@ public final class UserOuterClass {
        * * **0** (default)-no restrictions.
        * * **1**-only read data queries are allowed.
        * * **2**-read data and change settings queries are allowed.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -15735,7 +15735,7 @@ public final class UserOuterClass {
        * * **0** (default)-no restrictions.
        * * **1**-only read data queries are allowed.
        * * **2**-read data and change settings queries are allowed.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -15751,7 +15751,7 @@ public final class UserOuterClass {
        * * **0** (default)-no restrictions.
        * * **1**-only read data queries are allowed.
        * * **2**-read data and change settings queries are allowed.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -15770,7 +15770,7 @@ public final class UserOuterClass {
        * * **0** (default)-no restrictions.
        * * **1**-only read data queries are allowed.
        * * **2**-read data and change settings queries are allowed.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -15796,7 +15796,7 @@ public final class UserOuterClass {
        * <pre>
        * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
        * Default value: **true**.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -15808,7 +15808,7 @@ public final class UserOuterClass {
        * <pre>
        * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
        * Default value: **true**.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -15824,7 +15824,7 @@ public final class UserOuterClass {
        * <pre>
        * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
        * Default value: **true**.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -15846,7 +15846,7 @@ public final class UserOuterClass {
        * <pre>
        * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
        * Default value: **true**.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -15866,7 +15866,7 @@ public final class UserOuterClass {
        * <pre>
        * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
        * Default value: **true**.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -15890,7 +15890,7 @@ public final class UserOuterClass {
        * <pre>
        * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
        * Default value: **true**.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -15910,7 +15910,7 @@ public final class UserOuterClass {
        * <pre>
        * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
        * Default value: **true**.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -15924,7 +15924,7 @@ public final class UserOuterClass {
        * <pre>
        * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
        * Default value: **true**.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -15941,7 +15941,7 @@ public final class UserOuterClass {
        * <pre>
        * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
        * Default value: **true**.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -15971,7 +15971,7 @@ public final class UserOuterClass {
        * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
        * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
        * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -15987,7 +15987,7 @@ public final class UserOuterClass {
        * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
        * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
        * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16007,7 +16007,7 @@ public final class UserOuterClass {
        * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
        * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
        * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16033,7 +16033,7 @@ public final class UserOuterClass {
        * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
        * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
        * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16057,7 +16057,7 @@ public final class UserOuterClass {
        * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
        * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
        * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16085,7 +16085,7 @@ public final class UserOuterClass {
        * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
        * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
        * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16109,7 +16109,7 @@ public final class UserOuterClass {
        * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
        * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
        * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16127,7 +16127,7 @@ public final class UserOuterClass {
        * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
        * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
        * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16148,7 +16148,7 @@ public final class UserOuterClass {
        * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
        * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
        * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -17002,7 +17002,7 @@ public final class UserOuterClass {
        * <pre>
        * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
        * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -17014,7 +17014,7 @@ public final class UserOuterClass {
        * <pre>
        * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
        * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -17030,7 +17030,7 @@ public final class UserOuterClass {
        * <pre>
        * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
        * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -17052,7 +17052,7 @@ public final class UserOuterClass {
        * <pre>
        * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
        * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -17072,7 +17072,7 @@ public final class UserOuterClass {
        * <pre>
        * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
        * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -17096,7 +17096,7 @@ public final class UserOuterClass {
        * <pre>
        * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
        * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -17116,7 +17116,7 @@ public final class UserOuterClass {
        * <pre>
        * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
        * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -17130,7 +17130,7 @@ public final class UserOuterClass {
        * <pre>
        * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
        * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -17147,7 +17147,7 @@ public final class UserOuterClass {
        * <pre>
        * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
        * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -17175,7 +17175,7 @@ public final class UserOuterClass {
        * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
        * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
        * Default value: **true** (query forcing is enabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -17189,7 +17189,7 @@ public final class UserOuterClass {
        * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
        * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
        * Default value: **true** (query forcing is enabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -17207,7 +17207,7 @@ public final class UserOuterClass {
        * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
        * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
        * Default value: **true** (query forcing is enabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -17231,7 +17231,7 @@ public final class UserOuterClass {
        * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
        * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
        * Default value: **true** (query forcing is enabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -17253,7 +17253,7 @@ public final class UserOuterClass {
        * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
        * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
        * Default value: **true** (query forcing is enabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -17279,7 +17279,7 @@ public final class UserOuterClass {
        * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
        * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
        * Default value: **true** (query forcing is enabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -17301,7 +17301,7 @@ public final class UserOuterClass {
        * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
        * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
        * Default value: **true** (query forcing is enabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -17317,7 +17317,7 @@ public final class UserOuterClass {
        * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
        * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
        * Default value: **true** (query forcing is enabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -17336,7 +17336,7 @@ public final class UserOuterClass {
        * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
        * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
        * Default value: **true** (query forcing is enabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -17364,7 +17364,7 @@ public final class UserOuterClass {
        * * **0**-do not wait for replicas.
        * * **1**-only wait for own execution (default).
        * * **2**-wait for all replicas.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -17378,7 +17378,7 @@ public final class UserOuterClass {
        * * **0**-do not wait for replicas.
        * * **1**-only wait for own execution (default).
        * * **2**-wait for all replicas.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -17396,7 +17396,7 @@ public final class UserOuterClass {
        * * **0**-do not wait for replicas.
        * * **1**-only wait for own execution (default).
        * * **2**-wait for all replicas.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -17420,7 +17420,7 @@ public final class UserOuterClass {
        * * **0**-do not wait for replicas.
        * * **1**-only wait for own execution (default).
        * * **2**-wait for all replicas.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -17442,7 +17442,7 @@ public final class UserOuterClass {
        * * **0**-do not wait for replicas.
        * * **1**-only wait for own execution (default).
        * * **2**-wait for all replicas.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -17468,7 +17468,7 @@ public final class UserOuterClass {
        * * **0**-do not wait for replicas.
        * * **1**-only wait for own execution (default).
        * * **2**-wait for all replicas.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -17490,7 +17490,7 @@ public final class UserOuterClass {
        * * **0**-do not wait for replicas.
        * * **1**-only wait for own execution (default).
        * * **2**-wait for all replicas.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -17506,7 +17506,7 @@ public final class UserOuterClass {
        * * **0**-do not wait for replicas.
        * * **1**-only wait for own execution (default).
        * * **2**-wait for all replicas.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -17525,7 +17525,7 @@ public final class UserOuterClass {
        * * **0**-do not wait for replicas.
        * * **1**-only wait for own execution (default).
        * * **2**-wait for all replicas.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -17548,7 +17548,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determine the behavior of distributed subqueries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#distributed-product-mode).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#distributed-product-mode).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
@@ -17559,7 +17559,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determine the behavior of distributed subqueries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#distributed-product-mode).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#distributed-product-mode).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
@@ -17572,7 +17572,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determine the behavior of distributed subqueries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#distributed-product-mode).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#distributed-product-mode).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
@@ -17585,7 +17585,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determine the behavior of distributed subqueries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#distributed-product-mode).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#distributed-product-mode).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
@@ -17602,7 +17602,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determine the behavior of distributed subqueries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#distributed-product-mode).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#distributed-product-mode).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
@@ -17623,7 +17623,7 @@ public final class UserOuterClass {
        * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
        * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
        * Default value: **false** (memory saving mode is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -17637,7 +17637,7 @@ public final class UserOuterClass {
        * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
        * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
        * Default value: **false** (memory saving mode is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -17655,7 +17655,7 @@ public final class UserOuterClass {
        * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
        * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
        * Default value: **false** (memory saving mode is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -17679,7 +17679,7 @@ public final class UserOuterClass {
        * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
        * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
        * Default value: **false** (memory saving mode is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -17701,7 +17701,7 @@ public final class UserOuterClass {
        * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
        * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
        * Default value: **false** (memory saving mode is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -17727,7 +17727,7 @@ public final class UserOuterClass {
        * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
        * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
        * Default value: **false** (memory saving mode is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -17749,7 +17749,7 @@ public final class UserOuterClass {
        * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
        * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
        * Default value: **false** (memory saving mode is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -17765,7 +17765,7 @@ public final class UserOuterClass {
        * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
        * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
        * Default value: **false** (memory saving mode is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -17784,7 +17784,7 @@ public final class UserOuterClass {
        * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
        * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
        * Default value: **false** (memory saving mode is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -17964,7 +17964,7 @@ public final class UserOuterClass {
        * Enables or disables silent skipping of unavailable shards.
        * A shard is considered unavailable if all its replicas are also unavailable.
        * Default value: **false** (silent skipping is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -17977,7 +17977,7 @@ public final class UserOuterClass {
        * Enables or disables silent skipping of unavailable shards.
        * A shard is considered unavailable if all its replicas are also unavailable.
        * Default value: **false** (silent skipping is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -17994,7 +17994,7 @@ public final class UserOuterClass {
        * Enables or disables silent skipping of unavailable shards.
        * A shard is considered unavailable if all its replicas are also unavailable.
        * Default value: **false** (silent skipping is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -18017,7 +18017,7 @@ public final class UserOuterClass {
        * Enables or disables silent skipping of unavailable shards.
        * A shard is considered unavailable if all its replicas are also unavailable.
        * Default value: **false** (silent skipping is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -18038,7 +18038,7 @@ public final class UserOuterClass {
        * Enables or disables silent skipping of unavailable shards.
        * A shard is considered unavailable if all its replicas are also unavailable.
        * Default value: **false** (silent skipping is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -18063,7 +18063,7 @@ public final class UserOuterClass {
        * Enables or disables silent skipping of unavailable shards.
        * A shard is considered unavailable if all its replicas are also unavailable.
        * Default value: **false** (silent skipping is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -18084,7 +18084,7 @@ public final class UserOuterClass {
        * Enables or disables silent skipping of unavailable shards.
        * A shard is considered unavailable if all its replicas are also unavailable.
        * Default value: **false** (silent skipping is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -18099,7 +18099,7 @@ public final class UserOuterClass {
        * Enables or disables silent skipping of unavailable shards.
        * A shard is considered unavailable if all its replicas are also unavailable.
        * Default value: **false** (silent skipping is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -18117,7 +18117,7 @@ public final class UserOuterClass {
        * Enables or disables silent skipping of unavailable shards.
        * A shard is considered unavailable if all its replicas are also unavailable.
        * Default value: **false** (silent skipping is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -18146,7 +18146,7 @@ public final class UserOuterClass {
        * As a result, such queries may be executed faster due to use of queries' compiled parts.
        * Use this setting in combination with [min_count_to_compile] setting.
        * Default value: **false** (compilation is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -18161,7 +18161,7 @@ public final class UserOuterClass {
        * As a result, such queries may be executed faster due to use of queries' compiled parts.
        * Use this setting in combination with [min_count_to_compile] setting.
        * Default value: **false** (compilation is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -18180,7 +18180,7 @@ public final class UserOuterClass {
        * As a result, such queries may be executed faster due to use of queries' compiled parts.
        * Use this setting in combination with [min_count_to_compile] setting.
        * Default value: **false** (compilation is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -18205,7 +18205,7 @@ public final class UserOuterClass {
        * As a result, such queries may be executed faster due to use of queries' compiled parts.
        * Use this setting in combination with [min_count_to_compile] setting.
        * Default value: **false** (compilation is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -18228,7 +18228,7 @@ public final class UserOuterClass {
        * As a result, such queries may be executed faster due to use of queries' compiled parts.
        * Use this setting in combination with [min_count_to_compile] setting.
        * Default value: **false** (compilation is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -18255,7 +18255,7 @@ public final class UserOuterClass {
        * As a result, such queries may be executed faster due to use of queries' compiled parts.
        * Use this setting in combination with [min_count_to_compile] setting.
        * Default value: **false** (compilation is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -18278,7 +18278,7 @@ public final class UserOuterClass {
        * As a result, such queries may be executed faster due to use of queries' compiled parts.
        * Use this setting in combination with [min_count_to_compile] setting.
        * Default value: **false** (compilation is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -18295,7 +18295,7 @@ public final class UserOuterClass {
        * As a result, such queries may be executed faster due to use of queries' compiled parts.
        * Use this setting in combination with [min_count_to_compile] setting.
        * Default value: **false** (compilation is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -18315,7 +18315,7 @@ public final class UserOuterClass {
        * As a result, such queries may be executed faster due to use of queries' compiled parts.
        * Use this setting in combination with [min_count_to_compile] setting.
        * Default value: **false** (compilation is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -18345,7 +18345,7 @@ public final class UserOuterClass {
        * It is recommended to set this value only for testing purposes.
        * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
        * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18361,7 +18361,7 @@ public final class UserOuterClass {
        * It is recommended to set this value only for testing purposes.
        * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
        * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18381,7 +18381,7 @@ public final class UserOuterClass {
        * It is recommended to set this value only for testing purposes.
        * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
        * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18407,7 +18407,7 @@ public final class UserOuterClass {
        * It is recommended to set this value only for testing purposes.
        * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
        * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18431,7 +18431,7 @@ public final class UserOuterClass {
        * It is recommended to set this value only for testing purposes.
        * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
        * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18459,7 +18459,7 @@ public final class UserOuterClass {
        * It is recommended to set this value only for testing purposes.
        * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
        * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18483,7 +18483,7 @@ public final class UserOuterClass {
        * It is recommended to set this value only for testing purposes.
        * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
        * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18501,7 +18501,7 @@ public final class UserOuterClass {
        * It is recommended to set this value only for testing purposes.
        * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
        * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18522,7 +18522,7 @@ public final class UserOuterClass {
        * It is recommended to set this value only for testing purposes.
        * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
        * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18938,7 +18938,7 @@ public final class UserOuterClass {
        * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
        * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
        * Value must be greater than **0** (default: **65536**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -18953,7 +18953,7 @@ public final class UserOuterClass {
        * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
        * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
        * Value must be greater than **0** (default: **65536**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -18972,7 +18972,7 @@ public final class UserOuterClass {
        * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
        * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
        * Value must be greater than **0** (default: **65536**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -18997,7 +18997,7 @@ public final class UserOuterClass {
        * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
        * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
        * Value must be greater than **0** (default: **65536**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -19020,7 +19020,7 @@ public final class UserOuterClass {
        * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
        * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
        * Value must be greater than **0** (default: **65536**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -19047,7 +19047,7 @@ public final class UserOuterClass {
        * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
        * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
        * Value must be greater than **0** (default: **65536**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -19070,7 +19070,7 @@ public final class UserOuterClass {
        * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
        * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
        * Value must be greater than **0** (default: **65536**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -19087,7 +19087,7 @@ public final class UserOuterClass {
        * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
        * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
        * Value must be greater than **0** (default: **65536**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -19107,7 +19107,7 @@ public final class UserOuterClass {
        * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
        * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
        * Value must be greater than **0** (default: **65536**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -19476,7 +19476,7 @@ public final class UserOuterClass {
        * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
        * This setting has effect only if server is creating such blocks by itself.
        * Value must be greater than **0** (default: **1048576**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_insert_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -19489,7 +19489,7 @@ public final class UserOuterClass {
        * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
        * This setting has effect only if server is creating such blocks by itself.
        * Value must be greater than **0** (default: **1048576**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_insert_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -19506,7 +19506,7 @@ public final class UserOuterClass {
        * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
        * This setting has effect only if server is creating such blocks by itself.
        * Value must be greater than **0** (default: **1048576**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_insert_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -19529,7 +19529,7 @@ public final class UserOuterClass {
        * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
        * This setting has effect only if server is creating such blocks by itself.
        * Value must be greater than **0** (default: **1048576**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_insert_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -19550,7 +19550,7 @@ public final class UserOuterClass {
        * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
        * This setting has effect only if server is creating such blocks by itself.
        * Value must be greater than **0** (default: **1048576**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_insert_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -19575,7 +19575,7 @@ public final class UserOuterClass {
        * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
        * This setting has effect only if server is creating such blocks by itself.
        * Value must be greater than **0** (default: **1048576**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_insert_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -19596,7 +19596,7 @@ public final class UserOuterClass {
        * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
        * This setting has effect only if server is creating such blocks by itself.
        * Value must be greater than **0** (default: **1048576**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_insert_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -19611,7 +19611,7 @@ public final class UserOuterClass {
        * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
        * This setting has effect only if server is creating such blocks by itself.
        * Value must be greater than **0** (default: **1048576**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_insert_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -19629,7 +19629,7 @@ public final class UserOuterClass {
        * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
        * This setting has effect only if server is creating such blocks by itself.
        * Value must be greater than **0** (default: **1048576**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_insert_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -19856,7 +19856,7 @@ public final class UserOuterClass {
        * Enable this setting for the users who instantiates small queries frequently.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (uncompressed cache is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -19871,7 +19871,7 @@ public final class UserOuterClass {
        * Enable this setting for the users who instantiates small queries frequently.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (uncompressed cache is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -19890,7 +19890,7 @@ public final class UserOuterClass {
        * Enable this setting for the users who instantiates small queries frequently.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (uncompressed cache is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -19915,7 +19915,7 @@ public final class UserOuterClass {
        * Enable this setting for the users who instantiates small queries frequently.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (uncompressed cache is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -19938,7 +19938,7 @@ public final class UserOuterClass {
        * Enable this setting for the users who instantiates small queries frequently.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (uncompressed cache is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -19965,7 +19965,7 @@ public final class UserOuterClass {
        * Enable this setting for the users who instantiates small queries frequently.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (uncompressed cache is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -19988,7 +19988,7 @@ public final class UserOuterClass {
        * Enable this setting for the users who instantiates small queries frequently.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (uncompressed cache is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -20005,7 +20005,7 @@ public final class UserOuterClass {
        * Enable this setting for the users who instantiates small queries frequently.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (uncompressed cache is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -20025,7 +20025,7 @@ public final class UserOuterClass {
        * Enable this setting for the users who instantiates small queries frequently.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (uncompressed cache is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -20775,7 +20775,7 @@ public final class UserOuterClass {
        * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
        * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
        * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * See also: the [distributed_aggregation_memory_efficient] setting.
        * </pre>
        *
@@ -20792,7 +20792,7 @@ public final class UserOuterClass {
        * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
        * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
        * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * See also: the [distributed_aggregation_memory_efficient] setting.
        * </pre>
        *
@@ -20813,7 +20813,7 @@ public final class UserOuterClass {
        * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
        * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
        * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * See also: the [distributed_aggregation_memory_efficient] setting.
        * </pre>
        *
@@ -20840,7 +20840,7 @@ public final class UserOuterClass {
        * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
        * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
        * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * See also: the [distributed_aggregation_memory_efficient] setting.
        * </pre>
        *
@@ -20865,7 +20865,7 @@ public final class UserOuterClass {
        * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
        * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
        * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * See also: the [distributed_aggregation_memory_efficient] setting.
        * </pre>
        *
@@ -20894,7 +20894,7 @@ public final class UserOuterClass {
        * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
        * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
        * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * See also: the [distributed_aggregation_memory_efficient] setting.
        * </pre>
        *
@@ -20919,7 +20919,7 @@ public final class UserOuterClass {
        * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
        * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
        * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * See also: the [distributed_aggregation_memory_efficient] setting.
        * </pre>
        *
@@ -20938,7 +20938,7 @@ public final class UserOuterClass {
        * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
        * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
        * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * See also: the [distributed_aggregation_memory_efficient] setting.
        * </pre>
        *
@@ -20960,7 +20960,7 @@ public final class UserOuterClass {
        * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
        * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
        * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * See also: the [distributed_aggregation_memory_efficient] setting.
        * </pre>
        *
@@ -21672,7 +21672,7 @@ public final class UserOuterClass {
        * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
        * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
        * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -21685,7 +21685,7 @@ public final class UserOuterClass {
        * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
        * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
        * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -21702,7 +21702,7 @@ public final class UserOuterClass {
        * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
        * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
        * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -21725,7 +21725,7 @@ public final class UserOuterClass {
        * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
        * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
        * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -21746,7 +21746,7 @@ public final class UserOuterClass {
        * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
        * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
        * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -21771,7 +21771,7 @@ public final class UserOuterClass {
        * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
        * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
        * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -21792,7 +21792,7 @@ public final class UserOuterClass {
        * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
        * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
        * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -21807,7 +21807,7 @@ public final class UserOuterClass {
        * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
        * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
        * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -21825,7 +21825,7 @@ public final class UserOuterClass {
        * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
        * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
        * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -21855,7 +21855,7 @@ public final class UserOuterClass {
        * Minimal value: **0**, no limitation is set.
        * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
        * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21871,7 +21871,7 @@ public final class UserOuterClass {
        * Minimal value: **0**, no limitation is set.
        * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
        * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21891,7 +21891,7 @@ public final class UserOuterClass {
        * Minimal value: **0**, no limitation is set.
        * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
        * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21917,7 +21917,7 @@ public final class UserOuterClass {
        * Minimal value: **0**, no limitation is set.
        * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
        * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21941,7 +21941,7 @@ public final class UserOuterClass {
        * Minimal value: **0**, no limitation is set.
        * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
        * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21969,7 +21969,7 @@ public final class UserOuterClass {
        * Minimal value: **0**, no limitation is set.
        * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
        * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21993,7 +21993,7 @@ public final class UserOuterClass {
        * Minimal value: **0**, no limitation is set.
        * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
        * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -22011,7 +22011,7 @@ public final class UserOuterClass {
        * Minimal value: **0**, no limitation is set.
        * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
        * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -22032,7 +22032,7 @@ public final class UserOuterClass {
        * Minimal value: **0**, no limitation is set.
        * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
        * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -22563,7 +22563,7 @@ public final class UserOuterClass {
        * If enabled, query is not executed if the ClickHouse can't use index by date.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-force_index_by_date).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -22576,7 +22576,7 @@ public final class UserOuterClass {
        * If enabled, query is not executed if the ClickHouse can't use index by date.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-force_index_by_date).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -22593,7 +22593,7 @@ public final class UserOuterClass {
        * If enabled, query is not executed if the ClickHouse can't use index by date.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-force_index_by_date).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -22616,7 +22616,7 @@ public final class UserOuterClass {
        * If enabled, query is not executed if the ClickHouse can't use index by date.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-force_index_by_date).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -22637,7 +22637,7 @@ public final class UserOuterClass {
        * If enabled, query is not executed if the ClickHouse can't use index by date.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-force_index_by_date).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -22662,7 +22662,7 @@ public final class UserOuterClass {
        * If enabled, query is not executed if the ClickHouse can't use index by date.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-force_index_by_date).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -22683,7 +22683,7 @@ public final class UserOuterClass {
        * If enabled, query is not executed if the ClickHouse can't use index by date.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-force_index_by_date).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -22698,7 +22698,7 @@ public final class UserOuterClass {
        * If enabled, query is not executed if the ClickHouse can't use index by date.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-force_index_by_date).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -22716,7 +22716,7 @@ public final class UserOuterClass {
        * If enabled, query is not executed if the ClickHouse can't use index by date.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-force_index_by_date).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -22743,7 +22743,7 @@ public final class UserOuterClass {
        * If enabled, query is not executed if the ClickHouse can't use index by primary key.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#force-primary-key).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -22756,7 +22756,7 @@ public final class UserOuterClass {
        * If enabled, query is not executed if the ClickHouse can't use index by primary key.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#force-primary-key).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -22773,7 +22773,7 @@ public final class UserOuterClass {
        * If enabled, query is not executed if the ClickHouse can't use index by primary key.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#force-primary-key).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -22796,7 +22796,7 @@ public final class UserOuterClass {
        * If enabled, query is not executed if the ClickHouse can't use index by primary key.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#force-primary-key).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -22817,7 +22817,7 @@ public final class UserOuterClass {
        * If enabled, query is not executed if the ClickHouse can't use index by primary key.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#force-primary-key).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -22842,7 +22842,7 @@ public final class UserOuterClass {
        * If enabled, query is not executed if the ClickHouse can't use index by primary key.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#force-primary-key).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -22863,7 +22863,7 @@ public final class UserOuterClass {
        * If enabled, query is not executed if the ClickHouse can't use index by primary key.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#force-primary-key).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -22878,7 +22878,7 @@ public final class UserOuterClass {
        * If enabled, query is not executed if the ClickHouse can't use index by primary key.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#force-primary-key).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -22896,7 +22896,7 @@ public final class UserOuterClass {
        * If enabled, query is not executed if the ClickHouse can't use index by primary key.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#force-primary-key).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -22922,7 +22922,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the maximum number of rows that can be read from a table when running a query.
        * Minimal value and default value: **0**, no limitation is set.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-rows-to-read).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -22934,7 +22934,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the maximum number of rows that can be read from a table when running a query.
        * Minimal value and default value: **0**, no limitation is set.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-rows-to-read).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -22950,7 +22950,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the maximum number of rows that can be read from a table when running a query.
        * Minimal value and default value: **0**, no limitation is set.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-rows-to-read).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -22972,7 +22972,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the maximum number of rows that can be read from a table when running a query.
        * Minimal value and default value: **0**, no limitation is set.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-rows-to-read).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -22992,7 +22992,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the maximum number of rows that can be read from a table when running a query.
        * Minimal value and default value: **0**, no limitation is set.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-rows-to-read).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -23016,7 +23016,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the maximum number of rows that can be read from a table when running a query.
        * Minimal value and default value: **0**, no limitation is set.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-rows-to-read).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -23036,7 +23036,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the maximum number of rows that can be read from a table when running a query.
        * Minimal value and default value: **0**, no limitation is set.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-rows-to-read).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -23050,7 +23050,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the maximum number of rows that can be read from a table when running a query.
        * Minimal value and default value: **0**, no limitation is set.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-rows-to-read).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -23067,7 +23067,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the maximum number of rows that can be read from a table when running a query.
        * Minimal value and default value: **0**, no limitation is set.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-rows-to-read).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -23251,7 +23251,7 @@ public final class UserOuterClass {
       private int readOverflowMode_ = 0;
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -23263,7 +23263,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -23277,7 +23277,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -23291,7 +23291,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -23309,7 +23309,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -23497,7 +23497,7 @@ public final class UserOuterClass {
       private int groupByOverflowMode_ = 0;
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * * **any**-perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don't add new keys to the set.
@@ -23510,7 +23510,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * * **any**-perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don't add new keys to the set.
@@ -23525,7 +23525,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * * **any**-perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don't add new keys to the set.
@@ -23540,7 +23540,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * * **any**-perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don't add new keys to the set.
@@ -23559,7 +23559,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * * **any**-perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don't add new keys to the set.
@@ -23919,7 +23919,7 @@ public final class UserOuterClass {
       private int sortOverflowMode_ = 0;
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -23931,7 +23931,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -23945,7 +23945,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -23959,7 +23959,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -23977,7 +23977,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -24336,7 +24336,7 @@ public final class UserOuterClass {
       private int resultOverflowMode_ = 0;
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -24348,7 +24348,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -24362,7 +24362,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -24376,7 +24376,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -24394,7 +24394,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -24726,7 +24726,7 @@ public final class UserOuterClass {
       private int distinctOverflowMode_ = 0;
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -24738,7 +24738,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -24752,7 +24752,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -24766,7 +24766,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -24784,7 +24784,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -25134,7 +25134,7 @@ public final class UserOuterClass {
       private int transferOverflowMode_ = 0;
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -25146,7 +25146,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -25160,7 +25160,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -25174,7 +25174,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -25192,7 +25192,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -25380,7 +25380,7 @@ public final class UserOuterClass {
       private int timeoutOverflowMode_ = 0;
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -25392,7 +25392,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -25406,7 +25406,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -25420,7 +25420,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -25438,7 +25438,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
+       * Determines the behavior on exceeding [limits](https://clickhouse.com/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
        * * **throw**-abort query execution, return an error.
        * * **break**-stop query execution, return partial result.
        * </pre>
@@ -26706,7 +26706,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
        * Value must be greater than **0** (default: **262144**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_query_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -26718,7 +26718,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
        * Value must be greater than **0** (default: **262144**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_query_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -26734,7 +26734,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
        * Value must be greater than **0** (default: **262144**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_query_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -26756,7 +26756,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
        * Value must be greater than **0** (default: **262144**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_query_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -26776,7 +26776,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
        * Value must be greater than **0** (default: **262144**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_query_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -26800,7 +26800,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
        * Value must be greater than **0** (default: **262144**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_query_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -26820,7 +26820,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
        * Value must be greater than **0** (default: **262144**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_query_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -26834,7 +26834,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
        * Value must be greater than **0** (default: **262144**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_query_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -26851,7 +26851,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
        * Value must be greater than **0** (default: **262144**).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-max_query_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -26882,7 +26882,7 @@ public final class UserOuterClass {
        * A user can be forced to construct more optimized queries, if this setting is used.
        * Value must be greater than **0** (default: **1000**).
        * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-depth).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -26899,7 +26899,7 @@ public final class UserOuterClass {
        * A user can be forced to construct more optimized queries, if this setting is used.
        * Value must be greater than **0** (default: **1000**).
        * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-depth).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -26920,7 +26920,7 @@ public final class UserOuterClass {
        * A user can be forced to construct more optimized queries, if this setting is used.
        * Value must be greater than **0** (default: **1000**).
        * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-depth).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -26947,7 +26947,7 @@ public final class UserOuterClass {
        * A user can be forced to construct more optimized queries, if this setting is used.
        * Value must be greater than **0** (default: **1000**).
        * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-depth).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -26972,7 +26972,7 @@ public final class UserOuterClass {
        * A user can be forced to construct more optimized queries, if this setting is used.
        * Value must be greater than **0** (default: **1000**).
        * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-depth).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -27001,7 +27001,7 @@ public final class UserOuterClass {
        * A user can be forced to construct more optimized queries, if this setting is used.
        * Value must be greater than **0** (default: **1000**).
        * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-depth).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -27026,7 +27026,7 @@ public final class UserOuterClass {
        * A user can be forced to construct more optimized queries, if this setting is used.
        * Value must be greater than **0** (default: **1000**).
        * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-depth).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -27045,7 +27045,7 @@ public final class UserOuterClass {
        * A user can be forced to construct more optimized queries, if this setting is used.
        * Value must be greater than **0** (default: **1000**).
        * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-depth).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -27067,7 +27067,7 @@ public final class UserOuterClass {
        * A user can be forced to construct more optimized queries, if this setting is used.
        * Value must be greater than **0** (default: **1000**).
        * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-depth).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -27096,7 +27096,7 @@ public final class UserOuterClass {
        * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
        * Value must be greater than **0** (default: **50000**).
        * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-elements).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -27111,7 +27111,7 @@ public final class UserOuterClass {
        * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
        * Value must be greater than **0** (default: **50000**).
        * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-elements).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -27130,7 +27130,7 @@ public final class UserOuterClass {
        * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
        * Value must be greater than **0** (default: **50000**).
        * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-elements).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -27155,7 +27155,7 @@ public final class UserOuterClass {
        * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
        * Value must be greater than **0** (default: **50000**).
        * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-elements).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -27178,7 +27178,7 @@ public final class UserOuterClass {
        * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
        * Value must be greater than **0** (default: **50000**).
        * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-elements).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -27205,7 +27205,7 @@ public final class UserOuterClass {
        * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
        * Value must be greater than **0** (default: **50000**).
        * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-elements).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -27228,7 +27228,7 @@ public final class UserOuterClass {
        * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
        * Value must be greater than **0** (default: **50000**).
        * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-elements).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -27245,7 +27245,7 @@ public final class UserOuterClass {
        * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
        * Value must be greater than **0** (default: **50000**).
        * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-elements).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -27265,7 +27265,7 @@ public final class UserOuterClass {
        * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
        * Value must be greater than **0** (default: **50000**).
        * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity/#max-ast-elements).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -27853,9 +27853,9 @@ public final class UserOuterClass {
        * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
        * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
        * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
-       * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+       * This setting has effect only if you use [Values](https://clickhouse.com/docs/en/interfaces/formats/#data-format-values) format when inserting data.
        * Default value: **true** (SQL parser is enabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -27869,9 +27869,9 @@ public final class UserOuterClass {
        * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
        * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
        * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
-       * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+       * This setting has effect only if you use [Values](https://clickhouse.com/docs/en/interfaces/formats/#data-format-values) format when inserting data.
        * Default value: **true** (SQL parser is enabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -27889,9 +27889,9 @@ public final class UserOuterClass {
        * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
        * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
        * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
-       * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+       * This setting has effect only if you use [Values](https://clickhouse.com/docs/en/interfaces/formats/#data-format-values) format when inserting data.
        * Default value: **true** (SQL parser is enabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -27915,9 +27915,9 @@ public final class UserOuterClass {
        * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
        * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
        * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
-       * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+       * This setting has effect only if you use [Values](https://clickhouse.com/docs/en/interfaces/formats/#data-format-values) format when inserting data.
        * Default value: **true** (SQL parser is enabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -27939,9 +27939,9 @@ public final class UserOuterClass {
        * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
        * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
        * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
-       * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+       * This setting has effect only if you use [Values](https://clickhouse.com/docs/en/interfaces/formats/#data-format-values) format when inserting data.
        * Default value: **true** (SQL parser is enabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -27967,9 +27967,9 @@ public final class UserOuterClass {
        * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
        * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
        * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
-       * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+       * This setting has effect only if you use [Values](https://clickhouse.com/docs/en/interfaces/formats/#data-format-values) format when inserting data.
        * Default value: **true** (SQL parser is enabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -27991,9 +27991,9 @@ public final class UserOuterClass {
        * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
        * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
        * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
-       * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+       * This setting has effect only if you use [Values](https://clickhouse.com/docs/en/interfaces/formats/#data-format-values) format when inserting data.
        * Default value: **true** (SQL parser is enabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -28009,9 +28009,9 @@ public final class UserOuterClass {
        * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
        * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
        * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
-       * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+       * This setting has effect only if you use [Values](https://clickhouse.com/docs/en/interfaces/formats/#data-format-values) format when inserting data.
        * Default value: **true** (SQL parser is enabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -28030,9 +28030,9 @@ public final class UserOuterClass {
        * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
        * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
        * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
-       * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+       * This setting has effect only if you use [Values](https://clickhouse.com/docs/en/interfaces/formats/#data-format-values) format when inserting data.
        * Default value: **true** (SQL parser is enabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -29799,7 +29799,7 @@ public final class UserOuterClass {
        * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
        * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
        * Default value: **false** (compression is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/interfaces/http/).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -29815,7 +29815,7 @@ public final class UserOuterClass {
        * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
        * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
        * Default value: **false** (compression is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/interfaces/http/).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -29835,7 +29835,7 @@ public final class UserOuterClass {
        * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
        * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
        * Default value: **false** (compression is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/interfaces/http/).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -29861,7 +29861,7 @@ public final class UserOuterClass {
        * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
        * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
        * Default value: **false** (compression is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/interfaces/http/).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -29885,7 +29885,7 @@ public final class UserOuterClass {
        * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
        * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
        * Default value: **false** (compression is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/interfaces/http/).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -29913,7 +29913,7 @@ public final class UserOuterClass {
        * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
        * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
        * Default value: **false** (compression is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/interfaces/http/).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -29937,7 +29937,7 @@ public final class UserOuterClass {
        * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
        * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
        * Default value: **false** (compression is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/interfaces/http/).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -29955,7 +29955,7 @@ public final class UserOuterClass {
        * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
        * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
        * Default value: **false** (compression is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/interfaces/http/).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -29976,7 +29976,7 @@ public final class UserOuterClass {
        * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
        * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
        * Default value: **false** (compression is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/interfaces/http/).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -30773,7 +30773,7 @@ public final class UserOuterClass {
   /**
    * <pre>
    * ClickHouse quota representation. Each quota associated with an user and limits it resource usage for an interval.
-   * See in-depth description [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/quotas/).
+   * See in-depth description [ClickHouse documentation](https://clickhouse.com/docs/en/operations/quotas/).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.UserQuota}
@@ -31384,7 +31384,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * ClickHouse quota representation. Each quota associated with an user and limits it resource usage for an interval.
-     * See in-depth description [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/quotas/).
+     * See in-depth description [ClickHouse documentation](https://clickhouse.com/docs/en/operations/quotas/).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.UserQuota}
