@@ -2687,6 +2687,45 @@ public final class LogReadingServiceOuterClass {
 
     /**
      * <pre>
+     * List of stream names to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
+     * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     */
+    java.util.List<java.lang.String>
+        getStreamNamesList();
+    /**
+     * <pre>
+     * List of stream names to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
+     * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     */
+    int getStreamNamesCount();
+    /**
+     * <pre>
+     * List of stream names to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
+     * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     */
+    java.lang.String getStreamNames(int index);
+    /**
+     * <pre>
+     * List of stream names to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
+     * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     */
+    com.google.protobuf.ByteString
+        getStreamNamesBytes(int index);
+
+    /**
+     * <pre>
      * The maximum number of results per page to return.
      * </pre>
      *
@@ -2726,6 +2765,7 @@ public final class LogReadingServiceOuterClass {
       resourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       levels_ = java.util.Collections.emptyList();
       filter_ = "";
+      streamNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       pageSize_ = 0L;
       maxResponseSize_ = 0L;
     }
@@ -2843,6 +2883,15 @@ public final class LogReadingServiceOuterClass {
               maxResponseSize_ = input.readInt64();
               break;
             }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+                streamNames_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000080;
+              }
+              streamNames_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2866,6 +2915,9 @@ public final class LogReadingServiceOuterClass {
         }
         if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
           levels_ = java.util.Collections.unmodifiableList(levels_);
+        }
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+          streamNames_ = streamNames_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -3206,6 +3258,55 @@ public final class LogReadingServiceOuterClass {
       }
     }
 
+    public static final int STREAM_NAMES_FIELD_NUMBER = 10;
+    private com.google.protobuf.LazyStringList streamNames_;
+    /**
+     * <pre>
+     * List of stream names to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
+     * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getStreamNamesList() {
+      return streamNames_;
+    }
+    /**
+     * <pre>
+     * List of stream names to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
+     * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     */
+    public int getStreamNamesCount() {
+      return streamNames_.size();
+    }
+    /**
+     * <pre>
+     * List of stream names to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
+     * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     */
+    public java.lang.String getStreamNames(int index) {
+      return streamNames_.get(index);
+    }
+    /**
+     * <pre>
+     * List of stream names to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
+     * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getStreamNamesBytes(int index) {
+      return streamNames_.getByteString(index);
+    }
+
     public static final int PAGE_SIZE_FIELD_NUMBER = 8;
     private long pageSize_;
     /**
@@ -3279,6 +3380,9 @@ public final class LogReadingServiceOuterClass {
       if (maxResponseSize_ != 0L) {
         output.writeInt64(9, maxResponseSize_);
       }
+      for (int i = 0; i < streamNames_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, streamNames_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3338,6 +3442,14 @@ public final class LogReadingServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(9, maxResponseSize_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < streamNames_.size(); i++) {
+          dataSize += computeStringSizeNoTag(streamNames_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getStreamNamesList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3373,6 +3485,8 @@ public final class LogReadingServiceOuterClass {
       result = result && levels_.equals(other.levels_);
       result = result && getFilter()
           .equals(other.getFilter());
+      result = result && getStreamNamesList()
+          .equals(other.getStreamNamesList());
       result = result && (getPageSize()
           == other.getPageSize());
       result = result && (getMaxResponseSize()
@@ -3412,6 +3526,10 @@ public final class LogReadingServiceOuterClass {
       }
       hash = (37 * hash) + FILTER_FIELD_NUMBER;
       hash = (53 * hash) + getFilter().hashCode();
+      if (getStreamNamesCount() > 0) {
+        hash = (37 * hash) + STREAM_NAMES_FIELD_NUMBER;
+        hash = (53 * hash) + getStreamNamesList().hashCode();
+      }
       hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getPageSize());
@@ -3577,6 +3695,8 @@ public final class LogReadingServiceOuterClass {
         bitField0_ = (bitField0_ & ~0x00000020);
         filter_ = "";
 
+        streamNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000080);
         pageSize_ = 0L;
 
         maxResponseSize_ = 0L;
@@ -3636,6 +3756,11 @@ public final class LogReadingServiceOuterClass {
         }
         result.levels_ = levels_;
         result.filter_ = filter_;
+        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          streamNames_ = streamNames_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000080);
+        }
+        result.streamNames_ = streamNames_;
         result.pageSize_ = pageSize_;
         result.maxResponseSize_ = maxResponseSize_;
         result.bitField0_ = to_bitField0_;
@@ -3729,6 +3854,16 @@ public final class LogReadingServiceOuterClass {
         }
         if (!other.getFilter().isEmpty()) {
           filter_ = other.filter_;
+          onChanged();
+        }
+        if (!other.streamNames_.isEmpty()) {
+          if (streamNames_.isEmpty()) {
+            streamNames_ = other.streamNames_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+          } else {
+            ensureStreamNamesIsMutable();
+            streamNames_.addAll(other.streamNames_);
+          }
           onChanged();
         }
         if (other.getPageSize() != 0L) {
@@ -4712,6 +4847,145 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
 
+      private com.google.protobuf.LazyStringList streamNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureStreamNamesIsMutable() {
+        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+          streamNames_ = new com.google.protobuf.LazyStringArrayList(streamNames_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+      /**
+       * <pre>
+       * List of stream names to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
+       * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getStreamNamesList() {
+        return streamNames_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of stream names to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
+       * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       */
+      public int getStreamNamesCount() {
+        return streamNames_.size();
+      }
+      /**
+       * <pre>
+       * List of stream names to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
+       * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       */
+      public java.lang.String getStreamNames(int index) {
+        return streamNames_.get(index);
+      }
+      /**
+       * <pre>
+       * List of stream names to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
+       * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getStreamNamesBytes(int index) {
+        return streamNames_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of stream names to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
+       * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       */
+      public Builder setStreamNames(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureStreamNamesIsMutable();
+        streamNames_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of stream names to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
+       * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       */
+      public Builder addStreamNames(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureStreamNamesIsMutable();
+        streamNames_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of stream names to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
+       * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       */
+      public Builder addAllStreamNames(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureStreamNamesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, streamNames_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of stream names to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
+       * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       */
+      public Builder clearStreamNames() {
+        streamNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of stream names to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
+       * <code>repeated string stream_names = 10 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       */
+      public Builder addStreamNamesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureStreamNamesIsMutable();
+        streamNames_.add(value);
+        onChanged();
+        return this;
+      }
+
       private long pageSize_ ;
       /**
        * <pre>
@@ -4877,7 +5151,7 @@ public final class LogReadingServiceOuterClass {
       "ector\"\216\001\n\014ReadResponse\022\024\n\014log_group_id\030\001" +
       " \001(\t\0222\n\007entries\030\002 \003(\0132!.yandex.cloud.log" +
       "ging.v1.LogEntry\022\027\n\017next_page_token\030\003 \001(" +
-      "\t\022\033\n\023previous_page_token\030\004 \001(\t\"\266\003\n\010Crite" +
+      "\t\022\033\n\023previous_page_token\030\004 \001(\t\"\370\003\n\010Crite" +
       "ria\022\"\n\014log_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022" +
       "B\n\016resource_types\030\002 \003(\tB*\362\3071\035|[a-zA-Z][-" +
       "a-zA-Z0-9_.]{0,63}\202\3101\005<=100\022C\n\014resource_" +
@@ -4886,15 +5160,16 @@ public final class LogReadingServiceOuterClass {
       ".protobuf.Timestamp\022)\n\005until\030\005 \001(\0132\032.goo" +
       "gle.protobuf.Timestamp\022A\n\006levels\030\006 \003(\0162\'" +
       ".yandex.cloud.logging.v1.LogLevel.LevelB" +
-      "\010\202\3101\004<=10\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=1000\022\035\n" +
-      "\tpage_size\030\010 \001(\003B\n\372\3071\0061-1000\022)\n\021max_resp" +
-      "onse_size\030\t \001(\003B\016\372\3071\n0-104857602h\n\021LogRe" +
-      "adingService\022S\n\004Read\022$.yandex.cloud.logg" +
-      "ing.v1.ReadRequest\032%.yandex.cloud.loggin" +
-      "g.v1.ReadResponseBb\n\033yandex.cloud.api.lo" +
-      "gging.v1ZCgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/logging/v1;loggingb\006p" +
-      "roto3"
+      "\010\202\3101\004<=10\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=1000\022@\n" +
+      "\014stream_names\030\n \003(\tB*\362\3071\035|[a-zA-Z][-a-zA" +
+      "-Z0-9_.]{0,63}\202\3101\005<=100\022\035\n\tpage_size\030\010 \001" +
+      "(\003B\n\372\3071\0061-1000\022)\n\021max_response_size\030\t \001(" +
+      "\003B\016\372\3071\n0-104857602h\n\021LogReadingService\022S" +
+      "\n\004Read\022$.yandex.cloud.logging.v1.ReadReq" +
+      "uest\032%.yandex.cloud.logging.v1.ReadRespo" +
+      "nseBb\n\033yandex.cloud.api.logging.v1ZCgith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/logging/v1;loggingb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4928,7 +5203,7 @@ public final class LogReadingServiceOuterClass {
     internal_static_yandex_cloud_logging_v1_Criteria_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_Criteria_descriptor,
-        new java.lang.String[] { "LogGroupId", "ResourceTypes", "ResourceIds", "Since", "Until", "Levels", "Filter", "PageSize", "MaxResponseSize", });
+        new java.lang.String[] { "LogGroupId", "ResourceTypes", "ResourceIds", "Since", "Until", "Levels", "Filter", "StreamNames", "PageSize", "MaxResponseSize", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

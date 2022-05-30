@@ -73,6 +73,41 @@ public final class ResourcePresetOuterClass {
 
     /**
      * <pre>
+     * IDs of availability disk types available in the resource preset.
+     * </pre>
+     *
+     * <code>repeated string disk_type_ids = 10;</code>
+     */
+    java.util.List<java.lang.String>
+        getDiskTypeIdsList();
+    /**
+     * <pre>
+     * IDs of availability disk types available in the resource preset.
+     * </pre>
+     *
+     * <code>repeated string disk_type_ids = 10;</code>
+     */
+    int getDiskTypeIdsCount();
+    /**
+     * <pre>
+     * IDs of availability disk types available in the resource preset.
+     * </pre>
+     *
+     * <code>repeated string disk_type_ids = 10;</code>
+     */
+    java.lang.String getDiskTypeIds(int index);
+    /**
+     * <pre>
+     * IDs of availability disk types available in the resource preset.
+     * </pre>
+     *
+     * <code>repeated string disk_type_ids = 10;</code>
+     */
+    com.google.protobuf.ByteString
+        getDiskTypeIdsBytes(int index);
+
+    /**
+     * <pre>
      * Number of CPU cores for a Greenplum host created with the preset.
      * </pre>
      *
@@ -143,6 +178,7 @@ public final class ResourcePresetOuterClass {
     private ResourcePreset() {
       id_ = "";
       zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      diskTypeIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       cores_ = 0L;
       memory_ = 0L;
       type_ = 0;
@@ -215,6 +251,15 @@ public final class ResourcePresetOuterClass {
               maxSegmentInHostCount_ = input.readInt64();
               break;
             }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                diskTypeIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              diskTypeIds_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -232,6 +277,9 @@ public final class ResourcePresetOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
           zoneIds_ = zoneIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          diskTypeIds_ = diskTypeIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -461,6 +509,51 @@ public final class ResourcePresetOuterClass {
       return zoneIds_.getByteString(index);
     }
 
+    public static final int DISK_TYPE_IDS_FIELD_NUMBER = 10;
+    private com.google.protobuf.LazyStringList diskTypeIds_;
+    /**
+     * <pre>
+     * IDs of availability disk types available in the resource preset.
+     * </pre>
+     *
+     * <code>repeated string disk_type_ids = 10;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getDiskTypeIdsList() {
+      return diskTypeIds_;
+    }
+    /**
+     * <pre>
+     * IDs of availability disk types available in the resource preset.
+     * </pre>
+     *
+     * <code>repeated string disk_type_ids = 10;</code>
+     */
+    public int getDiskTypeIdsCount() {
+      return diskTypeIds_.size();
+    }
+    /**
+     * <pre>
+     * IDs of availability disk types available in the resource preset.
+     * </pre>
+     *
+     * <code>repeated string disk_type_ids = 10;</code>
+     */
+    public java.lang.String getDiskTypeIds(int index) {
+      return diskTypeIds_.get(index);
+    }
+    /**
+     * <pre>
+     * IDs of availability disk types available in the resource preset.
+     * </pre>
+     *
+     * <code>repeated string disk_type_ids = 10;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDiskTypeIdsBytes(int index) {
+      return diskTypeIds_.getByteString(index);
+    }
+
     public static final int CORES_FIELD_NUMBER = 3;
     private long cores_;
     /**
@@ -573,6 +666,9 @@ public final class ResourcePresetOuterClass {
       if (maxSegmentInHostCount_ != 0L) {
         output.writeInt64(9, maxSegmentInHostCount_);
       }
+      for (int i = 0; i < diskTypeIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, diskTypeIds_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -613,6 +709,14 @@ public final class ResourcePresetOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(9, maxSegmentInHostCount_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < diskTypeIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(diskTypeIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getDiskTypeIdsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -633,6 +737,8 @@ public final class ResourcePresetOuterClass {
           .equals(other.getId());
       result = result && getZoneIdsList()
           .equals(other.getZoneIdsList());
+      result = result && getDiskTypeIdsList()
+          .equals(other.getDiskTypeIdsList());
       result = result && (getCores()
           == other.getCores());
       result = result && (getMemory()
@@ -658,6 +764,10 @@ public final class ResourcePresetOuterClass {
       if (getZoneIdsCount() > 0) {
         hash = (37 * hash) + ZONE_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getZoneIdsList().hashCode();
+      }
+      if (getDiskTypeIdsCount() > 0) {
+        hash = (37 * hash) + DISK_TYPE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getDiskTypeIdsList().hashCode();
       }
       hash = (37 * hash) + CORES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -814,6 +924,8 @@ public final class ResourcePresetOuterClass {
 
         zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
+        diskTypeIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
         cores_ = 0L;
 
         memory_ = 0L;
@@ -858,6 +970,11 @@ public final class ResourcePresetOuterClass {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.zoneIds_ = zoneIds_;
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          diskTypeIds_ = diskTypeIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.diskTypeIds_ = diskTypeIds_;
         result.cores_ = cores_;
         result.memory_ = memory_;
         result.type_ = type_;
@@ -923,6 +1040,16 @@ public final class ResourcePresetOuterClass {
           } else {
             ensureZoneIdsIsMutable();
             zoneIds_.addAll(other.zoneIds_);
+          }
+          onChanged();
+        }
+        if (!other.diskTypeIds_.isEmpty()) {
+          if (diskTypeIds_.isEmpty()) {
+            diskTypeIds_ = other.diskTypeIds_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureDiskTypeIdsIsMutable();
+            diskTypeIds_.addAll(other.diskTypeIds_);
           }
           onChanged();
         }
@@ -1186,6 +1313,136 @@ public final class ResourcePresetOuterClass {
   checkByteStringIsUtf8(value);
         ensureZoneIdsIsMutable();
         zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList diskTypeIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureDiskTypeIdsIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          diskTypeIds_ = new com.google.protobuf.LazyStringArrayList(diskTypeIds_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <pre>
+       * IDs of availability disk types available in the resource preset.
+       * </pre>
+       *
+       * <code>repeated string disk_type_ids = 10;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getDiskTypeIdsList() {
+        return diskTypeIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * IDs of availability disk types available in the resource preset.
+       * </pre>
+       *
+       * <code>repeated string disk_type_ids = 10;</code>
+       */
+      public int getDiskTypeIdsCount() {
+        return diskTypeIds_.size();
+      }
+      /**
+       * <pre>
+       * IDs of availability disk types available in the resource preset.
+       * </pre>
+       *
+       * <code>repeated string disk_type_ids = 10;</code>
+       */
+      public java.lang.String getDiskTypeIds(int index) {
+        return diskTypeIds_.get(index);
+      }
+      /**
+       * <pre>
+       * IDs of availability disk types available in the resource preset.
+       * </pre>
+       *
+       * <code>repeated string disk_type_ids = 10;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDiskTypeIdsBytes(int index) {
+        return diskTypeIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * IDs of availability disk types available in the resource preset.
+       * </pre>
+       *
+       * <code>repeated string disk_type_ids = 10;</code>
+       */
+      public Builder setDiskTypeIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDiskTypeIdsIsMutable();
+        diskTypeIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of availability disk types available in the resource preset.
+       * </pre>
+       *
+       * <code>repeated string disk_type_ids = 10;</code>
+       */
+      public Builder addDiskTypeIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDiskTypeIdsIsMutable();
+        diskTypeIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of availability disk types available in the resource preset.
+       * </pre>
+       *
+       * <code>repeated string disk_type_ids = 10;</code>
+       */
+      public Builder addAllDiskTypeIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureDiskTypeIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, diskTypeIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of availability disk types available in the resource preset.
+       * </pre>
+       *
+       * <code>repeated string disk_type_ids = 10;</code>
+       */
+      public Builder clearDiskTypeIds() {
+        diskTypeIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of availability disk types available in the resource preset.
+       * </pre>
+       *
+       * <code>repeated string disk_type_ids = 10;</code>
+       */
+      public Builder addDiskTypeIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureDiskTypeIdsIsMutable();
+        diskTypeIds_.add(value);
         onChanged();
         return this;
       }
@@ -1475,16 +1732,17 @@ public final class ResourcePresetOuterClass {
     java.lang.String[] descriptorData = {
       "\n3yandex/cloud/mdb/greenplum/v1/resource" +
       "_preset.proto\022\035yandex.cloud.mdb.greenplu" +
-      "m.v1\"\205\002\n\016ResourcePreset\022\n\n\002id\030\001 \001(\t\022\020\n\010z" +
-      "one_ids\030\002 \003(\t\022\r\n\005cores\030\003 \001(\003\022\016\n\006memory\030\004" +
-      " \001(\003\022@\n\004type\030\005 \001(\01622.yandex.cloud.mdb.gr" +
-      "eenplum.v1.ResourcePreset.Type\022\032\n\022host_c" +
-      "ount_divider\030\010 \001(\003\022!\n\031max_segment_in_hos" +
-      "t_count\030\t \001(\003\"5\n\004Type\022\024\n\020TYPE_UNSPECIFIE" +
-      "D\020\000\022\n\n\006MASTER\020\001\022\013\n\007SEGMENT\020\002Bp\n!yandex.c" +
-      "loud.api.mdb.greenplum.v1ZKgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/mdb/" +
-      "greenplum/v1;greenplumb\006proto3"
+      "m.v1\"\234\002\n\016ResourcePreset\022\n\n\002id\030\001 \001(\t\022\020\n\010z" +
+      "one_ids\030\002 \003(\t\022\025\n\rdisk_type_ids\030\n \003(\t\022\r\n\005" +
+      "cores\030\003 \001(\003\022\016\n\006memory\030\004 \001(\003\022@\n\004type\030\005 \001(" +
+      "\01622.yandex.cloud.mdb.greenplum.v1.Resour" +
+      "cePreset.Type\022\032\n\022host_count_divider\030\010 \001(" +
+      "\003\022!\n\031max_segment_in_host_count\030\t \001(\003\"5\n\004" +
+      "Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006MASTER\020\001\022\013" +
+      "\n\007SEGMENT\020\002Bp\n!yandex.cloud.api.mdb.gree" +
+      "nplum.v1ZKgithub.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/mdb/greenplum/v1;gree" +
+      "nplumb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1503,7 +1761,7 @@ public final class ResourcePresetOuterClass {
     internal_static_yandex_cloud_mdb_greenplum_v1_ResourcePreset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_ResourcePreset_descriptor,
-        new java.lang.String[] { "Id", "ZoneIds", "Cores", "Memory", "Type", "HostCountDivider", "MaxSegmentInHostCount", });
+        new java.lang.String[] { "Id", "ZoneIds", "DiskTypeIds", "Cores", "Memory", "Type", "HostCountDivider", "MaxSegmentInHostCount", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -208,6 +208,24 @@ public final class LogEntryOuterClass {
      * <code>.google.protobuf.Struct json_payload = 8;</code>
      */
     com.google.protobuf.StructOrBuilder getJsonPayloadOrBuilder();
+
+    /**
+     * <pre>
+     * Entry stream name.
+     * </pre>
+     *
+     * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     */
+    java.lang.String getStreamName();
+    /**
+     * <pre>
+     * Entry stream name.
+     * </pre>
+     *
+     * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     */
+    com.google.protobuf.ByteString
+        getStreamNameBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.LogEntry}
@@ -225,6 +243,7 @@ public final class LogEntryOuterClass {
       uid_ = "";
       level_ = 0;
       message_ = "";
+      streamName_ = "";
     }
 
     @java.lang.Override
@@ -332,6 +351,12 @@ public final class LogEntryOuterClass {
                 jsonPayload_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              streamName_ = s;
               break;
             }
             default: {
@@ -653,6 +678,48 @@ public final class LogEntryOuterClass {
       return getJsonPayload();
     }
 
+    public static final int STREAM_NAME_FIELD_NUMBER = 9;
+    private volatile java.lang.Object streamName_;
+    /**
+     * <pre>
+     * Entry stream name.
+     * </pre>
+     *
+     * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     */
+    public java.lang.String getStreamName() {
+      java.lang.Object ref = streamName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        streamName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Entry stream name.
+     * </pre>
+     *
+     * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getStreamNameBytes() {
+      java.lang.Object ref = streamName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        streamName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -690,6 +757,9 @@ public final class LogEntryOuterClass {
       }
       if (jsonPayload_ != null) {
         output.writeMessage(8, getJsonPayload());
+      }
+      if (!getStreamNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, streamName_);
       }
       unknownFields.writeTo(output);
     }
@@ -729,6 +799,9 @@ public final class LogEntryOuterClass {
       if (jsonPayload_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getJsonPayload());
+      }
+      if (!getStreamNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, streamName_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -776,6 +849,8 @@ public final class LogEntryOuterClass {
         result = result && getJsonPayload()
             .equals(other.getJsonPayload());
       }
+      result = result && getStreamName()
+          .equals(other.getStreamName());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -813,6 +888,8 @@ public final class LogEntryOuterClass {
         hash = (37 * hash) + JSON_PAYLOAD_FIELD_NUMBER;
         hash = (53 * hash) + getJsonPayload().hashCode();
       }
+      hash = (37 * hash) + STREAM_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getStreamName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -982,6 +1059,8 @@ public final class LogEntryOuterClass {
           jsonPayload_ = null;
           jsonPayloadBuilder_ = null;
         }
+        streamName_ = "";
+
         return this;
       }
 
@@ -1036,6 +1115,7 @@ public final class LogEntryOuterClass {
         } else {
           result.jsonPayload_ = jsonPayloadBuilder_.build();
         }
+        result.streamName_ = streamName_;
         onBuilt();
         return result;
       }
@@ -1109,6 +1189,10 @@ public final class LogEntryOuterClass {
         }
         if (other.hasJsonPayload()) {
           mergeJsonPayload(other.getJsonPayload());
+        }
+        if (!other.getStreamName().isEmpty()) {
+          streamName_ = other.streamName_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2183,6 +2267,95 @@ public final class LogEntryOuterClass {
         }
         return jsonPayloadBuilder_;
       }
+
+      private java.lang.Object streamName_ = "";
+      /**
+       * <pre>
+       * Entry stream name.
+       * </pre>
+       *
+       * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       */
+      public java.lang.String getStreamName() {
+        java.lang.Object ref = streamName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          streamName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Entry stream name.
+       * </pre>
+       *
+       * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getStreamNameBytes() {
+        java.lang.Object ref = streamName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          streamName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Entry stream name.
+       * </pre>
+       *
+       * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       */
+      public Builder setStreamName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        streamName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Entry stream name.
+       * </pre>
+       *
+       * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       */
+      public Builder clearStreamName() {
+        
+        streamName_ = getDefaultInstance().getStreamName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Entry stream name.
+       * </pre>
+       *
+       * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       */
+      public Builder setStreamNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        streamName_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2326,6 +2499,24 @@ public final class LogEntryOuterClass {
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
      */
     com.google.protobuf.StructOrBuilder getJsonPayloadOrBuilder();
+
+    /**
+     * <pre>
+     * Entry stream name.
+     * </pre>
+     *
+     * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     */
+    java.lang.String getStreamName();
+    /**
+     * <pre>
+     * Entry stream name.
+     * </pre>
+     *
+     * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     */
+    com.google.protobuf.ByteString
+        getStreamNameBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.IncomingLogEntry}
@@ -2342,6 +2533,7 @@ public final class LogEntryOuterClass {
     private IncomingLogEntry() {
       level_ = 0;
       message_ = "";
+      streamName_ = "";
     }
 
     @java.lang.Override
@@ -2404,6 +2596,12 @@ public final class LogEntryOuterClass {
                 jsonPayload_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              streamName_ = s;
               break;
             }
             default: {
@@ -2573,6 +2771,48 @@ public final class LogEntryOuterClass {
       return getJsonPayload();
     }
 
+    public static final int STREAM_NAME_FIELD_NUMBER = 5;
+    private volatile java.lang.Object streamName_;
+    /**
+     * <pre>
+     * Entry stream name.
+     * </pre>
+     *
+     * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     */
+    public java.lang.String getStreamName() {
+      java.lang.Object ref = streamName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        streamName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Entry stream name.
+     * </pre>
+     *
+     * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getStreamNameBytes() {
+      java.lang.Object ref = streamName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        streamName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2599,6 +2839,9 @@ public final class LogEntryOuterClass {
       if (jsonPayload_ != null) {
         output.writeMessage(4, getJsonPayload());
       }
+      if (!getStreamNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, streamName_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2622,6 +2865,9 @@ public final class LogEntryOuterClass {
       if (jsonPayload_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getJsonPayload());
+      }
+      if (!getStreamNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, streamName_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2652,6 +2898,8 @@ public final class LogEntryOuterClass {
         result = result && getJsonPayload()
             .equals(other.getJsonPayload());
       }
+      result = result && getStreamName()
+          .equals(other.getStreamName());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2675,6 +2923,8 @@ public final class LogEntryOuterClass {
         hash = (37 * hash) + JSON_PAYLOAD_FIELD_NUMBER;
         hash = (53 * hash) + getJsonPayload().hashCode();
       }
+      hash = (37 * hash) + STREAM_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getStreamName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2824,6 +3074,8 @@ public final class LogEntryOuterClass {
           jsonPayload_ = null;
           jsonPayloadBuilder_ = null;
         }
+        streamName_ = "";
+
         return this;
       }
 
@@ -2862,6 +3114,7 @@ public final class LogEntryOuterClass {
         } else {
           result.jsonPayload_ = jsonPayloadBuilder_.build();
         }
+        result.streamName_ = streamName_;
         onBuilt();
         return result;
       }
@@ -2922,6 +3175,10 @@ public final class LogEntryOuterClass {
         }
         if (other.hasJsonPayload()) {
           mergeJsonPayload(other.getJsonPayload());
+        }
+        if (!other.getStreamName().isEmpty()) {
+          streamName_ = other.streamName_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3416,6 +3673,95 @@ public final class LogEntryOuterClass {
         }
         return jsonPayloadBuilder_;
       }
+
+      private java.lang.Object streamName_ = "";
+      /**
+       * <pre>
+       * Entry stream name.
+       * </pre>
+       *
+       * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       */
+      public java.lang.String getStreamName() {
+        java.lang.Object ref = streamName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          streamName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Entry stream name.
+       * </pre>
+       *
+       * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getStreamNameBytes() {
+        java.lang.Object ref = streamName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          streamName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Entry stream name.
+       * </pre>
+       *
+       * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       */
+      public Builder setStreamName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        streamName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Entry stream name.
+       * </pre>
+       *
+       * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       */
+      public Builder clearStreamName() {
+        
+        streamName_ = getDefaultInstance().getStreamName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Entry stream name.
+       * </pre>
+       *
+       * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       */
+      public Builder setStreamNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        streamName_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3524,6 +3870,24 @@ public final class LogEntryOuterClass {
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
      */
     com.google.protobuf.StructOrBuilder getJsonPayloadOrBuilder();
+
+    /**
+     * <pre>
+     * Entry stream name.
+     * </pre>
+     *
+     * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     */
+    java.lang.String getStreamName();
+    /**
+     * <pre>
+     * Entry stream name.
+     * </pre>
+     *
+     * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     */
+    com.google.protobuf.ByteString
+        getStreamNameBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.LogEntryDefaults}
@@ -3539,6 +3903,7 @@ public final class LogEntryOuterClass {
     }
     private LogEntryDefaults() {
       level_ = 0;
+      streamName_ = "";
     }
 
     @java.lang.Override
@@ -3582,6 +3947,12 @@ public final class LogEntryOuterClass {
                 jsonPayload_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              streamName_ = s;
               break;
             }
             default: {
@@ -3684,6 +4055,48 @@ public final class LogEntryOuterClass {
       return getJsonPayload();
     }
 
+    public static final int STREAM_NAME_FIELD_NUMBER = 5;
+    private volatile java.lang.Object streamName_;
+    /**
+     * <pre>
+     * Entry stream name.
+     * </pre>
+     *
+     * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     */
+    public java.lang.String getStreamName() {
+      java.lang.Object ref = streamName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        streamName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Entry stream name.
+     * </pre>
+     *
+     * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getStreamNameBytes() {
+      java.lang.Object ref = streamName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        streamName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3704,6 +4117,9 @@ public final class LogEntryOuterClass {
       if (jsonPayload_ != null) {
         output.writeMessage(4, getJsonPayload());
       }
+      if (!getStreamNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, streamName_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3720,6 +4136,9 @@ public final class LogEntryOuterClass {
       if (jsonPayload_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getJsonPayload());
+      }
+      if (!getStreamNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, streamName_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3743,6 +4162,8 @@ public final class LogEntryOuterClass {
         result = result && getJsonPayload()
             .equals(other.getJsonPayload());
       }
+      result = result && getStreamName()
+          .equals(other.getStreamName());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3760,6 +4181,8 @@ public final class LogEntryOuterClass {
         hash = (37 * hash) + JSON_PAYLOAD_FIELD_NUMBER;
         hash = (53 * hash) + getJsonPayload().hashCode();
       }
+      hash = (37 * hash) + STREAM_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getStreamName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3901,6 +4324,8 @@ public final class LogEntryOuterClass {
           jsonPayload_ = null;
           jsonPayloadBuilder_ = null;
         }
+        streamName_ = "";
+
         return this;
       }
 
@@ -3933,6 +4358,7 @@ public final class LogEntryOuterClass {
         } else {
           result.jsonPayload_ = jsonPayloadBuilder_.build();
         }
+        result.streamName_ = streamName_;
         onBuilt();
         return result;
       }
@@ -3986,6 +4412,10 @@ public final class LogEntryOuterClass {
         }
         if (other.hasJsonPayload()) {
           mergeJsonPayload(other.getJsonPayload());
+        }
+        if (!other.getStreamName().isEmpty()) {
+          streamName_ = other.streamName_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4260,6 +4690,95 @@ public final class LogEntryOuterClass {
           jsonPayload_ = null;
         }
         return jsonPayloadBuilder_;
+      }
+
+      private java.lang.Object streamName_ = "";
+      /**
+       * <pre>
+       * Entry stream name.
+       * </pre>
+       *
+       * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       */
+      public java.lang.String getStreamName() {
+        java.lang.Object ref = streamName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          streamName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Entry stream name.
+       * </pre>
+       *
+       * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getStreamNameBytes() {
+        java.lang.Object ref = streamName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          streamName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Entry stream name.
+       * </pre>
+       *
+       * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       */
+      public Builder setStreamName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        streamName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Entry stream name.
+       * </pre>
+       *
+       * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       */
+      public Builder clearStreamName() {
+        
+        streamName_ = getDefaultInstance().getStreamName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Entry stream name.
+       * </pre>
+       *
+       * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       */
+      public Builder setStreamNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        streamName_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6005,7 +6524,7 @@ public final class LogEntryOuterClass {
       "buf/struct.proto\032\037google/protobuf/timest" +
       "amp.proto\032*yandex/cloud/logging/v1/log_r" +
       "esource.proto\032\035yandex/cloud/validation.p" +
-      "roto\"\332\002\n\010LogEntry\022\013\n\003uid\030\001 \001(\t\022;\n\010resour" +
+      "roto\"\222\003\n\010LogEntry\022\013\n\003uid\030\001 \001(\t\022;\n\010resour" +
       "ce\030\002 \001(\0132).yandex.cloud.logging.v1.LogEn" +
       "tryResource\022-\n\ttimestamp\030\003 \001(\0132\032.google." +
       "protobuf.Timestamp\022/\n\013ingested_at\030\004 \001(\0132" +
@@ -6013,27 +6532,31 @@ public final class LogEntryOuterClass {
       "\005 \001(\0132\032.google.protobuf.Timestamp\0226\n\005lev" +
       "el\030\006 \001(\0162\'.yandex.cloud.logging.v1.LogLe" +
       "vel.Level\022\017\n\007message\030\007 \001(\t\022-\n\014json_paylo" +
-      "ad\030\010 \001(\0132\027.google.protobuf.Struct\"\331\001\n\020In" +
-      "comingLogEntry\0223\n\ttimestamp\030\001 \001(\0132\032.goog" +
-      "le.protobuf.TimestampB\004\350\3071\001\0226\n\005level\030\002 \001" +
-      "(\0162\'.yandex.cloud.logging.v1.LogLevel.Le" +
-      "vel\022\034\n\007message\030\003 \001(\tB\013\272\3101\007<=65536\022:\n\014jso" +
-      "n_payload\030\004 \001(\0132\027.google.protobuf.Struct" +
-      "B\013\272\3101\007<=65536\"\206\001\n\020LogEntryDefaults\0226\n\005le" +
-      "vel\030\002 \001(\0162\'.yandex.cloud.logging.v1.LogL" +
-      "evel.Level\022:\n\014json_payload\030\004 \001(\0132\027.googl" +
-      "e.protobuf.StructB\013\272\3101\007<=65536\"\231\001\n\013Desti" +
-      "nation\022;\n\014log_group_id\030\001 \001(\tB#\362\3071\037([a-zA" +
-      "-Z][-a-zA-Z0-9_.]{0,63})?H\000\0228\n\tfolder_id" +
-      "\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63" +
-      "})?H\000B\023\n\013destination\022\004\300\3011\001\"\242\001\n\010LogLevel\022" +
-      "6\n\005level\030\001 \001(\0162\'.yandex.cloud.logging.v1" +
-      ".LogLevel.Level\"^\n\005Level\022\025\n\021LEVEL_UNSPEC" +
-      "IFIED\020\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG\020\002\022\010\n\004INFO\020\003\022" +
-      "\010\n\004WARN\020\004\022\t\n\005ERROR\020\005\022\t\n\005FATAL\020\006Bb\n\033yande" +
-      "x.cloud.api.logging.v1ZCgithub.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/logging" +
-      "/v1;loggingb\006proto3"
+      "ad\030\010 \001(\0132\027.google.protobuf.Struct\0226\n\013str" +
+      "eam_name\030\t \001(\tB!\362\3071\035|[a-zA-Z][-a-zA-Z0-9" +
+      "_.]{0,63}\"\221\002\n\020IncomingLogEntry\0223\n\ttimest" +
+      "amp\030\001 \001(\0132\032.google.protobuf.TimestampB\004\350" +
+      "\3071\001\0226\n\005level\030\002 \001(\0162\'.yandex.cloud.loggin" +
+      "g.v1.LogLevel.Level\022\034\n\007message\030\003 \001(\tB\013\272\310" +
+      "1\007<=65536\022:\n\014json_payload\030\004 \001(\0132\027.google" +
+      ".protobuf.StructB\013\272\3101\007<=65536\0226\n\013stream_" +
+      "name\030\005 \001(\tB!\362\3071\035|[a-zA-Z][-a-zA-Z0-9_.]{" +
+      "0,63}\"\276\001\n\020LogEntryDefaults\0226\n\005level\030\002 \001(" +
+      "\0162\'.yandex.cloud.logging.v1.LogLevel.Lev" +
+      "el\022:\n\014json_payload\030\004 \001(\0132\027.google.protob" +
+      "uf.StructB\013\272\3101\007<=65536\0226\n\013stream_name\030\005 " +
+      "\001(\tB!\362\3071\035|[a-zA-Z][-a-zA-Z0-9_.]{0,63}\"\231" +
+      "\001\n\013Destination\022;\n\014log_group_id\030\001 \001(\tB#\362\307" +
+      "1\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\0228\n\tf" +
+      "older_id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9" +
+      "_.]{0,63})?H\000B\023\n\013destination\022\004\300\3011\001\"\242\001\n\010L" +
+      "ogLevel\0226\n\005level\030\001 \001(\0162\'.yandex.cloud.lo" +
+      "gging.v1.LogLevel.Level\"^\n\005Level\022\025\n\021LEVE" +
+      "L_UNSPECIFIED\020\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG\020\002\022\010\n" +
+      "\004INFO\020\003\022\010\n\004WARN\020\004\022\t\n\005ERROR\020\005\022\t\n\005FATAL\020\006B" +
+      "b\n\033yandex.cloud.api.logging.v1ZCgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/logging/v1;loggingb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6056,19 +6579,19 @@ public final class LogEntryOuterClass {
     internal_static_yandex_cloud_logging_v1_LogEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_LogEntry_descriptor,
-        new java.lang.String[] { "Uid", "Resource", "Timestamp", "IngestedAt", "SavedAt", "Level", "Message", "JsonPayload", });
+        new java.lang.String[] { "Uid", "Resource", "Timestamp", "IngestedAt", "SavedAt", "Level", "Message", "JsonPayload", "StreamName", });
     internal_static_yandex_cloud_logging_v1_IncomingLogEntry_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_logging_v1_IncomingLogEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_IncomingLogEntry_descriptor,
-        new java.lang.String[] { "Timestamp", "Level", "Message", "JsonPayload", });
+        new java.lang.String[] { "Timestamp", "Level", "Message", "JsonPayload", "StreamName", });
     internal_static_yandex_cloud_logging_v1_LogEntryDefaults_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_logging_v1_LogEntryDefaults_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_LogEntryDefaults_descriptor,
-        new java.lang.String[] { "Level", "JsonPayload", });
+        new java.lang.String[] { "Level", "JsonPayload", "StreamName", });
     internal_static_yandex_cloud_logging_v1_Destination_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_logging_v1_Destination_fieldAccessorTable = new

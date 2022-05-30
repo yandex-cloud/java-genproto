@@ -8839,6 +8839,38 @@ public final class NodeOuterClass {
 
     /**
      * <pre>
+     * Name of the instance.
+     * In order to be unique it must contain at least on of instance unique placeholders:
+     *   {instance.short_id}
+     *   {instance.index}
+     *   combination of {instance.zone_id} and {instance.index_in_zone}
+     * Example: my-instance-{instance.index}
+     * If not set, default is used: {instance_group.id}-{instance.short_id}
+     * It may also contain another placeholders, see metadata doc for full list.
+     * </pre>
+     *
+     * <code>string name = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the instance.
+     * In order to be unique it must contain at least on of instance unique placeholders:
+     *   {instance.short_id}
+     *   {instance.index}
+     *   combination of {instance.zone_id} and {instance.index_in_zone}
+     * Example: my-instance-{instance.index}
+     * If not set, default is used: {instance_group.id}-{instance.short_id}
+     * It may also contain another placeholders, see metadata doc for full list.
+     * </pre>
+     *
+     * <code>string name = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
      * ID of the hardware platform configuration for the node.
      * </pre>
      *
@@ -9121,38 +9153,6 @@ public final class NodeOuterClass {
      * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings container_runtime_settings = 12;</code>
      */
     yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerRuntimeSettingsOrBuilder getContainerRuntimeSettingsOrBuilder();
-
-    /**
-     * <pre>
-     * Name of the instance.
-     * In order to be unique it must contain at least on of instance unique placeholders:
-     *   {instance.short_id}
-     *   {instance.index}
-     *   combination of {instance.zone_id} and {instance.index_in_zone}
-     * Example: my-instance-{instance.index}
-     * If not set, default is used: {instance_group.id}-{instance.short_id}
-     * It may also contain another placeholders, see metadata doc for full list.
-     * </pre>
-     *
-     * <code>string name = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
-     */
-    java.lang.String getName();
-    /**
-     * <pre>
-     * Name of the instance.
-     * In order to be unique it must contain at least on of instance unique placeholders:
-     *   {instance.short_id}
-     *   {instance.index}
-     *   combination of {instance.zone_id} and {instance.index_in_zone}
-     * Example: my-instance-{instance.index}
-     * If not set, default is used: {instance_group.id}-{instance.short_id}
-     * It may also contain another placeholders, see metadata doc for full list.
-     * </pre>
-     *
-     * <code>string name = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.NodeTemplate}
@@ -9167,9 +9167,9 @@ public final class NodeOuterClass {
       super(builder);
     }
     private NodeTemplate() {
+      name_ = "";
       platformId_ = "";
       networkInterfaceSpecs_ = java.util.Collections.emptyList();
-      name_ = "";
     }
 
     @java.lang.Override
@@ -9229,10 +9229,10 @@ public final class NodeOuterClass {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
                 metadata_ = com.google.protobuf.MapField.newMapField(
                     MetadataDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000010;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               metadata__ = input.readMessage(
@@ -9268,9 +9268,9 @@ public final class NodeOuterClass {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
                 networkInterfaceSpecs_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec>();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000080;
               }
               networkInterfaceSpecs_.add(
                   input.readMessage(yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.parser(), extensionRegistry));
@@ -9336,7 +9336,7 @@ public final class NodeOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
           networkInterfaceSpecs_ = java.util.Collections.unmodifiableList(networkInterfaceSpecs_);
         }
         this.unknownFields = unknownFields.build();
@@ -10607,6 +10607,62 @@ public final class NodeOuterClass {
     }
 
     private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 13;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the instance.
+     * In order to be unique it must contain at least on of instance unique placeholders:
+     *   {instance.short_id}
+     *   {instance.index}
+     *   combination of {instance.zone_id} and {instance.index_in_zone}
+     * Example: my-instance-{instance.index}
+     * If not set, default is used: {instance_group.id}-{instance.short_id}
+     * It may also contain another placeholders, see metadata doc for full list.
+     * </pre>
+     *
+     * <code>string name = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the instance.
+     * In order to be unique it must contain at least on of instance unique placeholders:
+     *   {instance.short_id}
+     *   {instance.index}
+     *   combination of {instance.zone_id} and {instance.index_in_zone}
+     * Example: my-instance-{instance.index}
+     * If not set, default is used: {instance_group.id}-{instance.short_id}
+     * It may also contain another placeholders, see metadata doc for full list.
+     * </pre>
+     *
+     * <code>string name = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int PLATFORM_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object platformId_;
     /**
@@ -11019,62 +11075,6 @@ public final class NodeOuterClass {
       return getContainerRuntimeSettings();
     }
 
-    public static final int NAME_FIELD_NUMBER = 13;
-    private volatile java.lang.Object name_;
-    /**
-     * <pre>
-     * Name of the instance.
-     * In order to be unique it must contain at least on of instance unique placeholders:
-     *   {instance.short_id}
-     *   {instance.index}
-     *   combination of {instance.zone_id} and {instance.index_in_zone}
-     * Example: my-instance-{instance.index}
-     * If not set, default is used: {instance_group.id}-{instance.short_id}
-     * It may also contain another placeholders, see metadata doc for full list.
-     * </pre>
-     *
-     * <code>string name = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Name of the instance.
-     * In order to be unique it must contain at least on of instance unique placeholders:
-     *   {instance.short_id}
-     *   {instance.index}
-     *   combination of {instance.zone_id} and {instance.index_in_zone}
-     * Example: my-instance-{instance.index}
-     * If not set, default is used: {instance_group.id}-{instance.short_id}
-     * It may also contain another placeholders, see metadata doc for full list.
-     * </pre>
-     *
-     * <code>string name = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11198,6 +11198,8 @@ public final class NodeOuterClass {
       yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate other = (yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate) obj;
 
       boolean result = true;
+      result = result && getName()
+          .equals(other.getName());
       result = result && getPlatformId()
           .equals(other.getPlatformId());
       result = result && (hasResourcesSpec() == other.hasResourcesSpec());
@@ -11239,8 +11241,6 @@ public final class NodeOuterClass {
         result = result && getContainerRuntimeSettings()
             .equals(other.getContainerRuntimeSettings());
       }
-      result = result && getName()
-          .equals(other.getName());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -11252,6 +11252,8 @@ public final class NodeOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + PLATFORM_ID_FIELD_NUMBER;
       hash = (53 * hash) + getPlatformId().hashCode();
       if (hasResourcesSpec()) {
@@ -11290,8 +11292,6 @@ public final class NodeOuterClass {
         hash = (37 * hash) + CONTAINER_RUNTIME_SETTINGS_FIELD_NUMBER;
         hash = (53 * hash) + getContainerRuntimeSettings().hashCode();
       }
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11448,6 +11448,8 @@ public final class NodeOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        name_ = "";
+
         platformId_ = "";
 
         if (resourcesSpecBuilder_ == null) {
@@ -11477,7 +11479,7 @@ public final class NodeOuterClass {
         }
         if (networkInterfaceSpecsBuilder_ == null) {
           networkInterfaceSpecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000080);
         } else {
           networkInterfaceSpecsBuilder_.clear();
         }
@@ -11499,8 +11501,6 @@ public final class NodeOuterClass {
           containerRuntimeSettings_ = null;
           containerRuntimeSettingsBuilder_ = null;
         }
-        name_ = "";
-
         return this;
       }
 
@@ -11529,6 +11529,7 @@ public final class NodeOuterClass {
         yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate result = new yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
+        result.name_ = name_;
         result.platformId_ = platformId_;
         if (resourcesSpecBuilder_ == null) {
           result.resourcesSpec_ = resourcesSpec_;
@@ -11553,9 +11554,9 @@ public final class NodeOuterClass {
           result.schedulingPolicy_ = schedulingPolicyBuilder_.build();
         }
         if (networkInterfaceSpecsBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          if (((bitField0_ & 0x00000080) == 0x00000080)) {
             networkInterfaceSpecs_ = java.util.Collections.unmodifiableList(networkInterfaceSpecs_);
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000080);
           }
           result.networkInterfaceSpecs_ = networkInterfaceSpecs_;
         } else {
@@ -11576,7 +11577,6 @@ public final class NodeOuterClass {
         } else {
           result.containerRuntimeSettings_ = containerRuntimeSettingsBuilder_.build();
         }
-        result.name_ = name_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -11626,6 +11626,10 @@ public final class NodeOuterClass {
 
       public Builder mergeFrom(yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate other) {
         if (other == yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
         if (!other.getPlatformId().isEmpty()) {
           platformId_ = other.platformId_;
           onChanged();
@@ -11648,7 +11652,7 @@ public final class NodeOuterClass {
           if (!other.networkInterfaceSpecs_.isEmpty()) {
             if (networkInterfaceSpecs_.isEmpty()) {
               networkInterfaceSpecs_ = other.networkInterfaceSpecs_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000080);
             } else {
               ensureNetworkInterfaceSpecsIsMutable();
               networkInterfaceSpecs_.addAll(other.networkInterfaceSpecs_);
@@ -11661,7 +11665,7 @@ public final class NodeOuterClass {
               networkInterfaceSpecsBuilder_.dispose();
               networkInterfaceSpecsBuilder_ = null;
               networkInterfaceSpecs_ = other.networkInterfaceSpecs_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000080);
               networkInterfaceSpecsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getNetworkInterfaceSpecsFieldBuilder() : null;
@@ -11678,10 +11682,6 @@ public final class NodeOuterClass {
         }
         if (other.hasContainerRuntimeSettings()) {
           mergeContainerRuntimeSettings(other.getContainerRuntimeSettings());
-        }
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11712,6 +11712,130 @@ public final class NodeOuterClass {
         return this;
       }
       private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the instance.
+       * In order to be unique it must contain at least on of instance unique placeholders:
+       *   {instance.short_id}
+       *   {instance.index}
+       *   combination of {instance.zone_id} and {instance.index_in_zone}
+       * Example: my-instance-{instance.index}
+       * If not set, default is used: {instance_group.id}-{instance.short_id}
+       * It may also contain another placeholders, see metadata doc for full list.
+       * </pre>
+       *
+       * <code>string name = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the instance.
+       * In order to be unique it must contain at least on of instance unique placeholders:
+       *   {instance.short_id}
+       *   {instance.index}
+       *   combination of {instance.zone_id} and {instance.index_in_zone}
+       * Example: my-instance-{instance.index}
+       * If not set, default is used: {instance_group.id}-{instance.short_id}
+       * It may also contain another placeholders, see metadata doc for full list.
+       * </pre>
+       *
+       * <code>string name = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the instance.
+       * In order to be unique it must contain at least on of instance unique placeholders:
+       *   {instance.short_id}
+       *   {instance.index}
+       *   combination of {instance.zone_id} and {instance.index_in_zone}
+       * Example: my-instance-{instance.index}
+       * If not set, default is used: {instance_group.id}-{instance.short_id}
+       * It may also contain another placeholders, see metadata doc for full list.
+       * </pre>
+       *
+       * <code>string name = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the instance.
+       * In order to be unique it must contain at least on of instance unique placeholders:
+       *   {instance.short_id}
+       *   {instance.index}
+       *   combination of {instance.zone_id} and {instance.index_in_zone}
+       * Example: my-instance-{instance.index}
+       * If not set, default is used: {instance_group.id}-{instance.short_id}
+       * It may also contain another placeholders, see metadata doc for full list.
+       * </pre>
+       *
+       * <code>string name = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the instance.
+       * In order to be unique it must contain at least on of instance unique placeholders:
+       *   {instance.short_id}
+       *   {instance.index}
+       *   combination of {instance.zone_id} and {instance.index_in_zone}
+       * Example: my-instance-{instance.index}
+       * If not set, default is used: {instance_group.id}-{instance.short_id}
+       * It may also contain another placeholders, see metadata doc for full list.
+       * </pre>
+       *
+       * <code>string name = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
 
       private java.lang.Object platformId_ = "";
       /**
@@ -12591,9 +12715,9 @@ public final class NodeOuterClass {
       private java.util.List<yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec> networkInterfaceSpecs_ =
         java.util.Collections.emptyList();
       private void ensureNetworkInterfaceSpecsIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
           networkInterfaceSpecs_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec>(networkInterfaceSpecs_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000080;
          }
       }
 
@@ -12798,7 +12922,7 @@ public final class NodeOuterClass {
       public Builder clearNetworkInterfaceSpecs() {
         if (networkInterfaceSpecsBuilder_ == null) {
           networkInterfaceSpecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000080);
           onChanged();
         } else {
           networkInterfaceSpecsBuilder_.clear();
@@ -12910,7 +13034,7 @@ public final class NodeOuterClass {
           networkInterfaceSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec, yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpecOrBuilder>(
                   networkInterfaceSpecs_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  ((bitField0_ & 0x00000080) == 0x00000080),
                   getParentForChildren(),
                   isClean());
           networkInterfaceSpecs_ = null;
@@ -13303,130 +13427,6 @@ public final class NodeOuterClass {
           containerRuntimeSettings_ = null;
         }
         return containerRuntimeSettingsBuilder_;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <pre>
-       * Name of the instance.
-       * In order to be unique it must contain at least on of instance unique placeholders:
-       *   {instance.short_id}
-       *   {instance.index}
-       *   combination of {instance.zone_id} and {instance.index_in_zone}
-       * Example: my-instance-{instance.index}
-       * If not set, default is used: {instance_group.id}-{instance.short_id}
-       * It may also contain another placeholders, see metadata doc for full list.
-       * </pre>
-       *
-       * <code>string name = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Name of the instance.
-       * In order to be unique it must contain at least on of instance unique placeholders:
-       *   {instance.short_id}
-       *   {instance.index}
-       *   combination of {instance.zone_id} and {instance.index_in_zone}
-       * Example: my-instance-{instance.index}
-       * If not set, default is used: {instance_group.id}-{instance.short_id}
-       * It may also contain another placeholders, see metadata doc for full list.
-       * </pre>
-       *
-       * <code>string name = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Name of the instance.
-       * In order to be unique it must contain at least on of instance unique placeholders:
-       *   {instance.short_id}
-       *   {instance.index}
-       *   combination of {instance.zone_id} and {instance.index_in_zone}
-       * Example: my-instance-{instance.index}
-       * If not set, default is used: {instance_group.id}-{instance.short_id}
-       * It may also contain another placeholders, see metadata doc for full list.
-       * </pre>
-       *
-       * <code>string name = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Name of the instance.
-       * In order to be unique it must contain at least on of instance unique placeholders:
-       *   {instance.short_id}
-       *   {instance.index}
-       *   combination of {instance.zone_id} and {instance.index_in_zone}
-       * Example: my-instance-{instance.index}
-       * If not set, default is used: {instance_group.id}-{instance.short_id}
-       * It may also contain another placeholders, see metadata doc for full list.
-       * </pre>
-       *
-       * <code>string name = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Name of the instance.
-       * In order to be unique it must contain at least on of instance unique placeholders:
-       *   {instance.short_id}
-       *   {instance.index}
-       *   combination of {instance.zone_id} and {instance.index_in_zone}
-       * Example: my-instance-{instance.index}
-       * If not set, default is used: {instance_group.id}-{instance.short_id}
-       * It may also contain another placeholders, see metadata doc for full list.
-       * </pre>
-       *
-       * <code>string name = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -20194,25 +20194,25 @@ public final class NodeOuterClass {
       "PECIFIED\020\000\022\017\n\013NO_SCHEDULE\020\001\022\026\n\022PREFER_NO" +
       "_SCHEDULE\020\002\022\016\n\nNO_EXECUTE\020\003\"<\n\016AttachedV" +
       "olume\022\023\n\013driver_name\030\001 \001(\t\022\025\n\rvolume_han" +
-      "dle\030\002 \001(\t\"\351\010\n\014NodeTemplate\022\023\n\013platform_i" +
-      "d\030\001 \001(\t\022:\n\016resources_spec\030\002 \001(\0132\".yandex" +
-      ".cloud.k8s.v1.ResourcesSpec\0225\n\016boot_disk" +
-      "_spec\030\003 \001(\0132\035.yandex.cloud.k8s.v1.DiskSp" +
-      "ec\022w\n\010metadata\030\004 \003(\0132/.yandex.cloud.k8s." +
-      "v1.NodeTemplate.MetadataEntryB4\202\3101\004<=64\212" +
-      "\3101\010<=131072\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-" +
-      "z]*\022A\n\017v4_address_spec\030\005 \001(\0132$.yandex.cl" +
-      "oud.k8s.v1.NodeAddressSpecB\002\030\001\022@\n\021schedu" +
-      "ling_policy\030\006 \001(\0132%.yandex.cloud.k8s.v1." +
-      "SchedulingPolicy\022J\n\027network_interface_sp" +
-      "ecs\030\007 \003(\0132).yandex.cloud.k8s.v1.NetworkI" +
-      "nterfaceSpec\022>\n\020placement_policy\030\n \001(\0132$" +
-      ".yandex.cloud.k8s.v1.PlacementPolicy\022K\n\020" +
-      "network_settings\030\013 \001(\01321.yandex.cloud.k8" +
-      "s.v1.NodeTemplate.NetworkSettings\022^\n\032con" +
-      "tainer_runtime_settings\030\014 \001(\0132:.yandex.c" +
-      "loud.k8s.v1.NodeTemplate.ContainerRuntim" +
-      "eSettings\022\027\n\004name\030\r \001(\tB\t\212\3101\005<=128\032/\n\rMe" +
+      "dle\030\002 \001(\t\"\351\010\n\014NodeTemplate\022\027\n\004name\030\r \001(\t" +
+      "B\t\212\3101\005<=128\022\023\n\013platform_id\030\001 \001(\t\022:\n\016reso" +
+      "urces_spec\030\002 \001(\0132\".yandex.cloud.k8s.v1.R" +
+      "esourcesSpec\0225\n\016boot_disk_spec\030\003 \001(\0132\035.y" +
+      "andex.cloud.k8s.v1.DiskSpec\022w\n\010metadata\030" +
+      "\004 \003(\0132/.yandex.cloud.k8s.v1.NodeTemplate" +
+      ".MetadataEntryB4\202\3101\004<=64\212\3101\010<=131072\262\3101\006" +
+      "\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022A\n\017v4_addre" +
+      "ss_spec\030\005 \001(\0132$.yandex.cloud.k8s.v1.Node" +
+      "AddressSpecB\002\030\001\022@\n\021scheduling_policy\030\006 \001" +
+      "(\0132%.yandex.cloud.k8s.v1.SchedulingPolic" +
+      "y\022J\n\027network_interface_specs\030\007 \003(\0132).yan" +
+      "dex.cloud.k8s.v1.NetworkInterfaceSpec\022>\n" +
+      "\020placement_policy\030\n \001(\0132$.yandex.cloud.k" +
+      "8s.v1.PlacementPolicy\022K\n\020network_setting" +
+      "s\030\013 \001(\01321.yandex.cloud.k8s.v1.NodeTempla" +
+      "te.NetworkSettings\022^\n\032container_runtime_" +
+      "settings\030\014 \001(\0132:.yandex.cloud.k8s.v1.Nod" +
+      "eTemplate.ContainerRuntimeSettings\032/\n\rMe" +
       "tadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
       "\0028\001\032\243\001\n\017NetworkSettings\022J\n\004type\030\001 \001(\01626." +
       "yandex.cloud.k8s.v1.NodeTemplate.Network" +
@@ -20311,7 +20311,7 @@ public final class NodeOuterClass {
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_NodeTemplate_descriptor,
-        new java.lang.String[] { "PlatformId", "ResourcesSpec", "BootDiskSpec", "Metadata", "V4AddressSpec", "SchedulingPolicy", "NetworkInterfaceSpecs", "PlacementPolicy", "NetworkSettings", "ContainerRuntimeSettings", "Name", });
+        new java.lang.String[] { "Name", "PlatformId", "ResourcesSpec", "BootDiskSpec", "Metadata", "V4AddressSpec", "SchedulingPolicy", "NetworkInterfaceSpecs", "PlacementPolicy", "NetworkSettings", "ContainerRuntimeSettings", });
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_MetadataEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_NodeTemplate_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_MetadataEntry_fieldAccessorTable = new

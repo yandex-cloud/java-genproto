@@ -14,6 +14,118 @@ public final class PSU {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code yandex.cloud.mdb.sqlserver.v1.ServerRole}
+   */
+  public enum ServerRole
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>SERVER_ROLE_UNSPECIFIED = 0;</code>
+     */
+    SERVER_ROLE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     *Effectively grants VIEW SERVER STATE to the login
+     *That gives an ability to use various dynamic management views to monitor server state
+     *Including Activity Monitor tool that is built-in into SSMS
+     *No intrusive actions are allowed, so this is pretty safe to grant
+     * </pre>
+     *
+     * <code>MDB_MONITOR = 1;</code>
+     */
+    MDB_MONITOR(1),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>SERVER_ROLE_UNSPECIFIED = 0;</code>
+     */
+    public static final int SERVER_ROLE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     *Effectively grants VIEW SERVER STATE to the login
+     *That gives an ability to use various dynamic management views to monitor server state
+     *Including Activity Monitor tool that is built-in into SSMS
+     *No intrusive actions are allowed, so this is pretty safe to grant
+     * </pre>
+     *
+     * <code>MDB_MONITOR = 1;</code>
+     */
+    public static final int MDB_MONITOR_VALUE = 1;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ServerRole valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static ServerRole forNumber(int value) {
+      switch (value) {
+        case 0: return SERVER_ROLE_UNSPECIFIED;
+        case 1: return MDB_MONITOR;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ServerRole>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ServerRole> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ServerRole>() {
+            public ServerRole findValueByNumber(int number) {
+              return ServerRole.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.sqlserver.v1.PSU.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final ServerRole[] VALUES = values();
+
+    public static ServerRole valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ServerRole(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.sqlserver.v1.ServerRole)
+  }
+
   public interface UserOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.sqlserver.v1.User)
       com.google.protobuf.MessageOrBuilder {
@@ -97,6 +209,48 @@ public final class PSU {
      */
     yandex.cloud.api.mdb.sqlserver.v1.PSU.PermissionOrBuilder getPermissionsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     *Set of server roles granted to the login
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+     */
+    java.util.List<yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole> getServerRolesList();
+    /**
+     * <pre>
+     *Set of server roles granted to the login
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+     */
+    int getServerRolesCount();
+    /**
+     * <pre>
+     *Set of server roles granted to the login
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole getServerRoles(int index);
+    /**
+     * <pre>
+     *Set of server roles granted to the login
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+     */
+    java.util.List<java.lang.Integer>
+    getServerRolesValueList();
+    /**
+     * <pre>
+     *Set of server roles granted to the login
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+     */
+    int getServerRolesValue(int index);
   }
   /**
    * <pre>
@@ -118,6 +272,7 @@ public final class PSU {
       name_ = "";
       clusterId_ = "";
       permissions_ = java.util.Collections.emptyList();
+      serverRoles_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -165,6 +320,29 @@ public final class PSU {
                   input.readMessage(yandex.cloud.api.mdb.sqlserver.v1.PSU.Permission.parser(), extensionRegistry));
               break;
             }
+            case 32: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                serverRoles_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              serverRoles_.add(rawValue);
+              break;
+            }
+            case 34: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                  serverRoles_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000008;
+                }
+                serverRoles_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -182,6 +360,9 @@ public final class PSU {
       } finally {
         if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           permissions_ = java.util.Collections.unmodifiableList(permissions_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          serverRoles_ = java.util.Collections.unmodifiableList(serverRoles_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -340,6 +521,72 @@ public final class PSU {
       return permissions_.get(index);
     }
 
+    public static final int SERVER_ROLES_FIELD_NUMBER = 4;
+    private java.util.List<java.lang.Integer> serverRoles_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole> serverRoles_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole>() {
+              public yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole result = yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole.valueOf(from);
+                return result == null ? yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     *Set of server roles granted to the login
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+     */
+    public java.util.List<yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole> getServerRolesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole>(serverRoles_, serverRoles_converter_);
+    }
+    /**
+     * <pre>
+     *Set of server roles granted to the login
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+     */
+    public int getServerRolesCount() {
+      return serverRoles_.size();
+    }
+    /**
+     * <pre>
+     *Set of server roles granted to the login
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+     */
+    public yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole getServerRoles(int index) {
+      return serverRoles_converter_.convert(serverRoles_.get(index));
+    }
+    /**
+     * <pre>
+     *Set of server roles granted to the login
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+     */
+    public java.util.List<java.lang.Integer>
+    getServerRolesValueList() {
+      return serverRoles_;
+    }
+    /**
+     * <pre>
+     *Set of server roles granted to the login
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+     */
+    public int getServerRolesValue(int index) {
+      return serverRoles_.get(index);
+    }
+    private int serverRolesMemoizedSerializedSize;
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -354,6 +601,7 @@ public final class PSU {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      getSerializedSize();
       if (!getNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
@@ -362,6 +610,13 @@ public final class PSU {
       }
       for (int i = 0; i < permissions_.size(); i++) {
         output.writeMessage(3, permissions_.get(i));
+      }
+      if (getServerRolesList().size() > 0) {
+        output.writeUInt32NoTag(34);
+        output.writeUInt32NoTag(serverRolesMemoizedSerializedSize);
+      }
+      for (int i = 0; i < serverRoles_.size(); i++) {
+        output.writeEnumNoTag(serverRoles_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -381,6 +636,18 @@ public final class PSU {
       for (int i = 0; i < permissions_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, permissions_.get(i));
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < serverRoles_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(serverRoles_.get(i));
+        }
+        size += dataSize;
+        if (!getServerRolesList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }serverRolesMemoizedSerializedSize = dataSize;
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -404,6 +671,7 @@ public final class PSU {
           .equals(other.getClusterId());
       result = result && getPermissionsList()
           .equals(other.getPermissionsList());
+      result = result && serverRoles_.equals(other.serverRoles_);
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -422,6 +690,10 @@ public final class PSU {
       if (getPermissionsCount() > 0) {
         hash = (37 * hash) + PERMISSIONS_FIELD_NUMBER;
         hash = (53 * hash) + getPermissionsList().hashCode();
+      }
+      if (getServerRolesCount() > 0) {
+        hash = (37 * hash) + SERVER_ROLES_FIELD_NUMBER;
+        hash = (53 * hash) + serverRoles_.hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -571,6 +843,8 @@ public final class PSU {
         } else {
           permissionsBuilder_.clear();
         }
+        serverRoles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -610,6 +884,11 @@ public final class PSU {
         } else {
           result.permissions_ = permissionsBuilder_.build();
         }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          serverRoles_ = java.util.Collections.unmodifiableList(serverRoles_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.serverRoles_ = serverRoles_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -692,6 +971,16 @@ public final class PSU {
               permissionsBuilder_.addAllMessages(other.permissions_);
             }
           }
+        }
+        if (!other.serverRoles_.isEmpty()) {
+          if (serverRoles_.isEmpty()) {
+            serverRoles_ = other.serverRoles_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureServerRolesIsMutable();
+            serverRoles_.addAll(other.serverRoles_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1211,6 +1500,172 @@ public final class PSU {
           permissions_ = null;
         }
         return permissionsBuilder_;
+      }
+
+      private java.util.List<java.lang.Integer> serverRoles_ =
+        java.util.Collections.emptyList();
+      private void ensureServerRolesIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          serverRoles_ = new java.util.ArrayList<java.lang.Integer>(serverRoles_);
+          bitField0_ |= 0x00000008;
+        }
+      }
+      /**
+       * <pre>
+       *Set of server roles granted to the login
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole> getServerRolesList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole>(serverRoles_, serverRoles_converter_);
+      }
+      /**
+       * <pre>
+       *Set of server roles granted to the login
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public int getServerRolesCount() {
+        return serverRoles_.size();
+      }
+      /**
+       * <pre>
+       *Set of server roles granted to the login
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole getServerRoles(int index) {
+        return serverRoles_converter_.convert(serverRoles_.get(index));
+      }
+      /**
+       * <pre>
+       *Set of server roles granted to the login
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public Builder setServerRoles(
+          int index, yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureServerRolesIsMutable();
+        serverRoles_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Set of server roles granted to the login
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public Builder addServerRoles(yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureServerRolesIsMutable();
+        serverRoles_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Set of server roles granted to the login
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public Builder addAllServerRoles(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole> values) {
+        ensureServerRolesIsMutable();
+        for (yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole value : values) {
+          serverRoles_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Set of server roles granted to the login
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public Builder clearServerRoles() {
+        serverRoles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Set of server roles granted to the login
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public java.util.List<java.lang.Integer>
+      getServerRolesValueList() {
+        return java.util.Collections.unmodifiableList(serverRoles_);
+      }
+      /**
+       * <pre>
+       *Set of server roles granted to the login
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public int getServerRolesValue(int index) {
+        return serverRoles_.get(index);
+      }
+      /**
+       * <pre>
+       *Set of server roles granted to the login
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public Builder setServerRolesValue(
+          int index, int value) {
+        ensureServerRolesIsMutable();
+        serverRoles_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Set of server roles granted to the login
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public Builder addServerRolesValue(int value) {
+        ensureServerRolesIsMutable();
+        serverRoles_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Set of server roles granted to the login
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public Builder addAllServerRolesValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureServerRolesIsMutable();
+        for (int value : values) {
+          serverRoles_.add(value);
+        }
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2524,6 +2979,48 @@ public final class PSU {
      */
     yandex.cloud.api.mdb.sqlserver.v1.PSU.PermissionOrBuilder getPermissionsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     *Set of server roles
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+     */
+    java.util.List<yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole> getServerRolesList();
+    /**
+     * <pre>
+     *Set of server roles
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+     */
+    int getServerRolesCount();
+    /**
+     * <pre>
+     *Set of server roles
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole getServerRoles(int index);
+    /**
+     * <pre>
+     *Set of server roles
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+     */
+    java.util.List<java.lang.Integer>
+    getServerRolesValueList();
+    /**
+     * <pre>
+     *Set of server roles
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+     */
+    int getServerRolesValue(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.UserSpec}
@@ -2541,6 +3038,7 @@ public final class PSU {
       name_ = "";
       password_ = "";
       permissions_ = java.util.Collections.emptyList();
+      serverRoles_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -2588,6 +3086,29 @@ public final class PSU {
                   input.readMessage(yandex.cloud.api.mdb.sqlserver.v1.PSU.Permission.parser(), extensionRegistry));
               break;
             }
+            case 32: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                serverRoles_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              serverRoles_.add(rawValue);
+              break;
+            }
+            case 34: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                  serverRoles_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000008;
+                }
+                serverRoles_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2605,6 +3126,9 @@ public final class PSU {
       } finally {
         if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           permissions_ = java.util.Collections.unmodifiableList(permissions_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          serverRoles_ = java.util.Collections.unmodifiableList(serverRoles_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -2763,6 +3287,72 @@ public final class PSU {
       return permissions_.get(index);
     }
 
+    public static final int SERVER_ROLES_FIELD_NUMBER = 4;
+    private java.util.List<java.lang.Integer> serverRoles_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole> serverRoles_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole>() {
+              public yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole result = yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole.valueOf(from);
+                return result == null ? yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     *Set of server roles
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+     */
+    public java.util.List<yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole> getServerRolesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole>(serverRoles_, serverRoles_converter_);
+    }
+    /**
+     * <pre>
+     *Set of server roles
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+     */
+    public int getServerRolesCount() {
+      return serverRoles_.size();
+    }
+    /**
+     * <pre>
+     *Set of server roles
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+     */
+    public yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole getServerRoles(int index) {
+      return serverRoles_converter_.convert(serverRoles_.get(index));
+    }
+    /**
+     * <pre>
+     *Set of server roles
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+     */
+    public java.util.List<java.lang.Integer>
+    getServerRolesValueList() {
+      return serverRoles_;
+    }
+    /**
+     * <pre>
+     *Set of server roles
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+     */
+    public int getServerRolesValue(int index) {
+      return serverRoles_.get(index);
+    }
+    private int serverRolesMemoizedSerializedSize;
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2777,6 +3367,7 @@ public final class PSU {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      getSerializedSize();
       if (!getNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
@@ -2785,6 +3376,13 @@ public final class PSU {
       }
       for (int i = 0; i < permissions_.size(); i++) {
         output.writeMessage(3, permissions_.get(i));
+      }
+      if (getServerRolesList().size() > 0) {
+        output.writeUInt32NoTag(34);
+        output.writeUInt32NoTag(serverRolesMemoizedSerializedSize);
+      }
+      for (int i = 0; i < serverRoles_.size(); i++) {
+        output.writeEnumNoTag(serverRoles_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -2804,6 +3402,18 @@ public final class PSU {
       for (int i = 0; i < permissions_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, permissions_.get(i));
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < serverRoles_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(serverRoles_.get(i));
+        }
+        size += dataSize;
+        if (!getServerRolesList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }serverRolesMemoizedSerializedSize = dataSize;
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2827,6 +3437,7 @@ public final class PSU {
           .equals(other.getPassword());
       result = result && getPermissionsList()
           .equals(other.getPermissionsList());
+      result = result && serverRoles_.equals(other.serverRoles_);
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2845,6 +3456,10 @@ public final class PSU {
       if (getPermissionsCount() > 0) {
         hash = (37 * hash) + PERMISSIONS_FIELD_NUMBER;
         hash = (53 * hash) + getPermissionsList().hashCode();
+      }
+      if (getServerRolesCount() > 0) {
+        hash = (37 * hash) + SERVER_ROLES_FIELD_NUMBER;
+        hash = (53 * hash) + serverRoles_.hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2990,6 +3605,8 @@ public final class PSU {
         } else {
           permissionsBuilder_.clear();
         }
+        serverRoles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -3029,6 +3646,11 @@ public final class PSU {
         } else {
           result.permissions_ = permissionsBuilder_.build();
         }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          serverRoles_ = java.util.Collections.unmodifiableList(serverRoles_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.serverRoles_ = serverRoles_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3111,6 +3733,16 @@ public final class PSU {
               permissionsBuilder_.addAllMessages(other.permissions_);
             }
           }
+        }
+        if (!other.serverRoles_.isEmpty()) {
+          if (serverRoles_.isEmpty()) {
+            serverRoles_ = other.serverRoles_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureServerRolesIsMutable();
+            serverRoles_.addAll(other.serverRoles_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3631,6 +4263,172 @@ public final class PSU {
         }
         return permissionsBuilder_;
       }
+
+      private java.util.List<java.lang.Integer> serverRoles_ =
+        java.util.Collections.emptyList();
+      private void ensureServerRolesIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          serverRoles_ = new java.util.ArrayList<java.lang.Integer>(serverRoles_);
+          bitField0_ |= 0x00000008;
+        }
+      }
+      /**
+       * <pre>
+       *Set of server roles
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole> getServerRolesList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole>(serverRoles_, serverRoles_converter_);
+      }
+      /**
+       * <pre>
+       *Set of server roles
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public int getServerRolesCount() {
+        return serverRoles_.size();
+      }
+      /**
+       * <pre>
+       *Set of server roles
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole getServerRoles(int index) {
+        return serverRoles_converter_.convert(serverRoles_.get(index));
+      }
+      /**
+       * <pre>
+       *Set of server roles
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public Builder setServerRoles(
+          int index, yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureServerRolesIsMutable();
+        serverRoles_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Set of server roles
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public Builder addServerRoles(yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureServerRolesIsMutable();
+        serverRoles_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Set of server roles
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public Builder addAllServerRoles(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole> values) {
+        ensureServerRolesIsMutable();
+        for (yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole value : values) {
+          serverRoles_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Set of server roles
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public Builder clearServerRoles() {
+        serverRoles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Set of server roles
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public java.util.List<java.lang.Integer>
+      getServerRolesValueList() {
+        return java.util.Collections.unmodifiableList(serverRoles_);
+      }
+      /**
+       * <pre>
+       *Set of server roles
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public int getServerRolesValue(int index) {
+        return serverRoles_.get(index);
+      }
+      /**
+       * <pre>
+       *Set of server roles
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public Builder setServerRolesValue(
+          int index, int value) {
+        ensureServerRolesIsMutable();
+        serverRoles_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Set of server roles
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public Builder addServerRolesValue(int value) {
+        ensureServerRolesIsMutable();
+        serverRoles_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Set of server roles
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
+       */
+      public Builder addAllServerRolesValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureServerRolesIsMutable();
+        for (int value : values) {
+          serverRoles_.add(value);
+        }
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3710,25 +4508,30 @@ public final class PSU {
     java.lang.String[] descriptorData = {
       "\n(yandex/cloud/mdb/sqlserver/v1/user.pro" +
       "to\022\035yandex.cloud.mdb.sqlserver.v1\032\035yande" +
-      "x/cloud/validation.proto\"h\n\004User\022\014\n\004name" +
-      "\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022>\n\013permission" +
-      "s\030\003 \003(\0132).yandex.cloud.mdb.sqlserver.v1." +
-      "Permission\"\276\002\n\nPermission\022\025\n\rdatabase_na" +
-      "me\030\001 \001(\t\022F\n\005roles\030\002 \003(\0162..yandex.cloud.m" +
-      "db.sqlserver.v1.Permission.RoleB\007\202\3101\003>=1" +
-      "\"\320\001\n\004Role\022\024\n\020ROLE_UNSPECIFIED\020\000\022\014\n\010DB_OW" +
-      "NER\020\001\022\024\n\020DB_SECURITYADMIN\020\002\022\022\n\016DB_ACCESS" +
-      "ADMIN\020\003\022\025\n\021DB_BACKUPOPERATOR\020\004\022\017\n\013DB_DDL" +
-      "ADMIN\020\005\022\021\n\rDB_DATAWRITER\020\006\022\021\n\rDB_DATAREA" +
-      "DER\020\007\022\025\n\021DB_DENYDATAWRITER\020\010\022\025\n\021DB_DENYD" +
-      "ATAREADER\020\t\"\230\001\n\010UserSpec\022+\n\004name\030\001 \001(\tB\035" +
-      "\350\3071\001\212\3101\004<=32\362\3071\r[a-zA-Z0-9_]*\022\037\n\010passwor" +
-      "d\030\002 \001(\tB\r\350\3071\001\212\3101\0058-128\022>\n\013permissions\030\003 " +
-      "\003(\0132).yandex.cloud.mdb.sqlserver.v1.Perm" +
-      "issionBu\n!yandex.cloud.api.mdb.sqlserver" +
-      ".v1B\003PSUZKgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/mdb/sqlserver/v1;sqls" +
-      "erverb\006proto3"
+      "x/cloud/validation.proto\"\251\001\n\004User\022\014\n\004nam" +
+      "e\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022>\n\013permissio" +
+      "ns\030\003 \003(\0132).yandex.cloud.mdb.sqlserver.v1" +
+      ".Permission\022?\n\014server_roles\030\004 \003(\0162).yand" +
+      "ex.cloud.mdb.sqlserver.v1.ServerRole\"\276\002\n" +
+      "\nPermission\022\025\n\rdatabase_name\030\001 \001(\t\022F\n\005ro" +
+      "les\030\002 \003(\0162..yandex.cloud.mdb.sqlserver.v" +
+      "1.Permission.RoleB\007\202\3101\003>=1\"\320\001\n\004Role\022\024\n\020R" +
+      "OLE_UNSPECIFIED\020\000\022\014\n\010DB_OWNER\020\001\022\024\n\020DB_SE" +
+      "CURITYADMIN\020\002\022\022\n\016DB_ACCESSADMIN\020\003\022\025\n\021DB_" +
+      "BACKUPOPERATOR\020\004\022\017\n\013DB_DDLADMIN\020\005\022\021\n\rDB_" +
+      "DATAWRITER\020\006\022\021\n\rDB_DATAREADER\020\007\022\025\n\021DB_DE" +
+      "NYDATAWRITER\020\010\022\025\n\021DB_DENYDATAREADER\020\t\"\331\001" +
+      "\n\010UserSpec\022+\n\004name\030\001 \001(\tB\035\350\3071\001\212\3101\004<=32\362\307" +
+      "1\r[a-zA-Z0-9_]*\022\037\n\010password\030\002 \001(\tB\r\350\3071\001\212" +
+      "\3101\0058-128\022>\n\013permissions\030\003 \003(\0132).yandex.c" +
+      "loud.mdb.sqlserver.v1.Permission\022?\n\014serv" +
+      "er_roles\030\004 \003(\0162).yandex.cloud.mdb.sqlser" +
+      "ver.v1.ServerRole*:\n\nServerRole\022\033\n\027SERVE" +
+      "R_ROLE_UNSPECIFIED\020\000\022\017\n\013MDB_MONITOR\020\001Bu\n" +
+      "!yandex.cloud.api.mdb.sqlserver.v1B\003PSUZ" +
+      "Kgithub.com/yandex-cloud/go-genproto/yan" +
+      "dex/cloud/mdb/sqlserver/v1;sqlserverb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3748,7 +4551,7 @@ public final class PSU {
     internal_static_yandex_cloud_mdb_sqlserver_v1_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_User_descriptor,
-        new java.lang.String[] { "Name", "ClusterId", "Permissions", });
+        new java.lang.String[] { "Name", "ClusterId", "Permissions", "ServerRoles", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_Permission_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_sqlserver_v1_Permission_fieldAccessorTable = new
@@ -3760,7 +4563,7 @@ public final class PSU {
     internal_static_yandex_cloud_mdb_sqlserver_v1_UserSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_UserSpec_descriptor,
-        new java.lang.String[] { "Name", "Password", "Permissions", });
+        new java.lang.String[] { "Name", "Password", "Permissions", "ServerRoles", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);
